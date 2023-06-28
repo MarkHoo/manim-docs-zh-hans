@@ -1,5 +1,20 @@
-# manim-docs-zh-hans
+# Manim社区版(Manim Community Edition)
 
+当前版本：v0.17.3
+
+### TODO:
+
+- 示例代码
+- Manim安装
+- 教程和指南
+- 参考手册
+- Manim插件
+- 版本变更日志
+
+### 打赏支持
+
+![微信](./static/WeChat.jpg)
+![支付宝](./static/Alipay.jpg)
 
 #### License
 
