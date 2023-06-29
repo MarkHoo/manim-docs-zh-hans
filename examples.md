@@ -4,8 +4,6 @@
 
 ## 基本概念
 
---------------
-
 #### 示例：ManimCELogo
 
 ![](./static/ManimCELogo-1.webp)
@@ -146,8 +144,6 @@ ref_classes: `Union` `Intersection` `Exclusion`
 --------------
 
 ## 动画
-
---------------
 
 #### 示例：图形上移动的点
 
@@ -392,8 +388,6 @@ ref_methods: `VMobject.set_points_as_corners` `Mobject.add_updater`
 
 ## 使用 Manim 绘图
 
---------------
-
 #### 示例：正余弦函数图
 
 ![](./static/SinAndCosFunctionPlot-1.webp)
@@ -613,8 +607,6 @@ ref_methods: `Axes.plot_line_graph` `Axes.get_axis_labels`
 --------------
 
 ## 特殊相机设置
-
---------------
 
 #### 示例：跟随图形相机
 
@@ -869,8 +861,6 @@ ref_classes: `ThreeDScene` `Surface`
 
 ## 高级项目
 
---------------
-
 #### 示例：打开Manim
 
 [![视频缩略图](./static/thumbnail/OpeningManim-1.mp4_20230629_135213.282.jpg)](https://docs.manim.community/en/stable/OpeningManim-1.mp4)
@@ -941,7 +931,7 @@ ref_methods: `NumberPlane.prepare_for_nonlinear_transform`
 
 [![视频缩略图](./static/thumbnail/SineCurveUnitCircle-1.mp4_20230629_135234.595.jpg)](https://docs.manim.community/en/stable/SineCurveUnitCircle-1.mp4)
 
-<video src="https://docs.manim.community/en/stable/SineCurveUnitCircle-1.mp4" controls>Your browser does not support the video tag.</video>
+<iframe src="https://docs.manim.community/en/stable/SineCurveUnitCircle-1.mp4"></iframe>
 
 ```py
 from manim import *

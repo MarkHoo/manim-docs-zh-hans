@@ -1,20 +1,17 @@
+# 配置
 
+Manim 提供了广泛的配置系统，使其能够适应许多不同的用例。有许多配置选项可以在场景渲染过程中的不同时间进行配置。[每个选项都可以通过 ManimConfig 类](#the-manimconfig-class)以编程方式进行配置，在通过[命令行参数](#command-line-arguments)调用命令时，或者在首次通过[配置文件](#the-config-files)导入库时。
 
-Configuration[#](#configuration "Permalink to this heading")
-============================================================
+配置 Manim 最常见、最简单且推荐的方法是通过命令行界面 (CLI)，如下所述。
 
-Manim provides an extensive configuration system that allows it to adapt to many different use cases. There are many configuration options that can be configured at different times during the scene rendering process. Each option can be configured programmatically via [the ManimConfig class](#the-manimconfig-class), at the time of command invocation via [command-line arguments](#command-line-arguments), or at the time the library is first imported via [the config files](#the-config-files).
+## 命令行参数
 
-The most common, simplest, and recommended way to configure Manim is via the command-line interface (CLI), which is described directly below.
+到目前为止，CLI 中最常用的命令是命令`render`，该命令用于将场景渲染到输出文件。它与以下参数一起使用：
 
-Command-line arguments[#](#command-line-arguments "Permalink to this heading")
-------------------------------------------------------------------------------
+```sh
+Manim Community v0.17.3
 
-By far the most commonly used command in the CLI is the `render` command, which is used to render scene(s) to an output file. It is used with the following arguments:
-
-Manim Community v0.16.0.post0
-
-Usage: manim render \[OPTIONS\] FILE \[SCENE_NAMES\]...
+Usage: manim render [OPTIONS] FILE [SCENE_NAMES]...
 
   Render SCENE(S) from the input FILE.
 
@@ -22,49 +19,49 @@ Usage: manim render \[OPTIONS\] FILE \[SCENE_NAMES\]...
 
   SCENES is an optional list of scenes in the file.
 ...
+```
 
-Copy to clipboard
+但是，由于只要未指定命令，Manim 就会默认使用该`render`命令，因此以下形式更为常见，可以改为使用：
 
-However, since Manim defaults to the `render` command whenever no command is specified, the following form is far more common and can be used instead:
+```sh
+manim [OPTIONS] FILE [SCENES]
+```
 
-manim \[OPTIONS\] FILE \[SCENES\]
+使用上述形式的一个例子是：
 
-Copy to clipboard
-
-An example of using the above form is:
-
+```sh
 manim -qm file.py SceneOne
+```
 
-Copy to clipboard
+这要求 Manim 搜索`SceneOne`文件内调用的 Scene 类`file.py`，并以中等质量（由标志指定）渲染它`-qm`。
 
-This asks Manim to search for a Scene class called `SceneOne` inside the file `file.py` and render it with medium quality (specified by the `-qm` flag).
+另一个经常使用的标志是`-p`（“预览”），它使 manim 在渲染完成后打开渲染的视频。
 
-Another frequently used flag is `-p` (“preview”), which makes manim open the rendered video after it’s done rendering.
+> 笔记
 
-Note
+> 该`-p`标志不会更改全局 `config`字典的任何属性。该`-p`标志只是为了命令行的方便。
 
-The `-p` flag does not change any properties of the global `config` dict. The `-p` flag is only a command-line convenience.
+### 高级示例
 
-### Advanced examples[#](#advanced-examples "Permalink to this heading")
+要以高质量渲染场景，但仅输出场景的最后一帧而不是整个视频，您可以执行
 
-To render a scene in high quality, but only output the last frame of the scene instead of the whole video, you can execute
-
+```sh
 manim -sqh <file.py> SceneName
+```
 
-Copy to clipboard
+以下示例指定输出文件名（带有标志），仅渲染带有白色背景（标志）的`-o` 前十个动画（标志），并将动画保存为 a 而不是 文件（标志）。它使用默认质量，并且在渲染后不会尝试打开文件。` -n``-c``.gif``.mp4``--format=gif `
 
-The following example specifies the output file name (with the `-o` flag), renders only the first ten animations (`-n` flag) with a white background (`-c` flag), and saves the animation as a `.gif` instead of as a `.mp4` file (`--format=gif` flag). It uses the default quality and does not try to open the file after it is rendered.
-
+```sh
 manim -o myscene --format=gif -n 0,10 -c WHITE <file.py> SceneName
+```
 
-Copy to clipboard
+### 所有 CLI 标志的列表
 
-### A list of all CLI flags[#](#a-list-of-all-cli-flags "Permalink to this heading")
-
+```sh
 $ manim --help
-Manim Community v0.16.0.post0
+Manim Community v0.17.3
 
-Usage: manim \[OPTIONS\] COMMAND \[ARGS\]...
+Usage: manim [OPTIONS] COMMAND [ARGS]...
 
   Animation engine for explanatory math videos.
 
@@ -86,13 +83,13 @@ specified. Run 'manim render --help' if you would like to know what the '-ql' or
 '-p' flags do, for example.
 
 Made with <3 by Manim Community developers.
+```
 
-Copy to clipboard
-
+```sh
 $ manim render --help
-Manim Community v0.16.0.post0
+Manim Community v0.17.3
 
-Usage: manim render \[OPTIONS\] FILE \[SCENE_NAMES\]...
+Usage: manim render [OPTIONS] FILE [SCENE_NAMES]...
 
   Render SCENE(S) from the input FILE.
 
@@ -103,17 +100,17 @@ Usage: manim render \[OPTIONS\] FILE \[SCENE_NAMES\]...
 Global options:
   -c, --config_file TEXT         Specify the configuration file to use for
                                  render settings.
-  --custom\_folders               Use the folders defined in the \[custom\_folders\]
+  --custom_folders               Use the folders defined in the [custom_folders]
                                  section of the config file to define the output
                                  folder structure.
   --disable_caching              Disable the use of the cache (still generates
                                  cache files).
   --flush_cache                  Remove cached partial movie files.
   --tex_template TEXT            Specify a custom TeX template file.
-  -v, --verbosity \[DEBUG|INFO|WARNING|ERROR|CRITICAL\]
+  -v, --verbosity [DEBUG|INFO|WARNING|ERROR|CRITICAL]
                                  Verbosity of CLI output. Changes ffmpeg log
                                  level unless 5+.
-  --notify\_outdated\_version / --silent
+  --notify_outdated_version / --silent
                                  Display warnings for outdated installation.
   --enable_gui                   Enable GUI interaction.
   --gui_location TEXT            Starting location for the GUI.
@@ -128,61 +125,60 @@ Global options:
 Output options:
   -o, --output_file TEXT         Specify the filename(s) of the rendered
                                  scene(s).
-  -0, --zero_pad INTEGER RANGE   Zero padding for PNG file names.  \[0<=x<=9\]
-  --write\_to\_movie               Write the video rendered with opengl to a file.
+  -0, --zero_pad INTEGER RANGE   Zero padding for PNG file names.  [0<=x<=9]
+  --write_to_movie               Write the video rendered with opengl to a file.
   --media_dir PATH               Path to store rendered videos and latex.
   --log_dir PATH                 Path to store render logs.
-  --log\_to\_file                  Log terminal output to file.
+  --log_to_file                  Log terminal output to file.
 
 Render Options:
-  -n, --from\_animation\_number TEXT
-                                 Start rendering from n\_0 until n\_1. If n_1 is
+  -n, --from_animation_number TEXT
+                                 Start rendering from n_0 until n_1. If n_1 is
                                  left unspecified, renders all scenes after n_0.
   -a, --write_all                Render all scenes in the input file.
-  --format \[png|gif|mp4|webm|mov\]
-  -s, --save\_last\_frame
-  -q, --quality \[l|m|h|p|k\]      Render quality at the follow resolution
+  --format [png|gif|mp4|webm|mov]
+  -s, --save_last_frame
+  -q, --quality [l|m|h|p|k]      Render quality at the follow resolution
                                  framerates, respectively: 854x480 15FPS,
                                  1280x720 30FPS, 1920x1080 60FPS, 2560x1440
                                  60FPS, 3840x2160 60FPS
-  -r, --resolution TEXT          Resolution in (W,H) for when 16:9 aspect ratio
+  -r, --resolution TEXT          Resolution in "W,H" for when 16:9 aspect ratio
                                  isn't possible.
   --fps, --frame_rate FLOAT      Render at this frame rate.
-  --renderer \[cairo|opengl\]      Select a renderer for your Scene.
-  --use\_opengl\_renderer          Render scenes using OpenGL (Deprecated).
+  --renderer [cairo|opengl]      Select a renderer for your Scene.
   -g, --save_pngs                Save each frame as png (Deprecated).
-  -i, --save\_as\_gif              Save as a gif (Deprecated).
+  -i, --save_as_gif              Save as a gif (Deprecated).
   --save_sections                Save section videos in addition to movie file.
-  -s, --save\_last\_frame          Save last frame as png (Deprecated).
+  -s, --save_last_frame          Save last frame as png (Deprecated).
   -t, --transparent              Render scenes with alpha channel.
-  --use\_projection\_fill_shaders  Use shaders for OpenGLVMobject fill which are
+  --use_projection_fill_shaders  Use shaders for OpenGLVMobject fill which are
                                  compatible with transformation matrices.
-  --use\_projection\_stroke_shaders
+  --use_projection_stroke_shaders
                                  Use shaders for OpenGLVMobject stroke which are
                                  compatible with transformation matrices.
 
 Ease of access options:
-  --progress_bar \[display|leave|none\]
+  --progress_bar [display|leave|none]
                                  Display progress bars and/or keep them
                                  displayed.
   -p, --preview                  Preview the Scene's animation. OpenGL does a
                                  live preview in a popup window. Cairo opens the
                                  rendered video file in the system default media
                                  player.
-  -f, --show\_in\_file_browser     Show the output file in the file browser.
+  -f, --show_in_file_browser     Show the output file in the file browser.
   --jupyter                      Using jupyter notebook magic.
 
 Other options:
   --help                         Show this message and exit.
 
 Made with <3 by Manim Community developers.
+```
 
-Copy to clipboard
-
+```sh
 $ manim cfg --help
-Manim Community v0.16.0.post0
+Manim Community v0.17.3
 
-Usage: manim cfg \[OPTIONS\] COMMAND \[ARGS\]...
+Usage: manim cfg [OPTIONS] COMMAND [ARGS]...
 
   Manages Manim configuration files.
 
@@ -195,13 +191,13 @@ Commands:
   write
 
 Made with <3 by Manim Community developers.
+```
 
-Copy to clipboard
-
+```sh
 $ manim plugins --help
-Manim Community v0.16.0.post0
+Manim Community v0.17.3
 
-Usage: manim plugins \[OPTIONS\]
+Usage: manim plugins [OPTIONS]
 
   Manages Manim plugins.
 
@@ -210,60 +206,59 @@ Options:
   --help      Show this message and exit.
 
 Made with <3 by Manim Community developers.
+```
 
-Copy to clipboard
+## ManimConfig 类
 
-The ManimConfig class[#](#the-manimconfig-class "Permalink to this heading")
-----------------------------------------------------------------------------
+配置 Manim 最直接的方法是通过全局`config`对象，它是[`ManimConfig`](../reference/manim._config.utils.ManimConfig.html#manim._config.utils.ManimConfig "manim._config.utils.ManimConfig"). 此类的每个属性都是一个配置选项，可以使用标准属性语法或类似字典的语法来访问：
 
-The most direct way of configuring Manim is through the global `config` object, which is an instance of [`ManimConfig`](../reference/manim._config.utils.ManimConfig.html#manim._config.utils.ManimConfig "manim._config.utils.ManimConfig"). Each property of this class is a config option that can be accessed either with standard attribute syntax or with dict-like syntax:
+```sh
+>>> from manim import *
+>>> config.background_color = WHITE
+>>> config["background_color"] = WHITE
+```
 
->>\> from manim import *
->>\> config.background_color = WHITE
->>\> config\["background_color"\] = WHITE
+> 笔记
 
-Copy to clipboard
+> 前者是优选的；提供后者是为了向后兼容。
 
-Note
+大多数类（包括[`Camera`](../reference/manim.camera.camera.Camera.html#manim.camera.camera.Camera "manim.camera.camera.Camera")、[`Mobject`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject")和 [`Animation`](../reference/manim.animation.animation.Animation.html#manim.animation.animation.Animation "manim.animation.animation.Animation")）从全局 中读取一些默认配置 `config`。
 
-The former is preferred; the latter is provided for backwards compatibility.
-
-Most classes, including [`Camera`](../reference/manim.camera.camera.Camera.html#manim.camera.camera.Camera "manim.camera.camera.Camera"), [`Mobject`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject"), and [`Animation`](../reference/manim.animation.animation.Animation.html#manim.animation.animation.Animation "manim.animation.animation.Animation"), read some of their default configuration from the global `config`.
-
->>\> Camera({}).background_color
+```sh
+>>> Camera({}).background_color
 <Color white>
->>\> config.background_color = RED  \# 0xfc6255
->>\> Camera({}).background_color
+>>> config.background_color = RED  # 0xfc6255
+>>> Camera({}).background_color
 <Color #fc6255>
+```
 
-Copy to clipboard
+[`ManimConfig`](../reference/manim._config.utils.ManimConfig.html#manim._config.utils.ManimConfig "manim._config.utils.ManimConfig")旨在保持内部一致性。例如，设置`frame_y_radius`将影响`frame_height`：
 
-[`ManimConfig`](../reference/manim._config.utils.ManimConfig.html#manim._config.utils.ManimConfig "manim._config.utils.ManimConfig") is designed to keep internal consistency. For example, setting `frame_y_radius` will affect `frame_height`:
-
->>\> config.frame_height
+```sh
+>>> config.frame_height
 8.0
->>\> config.frame\_y\_radius = 5.0
->>\> config.frame_height
+>>> config.frame_y_radius = 5.0
+>>> config.frame_height
 10.0
+```
 
-Copy to clipboard
+全局`config`对象是所有配置选项的单一事实来源。设置配置选项的所有其他方法最终都会更改全局对象的值`config`。
 
-The global `config` object is meant to be the single source of truth for all config options. All of the other ways of setting config options ultimately change the values of the global `config` object.
+以下示例说明了为使用参考帧在我们的文档中呈现的示例选择的视频分辨率。
 
-The following example illustrates the video resolution chosen for examples rendered in our documentation with a reference frame.
+示例：显示屏幕分辨率
 
-Example: ShowScreenResolution [¶](#showscreenresolution)
+![](./static/ShowScreenResolution-1.png)
 
-![../_images/ShowScreenResolution-1.png](../_images/ShowScreenResolution-1.png)
-
+```py
 from manim import *
 
 class ShowScreenResolution(Scene):
     def construct(self):
-        pixel_height = config\["pixel_height"\]  \#  1080 is default
-        pixel_width = config\["pixel_width"\]  \# 1920 is default
-        frame_width = config\["frame_width"\]
-        frame_height = config\["frame_height"\]
+        pixel_height = config["pixel_height"]  #  1080 is default
+        pixel_width = config["pixel_width"]  # 1920 is default
+        frame_width = config["frame_width"]
+        frame_height = config["frame_height"]
         self.add(Dot())
         d1 = Line(frame_width * LEFT / 2, frame_width * RIGHT / 2).to_edge(DOWN)
         self.add(d1)
@@ -271,199 +266,177 @@ class ShowScreenResolution(Scene):
         d2 = Line(frame_height * UP / 2, frame_height * DOWN / 2).to_edge(LEFT)
         self.add(d2)
         self.add(Text(str(pixel_height)).next_to(d2, RIGHT))
+```
 
-Copy to clipboard
+## 配置文件
 
-The config files[#](#the-config-files "Permalink to this heading")
-------------------------------------------------------------------
+正如最后一个示例所示，从命令行执行 Manim 可能涉及同时使用许多标志。如果您必须在短时间内多次执行相同的脚本（例如，对场景脚本进行小的增量调整时），这可能会变得很麻烦。因此，Manim 也可以使用配置文件进行配置。配置文件是以`.cfg`.
 
-As the last example shows, executing Manim from the command line may involve using many flags simultaneously. This may become a nuisance if you must execute the same script many times in a short time period, for example, when making small incremental tweaks to your scene script. For this reason, Manim can also be configured using a configuration file. A configuration file is a file ending with the suffix `.cfg`.
+`manim.cfg`要在渲染场景时使用本地配置文件，您必须在与场景代码相同的目录中创建一个同名的文件。
 
-To use a local configuration file when rendering your scene, you must create a file with the name `manim.cfg` in the same directory as your scene code.
+> 警告
 
-Warning
+> 配置文件**必须**命名为`manim.cfg`. 目前，Manim 不支持任何其他名称的配置文件。
 
-The config file **must** be named `manim.cfg`. Currently, Manim does not support config files with any other name.
+配置文件必须以节头开始`[CLI]`。此标头下的配置选项与 CLI 标志具有相同的名称并具有相同的用途。以以下配置文件为例。
 
-The config file must start with the section header `[CLI]`. The configuration options under this header have the same name as the CLI flags and serve the same purpose. Take, for example, the following config file.
+```ini
+[CLI]
+# my config file
+output_file = myscene
+save_as_gif = True
+background_color = WHITE
+```
 
-\[CLI\]
-\# my config file
-output_file  =  myscene
-save\_as\_gif  =  True
-background_color  =  WHITE
+配置文件使用标准 python 库进行解析`configparser`。特别是，他们将忽略任何以井号符号开头的行`#`。
 
-Copy to clipboard
+现在，执行以下命令
 
-Config files are parsed with the standard python library `configparser`. In particular, they will ignore any line that starts with a pound symbol `#`.
-
-Now, executing the following command
-
+```sh
 manim -o myscene -i -c WHITE <file.py> SceneName
+```
 
-Copy to clipboard
+相当于执行以下命令，前提是`manim.cfg` 与<file.py>在同一目录中，
 
-is equivalent to executing the following command, provided that `manim.cfg` is in the same directory as <file.py>,
-
+```sh
 manim <file.py> SceneName
+```
 
-Copy to clipboard
+> 提示
 
-Tip
+> 配置文件中允许的配置选项的名称与相应命令行标志的**长名称**完全相同。例如，`-c`和`--background_color`标志是可以互换的，但配置文件仅接受 `background_color`作为可接受的选项。
 
-The names of the configuration options admissible in config files are exactly the same as the **long names** of the corresponding command- line flags. For example, the `-c` and `--background_color` flags are interchangeable, but the config file only accepts `background_color` as an admissible option.
+由于配置文件旨在替换 CLI 标志，因此所有 CLI 标志都可以通过配置文件设置。此外，任何配置选项都可以通过配置文件设置，无论它是否具有关联的 CLI 标志。有关所有 CLI 标志和配置选项的列表，请参阅本文档底部。
 
-Since config files are meant to replace CLI flags, all CLI flags can be set via a config file. Moreover, any config option can be set via a config file, whether or not it has an associated CLI flag. See the bottom of this document for a list of all CLI flags and config options.
+`manim.cfg`Manim 将在与正在渲染的文件相同的目录中查找配置文件，而**不是**在执行目录中。例如，
 
-Manim will look for a `manim.cfg` config file in the same directory as the file being rendered, and **not** in the directory of execution. For example,
-
+```sh
 manim -o myscene -i -c WHITE <path/to/file.py> SceneName
+```
 
-Copy to clipboard
+将使用 中找到的配置文件`path/to/file.py`（如果有）。它不会**使用** 当前工作目录中找到的配置文件，即使它存在。这样，用户可以为不同的场景或项目保留不同的配置文件，并在系统的任何位置以正确的配置执行它们。
 
-will use the config file found in `path/to/file.py`, if any. It will **not** use the config file found in the current working directory, even if it exists. In this way, the user may keep different config files for different scenes or projects, and execute them with the right configuration from anywhere in the system.
+此处描述的文件称为**文件夹范围的**配置文件，因为它影响同一文件夹中找到的所有场景脚本。
 
-The file described here is called the **folder-wide** config file because it affects all scene scripts found in the same folder.
+### 用户配置文件
 
-### The user config file[#](#the-user-config-file "Permalink to this heading")
+如上一节所述，`manim.cfg`配置文件仅影响同一文件夹中的场景脚本。但是，用户还可以创建一个特殊的配置文件，该文件将应用于该用户渲染的所有场景。这称为**用户范围的**配置文件，无论 Manim 从何处执行，也无论场景脚本存储在何处，它都将适用。
 
-As explained in the previous section, a `manim.cfg` config file only affects the scene scripts in its same folder. However, the user may also create a special config file that will apply to all scenes rendered by that user. This is referred to as the **user-wide** config file, and it will apply regardless of where Manim is executed from, and regardless of where the scene script is stored.
+用户范围的配置文件位于一个特殊的文件夹中，具体取决于操作系统。
 
-The user-wide config file lives in a special folder, depending on the operating system.
+- Windows：`UserDirectory`/AppData/Roaming/Manim/manim.cfg
+- MacOS：`UserDirectory`/.config/manim/ manim.cfg
+- Linux：`UserDirectory`/.config/manim/ manim.cfg
 
-*   Windows: `UserDirectory`/AppData/Roaming/Manim/manim.cfg
-    
-*   MacOS: `UserDirectory`/.config/manim/manim.cfg
-    
-*   Linux: `UserDirectory`/.config/manim/manim.cfg
-    
+这里`UserDirectory`是用户的主文件夹。
 
-Here, `UserDirectory` is the user’s home folder.
+> 笔记
 
-Note
+> 用户可能有许多**文件夹范围的**配置文件，每个文件夹一个，但只有一个**用户范围的**配置文件。同一台计算机上的不同用户可能都有自己的用户范围配置文件。
 
-A user may have many **folder-wide** config files, one per folder, but only one **user-wide** config file. Different users in the same computer may each have their own user-wide config file.
+> 警告
 
-Warning
+> 不要将场景脚本存储在与用户范围配置文件相同的文件夹中。在这种情况下，行为是未定义的。
 
-Do not store scene scripts in the same folder as the user-wide config file. In this case, the behavior is undefined.
+每当您从系统中的任何位置使用 Manim 时，Manim 都会查找用户范围的配置文件并读取其配置。
 
-Whenever you use Manim from anywhere in the system, Manim will look for a user-wide config file and read its configuration.
+### 级联配置文件
 
-### Cascading config files[#](#cascading-config-files "Permalink to this heading")
+如果您执行 Manim 并且它同时找到文件夹范围的配置文件和用户范围的配置文件，会发生什么？Manim 将读取这两个文件，但如果它们不兼容，则**文件夹范围的文件优先**。
 
-What happens if you execute Manim and it finds both a folder-wide config file and a user-wide config file? Manim will read both files, but if they are incompatible, **the folder-wide file takes precedence**.
+例如，采用以下用户范围的配置文件
 
-For example, take the following user-wide config file
+```ini
+# user-wide
+[CLI]
+output_file = myscene
+save_as_gif = True
+background_color = WHITE
+```
 
-\# user-wide
-\[CLI\]
-output_file  =  myscene
-save\_as\_gif  =  True
-background_color  =  WHITE
+以及以下文件夹范围的文件
 
-Copy to clipboard
+```ini
+# folder-wide
+[CLI]
+save_as_gif = False
+```
 
-and the following folder-wide file
+那么执行就相当于不使用任何配置文件并执行`manim <file.py> SceneName`
 
-\# folder-wide
-\[CLI\]
-save\_as\_gif  =  False
-
-Copy to clipboard
-
-Then, executing `manim <file.py> SceneName` will be equivalent to not using any config files and executing
-
+```sh
 manim -o myscene -c WHITE <file.py> SceneName
+```
 
-Copy to clipboard
+任何命令行标志都优先于任何配置文件。例如，使用前面两个配置文件并执行相当于不使用任何配置文件并执行`manim -c RED <file.py> SceneName`
 
-Any command-line flags have precedence over any config file. For example, using the previous two config files and executing `manim -c RED <file.py> SceneName` is equivalent to not using any config files and executing
-
+```sh
 manim -o myscene -c RED <file.py> SceneName
+```
 
-Copy to clipboard
+还有一个**库范围的**配置文件，它确定 Manim 的默认行为并适用于库的每个用户。它的优先级最低，因此用户范围内的任何配置选项和任何文件夹范围的文件都将覆盖库范围的文件。这称为*级联* 配置文件系统。
 
-There is also a **library-wide** config file that determines Manim’s default behavior and applies to every user of the library. It has the least precedence, so any config options in the user-wide and any folder-wide files will override the library-wide file. This is referred to as the _cascading_ config file system.
+> 警告
 
-Warning
+**用户不应尝试修改库范围的文件**。贡献者在修改之前应得到核心开发团队的明确确认。
 
-**The user should not try to modify the library-wide file**. Contributors should receive explicit confirmation from the core developer team before modifying it.
+## 操作顺序
 
-Order of operations[#](#order-of-operations "Permalink to this heading")
-------------------------------------------------------------------------
+无法在“XMLSerializer”上执行“serializeToString”：参数 1 不是“Node”类型。
 
-Failed to execute 'serializeToString' on 'XMLSerializer': parameter 1 is not of type 'Node'.
+由于配置 Manim 的方式多种多样，因此很难知道每个配置选项的设置时间。事实上，这取决于 Manim 的使用方式。
 
-With so many different ways of configuring Manim, it can be difficult to know when each config option is being set. In fact, this will depend on how Manim is being used.
+如果 Manim 是从模块导入的，那么配置系统将遵循以下步骤：
 
-If Manim is imported from a module, then the configuration system will follow these steps:
+1.  加载库范围的配置文件。
+2.  如果存在用户范围和文件夹范围的文件，则会加载它们。
+3.  前两个步骤中找到的所有文件都在单个 `ConfigParser`对象中进行解析，称为`parser`. 这就是*级联* 发生的地方。
+4.  `logging.Logger`被实例化以创建 Manim 的全局`logger` 对象。它是使用解析器的“logger”部分配置的，即`parser['logger']`。
+5.  `ManimConfig`被实例化以创建全局`config`对象。
+6.  from`parser`步骤 3 通过 馈送到`config`from 步骤 5 `ManimConfig.digest_parser()`。
+7.  和`logger`都`config`暴露给用户。
 
-1.  The library-wide config file is loaded.
-    
-2.  The user-wide and folder-wide files are loaded if they exist.
-    
-3.  All files found in the previous two steps are parsed in a single `ConfigParser` object, called `parser`. This is where _cascading_ happens.
-    
-4.  `logging.Logger` is instantiated to create Manim’s global `logger` object. It is configured using the “logger” section of the parser, i.e. `parser['logger']`.
-    
-5.  `ManimConfig` is instantiated to create the global `config` object.
-    
-6.  The `parser` from step 3 is fed into the `config` from step 5 via `ManimConfig.digest_parser()`.
-    
-7.  Both `logger` and `config` are exposed to the user.
-    
+如果从命令行调用 Manim，则前面的所有步骤都会发生，并由以下内容补充：
 
-If Manim is being invoked from the command line, all of the previous steps happen, and are complemented by:
+8.  CLI 标志被解析并输入到`config`via 中`digest_args()`。
+9.  如果`--config_file`使用了该标志，`ConfigParser`则会使用库范围文件、用户范围文件（如果存在）以及通过`--config_file`. 在这种情况下，文件夹范围的文件（如果存在）将被忽略。
+10. 新的解析器被输入到`config`.
 
-8.  The CLI flags are parsed and fed into `config` via `digest_args()`.
-    
-9.  If the `--config_file` flag was used, a new `ConfigParser` object is created with the contents of the library-wide file, the user-wide file if it exists, and the file passed via `--config_file`. In this case, the folder-wide file, if it exists, is ignored.
-    
-10.  The new parser is fed into `config`.
-    
-11.  The rest of the CLI flags are processed.
-    
+11. 其余 CLI 标志均已处理。
 
-To summarize, the order of precedence for configuration options, from lowest to highest precedence is:
+总而言之，配置选项的优先级顺序（从最低优先级到最高优先级）是：
 
-1.  Library-wide config file,
-    
-2.  user-wide config file, if it exists,
-    
-3.  folder-wide config file, if it exists OR custom config file, if passed via `--config_file`,
-    
-4.  other CLI flags, and
-    
-5.  any programmatic changes made after the config system is set.
-    
+1.  库范围的配置文件，
+2.  用户范围的配置文件，如果存在，
+3.  文件夹范围的配置文件（如果存在）或自定义配置文件（如果通过）传递 `--config_file`，
+4.  其他 CLI 标志，以及
+5.  设置配置系统后进行的任何编程更改。
 
-A list of all config options[#](#a-list-of-all-config-options "Permalink to this heading")
-------------------------------------------------------------------------------------------
+## 所有配置选项的列表
 
-\['aspect\_ratio', 'assets\_dir', 'background\_color', 'background\_opacity',
-'bottom', 'custom\_folders', 'disable\_caching', 'dry_run',
-'ffmpeg\_loglevel', 'flush\_cache', 'frame\_height', 'frame\_rate',
-'frame\_size', 'frame\_width', 'frame\_x\_radius', 'frame\_y\_radius',
-'from\_animation\_number', \`fullscreen\`, 'images\_dir', 'input\_file', 'left_side',
-'log\_dir', 'log\_to\_file', 'max\_files\_cached', 'media\_dir', 'media_width',
-'movie\_file\_extension', 'notify\_outdated\_version', 'output\_file', 'partial\_movie_dir',
-'pixel\_height', 'pixel\_width', 'plugins', 'preview',
-'progress\_bar', 'quality', 'right\_side', 'save\_as\_gif', 'save\_last\_frame',
-'save\_pngs', 'scene\_names', 'show\_in\_file\_browser', 'sound', 'tex\_dir',
-'tex\_template', 'tex\_template\_file', 'text\_dir', 'top', 'transparent',
-'upto\_animation\_number', 'use\_opengl\_renderer', 'verbosity', 'video_dir',
-'window\_position', 'window\_monitor', 'window\_size', 'write\_all', 'write\_to\_movie',
-'enable\_wireframe', 'force\_window'\]
+```ini
+['aspect_ratio', 'assets_dir', 'background_color', 'background_opacity',
+'bottom', 'custom_folders', 'disable_caching', 'dry_run',
+'ffmpeg_loglevel', 'flush_cache', 'frame_height', 'frame_rate',
+'frame_size', 'frame_width', 'frame_x_radius', 'frame_y_radius',
+'from_animation_number', `fullscreen`, 'images_dir', 'input_file', 'left_side',
+'log_dir', 'log_to_file', 'max_files_cached', 'media_dir', 'media_width',
+'movie_file_extension', 'notify_outdated_version', 'output_file', 'partial_movie_dir',
+'pixel_height', 'pixel_width', 'plugins', 'preview',
+'progress_bar', 'quality', 'right_side', 'save_as_gif', 'save_last_frame',
+'save_pngs', 'scene_names', 'show_in_file_browser', 'sound', 'tex_dir',
+'tex_template', 'tex_template_file', 'text_dir', 'top', 'transparent',
+'upto_animation_number', 'use_opengl_renderer', 'verbosity', 'video_dir',
+'window_position', 'window_monitor', 'window_size', 'write_all', 'write_to_movie',
+'enable_wireframe', 'force_window']
+```
 
-Copy to clipboard
+## 访问 CLI 命令选项
 
-Accessing CLI command options[#](#accessing-cli-command-options "Permalink to this heading")
---------------------------------------------------------------------------------------------
+输入`manim`, 或, 将打开主帮助页面。`manim --help`
 
-Entering `manim`, or `manim --help`, will open the main help page.
-
-Usage: manim \[OPTIONS\] COMMAND \[ARGS\]...
+```sh
+Usage: manim [OPTIONS] COMMAND [ARGS]...
 
   Animation engine for explanatory math videos.
 
@@ -485,12 +458,11 @@ Commands:
 See 'manim <command>' to read about a specific subcommand.
 
 Made with <3 by Manim Community developers.
+```
 
-Copy to clipboard
+每个子命令都有自己的帮助页面，可以类似地访问：
 
-Each of the subcommands has its own help page which can be accessed similarly:
-
+```sh
 manim render
 manim render --help
-
-Copy to clipboard
+```

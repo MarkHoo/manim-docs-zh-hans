@@ -1,37 +1,38 @@
+# Manim的构建模块
 
+本文档解释了 manim 的构建块，并将为您提供开始制作自己的视频所需的所有工具。
 
-Manim’s building blocks[#](#manim-s-building-blocks "Permalink to this heading")
-================================================================================
+本质上，manim 为您提供了三个不同的概念，您可以将它们编排在一起以生成数学动画： **数学对象**（或简称**mobject ）、\*\***动画**和 **场景\*\*。正如我们将在以下部分中看到的，这三个概念中的每一个都在 manim 中作为单独的类实现： 、[`Mobject`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject")和 [`Animation`](../reference/manim.animation.animation.Animation.html#manim.animation.animation.Animation "manim.animation.animation.Animation")类[`Scene`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene "手动场景.场景.场景")。
 
-This document explains the building blocks of manim and will give you all the necessary tools to start producing your own videos.
+> 笔记
 
-Essentially, manim puts at your disposal three different concepts that you can orchestrate together to produce mathematical animations: the **mathematical object** (or **mobject** for short), the **animation**, and the **scene**. As we will see in the following sections, each of these three concepts is implemented in manim as a separate class: the [`Mobject`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject"), [`Animation`](../reference/manim.animation.animation.Animation.html#manim.animation.animation.Animation "manim.animation.animation.Animation"), and [`Scene`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene "manim.scene.scene.Scene") classes.
+> 建议您在阅读本页之前先阅读教程[快速入门](quickstart.html)和 [Manim 的输出设置。](output_and_config.html)
 
-Note
+## 对象(Mobjects)
 
-It is recommended that you read the tutorials [Quickstart](quickstart.html) and [Manim’s Output Settings](output_and_config.html) before reading this page.
+Mobject 是所有 manim 动画的基本构建块。每个派生类[`Mobject`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject")代表一个可以在屏幕上显示的对象。例如，[`Circle`](../reference/manim.mobject.geometry.arc.Circle.html#manim.mobject.geometry.arc.Circle "manim.mobject.geometry.arc.Circle")、 、 [`Arrow`](../reference/manim.mobject.geometry.line.Arrow.html#manim.mobject.geometry.line.Arrow "manim.mobject.geometry.line.Arrow")、 等简单形状[`Rectangle`](../reference/manim.mobject.geometry.polygram.Rectangle.html#manim.mobject.geometry.polygram.Rectangle "manim.mobject.geometry.polygram.矩形")都是 mobject。更复杂的结构如[`Axes`](../reference/manim.mobject.graphing.coordinate_systems.Axes.html#manim.mobject.graphing.coordinate_systems.Axes "manim.mobject.graphing.coordinate_systems.Axes")、[`FunctionGraph`](../reference/manim.mobject.graphing.functions.FunctionGraph.html#manim.mobject.graphing.functions.FunctionGraph "manim.mobject.graphing.functions.FunctionGraph")或 [`BarChart`](../reference/manim.mobject.graphing.probability.BarChart.html#manim.mobject.graphing.probability.BarChart "manim.mobject.graphing.probability.BarChart")也是 mobject。
 
-Mobjects[#](#mobjects "Permalink to this heading")
---------------------------------------------------
+[`Mobject`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject")如果您尝试在屏幕上显示 的实例，您只会看到一个空框架。原因是该类[`Mobject`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject")是所有其他对象的抽象基类，即它不具有任何可以在屏幕上显示的预先确定的视觉形状。它只是一个*可以*展示的事物的骨架。因此，您很少需要使用 ; 的普通实例[`Mobject`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject")。相反，您很可能会创建其派生类的实例。这些派生类之一是 [`VMobject`](../reference/manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject "manim.mobject.types.vectorized_mobject.VMobject"). 代表`V`矢量化 Mobject。[本质上，vmobject 是使用矢量图形的](https://en.wikipedia.org/wiki/Vector_graphics)mobject[](https://en.wikipedia.org/wiki/Vector_graphics)要显示。大多数时候，您将处理 vmobject，尽管我们将继续使用术语“mobject”来指代可以在屏幕上显示的形状类，因为它更通用。
 
-Mobjects are the basic building blocks for all manim animations. Each class that derives from [`Mobject`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject") represents an object that can be displayed on the screen. For example, simple shapes such as [`Circle`](../reference/manim.mobject.geometry.arc.Circle.html#manim.mobject.geometry.arc.Circle "manim.mobject.geometry.arc.Circle"), [`Arrow`](../reference/manim.mobject.geometry.line.Arrow.html#manim.mobject.geometry.line.Arrow "manim.mobject.geometry.line.Arrow"), and [`Rectangle`](../reference/manim.mobject.geometry.polygram.Rectangle.html#manim.mobject.geometry.polygram.Rectangle "manim.mobject.geometry.polygram.Rectangle") are all mobjects. More complicated constructs such as [`Axes`](../reference/manim.mobject.graphing.coordinate_systems.Axes.html#manim.mobject.graphing.coordinate_systems.Axes "manim.mobject.graphing.coordinate_systems.Axes"), [`FunctionGraph`](../reference/manim.mobject.graphing.functions.FunctionGraph.html#manim.mobject.graphing.functions.FunctionGraph "manim.mobject.graphing.functions.FunctionGraph"), or [`BarChart`](../reference/manim.mobject.graphing.probability.BarChart.html#manim.mobject.graphing.probability.BarChart "manim.mobject.graphing.probability.BarChart") are mobjects as well.
+> 笔记
 
-If you try to display an instance of [`Mobject`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject") on the screen, you will only see an empty frame. The reason is that the [`Mobject`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject") class is an abstract base class of all other mobjects, i.e. it does not have any pre-determined visual shape that can be displayed on the screen. It is only the skeleton of a thing that _could_ be displayed. Therefore, you will rarely need to use plain instances of [`Mobject`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject"); instead, you will most likely create instances of its derived classes. One of these derived classes is [`VMobject`](../reference/manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject "manim.mobject.types.vectorized_mobject.VMobject"). The `V` stands for Vectorized Mobject. In essence, a vmobject is a mobject that uses [vector graphics](https://en.wikipedia.org/wiki/Vector_graphics) to be displayed. Most of the time, you will be dealing with vmobjects, though we will continue to use the term “mobject” to refer to the class of shapes that can be displayed on the screen, as it is more general.
+> 任何可以显示在屏幕上的对象都是 a `mobject`，即使它本质上不一定是*数学的。*
 
-Note
+> 提示
 
-Any object that can be displayed on the screen is a `mobject`, even if it is not necessarily _mathematical_ in nature.
+> 要查看派生类的示例[`Mobject`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject")，请参阅该 [`geometry`](../reference/manim.mobject.geometry.html#module-manim.mobject.geometry "manim.mobject.几何")模块。其中大部分实际上也源自于 [`VMobject`](../reference/manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject "manim.mobject.types.vectorized_mobject.VMobject")。
 
-Tip
+### 创建并显示 mobject
 
-To see examples of classes derived from [`Mobject`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject"), see the [`geometry`](../reference/manim.mobject.geometry.html#module-manim.mobject.geometry "manim.mobject.geometry") module. Most of these are in fact derived from [`VMobject`](../reference/manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject "manim.mobject.types.vectorized_mobject.VMobject") as well.
+[正如快速入门](quickstart.html)中所解释的，通常 manim 脚本中的所有代码都放在类[`construct()`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene.construct "manim.scene.scene.Scene.construct")的方法中[`Scene`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene "手动场景.场景.场景")。要在屏幕上显示 mobject，请调用[`add()`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene.add "manim.场景.场景.场景.add")包含的方法[`Scene`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene "手动场景.场景.场景")。这是当 mobject 没有动画时在屏幕上显示它的主要方式。要从屏幕上删除 mobject，只需[`remove()`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene.remove "manim.scene.scene.Scene.remove")从包含的 中调用该方法 即可[`Scene`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene "手动场景.场景.场景")。
 
-### Creating and displaying mobjects[#](#creating-and-displaying-mobjects "Permalink to this heading")
+#### 示例：创建 Mobjects
 
-As explained in [Quickstart](quickstart.html), usually all of the code in a manim script is put inside the [`construct()`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene.construct "manim.scene.scene.Scene.construct") method of a [`Scene`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene "manim.scene.scene.Scene") class. To display a mobject on the screen, call the [`add()`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene.add "manim.scene.scene.Scene.add") method of the containing [`Scene`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene "manim.scene.scene.Scene"). This is the principal way of displaying a mobject on the screen when it is not being animated. To remove a mobject from the screen, simply call the [`remove()`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene.remove "manim.scene.scene.Scene.remove") method from the containing [`Scene`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene "manim.scene.scene.Scene").
+[![视频缩略图]()](https://docs.manim.community/en/stable/tutorials/CreatingMobjects-1.mp4)
 
-Example: CreatingMobjects [¶](#creatingmobjects)
+<iframe src="https://docs.manim.community/en/stable/tutorials/CreatingMobjects-1.mp4"></iframe>
 
+```py
 from manim import *
 
 class CreatingMobjects(Scene):
@@ -41,15 +42,19 @@ class CreatingMobjects(Scene):
         self.wait(1)
         self.remove(circle)
         self.wait(1)
+```
 
-Copy to clipboard
+### 放置 mobjects
 
-### Placing mobjects[#](#placing-mobjects "Permalink to this heading")
+让我们定义一个新的[`Scene`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene "手动场景.场景.场景")名为 它的对象`Shapes`和一些对象。[`add()`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene.add "manim.场景.场景.场景.add")此脚本生成一个显示圆形、正方形和三角形的静态图片：
 
-Let’s define a new [`Scene`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene "manim.scene.scene.Scene") called `Shapes` and [`add()`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene.add "manim.scene.scene.Scene.add") some mobjects to it. This script generates a static picture that displays a circle, a square, and a triangle:
+#### 示例：图形
 
-Example: Shapes [¶](#shapes)
+[![视频缩略图]()](https://docs.manim.community/en/stable/tutorials/Shapes-1.mp4)
 
+<iframe src="https://docs.manim.community/en/stable/tutorials/Shapes-1.mp4"></iframe>
+
+```py
 from manim import *
 
 class Shapes(Scene):
@@ -64,19 +69,23 @@ class Shapes(Scene):
 
         self.add(circle, square, triangle)
         self.wait(1)
+```
 
-Copy to clipboard
+默认情况下，mobject 在首次创建时被放置在坐标中心或*原点。*它们还被赋予了一些默认颜色。进一步地， `Shapes`场景通过该方法放置 mobject [`shift()`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject.shift "manim.mobject.mobject.Mobject.shift")。`UP`正方形从原点开始沿方向移动一个单位，而圆形和三角形分别移动一个单位`LEFT`和`RIGHT`。
 
-By default, mobjects are placed at the center of coordinates, or _origin_, when they are first created. They are also given some default colors. Further, the `Shapes` scene places the mobjects by using the [`shift()`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject.shift "manim.mobject.mobject.Mobject.shift") method. The square is shifted one unit in the `UP` direction from the origin, while the circle and triangle are shifted one unit `LEFT` and `RIGHT`, respectively.
+> 注意
 
-Attention
+> 与其他图形软件不同，manim 将坐标中心放置在屏幕的中心。垂直方向正方向为向上，水平方向正方向为右。另请参见模块中定义的常量`ORIGIN`、`UP`、`DOWN`、`LEFT`、 `RIGHT`和其他常量[`constants`](../reference/manim.constants.html#module-manim.constants "曼尼姆常数")。
 
-Unlike other graphics software, manim places the center of coordinates at the center of the screen. The positive vertical direction is up, and the positive horizontal direction is right. See also the constants `ORIGIN`, `UP`, `DOWN`, `LEFT`, `RIGHT`, and others, defined in the [`constants`](../reference/manim.constants.html#module-manim.constants "manim.constants") module.
+还有许多其他可能的方法可以将对象放置在屏幕上，例如 [`move_to()`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject.move_to "manim.mobject.mobject.Mobject.move_to")、[`next_to()`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject.next_to "manim.mobject.mobject.Mobject.next_to")和[`align_to()`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject.align_to "manim.mobject.mobject.Mobject.align_to")。下一个场景 `MobjectPlacement`将使用所有三个。
 
-There are many other possible ways to place mobjects on the screen, for example [`move_to()`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject.move_to "manim.mobject.mobject.Mobject.move_to"), [`next_to()`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject.next_to "manim.mobject.mobject.Mobject.next_to"), and [`align_to()`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject.align_to "manim.mobject.mobject.Mobject.align_to"). The next scene `MobjectPlacement` uses all three.
+#### 示例：MobjectPlacement
 
-Example: MobjectPlacement [¶](#mobjectplacement)
+[![视频缩略图]()](https://docs.manim.community/en/stable/tutorials/MobjectPlacement-1.mp4)
 
+<iframe src="https://docs.manim.community/en/stable/tutorials/MobjectPlacement-1.mp4"></iframe>
+
+```py
 from manim import *
 
 class MobjectPlacement(Scene):
@@ -85,43 +94,47 @@ class MobjectPlacement(Scene):
         square = Square()
         triangle = Triangle()
 
-        \# place the circle two units left from the origin
+        # place the circle two units left from the origin
         circle.move_to(LEFT * 2)
-        \# place the square to the left of the circle
+        # place the square to the left of the circle
         square.next_to(circle, LEFT)
-        \# align the left border of the triangle to the left border of the circle
+        # align the left border of the triangle to the left border of the circle
         triangle.align_to(circle, LEFT)
 
         self.add(circle, square, triangle)
         self.wait(1)
+```
 
-Copy to clipboard
+该[`move_to()`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject.move_to "manim.mobject.mobject.Mobject.move_to")方法使用绝对单位（相对于 测量 `ORIGIN`），同时[`next_to()`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject.next_to "manim.mobject.mobject.Mobject.next_to")使用相对单位（从作为第一个参数传递的 mobject 测量）。 `align_to()`不用作`LEFT`测量单位，而是作为确定用于对齐的边界的一种方式。对象边界的坐标是使用其周围的假想边界框来确定的。
 
-The [`move_to()`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject.move_to "manim.mobject.mobject.Mobject.move_to") method uses absolute units (measured relative to the `ORIGIN`), while [`next_to()`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject.next_to "manim.mobject.mobject.Mobject.next_to") uses relative units (measured from the mobject passed as the first argument). `align_to()` uses `LEFT` not as measuring units but as a way to determine the border to use for alignment. The coordinates of the borders of a mobject are determined using an imaginary bounding box around it.
+> 提示
 
-Tip
+> manim 中的许多方法可以链接在一起。例如这两行
 
-Many methods in manim can be chained together. For example the two lines
-
+```py
 square = Square()
 square.shift(LEFT)
+```
 
-Copy to clipboard
+> 可以替换为
 
-can be replaced by
-
+```py
 square = Square().shift(LEFT)
+```
 
-Copy to clipboard
+> 从技术上讲，这是可能的，因为大多数方法调用都会返回修改后的 mobject。
 
-Technically, this is possible because most methods calls return the modified mobject.
+### 样式化对象
 
-### Styling mobjects[#](#styling-mobjects "Permalink to this heading")
+以下场景更改了 mobject 的默认美观效果。
 
-The following scene changes the default aesthetics of the mobjects.
+#### 示例：MobjectStyling
 
-Example: MobjectStyling [¶](#mobjectstyling)
+[![视频缩略图]()](https://docs.manim.community/en/stable/tutorials/MobjectStyling-1.mp4)
 
+<iframe src="https://docs.manim.community/en/stable/tutorials/MobjectStyling-1.mp4"></iframe>
+
+```py
 from manim import *
 
 class MobjectStyling(Scene):
@@ -136,19 +149,23 @@ class MobjectStyling(Scene):
 
         self.add(circle, square, triangle)
         self.wait(1)
+```
 
-Copy to clipboard
+该场景使用两个主要函数来更改 mobject 的视觉样式：`set_stroke()`和[`set_fill()`](../reference/manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject.set_fill "manim.mobject.types.vectorized_mobject.VMobject.set_fill")。前者改变对象边框的视觉风格，而后者改变内部的风格。默认情况下，大多数 mobject 具有完全透明的内部，因此您必须指定参数`opacity`来显示颜色。不透明度`1.0`表示完全不透明，而`0.0`表示完全透明。
 
-This scene uses two of the main functions that change the visual style of a mobject: `set_stroke()` and [`set_fill()`](../reference/manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject.set_fill "manim.mobject.types.vectorized_mobject.VMobject.set_fill"). The former changes the visual style of the mobject’s border while the latter changes the style of the interior. By default, most mobjects have a fully transparent interior so you must specify the `opacity` parameter to display the color. An opacity of `1.0` means fully opaque, while `0.0` means fully transparent.
+仅[`VMobject`](../reference/manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject "manim.mobject.types.vectorized_mobject.VMobject")实现`set_stroke()`和 的实例[`set_fill()`](../reference/manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject.set_fill "manim.mobject.types.vectorized_mobject.VMobject.set_fill")。[`Mobject`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject")相反，实施 的实例`set_color()`。绝大多数预定义类都是派生自的[`VMobject`](../reference/manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject "manim.mobject.types.vectorized_mobject.VMobject")，因此通常可以安全地假设您有权访问`set_stroke()`和[`set_fill()`](../reference/manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject.set_fill "manim.mobject.types.vectorized_mobject.VMobject.set_fill")。
 
-Only instances of [`VMobject`](../reference/manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject "manim.mobject.types.vectorized_mobject.VMobject") implement `set_stroke()` and [`set_fill()`](../reference/manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject.set_fill "manim.mobject.types.vectorized_mobject.VMobject.set_fill"). Instances of [`Mobject`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject") implement `set_color()` instead. The vast majority of pre-defined classes are derived from [`VMobject`](../reference/manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject "manim.mobject.types.vectorized_mobject.VMobject") so it is usually safe to assume that you have access to `set_stroke()` and [`set_fill()`](../reference/manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject.set_fill "manim.mobject.types.vectorized_mobject.VMobject.set_fill").
+### Mobject 屏幕顺序
 
-### Mobject on-screen order[#](#mobject-on-screen-order "Permalink to this heading")
+下一个场景与上一节的场景完全相同`MobjectStyling`，除了一行之外。
 
-The next scene is exactly the same as the `MobjectStyling` scene from the previous section, except for exactly one line.
+#### 示例：MobjectZOrder
 
-Example: MobjectZOrder [¶](#mobjectzorder)
+[![视频缩略图]()](https://docs.manim.community/en/stable/tutorials/MobjectZOrder-1.mp4)
 
+<iframe src="https://docs.manim.community/en/stable/tutorials/MobjectZOrder-1.mp4"></iframe>
+
+```py
 from manim import *
 
 class MobjectZOrder(Scene):
@@ -163,47 +180,54 @@ class MobjectZOrder(Scene):
 
         self.add(triangle, square, circle)
         self.wait(1)
+```
 
-Copy to clipboard
+这里唯一的区别（除了场景名称）是 mobject 添加到场景的顺序。在 中`MobjectStyling`，我们将它们添加为 ，而在 中，我们将它们添加为 。` add(circle, square, triangle)``MobjectZOrder``add(triangle, square, circle) `
 
-The only difference here (besides the scene name) is the order in which the mobjects are added to the scene. In `MobjectStyling`, we added them as `add(circle, square, triangle)`, whereas in `MobjectZOrder` we add them as `add(triangle, square, circle)`.
+正如您所看到的，参数的顺序[`add()`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene.add "manim.场景.场景.场景.add")决定了 mobject 在屏幕上显示的顺序，最左边的参数放在后面。
 
-As you can see, the order of the arguments of [`add()`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene.add "manim.scene.scene.Scene.add") determines the order that the mobjects are displayed on the screen, with the left-most arguments being put in the back.
+## 动画
 
-Animations[#](#animations "Permalink to this heading")
-------------------------------------------------------
+Manim 的核心是动画。通常，您可以通过调用该方法向场景添加动画[`play()`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene.play "manim.场景.场景.场景.play")。
 
-At the heart of manim is animation. Generally, you can add an animation to your scene by calling the [`play()`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene.play "manim.scene.scene.Scene.play") method.
+#### 示例：一些动画
 
-Example: SomeAnimations [¶](#someanimations)
+[![视频缩略图]()](https://docs.manim.community/en/stable/tutorials/SomeAnimations-1.mp4)
 
+<iframe src="https://docs.manim.community/en/stable/tutorials/SomeAnimations-1.mp4"></iframe>
+
+```py
 from manim import *
 
 class SomeAnimations(Scene):
     def construct(self):
         square = Square()
 
-        \# some animations display mobjects, ...
+        # some animations display mobjects, ...
         self.play(FadeIn(square))
 
-        \# ... some move or rotate mobjects around...
+        # ... some move or rotate mobjects around...
         self.play(Rotate(square, PI/4))
 
-        \# some animations remove mobjects from the screen
+        # some animations remove mobjects from the screen
         self.play(FadeOut(square))
 
         self.wait(1)
+```
 
-Copy to clipboard
+简而言之，动画是在两个对象之间进行插值的过程。例如，`FadeIn(square)`以完全透明版本开始， `square`以完全不透明版本结束，通过逐渐增加不透明度在它们之间进行插值。 [`FadeOut`](../reference/manim.animation.fading.FadeOut.html#manim.animation.fading.FadeOut "manim.animation.fading.FadeOut")以相反的方式工作：它从完全不透明插值到完全透明。作为另一个示例，[`Rotate`](../reference/manim.animation.rotation.Rotate.html#manim.animation.rotation.Rotate "manim.animation.rotation.Rotate")从作为参数传递给它的 mobject 开始，并以相同的对象但旋转一定量结束，这次插入 mobject 的角度而不是其不透明度。
 
-Put simply, animations are procedures that interpolate between two mobjects. For example, `FadeIn(square)` starts with a fully transparent version of `square` and ends with a fully opaque version, interpolating between them by gradually increasing the opacity. [`FadeOut`](../reference/manim.animation.fading.FadeOut.html#manim.animation.fading.FadeOut "manim.animation.fading.FadeOut") works in the opposite way: it interpolates from fully opaque to fully transparent. As another example, [`Rotate`](../reference/manim.animation.rotation.Rotate.html#manim.animation.rotation.Rotate "manim.animation.rotation.Rotate") starts with the mobject passed to it as argument, and ends with the same object but rotated by a certain amount, this time interpolating the mobject’s angle instead of its opacity.
+### 动画方法
 
-### Animating methods[#](#animating-methods "Permalink to this heading")
+mobject 的任何可以更改的属性都可以设置动画。事实上，任何改变 mobject 属性的方法都可以通过使用[`animate()`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject.animate "manim.mobject.mobject.Mobject.animate").
 
-Any property of a mobject that can be changed can be animated. In fact, any method that changes a mobject’s property can be used as an animation, through the use of [`animate()`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject.animate "manim.mobject.mobject.Mobject.animate").
+#### 示例：AnimateExample
 
-Example: AnimateExample [¶](#animateexample)
+[![视频缩略图]()](https://docs.manim.community/en/stable/tutorials/AnimateExample-2.mp4)
 
+<iframe src="https://docs.manim.community/en/stable/tutorials/AnimateExample-2.mp4"></iframe>
+
+```py
 from manim import *
 
 class AnimateExample(Scene):
@@ -211,26 +235,30 @@ class AnimateExample(Scene):
         square = Square().set_fill(RED, opacity=1.0)
         self.add(square)
 
-        \# animate the change of color
+        # animate the change of color
         self.play(square.animate.set_fill(WHITE))
         self.wait(1)
 
-        \# animate the change of position and the rotation at the same time
+        # animate the change of position and the rotation at the same time
         self.play(square.animate.shift(UP).rotate(PI / 3))
         self.wait(1)
+```
 
-Copy to clipboard
+参考：[`Animation`](../reference/manim.animation.animation.Animation.html#manim.animation.animation.Animation "manim.animation.animation.Animation")
 
-References: [`Animation`](../reference/manim.animation.animation.Animation.html#manim.animation.animation.Animation "manim.animation.animation.Animation")
+[`animate()`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject.animate "manim.mobject.mobject.Mobject.animate")是所有 mobject 的一个属性，它为随后出现的方法提供动画效果。例如，`square.set_fill(WHITE)`设置正方形的填充颜色，同时`square.animate.set_fill(WHITE)`为该动作设置动画。
 
-[`animate()`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject.animate "manim.mobject.mobject.Mobject.animate") is a property of all mobjects that animates the methods that come afterward. For example, `square.set_fill(WHITE)` sets the fill color of the square, while `square.animate.set_fill(WHITE)` animates this action.
+### 动画运行时间
 
-### Animation run time[#](#animation-run-time "Permalink to this heading")
+默认情况下，传递给的任何动画都会`play()`持续一秒钟。使用`run_time`参数来控制持续时间。
 
-By default, any animation passed to `play()` lasts for exactly one second. Use the `run_time` argument to control the duration.
+#### 示例：运行时
 
-Example: RunTime [¶](#runtime)
+[![视频缩略图]()](https://docs.manim.community/en/stable/tutorials/RunTime-1.mp4)
 
+<iframe src="https://docs.manim.community/en/stable/tutorials/RunTime-1.mp4"></iframe>
+
+```py
 from manim import *
 
 class RunTime(Scene):
@@ -239,110 +267,116 @@ class RunTime(Scene):
         self.add(square)
         self.play(square.animate.shift(UP), run_time=3)
         self.wait(1)
+```
 
-Copy to clipboard
+### 创建自定义动画
 
-### Creating a custom animation[#](#creating-a-custom-animation "Permalink to this heading")
+尽管 Manim 有许多内置动画，但您有时会需要从一种状态平滑地制作动画[`Mobject`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject")到另一种状态。如果您发现自己处于这种情况，那么您可以定义自己的自定义动画。您首先扩展该类[`Animation`](../reference/manim.animation.animation.Animation.html#manim.animation.animation.Animation "manim.animation.animation.Animation")并覆盖它的[`interpolate_mobject()`](../reference/manim.animation.animation.Animation.html#manim.animation.animation.Animation.interpolate_mobject "manim.animation.animation.Animation.interpolate_mobject"). 该[`interpolate_mobject()`](../reference/manim.animation.animation.Animation.html#manim.animation.animation.Animation.interpolate_mobject "manim.animation.animation.Animation.interpolate_mobject")方法接收 alpha 作为参数，该参数从 0 开始并在整个动画中发生变化。因此，您只需根据其 interpolate_mobject 方法中的 alpha 值在 Animation 内部操作 self.mobject 即可。然后您将获得所有好处，[`Animation`](../reference/manim.animation.animation.Animation.html#manim.animation.animation.Animation "manim.animation.animation.Animation")例如播放不同的运行时间或使用不同的速率函数。
 
-Even though Manim has many built-in animations, you will find times when you need to smoothly animate from one state of a [`Mobject`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject") to another. If you find yourself in that situation, then you can define your own custom animation. You start by extending the [`Animation`](../reference/manim.animation.animation.Animation.html#manim.animation.animation.Animation "manim.animation.animation.Animation") class and overriding its [`interpolate_mobject()`](../reference/manim.animation.animation.Animation.html#manim.animation.animation.Animation.interpolate_mobject "manim.animation.animation.Animation.interpolate_mobject"). The [`interpolate_mobject()`](../reference/manim.animation.animation.Animation.html#manim.animation.animation.Animation.interpolate_mobject "manim.animation.animation.Animation.interpolate_mobject") method receives alpha as a parameter that starts at 0 and changes throughout the animation. So, you just have to manipulate self.mobject inside Animation according to the alpha value in its interpolate_mobject method. Then you get all the benefits of [`Animation`](../reference/manim.animation.animation.Animation.html#manim.animation.animation.Animation "manim.animation.animation.Animation") such as playing it for different run times or using different rate functions.
+假设您从一个数字开始，并想要创建一个[`Transform`](../reference/manim.animation.transform.Transform.html#manim.animation.transform.Transform "manim.animation.transform.Transform")将其转换为目标数字的动画。您可以使用 来做到这一点[`FadeTransform`](../reference/manim.animation.transform.FadeTransform.html#manim.animation.transform.FadeTransform "manim.animation.transform.FadeTransform")，这将淡出起始数字并淡入目标数字。但是，当我们考虑将一个数字转换为另一个数字时，一种直观的方法是平滑地递增或递减它。Manim 有一项功能，允许您通过定义自己的自定义动画来自定义此行为。
 
-Let’s say you start with a number and want to create a [`Transform`](../reference/manim.animation.transform.Transform.html#manim.animation.transform.Transform "manim.animation.transform.Transform") animation that transforms it to a target number. You can do it using [`FadeTransform`](../reference/manim.animation.transform.FadeTransform.html#manim.animation.transform.FadeTransform "manim.animation.transform.FadeTransform"), which will fade out the starting number and fade in the target number. But when we think about transforming a number from one to another, an intuitive way of doing it is by incrementing or decrementing it smoothly. Manim has a feature that allows you to customize this behavior by defining your own custom animation.
+您可以从创建自己的`Count`扩展类开始[`Animation`](../reference/manim.animation.animation.Animation.html#manim.animation.animation.Animation "manim.animation.animation.Animation")。该类可以有一个带有三个参数的构造函数：[`DecimalNumber`](../reference/manim.mobject.text.numbers.DecimalNumber.html#manim.mobject.text.numbers.DecimalNumber "manim.mobject.text.numbers.DecimalNumber")Mobject、start 和 end。构造函数会将[`DecimalNumber`](../reference/manim.mobject.text.numbers.DecimalNumber.html#manim.mobject.text.numbers.DecimalNumber "manim.mobject.text.numbers.DecimalNumber")Mobject 传递给超级构造函数（在本例中为[`Animation`](../reference/manim.animation.animation.Animation.html#manim.animation.animation.Animation "manim.animation.animation.Animation")构造函数），并设置开始和结束。
 
-You can start by creating your own `Count` class that extends [`Animation`](../reference/manim.animation.animation.Animation.html#manim.animation.animation.Animation "manim.animation.animation.Animation"). The class can have a constructor with three arguments, a [`DecimalNumber`](../reference/manim.mobject.text.numbers.DecimalNumber.html#manim.mobject.text.numbers.DecimalNumber "manim.mobject.text.numbers.DecimalNumber") Mobject, start, and end. The constructor will pass the [`DecimalNumber`](../reference/manim.mobject.text.numbers.DecimalNumber.html#manim.mobject.text.numbers.DecimalNumber "manim.mobject.text.numbers.DecimalNumber") Mobject to the super constructor (in this case, the [`Animation`](../reference/manim.animation.animation.Animation.html#manim.animation.animation.Animation "manim.animation.animation.Animation") constructor) and will set start and end.
+您唯一需要做的就是定义您希望它如何看待动画的每个步骤。[`interpolate_mobject()`](../reference/manim.animation.animation.Animation.html#manim.animation.animation.Animation.interpolate_mobject "manim.animation.animation.Animation.interpolate_mobject")Manim 在基于视频帧速率、速率函数和播放动画的运行时间的方法中为您提供 alpha 值。alpha 参数保存一个介于 0 和 1 之间的值，表示当前播放动画的步长。例如，0 表示动画开始，0.5 表示动画进行到一半，1 表示动画结束。
 
-The only thing that you need to do is to define how you want it to look at every step of the animation. Manim provides you with the alpha value in the [`interpolate_mobject()`](../reference/manim.animation.animation.Animation.html#manim.animation.animation.Animation.interpolate_mobject "manim.animation.animation.Animation.interpolate_mobject") method based on frame rate of video, rate function, and run time of animation played. The alpha parameter holds a value between 0 and 1 representing the step of the currently playing animation. For example, 0 means the beginning of the animation, 0.5 means halfway through the animation, and 1 means the end of the animation.
+对于动画`Count`，您只需找到一种方法来确定在给定 alpha 值处显示的数字，然后在[`interpolate_mobject()`](../reference/manim.animation.animation.Animation.html#manim.animation.animation.Animation.interpolate_mobject "manim.animation.animation.Animation.interpolate_mobject")动画方法中设置该值`Count`。假设您从 50 开始并递增，直到[`DecimalNumber`](../reference/manim.mobject.text.numbers.DecimalNumber.html#manim.mobject.text.numbers.DecimalNumber "manim.mobject.text.numbers.DecimalNumber")动画结束时达到 100。
 
-In the case of the `Count` animation, you just have to figure out a way to determine the number to display at the given alpha value and then set that value in the [`interpolate_mobject()`](../reference/manim.animation.animation.Animation.html#manim.animation.animation.Animation.interpolate_mobject "manim.animation.animation.Animation.interpolate_mobject") method of the `Count` animation. Suppose you are starting at 50 and incrementing until the [`DecimalNumber`](../reference/manim.mobject.text.numbers.DecimalNumber.html#manim.mobject.text.numbers.DecimalNumber "manim.mobject.text.numbers.DecimalNumber") reaches 100 at the end of the animation.
+- 如果 alpha 为 0，您希望该值为 50。
+- 如果 alpha 为 0.5，则您希望该值为 75。
+- 如果 alpha 为 1，您希望该值为 100。
 
-*   If alpha is 0, you want the value to be 50.
-    
-*   If alpha is 0.5, you want the value to be 75.
-    
-*   If alpha is 1, you want the value to be 100.
-    
+通常，您从起始数字开始，仅添加要根据 alpha 值递增的部分值。因此，计算每一步要显示的数字的逻辑将是。一旦您设置了 的计算值，您就完成了。`50 + alpha * (100 - 50)`[`DecimalNumber`](../reference/manim.mobject.text.numbers.DecimalNumber.html#manim.mobject.text.numbers.DecimalNumber "manim.mobject.text.numbers.DecimalNumber")
 
-Generally, you start with the starting number and add only some part of the value to be increment according to the alpha value. So, the logic of calculating the number to display at each step will be `50 + alpha * (100 - 50)`. Once you set the calculated value for the [`DecimalNumber`](../reference/manim.mobject.text.numbers.DecimalNumber.html#manim.mobject.text.numbers.DecimalNumber "manim.mobject.text.numbers.DecimalNumber"), you are done.
+定义动画后，您可以使用任何速率函数在您想要的任何持续时间内`Count`播放它。[`Scene`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene "手动场景.场景.场景")[`DecimalNumber`](../reference/manim.mobject.text.numbers.DecimalNumber.html#manim.mobject.text.numbers.DecimalNumber "manim.mobject.text.numbers.DecimalNumber")
 
-Once you have defined your `Count` animation, you can play it in your [`Scene`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene "manim.scene.scene.Scene") for any duration you want for any [`DecimalNumber`](../reference/manim.mobject.text.numbers.DecimalNumber.html#manim.mobject.text.numbers.DecimalNumber "manim.mobject.text.numbers.DecimalNumber") with any rate function.
+#### 示例：计数场景
 
-Example: CountingScene [¶](#countingscene)
+[![视频缩略图]()](https://docs.manim.community/en/stable/tutorials/CountingScene-1.mp4)
 
+<iframe src="https://docs.manim.community/en/stable/tutorials/CountingScene-1.mp4"></iframe>
+
+```py
 from manim import *
 
 class Count(Animation):
-    def \_\_init\_\_(self, number: DecimalNumber, start: float, end: float, **kwargs) -> None:
-        \# Pass number as the mobject of the animation
-        super().\_\_init\_\_(number,  **kwargs)
-        \# Set start and end
+    def __init__(self, number: DecimalNumber, start: float, end: float, **kwargs) -> None:
+        # Pass number as the mobject of the animation
+        super().__init__(number,  **kwargs)
+        # Set start and end
         self.start = start
         self.end = end
 
     def interpolate_mobject(self, alpha: float) -> None:
-        \# Set value of DecimalNumber according to alpha
+        # Set value of DecimalNumber according to alpha
         value = self.start + (alpha * (self.end - self.start))
         self.mobject.set_value(value)
 
+
 class CountingScene(Scene):
     def construct(self):
-        \# Create Decimal Number and add it to scene
+        # Create Decimal Number and add it to scene
         number = DecimalNumber().set_color(WHITE).scale(5)
-        \# Add an updater to keep the DecimalNumber centered as its value changes
+        # Add an updater to keep the DecimalNumber centered as its value changes
         number.add_updater(lambda number: number.move_to(ORIGIN))
 
         self.add(number)
 
         self.wait()
 
-        \# Play the Count Animation to count from 0 to 100 in 4 seconds
+        # Play the Count Animation to count from 0 to 100 in 4 seconds
         self.play(Count(number, 0, 100), run_time=4, rate_func=linear)
 
         self.wait()
+```
 
-Copy to clipboard
+参考：[`Animation`](../reference/manim.animation.animation.Animation.html#manim.animation.animation.Animation "manim.animation.animation.Animation") [`DecimalNumber`](../reference/manim.mobject.text.numbers.DecimalNumber.html#manim.mobject.text.numbers.DecimalNumber "manim.mobject.text.numbers.DecimalNumber") [`interpolate_mobject()`](../reference/manim.animation.animation.Animation.html#manim.animation.animation.Animation.interpolate_mobject "manim.animation.animation.Animation.interpolate_mobject") [`play()`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene.play "manim.场景.场景.场景.play")
 
-References: [`Animation`](../reference/manim.animation.animation.Animation.html#manim.animation.animation.Animation "manim.animation.animation.Animation") [`DecimalNumber`](../reference/manim.mobject.text.numbers.DecimalNumber.html#manim.mobject.text.numbers.DecimalNumber "manim.mobject.text.numbers.DecimalNumber") [`interpolate_mobject()`](../reference/manim.animation.animation.Animation.html#manim.animation.animation.Animation.interpolate_mobject "manim.animation.animation.Animation.interpolate_mobject") [`play()`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene.play "manim.scene.scene.Scene.play")
+### 使用 mobject 的坐标
 
-### Using coordinates of a mobject[#](#using-coordinates-of-a-mobject "Permalink to this heading")
+Mobject 包含定义其边界的点。这些点可用于将其他 mobject 分别添加到彼此，例如通过[`get_center()`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject.get_center "manim.mobject.mobject.Mobject.get_center")、[`get_top()`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject.get_top "manim.mobject.mobject.Mobject.get_top") 和 等方法[`get_start()`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject.get_start "manim.mobject.mobject.Mobject.get_start")。以下是一些重要坐标的示例：
 
-Mobjects contain points that define their boundaries. These points can be used to add other mobjects respectively to each other, e.g. by methods like [`get_center()`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject.get_center "manim.mobject.mobject.Mobject.get_center") , [`get_top()`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject.get_top "manim.mobject.mobject.Mobject.get_top") and [`get_start()`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject.get_start "manim.mobject.mobject.Mobject.get_start"). Here is an example of some important coordinates:
+#### 示例：MobjectExample 
 
-Example: MobjectExample [¶](#mobjectexample)
+![](./static/MobjectExample-1.png)
 
-![../_images/MobjectExample-1.png](../_images/MobjectExample-1.png)
-
+```py
 from manim import *
 
 class MobjectExample(Scene):
     def construct(self):
-        p1= \[-1,-1,0\]
-        p2= \[1,-1,0\]
-        p3= \[1,1,0\]
-        p4= \[-1,1,0\]
+        p1= [-1,-1,0]
+        p2= [1,-1,0]
+        p3= [1,1,0]
+        p4= [-1,1,0]
         a = Line(p1,p2).append_points(Line(p2,p3).points).append_points(Line(p3,p4).points)
         point_start= a.get_start()
         point_end  = a.get_end()
         point_center = a.get_center()
         self.add(Text(f"a.get_start() = {np.round(point_start,2).tolist()}", font_size=24).to_edge(UR).set_color(YELLOW))
-        self.add(Text(f"a.get_end() = {np.round(point_end,2).tolist()}", font_size=24).next_to(self.mobjects\[-1\],DOWN).set_color(RED))
-        self.add(Text(f"a.get_center() = {np.round(point_center,2).tolist()}", font_size=24).next_to(self.mobjects\[-1\],DOWN).set_color(BLUE))
+        self.add(Text(f"a.get_end() = {np.round(point_end,2).tolist()}", font_size=24).next_to(self.mobjects[-1],DOWN).set_color(RED))
+        self.add(Text(f"a.get_center() = {np.round(point_center,2).tolist()}", font_size=24).next_to(self.mobjects[-1],DOWN).set_color(BLUE))
 
         self.add(Dot(a.get_start()).set_color(YELLOW).scale(2))
         self.add(Dot(a.get_end()).set_color(RED).scale(2))
         self.add(Dot(a.get_top()).set_color(GREEN_A).scale(2))
         self.add(Dot(a.get_bottom()).set_color(GREEN_D).scale(2))
         self.add(Dot(a.get_center()).set_color(BLUE).scale(2))
-        self.add(Dot(a.point\_from\_proportion(0.5)).set_color(ORANGE).scale(2))
-        self.add(*\[Dot(x) for x in a.points\])
+        self.add(Dot(a.point_from_proportion(0.5)).set_color(ORANGE).scale(2))
+        self.add(*[Dot(x) for x in a.points])
         self.add(a)
+```
 
-Copy to clipboard
+### 将 mobject 转换为其他 mobject 
 
-### Transforming mobjects into other mobjects[#](#transforming-mobjects-into-other-mobjects "Permalink to this heading")
+也可以将一个 mobject 转换为另一个 mobject，如下所示：
 
-It is also possible to transform a mobject into another mobject like this:
+#### 示例：示例变换
 
-Example: ExampleTransform [¶](#exampletransform)
+[![视频缩略图]()](https://docs.manim.community/en/stable/tutorials/ExampleTransform-1.mp4)
 
+<iframe src="https://docs.manim.community/en/stable/tutorials/ExampleTransform-1.mp4"></iframe>
+
+```py
 from manim import *
 
 class ExampleTransform(Scene):
@@ -351,13 +385,16 @@ class ExampleTransform(Scene):
         m1 = Square().set_color(RED)
         m2 = Rectangle().set_color(RED).rotate(0.2)
         self.play(Transform(m1,m2))
+```
 
-Copy to clipboard
+Transform 函数将前一个 mobject 的点映射到下一个 mobject 的点。这可能会导致奇怪的行为，例如，当一个对象的点顺时针排列而其他点逆时针排列时。在这里，使用翻转函数并通过 numpy 的[滚动](https://numpy.org/doc/stable/reference/generated/numpy.roll.html)函数重新定位点 可能会有所帮助：
 
-The Transform function maps points of the previous mobject to the points of the next mobject. This might result in strange behaviour, e.g. when the dots of one mobject are arranged clockwise and the other points are arranged counterclockwise. Here it might help to use the flip function and reposition the points via the [roll](https://numpy.org/doc/stable/reference/generated/numpy.roll.html) function of numpy:
+#### 示例：示例旋转
+[![视频缩略图]()](https://docs.manim.community/en/stable/tutorials/ExampleRotation-1.mp4)
 
-Example: ExampleRotation [¶](#examplerotation)
+<iframe src="https://docs.manim.community/en/stable/tutorials/ExampleRotation-1.mp4"></iframe>
 
+```py
 from manim import *
 
 class ExampleRotation(Scene):
@@ -373,10 +410,8 @@ class ExampleRotation(Scene):
         m2a.points = points
 
         self.play(Transform(m1a,m1b),Transform(m2a,m2b), run_time=1)
+```
 
-Copy to clipboard
+## 场景
 
-Scenes[#](#scenes "Permalink to this heading")
-----------------------------------------------
-
-The [`Scene`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene "manim.scene.scene.Scene") class is the connective tissue of manim. Every mobject has to be [`added`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene.add "manim.scene.scene.Scene.add") to a scene to be displayed, or [`removed`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene.remove "manim.scene.scene.Scene.remove") from it to cease being displayed. Every animation has to be [`played`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene.play "manim.scene.scene.Scene.play") by a scene, and every time interval where no animation occurs is determined by a call to [`wait()`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene.wait "manim.scene.scene.Scene.wait"). All of the code of your video must be contained in the [`construct()`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene.construct "manim.scene.scene.Scene.construct") method of a class that derives from [`Scene`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene "manim.scene.scene.Scene"). Finally, a single file may contain multiple [`Scene`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene "manim.scene.scene.Scene") subclasses if multiple scenes are to be rendered at the same time.
+该类[`Scene`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene "手动场景.场景.场景")是马尼姆结缔组织。每个对象都必须[`added`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene.add "manim.场景.场景.场景.add")指向一个要显示的场景，或者[`removed`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene.remove "manim.scene.scene.Scene.remove")从该场景停止显示。每个动画都必须 [`played`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene.play "manim.场景.场景.场景.play")由一个场景组成，并且每个不发生动画的时间间隔都由对 的调用确定[`wait()`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene.wait "manim.scene.scene.Scene.wait")。视频的所有代码必须包含在[`construct()`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene.construct "manim.scene.scene.Scene.construct")派生自 的类的方法中[`Scene`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene "手动场景.场景.场景")。[`Scene`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene "手动场景.场景.场景")最后，如果要同时渲染多个场景，单个文件可能包含多个子类。

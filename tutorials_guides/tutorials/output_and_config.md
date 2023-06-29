@@ -1,25 +1,24 @@
-Manim’s Output Settings[#](#manim-s-output-settings "Permalink to this heading")
-================================================================================
+# Manim 的输出设置
 
-This document will focus on understanding manim’s output files and some of the main command-line flags available.
+本文档将重点了解 manim 的输出文件和一些可用的主要命令行标志。
 
-Note
+> 笔记
 
-This tutorial picks up where [Quickstart](quickstart.html) left off, so please read that document before starting this one.
+> [本教程将从快速入门](quickstart.html)停止的地方继续，因此请在开始本教程之前阅读该文档。
 
-Manim output folders[#](#manim-output-folders "Permalink to this heading")
---------------------------------------------------------------------------
+## Manim 输出文件夹
 
-At this point, you have just executed the following command.
+此时，您刚刚执行了以下命令。
 
+```sh
 manim -pql scene.py SquareToCircle
+```
 
-Copy to clipboard
+让我们一步步剖析刚刚发生的事情。首先，此命令对文件执行 manim `scene.py`，其中包含我们的动画代码。此外，该命令准确地告诉 manim`Scene`要渲染哪个，在本例中是`SquareToCircle`。这是必要的，因为单个场景文件可能包含多个场景。接下来，标志-p 告诉 manim 在渲染场景后播放场景，而-ql 标志告诉 manim 以低质量渲染场景。
 
-Let’s dissect what just happened step by step. First, this command executes manim on the file `scene.py`, which contains our animation code. Further, this command tells manim exactly which `Scene` is to be rendered, in this case, it is `SquareToCircle`. This is necessary because a single scene file may contain more than one scene. Next, the flag -p tells manim to play the scene once it’s rendered, and the -ql flag tells manim to render the scene in low quality.
+视频渲染后，您将看到 manim 生成了一些新文件，项目文件夹如下所示。
 
-After the video is rendered, you will see that manim has generated some new files and the project folder will look as follows.
-
+```sh
 project/
 ├─scene.py
 └─media
@@ -27,24 +26,28 @@ project/
   |  └─scene
   |     └─480p15
   |        ├─SquareToCircle.mp4
-  |        └─partial\_movie\_files
+  |        └─partial_movie_files
   ├─text
   └─Tex
+```
 
-Copy to clipboard
+有相当多的新文件。主要输出在 `media/videos/scene/480p15/SquareToCircle.mp4`. 默认情况下，该`media` 文件夹将包含 manim 的所有输出文件。该`media/videos` 子文件夹包含渲染的视频。在其中，您会发现每种不同视频质量都有一个文件夹。在我们的例子中，由于我们使用了该`-l`标志，因此视频是从 `scene.py`文件中以 480 分辨率、每秒 15 帧的速度生成的。因此，输出可以在里面找到 `media/videos/scene/480p15`。其他文件夹 `media/videos/scene/480p15/partial_movie_files`以及`media/text`包含 `media/Tex`manim 内部使用的文件。
 
-There are quite a few new files. The main output is in `media/videos/scene/480p15/SquareToCircle.mp4`. By default, the `media` folder will contain all of manim’s output files. The `media/videos` subfolder contains the rendered videos. Inside of it, you will find one folder for each different video quality. In our case, since we used the `-l` flag, the video was generated at 480 resolution at 15 frames per second from the `scene.py` file. Therefore, the output can be found inside `media/videos/scene/480p15`. The additional folders `media/videos/scene/480p15/partial_movie_files` as well as `media/text` and `media/Tex` contain files that are used by manim internally.
+您可以通过执行以下命令来查看 manim 如何使用生成的文件夹结构：
 
-You can see how manim makes use of the generated folder structure by executing the following command,
-
+```sh
 manim -pqh scene.py SquareToCircle
+```
 
-Copy to clipboard
+标志 `-ql`（低质量）已被`-qh` 标志取代，高品质。Manim 将花费相当长的时间来渲染此文件，并且一旦完成就会播放它，因为我们正在使用该`-p`标志。输出应如下所示：
 
-The `-ql` flag (for low quality) has been replaced by the `-qh` flag, for high quality. Manim will take considerably longer to render this file, and it will play it once it’s done since we are using the `-p` flag. The output should look like this:
+[![视频缩略图]()](https://docs.manim.community/en/stable/tutorials/SquareToCircle3-1.mp4)
 
-And the folder structure should look as follows.
+<iframe src="https://docs.manim.community/en/stable/tutorials/SquareToCircle3-1.mp4"></iframe>
 
+文件夹结构应如下所示。
+
+```sh
 project/
 ├─scene.py
 └─media
@@ -52,21 +55,21 @@ project/
   | └─scene
   |   ├─480p15
   |   | ├─SquareToCircle.mp4
-  |   | └─partial\_movie\_files
+  |   | └─partial_movie_files
   |   └─1080p60
   |     ├─SquareToCircle.mp4
-  |     └─partial\_movie\_files
+  |     └─partial_movie_files
   ├─text
   └─Tex
+```
 
-Copy to clipboard
+Manim 新建了一个文件夹`media/videos/1080p60`，对应高分辨率和每秒 60 帧。在其中，您可以找到新的`SquareToCircle.mp4`以及相应的 `partial_movie_files`.
 
-Manim has created a new folder `media/videos/1080p60`, which corresponds to the high resolution and the 60 frames per second. Inside of it, you can find the new `SquareToCircle.mp4`, as well as the corresponding `partial_movie_files`.
+当处理具有多个场景的项目并尝试多种分辨率时，输出目录的结构将使您的所有视频保持井井有条。
 
-When working on a project with multiple scenes, and trying out multiple resolutions, the structure of the output directories will keep all your videos organized.
+此外，在添加标志时，manim 可以选择输出场景的最后一帧`-s`。这是快速预览场景的最快选项。对应的文件夹结构如下所示：
 
-Further, manim has the option to output the last frame of a scene, when adding the flag `-s`. This is the fastest option to quickly get a preview of a scene. The corresponding folder structure looks like this:
-
+```sh
 project/
 ├─scene.py
 └─media
@@ -77,64 +80,63 @@ project/
   | └─scene
   |   ├─480p15
   |   | ├─SquareToCircle.mp4
-  |   | └─partial\_movie\_files
+  |   | └─partial_movie_files
   |   └─1080p60
   |     ├─SquareToCircle.mp4
-  |     └─partial\_movie\_files
+  |     └─partial_movie_files
   ├─text
   └─Tex
+```
 
-Copy to clipboard
+保存最后一帧`-s`可以与不同分辨率的标志相结合，例如，` -s -ql``-s -qh `
 
-Saving the last frame with `-s` can be combined with the flags for different resolutions, e.g. `-s -ql`, `-s -qh`
+## 章节
 
-Sections[#](#sections "Permalink to this heading")
---------------------------------------------------
+除了电影输出文件之外，还可以使用节。每个部分都会产生自己的输出视频。两个部分之间的剪切可以这样设置：
 
-In addition to the movie output file one can use sections. Each section produces its own output video. The cuts between two sections can be set like this:
-
+```py
 def construct(self):
-    \# play the first animations...
-    \# you don't need a section in the very beginning as it gets created automatically
+    # play the first animations...
+    # you don't need a section in the very beginning as it gets created automatically
     self.next_section()
-    \# play more animations...
+    # play more animations...
     self.next_section("this is an optional name that doesn't have to be unique")
-    \# play even more animations...
+    # play even more animations...
     self.next_section("this is a section without any animations, it will be removed")
+```
 
-Copy to clipboard
+其中两个剪辑之间的所有动画都会连接到一个输出视频文件中。请注意，每个部分至少需要一个动画。例如，这不会创建输出视频：
 
-All the animations between two of these cuts get concatenated into a single output video file. Be aware that you need at least one animation in each section. For example this wouldn’t create an output video:
-
+```py
 def construct(self):
     self.next_section()
-    \# this section doesn't have any animations and will be removed
-    \# but no error will be thrown
-    \# feel free to tend your flock of empty sections if you so desire
+    # this section doesn't have any animations and will be removed
+    # but no error will be thrown
+    # feel free to tend your flock of empty sections if you so desire
     self.add(Circle())
     self.next_section()
+```
 
-Copy to clipboard
+解决这个问题的一种方法是稍等一下：
 
-One way of fixing this is to wait a little:
-
+```py
 def construct(self):
     self.next_section()
     self.add(Circle())
-    \# now we wait 1sec and have an animation to satisfy the section
+    # now we wait 1sec and have an animation to satisfy the section
     self.wait()
     self.next_section()
+```
 
-Copy to clipboard
+对于要为每个部分创建的视频，您必须将标志添加`--save_sections`到 Manim 调用中，如下所示：
 
-For videos to be created for each section you have to add the `--save_sections` flag to the Manim call like this:
-
+```sh
 manim --save_sections scene.py
+```
 
-Copy to clipboard
+如果这样做，该`media`文件夹将如下所示：
 
-If you do this, the `media` folder will look like this:
-
+```sh
 media
 ├── images
 │   └── simple_scenes
@@ -142,90 +144,88 @@ media
     └── simple_scenes
         └── 480p15
             ├── ElaborateSceneWithSections.mp4
-            ├── partial\_movie\_files
+            ├── partial_movie_files
             │   └── ElaborateSceneWithSections
-            │       ├── 2201830969\_104169243\_1331664314.mp4
-            │       ├── 2201830969\_398514950\_125983425.mp4
-            │       ├── 2201830969\_398514950\_3447021159.mp4
-            │       ├── 2201830969\_398514950\_4144009089.mp4
-            │       ├── 2201830969\_4218360830\_1789939690.mp4
-            │       ├── 3163782288\_524160878\_1793580042.mp4
-            │       └── partial\_movie\_file_list.txt
+            │       ├── 2201830969_104169243_1331664314.mp4
+            │       ├── 2201830969_398514950_125983425.mp4
+            │       ├── 2201830969_398514950_3447021159.mp4
+            │       ├── 2201830969_398514950_4144009089.mp4
+            │       ├── 2201830969_4218360830_1789939690.mp4
+            │       ├── 3163782288_524160878_1793580042.mp4
+            │       └── partial_movie_file_list.txt
             └── sections
                 ├── ElaborateSceneWithSections_0000.mp4
                 ├── ElaborateSceneWithSections_0001.mp4
                 ├── ElaborateSceneWithSections_0002.mp4
                 └── ElaborateSceneWithSections.json
+```
 
-Copy to clipboard
+正如您所看到的，每个部分都会在目录中接收自己的输出视频`sections`。此处的 JSON 文件包含每个部分的一些有用信息：
 
-As you can see each section receives their own output video in the `sections` directory. The JSON file in here contains some useful information for each section:
+```json
+[
+    {
+        "name": "create square",
+        "type": "default.normal",
+        "video": "ElaborateSceneWithSections_0000.mp4",
+        "codec_name": "h264",
+        "width": 854,
+        "height": 480,
+        "avg_frame_rate": "15/1",
+        "duration": "2.000000",
+        "nb_frames": "30"
+    },
+    {
+        "name": "transform to circle",
+        "type": "default.normal",
+        "video": "ElaborateSceneWithSections_0001.mp4",
+        "codec_name": "h264",
+        "width": 854,
+        "height": 480,
+        "avg_frame_rate": "15/1",
+        "duration": "2.000000",
+        "nb_frames": "30"
+    },
+    {
+        "name": "fade out",
+        "type": "default.normal",
+        "video": "ElaborateSceneWithSections_0002.mp4",
+        "codec_name": "h264",
+        "width": 854,
+        "height": 480,
+        "avg_frame_rate": "15/1",
+        "duration": "2.000000",
+        "nb_frames": "30"
+    }
+]
+```
 
-\[
-  {
-  "name":  "create square",
-  "type":  "default.normal",
-  "video":  "ElaborateSceneWithSections_0000.mp4",
-  "codec_name":  "h264",
-  "width":  854,
-  "height":  480,
-  "avg\_frame\_rate":  "15/1",
-  "duration":  "2.000000",
-  "nb_frames":  "30"
-  },
-  {
-  "name":  "transform to circle",
-  "type":  "default.normal",
-  "video":  "ElaborateSceneWithSections_0001.mp4",
-  "codec_name":  "h264",
-  "width":  854,
-  "height":  480,
-  "avg\_frame\_rate":  "15/1",
-  "duration":  "2.000000",
-  "nb_frames":  "30"
-  },
-  {
-  "name":  "fade out",
-  "type":  "default.normal",
-  "video":  "ElaborateSceneWithSections_0002.mp4",
-  "codec_name":  "h264",
-  "width":  854,
-  "height":  480,
-  "avg\_frame\_rate":  "15/1",
-  "duration":  "2.000000",
-  "nb_frames":  "30"
-  }
-\]
+这些数据可供第三方应用程序使用，例如演示系统或自动视频编辑工具。
 
-Copy to clipboard
+您还可以跳过渲染属于某个部分的所有动画，如下所示：
 
-This data can be used by third party applications, like a presentation system or automated video editing tool.
-
-You can also skip rendering all animations belonging to a section like this:
-
+```py
 def construct(self):
     self.next_section(skip_animations=True)
-    \# play some animations that shall be skipped...
+    # play some animations that shall be skipped...
     self.next_section()
-    \# play some animations that won't get skipped...
+    # play some animations that won't get skipped...
+```
 
-Copy to clipboard
+## 一些命令行标志
 
-Some command line flags[#](#some-command-line-flags "Permalink to this heading")
---------------------------------------------------------------------------------
+执行命令时
 
-When executing the command
-
+```sh
 manim -pql scene.py SquareToCircle
+```
 
-Copy to clipboard
+有必要指定`Scene`要呈现哪个类。这是因为单个文件可以包含多个`Scene`类。如果您的文件包含多个`Scene`类，并且您想要渲染所有类，则可以使用该 `-a`标志。
 
-it was necessary to specify which `Scene` class to render. This is because a single file can contain more than one `Scene` class. If your file contains multiple `Scene` classes, and you want to render them all, you can use the `-a` flag.
+如前所述，`-ql`指定了低渲染质量。这看起来不太好，但是对于快速原型设计和测试非常有用。指定渲染质量的其他选项是`-qm`、`-qh`和 ，`-qk`分别表示中、高和 4k 质量。
 
-As discussed previously, the `-ql` specifies low render quality. This does not look very good, but is very useful for rapid prototyping and testing. The other options that specify render quality are `-qm`, `-qh`, and `-qk` for medium, high, and 4k quality, respectively.
+该`-p`标志在渲染后就会播放动画。如果您想在动画所在位置打开文件浏览器而不是播放它，可以使用该`-f`标志。您也可以省略这两个标志。
 
-The `-p` flag plays the animation once it is rendered. If you want to open the file browser at the location of the animation instead of playing it, you can use the `-f` flag. You can also omit these two flags.
+最后，默认情况下 manim 将输出 .mp4 文件。如果您希望动画采用 .gif 格式，请使用该`-i`标志。输出文件将与 .mp4 文件位于同一文件夹中，并且具有相同的名称，但文件扩展名不同。
 
-Finally, by default manim will output .mp4 files. If you want your animations in .gif format instead, use the `-i` flag. The output files will be in the same folder as the .mp4 files, and with the same name, but a different file extension.
-
-This was a quick review of some of the most frequent command-line flags. For a thorough review of all flags available, see the [thematic guide on Manim’s configuration system](../guides/configuration.html).
+这是对一些最常见的命令行标志的快速回顾。要全面了解所有可用标志，请参阅 [Manim 配置系统的主题指南](../guides/configuration.html)。
