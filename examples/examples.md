@@ -102,8 +102,7 @@ ref_classes: `ImageMobject`
 
 #### 示例：布尔运算
 
-<video controls="" loop="" autoplay="" src="./static/BooleanOperations-1.mp4">
-</video>
+[![视频缩略图](./static/BooleanOperations-1.mp4)](./static/BooleanOperations-1.mp4)
 
 ```py
 from manim import *
@@ -152,8 +151,7 @@ ref_classes: `Union` `Intersection` `Exclusion`
 
 #### 示例：图形上移动的点
 
-<video  controls="" loop="" autoplay="" src="./static//PointMovingOnShapes-1.mp4">
-</video>
+[![视频缩略图](./static//PointMovingOnShapes-1.mp4)](./static//PointMovingOnShapes-1.mp4)
 
 ```py
 from manim import *
@@ -181,8 +179,7 @@ ref_classes: `Circle` `Dot` `Line` `GrowFromCenter` `Transform` `MoveAlongPath` 
 
 #### 示例：周围移动
 
-<video controls="" loop="" autoplay="" src="./static/MovingAround-1.mp4">
-</video>
+[![视频缩略图](./static/MovingAround-1.mp4)](./static/MovingAround-1.mp4)
 
 ```py
 from manim import *
@@ -203,8 +200,7 @@ ref_methods: `Mobject.shift` `VMobject.set_fill` `Mobject.scale` `Mobject.rotate
 
 #### 示例：移动角度
 
-<video controls="" loop="" autoplay="" src="./static/MovingAngle-1.mp4">
-</video>
+[![视频缩略图](./static/MovingAngle-1.mp4)](./static/MovingAngle-1.mp4)
 
 ```py
 from manim import *
@@ -262,8 +258,7 @@ ref_methods: `Mobject.rotate`
 
 #### 示例：移动点
 
-<video controls="" loop="" autoplay="" src="./static/MovingDots-1.mp4">
-</video>
+[![视频缩略图](./static/MovingDots-1.mp4)](./static/MovingDots-1.mp4)
 
 ```py
 from manim import *
@@ -289,8 +284,7 @@ class MovingDots(Scene):
 
 #### 示例：将组移至目的地
 
-<video controls="" loop="" autoplay="" src="./static/MovingGroupToDestination-1.mp4">
-</video>
+[![视频缩略图](./static/MovingGroupToDestination-1.mp4)](./static/MovingGroupToDestination-1.mp4)
 
 ```py
 from manim import *
@@ -308,8 +302,7 @@ class MovingGroupToDestination(Scene):
 
 #### 示例：移动框框
 
-<video controls="" loop="" autoplay="" src="./static/MovingFrameBox-1.mp4">
-</video>
+[![视频缩略图](./static/MovingFrameBox-1.mp4)](./static/MovingFrameBox-1.mp4)
 
 ```py
 from manim import *
@@ -340,8 +333,7 @@ ref_classes: `MathTex` `SurroundingRectangle`
 
 #### 示例：旋转更新器
 
-<video controls="" loop="" autoplay="" src="./static/RotationUpdater-1.mp4">
-</video>
+[![视频缩略图](./static/RotationUpdater-1.mp4)](./static/RotationUpdater-1.mp4)
 
 ```py
 from manim import *
@@ -370,8 +362,7 @@ ref_methods: `Mobject.add_updater` `Mobject.remove_updater`
 
 #### 示例：点与踪迹
 
-<video controls="" loop="" autoplay="" src="./static/PointWithTrace-1.mp4">
-</video>
+[![视频缩略图](./static/PointWithTrace-1.mp4)](./static/PointWithTrace-1.mp4)
 
 ```py
 from manim import *
@@ -451,8 +442,7 @@ ref_methods: `Axes.plot` `Axes.get_vertical_line_to_graph` `Axes.input_to_graph_
 
 #### 示例：参数最小值
 
-<video controls="" loop="" autoplay="" src="./static/ArgMinExample-1.mp4">
-</video>
+[![视频缩略图](./static/ArgMinExample-1.mp4)](./static/ArgMinExample-1.mp4)
 
 ```py
 from manim import *
@@ -525,8 +515,7 @@ ref_methods: `Axes.plot` `Axes.get_vertical_line_to_graph` `Axes.get_area` `Axes
 
 #### 示例：轴上的多边形
 
-<video controls="" loop="" autoplay="" src="./static/PolygonOnAxes-1.mp4">
-</video>
+[![视频缩略图](./static/PolygonOnAxes-1.mp4)](./static/PolygonOnAxes-1.mp4)
 
 ```py
 from manim import *
@@ -629,8 +618,7 @@ ref_methods: `Axes.plot_line_graph` `Axes.get_axis_labels`
 
 #### 示例：跟随图形相机
 
-<video controls="" loop="" autoplay="" src="./static/FollowingGraphCamera-1.mp4">
-</video>
+[![视频缩略图](./static/FollowingGraphCamera-1.mp4)](./static/FollowingGraphCamera-1.mp4)
 
 ```py
 from manim import *
@@ -669,8 +657,7 @@ ref_methods: `Axes.plot` `Mobject.add_updater`
 
 #### 示例：移动缩放场景
 
-<video controls="" loop="" autoplay="" src="./static/MovingZoomedSceneAround-1.mp4">
-</video>
+[![视频缩略图](./static/MovingZoomedSceneAround-1.mp4)](./static/MovingZoomedSceneAround-1.mp4)
 
 ```py
 from manim import *
@@ -797,8 +784,7 @@ ref_methods: `ThreeDScene.set_camera_orientation`
 
 #### 示例：三维相机旋转
 
-<video controls="" loop="" autoplay="" src="./static/ThreeDCameraRotation-1.mp4">
-</video>
+[![视频缩略图](./static/ThreeDCameraRotation-1.mp4)](./static/ThreeDCameraRotation-1.mp4)
 
 ```py
 from manim import *
@@ -823,8 +809,7 @@ ref_methods: `ThreeDScene.begin_ambient_camera_rotation` `ThreeDScene.stop_ambie
 
 #### 示例：三维相机错觉旋转
 
-<video controls="" loop="" autoplay="" src="./static/ThreeDCameraIllusionRotation-1.mp4">
-</video>
+[![视频缩略图](./static/ThreeDCameraIllusionRotation-1.mp4)](./static/ThreeDCameraIllusionRotation-1.mp4)
 
 ```py
 from manim import *
@@ -888,8 +873,7 @@ ref_classes: `ThreeDScene` `Surface`
 
 #### 示例：打开Manim
 
-<video controls="" loop="" autoplay="" src="./static/OpeningManim-1.mp4">
-</video>
+[![视频缩略图](./static/OpeningManim-1.mp4)](./static/OpeningManim-1.mp4)
 
 ```py
 from manim import *
@@ -955,8 +939,7 @@ ref_methods: `NumberPlane.prepare_for_nonlinear_transform`
 
 #### 示例：正弦曲线单位圆
 
-<video controls="" loop="" autoplay="" src="./static/SineCurveUnitCircle-1.mp4">
-</video>
+[![视频缩略图](./static/SineCurveUnitCircle-1.mp4)](./static/SineCurveUnitCircle-1.mp4)
 
 ```py
 from manim import *
