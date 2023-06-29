@@ -941,6 +941,8 @@ ref_methods: `NumberPlane.prepare_for_nonlinear_transform`
 
 [![视频缩略图](./static/thumbnail/SineCurveUnitCircle-1.mp4_20230629_135234.595.jpg)](https://docs.manim.community/en/stable/SineCurveUnitCircle-1.mp4)
 
+<video src="https://docs.manim.community/en/stable/SineCurveUnitCircle-1.mp4" controls>Your browser does not support the video tag.</video>
+
 ```py
 from manim import *
 

@@ -1,5 +1,6 @@
-# Manim社区版(Manim Community Edition)
+# Manim社区版
 
+Manim Community Edition
 当前版本：v0.17.3
 
 ### TODO:

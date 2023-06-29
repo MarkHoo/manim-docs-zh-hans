@@ -1,0 +1,38 @@
+# 常见问题
+
+### 目录
+
+TODO: 链接为DEMO，待完善
+
+- [常见问题解答：一般用法](general.html)
+  - [为什么 Manim 说“该模块内没有场景”？](general.html#why-does-manim-say-that-there-are-no-scenes-inside-that-module)
+  - [无论我在文件中输入什么代码，Manim 都只会呈现黑框！为什么？](general.html#no-matter-what-code-i-put-in-my-file-manim-only-renders-a-black-frame-why)
+  - [Manim 场景的默认尺寸是多少？](general.html#what-are-the-default-measurements-for-manim-s-scene)
+  - [如何找出创建时可以传递哪些关键字参数`Mobject`？](general.html#how-do-i-find-out-which-keyword-arguments-i-can-pass-when-creating-a-mobject)
+  - [Manim 可以渲染透明背景的视频吗？](general.html#can-manim-render-a-video-with-transparent-background)
+  - [我看过一个视频，其中创建者运行了命令 X，但它对我不起作用。为什么？](general.html#i-have-watched-a-video-where-a-creator-ran-command-x-but-it-does-not-work-for-me-why)
+  - [使用`Tex`或时`MathTex`，会丢失一些字母。我怎样才能解决这个问题？](general.html#when-using-tex-or-mathtex-some-letters-are-missing-how-can-i-fix-this)
+  - [我想将一些代码从 翻译`manimgl`为`manim`，我该如何处理`CONFIG`字典？](general.html#i-want-to-translate-some-code-from-manimgl-to-manim-what-do-i-do-with-config-dictionaries)
+  - [我的安装不支持将 PDF 转换为 SVG，有帮助吗？](general.html#my-installation-does-not-support-converting-pdf-to-svg-help)
+  - [在哪里可以找到更多学习 Manim 的资源？](general.html#where-can-i-find-more-resources-for-learning-manim)
+- [常见问题解答：获取帮助](help.html)
+  - [如何为 X 制作动画？为什么我会收到错误 Y？有人能帮我吗？](help.html#how-do-i-animate-x-why-do-i-get-error-y-can-someone-help-me)
+  - [如果没有人回答我的问题我该怎么办？](help.html#what-should-i-do-if-nobody-answers-my-question)
+  - [该库的行为与文档不符，或者新版本中出现了问题。我应该怎么办？](help.html#the-library-does-not-behave-as-documented-or-something-broke-in-a-new-release-what-should-i-do)
+  - [我有一个应该实现的非常酷的功能的想法，我应该在哪里分享我的想法？](help.html#i-have-an-idea-for-a-really-cool-feature-that-should-be-implemented-where-should-i-share-my-idea)
+- [常见问题：安装](installation.html)
+  - [为什么 Manim 有不同的版本？](installation.html#why-are-there-different-versions-of-manim)
+  - [我应该使用哪个版本？](installation.html#which-version-should-i-use)
+  - [Manim、ManimGL、ManimCairo 之间有什么区别？我能知道某个场景是为哪个版本编写的吗？](installation.html#what-are-the-differences-between-manim-manimgl-manimcairo-can-i-tell-for-which-version-a-scene-was-written-for)
+  - [我如何知道我安装的是哪个版本的 Manim？](installation.html#how-do-i-know-which-version-of-manim-i-have-installed)
+  - [我按照视频指南 X 安装 Manim，但某些步骤失败。我该怎么办？](installation.html#i-am-following-the-video-guide-x-to-install-manim-but-some-step-fails-what-do-i-do)
+  - [为什么 ManimPango 运行时安装失败？`pip install manim`](installation.html#why-does-manimpango-fail-to-install-when-running-pip-install-manim)
+  - [我正在使用 Windows 并收到错误`X is not recognized as an internal or external command, operable program or batch file`](installation.html#i-am-using-windows-and-get-the-error-x-is-not-recognized-as-an-internal-or-external-command-operable-program-or-batch-file)
+  - [我尝试过使用 Chocolatey ( ) 安装 Manim，但失败了！`choco install manimce`](installation.html#i-have-tried-using-chocolatey-choco-install-manimce-to-install-manim-but-it-failed)
+  - [在 Windows 上，当打字`python`或`python3`打开 Windows 商店时，我可以修复此问题吗？](installation.html#on-windows-when-typing-python-or-python3-the-windows-store-is-opened-can-i-fix-this)
+  - [我正在使用 Anaconda，并提示`ImportError`未找到某些符号。](installation.html#i-am-using-anaconda-and-get-an-importerror-mentioning-that-some-symbol-is-not-found)
+  - [`manimpango/cmanimpango.c`如何修复尝试安装 Manim 时无法找到的错误？](installation.html#how-can-i-fix-the-error-that-manimpango-cmanimpango-c-could-not-be-found-when-trying-to-install-manim)
+- [在哪里可以了解有关 Manim 内部结构的更多信息？](internals.html)
+- [常见问题解答：OpenGL 渲染](opengl.html)
+  - [是否有关于如何使用社区维护版本中的 OpenGL 渲染器的资源？](opengl.html#are-there-any-resources-on-how-the-opengl-renderer-in-the-community-maintained-version-can-be-used)
+  - [我尝试使用`--renderer=opengl`和运行交互式场景，但出现`Scene.interactive_embed`错误 ( )。`sqlite3.ProgrammingError`我怎样才能解决这个问题？](opengl.html#i-am-trying-to-run-an-interactive-scene-with-renderer-opengl-and-scene-interactive-embed-but-an-error-sqlite3-programmingerror-is-raised-how-can-i-fix-this)
