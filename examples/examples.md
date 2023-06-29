@@ -102,7 +102,7 @@ ref_classes: `ImageMobject`
 
 #### 示例：布尔运算
 
-[![视频缩略图](./static/thumbnail/BooleanOperations-1.mp4_20230629_135017.571.jpg)](./static/BooleanOperations-1.mp4)
+[![视频缩略图](./static/thumbnail/BooleanOperations-1.mp4_20230629_135017.571.jpg)](https://docs.manim.community/en/stable/BooleanOperations-1.mp4)
 
 ```py
 from manim import *
@@ -151,7 +151,7 @@ ref_classes: `Union` `Intersection` `Exclusion`
 
 #### 示例：图形上移动的点
 
-[![视频缩略图](./static/thumbnail/PointMovingOnShapes-1.mp4_20230629_135217.417.jpg)](./static/PointMovingOnShapes-1.mp4)
+[![视频缩略图](./static/thumbnail/PointMovingOnShapes-1.mp4_20230629_135217.417.jpg)](https://docs.manim.community/en/stable/PointMovingOnShapes-1.mp4)
 
 ```py
 from manim import *
@@ -179,7 +179,7 @@ ref_classes: `Circle` `Dot` `Line` `GrowFromCenter` `Transform` `MoveAlongPath` 
 
 #### 示例：周围移动
 
-[![视频缩略图](./static/thumbnail/MovingAround-1.mp4_20230629_135147.512.jpg)](./static/MovingAround-1.mp4)
+[![视频缩略图](./static/thumbnail/MovingAround-1.mp4_20230629_135147.512.jpg)](https://docs.manim.community/en/stable/MovingAround-1.mp4)
 
 ```py
 from manim import *
@@ -200,7 +200,7 @@ ref_methods: `Mobject.shift` `VMobject.set_fill` `Mobject.scale` `Mobject.rotate
 
 #### 示例：移动角度
 
-[![视频缩略图](./static/thumbnail/MovingAngle-1.mp4_20230629_135141.523.jpg)](./static/MovingAngle-1.mp4)
+[![视频缩略图](./static/thumbnail/MovingAngle-1.mp4_20230629_135141.523.jpg)](https://docs.manim.community/en/stable/MovingAngle-1.mp4)
 
 ```py
 from manim import *
@@ -258,7 +258,7 @@ ref_methods: `Mobject.rotate`
 
 #### 示例：移动点
 
-[![视频缩略图](./static/thumbnail/MovingDots-1.mp4_20230629_135151.423.jpg)](./static/MovingDots-1.mp4)
+[![视频缩略图](./static/thumbnail/MovingDots-1.mp4_20230629_135151.423.jpg)](https://docs.manim.community/en/stable/MovingDots-1.mp4)
 
 ```py
 from manim import *
@@ -284,7 +284,7 @@ class MovingDots(Scene):
 
 #### 示例：将组移至目的地
 
-[![视频缩略图](./static/thumbnail/MovingGroupToDestination-1.mp4_20230629_140153.880.jpg)](./static/MovingGroupToDestination-1.mp4)
+[![视频缩略图](./static/thumbnail/MovingGroupToDestination-1.mp4_20230629_140153.880.jpg)](https://docs.manim.community/en/stable/MovingGroupToDestination-1.mp4)
 
 ```py
 from manim import *
@@ -302,7 +302,7 @@ class MovingGroupToDestination(Scene):
 
 #### 示例：移动框框
 
-[![视频缩略图](./static/thumbnail/MovingFrameBox-1.mp4_20230629_135154.524.jpg)](./static/MovingFrameBox-1.mp4)
+[![视频缩略图](./static/thumbnail/MovingFrameBox-1.mp4_20230629_135154.524.jpg)](https://docs.manim.community/en/stable/MovingFrameBox-1.mp4)
 
 ```py
 from manim import *
@@ -333,7 +333,7 @@ ref_classes: `MathTex` `SurroundingRectangle`
 
 #### 示例：旋转更新器
 
-[![视频缩略图](./static/thumbnail/RotationUpdater-1.mp4_20230629_135227.718.jpg)](./static/RotationUpdater-1.mp4)
+[![视频缩略图](./static/thumbnail/RotationUpdater-1.mp4_20230629_135227.718.jpg)](https://docs.manim.community/en/stable/RotationUpdater-1.mp4)
 
 ```py
 from manim import *
@@ -362,7 +362,7 @@ ref_methods: `Mobject.add_updater` `Mobject.remove_updater`
 
 #### 示例：点与踪迹
 
-[![视频缩略图](./static/thumbnail/PointWithTrace-1.mp4_20230629_135220.666.jpg)](./static/PointWithTrace-1.mp4)
+[![视频缩略图](./static/thumbnail/PointWithTrace-1.mp4_20230629_135220.666.jpg)](https://docs.manim.community/en/stable/PointWithTrace-1.mp4)
 
 ```py
 from manim import *
@@ -442,7 +442,7 @@ ref_methods: `Axes.plot` `Axes.get_vertical_line_to_graph` `Axes.input_to_graph_
 
 #### 示例：参数最小值
 
-[![视频缩略图](./static/thumbnail/ArgMinExample-1.mp4_20230629_135135.040.jpg)](./static/ArgMinExample-1.mp4)
+[![视频缩略图](./static/thumbnail/ArgMinExample-1.mp4_20230629_135135.040.jpg)](https://docs.manim.community/en/stable/ArgMinExample-1.mp4)
 
 ```py
 from manim import *
@@ -515,7 +515,7 @@ ref_methods: `Axes.plot` `Axes.get_vertical_line_to_graph` `Axes.get_area` `Axes
 
 #### 示例：轴上的多边形
 
-[![视频缩略图](./static/thumbnail/PolygonOnAxes-1.mp4_20230629_135222.964.jpg)](./static/PolygonOnAxes-1.mp4)
+[![视频缩略图](./static/thumbnail/PolygonOnAxes-1.mp4_20230629_135222.964.jpg)](https://docs.manim.community/en/stable/PolygonOnAxes-1.mp4)
 
 ```py
 from manim import *
@@ -618,7 +618,7 @@ ref_methods: `Axes.plot_line_graph` `Axes.get_axis_labels`
 
 #### 示例：跟随图形相机
 
-[![视频缩略图](./static/thumbnail/FollowingGraphCamera-1.mp4_20230629_135137.209.jpg)](./static/FollowingGraphCamera-1.mp4)
+[![视频缩略图](./static/thumbnail/FollowingGraphCamera-1.mp4_20230629_135137.209.jpg)](https://docs.manim.community/en/stable/FollowingGraphCamera-1.mp4)
 
 ```py
 from manim import *
@@ -657,7 +657,7 @@ ref_methods: `Axes.plot` `Mobject.add_updater`
 
 #### 示例：移动缩放场景
 
-[![视频缩略图](./static/thumbnail/MovingZoomedSceneAround-1.mp4_20230629_140622.468.jpg)](./static/MovingZoomedSceneAround-1.mp4)
+[![视频缩略图](./static/thumbnail/MovingZoomedSceneAround-1.mp4_20230629_140622.468.jpg)](https://docs.manim.community/en/stable/MovingZoomedSceneAround-1.mp4)
 
 ```py
 from manim import *
@@ -784,7 +784,7 @@ ref_methods: `ThreeDScene.set_camera_orientation`
 
 #### 示例：三维相机旋转
 
-[![视频缩略图](./static/thumbnail/ThreeDCameraRotation-1.mp4_20230629_135132.595.jpg)](./static/ThreeDCameraRotation-1.mp4)
+[![视频缩略图](./static/thumbnail/ThreeDCameraRotation-1.mp4_20230629_135132.595.jpg)](https://docs.manim.community/en/stable/ThreeDCameraRotation-1.mp4)
 
 ```py
 from manim import *
@@ -809,7 +809,7 @@ ref_methods: `ThreeDScene.begin_ambient_camera_rotation` `ThreeDScene.stop_ambie
 
 #### 示例：三维相机错觉旋转
 
-[![视频缩略图](./static/thumbnail/ThreeDCameraIllusionRotation-1.mp4_20230629_135243.740.jpg)](./static/ThreeDCameraIllusionRotation-1.mp4)
+[![视频缩略图](./static/thumbnail/ThreeDCameraIllusionRotation-1.mp4_20230629_135243.740.jpg)](https://docs.manim.community/en/stable/ThreeDCameraIllusionRotation-1.mp4)
 
 ```py
 from manim import *
@@ -873,7 +873,7 @@ ref_classes: `ThreeDScene` `Surface`
 
 #### 示例：打开Manim
 
-[![视频缩略图](./static/thumbnail/OpeningManim-1.mp4_20230629_135213.282.jpg)](./static/OpeningManim-1.mp4)
+[![视频缩略图](./static/thumbnail/OpeningManim-1.mp4_20230629_135213.282.jpg)](https://docs.manim.community/en/stable/OpeningManim-1.mp4)
 
 ```py
 from manim import *
@@ -939,7 +939,7 @@ ref_methods: `NumberPlane.prepare_for_nonlinear_transform`
 
 #### 示例：正弦曲线单位圆
 
-[![视频缩略图](./static/thumbnail/SineCurveUnitCircle-1.mp4_20230629_135234.595.jpg)](./static/SineCurveUnitCircle-1.mp4)
+[![视频缩略图](./static/thumbnail/SineCurveUnitCircle-1.mp4_20230629_135234.595.jpg)](https://docs.manim.community/en/stable/SineCurveUnitCircle-1.mp4)
 
 ```py
 from manim import *
