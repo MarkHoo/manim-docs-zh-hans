@@ -10,8 +10,8 @@
 
 ### 安装 Python
 
-1. 官网下载 [Python]()
-2. 双击安装包，勾选 `Add To Path` ，安装时会自动为你配置好Python环境变量
+1. 官网 [下载Python](https://www.python.org/downloads/)
+2. 双击安装包，勾选 `Add To Path` ，安装时会自动为你配置好`Python`环境变量
 3. 安装路径，删除掉中间的路径，直接安装到C盘根目录，比如Python3.9： `C:\Python39`
 
 --------------------------
@@ -40,7 +40,7 @@ manim
 
 ### 安装 `FFmpeg`
 
-1. 官网下载 [FFmpeg](https://ffmpeg.org/download.html#build-windows)，或者这里 [点击下载FFmpeg](https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.7z) (推荐)
+1. 官网 [下载FFmpeg](https://ffmpeg.org/download.html#build-windows)，或者这里 [点击下载FFmpeg](https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.7z) (推荐)
 2. 将下载好的FFmpeg压缩包解压出来，把文件夹名称改为 `ffmpeg` ,然后将文件夹剪切或复制到C盘根目录
 3. 配置环境变量。依次打开 `Windows设置 -> 系统 -> 关于 -> 高级系统设置 -> 高级 -> 环境变量` ，然后根据需求在user或者系统变量里的 `Path` 中增加一条FFmpeg的bin路径，如： `C:\ffmpeg\bin` ，然后依次点击确定关闭所有窗口。
 4. 用快捷键 `Windows键 + r` 打开cmd，输入 `ffmpeg` 命令看能否正常运行，也可通过 `ffmpeg -version` 查看FFmpeg版本信息。
@@ -55,7 +55,7 @@ manim
 
 ### 安装 `MiKTeX`
 
-1. 官网下载 [MiKTeX](https://miktex.org/download)
+1. 官网 [下载MiKTeX](https://miktex.org/download)
 2. 将下载好的 `MiKTeX` 的exe文件右键管理员打开，一直下一步即可，中间有选择为user安装或者为所有用户安装，可根据自身需要选择。
 
 ## 安装完成
