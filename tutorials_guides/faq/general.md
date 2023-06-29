@@ -1,50 +1,40 @@
-# FAQ: General Usage
+# 常见问题：一般用法
 
-## Why does Manim say that "there are no scenes inside that module"?
+## 为什么 Manim 提示：“there are no scenes inside that module”？
 
-There are two main reasons why this error appears: if you have edited
-the file containing your `Scene` class and forgot to save it, or if you
-have accidentally passed the name of a wrong file to `manim`, this is
-a likely outcome. Check that you have spelled everything correctly.
+出现此错误的主要原因有两个：如果您已编辑包含您的“Scene”类的文件，但忘记保存它，或者如果您不小心将错误的文件名传递给了`manim`，这是一个可能的结果。 检查您是否拼写正确。
 
-Otherwise, you are likely mixing up Manim versions. See {ref}`this FAQ answer <different-versions>`
-for an explanation regarding why there are different versions. Under the
-assumption that you are trying to use the `manim` executable from the terminal to run
-a scene that has been written for the community version (i.e., there is
-`from manim import *`, or more specifically `from manim import Scene`),
-then this error indicates that the `manim` executable has been overwritten
-by the one provided by `manimgl` (unfortunately, both `manim` and `manimgl`
-provide a `manim` executable).
+否则，您可能会混淆 Manim 版本。 请参阅`此常见问题解答<不同版本>`
 
-You can check whether this is the case by running `manim --version`, the output of
-the community maintained version starts with `Manim Community v...`. If this is not
-the case, you are running `manimgl`.
+有关为什么有不同版本的解释。在下面假设您正在尝试使用终端中的`manim`可执行文件来运行
+为社区版本编写的场景（即，有`from manim import *`，或更具体地说是`from manim import Scene`），那么这个错误表明`manim`可执行文件已被`manimgl`提供的可执行文件覆盖（不幸的是，`manim`和`manimgl`都提供“manim”可执行文件）。
 
-You can resolve this by either of the following steps:
-- Un- and reinstalling `manim`,
-- using the `manimce` executable in place of the `manim` one,
-- or replacing the call to the executable with a direct call to the
-  Python module via `python -m manim`.
+您可以通过运行`manim --version`来检查是否是这种情况，社区维护版本的输出以`Manim Community v...`开头。 如果不是这种情况，则您正在运行`manimgl`。
+
+您可以通过以下任一步骤解决此问题：
+
+- 卸载并重新安装`manim`，
+- 使用`manimce`可执行文件代替`manim`可执行文件，
+- 或者通过`python -m manim`直接调用 Python 模块来替换对可执行文件的调用。
 
 ---
 
-## No matter what code I put in my file, Manim only renders a black frame! Why?
+## 为什么无论我在文件中放入什么代码，Manim 都只会渲染黑框?
 
-If you are using the usual pattern to write a `Scene`, i.e.,
+如果您使用通常的模式来编写`Scene`，即:
+
 ```python
 class MyAwesomeScene(Scene):
     def construct(self):
         ...
         # your animation code
 ```
-then double check whether you have spelled `construct` correctly.
-If the method containing your code is not called `construct` (or
-if you are not calling a different, custom method from `construct`),
-Manim will not call your method and simply output a black frame.
+
+然后仔细检查`construct`的拼写是否正确。 如果包含您的代码的方法没有被称为`construct`（或者您没有调用`construct`中不同的自定义方法），Manim 将不会调用您的方法，而只会输出一个黑框。
 
 ---
 
-## What are the default measurements for Manim's scene?
+## Manim 场景(scene)的默认尺寸是多少？
 
 The scene measures 8 units in height and has a default ratio of 16:9,
 which means that it measures {math}`8 \cdot 16 / 9 = 14 + 2/9` units in width.
@@ -53,7 +43,7 @@ upper left corner of the scene has coordinates `[-7-1/9, 4, 0]`.
 
 ---
 
-## How do I find out which keyword arguments I can pass when creating a `Mobject`?
+## 创建 `Mobject` 时如何确定可以传递哪些关键字参数？
 
 Let us consider a specific example, like the {class}`.Circle` class. When looking
 at its documentation page, only two specific keyword arguments are listed
@@ -61,70 +51,68 @@ at its documentation page, only two specific keyword arguments are listed
 catchall `**kwargs` argument which captures all other arguments that are passed
 to `Circle`, and passes them on to the base class of {class}`.Circle`, {class}`.Arc`.
 
+让我们考虑一个具体的例子，比如 {class}`.Circle` 类。 当寻找时
+在其文档页面中，仅列出了两个特定的关键字参数
+（“半径”和“颜色”）。 除了这些具体的论点之外，还有一个
+包罗万象的“**kwargs”参数捕获传递的所有其他参数
+到 `Circle`，并将它们传递给 {class}`.Circle`、{class}`.Arc` 的基类。
+
 The same holds for {class}`.Arc`: some arguments are explicitly documented, and
 there is again a catchall `**kwargs` argument that passes unprocessed arguments
 to the next base class -- and so on.
+
+这同样适用于 {class}`.Arc`：一些参数被明确记录，并且
+又存在一个包罗万象的“**kwargs”参数，它传递未处理的参数
+到下一个基类——等等。
 
 The most important keyword arguments relevant to styling your mobjects are the
 ones that are documented for the base classes {class}`.VMobject` and
 {class}`.Mobject`.
 
----
-
-## Can Manim render a video with transparent background?
-
-Yes: simply pass the CLI flag `-t` (or its long form `--transparent`).
-Note that the default video file format does not support transparency,
-which is why Manim will output a `.mov` instead of a `.mp4` when
-rendering with a transparent background. Other movie file formats
-that support transparency can be obtained by passing
-`--format=webm` or `--format=gif`.
+与设置 mobject 样式相关的最重要的关键字参数是为基类 {class}`.VMobject` 和 {class}`.Mobject` 记录的关键字参数。
 
 ---
 
-## I have watched a video where a creator ran command X, but it does not work for me. Why?
+## Manim 能否渲染透明背景的视频？
 
-The video you have been watching is likely outdated. If you want to follow
-along, you either need to use the same version used in the video, or
-modify the code (in many cases it is just a method having been renamed etc.)
-accordingly. Check the video description, in some cases creators point out
-whether changes need to be applied to the code shown in the video.
+是的：只需传递 CLI 标志“-t”（或其长形式“--transparent”）。
+请注意，默认的视频文件格式不支持透明度，
+这就是为什么 Manim 在使用透明背景渲染时会输出“.mov”而不是“.mp4”。 其他支持透明度的电影文件格式可以通过传递`--format=webm`或`--format=gif`来获得。
 
 ---
 
-## When using `Tex` or `MathTex`, some letters are missing. How can I fix this?
+## 我看过一个视频，其中创作者运行命令 X，但它对我不起作用。 为什么？
 
-It is possible that you have to (re)build some fonts used by LaTeX. For
-some distributions, you can do this manually by running
+您正在观看的视频可能已经过时了。 如果您想继续操作，您要么需要使用视频中使用的相同版本，要么相应地修改代码（在许多情况下它只是一个被重命名的方法等）。 检查视频说明，在某些情况下，创作者会指出是否需要对视频中显示的代码进行更改。
+
+---
+
+## 当使用`Tex`或`MathTex`时，一些字母丢失。 我怎样才能解决这个问题？
+
+您可能需要（重新）构建 LaTeX 使用的某些字体。 对于某些发行版，您可以通过运行以下命令来手动执行此操作
+
 ```bash
 fmtutil -sys --all
 ```
-We recommend consulting the documentation of your LaTeX distribution
-for more information.
+
+我们建议您查阅 LaTeX 发行版的文档以获取更多信息。
 
 ---
 
-## I want to translate some code from `manimgl` to `manim`, what do I do with `CONFIG` dictionaries?
+## 我想将一些代码从`manimgl`迁移到`manim`，我该如何使用`CONFIG`字典？
 
-The community-maintained version has dropped the use of `CONFIG` dictionaries very
-early, with {doc}`version v0.2.0 </changelog/0.2.0-changelog>` released in
-January 2021.
+社区维护的版本很早就放弃了`CONFIG`字典的使用，于 2021 年 1 月发布的版本 v0.2.0。可查看版本变更日志。
 
-Before that, Manim's classes basically processed `CONFIG` dictionaries
-by mimicking inheritance (to properly process `CONFIG` dictionaries set
-by parent classes) and then assigning all of the key-value-pairs in the
-dictionary as attributes of the corresponding object.
+在此之前，Manim 的类基本上通过模仿继承来处理 `CONFIG` 字典（以正确处理父类设置的 `CONFIG` 字典），然后将字典中的所有键值对分配为相应对象的属性。
 
-In situations where there is not much inheritance going on,
-or for any custom setting, you should set these attributes yourself.
-For example, for an old-style `Scene` with custom attributes like
+在没有太多继承的情况下，或者对于任何自定义设置，您应该自己设置这些属性。 例如，对于具有下面示例自定义属性的旧式`Scene`
 
 ```python
 class OldStyle(Scene):
     CONFIG = {"a": 1, "b": 2}
 ```
 
-should be written as
+应该写成
 
 ```python
 class NewStyle(Scene):
@@ -132,9 +120,7 @@ class NewStyle(Scene):
     b = 2
 ```
 
-In situations where values should be properly inherited, the arguments
-should be added to the initialization function of the class. An old-style
-mobject `Thing` could look like
+在应该正确继承值的情况下，应该将参数添加到类的初始化函数中。 旧式的 mobject `Thing` 可能看起来像
 
 ```python
 class Thing(VMobject):
@@ -149,6 +135,8 @@ where `stroke_color` and `fill_opacity` are arguments that concern the
 parent class of `Thing`, and `my_awesome_argument` is a custom argument
 that only concerns `Thing`. A version without `CONFIG` could look like this:
 
+其中`stroke_color`和`fill_opacity`是涉及`Thing`父类的参数，`my_awesome_argument`是仅涉及`Thing`的自定义参数。 没有`CONFIG`的版本可能如下所示：
+
 ```python
 class Thing(VMobject):
     def __init__(
@@ -160,14 +148,11 @@ class Thing(VMobject):
 
 ---
 
-## My installation does not support converting PDF to SVG, help?
+## 我的安装不支持将 PDF 转换为 SVG，有帮助吗？为什么？
 
-This is an issue with `dvisvgm`, the tool shipped with LaTeX that
-transforms LaTeX output to a `.svg` file that
-Manim can parse.
+这是 `dvisvgm` 的问题，该工具随 LaTeX 一起提供，可将 LaTeX 输出转换为 Manim 可以解析的 `.svg` 文件。
 
-First, make sure your ``dvisvgm`` version is at least 2.4 by
-checking the output of
+首先，通过检查输出来确保您的 `dvisvgm` 版本至少为 2.4
 
 ```bash
 dvisvgm --version
@@ -240,7 +225,7 @@ If you are unable to solve your problem, check out the
 
 ---
 
-## Where can I find more resources for learning Manim?
+## 哪里可以找到更多学习 Manim 的资源？
 
 In our [Discord server](https://manim.community/discord), we have the community-maintained
 `#beginner-resources` channel in which links to helpful learning resources are collected.

@@ -1,7 +1,6 @@
-# FAQ: Installation
+# 常见问题：安装
 
-(different-versions)=
-## Why are there different versions of Manim?
+## 为什么Manim 有不同的版本？
 
 Manim was originally created by Grant Sanderson as a personal project and for use
 in his YouTube channel,
@@ -37,7 +36,7 @@ To summarize:
 
 ---
 
-## Which version should I use?
+## 我应该使用哪个版本？
 
 We recommend the community maintained version especially for beginners. It has been
 developed to be more stable, better tested and documented (!), and quicker to respond
@@ -52,7 +51,7 @@ And as mentioned above, ManimCairo should only be used for (re)rendering old
 
 ---
 
-## What are the differences between Manim, ManimGL, ManimCairo? Can I tell for which version a scene was written for?
+## Manim、ManimGL、ManimCairo 之间有什么区别？ 我怎么知道某个场景(scene)是为哪个版本编写的？
 
 You can! The thing that usually gives it away is the `import` statement
 at the top of the file; depending on how the code imports Manim you can tell
@@ -68,7 +67,7 @@ for which version of the code it was written for:
 
 ---
 
-## How do I know which version of Manim I have installed?
+## 我如何知道我安装了哪个版本的 Manim？
 
 Assuming you can run `manim` in your terminal and there is some output, check the
 first line of the text being produced. If you are using the community maintained
@@ -87,7 +86,7 @@ packages from that list, respectively.
 
 ---
 
-## I am following the video guide X to install Manim, but some step fails. What do I do?
+## 我正在按照视频指南 X 安装 Manim，但是某些步骤失败。 我该怎么办？
 
 It is only natural that there are many video guides on installing Manim
 out there, given that Manim is a library used for creating videos. Unfortunately
@@ -104,7 +103,7 @@ likely lead to being suggested to follow our written guide.
 
 ---
 
-## Why does ManimPango fail to install when running `pip install manim`?
+## 为什么运行 `pip install manim` 时 ManimPango 安装失败？
 
 This most likely means that pip was not able to use our pre-built wheels
 of the `manimpango` dependency. Let us know (via
@@ -120,7 +119,7 @@ of [ManimPango's README](https://github.com/ManimCommunity/ManimPango).
 
 ---
 
-## I am using Windows and get the error `X is not recognized as an internal or external command, operable program or batch file`
+## 我使用 Windows 并收到错误`X 未被识别为内部或外部命令、可运行程序或批处理文件`
 
 Regardless of whether `X` says `python` or `manim`, this means that the executable you
 are trying to run is not located in one of the directories your system is looking
@@ -135,7 +134,7 @@ and `pip` becomes `python -m pip`.
 
 ---
 
-## I have tried using Chocolatey (`choco install manimce`) to install Manim, but it failed!
+## 我曾尝试使用 Chocolatey (`choco install manimce`) 来安装 Manim，但失败了！
 
 Make sure that you were running the command with administrator permissions,
 otherwise there can be problems. If this is not the issue, read Chocolatey's
@@ -148,7 +147,7 @@ your problem. See the {doc}`FAQ on getting help </faq/help>` for instructions.
 
 ---
 
-## On Windows, when typing `python` or `python3` the Windows store is opened, can I fix this?
+## 在 Windows 上，当输入 `python` 或 `python3` 时，Windows 商店会打开，我如何修复这个问题？
 
 Yes: you can remove these aliases with these steps:
 
@@ -159,7 +158,7 @@ Yes: you can remove these aliases with these steps:
 
 ---
 
-## I am using Anaconda and get an `ImportError` mentioning that some Symbol is not found.
+## 我正在使用 Anaconda 并收到一个“ImportError”提示 that some Symbol is not found.
 
 This is because Anaconda environments come with their own preinstalled
 version of `cairo` which is not compatible with the version of `pycairo`
@@ -171,7 +170,7 @@ conda install -c conda-forge pycairo
 
 ---
 
-## How can I fix the error that `manimpango/cmanimpango.c` could not be found when trying to install Manim?
+## 如何修复尝试安装 Manim 时找不到`manimpango/cmanimpango.c`的错误？
 
 This occasionally happens when your system has to build a wheel for
 [ManimPango](https://github.com/ManimCommunity/ManimPango) locally because there

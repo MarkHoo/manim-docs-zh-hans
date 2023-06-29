@@ -1,6 +1,6 @@
-# FAQ: Getting Help
+# 常见问题：寻求帮助
 
-## How do I animate X? Why do I get error Y? Can someone help me?
+## 如何为 X 制作动画？ 为什么我会收到错误 Y？ 有人能帮我吗？
 
 Before asking the community, please make sure that the issue you are having
 is not already discussed in our {doc}`FAQ section </faq/index>` sufficiently
@@ -38,7 +38,7 @@ be friendly and patient, considerate, and respectful.
 
 ---
 
-## What should I do if nobody answers my question?
+## 如果没有人回答我的问题我该怎么办？
 
 Try and see whether your question can be improved: did you include all relevant
 information (in case of errors: the full stack trace, the code that you were
@@ -64,7 +64,7 @@ other things.
 
 ---
 
-## The library does not behave as documented, or something broke in a new release. What should I do?
+## 该库的行为与文档不符，或者在新版本中出现了问题。 我应该怎么办？
 
 Sounds like you have found a bug. One of the best ways of contributing to the
 development of Manim is by reporting it!
@@ -109,7 +109,8 @@ our `#manim-dev` channels in [our Discord](https://manim.community/discord/).
 ---
 
 (creating-suggestions)=
-## I have an idea for a really cool feature that should be implemented, where should I share my idea?
+
+## 我有一个应该实现的非常酷的功能的想法，我应该在哪里分享我的想法？
 
 New suggestions and proposals should be made by
 [creating a new discussion](https://github.com/ManimCommunity/manim/discussions/new?category=suggestions-and-proposals)
