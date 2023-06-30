@@ -4,9 +4,9 @@
 
 否则，如果您打算使用 Manim 处理动画项目，我们建议您在本地安装该库（安装到 conda 环境、系统的 Python 或通过 Docker）。
 
-警告
+> 警告
 
-请注意，Manim 有多个不同版本。本网站上的说明**仅**适用于*社区版*。如果您不确定应该安装哪个版本，请详细了解[Manim 版本之间的差异。](faq/installation.html#different-versions)
+> 请注意，Manim 有多个不同版本。本网站上的说明**仅**适用于*社区版*。如果您不确定应该安装哪个版本，请详细了解[Manim 版本之间的差异。](./tutorials_guides/faqs/installation.md)
 
 1.  [将 Manim 安装到 conda 环境](#conda-installation)
 2.  [将 Manim 安装到系统的 Python 中](#local-installation)
@@ -19,10 +19,10 @@ Conda 是 Python 的包管理器，允许创建存储所有依赖项的环境。
 
 以下页面展示了如何在 conda 环境中安装 Manim：
 
-- [康达](installation/conda.html)
-  - [所需的依赖项](installation/conda.html#required-dependencies)
-  - [可选依赖项](installation/conda.html#optional-dependencies)
-  - [与马尼姆合作](installation/conda.html#working-with-manim)
+- [康达](./installations/conda)
+  - [所需的依赖项](./installations/conda)
+  - [可选依赖项](./installations/conda)
+  - [与马尼姆合作](./installations/conda)
 
 ## 在本地安装 Manim
 
@@ -34,22 +34,22 @@ Manim 需要 Python 版本`3.7`或更高版本才能运行。
 
 根据您的特定设置，安装过程可能会略有不同。确保您已尝试仔细按照以下页面上的步骤进行操作，但如果您遇到困难，我们很乐意提供帮助：[加入我们的 Discord ，或](https://www.manim.community/discord/)[直接在 GitHub 上](https://github.com/ManimCommunity/manim/discussions)开始新的讨论。
 
-- [视窗](installation/windows.html)
-  - [所需的依赖项](installation/windows.html#required-dependencies)
-  - [可选依赖项](installation/windows.html#optional-dependencies)
-  - [与马尼姆合作](installation/windows.html#working-with-manim)
-- [苹果系统](installation/macos.html)
-  - [所需的依赖项](installation/macos.html#required-dependencies)
-  - [可选依赖项](installation/macos.html#optional-dependencies)
-  - [与马尼姆合作](installation/macos.html#working-with-manim)
-- [Linux](installation/linux.html)
-  - [所需的依赖项](installation/linux.html#required-dependencies)
-  - [可选依赖项](installation/linux.html#optional-dependencies)
-  - [与马尼姆合作](installation/linux.html#working-with-manim)
+- [视窗](./installations/windows)
+  - [所需的依赖项](./installations/windows)
+  - [可选依赖项](./installations/windows)
+  - [与马尼姆合作](./installations/windows)
+- [苹果系统](./installations/macos)
+  - [所需的依赖项](./installations/macos)
+  - [可选依赖项](./installations/macos)
+  - [与马尼姆合作](./installations/macos)
+- [Linux](./installations/linux)
+  - [所需的依赖项](./installations/linux)
+  - [可选依赖项](./installations/linux)
+  - [与马尼姆合作](./installations/linux)
 
-在本地安装 Manim 后，您可以继续阅读我们的 [快速入门指南](tutorials/quickstart.html)，该指南将引导您渲染第一个简单场景。
+在本地安装 Manim 后，您可以继续阅读我们的 [快速入门指南](tutorials/quickstart)
 
-如上所述，如果出现错误或其他问题，请不要担心：请参阅我们的[常见问题解答部分](faq/index.html)寻求帮助（包括如何向 Manim 社区寻求帮助的说明）。
+如上所述，如果出现错误或其他问题，请不要担心：请参阅我们的[常见问题解答部分](faq/index)
 
 ## 通过 Docker 使用 Manim
 
@@ -57,9 +57,9 @@ Manim 需要 Python 版本`3.7`或更高版本才能运行。
 
 以下页面包含有关社区维护的 docker 映像的更多信息`manimcommunity/manim`：
 
-- [码头工人](installation/docker.html)
-  - [Docker 容器的基本使用](installation/docker.html#basic-usage-of-the-docker-container)
-  - [通过 Docker 运行 JupyterLab](installation/docker.html#running-jupyterlab-via-docker)
+- [码头工人](./installations/docker)
+  - [Docker 容器的基本使用](./installations/docker)
+  - [通过 Docker 运行 JupyterLab](./installations/docker)
 
 ## 适用于您的浏览器的交互式 Jupyter 笔记本
 
@@ -67,9 +67,9 @@ Manim 附带了一个内置的 IPython magic 命令，专为在[Jupyter 笔记�
 
 以下几页解释了如何自己设置这样的交互式环境：
 
-- [Jupyter 笔记本](installation/jupyter.html)
-  - [活页夹](installation/jupyter.html#binder)
-  - [谷歌合作实验室](installation/jupyter.html#google-colaboratory)
+- [Jupyter 笔记本](./installations/jupyter)
+  - [活页夹](./installations/jupyter)
+  - [谷歌合作实验室](./installations/jupyter)
 
 ## 编辑
 
@@ -77,4 +77,4 @@ Manim 附带了一个内置的 IPython magic 命令，专为在[Jupyter 笔记�
 
 ## 供开发者安装
 
-为了更改库中的代码，建议以不同的方式安装 Manim。如果您对此感兴趣，请按照我们的[贡献指南](contributing.html)中的说明进行操作。
+为了更改库中的代码，建议以不同的方式安装 Manim。如果您对此感兴趣，请按照我们的[贡献指南](contributing)

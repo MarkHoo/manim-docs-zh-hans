@@ -1,45 +1,43 @@
-Rendering Text and Formulas[#](#rendering-text-and-formulas "Permalink to this heading")
-========================================================================================
+# 渲染文本和公式
 
-There are two different ways by which you can render **Text** in videos:
+您可以通过两种不同的方式在视频中渲染 **文本**：
 
-1.  Using Pango ([`text_mobject`](../reference/manim.mobject.text.text_mobject.html#module-manim.mobject.text.text_mobject "manim.mobject.text.text_mobject"))
-    
-2.  Using LaTeX ([`tex_mobject`](../reference/manim.mobject.text.tex_mobject.html#module-manim.mobject.text.tex_mobject "manim.mobject.text.tex_mobject"))
-    
+1.  使用 Pango ( [`text_mobject`](../reference/manim.mobject.text.text_mobject.md "manim.mobject.text.text_mobject"))
+2.  使用 LaTeX ( [`tex_mobject`](../reference/manim.mobject.text.tex_mobject.md "manim.mobject.text.tex_mobject"))
 
-If you want to render simple text, you should use either [`Text`](../reference/manim.mobject.text.text_mobject.Text.html#manim.mobject.text.text_mobject.Text "manim.mobject.text.text_mobject.Text") or [`MarkupText`](../reference/manim.mobject.text.text_mobject.MarkupText.html#manim.mobject.text.text_mobject.MarkupText "manim.mobject.text.text_mobject.MarkupText"), or one of its derivatives like [`Paragraph`](../reference/manim.mobject.text.text_mobject.Paragraph.html#manim.mobject.text.text_mobject.Paragraph "manim.mobject.text.text_mobject.Paragraph"). See [Text Without LaTeX](#using-text-objects) for more information.
+如果您想渲染简单的文本，您应该使用[`Text`](../reference/manim.mobject.text.text_mobject.Text.md "manim.mobject.text.text_mobject.Text")or [`MarkupText`](../reference/manim.mobject.text.text_mobject.MarkupText.mdt "manim.mobject.text.text_mobject.MarkupText")，或其派生之一，例如[`Paragraph`](../reference/manim.mobject.text.text_mobject.Paragraph.md "manim.mobject.text.text_mobject.Paragraph")。有关详细信息，请参阅[没有 LaTeX 的文本。](#using-text-objects)
 
-LaTeX should be used when you need mathematical typesetting. See [Text With LaTeX](#rendering-with-latex) for more information.
+当你需要数学排版时应该使用 LaTeX。有关详细信息，请参阅 [使用 LaTeX 编写文本。](#rendering-with-latex)
 
-Text Without LaTeX[#](#text-without-latex "Permalink to this heading")
-----------------------------------------------------------------------
+## 没有 LaTeX 的文本
 
-The simplest way to add text to your animations is to use the [`Text`](../reference/manim.mobject.text.text_mobject.Text.html#manim.mobject.text.text_mobject.Text "manim.mobject.text.text_mobject.Text") class. It uses the [Pango library](https://pango.gnome.org) to render text. With Pango, you can also render non-English alphabets like 你好 or こんにちは or 안녕하세요 or مرحبا بالعالم.
+向动画添加文本的最简单方法是使用该类[`Text`](../reference/manim.mobject.text.text_mobject.Text.md "manim.mobject.text.text_mobject.Text") 。它使用[Pango 库](https://pango.gnome.org)来渲染文本。使用 Pango，您还可以渲染非英语字母，例如 hi 或 こんにちは 或 안녕하세요 或 Мрубя babæה。
 
-Here is a simple _Hello World_ animation.
+这是一个简单的*Hello World*动画。
 
-Example: HelloWorld [¶](#helloworld)
+示例：HelloWorld
 
-![../_images/HelloWorld-1.png](../_images/HelloWorld-1.png)
+![](./static/HelloWorld-1.png)
 
+```py
 from manim import *
+
 
 class HelloWorld(Scene):
     def construct(self):
         text = Text("Hello world", font_size=144)
         self.add(text)
+```
 
-Copy to clipboard
+参考：[`Text`](../reference/manim.mobject.text.text_mobject.Text.md "manim.mobject.text.text_mobject.Text")
 
-References: [`Text`](../reference/manim.mobject.text.text_mobject.Text.html#manim.mobject.text.text_mobject.Text "manim.mobject.text.text_mobject.Text")
+您还可以使用[`MarkupText`](../reference/manim.mobject.text.text_mobject.MarkupText.md "manim.mobject.text.text_mobject.MarkupText")它允许使用 PangoMarkup（有关[`MarkupText`](../reference/manim.mobject.text.text_mobject.MarkupText.md "manim.mobject.text.text_mobject.MarkupText")详细信息，请参阅 的文档）来渲染文本。例如：
 
-You can also use [`MarkupText`](../reference/manim.mobject.text.text_mobject.MarkupText.html#manim.mobject.text.text_mobject.MarkupText "manim.mobject.text.text_mobject.MarkupText") which allows the use of PangoMarkup (see the documentation of [`MarkupText`](../reference/manim.mobject.text.text_mobject.MarkupText.html#manim.mobject.text.text_mobject.MarkupText "manim.mobject.text.text_mobject.MarkupText") for details) to render text. For example:
+示例：单线颜色
 
-Example: SingleLineColor [¶](#singlelinecolor)
+![](./static/SingleLineColor-1.webp)
 
-![../_images/SingleLineColor-1.png](../_images/SingleLineColor-1.png)
-
+```py
 from manim import *
 
 class SingleLineColor(Scene):
@@ -48,65 +46,64 @@ class SingleLineColor(Scene):
             f'all in red <span fgcolor="{YELLOW}">except this</span>', color=RED
         )
         self.add(text)
+```
 
-Copy to clipboard
+参考：[`MarkupText`](../reference/manim.mobject.text.text_mobject.MarkupText.md "manim.mobject.text.text_mobject.MarkupText")
 
-References: [`MarkupText`](../reference/manim.mobject.text.text_mobject.MarkupText.html#manim.mobject.text.text_mobject.MarkupText "manim.mobject.text.text_mobject.MarkupText")
+### 与[#一起工作](#working-with-text "Permalink to this heading")[`Text`](../reference/manim.mobject.text.text_mobject.Text.md "manim.mobject.text.text_mobject.Text")[](#working-with-text "此标题的固定链接")
 
-### Working with [`Text`](../reference/manim.mobject.text.text_mobject.Text.html#manim.mobject.text.text_mobject.Text "manim.mobject.text.text_mobject.Text")[#](#working-with-text "Permalink to this heading")
+本节介绍 的属性[`Text`](../reference/manim.mobject.text.text_mobject.Text.md "manim.mobject.text.text_mobject.Text")以及如何在动画中使用它。
 
-This section explains the properties of [`Text`](../reference/manim.mobject.text.text_mobject.Text.html#manim.mobject.text.text_mobject.Text "manim.mobject.text.text_mobject.Text") and how can it be used in your animations.
+#### 使用字体
 
-#### Using Fonts[#](#using-fonts "Permalink to this heading")
+您可以使用 设置不同的字体`font`。
 
-You can set a different font using `font`.
+> 笔记
 
-Note
+> 使用的字体必须安装在您的系统中，Pango 应该知道它。您可以使用 获取字体列表`manimpango.list_fonts()`。
 
-The font used must be installed in your system, and Pango should know about it. You can get a list of fonts using `manimpango.list_fonts()`.
+```sh
+>>> import manimpango
+>>> manimpango.list_fonts()
+[...]
+```
 
->>\> import manimpango
->>\> manimpango.list_fonts()
-\[...\]
+示例：字体示例
 
-Copy to clipboard
+![](./static/FontsExample-1.png)
 
-Example: FontsExample [¶](#fontsexample)
-
-![../_images/FontsExample-1.png](../_images/FontsExample-1.png)
-
+```py
 from manim import *
 
 class FontsExample(Scene):
     def construct(self):
         ft = Text("Noto Sans", font="Noto Sans")
         self.add(ft)
+```
+#### 设置倾斜度和重量
 
-Copy to clipboard
+Slant 是文本的样式，可以是`NORMAL`（默认）， `ITALIC`或`OBLIQUE`。通常，对于许多字体来说，`ITALIC`和 `OBLIQUE`看起来很相似，但`ITALIC`使用**Roman Style**，而 `OBLIQUE`使用**Italic Style**。
 
-#### Setting Slant and Weight[#](#setting-slant-and-weight "Permalink to this heading")
+粗细指定字体的粗细。您可以在 中看到权重列表 `manimpango.Weight`。
 
-Slant is the style of the Text, and it can be `NORMAL` (the default), `ITALIC` or `OBLIQUE`. Usually, for many fonts both `ITALIC` and `OBLIQUE` look similar, but `ITALIC` uses **Roman Style**, whereas `OBLIQUE` uses **Italic Style**.
+示例：Slants 示例
 
-Weight specifies the boldness of a font. You can see a list of weights in `manimpango.Weight`.
+![](./static/SlantsExample-1.png)
 
-Example: SlantsExample [¶](#slantsexample)
-
-![../_images/SlantsExample-1.png](../_images/SlantsExample-1.png)
-
+```py
 from manim import *
 
 class SlantsExample(Scene):
     def construct(self):
         a = Text("Italic", slant=ITALIC)
         self.add(a)
+```
 
-Copy to clipboard
+示例：不同的权重
 
-Example: DifferentWeight [¶](#differentweight)
+![](./static/DifferentWeight-1.webp)
 
-![../_images/DifferentWeight-1.png](../_images/DifferentWeight-1.png)
-
+```py
 from manim import *
 
 class DifferentWeight(Scene):
@@ -120,80 +117,76 @@ class DifferentWeight(Scene):
                     weight: manimpango.Weight(weight).value
                     for weight in manimpango.Weight
                 }.items(),
-                key=lambda x: x\[1\],
+                key=lambda x: x[1],
             )
         )
         for weight in weight_list:
             g += Text(weight.name, weight=weight.name, font="Open Sans")
         self.add(g.arrange(DOWN).scale(0.5))
+```
 
-Copy to clipboard
+#### 使用颜色
 
-#### Using Colors[#](#using-colors "Permalink to this heading")
+您可以使用以下命令设置文本的颜色`color`：
 
-You can set the color of the text using `color`:
+示例：简单颜色
 
-Example: SimpleColor [¶](#simplecolor)
+![](./static/SimpleColor-1.webp)
 
-![../_images/SimpleColor-1.png](../_images/SimpleColor-1.png)
-
+```py
 from manim import *
 
 class SimpleColor(Scene):
     def construct(self):
         col = Text("RED COLOR", color=RED)
         self.add(col)
+```
 
-Copy to clipboard
+您可以使用诸如`t2c`为特定字符着色之类的实用程序。如果您的文本包含连字（如[迭代文本](#iterating-text)中所述），这可能会出现问题。
 
-You can use utilities like `t2c` for coloring specific characters. This may be problematic if your text contains ligatures as explained in [Iterating Text](#iterating-text).
+`t2c`接受两种类型的词典，
 
-`t2c` accepts two types of dictionaries,
+- 键可以包含类似`[2:-1]`或 的索引，这与 Python 中的[切片](https://realpython.com/python-strings/#string-slicing)`[4:8]`工作方式类似 。这些值应该是来自 的文本的颜色。[](https://realpython.com/python-strings/#string-slicing)`Color`
+- 键包含应单独着色的单词或字符，值应为以下颜色`Color`：
 
-*   The keys can contain indices like `[2:-1]` or `[4:8]`, this works similar to how [slicing](https://realpython.com/python-strings/#string-slicing) works in Python. The values should be the color of the Text from `Color`.
-    
-*   The keys contain words or characters which should be colored separately and the values should be the color from `Color`:
-    
+示例：Textt2c 示例
 
-Example: Textt2cExample [¶](#textt2cexample)
+![](./static/Textt2cExample-1.png)
 
-![../_images/Textt2cExample-1.png](../_images/Textt2cExample-1.png)
-
+```py
 from manim import *
 
 class Textt2cExample(Scene):
     def construct(self):
-        t2cindices = Text('Hello', t2c={'\[1:-1\]': BLUE}).move_to(LEFT)
+        t2cindices = Text('Hello', t2c={'[1:-1]': BLUE}).move_to(LEFT)
         t2cwords = Text('World',t2c={'rl':RED}).next_to(t2cindices, RIGHT)
         self.add(t2cindices, t2cwords)
+```
+如果您想避免使用颜色时出现问题（由于连字），请考虑使用 `MarkupText`.
 
-Copy to clipboard
+#### 使用渐变
 
-If you want to avoid problems when using colors (due to ligatures), consider using `MarkupText`.
+您可以使用 添加渐变`gradient`。该值必须是任意长度的可迭代：
 
-#### Using Gradients[#](#using-gradients "Permalink to this heading")
+示例：渐变示例
 
-You can add a gradient using `gradient`. The value must be an iterable of any length:
+![](./static/GradientExample-1.webp)
 
-Example: GradientExample [¶](#gradientexample)
-
-![../_images/GradientExample-1.png](../_images/GradientExample-1.png)
-
+```py
 from manim import *
 
 class GradientExample(Scene):
     def construct(self):
         t = Text("Hello", gradient=(RED, BLUE, GREEN), font_size=96)
         self.add(t)
+```
+您还可以使用`t2g`具有文本特定字符的渐变。[它与颜色接口](#using-colors)具有类似的语法：
 
-Copy to clipboard
+示例：t2g 示例
 
-You can also use `t2g` for gradients with specific characters of the text. It shares a similar syntax to [the interface for colors](#using-colors):
+![](./static/t2gExample-1.png)
 
-Example: t2gExample [¶](#t2gexample)
-
-![../_images/t2gExample-1.png](../_images/t2gExample-1.png)
-
+```py
 from manim import *
 
 class t2gExample(Scene):
@@ -201,7 +194,7 @@ class t2gExample(Scene):
         t2gindices = Text(
             'Hello',
             t2g={
-                '\[1:-1\]': (RED,GREEN),
+                '[1:-1]': (RED,GREEN),
             },
         ).move_to(LEFT)
         t2gwords = Text(
@@ -211,41 +204,40 @@ class t2gExample(Scene):
             },
         ).next_to(t2gindices, RIGHT)
         self.add(t2gindices, t2gwords)
+```
+#### 设置行距
 
-Copy to clipboard
+您可以使用以下命令设置行间距`line_spacing`：
 
-#### Setting Line Spacing[#](#setting-line-spacing "Permalink to this heading")
+示例：行间距
 
-You can set the line spacing using `line_spacing`:
+![](./static/LineSpacing-1.webp)
 
-Example: LineSpacing [¶](#linespacing)
-
-![../_images/LineSpacing-1.png](../_images/LineSpacing-1.png)
-
+```py
 from manim import *
 
 class LineSpacing(Scene):
     def construct(self):
-        a = Text("Hello\\nWorld", line_spacing=1)
-        b = Text("Hello\\nWorld", line_spacing=4)
+        a = Text("Hello\nWorld", line_spacing=1)
+        b = Text("Hello\nWorld", line_spacing=4)
         self.add(Group(a,b).arrange(LEFT, buff=5))
+```
 
-Copy to clipboard
+#### 禁用连字
 
-#### Disabling Ligatures[#](#disabling-ligatures "Permalink to this heading")
+通过禁用连字，您将获得字符和子对象之间的一对一映射。这解决了文本着色的问题。
 
-By disabling ligatures you would get a one-to-one mapping between characters and submobjects. This fixes the issues with coloring text.
+> 警告
 
-Warning
+> 请注意，将此方法用于严重依赖连字（阿拉伯文本）的文本可能会产生意外结果。
 
-Be aware that using this method with text that heavily depends on ligatures (Arabic text) may yield unexpected results.
+您可以通过传递`disable_ligatures`到 来 禁用连字`Text`。例如：
 
-You can disable ligatures by passing `disable_ligatures` to `Text`. For example:
+示例：禁用连字
 
-Example: DisableLigature [¶](#disableligature)
+![](./static/DisableLigature-1.webp)
 
-![../_images/DisableLigature-1.png](../_images/DisableLigature-1.png)
-
+```py
 from manim import *
 
 class DisableLigature(Scene):
@@ -253,247 +245,246 @@ class DisableLigature(Scene):
         li = Text("fl ligature",font_size=96)
         nli = Text("fl ligature", disable_ligatures=True, font_size=96)
         self.add(Group(li, nli).arrange(DOWN, buff=.8))
+```
 
-Copy to clipboard
+#### 迭代[`Text`](../reference/manim.mobject.text.text_mobject.Text.md "manim.mobject.text.text_mobject.Text")
 
-#### Iterating [`Text`](../reference/manim.mobject.text.text_mobject.Text.html#manim.mobject.text.text_mobject.Text "manim.mobject.text.text_mobject.Text")[#](#iterating-text "Permalink to this heading")
+文本对象的行为类似于[`VGroups`](../reference/manim.mobject.types.vectorized_mobject.VGroup.md "manim.mobject.types.vectorized_mobject.VGroup"). 因此，您可以对文本进行切片和索引。
 
-Text objects behave like [`VGroups`](../reference/manim.mobject.types.vectorized_mobject.VGroup.html#manim.mobject.types.vectorized_mobject.VGroup "manim.mobject.types.vectorized_mobject.VGroup"). Therefore, you can slice and index the text.
+例如，您可以通过迭代将每个字母设置为不同的颜色。
 
-For example, you can set each letter to different color by iterating it.
+示例：迭代颜色
 
-Example: IterateColor [¶](#iteratecolor)
+![](./static/IterateColor-1.webp)
 
-![../_images/IterateColor-1.png](../_images/IterateColor-1.png)
-
+```py
 from manim import *
 
 class IterateColor(Scene):
     def construct(self):
         text = Text("Colors", font_size=96)
         for letter in text:
-            letter.set_color(random\_bright\_color())
+            letter.set_color(random_bright_color())
         self.add(text)
+```
 
-Copy to clipboard
+> 警告
 
-Warning
+> 请注意，[连字](<https://en.wikipedia.org/wiki/Ligature_(writing)>)可能会在此处引起问题。如果您需要字符到子对象的一对一映射，您应该将参数传递`disable_ligatures`给[`Text`](../reference/manim.mobject.text.text_mobject.Text.md "manim.mobject.text.text_mobject.Text"). 请参阅[禁用连字](#disable-ligatures)。
 
-Please note that [Ligature](https://en.wikipedia.org/wiki/Ligature_(writing)) can cause problems here. If you need a one-to-one mapping of characters to submobjects you should pass the `disable_ligatures` parameter to [`Text`](../reference/manim.mobject.text.text_mobject.Text.html#manim.mobject.text.text_mobject.Text "manim.mobject.text.text_mobject.Text"). See [Disabling Ligatures](#disable-ligatures).
+### 与[#一起工作](#working-with-markuptext "此标题的固定链接")[`MarkupText`](../reference/manim.mobject.text.text_mobject.MarkupText.md "manim.mobject.text.text_mobject.MarkupText")
 
-### Working with [`MarkupText`](../reference/manim.mobject.text.text_mobject.MarkupText.html#manim.mobject.text.text_mobject.MarkupText "manim.mobject.text.text_mobject.MarkupText")[#](#working-with-markuptext "Permalink to this heading")
+MarkupText 与 类似[`Text`](../reference/manim.mobject.text.text_mobject.Text.md "manim.mobject.text.text_mobject.Text")，它们之间唯一的区别是它接受并处理 PangoMarkup （类似于 html），而不是仅仅渲染纯文本。
 
-MarkupText is similar to [`Text`](../reference/manim.mobject.text.text_mobject.Text.html#manim.mobject.text.text_mobject.Text "manim.mobject.text.text_mobject.Text"), the only difference between them is that this accepts and processes PangoMarkup (which is similar to html), instead of just rendering plain text.
+[`MarkupText`](../reference/manim.mobject.text.text_mobject.MarkupText.md "manim.mobject.text.text_mobject.MarkupText")有关 PangoMarkup 的更多详细信息和进一步参考，请参阅 的文档。
 
-Consult the documentation of [`MarkupText`](../reference/manim.mobject.text.text_mobject.MarkupText.html#manim.mobject.text.text_mobject.MarkupText "manim.mobject.text.text_mobject.MarkupText") for more details and further references about PangoMarkup.
+示例：标记测试
 
-Example: MarkupTest [¶](#markuptest)
+![](./static/MarkupTest-1.webp)
 
-![../_images/MarkupTest-1.png](../_images/MarkupTest-1.png)
-
+```py
 from manim import *
 
 class MarkupTest(Scene):
     def construct(self):
         text = MarkupText(
-            f'<span underline="double" underline_color="green">double green underline</span> in red text<span fgcolor="{YELLOW}"\> except this</span>',
+            f'<span underline="double" underline_color="green">double green underline</span> in red text<span fgcolor="{YELLOW}"> except this</span>',
             color=RED,
             font_size=34
         )
         self.add(text)
+```
 
-Copy to clipboard
+## 使用 LaTeX 编写文本
 
-Text With LaTeX[#](#text-with-latex "Permalink to this heading")
-----------------------------------------------------------------
+正如您可以用来[`Text`](../reference/manim.mobject.text.text_mobject.Text.md "manim.mobject.text.text_mobject.Text")向视频添加文本一样，您也可以用来[`Tex`](../reference/manim.mobject.text.tex_mobject.Tex.md "manim.mobject.text.tex_mobject.Tex")插入 LaTeX。
 
-Just as you can use [`Text`](../reference/manim.mobject.text.text_mobject.Text.html#manim.mobject.text.text_mobject.Text "manim.mobject.text.text_mobject.Text") to add text to your videos, you can use [`Tex`](../reference/manim.mobject.text.tex_mobject.Tex.html#manim.mobject.text.tex_mobject.Tex "manim.mobject.text.tex_mobject.Tex") to insert LaTeX.
+例如，
 
-For example,
+示例：HelloLaTeX
 
-Example: HelloLaTeX [¶](#hellolatex)
+![](./static/HelloLaTeX-1.webp)
 
-![../_images/HelloLaTeX-1.png](../_images/HelloLaTeX-1.png)
-
+```py
 from manim import *
 
 class HelloLaTeX(Scene):
     def construct(self):
-        tex = Tex(r"\\LaTeX", font_size=144)
+        tex = Tex(r"\LaTeX", font_size=144)
         self.add(tex)
+```
 
-Copy to clipboard
+> 笔记
 
-Note
+> 请注意，我们使用原始字符串 ( `r'...'`) 而不是常规字符串 ( `'...'`)。这是因为 TeX 代码使用了很多特殊字符（例如`\`），这些字符在常规 Python 字符串中具有特殊含义。另一种方法是编写`\\`以避免反斜杠：`Tex('\\LaTeX')`。
 
-Note that we are using a raw string (`r'...'`) instead of a regular string (`'...'`). This is because TeX code uses a lot of special characters - like `\` for example - that have special meaning within a regular python string. An alternative would have been to write `\\` to escape the backslash: `Tex('\\LaTeX')`.
+### 与[#一起工作](#working-with-mathtex "此标题的固定链接")[`MathTex`](../reference/manim.mobject.text.tex_mobject.MathTex.md "manim.mobject.text.tex_mobject.MathTex")
 
-### Working with [`MathTex`](../reference/manim.mobject.text.tex_mobject.MathTex.html#manim.mobject.text.tex_mobject.MathTex "manim.mobject.text.tex_mobject.MathTex")[#](#working-with-mathtex "Permalink to this heading")
+默认情况下，传递到的所有内容都[`MathTex`](../reference/manim.mobject.text.tex_mobject.MathTex.md "manim.mobject.text.tex_mobject.MathTex")处于数学模式。更准确地说， [`MathTex`](../reference/manim.mobject.text.tex_mobject.MathTex.md "manim.mobject.text.tex_mobject.MathTex")是在`align*`环境中进行处理。[`Tex`](../reference/manim.mobject.text.tex_mobject.Tex.md "manim.mobject.text.tex_mobject.Tex")您可以通过用`$`符号 将公式括起来来实现类似的效果`$\xrightarrow{x^6y^8}$`：：
 
-Everything passed to [`MathTex`](../reference/manim.mobject.text.tex_mobject.MathTex.html#manim.mobject.text.tex_mobject.MathTex "manim.mobject.text.tex_mobject.MathTex") is in math mode by default. To be more precise, [`MathTex`](../reference/manim.mobject.text.tex_mobject.MathTex.html#manim.mobject.text.tex_mobject.MathTex "manim.mobject.text.tex_mobject.MathTex") is processed within an `align*` environment. You can achieve a similar effect with [`Tex`](../reference/manim.mobject.text.tex_mobject.Tex.html#manim.mobject.text.tex_mobject.Tex "manim.mobject.text.tex_mobject.Tex") by enclosing your formula with `$` symbols: `$\xrightarrow{x^6y^8}$`:
+示例：MathTeXDemo
 
-Example: MathTeXDemo [¶](#mathtexdemo)
+![](./static/MathTeXDemo-1.png)
 
-![../_images/MathTeXDemo-1.png](../_images/MathTeXDemo-1.png)
-
+```py
 from manim import *
 
 class MathTeXDemo(Scene):
     def construct(self):
-        rtarrow0 = MathTex(r"\\xrightarrow{x^6y^8}", font_size=96)
-        rtarrow1 = Tex(r"$\\xrightarrow{x^6y^8}$", font_size=96)
+        rtarrow0 = MathTex(r"\xrightarrow{x^6y^8}", font_size=96)
+        rtarrow1 = Tex(r"$\xrightarrow{x^6y^8}$", font_size=96)
 
         self.add(VGroup(rtarrow0, rtarrow1).arrange(DOWN))
+```
 
-Copy to clipboard
+### LaTeX 命令和关键字参数
 
-### LaTeX commands and keyword arguments[#](#latex-commands-and-keyword-arguments "Permalink to this heading")
+我们可以使用 AMS 数学包中的任何标准 LaTeX 命令。例如`mathtt`数学文本类型或`looparrowright`箭头。
 
-We can use any standard LaTeX commands in the AMS maths packages. Such as the `mathtt` math-text type or the `looparrowright` arrow.
+示例：AMSLaTeX
 
-Example: AMSLaTeX [¶](#amslatex)
+![](./static/AMSLaTeX-1.png)
 
-![../_images/AMSLaTeX-1.png](../_images/AMSLaTeX-1.png)
-
+```py
 from manim import *
 
 class AMSLaTeX(Scene):
     def construct(self):
-        tex = Tex(r'$\\mathtt{H} \\looparrowright$ \\LaTeX', font_size=144)
+        tex = Tex(r'$\mathtt{H} \looparrowright$ \LaTeX', font_size=144)
         self.add(tex)
+```
 
-Copy to clipboard
+在 Manim 方面，该类[`Tex`](../reference/manim.mobject.text.tex_mobject.Tex.md "manim.mobject.text.tex_mobject.Tex")还接受属性来更改输出的外观。这与 [`Text`](../reference/manim.mobject.text.text_mobject.Text.md "manim.mobject.text.text_mobject.Text")类非常相似。例如，`color`关键字更改 TeX mobject 的颜色。
 
-On the Manim side, the [`Tex`](../reference/manim.mobject.text.tex_mobject.Tex.html#manim.mobject.text.tex_mobject.Tex "manim.mobject.text.tex_mobject.Tex") class also accepts attributes to change the appearance of the output. This is very similar to the [`Text`](../reference/manim.mobject.text.text_mobject.Text.html#manim.mobject.text.text_mobject.Text "manim.mobject.text.text_mobject.Text") class. For example, the `color` keyword changes the color of the TeX mobject.
+示例：LaTeXAttributes
 
-Example: LaTeXAttributes [¶](#latexattributes)
+![](./static/LaTeXAttributes-1.webp)
 
-![../_images/LaTeXAttributes-1.png](../_images/LaTeXAttributes-1.png)
-
+```py
 from manim import *
 
 class LaTeXAttributes(Scene):
     def construct(self):
-        tex = Tex(r'Hello \\LaTeX', color=BLUE, font_size=144)
+        tex = Tex(r'Hello \LaTeX', color=BLUE, font_size=144)
         self.add(tex)
+```
 
-Copy to clipboard
+### 额外的 LaTeX 包
 
-### Extra LaTeX Packages[#](#extra-latex-packages "Permalink to this heading")
+某些命令需要将特殊包加载到 TeX 模板中。例如，要使用`mathscr`脚本，我们需要添加`mathrsfs` 包。由于这个包默认没有加载到 Manim 的 tex 模板中，所以我们必须手动添加它。
 
-Some commands require special packages to be loaded into the TeX template. For example, to use the `mathscr` script, we need to add the `mathrsfs` package. Since this package isn’t loaded into Manim’s tex template by default, we have to add it manually.
+示例：AddPackageLatex
 
-Example: AddPackageLatex [¶](#addpackagelatex)
+![](./static/AddPackageLatex-1.png)
 
-![../_images/AddPackageLatex-1.png](../_images/AddPackageLatex-1.png)
-
+```py
 from manim import *
 
 class AddPackageLatex(Scene):
     def construct(self):
         myTemplate = TexTemplate()
-        myTemplate.add\_to\_preamble(r"\\usepackage{mathrsfs}")
+        myTemplate.add_to_preamble(r"\usepackage{mathrsfs}")
         tex = Tex(
-            r"$\\mathscr{H} \\rightarrow \\mathbb{H}$}",
+            r"$\mathscr{H} \rightarrow \mathbb{H}$}",
             tex_template=myTemplate,
             font_size=144,
         )
         self.add(tex)
+```
 
-Copy to clipboard
+### 子串和部分
 
-### Substrings and parts[#](#substrings-and-parts "Permalink to this heading")
+TeX mobject 可以接受多个字符串作为参数。`tex[1]`之后，您可以通过索引（如）或选择部分 tex 代码来引用各个部分。`\bigstar`在此示例中，我们设置使用的颜色`set_color_by_tex()`：
 
-The TeX mobject can accept multiple strings as arguments. Afterwards you can refer to the individual parts either by their index (like `tex[1]`), or by selecting parts of the tex code. In this example, we set the color of the `\bigstar` using `set_color_by_tex()`:
+示例：LaTeXSubstrings
 
-Example: LaTeXSubstrings [¶](#latexsubstrings)
+![](./static/LaTeXSubstrings-1.png)
 
-![../_images/LaTeXSubstrings-1.png](../_images/LaTeXSubstrings-1.png)
-
+```py
 from manim import *
 
 class LaTeXSubstrings(Scene):
     def construct(self):
-        tex = Tex('Hello', r'$\\bigstar$', r'\\LaTeX', font_size=144)
-        tex.set\_color\_by_tex('igsta', RED)
+        tex = Tex('Hello', r'$\bigstar$', r'\LaTeX', font_size=144)
+        tex.set_color_by_tex('igsta', RED)
         self.add(tex)
+```
 
-Copy to clipboard
+请注意，`set_color_by_tex()`为包含 Tex 的整个子字符串着色，而不仅仅是特定符号或 Tex 表达式。考虑以下示例：
 
-Note that `set_color_by_tex()` colors the entire substring containing the Tex, not just the specific symbol or Tex expression. Consider the following example:
+示例：不正确的 LaTeXSubstringColoring 
 
-Example: IncorrectLaTeXSubstringColoring [¶](#incorrectlatexsubstringcoloring)
+![](./static/IncorrectLaTeXSubstringColoring-1.webp)
 
-![../_images/IncorrectLaTeXSubstringColoring-1.png](../_images/IncorrectLaTeXSubstringColoring-1.png)
-
+```py
 from manim import *
 
 class IncorrectLaTeXSubstringColoring(Scene):
     def construct(self):
         equation = MathTex(
-            r"e^x = x^0 + x^1 + \\frac{1}{2} x^2 + \\frac{1}{6} x^3 + \\cdots + \\frac{1}{n!} x^n + \\cdots"
+            r"e^x = x^0 + x^1 + \frac{1}{2} x^2 + \frac{1}{6} x^3 + \cdots + \frac{1}{n!} x^n + \cdots"
         )
-        equation.set\_color\_by_tex("x", YELLOW)
+        equation.set_color_by_tex("x", YELLOW)
         self.add(equation)
+```
 
-Copy to clipboard
+正如您所看到的，这将整个方程染成黄色，这与预期相反。要仅着色为`x`黄色，我们必须执行以下操作：
 
-As you can see, this colors the entire equation yellow, contrary to what may be expected. To color only `x` yellow, we have to do the following:
+示例：正确的 LaTeXSubstringColoring 
 
-Example: CorrectLaTeXSubstringColoring [¶](#correctlatexsubstringcoloring)
+![](./static/CorrectLaTeXSubstringColoring-1.webp)
 
-![../_images/CorrectLaTeXSubstringColoring-1.png](../_images/CorrectLaTeXSubstringColoring-1.png)
-
+```py
 from manim import *
 
 class CorrectLaTeXSubstringColoring(Scene):
     def construct(self):
         equation = MathTex(
-            r"e^x = x^0 + x^1 + \\frac{1}{2} x^2 + \\frac{1}{6} x^3 + \\cdots + \\frac{1}{n!} x^n + \\cdots",
-            substrings\_to\_isolate="x"
+            r"e^x = x^0 + x^1 + \frac{1}{2} x^2 + \frac{1}{6} x^3 + \cdots + \frac{1}{n!} x^n + \cdots",
+            substrings_to_isolate="x"
         )
-        equation.set\_color\_by_tex("x", YELLOW)
+        equation.set_color_by_tex("x", YELLOW)
         self.add(equation)
+```
 
-Copy to clipboard
+通过设置`substrings_to_isolate`，`x`我们会自动将 拆分 [`MathTex`](../reference/manim.mobject.text.tex_mobject.MathTex.md "manim.mobject.text.tex_mobject.MathTex")为子字符串，并将各个`x`组件隔离为单独的子字符串。只有这样才能`set_color_by_tex()`达到预期的效果。
 
-By setting `substrings_to_isolate` to `x`, we split up the [`MathTex`](../reference/manim.mobject.text.tex_mobject.MathTex.html#manim.mobject.text.tex_mobject.MathTex "manim.mobject.text.tex_mobject.MathTex") into substrings automatically and isolate the `x` components into individual substrings. Only then can `set_color_by_tex()` be used to achieve the desired result.
+请注意，Manim 还支持自定义语法，可以轻松地将 TeX 字符串拆分为子字符串：只需用双括号将要隔离的公式部分括起来即可。在 string 中 ，渲染的 mobject 将由子字符串, , , , 和组成。这使得使用 可以轻松编写相似文本片段之间的转换。` MathTex(r"{{ a^2 }} + {{ b^2 }} = {{ c^2 }}")``a^2``+``b^2``=``c^2 `[`TransformMatchingTex`](../reference/manim.animation.transform_matching_parts.TransformMatchingTex.md "manim.animation.transform_matching_parts.TransformMatchingTex")
 
-Note that Manim also supports a custom syntax that allows splitting a TeX string into substrings easily: simply enclose parts of your formula that you want to isolate with double braces. In the string `MathTex(r"{{ a^2 }} + {{ b^2 }} = {{ c^2 }}")`, the rendered mobject will consist of the substrings `a^2`, `+`, `b^2`, `=`, and `c^2`. This makes transformations between similar text fragments easy to write using [`TransformMatchingTex`](../reference/manim.animation.transform_matching_parts.TransformMatchingTex.html#manim.animation.transform_matching_parts.TransformMatchingTex "manim.animation.transform_matching_parts.TransformMatchingTex").
+### 用于`index_labels`处理复杂的字符串
 
-### Using `index_labels` to work with complicated strings[#](#using-index-labels-to-work-with-complicated-strings "Permalink to this heading")
+有时您可能会使用非常复杂的[`MathTex`](../reference/manim.mobject.text.tex_mobject.MathTex.md "manim.mobject.text.tex_mobject.MathTex")对象，这使得使用其各个组件变得困难。这就是调试功能[`index_labels()`](../reference/manim.utils.debug.md "manim.utils.debug.index_labels")非常有用的地方。
 
-You might sometimes be working with a very complicated [`MathTex`](../reference/manim.mobject.text.tex_mobject.MathTex.html#manim.mobject.text.tex_mobject.MathTex "manim.mobject.text.tex_mobject.MathTex") mobject that makes it difficult to work with its individual components. This is where the debugging function [`index_labels()`](../reference/manim.utils.debug.html#manim.utils.debug.index_labels "manim.utils.debug.index_labels") is very useful.
+该方法显示 mobject 的子 mobject 的索引，使您可以轻松找到要更改的 mobject 的组件。
 
-The method shows the index of a mobject’s submobjects, allowing you to easily find the components of the mobject you would like to change.
+示例：IndexLabelsMathTex
 
-Example: IndexLabelsMathTex [¶](#indexlabelsmathtex)
+![](./static/IndexLabelsMathTex-1.png)
 
-![../_images/IndexLabelsMathTex-1.png](../_images/IndexLabelsMathTex-1.png)
-
+```py
 from manim import *
 
 class IndexLabelsMathTex(Scene):
     def construct(self):
-        text = MathTex(r"\\binom{2n}{n+2}", font_size=96)
+        text = MathTex(r"\binom{2n}{n+2}", font_size=96)
 
-        \# index the first (and only) term of the MathTex mob
-        self.add(index_labels(text\[0\]))
+        # index the first (and only) term of the MathTex mob
+        self.add(index_labels(text[0]))
 
-        text\[0\]\[1:3\].set_color(YELLOW)
-        text\[0\]\[3:6\].set_color(RED)
+        text[0][1:3].set_color(YELLOW)
+        text[0][3:6].set_color(RED)
         self.add(text)
+```
 
-Copy to clipboard
+### LaTeX 数学字体 - 模板库
 
-### LaTeX Maths Fonts - The Template Library[#](#latex-maths-fonts-the-template-library "Permalink to this heading")
+在排版数学公式时更改 LaTeX 中的字体比常规文本更棘手。它需要更改用于编译 TeX 的模板。Manim 附带了一系列[`TexFontTemplates`](../reference/manim.utils.tex_templates.TexFontTemplates.md "manim.utils.tex_templates.TexFontTemplates") 可供您使用的工具。这些模板都将在数学模式下工作：
 
-Changing fonts in LaTeX when typesetting mathematical formulae is trickier than regular text. It requires changing the template that is used to compile the TeX. Manim comes with a collection of [`TexFontTemplates`](../reference/manim.utils.tex_templates.TexFontTemplates.html#manim.utils.tex_templates.TexFontTemplates "manim.utils.tex_templates.TexFontTemplates") ready for you to use. These templates will all work in math mode:
+示例：LaTeXMathFonts
 
-Example: LaTeXMathFonts [¶](#latexmathfonts)
+![](./static/LaTeXMathFonts-1.png)
 
-![../_images/LaTeXMathFonts-1.png](../_images/LaTeXMathFonts-1.png)
-
+```py
 from manim import *
 
 class LaTeXMathFonts(Scene):
@@ -504,37 +495,36 @@ class LaTeXMathFonts(Scene):
             font_size=144,
         )
         self.add(tex)
+```
 
-Copy to clipboard
+Manim 还包含[`TexTemplateLibrary`](../reference/manim.utils.tex_templates.TexTemplateLibrary.md "manim.utils.tex_templates.TexTemplateLibrary")3Blue1Brown 使用的 TeX 模板。一个例子是 ctex 模板，用于排版中文脚本。为此，您的系统上必须安装 ctex LaTeX 软件包。[`Tex`](../reference/manim.mobject.text.tex_mobject.Tex.md "manim.mobject.text.tex_mobject.Tex")此外，如果您只是排版文本，您可能根本不需要，而应该使用[`Text`](../reference/manim.mobject.text.text_mobject.Text.md "manim.mobject.text.text_mobject.Text")。
 
-Manim also has a [`TexTemplateLibrary`](../reference/manim.utils.tex_templates.TexTemplateLibrary.html#manim.utils.tex_templates.TexTemplateLibrary "manim.utils.tex_templates.TexTemplateLibrary") containing the TeX templates used by 3Blue1Brown. One example is the ctex template, used for typesetting Chinese script. For this to work, the ctex LaTeX package must be installed on your system. Furthermore, if you are only typesetting Text, you probably do not need [`Tex`](../reference/manim.mobject.text.tex_mobject.Tex.html#manim.mobject.text.tex_mobject.Tex "manim.mobject.text.tex_mobject.Tex") at all, and should use [`Text`](../reference/manim.mobject.text.text_mobject.Text.html#manim.mobject.text.text_mobject.Text "manim.mobject.text.text_mobject.Text") instead.
+示例：LaTeXTemplateLibrary
 
-Example: LaTeXTemplateLibrary [¶](#latextemplatelibrary)
+![](./static/LaTeXTemplateLibrary-1.png)
 
-![../_images/LaTeXTemplateLibrary-1.png](../_images/LaTeXTemplateLibrary-1.png)
-
+```py
 from manim import *
 
 class LaTeXTemplateLibrary(Scene):
     def construct(self):
-        tex = Tex('Hello 你好 \\\LaTeX', tex_template=TexTemplateLibrary.ctex, font_size=144)
+        tex = Tex('Hello 你好 \\LaTeX', tex_template=TexTemplateLibrary.ctex, font_size=144)
         self.add(tex)
+```
+### 对齐公式
 
-Copy to clipboard
+[`MathTex`](../reference/manim.mobject.text.tex_mobject.MathTex.md#manim.mobject.text.tex_mobject.MathTex "manim.mobject.text.tex_mobject.MathTex")mobject 在 LaTeX 环境中排版 `align*` 。这意味着您可以在排版多行公式时使用`&`对齐字符：
 
-### Aligning formulae[#](#aligning-formulae "Permalink to this heading")
+示例：LaTeXAlignEnvironment
 
-[`MathTex`](../reference/manim.mobject.text.tex_mobject.MathTex.html#manim.mobject.text.tex_mobject.MathTex "manim.mobject.text.tex_mobject.MathTex") mobject is typeset in the LaTeX `align*` environment. This means you can use the `&` alignment character when typesetting multiline formulae:
+![](./static/LaTeXAlignEnvironment-1.webp)
 
-Example: LaTeXAlignEnvironment [¶](#latexalignenvironment)
-
-![../_images/LaTeXAlignEnvironment-1.png](../_images/LaTeXAlignEnvironment-1.png)
-
+```py
 from manim import *
 
 class LaTeXAlignEnvironment(Scene):
     def construct(self):
-        tex = MathTex(r'f(x) &= 3 + 2 + 1\\\ &= 5 + 1 \\\ &= 6', font_size=96)
+        tex = MathTex(r'f(x) &= 3 + 2 + 1\\ &= 5 + 1 \\ &= 6', font_size=96)
         self.add(tex)
+```
 
-Copy to clipboard
