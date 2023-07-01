@@ -1,4 +1,21 @@
-# manim-docs-zh-hans
+# Manim社区版
+
+Manim Community Edition
+
+当前版本：v0.17.3
+
+### TODO:
+
+先完成，再完善，再完美
+
+- 教程和指南
+- 参考手册
+
+
+### 打赏支持
+
+|![微信](./static/WeChat.jpg)|![支付宝](./static/Alipay.jpg)|
+|----------------------------|-----------------------------|
 
 
 #### License
