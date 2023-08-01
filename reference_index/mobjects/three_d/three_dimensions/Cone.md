@@ -1,4 +1,4 @@
-# 锥[#](#cone "此标题的固定链接")
+# 锥
 
 合格名称：`manim.mobject.three\_d.three\_dimensions.Cone`
 

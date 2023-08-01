@@ -1,10 +1,12 @@
-# 成长箭头[#](#growarrow "此标题的固定链接")
+# 成长箭头
 
 合格名称：`manim.animation.growing.GrowArrow`
 
-_类_ GrowArrow ( _mobject = None_ , _\* args_ , _use_override = True_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/animation/growing.html#GrowArrow)[#](#manim.animation.growing.GrowArrow "此定义的固定链接")
+```py
+class GrowArrow(mobject=None, *args, use_override=True, **kwargs)
+```
 
-基地：[`GrowFromPoint`](manim.animation.growing.GrowFromPoint.html#manim.animation.growing.GrowFromPoint "manim.animation.growing.GrowFromPoint")
+Bases: GrowFromPoint
 
 [`Arrow`](manim.mobject.geometry.line.Arrow.html#manim.mobject.geometry.line.Arrow "manim.mobject.geometry.line.Arrow")通过从开始向尖端生长来引入。
 
@@ -15,25 +17,28 @@ _类_ GrowArrow ( _mobject = None_ , _\* args_ , _use_override = True_ , _\*\* k
 
 例子
 
-示例：GrowArrowExample [¶](#growarrowexample)
+示例：GrowArrowExample
 
-from manim import \*
+```py
+from manim import *
 
 class GrowArrowExample(Scene):
-def construct(self):
-arrows = \[Arrow(2 _ LEFT, 2 _ RIGHT), Arrow(2 _ DR, 2 _ UL)\]
-VGroup(\*arrows).set_x(0).arrange(buff=2)
-self.play(GrowArrow(arrows\[0\]))
-self.play(GrowArrow(arrows\[1\], point_color=RED))
-
-Copy to clipboard
+    def construct(self):
+        arrows = [Arrow(2 * LEFT, 2 * RIGHT), Arrow(2 * DR, 2 * UL)]
+        VGroup(*arrows).set_x(0).arrange(buff=2)
+        self.play(GrowArrow(arrows[0]))
+        self.play(GrowArrow(arrows[1], point_color=RED))
+```
 
 方法
 
-`create_starting_mobject`
+|||
+|-|-|
+`create_starting_mobject`|
 
 属性
 
-`path_arc`
-
-`path_func`
+|||
+|-|-|
+`path_arc`|
+`path_func`|

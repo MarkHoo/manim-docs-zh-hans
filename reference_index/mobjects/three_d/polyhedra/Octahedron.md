@@ -1,4 +1,4 @@
-# 八面体[#](#octahedron "此标题的固定链接")
+# 八面体
 
 合格名称：`manim.mobject.three\_d.polyhedra.Octahedron`
 

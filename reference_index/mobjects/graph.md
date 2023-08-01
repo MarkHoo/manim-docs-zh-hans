@@ -1,4 +1,4 @@
-# 图[#](#module-manim.mobject.graph "此标题的固定链接")
+# 图
 
 Mobject 用于表示数学图表（想想图论，而不是绘图）。
 

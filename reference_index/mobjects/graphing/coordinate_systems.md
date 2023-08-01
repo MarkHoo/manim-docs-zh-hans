@@ -1,4 +1,4 @@
-# 坐标系统[#](#module-manim.mobject.graphing.coordinate_systems "此标题的固定链接")
+# 坐标系统
 
 表示坐标系的 Mobject。
 

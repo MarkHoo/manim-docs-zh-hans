@@ -1,4 +1,4 @@
-# SVGM 对象[#](#svgmobject "此标题的固定链接")
+# SVGM 对象
 
 合格名称：`manim.mobject.svg.svg\_mobject.SVGMobject`
 

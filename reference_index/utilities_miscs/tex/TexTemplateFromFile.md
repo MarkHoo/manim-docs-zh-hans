@@ -1,19 +1,19 @@
-# TexTemplateFromFile [#](#textemplatefromfile "此标题的固定链接")
+# TexTemplateFromFile 
 
 合格名称：`manim.utils.tex.TexTemplateFromFile`
 
-_类_ TexTemplateFromFile ( _\*_ , _tex_filename = 'tex_template.tex'_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/utils/tex.html#TexTemplateFromFile)[#](#manim.utils.tex.TexTemplateFromFile "此定义的固定链接")
+_类_ TexTemplateFromFile ( _\*_ , _tex_filename = 'tex_template.tex'_ , _\*\* kwargs_ )
 
-基地：[`TexTemplate`](manim.utils.tex.TexTemplate.html#manim.utils.tex.TexTemplate "manim.utils.tex.TexTemplate")
+基地：[`TexTemplate`]()
 
 从模板文件创建的 TexTemplate 对象（默认：tex_template.tex）
 
 参数
 
 - **tex_filename** ( _str_ _|_ _os.PathLike_ ) – 有效 TeX 模板文件的路径
-- **kwargs** – 的参数[`TexTemplate`](manim.utils.tex.TexTemplate.html#manim.utils.tex.TexTemplate "manim.utils.tex.TexTemplate")。
+- **kwargs** – 的参数[`TexTemplate`]()。
 
-模板文件[#](#manim.utils.tex.TexTemplateFromFile.template_file "此定义的固定链接")
+模板文件
 
 有效 TeX 模板文件的路径
 
@@ -21,7 +21,7 @@ _类_ TexTemplateFromFile ( _\*_ , _tex_filename = 'tex_template.tex'_ , _\*\* k
 
 `str`
 
-身体[#](#manim.utils.tex.TexTemplateFromFile.body "此定义的固定链接")
+身体
 
 TeX 模板文件的内容
 
@@ -29,7 +29,7 @@ TeX 模板文件的内容
 
 `str`
 
-tex\_编译器[#](#manim.utils.tex.TexTemplateFromFile.tex_compiler "此定义的固定链接")
+tex\_编译器
 
 要使用的 TeX 编译器，例如`latex`,`pdflatex`或`lualatex`
 
@@ -37,7 +37,7 @@ tex\_编译器[#](#manim.utils.tex.TexTemplateFromFile.tex_compiler "此定义�
 
 `str`
 
-输出格式[#](#manim.utils.tex.TexTemplateFromFile.output_format "此定义的固定链接")
+输出格式
 
 编译产生的输出格式，例如`.dvi`或`.pdf`
 
@@ -47,11 +47,11 @@ tex\_编译器[#](#manim.utils.tex.TexTemplateFromFile.tex_compiler "此定义�
 
 方法
 
-[`add_to_document`](#manim.utils.tex.TexTemplateFromFile.add_to_document "manim.utils.tex.TexTemplateFromFile.add_to_document")
+[`add_to_document`]()
 
 将 txt 添加到 TeX 模板中紧接 begin{document} 之后，例如
 
-[`add_to_preamble`](#manim.utils.tex.TexTemplateFromFile.add_to_preamble "manim.utils.tex.TexTemplateFromFile.add_to_preamble")
+[`add_to_preamble`]()
 
 将内容添加到 TeX 模板的序言中（例如
 
@@ -71,7 +71,7 @@ tex\_编译器[#](#manim.utils.tex.TexTemplateFromFile.tex_compiler "此定义�
 
 `default_tex_compiler`
 
-添加到文档（_txt_）[\[来源\]](../_modules/manim/utils/tex.html#TexTemplateFromFile.add_to_document)[#](#manim.utils.tex.TexTemplateFromFile.add_to_document "此定义的固定链接")
+添加到文档（_txt_）
 
 将 txt 添加到 TeX 模板中紧接 begin{document} 之后，例如`\boldmath`
 
@@ -79,7 +79,7 @@ tex\_编译器[#](#manim.utils.tex.TexTemplateFromFile.tex_compiler "此定义�
 
 **txt** – 包含要添加的文本的字符串。
 
-add*to_preamble ( \_txt* , _prepend = False_ )[\[来源\]](../_modules/manim/utils/tex.html#TexTemplateFromFile.add_to_preamble)[#](#manim.utils.tex.TexTemplateFromFile.add_to_preamble "此定义的固定链接")
+add*to_preamble ( \_txt* , _prepend = False_ )
 
 将内容添加到 TeX 模板的序言中（例如定义、包）。文本可以插入到序言的开头或结尾。
 

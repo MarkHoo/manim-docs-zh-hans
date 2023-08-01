@@ -1,10 +1,10 @@
-# 空间操作[#](#module-manim.utils.space_ops "此标题的固定链接")
+# 空间操作
 
 二维和三维向量的效用函数。
 
 功能
 
-R3*to_complex（*点\_）[\[来源\]](../_modules/manim/utils/space_ops.html#R3_to_complex)[#](#manim.utils.space_ops.R3_to_complex "此定义的固定链接")
+R3*to_complex（*点\_）
 
 参数
 
@@ -14,7 +14,7 @@ R3*to_complex（*点\_）[\[来源\]](../_modules/manim/utils/space_ops.html#R3_
 
 _ndarray_
 
-来自四元数的角度轴（_四元数_）[\[来源\]](../_modules/manim/utils/space_ops.html#angle_axis_from_quaternion)[#](#manim.utils.space_ops.angle_axis_from_quaternion "此定义的固定链接")
+来自四元数的角度轴（_四元数_）
 
 从四元数获取角度和轴。
 
@@ -30,7 +30,7 @@ _ndarray_
 
 序列\[浮点数\]
 
-向量之间的角度( _v1_ , _v2_ )[\[来源\]](../_modules/manim/utils/space_ops.html#angle_between_vectors)[#](#manim.utils.space_ops.angle_between_vectors "此定义的固定链接")
+向量之间的角度( _v1_ , _v2_ )
 
 返回两个向量之间的角度。这个角度总是在 0 和 pi 之间
 
@@ -47,7 +47,7 @@ _ndarray_
 
 漂浮
 
-向量角度（_向量_）[\[来源\]](../_modules/manim/utils/space_ops.html#angle_of_vector)[#](#manim.utils.space_ops.angle_of_vector "此定义的固定链接")
+向量角度（_向量_）
 
 当向量投影到 xy 平面上时，返回极坐标 theta。
 
@@ -63,7 +63,7 @@ _ndarray_
 
 漂浮
 
-笛卡尔到球面( _vec_ )[\[来源\]](../_modules/manim/utils/space_ops.html#cartesian_to_spherical)[#](#manim.utils.space_ops.cartesian_to_spherical "此定义的固定链接")
+笛卡尔到球面( _vec_ )
 
 返回与每个极坐标值（距离、phi、theta）相对应的数字数组。
 
@@ -75,7 +75,7 @@ _ndarray_
 
 _ndarray_
 
-质量中心（_点_）[\[来源\]](../_modules/manim/utils/space_ops.html#center_of_mass)[#](#manim.utils.space_ops.center_of_mass "此定义的固定链接")
+质量中心（_点_）
 
 获取空间中点的质心。
 
@@ -91,7 +91,7 @@ _ndarray_
 
 np.ndarray
 
-compass*directions ( \_n = 4* , _start_vect = array(\[1., 0., 0.\])_ )[\[来源\]](../_modules/manim/utils/space_ops.html#compass_directions)[#](#manim.utils.space_ops.compass_directions "此定义的固定链接")
+compass*directions ( \_n = 4* , _start_vect = array(\[1., 0., 0.\])_ )
 
 使用 tau 查找基本方向。
 
@@ -108,9 +108,9 @@ compass*directions ( \_n = 4* , _start_vect = array(\[1., 0., 0.\])_ )[\[来源\
 
 np.ndarray
 
-complex*func_to_R3_func ( \_complex_func* )[\[来源\]](../_modules/manim/utils/space_ops.html#complex_func_to_R3_func)[#](#manim.utils.space_ops.complex_func_to_R3_func "此定义的固定链接")
+complex*func_to_R3_func ( \_complex_func* )
 
-复杂*至\_R3 (*复杂*编号*)[\[来源\]](../_modules/manim/utils/space_ops.html#complex_to_R3)[#](#manim.utils.space_ops.complex_to_R3 "此定义的固定链接")
+复杂*至\_R3 (*复杂*编号*)
 
 参数
 
@@ -120,9 +120,9 @@ complex*func_to_R3_func ( \_complex_func* )[\[来源\]](../_modules/manim/utils/
 
 _ndarray_
 
-cross2d ( _a_ , _b_ )[\[来源\]](../_modules/manim/utils/space_ops.html#cross2d)[#](#manim.utils.space_ops.cross2d "此定义的固定链接")
+cross2d ( _a_ , _b_ )
 
-Earclip*triangulation（*顶点*， \_ring_ends*）[\[来源\]](../_modules/manim/utils/space_ops.html#earclip_triangulation)[#](#manim.utils.space_ops.earclip_triangulation "此定义的固定链接")
+Earclip*triangulation（*顶点*， \_ring_ends*）
 
 返回给出多边形三角剖分的索引列表，可能带有孔。
 
@@ -139,7 +139,7 @@ Earclip*triangulation（*顶点*， \_ring_ends*）[\[来源\]](../_modules/mani
 
 列表
 
-find*intersection ( \_p0s* , _v0s_ , _p1s_ , _v1s_ ,_阈值= 1e-05_ )[\[来源\]](../_modules/manim/utils/space_ops.html#find_intersection)[#](#manim.utils.space_ops.find_intersection "此定义的固定链接")
+find*intersection ( \_p0s* , _v0s_ , _p1s_ , _v1s_ ,_阈值= 1e-05_ )
 
 返回沿方向 v0 穿过 p0 的直线与沿方向 v1 穿过 p1 的直线的交点（或此类点/方向数组的交点数组）。对于 3d 值，它返回射线 p0 + v0 _ t 上最接近射线 p1 + v1 _ t 的点
 
@@ -155,7 +155,7 @@ find*intersection ( \_p0s* , _v0s_ , _p1s_ , _v1s_ ,_阈值= 1e-05_ )[\[来源\]
 
 _序列_\[ _ndarray_ \]
 
-get*unit_normal ( \_v1* , _v2_ , _tol = 1e-06_ )[\[来源\]](../_modules/manim/utils/space_ops.html#get_unit_normal)[#](#manim.utils.space_ops.get_unit_normal "此定义的固定链接")
+get*unit_normal ( \_v1* , _v2_ , _tol = 1e-06_ )
 
 获取向量的单位法线。
 
@@ -173,7 +173,7 @@ get*unit_normal ( \_v1* , _v2_ , _tol = 1e-06_ )[\[来源\]](../_modules/manim/u
 
 np.ndarray
 
-get*winding_number（*点\_）[\[来源\]](../_modules/manim/utils/space_ops.html#get_winding_number)[#](#manim.utils.space_ops.get_winding_number "此定义的固定链接")
+get*winding_number（*点\_）
 
 确定多边形绕原点缠绕的次数。
 
@@ -200,7 +200,7 @@ get*winding_number（*点\_）[\[来源\]](../_modules/manim/utils/space_ops.htm
 
 Copy to clipboard
 
-线交点(_线 1_ ,_线 2_ )[\[来源\]](../_modules/manim/utils/space_ops.html#line_intersection)[#](#manim.utils.space_ops.line_intersection "此定义的固定链接")
+线交点(_线 1_ ,_线 2_ )
 
 返回两条线的交点，每条线由线上的一对不同点定义。
 
@@ -221,7 +221,7 @@ np.ndarray
 
 **ValueError** – 如果两条线不相交或者坐标不在 xy 平面上，则会产生错误。
 
-中点（_点 1_、_点 2_）[\[来源\]](../_modules/manim/utils/space_ops.html#midpoint)[#](#manim.utils.space_ops.midpoint "此定义的固定链接")
+中点（_点 1_、_点 2_）
 
 获取两点的中点。
 
@@ -236,9 +236,9 @@ np.ndarray
 
 返回类型
 
-[联合](manim.mobject.geometry.boolean_ops.Union.html#manim.mobject.geometry.boolean_ops.Union "manim.mobject.geometry.boolean_ops.Union")\[浮点数，np.ndarray\]
+[联合]()\[浮点数，np.ndarray\]
 
-范数平方( _v_ )[\[来源\]](../_modules/manim/utils/space_ops.html#norm_squared)[#](#manim.utils.space_ops.norm_squared "此定义的固定链接")
+范数平方( _v_ )
 
 参数
 
@@ -248,7 +248,7 @@ np.ndarray
 
 漂浮
 
-标准化（_vect_， _fall_back = None_）[\[来源\]](../_modules/manim/utils/space_ops.html#normalize)[#](#manim.utils.space_ops.normalize "此定义的固定链接")
+标准化（_vect_， _fall_back = None_）
 
 参数
 
@@ -258,7 +258,7 @@ np.ndarray
 
 np.ndarray
 
-Normalize*along_axis（*数组*，*轴\_）[\[来源\]](../_modules/manim/utils/space_ops.html#normalize_along_axis)[#](#manim.utils.space_ops.normalize_along_axis "此定义的固定链接")
+Normalize*along_axis（*数组*，\*轴\_）
 
 使用提供的轴标准化数组。
 
@@ -275,7 +275,7 @@ Normalize*along_axis（*数组*，*轴\_）[\[来源\]](../_modules/manim/utils/
 
 np.ndarray
 
-垂直二分线(_线_,_范数向量=数组(\[0., 0., 1.\])_ )[\[来源\]](../_modules/manim/utils/space_ops.html#perpendicular_bisector)[#](#manim.utils.space_ops.perpendicular_bisector "此定义的固定链接")
+垂直二分线(_线_,_范数向量=数组(\[0., 0., 1.\])_ )
 
 返回两个点的列表，这些点对应于给定两个点的垂直平分线的端点。
 
@@ -292,7 +292,7 @@ np.ndarray
 
 列表
 
-四元数共轭（_四元数_）[\[来源\]](../_modules/manim/utils/space_ops.html#quaternion_conjugate)[#](#manim.utils.space_ops.quaternion_conjugate "此定义的固定链接")
+四元数共轭（_四元数_）
 
 用于求四元数的共轭
 
@@ -308,7 +308,7 @@ np.ndarray
 
 np.ndarray
 
-quaternion_from_angle*axis (*角度*,*轴*, \_axis_normalized = False* )[\[来源\]](../_modules/manim/utils/space_ops.html#quaternion_from_angle_axis)[#](#manim.utils.space_ops.quaternion_from_angle_axis "此定义的固定链接")
+quaternion_from_angle*axis (*角度*,*轴*, \_axis_normalized = False* )
 
 从角度和轴获取四元数。欲了解更多信息，请查看[此维基百科页面](https://en.wikipedia.org/wiki/Conversion_between_quaternions_and_Euler_angles)。
 
@@ -326,7 +326,7 @@ quaternion_from_angle*axis (*角度*,*轴*, \_axis_normalized = False* )[\[来�
 
 列表\[浮动\]
 
-quaternion*mult ( *\*四元数\_)[\[来源\]](../_modules/manim/utils/space_ops.html#quaternion_mult)[#](#manim.utils.space_ops.quaternion_mult "此定义的固定链接")
+quaternion*mult ( *\\*四元数\_)
 
 获取所提供的四元数的汉密尔顿积。欲了解更多信息，请查看[此维基百科页面](https://en.wikipedia.org/wiki/Quaternion)。
 
@@ -336,13 +336,13 @@ quaternion*mult ( *\*四元数\_)[\[来源\]](../_modules/manim/utils/space_ops.
 
 返回类型
 
-[联合](manim.mobject.geometry.boolean_ops.Union.html#manim.mobject.geometry.boolean_ops.Union "manim.mobject.geometry.boolean_ops.Union")\[np.ndarray，列表\[[联合](manim.mobject.geometry.boolean_ops.Union.html#manim.mobject.geometry.boolean_ops.Union "manim.mobject.geometry.boolean_ops.Union")\[浮点，np.ndarray\]\]\]
+[联合]()\[np.ndarray，列表\[[联合]()\[浮点，np.ndarray\]\]\]
 
 参数
 
 **quats** (_序列\_\_\[_ _float_ _\]_ ) –
 
-常规顶点（_n_， _\*_，_半径= 1_，_起始角度=无_）[\[来源\]](../_modules/manim/utils/space_ops.html#regular_vertices)[#](#manim.utils.space_ops.regular_vertices "此定义的固定链接")
+常规顶点（_n_， _\*_，_半径= 1_，_起始角度=无_）
 
 围绕以原点为圆心的圆生成规则间隔的顶点。
 
@@ -365,7 +365,7 @@ quaternion*mult ( *\*四元数\_)[\[来源\]](../_modules/manim/utils/space_ops.
 
 元组\[np.ndarray，浮点数\]
 
-旋转向量(_向量_,_角度_,_轴= array(\[0., 0., 1.\])_ )[\[来源\]](../_modules/manim/utils/space_ops.html#rotate_vector)[#](#manim.utils.space_ops.rotate_vector "此定义的固定链接")
+旋转向量(_向量_,_角度_,_轴= array(\[0., 0., 1.\])_ )
 
 旋转向量的函数。
 
@@ -387,7 +387,7 @@ np.ndarray
 
 **ValueError** – 如果向量的维度不是 2 或 3。
 
-旋转*关于\_z（*角度\_）[\[来源\]](../_modules/manim/utils/space_ops.html#rotation_about_z)[#](#manim.utils.space_ops.rotation_about_z "此定义的固定链接")
+旋转*关于\_z（*角度\_）
 
 返回给定角度的旋转矩阵。
 
@@ -403,7 +403,7 @@ np.ndarray
 
 np.ndarray
 
-旋转矩阵（_角度_，_轴_，_齐次= False_）[\[来源\]](../_modules/manim/utils/space_ops.html#rotation_matrix)[#](#manim.utils.space_ops.rotation_matrix "此定义的固定链接")
+旋转矩阵（_角度_，_轴_，_齐次= False_）
 
 绕指定旋转轴以 R^3 旋转。
 
@@ -417,7 +417,7 @@ np.ndarray
 
 _ndarray_
 
-旋转矩阵来自四元数( _quat_ )[\[来源\]](../_modules/manim/utils/space_ops.html#rotation_matrix_from_quaternion)[#](#manim.utils.space_ops.rotation_matrix_from_quaternion "此定义的固定链接")
+旋转矩阵来自四元数( _quat_ )
 
 参数
 
@@ -427,7 +427,7 @@ _ndarray_
 
 _ndarray_
 
-旋转矩阵转置（_角度_，_轴_）[\[来源\]](../_modules/manim/utils/space_ops.html#rotation_matrix_transpose)[#](#manim.utils.space_ops.rotation_matrix_transpose "此定义的固定链接")
+旋转矩阵转置（_角度_，_轴_）
 
 参数
 
@@ -438,7 +438,7 @@ _ndarray_
 
 _ndarray_
 
-rotation*matrix_transpose_from_quaternion (*四元数\_)[\[来源\]](../_modules/manim/utils/space_ops.html#rotation_matrix_transpose_from_quaternion)[#](#manim.utils.space_ops.rotation_matrix_transpose_from_quaternion "此定义的固定链接")
+rotation*matrix_transpose_from_quaternion (*四元数\_)
 
 将四元数 quat 转换为等效的旋转矩阵表示形式。欲了解更多信息，请查看[此页面](https://in.mathworks.com/help/driving/ref/quaternion.rotmat.html)。
 
@@ -454,7 +454,7 @@ rotation*matrix_transpose_from_quaternion (*四元数\_)[\[来源\]](../_modules
 
 列表\[np.ndarray\]
 
-鞋带（_x_y_）[\[来源\]](../_modules/manim/utils/space_ops.html#shoelace)[#](#manim.utils.space_ops.shoelace "此定义的固定链接")
+鞋带（_x_y_）
 
 鞋带公式的二维实现。
 
@@ -470,7 +470,7 @@ rotation*matrix_transpose_from_quaternion (*四元数\_)[\[来源\]](../_modules
 
 **x_y** ( _ndarray_ ) –
 
-鞋带方向( _x_y_ )[\[来源\]](../_modules/manim/utils/space_ops.html#shoelace_direction)[#](#manim.utils.space_ops.shoelace_direction "此定义的固定链接")
+鞋带方向( _x_y_ )
 
 使用鞋带法确定的面积来确定输入点集的方向是顺时针还是逆时针。
 
@@ -486,7 +486,7 @@ rotation*matrix_transpose_from_quaternion (*四元数\_)[\[来源\]](../_modules
 
 **x_y** ( _ndarray_ ) –
 
-spherical*to_cartesian（*球形\_）[\[来源\]](../_modules/manim/utils/space_ops.html#spherical_to_cartesian)[#](#manim.utils.space_ops.spherical_to_cartesian "此定义的固定链接")
+spherical*to_cartesian（*球形\_）
 
 根据给定的球面坐标返回 numpy 数组。`[x, y, z]`
 
@@ -506,7 +506,7 @@ phi - 点与 z 轴正方向的垂直角度。
 
 _ndarray_
 
-厚对角线（_暗淡_，_厚度= 2_）[\[来源\]](../_modules/manim/utils/space_ops.html#thick_diagonal)[#](#manim.utils.space_ops.thick_diagonal "此定义的固定链接")
+厚对角线（_暗淡_，_厚度= 2_）
 
 参数
 
@@ -516,7 +516,7 @@ _ndarray_
 
 _ndarray_
 
-z*to_vector（*向量\_）[\[来源\]](../_modules/manim/utils/space_ops.html#z_to_vector)[#](#manim.utils.space_ops.z_to_vector "此定义的固定链接")
+z*to_vector（*向量\_）
 
 返回 SO(3) 中的某个矩阵，该矩阵将 z 轴设为作为参数提供的（归一化）向量
 

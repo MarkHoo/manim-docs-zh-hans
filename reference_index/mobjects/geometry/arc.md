@@ -1,10 +1,10 @@
-# 弧[#](#module-manim.mobject.geometry.arc "此标题的固定链接")
+# 弧
 
 弯曲的物体。
 
 例子
 
-示例：有用的注释[¶](#usefulannotations)
+示例：有用的注释
 
 ![../_images/UsefulAnnotations-1.png](../_images/UsefulAnnotations-1.png)
 

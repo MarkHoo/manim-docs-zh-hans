@@ -1,4 +1,4 @@
-# 十字[#](#cross "此标题的固定链接")
+# 十字
 
 合格名称：`manim.mobject.geometry.shape\_matchers.Cross`
 

@@ -1,4 +1,4 @@
-# 数字平面[#](#numberplane "此标题的固定链接")
+# 数字平面
 
 合格名称：`manim.mobject.graphing.coordinate\_systems.NumberPlane`
 

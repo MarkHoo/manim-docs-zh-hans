@@ -1,12 +1,14 @@
-# 从中心成长[#](#growfromcenter "此标题的固定链接")
+# 从中心成长
 
 合格名称：`manim.animation.growing.GrowFromCenter`
 
-_类_ GrowFromCenter ( _mobject = None_ , _\* args_ , _use_override = True_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/animation/growing.html#GrowFromCenter)[#](#manim.animation.growing.GrowFromCenter "此定义的固定链接")
+```py
+class GrowFromCenter(mobject=None, *args, use_override=True, **kwargs)
+```
 
-基地：[`GrowFromPoint`](manim.animation.growing.GrowFromPoint.html#manim.animation.growing.GrowFromPoint "manim.animation.growing.GrowFromPoint")
+Bases: GrowFromPoint
 
-[`Mobject`](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject")通过从中心生长来引入。
+[`Mobject`]()通过从中心生长来引入。
 
 参数
 
@@ -15,23 +17,24 @@ _类_ GrowFromCenter ( _mobject = None_ , _\* args_ , _use_override = True_ , _\
 
 例子
 
-示例：GrowFromCenterExample [¶](#growfromcenterexample)
+示例：GrowFromCenterExample
 
-from manim import \*
+```py
+from manim import *
 
 class GrowFromCenterExample(Scene):
-def construct(self):
-squares = \[Square() for \_ in range(2)\]
-VGroup(\*squares).set_x(0).arrange(buff=2)
-self.play(GrowFromCenter(squares\[0\]))
-self.play(GrowFromCenter(squares\[1\], point_color=RED))
-
-Copy to clipboard
+    def construct(self):
+        squares = [Square() for _ in range(2)]
+        VGroup(*squares).set_x(0).arrange(buff=2)
+        self.play(GrowFromCenter(squares[0]))
+        self.play(GrowFromCenter(squares[1], point_color=RED))
+```
 
 方法
 
 属性
 
-`path_arc`
-
-`path_func`
+|||
+|-|-|
+`path_arc`|
+`path_func`|

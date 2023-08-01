@@ -1,4 +1,4 @@
-# ImageMobjectFromCamera [#](#imagemobjectfromcamera "此标题的固定链接")
+# ImageMobjectFromCamera 
 
 合格名称：`manim.mobject.types.image\_mobject.ImageMobjectFromCamera`
 

@@ -2,11 +2,13 @@
 
 合格名称：`manim.animation.fading.FadeIn`
 
-_类_ FadeIn ( _mobject = None_ , _\* args_ , _use_override = True_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/animation/fading.html#FadeIn)[#](#manim.animation.fading.FadeIn "此定义的固定链接")
+```py
+class FadeIn(mobject=None, *args, use_override=True, **kwargs)
+```
 
-基地：`_Fade`
+Bases: `_Fade`
 
-淡入[`Mobject`](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject")s。
+淡入[`Mobject`]()s。
 
 参数
 
@@ -17,35 +19,37 @@ _类_ FadeIn ( _mobject = None_ , _\* args_ , _use_override = True_ , _\*\* kwar
 
 例子
 
-示例：淡入示例[¶](#fadeinexample)
+示例：淡入示例
 
-from manim import \*
+```py
+from manim import *
 
 class FadeInExample(Scene):
-def construct(self):
-dot = Dot(UP * 2 + LEFT)
-self.add(dot)
-tex = Tex(
-"FadeIn with ", "shift ", " or target\\\_position", " and scale"
-).scale(1)
-animations = \[
-FadeIn(tex\[0\]),
-FadeIn(tex\[1\], shift=DOWN),
-FadeIn(tex\[2\], target_position=dot),
-FadeIn(tex\[3\], scale=1.5),
-\]
-self.play(AnimationGroup(*animations, lag_ratio=0.5))
-
-Copy to clipboard
+    def construct(self):
+        dot = Dot(UP * 2 + LEFT)
+        self.add(dot)
+        tex = Tex(
+            "FadeIn with ", "shift ", " or target\_position", " and scale"
+        ).scale(1)
+        animations = [
+            FadeIn(tex[0]),
+            FadeIn(tex[1], shift=DOWN),
+            FadeIn(tex[2], target_position=dot),
+            FadeIn(tex[3], scale=1.5),
+        ]
+        self.play(AnimationGroup(*animations, lag_ratio=0.5))
+```
 
 方法
 
-`create_starting_mobject`
-
-`create_target`
+|||
+|-|-|
+`create_starting_mobject`|
+`create_target`|
 
 属性
 
-`path_arc`
-
-`path_func`
+|||
+|-|-|
+`path_arc`|
+`path_func`|

@@ -1,8 +1,8 @@
-# 渲染器类型[#](#renderertype "此标题的固定链接")
+# 渲染器类型
 
 合格名称：`manim.constants.RendererType`
 
-渲染器类型*类*（_值_）[\[来源\]](../_modules/manim/constants.html#RendererType)[#](#manim.constants.RendererType "此定义的固定链接")
+渲染器类型*类*（_值_）
 
 基地：`Enum`
 
@@ -22,18 +22,18 @@ Copy to clipboard
 
 属性
 
-[`CAIRO`](#manim.constants.RendererType.CAIRO "manim.constants.RendererType.CAIRO")
+[`CAIRO`]()
 
 基于 cairo 后端的渲染器。
 
-[`OPENGL`](#manim.constants.RendererType.OPENGL "manim.constants.RendererType.OPENGL")
+[`OPENGL`]()
 
 基于 OpenGL 的渲染器。
 
-开罗*=* _'开罗'_ [#](#manim.constants.RendererType.CAIRO "此定义的固定链接")[](#manim.constants.RendererType.CAIRO "此定义的固定链接")
+开罗*=* _'开罗'_ 
 
 基于 cairo 后端的渲染器。
 
-OPENGL _=_ _'opengl'_ [#](#manim.constants.RendererType.OPENGL "此定义的固定链接")[](#manim.constants.RendererType.OPENGL "此定义的固定链接")
+OPENGL _=_ _'opengl'_ 
 
 基于 OpenGL 的渲染器。

@@ -1,8 +1,8 @@
-# 几何[#](#module-manim.mobject.geometry "此标题的固定链接")
+# 几何
 
 各种几何 Mobject。
 
-## 模块[#](#modules "此标题的固定链接")
+## 模块
 
 [`arc`](manim.mobject.geometry.arc.html#module-manim.mobject.geometry.arc "manim.mobject.geometry.arc")
 

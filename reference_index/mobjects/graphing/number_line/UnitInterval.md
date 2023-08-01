@@ -1,4 +1,4 @@
-# 单位间隔[#](#unitinterval "此标题的固定链接")
+# 单位间隔
 
 合格名称：`manim.mobject.graphing.number\_line.UnitInterval`
 

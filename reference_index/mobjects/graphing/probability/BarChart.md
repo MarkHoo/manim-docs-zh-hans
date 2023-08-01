@@ -1,4 +1,4 @@
-# 条形图[#](#barchart "此标题的固定链接")
+# 条形图
 
 合格名称：`manim.mobject.graphing.probability.BarChart`
 

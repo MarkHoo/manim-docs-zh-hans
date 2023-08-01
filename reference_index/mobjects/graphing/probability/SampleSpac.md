@@ -1,4 +1,4 @@
-# 样本空间[#](#samplespace "此标题的固定链接")
+# 样本空间
 
 合格名称：`manim.mobject.graphing.probability.SampleSpace`
 

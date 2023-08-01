@@ -9,13 +9,13 @@
 
 然后，安装 Manim 只需要运行：
 
+```sh
 pip3 install manim
+```
 
-Copy to clipboard
+> 笔记
 
-笔记
-
-鉴于当前迁移到通过 OpenGL 进行渲染的努力，此列表可能不完整。如果您在安装时遇到缺少依赖项，请告诉我们 <https://github.com/ManimCommunity/manim/issues/new/choose> 。
+> 鉴于当前迁移到通过 OpenGL 进行渲染的努力，此列表可能不完整。如果您在安装时遇到缺少依赖项，请告诉我们 <https://github.com/ManimCommunity/manim/issues/new/choose> 。
 
 无论如何，我们还在下面编译了几种常见的操作系统和包管理器组合的说明。
 
@@ -25,52 +25,52 @@ Copy to clipboard
 
 要首先更新源代码，然后安装 Cairo、Pango 和 FFmpeg，只需运行：
 
+```sh
 sudo apt update
 sudo apt install build-essential python3-dev libcairo2-dev libpango1.0-dev ffmpeg
-
-Copy to clipboard
+```
 
 如果您没有安装 python3-pip，请通过以下方式安装：
 
+```sh
 sudo apt install python3-pip
-
-Copy to clipboard
+```
 
 然后，要安装 Manim，请运行：
 
+```sh
 pip3 install manim
+```
 
-Copy to clipboard
-
-继续阅读[可选依赖项](#linux-optional-dependencies) 部分。
+继续阅读[可选依赖项]() 部分。
 
 ### dnf – Fedora / CentOS / RHEL 
 
 安装 Cairo 和 Pango：
 
+```sh
 sudo dnf install cairo-devel pango-devel
-
-Copy to clipboard
+```
 
 为了成功构建`pycairo`轮子，您还需要 Python 开发标头：
 
+```sh
 sudo dnf install python3-devel
-
-Copy to clipboard
+```
 
 FFmpeg 只能通过 RPMfusion 存储库使用，您必须先配置该存储库 - 请参阅[https://rpmfusion.org/Configuration/](https://rpmfusion.org/Configuration/)了解说明。然后，安装 FFmpeg：
 
+```sh
 sudo dnf install ffmpeg
-
-Copy to clipboard
+```
 
 此时，您已拥有所有必需的依赖项，并且可以通过运行以下命令来安装 Manim：
 
+```sh
 pip3 install manim
+```
 
-Copy to clipboard
-
-继续阅读[可选依赖项](#linux-optional-dependencies) 部分。
+继续阅读[可选依赖项]() 部分。
 
 ### pacman – Arch / Manjaro 
 
@@ -80,24 +80,24 @@ Copy to clipboard
 
 如果您不想使用 AUR 的打包版本，则需要手动执行以下操作：更新包源，然后安装 Cairo、Pango 和 FFmpeg：
 
+```sh
 sudo pacman -Syu
 sudo pacman -S cairo pango ffmpeg
-
-Copy to clipboard
+```
 
 如果您尚未`python-pip`安装，请运行以下命令来获取它：
 
+```sh
 sudo pacman -S python-pip
-
-Copy to clipboard
+```
 
 然后只需通过以下方式安装 Manim：
 
+```sh
 pip3 install manim
+```
 
-Copy to clipboard
-
-继续阅读[可选依赖项](#linux-optional-dependencies) 部分。
+继续阅读[可选依赖项]() 部分。
 
 ## 可选依赖项
 
@@ -107,19 +107,19 @@ Copy to clipboard
 
 对于基于 Debian 的系统（如 Ubuntu），可以通过运行以下命令来安装足够的 LaTeX 依赖项：
 
+```sh
 sudo apt install texlive texlive-latex-extra
-
-Copy to clipboard
+```
 
 如果您选择使用一些较小的 TeX 发行版（例如 [TinyTeX ）](https://yihui.org/tinytex/)，Manim 以某种方式与之交互的 LaTeX 包的完整列表（一个子集可能足以满足您的特定应用程序）是：
 
+```sh
 collection-basic amsmath babel-english cbfonts-fd cm-super ctex doublestroke
 dvisvgm everysel fontspec frcursive fundus-calligra gnu-freefont jknapltx
 latex-bin mathastext microtype ms physics preview ragged2e relsize rsfs
 setspace standalone tipa wasy wasysym xcolor xetex xkeyval
+```
 
-Copy to clipboard
-
-## 与马尼姆一起工作
+## 与Manim一起工作
 
 此时，您应该已经安装好了 Manim，请前往我们的[快速入门教程](../tutorials/quickstart.html)，了解如何制作您自己的*动画*！

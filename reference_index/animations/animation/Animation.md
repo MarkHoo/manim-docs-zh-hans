@@ -1,4 +1,4 @@
-# 动画[#](#animation "此标题的固定链接")
+# 动画
 
 合格名称：`manim.animation.animation.Animation`
 
@@ -48,112 +48,64 @@
 
 例子
 
-示例：滞后比率[¶](#lagratios)
+示例：滞后比率
 
-from manim import \*
+```py
+from manim import *
 
 class LagRatios(Scene):
-def construct(self):
-ratios = \[0, 0.1, 0.5, 1, 2\] \# demonstrated lag_ratios
+    def construct(self):
+        ratios = [0, 0.1, 0.5, 1, 2]  # demonstrated lag_ratios
 
-        \# Create dot groups
-        group = VGroup(*\[Dot() for _ in range(4)\]).arrange_submobjects()
-        groups = VGroup(*\[group.copy() for _ in ratios\]).arrange_submobjects(buff=1)
+        # Create dot groups
+        group = VGroup(*[Dot() for _ in range(4)]).arrange_submobjects()
+        groups = VGroup(*[group.copy() for _ in ratios]).arrange_submobjects(buff=1)
         self.add(groups)
 
-        \# Label groups
+        # Label groups
         self.add(Text("lag_ratio = ", font_size=36).next_to(groups, UP, buff=1.5))
         for group, ratio in zip(groups, ratios):
             self.add(Text(str(ratio), font_size=36).next_to(group, UP))
 
         #Animate groups with different lag_ratios
-        self.play(AnimationGroup(*\[
+        self.play(AnimationGroup(*[
             group.animate(lag_ratio=ratio, run_time=1.5).shift(DOWN * 2)
             for group, ratio in zip(groups, ratios)
-        \]))
+        ]))
 
-        \# lag_ratio also works recursively on nested submobjects:
+        # lag_ratio also works recursively on nested submobjects:
         self.play(groups.animate(run_time=1, lag_ratio=0.1).shift(UP * 2))
-
-Copy to clipboard
+```
 
 方法
 
-[`begin`](#manim.animation.animation.Animation.begin "manim.animation.animation.Animation.begin")
 
-开始动画。
+|||
+|-|-|
+[`begin`]()|开始动画。
+[`clean_up_from_scene`]()|[`Scene`]()完成动画后清理。
+[`copy`]()|创建动画的副本。
+`create_starting_mobject`|
+[`finish`]()|完成动画。
+`get_all_families_zipped`|
+[`get_all_mobjects`]()|获取动画中涉及的所有 mobject。
+[`get_all_mobjects_to_update`]()|获取所有要在动画期间更新的 mobject。
+[`get_rate_func`]()|获取动画的速率函数。
+[`get_run_time`]()|获取动画的运行时间。
+[`get_sub_alpha`]()|获取任何子对象子动画的动画进度。
+[`interpolate`]()|设置动画进度。
+[`interpolate_mobject`]()|根据 alpha 值对 mobject 进行插值[`Animation`]()。
+`interpolate_submobject`|
+[`is_introducer`]()|测试动画是否是介绍人。
+[`is_remover`]()|测试动画是否是移除器。
+[`set_name`]()|设置动画的名称。
+[`set_rate_func`]()|设置动画的速率函数。
+[`set_run_time`]()|设置动画的运行时间。
+[`update_mobjects`]()|更新诸如 starting_mobject 和（对于变换）target_mobject 之类的内容。
 
-[`clean_up_from_scene`](#manim.animation.animation.Animation.clean_up_from_scene "manim.animation.animation.Animation.clean_up_from_scene")
 
-[`Scene`](manim.scene.scene.Scene.html#manim.scene.scene.Scene "手动场景.场景.场景")完成动画后清理。
 
-[`copy`](#manim.animation.animation.Animation.copy "manim.animation.animation.Animation.copy")
-
-创建动画的副本。
-
-`create_starting_mobject`
-
-[`finish`](#manim.animation.animation.Animation.finish "manim.animation.animation.Animation.finish")
-
-完成动画。
-
-`get_all_families_zipped`
-
-[`get_all_mobjects`](#manim.animation.animation.Animation.get_all_mobjects "manim.animation.animation.Animation.get_all_mobjects")
-
-获取动画中涉及的所有 mobject。
-
-[`get_all_mobjects_to_update`](#manim.animation.animation.Animation.get_all_mobjects_to_update "manim.animation.animation.Animation.get_all_mobjects_to_update")
-
-获取所有要在动画期间更新的 mobject。
-
-[`get_rate_func`](#manim.animation.animation.Animation.get_rate_func "manim.animation.animation.Animation.get_rate_func")
-
-获取动画的速率函数。
-
-[`get_run_time`](#manim.animation.animation.Animation.get_run_time "manim.animation.animation.Animation.get_run_time")
-
-获取动画的运行时间。
-
-[`get_sub_alpha`](#manim.animation.animation.Animation.get_sub_alpha "manim.animation.animation.Animation.get_sub_alpha")
-
-获取任何子对象子动画的动画进度。
-
-[`interpolate`](#manim.animation.animation.Animation.interpolate "manim.animation.animation.Animation.interpolate")
-
-设置动画进度。
-
-[`interpolate_mobject`](#manim.animation.animation.Animation.interpolate_mobject "manim.animation.animation.Animation.interpolate_mobject")
-
-根据 alpha 值对 mobject 进行插值[`Animation`](#manim.animation.animation.Animation "manim.animation.animation.Animation")。
-
-`interpolate_submobject`
-
-[`is_introducer`](#manim.animation.animation.Animation.is_introducer "manim.animation.animation.Animation.is_introducer")
-
-测试动画是否是介绍人。
-
-[`is_remover`](#manim.animation.animation.Animation.is_remover "manim.animation.animation.Animation.is_remover")
-
-测试动画是否是移除器。
-
-[`set_name`](#manim.animation.animation.Animation.set_name "manim.animation.animation.Animation.set_name")
-
-设置动画的名称。
-
-[`set_rate_func`](#manim.animation.animation.Animation.set_rate_func "manim.animation.animation.Animation.set_rate_func")
-
-设置动画的速率函数。
-
-[`set_run_time`](#manim.animation.animation.Animation.set_run_time "manim.animation.animation.Animation.set_run_time")
-
-设置动画的运行时间。
-
-[`update_mobjects`](#manim.animation.animation.Animation.update_mobjects "manim.animation.animation.Animation.update_mobjects")
-
-更新诸如 starting_mobject 和（对于变换）target_mobject 之类的内容。
-
-开始( )[\[来源\]](../_modules/manim/animation/animation.html#Animation.begin)[#](#manim.animation.animation.Animation.begin "此定义的固定链接")
+开始( )
 
 开始动画。
 

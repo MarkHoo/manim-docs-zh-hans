@@ -26,7 +26,7 @@ COPY --chown=manimuser:manimuser . /manim
 
 [包含我们的交互式教程的](https://try.manim.community)存储库可以在[https://github.com/ManimCommunity/jupyter_examples](https://github.com/ManimCommunity/jupyter_examples)找到 。
 
-## 谷歌合作实验室[#](#google-colaboratory "此标题的固定链接")
+## 谷歌合作实验室
 
 也可以在 [Google Colaboratory](https://colab.research.google.com/)环境中安装 Manim。与 Binder 不同，您可以预先自定义和准备环境（例如 Manim 已安装并可以使用），而每次在 Google Colab 中启动新笔记本时，您都必须注意这一点。幸运的是，这并不是特别困难。
 

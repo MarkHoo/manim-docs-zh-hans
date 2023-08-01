@@ -1,4 +1,4 @@
-# 概率[#](#module-manim.mobject.graphing.probability "此标题的固定链接")
+# 概率
 
 Mobjects 代表概率论和统计学中的对象。
 

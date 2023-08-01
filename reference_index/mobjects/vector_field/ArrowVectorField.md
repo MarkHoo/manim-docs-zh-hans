@@ -1,4 +1,4 @@
-# 箭头向量字段[#](#arrowvectorfield "此标题的固定链接")
+# 箭头向量字段
 
 合格名称：`manim.mobject.vector\_field.ArrowVectorField`
 

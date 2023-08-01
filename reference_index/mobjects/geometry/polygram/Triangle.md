@@ -1,4 +1,4 @@
-# 三角形[#](#triangle "此标题的固定链接")
+# 三角形
 
 合格名称：`manim.mobject.geometry.polygram.Triangle`
 

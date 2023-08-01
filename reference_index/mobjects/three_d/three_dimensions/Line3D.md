@@ -1,4 +1,4 @@
-# 线 3D [#](#line3d "此标题的固定链接")
+# 线 3D 
 
 合格名称：`manim.mobject.three\_d.three\_dimensions.Line3D`
 

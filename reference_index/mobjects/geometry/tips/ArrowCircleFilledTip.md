@@ -1,4 +1,4 @@
-# ArrowCircleFilledTip [#](#arrowcirclefilledtip "此标题的固定链接")
+# ArrowCircleFilledTip
 
 合格名称：`manim.mobject.geometry.tips.ArrowCircleFilledTip`
 

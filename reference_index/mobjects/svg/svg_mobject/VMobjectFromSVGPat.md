@@ -1,4 +1,4 @@
-# VMobjectFromSVGPath [#](#vmobjectfromsvgpath "此标题的固定链接")
+# VMobjectFromSVGPath 
 
 合格名称：`manim.mobject.svg.svg\_mobject.VMobjectFromSVGPath`
 

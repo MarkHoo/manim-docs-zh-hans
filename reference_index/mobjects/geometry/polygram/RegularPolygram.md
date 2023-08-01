@@ -1,4 +1,4 @@
-# 正则 Polygram [#](#regularpolygram "此标题的固定链接")
+# 正则 Polygram 
 
 合格名称：`manim.mobject.geometry.polygram.RegularPolygram`
 

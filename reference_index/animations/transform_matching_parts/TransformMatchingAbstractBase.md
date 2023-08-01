@@ -1,10 +1,12 @@
-# TransformMatchingAbstractBase [#](#transformmatchingabstractbase "此标题的固定链接")
+# TransformMatchingAbstractBase
 
 合格名称：`manim.animation.transform\_matching\_parts.TransformMatchingAbstractBase`
 
-_类_ TransformMatchingAbstractBase ( _mobject = None_ , _\* args_ , _use_override = True_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/animation/transform_matching_parts.html#TransformMatchingAbstractBase)[#](#manim.animation.transform_matching_parts.TransformMatchingAbstractBase "此定义的固定链接")
+```py
+class TransformMatchingAbstractBase(mobject=None, *args, use_override=True, **kwargs)
+```
 
-基地：[`AnimationGroup`](manim.animation.composition.AnimationGroup.html#manim.animation.composition.AnimationGroup "manim.animation.composition.AnimationGroup")
+Bases: AnimationGroup
 
 用于跟踪匹配部分的转换的抽象基类。
 
@@ -14,10 +16,10 @@ _类_ TransformMatchingAbstractBase ( _mobject = None_ , _\* args_ , _use_overri
 
 参数
 
-- **mobject** – 起始[`Mobject`](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject").
-- **target_mobject** – 目标[`Mobject`](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject")。
-- **transform_mismatches** – 控制没有匹配键的子对象是否使用 相互转换[`Transform`](manim.animation.transform.Transform.html#manim.animation.transform.Transform "manim.animation.transform.Transform")。默认值：`False`.
-- **fade_transform_mismatches** – 控制没有匹配键的子对象是否使用 相互转换[`FadeTransform`](manim.animation.transform.FadeTransform.html#manim.animation.transform.FadeTransform "manim.animation.transform.FadeTransform")。默认值：`False`.
+- **mobject** – 起始[`Mobject`]().
+- **target_mobject** – 目标[`Mobject`]()。
+- **transform_mismatches** – 控制没有匹配键的子对象是否使用 相互转换[`Transform`]()。默认值：`False`.
+- **fade_transform_mismatches** – 控制没有匹配键的子对象是否使用 相互转换[`FadeTransform`]()。默认值：`False`.
 - **key_map** – 可选。将属于某些起始 mobject 的子对象的键（即方法的返回值`get_mobject_key`）映射到属于目标 mobject 的子对象的某些键的字典，尽管键不匹配，但仍应进行转换。
 - **kwargs** – 所有其他关键字参数都传递给子对象转换。
 
@@ -27,25 +29,23 @@ _类_ TransformMatchingAbstractBase ( _mobject = None_ , _\* args_ , _use_overri
 
 方法
 
-[`clean_up_from_scene`](#manim.animation.transform_matching_parts.TransformMatchingAbstractBase.clean_up_from_scene "manim.animation.transform_matching_parts.TransformMatchingAbstractBase.clean_up_from_scene")
+|||
+|-|-|
+[`clean_up_from_scene`]()|[`Scene`]()完成动画后清理。
+`get_mobject_key`|
+`get_mobject_parts`|
+`get_shape_map`|
 
-[`Scene`](manim.scene.scene.Scene.html#manim.scene.scene.Scene "手动场景.场景.场景")完成动画后清理。
 
-`get_mobject_key`
+clean_up_from*scene（*场景\_）
 
-`get_mobject_parts`
+[`Scene`]()完成动画后清理。
 
-`get_shape_map`
-
-clean_up_from*scene（*场景\_）[\[来源\]](../_modules/manim/animation/transform_matching_parts.html#TransformMatchingAbstractBase.clean_up_from_scene)[#](#manim.animation.transform_matching_parts.TransformMatchingAbstractBase.clean_up_from_scene "此定义的固定链接")
-
-[`Scene`](manim.scene.scene.Scene.html#manim.scene.scene.Scene "手动场景.场景.场景")完成动画后清理。
-
-如果动画是移除器，则这包括[`remove()`](manim.scene.scene.Scene.html#manim.scene.scene.Scene.remove "manim.scene.scene.Scene.remove")动画 [`Mobject`](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject")。
+如果动画是移除器，则这包括[`remove()`]()动画 [`Mobject`]()。
 
 参数
 
-**scene** ( [_Scene_](manim.scene.scene.Scene.html#manim.scene.scene.Scene "手动场景.场景.场景") ) – 应清除动画的场景。
+**scene** ( [_Scene_]() ) – 应清除动画的场景。
 
 返回类型
 

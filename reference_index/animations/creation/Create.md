@@ -1,10 +1,12 @@
-# 创建[#](#create "此标题的固定链接")
+# 创建
 
 合格名称：`manim.animation.creation.Create`
 
-_类_ 创建（_mobject = None_， _\* args_， _use_override = True_， _\*\* kwargs_）[\[来源\]](../_modules/manim/animation/creation.html#Create)[#](#manim.animation.creation.Create "此定义的固定链接")
+```py
+class Create(mobject=None, *args, use_override=True, **kwargs)
+```
 
-基地：[`ShowPartial`](manim.animation.creation.ShowPartial.html#manim.animation.creation.ShowPartial "manim.animation.creation.ShowPartial")
+Bases: ShowPartial
 
 增量显示 VMobject。
 
@@ -20,13 +22,14 @@ _类_ 创建（_mobject = None_， _\* args_， _use_override = True_， _\*\* k
 
 示例：创建场景[¶](#createscene)
 
-from manim import \*
+```py
+from manim import *
 
 class CreateScene(Scene):
-def construct(self):
-self.play(Create(Square()))
+    def construct(self):
+        self.play(Create(Square()))
+```
 
-Copy to clipboard
 
 也可以看看
 

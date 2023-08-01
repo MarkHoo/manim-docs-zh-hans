@@ -1,4 +1,4 @@
-# 抽象图像对象[#](#abstractimagemobject "此标题的固定链接")
+# 抽象图像对象
 
 合格名称：`manim.mobject.types.image\_mobject.AbstractImageMobject`
 

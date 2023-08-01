@@ -1,4 +1,4 @@
-# 圆弧多边形[#](#arcpolygon "此标题的固定链接")
+# 圆弧多边形
 
 合格名称：`manim.mobject.geometry.arc.ArcPolygon`
 

@@ -1,4 +1,4 @@
-# 有向图[#](#digraph "此标题的固定链接")
+# 有向图
 
 合格名称：`manim.mobject.graph.DiGraph`
 

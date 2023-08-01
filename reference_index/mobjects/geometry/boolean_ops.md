@@ -1,4 +1,4 @@
-# 布尔操作[#](#module-manim.mobject.geometry.boolean_ops "此标题的固定链接")
+# 布尔操作
 
 二维 mobject 的布尔运算。
 

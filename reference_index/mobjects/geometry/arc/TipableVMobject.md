@@ -1,4 +1,4 @@
-# 可提示 VM 对象[#](#tipablevmobject "此标题的固定链接")
+# 可提示 VM 对象
 
 合格名称：`manim.mobject.geometry.arc.TipableVMobject`
 

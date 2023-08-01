@@ -1,4 +1,4 @@
-# Mobject[#](#mobject "此标题的固定链接")
+# Mobject
 
 合格名称：`manim.mobject.mobject.Mobject`
 

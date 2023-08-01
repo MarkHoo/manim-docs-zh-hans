@@ -1,10 +1,10 @@
-# 贝塞尔曲线[#](#module-manim.utils.bezier "此标题的固定链接")
+# 贝塞尔曲线
 
 与贝塞尔曲线相关的效用函数。
 
 功能
 
-贝塞尔曲线（_点_）[\[来源\]](../_modules/manim/utils/bezier.html#bezier)[#](#manim.utils.bezier.bezier "此定义的固定链接")
+贝塞尔曲线（_点_）
 
 贝塞尔曲线的经典实现。
 
@@ -20,7 +20,7 @@
 
 _可调用_\[\[float\]、_Union_ \[int、_Iterable_ \]\]
 
-diag*to_matrix（\_l_and_u*， _diag_）[\[来源\]](../_modules/manim/utils/bezier.html#diag_to_matrix)[#](#manim.utils.bezier.diag_to_matrix "此定义的固定链接")
+diag*to_matrix（\_l_and_u*， _diag_）
 
 将其行表示矩阵对角线条目的数组转换为矩阵本身。请参阅 scipy.linalg.solve_banded
 
@@ -33,11 +33,11 @@ diag*to_matrix（\_l_and_u*， _diag_）[\[来源\]](../_modules/manim/utils/bez
 
 np.ndarray
 
-get*quadratic_approximation_of_cubic ( \_a0* , _h0_ , _h1_ , _a1_ )[\[来源\]](../_modules/manim/utils/bezier.html#get_quadratic_approximation_of_cubic)[#](#manim.utils.bezier.get_quadratic_approximation_of_cubic "此定义的固定链接")
+get*quadratic_approximation_of_cubic ( \_a0* , _h0_ , _h1_ , _a1_ )
 
-get_smooth_cubic_bezier_handle*points（*点\_）[\[来源\]](../_modules/manim/utils/bezier.html#get_smooth_cubic_bezier_handle_points)[#](#manim.utils.bezier.get_smooth_cubic_bezier_handle_points "此定义的固定链接")
+get_smooth_cubic_bezier_handle*points（*点\_）
 
-get_smooth_handle*points (*点\_)[\[来源\]](../_modules/manim/utils/bezier.html#get_smooth_handle_points)[#](#manim.utils.bezier.get_smooth_handle_points "此定义的固定链接")
+get_smooth_handle*points (*点\_)
 
 给定一些锚点（点），计算手柄，使生成的贝塞尔曲线平滑。
 
@@ -53,7 +53,7 @@ get_smooth_handle*points (*点\_)[\[来源\]](../_modules/manim/utils/bezier.htm
 
 _元组_\[np.ndarray, np.ndarray\]
 
-整数插值（_开始_、_结束_、_阿尔法_）[\[来源\]](../_modules/manim/utils/bezier.html#integer_interpolate)[#](#manim.utils.bezier.integer_interpolate "此定义的固定链接")
+整数插值（_开始_、_结束_、_阿尔法_）
 
 Alpha 是 0 到 1 之间的浮点数。这将返回一个介于 start 和 end（含）之间的整数，表示它们之间的适当插值，以及一个“残差”，表示返回的整数与列表中下一个整数之间的新比例。
 
@@ -69,7 +69,7 @@ Alpha 是 0 到 1 之间的浮点数。这将返回一个介于 start 和 end（
 
 元组\[整数，浮点数\]
 
-插值（_开始_、_结束_、 _alpha_）[\[来源\]](../_modules/manim/utils/bezier.html#interpolate)[#](#manim.utils.bezier.interpolate "此定义的固定链接")
+插值（_开始_、_结束_、 _alpha_）
 
 参数
 
@@ -81,7 +81,7 @@ Alpha 是 0 到 1 之间的浮点数。这将返回一个介于 start 和 end（
 
 _ndarray_
 
-inverse*interpolate（*开始*、*结束*、*值\_）[\[来源\]](../_modules/manim/utils/bezier.html#inverse_interpolate)[#](#manim.utils.bezier.inverse_interpolate "此定义的固定链接")
+inverse*interpolate（*开始*、*结束*、\*值\_）
 
 参数
 
@@ -93,7 +93,7 @@ inverse*interpolate（*开始*、*结束*、*值\_）[\[来源\]](../_modules/ma
 
 _ndarray_
 
-is*close (*点\_)[\[来源\]](../_modules/manim/utils/bezier.html#is_closed)[#](#manim.utils.bezier.is_closed "此定义的固定链接")
+is*close (*点\_)
 
 参数
 
@@ -103,7 +103,7 @@ is*close (*点\_)[\[来源\]](../_modules/manim/utils/bezier.html#is_closed)[#](
 
 布尔值
 
-match*interpolate (*新开始*,*新结束*,*旧开始*,*旧结束*,*旧值\_)[\[来源\]](../_modules/manim/utils/bezier.html#match_interpolate)[#](#manim.utils.bezier.match_interpolate "此定义的固定链接")
+match*interpolate (*新开始*,*新结束*,*旧开始*,*旧结束*,\*旧值\_)
 
 参数
 
@@ -117,7 +117,7 @@ match*interpolate (*新开始*,*新结束*,*旧开始*,*旧结束*,*旧值\_)[\[
 
 _ndarray_
 
-中（_开始_、_结束_）[\[来源\]](../_modules/manim/utils/bezier.html#mid)[#](#manim.utils.bezier.mid "此定义的固定链接")
+中（_开始_、_结束_）
 
 参数
 
@@ -128,9 +128,9 @@ _ndarray_
 
 漂浮
 
-部分贝塞尔曲线点(_点_, _a_ , _b_ )[\[来源\]](../_modules/manim/utils/bezier.html#partial_bezier_points)[#](#manim.utils.bezier.partial_bezier_points "此定义的固定链接")
+部分贝塞尔曲线点(_点_, _a_ , _b_ )
 
-给定一个定义贝塞尔曲线的点数组和两个数字 0<=a<b<=1，返回一个相同大小的数组，该数组描述了原始贝塞尔曲线在区间 \[a, b\] 上的部分。
+给定一个定义贝塞尔曲线的点数组和两个数字` 0<=a<b<=1`，返回一个相同大小的数组，该数组描述了原始贝塞尔曲线在区间 \[a, b\] 上的部分。
 
 这个算法非常漂亮，而且非常密集。
 
@@ -148,9 +148,9 @@ _ndarray_
 
 np.ndarray
 
-partial*quadratic_bezier*points (_点_, \_a* , \_b* )[\[来源\]](../_modules/manim/utils/bezier.html#partial_quadratic_bezier_points)[#](#manim.utils.bezier.partial_quadratic_bezier_points "此定义的固定链接")
+partial*quadratic_bezier*points (_点_, \_a* , \_b* )
 
-point*lies_on*bezier (_点_, \_control_points* , \_round_to = 1e-06* )[\[来源\]](../_modules/manim/utils/bezier.html#point_lies_on_bezier)[#](#manim.utils.bezier.point_lies_on_bezier "此定义的固定链接")
+point*lies_on*bezier (_点_, \_control_points* , \_round_to = 1e-06* )
 
 检查给定点是否位于具有给定控制点的贝塞尔曲线上。
 
@@ -170,7 +170,7 @@ point*lies_on*bezier (_点_, \_control_points* , \_round_to = 1e-06* )[\[来源\
 
 布尔值
 
-比例*沿*贝塞尔曲线\_for*point （*点*，*控制点*， \_round_to = 1e-06*）[\[来源\]](../_modules/manim/utils/bezier.html#proportions_along_bezier_curve_for_point)[#](#manim.utils.bezier.proportions_along_bezier_curve_for_point "此定义的固定链接")
+比例*沿*贝塞尔曲线\_for*point （*点*，*控制点*， \_round_to = 1e-06*）
 
 给定贝塞尔曲线的控制点，获取与给定点对应的贝塞尔曲线沿线的比例。
 
@@ -194,7 +194,7 @@ np.ndarray\[浮点数\]
 
 **ValueError** – 当`point`和 控制点具有不同形状时。
 
-Quadratic*bezier_remap (*三元组*, \_new_number_of_curves* )[\[来源\]](../_modules/manim/utils/bezier.html#quadratic_bezier_remap)[#](#manim.utils.bezier.quadratic_bezier_remap "此定义的固定链接")
+Quadratic*bezier_remap (*三元组*, \_new_number_of_curves* )
 
 通过分割贝塞尔曲线将曲线数量重新映射到更高的数量
 
@@ -207,7 +207,7 @@ Quadratic*bezier_remap (*三元组*, \_new_number_of_curves* )[\[来源\]](../_m
 
 二次贝塞尔曲线的新三元组。
 
-split*quadratic_bezier (*点*, \_t* )[\[来源\]](../_modules/manim/utils/bezier.html#split_quadratic_bezier)[#](#manim.utils.bezier.split_quadratic_bezier "此定义的固定链接")
+split*quadratic_bezier (*点*, \_t* )
 
 将参数处的二次贝塞尔曲线拆分`t`为两条二次曲线。
 
@@ -225,7 +225,7 @@ split*quadratic_bezier (*点*, \_t* )[\[来源\]](../_modules/manim/utils/bezier
 
 _ndarray_
 
-subdivide*quadratic_bezier (*点*, \_n* )[\[来源\]](../_modules/manim/utils/bezier.html#subdivide_quadratic_bezier)[#](#manim.utils.bezier.subdivide_quadratic_bezier "此定义的固定链接")
+subdivide*quadratic_bezier (*点*, \_n* )
 
 将二次贝塞尔曲线细分为`n`具有相同形状的子曲线。
 

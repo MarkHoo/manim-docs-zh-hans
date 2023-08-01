@@ -1,4 +1,4 @@
-# 环面[#](#torus "此标题的固定链接")
+# 环面
 
 合格名称：`manim.mobject.three\_d.three\_dimensions.Torus`
 

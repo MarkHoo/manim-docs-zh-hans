@@ -1,4 +1,4 @@
-# Mobject2D [#](#mobject2d "此标题的固定链接")
+# Mobject2D 
 
 合格名称：`manim.mobject.types.point\_cloud\_mobject.Mobject2D`
 

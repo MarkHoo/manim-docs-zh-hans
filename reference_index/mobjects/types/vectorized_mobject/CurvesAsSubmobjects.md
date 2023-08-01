@@ -1,4 +1,4 @@
-# 曲线作为子对象[#](#curvesassubmobjects "此标题的固定链接")
+# 曲线作为子对象
 
 合格名称：`manim.mobject.types.vectorized\_mobject.CurvesAsSubmobjects`
 

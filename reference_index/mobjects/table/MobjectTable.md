@@ -1,4 +1,4 @@
-# 对象表[#](#mobjecttable "此标题的固定链接")
+# 对象表
 
 合格名称：`manim.mobject.table.MobjectTable`
 

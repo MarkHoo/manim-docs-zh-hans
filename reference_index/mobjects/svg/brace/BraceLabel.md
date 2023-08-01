@@ -1,4 +1,4 @@
-# 大括号[#](#bracelabel "此标题的固定链接")
+# 大括号
 
 合格名称：`manim.mobject.svg.brace.BraceLabel`
 

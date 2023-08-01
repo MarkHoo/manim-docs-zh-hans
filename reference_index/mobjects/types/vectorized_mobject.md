@@ -1,4 +1,4 @@
-# 矢量化对象[#](#module-manim.mobject.types.vectorized_mobject "此标题的固定链接")
+# 矢量化对象
 
 使用矢量图形的 Mobjects。
 

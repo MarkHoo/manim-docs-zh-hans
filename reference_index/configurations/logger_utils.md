@@ -1,4 +1,4 @@
-# logger_utils [#](#module-manim._config.logger_utils "此标题的固定链接")
+# logger_utils
 
 创建和设置记录器的实用程序。
 
@@ -6,15 +6,16 @@
 
 两者`logger`都`console`使用该`rich`库来生成富文本格式。
 
-课程
+Classes
 
-[`JSONFormatter`](manim._config.logger_utils.JSONFormatter.html#manim._config.logger_utils.JSONFormatter "manim._config.logger_utils.JSONFormatter")
+|||
+|-|-|
+[`JSONFormatter`]()|以自定义 JSON 格式输出日志的格式化程序。
 
-以自定义 JSON 格式输出日志的格式化程序。
 
-功能
+Functions
 
-make*logger（*解析器*，*详细程度\_）[\[来源\]](../_modules/manim/_config/logger_utils.html#make_logger)[#](#manim._config.logger_utils.make_logger "此定义的固定链接")
+make*logger（*解析器*，\*详细程度\_）
 
 制作 manim 记录器和控制台。
 
@@ -23,23 +24,23 @@ make*logger（*解析器*，*详细程度\_）[\[来源\]](../_modules/manim/_co
 - **parser** ( _configparser.ConfigParser_ ) – 包含正在使用的任何 .cfg 文件的解析器。
 - **verbosity** ( _str_ ) – 记录器的详细级别。
 
-退货
+返回
 
-manim 记录器和控制台。第一个控制台输出到 stdout，第二个控制台输出到 stderr。全部使用返回的主题 [`parse_theme()`](#manim._config.logger_utils.parse_theme "manim._config.logger_utils.parse_theme")。
+manim 记录器和控制台。第一个控制台输出到 stdout，第二个控制台输出到 stderr。全部使用返回的主题 [`parse_theme()`]()。
 
 返回类型
 
 `logging.Logger`, `rich.Console`,`rich.Console`
 
-也可以看看
+> 也可以看看
 
-[`make_config_parser()`](manim._config.utils.html#manim._config.utils.make_config_parser "manim._config.utils.make_config_parser"),[`parse_theme()`](#manim._config.logger_utils.parse_theme "manim._config.logger_utils.parse_theme")
+> [`make_config_parser()`](),[`parse_theme()`]()
 
 笔记
 
 假定`parser`仅包含与在顶层配置记录器相关的选项。
 
-parse*theme（*解析器\_）[\[来源\]](../_modules/manim/_config/logger_utils.html#parse_theme)[#](#manim._config.logger_utils.parse_theme "此定义的固定链接")
+parse*theme（*解析器\_）
 
 配置丰富的记录器和控制台输出样式。
 
@@ -47,7 +48,7 @@ parse*theme（*解析器\_）[\[来源\]](../_modules/manim/_config/logger_utils
 
 **解析器**( _ConfigParser_ ) – 包含正在使用的任何 .cfg 文件的解析器。
 
-退货
+返回
 
 manim 记录器使用的丰富主题。
 
@@ -55,11 +56,11 @@ manim 记录器使用的丰富主题。
 
 `rich.Theme`
 
-也可以看看
+> 也可以看看
 
-[`make_logger()`](#manim._config.logger_utils.make_logger "manim._config.logger_utils.make_logger")
+> [`make_logger()`]()
 
-set*file_logger (*场景名称*,*模块名称*,*日志目录\_)[\[来源\]](../_modules/manim/_config/logger_utils.html#set_file_logger)[#](#manim._config.logger_utils.set_file_logger "此定义的固定链接")
+set*file_logger (*场景名称*,*模块名称*,\*日志目录\_)
 
 将文件处理程序添加到 manim 记录器。
 

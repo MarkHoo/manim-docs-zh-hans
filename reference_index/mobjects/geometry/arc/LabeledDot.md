@@ -1,4 +1,4 @@
-# 标记点[#](#labeleddot "此标题的固定链接")
+# 标记点
 
 合格名称：`manim.mobject.geometry.arc.LabeledDot`
 

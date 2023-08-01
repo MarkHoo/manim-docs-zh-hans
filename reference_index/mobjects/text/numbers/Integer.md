@@ -1,4 +1,4 @@
-# 整数[#](#integer "此标题的固定链接")
+# 整数
 
 合格名称：`manim.mobject.text.numbers.Integer`
 

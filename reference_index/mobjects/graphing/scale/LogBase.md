@@ -1,4 +1,4 @@
-# 日志库[#](#logbase "此标题的固定链接")
+# 日志库
 
 合格名称：`manim.mobject.graphing.scale.LogBase`
 

@@ -1,4 +1,4 @@
-# 常数[#](#module-manim.constants "此标题的固定链接")
+# 常数
 
 常数定义。
 
@@ -62,10 +62,10 @@
 
 课程
 
-[`LineJointType`](manim.constants.LineJointType.html#manim.constants.LineJointType "manim.constants.LineJointType")
+[`LineJointType`]()
 
 可用线接头类型的集合。
 
-[`RendererType`](manim.constants.RendererType.html#manim.constants.RendererType "manim.constants.RendererType")
+[`RendererType`]()
 
 可分配给该属性的所有渲染器类型的枚举`config.renderer`。

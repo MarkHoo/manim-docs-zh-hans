@@ -1,4 +1,4 @@
-# 小数[#](#decimalnumber "此标题的固定链接")
+# 小数
 
 合格名称：`manim.mobject.text.numbers.DecimalNumber`
 

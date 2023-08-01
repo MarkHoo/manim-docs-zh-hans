@@ -1,4 +1,4 @@
-# tex_file_writing [#](#module-manim.utils.tex_file_writing "此标题的固定链接")
+# tex_file_writing 
 
 用于编写、编译和转换`.tex`文件的接口。
 
@@ -8,7 +8,7 @@
 
 功能
 
-编译*tex ( \_tex_file* , _tex_compiler_ ,_输出格式_)[\[来源\]](../_modules/manim/utils/tex_file_writing.html#compile_tex)[#](#manim.utils.tex_file_writing.compile_tex "此定义的固定链接")
+编译*tex ( \_tex_file* , _tex_compiler_ ,_输出格式_)
 
 将 tex_file 编译为 .dvi 或 .xdv 或 .pdf
 
@@ -26,7 +26,7 @@
 
 `Path`
 
-Convert*to_svg ( \_dvi_file* ,_扩展名_,_页= 1_ )[\[来源\]](../_modules/manim/utils/tex_file_writing.html#convert_to_svg)[#](#manim.utils.tex_file_writing.convert_to_svg "此定义的固定链接")
+Convert*to_svg ( \_dvi_file* ,_扩展名_,_页= 1_ )
 
 使用 dvisvgm 将 .dvi、.xdv 或 .pdf 文件转换为 svg。
 
@@ -44,7 +44,7 @@ Convert*to_svg ( \_dvi_file* ,_扩展名_,_页= 1_ )[\[来源\]](../_modules/man
 
 `Path`
 
-generate*tex_file（*表达式*，*环境=无*， \_tex_template =无*）[\[来源\]](../_modules/manim/utils/tex_file_writing.html#generate_tex_file)[#](#manim.utils.tex_file_writing.generate_tex_file "此定义的固定链接")
+generate*tex_file（*表达式*，*环境=无*， \_tex_template =无*）
 
 接受一个 tex 表达式（和一个可选的 tex 环境），并返回一个完整的 tex 文件以供编译。
 
@@ -52,7 +52,7 @@ generate*tex_file（*表达式*，*环境=无*， \_tex_template =无*）[\[来�
 
 - **expression** ( _str_ ) – 包含要渲染的 TeX 表达式的字符串，例如`\sqrt{2}`or`foo`
 - **环境**( _str_ _|_ _None_ ) – 包含应在其中排版表达式的环境的字符串，例如`align*`
-- **tex_template** ( [_TexTemplate_](manim.utils.tex.TexTemplate.html#manim.utils.tex.TexTemplate "manim.utils.tex.TexTemplate") _|_ _None_ ) – 用于排版的模板类。如果未设置，则使用通过 config\[“tex_template”\]设置的默认模板
+- **tex_template** ( [_TexTemplate_]() _|_ _None_ ) – 用于排版的模板类。如果未设置，则使用通过 config\[“tex_template”\]设置的默认模板
 
 退货
 
@@ -62,11 +62,11 @@ generate*tex_file（*表达式*，*环境=无*， \_tex_template =无*）[\[来�
 
 `Path`
 
-Insight*inputenc_error（*匹配\_）[\[来源\]](../_modules/manim/utils/tex_file_writing.html#insight_inputenc_error)[#](#manim.utils.tex_file_writing.insight_inputenc_error "此定义的固定链接")
+Insight*inputenc_error（*匹配\_）
 
-Insight*package_not_found_error（*匹配\_）[\[来源\]](../_modules/manim/utils/tex_file_writing.html#insight_package_not_found_error)[#](#manim.utils.tex_file_writing.insight_package_not_found_error "此定义的固定链接")
+Insight*package_not_found_error（*匹配\_）
 
-print*all_tex*errors ( \_log_file* , \_tex_compiler* , _tex_file_ )[\[来源\]](../_modules/manim/utils/tex_file_writing.html#print_all_tex_errors)[#](#manim.utils.tex_file_writing.print_all_tex_errors "此定义的固定链接")
+print*all_tex*errors ( \_log_file* , \_tex_compiler* , _tex_file_ )
 
 参数
 
@@ -78,9 +78,9 @@ print*all_tex*errors ( \_log_file* , \_tex_compiler* , _tex_file_ )[\[来源\]](
 
 没有任何
 
-print*tex_error ( \_tex_compilation_log* , _error_start_index_ , _tex_source_ )[\[来源\]](../_modules/manim/utils/tex_file_writing.html#print_tex_error)[#](#manim.utils.tex_file_writing.print_tex_error "此定义的固定链接")
+print*tex_error ( \_tex_compilation_log* , _error_start_index_ , _tex_source_ )
 
-tex*compilation_command（\_tex_compiler*， _output_format_， _tex_file_， _tex_dir_）[\[来源\]](../_modules/manim/utils/tex_file_writing.html#tex_compilation_command)[#](#manim.utils.tex_file_writing.tex_compilation_command "此定义的固定链接")
+tex*compilation_command（\_tex_compiler*， _output_format_， _tex_file_， _tex_dir_）
 
 使用所有必要的 cli 标志准备 tex 编译命令
 
@@ -99,9 +99,9 @@ tex*compilation_command（\_tex_compiler*， _output_format_， _tex_file_， _t
 
 `str`
 
-tex*hash（*表达式\_）[\[来源\]](../_modules/manim/utils/tex_file_writing.html#tex_hash)[#](#manim.utils.tex_file_writing.tex_hash "此定义的固定链接")
+tex*hash（*表达式\_）
 
-tex_to_svg*file（*表达式*，*环境=无*， \_tex_template =无*）[\[来源\]](../_modules/manim/utils/tex_file_writing.html#tex_to_svg_file)[#](#manim.utils.tex_file_writing.tex_to_svg_file "此定义的固定链接")
+tex_to_svg*file（*表达式*，*环境=无*， \_tex_template =无*）
 
 获取 tex 表达式并返回编译后的 tex 的 svg 版本
 
@@ -109,7 +109,7 @@ tex_to_svg*file（*表达式*，*环境=无*， \_tex_template =无*）[\[来源
 
 - **expression** ( _str_ ) – 包含要渲染的 TeX 表达式的字符串，例如`\sqrt{2}`or`foo`
 - **环境**( _str_ _|_ _None_ ) – 包含应在其中排版表达式的环境的字符串，例如`align*`
-- **tex_template** ( [_TexTemplate_](manim.utils.tex.TexTemplate.html#manim.utils.tex.TexTemplate "manim.utils.tex.TexTemplate") _|_ _None_ ) – 用于排版的模板类。如果未设置，则使用通过 config\[“tex_template”\]设置的默认模板
+- **tex_template** ( [_TexTemplate_]() _|_ _None_ ) – 用于排版的模板类。如果未设置，则使用通过 config\[“tex_template”\]设置的默认模板
 
 退货
 

@@ -1,10 +1,12 @@
-# 绘制边框然后填充[#](#drawborderthenfill "此标题的固定链接")
+# 绘制边框然后填充
 
 合格名称：`manim.animation.creation.DrawBorderThenFill`
 
-_类_ DrawBorderThenFill ( _mobject = None_ , _\* args_ , _use_override = True_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/animation/creation.html#DrawBorderThenFill)[#](#manim.animation.creation.DrawBorderThenFill "此定义的固定链接")
+```py
+class DrawBorderThenFill(mobject=None, *args, use_override=True, **kwargs)
+```
 
-基地：[`Animation`](manim.animation.animation.Animation.html#manim.animation.animation.Animation "manim.animation.animation.Animation")
+Bases: Animation
 
 先绘制边框，然后显示填充。
 
@@ -12,31 +14,27 @@ _类_ DrawBorderThenFill ( _mobject = None_ , _\* args_ , _use_override = True_ 
 
 示例：ShowDrawBorderThenFill [¶](#showdrawborderthenfill)
 
-from manim import \*
+```py
+from manim import *
 
 class ShowDrawBorderThenFill(Scene):
-def construct(self):
-self.play(DrawBorderThenFill(Square(fill_opacity=1, fill_color=ORANGE)))
-
-Copy to clipboard
+    def construct(self):
+        self.play(DrawBorderThenFill(Square(fill_opacity=1, fill_color=ORANGE)))
+```
 
 方法
 
-[`begin`](#manim.animation.creation.DrawBorderThenFill.begin "manim.animation.creation.DrawBorderThenFill.begin")
+|||
+|-|-|
+[`begin`]()|开始动画。
+[`get_all_mobjects`]()|获取动画中涉及的所有 mobject。
+`get_outline`|
+`get_stroke_color`|
+`interpolate_submobject`|
 
-开始动画。
 
-[`get_all_mobjects`](#manim.animation.creation.DrawBorderThenFill.get_all_mobjects "manim.animation.creation.DrawBorderThenFill.get_all_mobjects")
 
-获取动画中涉及的所有 mobject。
-
-`get_outline`
-
-`get_stroke_color`
-
-`interpolate_submobject`
-
-开始( )[\[来源\]](../_modules/manim/animation/creation.html#DrawBorderThenFill.begin)[#](#manim.animation.creation.DrawBorderThenFill.begin "此定义的固定链接")
+开始( )
 
 开始动画。
 

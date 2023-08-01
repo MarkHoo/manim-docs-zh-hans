@@ -1,4 +1,4 @@
-# 行[#](#line "此标题的固定链接")
+# 行
 
 合格名称：`manim.mobject.geometry.line.Line`
 

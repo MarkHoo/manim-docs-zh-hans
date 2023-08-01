@@ -1,18 +1,20 @@
-# UpdateFromAlphaFunc [#](#updatefromalphafunc "此标题的固定链接")
+# UpdateFromAlphaFunc
 
 合格名称：`manim.animation.updaters.update.UpdateFromAlphaFunc`
 
-_类_ UpdateFromAlphaFunc ( _mobject = None_ , _\* args_ , _use_override = True_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/animation/updaters/update.html#UpdateFromAlphaFunc)[#](#manim.animation.updaters.update.UpdateFromAlphaFunc "此定义的固定链接")
+```py
+class UpdateFromAlphaFunc(mobject=None, *args, use_override=True, **kwargs)
+```
 
-基地：[`UpdateFromFunc`](manim.animation.updaters.update.UpdateFromFunc.html#manim.animation.updaters.update.UpdateFromFunc "manim.animation.updaters.update.UpdateFromFunc")
+Bases: UpdateFromFunc
 
 方法
 
-[`interpolate_mobject`](#manim.animation.updaters.update.UpdateFromAlphaFunc.interpolate_mobject "manim.animation.updaters.update.UpdateFromAlphaFunc.interpolate_mobject")
+[`interpolate_mobject`]()alpha
 
 根据 alpha 值对 mobject 进行插值`Animation`。
 
-interpolate*mobject (*阿尔法\_)[\[来源\]](../_modules/manim/animation/updaters/update.html#UpdateFromAlphaFunc.interpolate_mobject)[#](#manim.animation.updaters.update.UpdateFromAlphaFunc.interpolate_mobject "此定义的固定链接")
+interpolate*mobject (*阿尔法\_)
 
 根据 alpha 值对 mobject 进行插值`Animation`。
 

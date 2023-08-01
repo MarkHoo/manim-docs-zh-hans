@@ -1,4 +1,4 @@
-# 环带[#](#annulus "此标题的固定链接")
+# 环带
 
 合格名称：`manim.mobject.geometry.arc.Annulus`
 

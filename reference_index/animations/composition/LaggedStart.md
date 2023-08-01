@@ -1,10 +1,11 @@
-# 滞后开始[#](#laggedstart "此标题的固定链接")
+# 滞后开始
 
 合格名称：`manim.animation.composition.LaggedStart`
 
-_类_ LaggedStart ( _mobject = None_ , _\* args_ , _use_override = True_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/animation/composition.html#LaggedStart)[#](#manim.animation.composition.LaggedStart "此定义的固定链接")
-
-基地：[`AnimationGroup`](manim.animation.composition.AnimationGroup.html#manim.animation.composition.AnimationGroup "manim.animation.composition.AnimationGroup")
+```py
+class LaggedStart(mobject=None, *args, use_override=True, **kwargs)
+```
+Bases: AnimationGroup
 
 [`Animation`](manim.animation.animation.Animation.html#manim.animation.animation.Animation "manim.animation.animation.Animation")根据 调整一系列的时序`lag_ratio`。
 
@@ -19,13 +20,14 @@ _类_ LaggedStart ( _mobject = None_ , _\* args_ , _use_override = True_ , _\*\*
 
 例子
 
-示例：LaggedStartExample [¶](#laggedstartexample)
+示例：LaggedStartExample 
 
-from manim import \*
+```py
+from manim import *
 
 class LaggedStartExample(Scene):
-def construct(self):
-title = Text("lag_ratio = 0.25").to_edge(UP)
+    def construct(self):
+        title = Text("lag_ratio = 0.25").to_edge(UP)
 
         dot1 = Dot(point=LEFT * 2 + UP, radius=0.16)
         dot2 = Dot(point=LEFT * 2, radius=0.16)
@@ -45,7 +47,6 @@ title = Text("lag_ratio = 0.25").to_edge(UP)
             lag_ratio=0.25,
             run_time=4
         ))
-
-Copy to clipboard
+```
 
 方法

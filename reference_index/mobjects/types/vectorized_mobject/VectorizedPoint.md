@@ -1,4 +1,4 @@
-# 矢量化点[#](#vectorizedpoint "此标题的固定链接")
+# 矢量化点
 
 合格名称：`manim.mobject.types.vectorized\_mobject.VectorizedPoint`
 

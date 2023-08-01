@@ -1,4 +1,4 @@
-# 弯头[#](#elbow "此标题的固定链接")
+# 弯头
 
 合格名称：`manim.mobject.geometry.line.Elbow`
 

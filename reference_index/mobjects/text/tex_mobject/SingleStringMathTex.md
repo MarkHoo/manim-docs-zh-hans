@@ -1,4 +1,4 @@
-# SingleStringMathTex [#](#singlestringmathtex "此标题的固定链接")
+# SingleStringMathTex 
 
 合格名称：`manim.mobject.text.tex\_mobject.SingleStringMathTex`
 

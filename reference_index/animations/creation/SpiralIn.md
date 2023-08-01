@@ -1,10 +1,12 @@
-# 螺旋[#](#spiralin "此标题的固定链接")
+# 螺旋
 
 合格名称：`manim.animation.creation.SpiralIn`
 
-_类_ SpiralIn ( _mobject = None_ , _\* args_ , _use_override = True_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/animation/creation.html#SpiralIn)[#](#manim.animation.creation.SpiralIn "此定义的固定链接")
+```py
+class SpiralIn(mobject=None, *args, use_override=True, **kwargs)
+```
 
-基地：[`Animation`](manim.animation.animation.Animation.html#manim.animation.animation.Animation "manim.animation.animation.Animation")
+Bases: Animation
 
 创建具有沿螺旋轨迹飞行的子 Mobject 的 Mobject。
 
@@ -18,24 +20,26 @@ _类_ SpiralIn ( _mobject = None_ , _\* args_ , _use_override = True_ , _\*\* kw
 
 示例：SpiralInExample [¶](#spiralinexample)
 
-from manim import \*
+```py
+from manim import *
 
 class SpiralInExample(Scene):
-def construct(self):
-pi = MathTex(r"\\pi").scale(7)
-pi.shift(2.25 _ LEFT + 1.5 _ UP)
-circle = Circle(color=GREEN_C, fill_opacity=1).shift(LEFT)
-square = Square(color=BLUE_D, fill_opacity=1).shift(UP)
-shapes = VGroup(pi, circle, square)
-self.play(SpiralIn(shapes))
+    def construct(self):
+        pi = MathTex(r"\pi").scale(7)
+        pi.shift(2.25 * LEFT + 1.5 * UP)
+        circle = Circle(color=GREEN_C, fill_opacity=1).shift(LEFT)
+        square = Square(color=BLUE_D, fill_opacity=1).shift(UP)
+        shapes = VGroup(pi, circle, square)
+        self.play(SpiralIn(shapes))
+```
 
-Copy to clipboard
 
 方法
 
-[`interpolate_mobject`](#manim.animation.creation.SpiralIn.interpolate_mobject "manim.animation.creation.SpiralIn.interpolate_mobject")
+|||
+|-|-|
+[`interpolate_mobject`]()|根据 alpha 值对 mobject 进行插值`Animation`。
 
-根据 alpha 值对 mobject 进行插值`Animation`。
 
 interpolate*mobject (*阿尔法\_)[\[来源\]](../_modules/manim/animation/creation.html#SpiralIn.interpolate_mobject)[#](#manim.animation.creation.SpiralIn.interpolate_mobject "此定义的固定链接")
 

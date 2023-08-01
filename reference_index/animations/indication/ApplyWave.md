@@ -1,10 +1,12 @@
-# 应用波[#](#applywave "此标题的固定链接")
+# 应用波
 
 合格名称：`manim.animation.indication.ApplyWave`
 
-_类_ ApplyWave ( _mobject = None_ , _\* args_ , _use_override = True_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/animation/indication.html#ApplyWave)[#](#manim.animation.indication.ApplyWave "此定义的固定链接")
+```py
+class ApplyWave(mobject=None, *args, use_override=True, **kwargs)
+```
 
-基地：[`Homotopy`](manim.animation.movement.Homotopy.html#manim.animation.movement.Homotopy "动画.运动.同伦")
+Bases: Homotopy
 
 发送一个波穿过 Mobject，使其暂时扭曲。
 
@@ -20,26 +22,26 @@ _类_ ApplyWave ( _mobject = None_ , _\* args_ , _use_override = True_ , _\*\* k
 
 例子
 
-示例：应用 Waves [¶](#applyingwaves)
+示例：应用 Waves 
 
-from manim import \*
+```py
+from manim import *
 
 class ApplyingWaves(Scene):
-def construct(self):
-tex = Tex("WaveWaveWaveWaveWave").scale(2)
-self.play(ApplyWave(tex))
-self.play(ApplyWave(
-tex,
-direction=RIGHT,
-time_width=0.5,
-amplitude=0.3
-))
-self.play(ApplyWave(
-tex,
-rate_func=linear,
-ripples=4
-))
-
-Copy to clipboard
+    def construct(self):
+        tex = Tex("WaveWaveWaveWaveWave").scale(2)
+        self.play(ApplyWave(tex))
+        self.play(ApplyWave(
+            tex,
+            direction=RIGHT,
+            time_width=0.5,
+            amplitude=0.3
+        ))
+        self.play(ApplyWave(
+            tex,
+            rate_func=linear,
+            ripples=4
+        ))
+```
 
 方法

@@ -1,4 +1,4 @@
-# 对象[#](#module-manim.mobject.mobject "此标题的固定链接")
+# 对象
 
 可显示对象的基类。
 

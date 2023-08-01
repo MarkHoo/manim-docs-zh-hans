@@ -1,8 +1,8 @@
-# Manim魔法[#](#manimmagic "此标题的固定链接")
+# Manim魔法
 
 合格名称：`manim.utils.ipython\_magic.ManimMagic`
 
-_类_ ManimMagic ( _\*\* kwargs_ )[\[来源\]](../_modules/manim/utils/ipython_magic.html#ManimMagic)[#](#manim.utils.ipython_magic.ManimMagic "此定义的固定链接")
+_类_ ManimMagic ( _\*\* kwargs_ )
 
 基地：`Magics`
 
@@ -23,12 +23,11 @@ _任何_
 
 Configurable 的子类必须在执行任何其他操作 _之前_`__init__()`调用的方法 并使用：`Configurable` `super()`
 
-class MyConfigurable(Configurable):
-def \_\_init\_\_(self, config=None):
-super(MyConfigurable, self).\_\_init\_\_(config=config)
-\# Then any other code you need to finish initialization.
 
-Copy to clipboard
+```py
+
+```
+
 
 这可确保实例配置正确。
 
@@ -36,7 +35,7 @@ Copy to clipboard
 
 `add_additional_args`
 
-[`manim`](#manim.utils.ipython_magic.ManimMagic.manim "manim.utils.ipython_magic.ManimMagic.manim")
+[`manim`]()
 
 渲染 IPython 单元中包含的 Manim 场景。
 
@@ -62,7 +61,7 @@ Copy to clipboard
 
 `shell`
 
-manim (_行_,_单元=无_, _local_ns =无_)[\[来源\]](../_modules/manim/utils/ipython_magic.html#ManimMagic.manim)[#](#manim.utils.ipython_magic.ManimMagic.manim "此定义的固定链接")
+manim (_行_,_单元=无_, _local_ns =无_)
 
 渲染 IPython 单元中包含的 Manim 场景。起到线条或细胞魔法的作用。
 
@@ -72,23 +71,21 @@ manim (_行_,_单元=无_, _local_ns =无_)[\[来源\]](../_modules/manim/utils/
 
 使用 JupyterLab 时不会出现此问题。
 
-有关 JupyterLab 和 Jupyter Notebook 的更多信息，请参阅[https://jupyter.org/ 。](https://jupyter.org/)
+有关 JupyterLab 和 Jupyter Notebook 的更多信息，请参阅[https://jupyter.org/](https://jupyter.org/)。
 
 线路模式下的用法：
 
-%manim \[CLI options\] MyAwesomeScene
+```py
 
-Copy to clipboard
+```
+
 
 细胞模式下的使用：
 
-%%manim \[CLI options\] MyAwesomeScene
+```py
 
-class MyAweseomeScene(Scene):
-def construct(self):
-...
+```
 
-Copy to clipboard
 
 运行和以获得可能的命令行界面选项。` %manim --help``%manim render --help `
 
@@ -102,19 +99,11 @@ Copy to clipboard
 
 首先确保将, 或 甚至 放入单元格中并对其进行评估。然后，Manim 的典型 Jupyter 笔记本单元可能如下所示：` import manim``from manim import * `
 
-%%manim -v WARNING --disable_caching -qm BannerExample
 
-config.media_width = "75%"
-config.media_embed = True
+```py
 
-class BannerExample(Scene):
-def construct(self):
-self.camera.background_color = "#ece6e2"
-banner_large = ManimBanner(dark_theme=False).scale(0.7)
-self.play(banner_large.create())
-self.play(banner_large.expand())
+```
 
-Copy to clipboard
 
 计算此单元格将渲染并显示`BannerExample`单元格主体中定义的场景。
 

@@ -1,4 +1,4 @@
-# P 组[#](#pgroup "此标题的固定链接")
+# P 组
 
 合格名称：`manim.mobject.types.point\_cloud\_mobject.PGroup`
 

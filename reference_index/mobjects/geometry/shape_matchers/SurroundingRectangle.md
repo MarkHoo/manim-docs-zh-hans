@@ -1,4 +1,4 @@
-# 周围矩形[#](#surroundingrectangle "此标题的固定链接")
+# 周围矩形
 
 合格名称：`manim.mobject.geometry.shape\_matchers.SurroundingRectangle`
 

@@ -1,4 +1,4 @@
-# tex_mobject [#](#module-manim.mobject.text.tex_mobject "此标题的固定链接")
+# tex_mobject 
 
 Mobjects 表示使用 LaTeX 渲染的文本。
 

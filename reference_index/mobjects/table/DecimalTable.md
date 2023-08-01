@@ -1,4 +1,4 @@
-# 小数表[#](#decimaltable "此标题的固定链接")
+# 小数表
 
 合格名称：`manim.mobject.table.DecimalTable`
 

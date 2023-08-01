@@ -1,4 +1,4 @@
-# 参数函数[#](#parametricfunction "此标题的固定链接")
+# 参数函数
 
 合格名称：`manim.mobject.graphing.functions.ParametricFunction`
 

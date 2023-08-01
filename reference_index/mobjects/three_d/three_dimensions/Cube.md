@@ -1,4 +1,4 @@
-# 立方体[#](#cube "此标题的固定链接")
+# 立方体
 
 合格名称：`manim.mobject.three\_d.three\_dimensions.Cube`
 

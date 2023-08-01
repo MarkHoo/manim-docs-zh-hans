@@ -1,4 +1,4 @@
-# 标记文本[#](#markuptext "此标题的固定链接")
+# 标记文本
 
 合格名称：`manim.mobject.text.text\_mobject.MarkupText`
 

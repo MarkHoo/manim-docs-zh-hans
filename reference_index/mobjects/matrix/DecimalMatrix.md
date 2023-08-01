@@ -1,4 +1,4 @@
-# 十进制矩阵[#](#decimalmatrix "此标题的固定链接")
+# 十进制矩阵
 
 合格名称：`manim.mobject.matrix.DecimalMatrix`
 

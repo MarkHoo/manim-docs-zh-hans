@@ -1,4 +1,4 @@
-# 数字[#](#module-manim.mobject.text.numbers "此标题的固定链接")
+# 数字
 
 Mobject 代表数字。
 

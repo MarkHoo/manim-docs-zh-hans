@@ -1,4 +1,4 @@
-# 多面体[#](#polyhedron "此标题的固定链接")
+# 多面体
 
 合格名称：`manim.mobject.three\_d.polyhedra.Polyhedron`
 

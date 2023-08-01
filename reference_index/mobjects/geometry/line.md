@@ -1,4 +1,4 @@
-# 行[#](#module-manim.mobject.geometry.line "此标题的固定链接")
+# 行
 
 Mobjects 是线条或其变体。
 

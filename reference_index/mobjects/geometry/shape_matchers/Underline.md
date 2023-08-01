@@ -1,4 +1,4 @@
-# 下划线[#](#underline "此标题的固定链接")
+# 下划线
 
 合格名称：`manim.mobject.geometry.shape\_matchers.Underline`
 

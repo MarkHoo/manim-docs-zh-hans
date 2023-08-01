@@ -1,128 +1,131 @@
-# 场景[#](#scene "此标题的固定链接")
+# 场景
 
 合格名称：`manim.scene.scene.Scene`
 
-_场景_ 类（_renderer=None_、 _camera_class=<class 'manim.camera.camera.Camera'>_、 _always_update_mobjects=False_、 _random_seed=None_、 _skip_animations=False_）[\[来源\]](../_modules/manim/scene/scene.html#Scene)[#](#manim.scene.scene.Scene "此定义的固定链接")
+```py
+class Scene(renderer=None, camera_class=<class 'manim.camera.camera.Camera'>, always_update_mobjects=False, random_seed=None, skip_animations=False)
+```
 
-基地：`object`
+Bases: object
 
 场景是动画的画布。
 
-主要作用[`Scene`](#manim.scene.scene.Scene "手动场景.场景.场景")是为用户提供管理对象和动画的工具。一般来说，manim 脚本由一个派生类组成，该类的[`Scene`](#manim.scene.scene.Scene "手动场景.场景.场景")方法[`Scene.construct()`](#manim.scene.scene.Scene.construct "manim.scene.scene.Scene.construct")被用户的代码覆盖。
+主要作用[`Scene`]()是为用户提供管理对象和动画的工具。一般来说，manim 脚本由一个派生类组成，该类的[`Scene`]()方法[`Scene.construct()`]()被用户的代码覆盖。
 
-Mobjects 通过调用显示在屏幕上[`Scene.add()`](#manim.scene.scene.Scene.add "manim.场景.场景.场景.add")，并通过调用从屏幕上删除[`Scene.remove()`](#manim.scene.scene.Scene.remove "manim.scene.scene.Scene.remove")。当前屏幕上的所有 mobject 都保存在`Scene.mobjects`. 动画是通过调用来播放的[`Scene.play()`](#manim.scene.scene.Scene.play "manim.场景.场景.场景.play")。
+Mobjects 通过调用显示在屏幕上[`Scene.add()`]()，并通过调用从屏幕上删除[`Scene.remove()`]()。当前屏幕上的所有 mobject 都保存在`Scene.mobjects`. 动画是通过调用来播放的[`Scene.play()`]()。
 
-A[`Scene`](#manim.scene.scene.Scene "手动场景.场景.场景")通过调用在内部呈现[`Scene.render()`](#manim.scene.scene.Scene.render "manim.场景.场景.场景.渲染")。这依次按顺序调用[`Scene.setup()`](#manim.scene.scene.Scene.setup "manim.scene.scene.Scene.setup")、[`Scene.construct()`](#manim.scene.scene.Scene.construct "manim.scene.scene.Scene.construct")、 和 [`Scene.tear_down()`](#manim.scene.scene.Scene.tear_down "manim.scene.scene.Scene.tear_down")。
+A[`Scene`]()通过调用在内部呈现[`Scene.render()`]()。这依次按顺序调用[`Scene.setup()`]()、[`Scene.construct()`]()、 和 [`Scene.tear_down()`]()。
 
-不建议`__init__`在用户场景中重写该方法。对于应该在渲染场景之前运行的代码，请改用[`Scene.setup()`](#manim.scene.scene.Scene.setup "manim.scene.scene.Scene.setup")。
+不建议`__init__`在用户场景中重写该方法。对于应该在渲染场景之前运行的代码，请改用[`Scene.setup()`]()。
 
 例子
 
-用您的代码覆盖该[`Scene.construct()`](#manim.scene.scene.Scene.construct "manim.scene.scene.Scene.construct")方法。
+用您的代码覆盖该[`Scene.construct()`]()方法。
 
+```py
 class MyScene(Scene):
-def construct(self):
-self.play(Write(Text("Hello World!")))
-
-Copy to clipboard
+    def construct(self):
+        self.play(Write(Text("Hello World!")))
+```
 
 方法
 
-[`add`](#manim.scene.scene.Scene.add "manim.场景.场景.场景.add")
+
+[`add`]()
 
 Mobject 将按照添加顺序从背景到前景显示。
 
-[`add_foreground_mobject`](#manim.scene.scene.Scene.add_foreground_mobject "manim.scene.scene.Scene.add_foreground_mobject")
+[`add_foreground_mobject`]()
 
 将单个 mobject 添加到前台，并在内部添加到列表 foreground_mobjects 和 mobjects。
 
-[`add_foreground_mobjects`](#manim.scene.scene.Scene.add_foreground_mobjects "manim.scene.scene.Scene.add_foreground_mobjects")
+[`add_foreground_mobjects`]()
 
 将 mobject 添加到前台，并在内部添加到列表 foreground_mobjects 和 mobjects。
 
 `add_mobjects_from_animations`
 
-[`add_sound`](#manim.scene.scene.Scene.add_sound "manim.scene.scene.Scene.add_sound")
+[`add_sound`]()
 
 该方法用于为动画添加声音。
 
-[`add_subcaption`](#manim.scene.scene.Scene.add_subcaption "manim.scene.scene.Scene.add_subcaption")
+[`add_subcaption`]()
 
 在当前时间戳的相应子字幕文件中添加一个条目。
 
-[`add_updater`](#manim.scene.scene.Scene.add_updater "manim.scene.scene.Scene.add_updater")
+[`add_updater`]()
 
 为场景添加更新功能。
 
-[`begin_animations`](#manim.scene.scene.Scene.begin_animations "manim.scene.scene.Scene.begin_animations")
+[`begin_animations`]()
 
 启动场景的动画。
 
-[`bring_to_back`](#manim.scene.scene.Scene.bring_to_back "manim.scene.scene.Scene.bring_to_back")
+[`bring_to_back`]()
 
 从场景中移除 mobject 并将其添加到场景的后面。
 
-[`bring_to_front`](#manim.scene.scene.Scene.bring_to_front "manim.scene.scene.Scene.bring_to_front")
+[`bring_to_front`]()
 
 将传递的对象再次添加到场景中，将它们推到场景的前面。
 
 `check_interactive_embed_is_valid`
 
-[`clear`](#manim.scene.scene.Scene.clear "manim.scene.scene.Scene.clear")
+[`clear`]()
 
 从场景中移除 self.mobjects 和 self.foreground_mobjects 中存在的所有 mobject。
 
-[`compile_animation_data`](#manim.scene.scene.Scene.compile_animation_data "manim.scene.scene.Scene.compile_animation_data")
+[`compile_animation_data`]()
 
 给定动画列表，编译相应的静态和移动对象，并收集动画持续时间。
 
-[`compile_animations`](#manim.scene.scene.Scene.compile_animations "manim.scene.scene.Scene.compile_animations")
+[`compile_animations`]()
 
 从任何 \_AnimationBuilders 创建 \_MethodAnimations 并使用传递给 play() 的 kwargs 更新动画 kwargs。
 
-[`construct`](#manim.scene.scene.Scene.construct "manim.scene.scene.Scene.construct")
+[`construct`]()
 
 将内容添加到场景中。
 
 `embed`
 
-[`get_attrs`](#manim.scene.scene.Scene.get_attrs "manim.scene.scene.Scene.get_attrs")
+[`get_attrs`]()
 
 给定属性的标识符/名称，获取场景的属性。
 
-[`get_mobject_family_members`](#manim.scene.scene.Scene.get_mobject_family_members "manim.scene.scene.Scene.get_mobject_family_members")
+[`get_mobject_family_members`]()
 
 返回场景中所有对象的家庭成员列表。
 
 `get_moving_and_static_mobjects`
 
-[`get_moving_mobjects`](#manim.scene.scene.Scene.get_moving_mobjects "manim.scene.scene.Scene.get_moving_mobjects")
+[`get_moving_mobjects`]()
 
 获取传递的动画中的所有移动对象。
 
-[`get_restructured_mobject_list`](#manim.scene.scene.Scene.get_restructured_mobject_list "manim.scene.scene.Scene.get_restructed_mobject_list")
+[`get_restructured_mobject_list`]()
 
 给定一个 mobject 列表和一个要删除的 mobject 列表，这会从 mobject 列表中过滤掉可删除的 mobject。
 
-[`get_run_time`](#manim.scene.scene.Scene.get_run_time "manim.scene.scene.Scene.get_run_time")
+[`get_run_time`]()
 
 获取动画列表的总运行时间。
 
-[`get_time_progression`](#manim.scene.scene.Scene.get_time_progression "manim.scene.scene.Scene.get_time_progression")
+[`get_time_progression`]()
 
 当你制作自己的动画时，你几乎不会使用它。
 
-[`get_top_level_mobjects`](#manim.scene.scene.Scene.get_top_level_mobjects "manim.scene.scene.Scene.get_top_level_mobjects")
+[`get_top_level_mobjects`]()
 
 返回所有不是子对象的对象。
 
 `interact`
 
-[`interactive_embed`](#manim.scene.scene.Scene.interactive_embed "manim.scene.scene.Scene.interactive_embed")
+[`interactive_embed`]()
 
 与 embed() 类似，但允许屏幕交互。
 
-[`is_current_animation_frozen_frame`](#manim.scene.scene.Scene.is_current_animation_frozen_frame "manim.scene.scene.Scene.is_current_animation_frozen_frame")
+[`is_current_animation_frozen_frame`]()
 
 返回当前动画是否产生静态帧（通常是 Wait）。
 
@@ -130,7 +133,7 @@ Mobject 将按照添加顺序从背景到前景显示。
 
 `mouse_scroll_orbit_controls`
 
-[`next_section`](#manim.scene.scene.Scene.next_section "manim.scene.scene.Scene.next_section")
+[`next_section`]()
 
 在这里创建分离；最后一部分完成并创建一个新部分。
 
@@ -146,77 +149,77 @@ Mobject 将按照添加顺序从背景到前景显示。
 
 `on_mouse_scroll`
 
-[`pause`](#manim.scene.scene.Scene.pause "手动.场景.场景.场景.暂停")
+[`pause`]()
 
 暂停场景（即显示冻结的帧）。
 
-[`play`](#manim.scene.scene.Scene.play "manim.场景.场景.场景.play")
+[`play`]()
 
 在此场景中播放动画。
 
-[`play_internal`](#manim.scene.scene.Scene.play_internal "manim.scene.scene.Scene.play_internal")
+[`play_internal`]()
 
 此方法用于准备要渲染的动画、应用动画所需的参数和参数、渲染它们并将它们写入视频文件。
 
-[`remove`](#manim.scene.scene.Scene.remove "manim.scene.scene.Scene.remove")
+[`remove`]()
 
 通过从“mobjects”和“foreground_mobjects”中删除 mobjects，从场景和前景中删除传递的 mobjects 列表中的 mobjects
 
-[`remove_foreground_mobject`](#manim.scene.scene.Scene.remove_foreground_mobject "manim.scene.scene.Scene.remove_foreground_mobject")
+[`remove_foreground_mobject`]()
 
 从前台删除单个 mobject，并在内部从 foreground_mobjects 列表中删除。
 
-[`remove_foreground_mobjects`](#manim.scene.scene.Scene.remove_foreground_mobjects "manim.scene.scene.Scene.remove_foreground_mobjects")
+[`remove_foreground_mobjects`]()
 
 从前台删除 mobject，并在内部从 foreground_mobjects 列表中删除。
 
-[`remove_updater`](#manim.scene.scene.Scene.remove_updater "manim.scene.scene.Scene.remove_updater")
+[`remove_updater`]()
 
 从场景中删除更新功能。
 
-[`render`](#manim.scene.scene.Scene.render "manim.场景.场景.场景.渲染")
+[`render`]()
 
 渲染此场景。
 
-[`replace`](#manim.scene.scene.Scene.replace "manim.场景.场景.场景.替换")
+[`replace`]()
 
 将场景中的一个 mobject 替换为另一个 mobject，保留绘制顺序。
 
-[`restructure_mobjects`](#manim.scene.scene.Scene.restructure_mobjects "manim.scene.scene.Scene.restruction_mobjects")
+[`restructure_mobjects`]()
 
 TL:WR
 
 `set_key_function`
 
-[`setup`](#manim.scene.scene.Scene.setup "manim.scene.scene.Scene.setup")
+[`setup`]()
 
 这意味着由通常子类化的任何场景来实现，并且在调用构造方法之前涉及一些常见的设置。
 
-[`should_update_mobjects`](#manim.scene.scene.Scene.should_update_mobjects "manim.scene.scene.Scene.should_update_mobjects")
+[`should_update_mobjects`]()
 
 如果该场景的 mobject 应该更新，则返回 True。
 
-[`tear_down`](#manim.scene.scene.Scene.tear_down "manim.scene.scene.Scene.tear_down")
+[`tear_down`]()
 
 这意味着由通常子类化的任何场景来实现，并且在场景结束之前具有要调用的一些通用方法。
 
 `update_meshes`
 
-[`update_mobjects`](#manim.scene.scene.Scene.update_mobjects "manim.scene.scene.Scene.update_mobjects")
+[`update_mobjects`]()
 
 开始更新场景中的所有 mobject。
 
-[`update_self`](#manim.scene.scene.Scene.update_self "manim.scene.scene.Scene.update_self")
+[`update_self`]()
 
 运行所有场景更新程序功能。
 
 `update_to_time`
 
-[`wait`](#manim.scene.scene.Scene.wait "manim.scene.scene.Scene.wait")
+[`wait`]()
 
 播放“无操作”动画。
 
-[`wait_until`](#manim.scene.scene.Scene.wait_until "manim.scene.scene.Scene.wait_until")
+[`wait_until`]()
 
 等待直到满足条件，直至达到给定的最大持续时间。
 
@@ -224,13 +227,13 @@ TL:WR
 
 `camera`
 
-添加（_\* mobjects_）[\[来源\]](../_modules/manim/scene/scene.html#Scene.add)[#](#manim.scene.scene.Scene.add "此定义的固定链接")
+添加（_\* mobjects_）
 
 Mobject 将按照添加顺序从背景到前景显示。
 
 参数
 
-**\*mobjects** ( [_Mobject_](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject") ) – 要添加的 Mobjects。
+**\*mobjects** ( [_Mobject_]() ) – 要添加的 Mobjects。
 
 退货
 
@@ -238,15 +241,15 @@ Mobject 将按照添加顺序从背景到前景显示。
 
 返回类型
 
-[场景](#manim.scene.scene.Scene "手动场景.场景.场景")
+[场景]()
 
-add*foreground_mobject ( \_mobject* )[\[来源\]](../_modules/manim/scene/scene.html#Scene.add_foreground_mobject)[#](#manim.scene.scene.Scene.add_foreground_mobject "此定义的固定链接")
+add*foreground_mobject ( \_mobject* )
 
 将单个 mobject 添加到前台，并在内部添加到列表 foreground_mobjects 和 mobjects。
 
 参数
 
-**mobject** ( [_Mobject_](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject") ) – 要添加到前台的 Mobject。
+**mobject** ( [_Mobject_]() ) – 要添加到前台的 Mobject。
 
 退货
 
@@ -254,15 +257,15 @@ add*foreground_mobject ( \_mobject* )[\[来源\]](../_modules/manim/scene/scene.
 
 返回类型
 
-[场景](#manim.scene.scene.Scene "手动场景.场景.场景")
+[场景]()
 
-add*foreground_mobjects ( *\* mobjects\_ )[\[来源\]](../_modules/manim/scene/scene.html#Scene.add_foreground_mobjects)[#](#manim.scene.scene.Scene.add_foreground_mobjects "此定义的固定链接")
+add*foreground_mobjects ( *\\* mobjects\_ )
 
 将 mobject 添加到前台，并在内部添加到列表 foreground_mobjects 和 mobjects。
 
 参数
 
-**\*mobjects** ( [_Mobject_](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject") ) – 要添加到前台的 Mobject。
+**\*mobjects** ( [_Mobject_]() ) – 要添加到前台的 Mobject。
 
 退货
 
@@ -270,9 +273,9 @@ add*foreground_mobjects ( *\* mobjects\_ )[\[来源\]](../_modules/manim/scene/s
 
 返回类型
 
-[场景](#manim.scene.scene.Scene "手动场景.场景.场景")
+[场景]()
 
-add*sound ( \_sound_file* , _time_offset = 0_ ,_增益= None_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/scene/scene.html#Scene.add_sound)[#](#manim.scene.scene.Scene.add_sound "此定义的固定链接")
+add*sound ( \_sound_file* , _time_offset = 0_ ,_增益= None_ , _\*\* kwargs_ )
 
 该方法用于为动画添加声音。
 
@@ -284,29 +287,29 @@ add*sound ( \_sound_file* , _time_offset = 0_ ,_增益= None_ , _\*\* kwargs_ )[
 
 例子
 
-示例：声音示例[¶](#soundexample)
+示例：声音示例
 
-from manim import \*
+```py
+from manim import *
 
 class SoundExample(Scene):
-\# Source of sound under Creative Commons 0 License. https://freesound.org/people/Druminfected/sounds/250551/
-def construct(self):
-dot = Dot().set_color(GREEN)
-self.add_sound("click.wav")
-self.add(dot)
-self.wait()
-self.add_sound("click.wav")
-dot.set_color(BLUE)
-self.wait()
-self.add_sound("click.wav")
-dot.set_color(RED)
-self.wait()
-
-Copy to clipboard
+    # Source of sound under Creative Commons 0 License. https://freesound.org/people/Druminfected/sounds/250551/
+    def construct(self):
+        dot = Dot().set_color(GREEN)
+        self.add_sound("click.wav")
+        self.add(dot)
+        self.wait()
+        self.add_sound("click.wav")
+        dot.set_color(BLUE)
+        self.wait()
+        self.add_sound("click.wav")
+        dot.set_color(RED)
+        self.wait()
+```
 
 [在此处](https://github.com/ManimCommunity/manim/blob/main/docs/source/_static/click.wav)下载上一个示例的资源。
 
-add*subcaption (*内容*,*持续时间= 1* ,*偏移量= 0\_ )[\[来源\]](../_modules/manim/scene/scene.html#Scene.add_subcaption)[#](#manim.scene.scene.Scene.add_subcaption "此定义的固定链接")
+add*subcaption (*内容*,*持续时间= 1* ,\*偏移量= 0\_ )
 
 在当前时间戳的相应子字幕文件中添加一个条目。
 
@@ -326,24 +329,26 @@ add*subcaption (*内容*,*持续时间= 1* ,*偏移量= 0\_ )[\[来源\]](../_mo
 
 此示例说明了向动画添加子标题的两种可能性：
 
-class SubcaptionExample(Scene):
-def construct(self):
-square = Square()
-circle = Circle()
 
-        \# first option: via the add_subcaption method
+```py
+class SubcaptionExample(Scene):
+    def construct(self):
+        square = Square()
+        circle = Circle()
+
+        # first option: via the add_subcaption method
         self.add_subcaption("Hello square!", duration=1)
         self.play(Create(square))
 
-        \# second option: within the call to Scene.play
+        # second option: within the call to Scene.play
         self.play(
             Transform(square, circle),
             subcaption="The square transforms."
         )
+```
 
-Copy to clipboard
 
-添加更新程序（_函数_）[\[来源\]](../_modules/manim/scene/scene.html#Scene.add_updater)[#](#manim.scene.scene.Scene.add_updater "此定义的固定链接")
+添加更新程序（_函数_）
 
 为场景添加更新功能。
 
@@ -365,9 +370,9 @@ TL;DR：使用 mobject 更新程序来更新 mobject。
 
 也可以看看
 
-[`Scene.remove_updater()`](#manim.scene.scene.Scene.remove_updater "manim.scene.scene.Scene.remove_updater"),[`Scene.update_self()`](#manim.scene.scene.Scene.update_self "manim.scene.scene.Scene.update_self")
+[`Scene.remove_updater()`](),[`Scene.update_self()`]()
 
-开始\_动画( )[\[来源\]](../_modules/manim/scene/scene.html#Scene.begin_animations)[#](#manim.scene.scene.Scene.begin_animations "此定义的固定链接")
+开始\_动画( )
 
 启动场景的动画。
 
@@ -375,13 +380,13 @@ TL;DR：使用 mobject 更新程序来更新 mobject。
 
 没有任何
 
-Bring*to_back ( *\* mobjects\_ )[\[来源\]](../_modules/manim/scene/scene.html#Scene.bring_to_back)[#](#manim.scene.scene.Scene.bring_to_back "此定义的固定链接")
+Bring*to_back ( *\\* mobjects\_ )
 
 从场景中移除 mobject 并将其添加到场景的后面。
 
 参数
 
-**\*mobjects** ( [_Mobject_](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject") ) – 要推到场景后面的 mobject。
+**\*mobjects** ( [_Mobject_]() ) – 要推到场景后面的 mobject。
 
 退货
 
@@ -389,15 +394,15 @@ Bring*to_back ( *\* mobjects\_ )[\[来源\]](../_modules/manim/scene/scene.html#
 
 返回类型
 
-[场景](#manim.scene.scene.Scene "手动场景.场景.场景")
+[场景]()
 
-Bring*to_front ( *\* mobjects\_ )[\[来源\]](../_modules/manim/scene/scene.html#Scene.bring_to_front)[#](#manim.scene.scene.Scene.bring_to_front "此定义的固定链接")
+Bring*to_front ( *\\* mobjects\_ )
 
 将传递的对象再次添加到场景中，将它们推到场景的前面。
 
 参数
 
-**\*mobjects** ( [_Mobject_](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject") ) – 带到场景前面的 mobject。
+**\*mobjects** ( [_Mobject_]() ) – 带到场景前面的 mobject。
 
 退货
 
@@ -405,9 +410,9 @@ Bring*to_front ( *\* mobjects\_ )[\[来源\]](../_modules/manim/scene/scene.html
 
 返回类型
 
-[场景](#manim.scene.scene.Scene "手动场景.场景.场景")
+[场景]()
 
-清除( )[\[来源\]](../_modules/manim/scene/scene.html#Scene.clear)[#](#manim.scene.scene.Scene.clear "此定义的固定链接")
+清除( )
 
 从场景中移除 self.mobjects 和 self.foreground_mobjects 中存在的所有 mobject。
 
@@ -417,9 +422,9 @@ Bring*to_front ( *\* mobjects\_ )[\[来源\]](../_modules/manim/scene/scene.html
 
 返回类型
 
-[场景](#manim.scene.scene.Scene "手动场景.场景.场景")
+[场景]()
 
-编译动画数据（_\*动画_， _\*\* play_kwargs_）[\[来源\]](../_modules/manim/scene/scene.html#Scene.compile_animation_data)[#](#manim.scene.scene.Scene.compile_animation_data "此定义的固定链接")
+编译动画数据（_\*动画_， _\*\* play_kwargs_）
 
 给定动画列表，编译相应的静态和移动对象，并收集动画持续时间。
 
@@ -427,7 +432,7 @@ Bring*to_front ( *\* mobjects\_ )[\[来源\]](../_modules/manim/scene/scene.html
 
 参数
 
-- **动画**( [_Animation_](manim.animation.animation.Animation.html#manim.animation.animation.Animation "manim.animation.animation.Animation") ) – 带有 mobject 方法和参数的动画或 mobject
+- **动画**( [_Animation_]() ) – 带有 mobject 方法和参数的动画或 mobject
 - **play_kwargs** – 影响传入内容的命名参数`animations`，例如`run_time`，`lag_ratio`等等。
 
 退货
@@ -438,13 +443,13 @@ Bring*to_front ( *\* mobjects\_ )[\[来源\]](../_modules/manim/scene/scene.html
 
 自我，无
 
-编译动画（_\* args_， _\*\* kwargs_）[\[来源\]](../_modules/manim/scene/scene.html#Scene.compile_animations)[#](#manim.scene.scene.Scene.compile_animations "此定义的固定链接")
+编译动画（_\* args_， _\*\* kwargs_）
 
 从任何 \_AnimationBuilders 创建 \_MethodAnimations 并使用传递给 play() 的 kwargs 更新动画 kwargs。
 
 参数
 
-- **\*args** ( [_Animation_](manim.animation.animation.Animation.html#manim.animation.animation.Animation "manim.animation.animation.Animation") ) – 要播放的动画。
+- **\*args** ( [_Animation_]() ) – 要播放的动画。
 - \***\*kwargs** – 调用 play() 的配置。
 
 退货
@@ -455,31 +460,33 @@ Bring*to_front ( *\* mobjects\_ )[\[来源\]](../_modules/manim/scene/scene.html
 
 元组\[ `Animation`\]
 
-构造( )[\[来源\]](../_modules/manim/scene/scene.html#Scene.construct)[#](#manim.scene.scene.Scene.construct "此定义的固定链接")
+构造( )
 
 将内容添加到场景中。
 
-从内部[`Scene.construct()`](#manim.scene.scene.Scene.construct "manim.scene.scene.Scene.construct")，通过调用在屏幕上显示 mobjects [`Scene.add()`](#manim.scene.scene.Scene.add "manim.场景.场景.场景.add")，并通过调用将它们从屏幕上删除[`Scene.remove()`](#manim.scene.scene.Scene.remove "manim.scene.scene.Scene.remove")。当前屏幕上的所有 mobject 都保存在`Scene.mobjects`. 通过调用 来播放动画[`Scene.play()`](#manim.scene.scene.Scene.play "manim.场景.场景.场景.play")。
+从内部[`Scene.construct()`]()，通过调用在屏幕上显示 mobjects [`Scene.add()`]()，并通过调用将它们从屏幕上删除[`Scene.remove()`]()。当前屏幕上的所有 mobject 都保存在`Scene.mobjects`. 通过调用 来播放动画[`Scene.play()`]()。
 
 笔记
 
-初始化代码应该放在[`Scene.setup()`](#manim.scene.scene.Scene.setup "manim.scene.scene.Scene.setup"). 终止代码应输入[`Scene.tear_down()`](#manim.scene.scene.Scene.tear_down "manim.scene.scene.Scene.tear_down").
+初始化代码应该放在[`Scene.setup()`](). 终止代码应输入[`Scene.tear_down()`]().
 
 例子
 
-典型的 manim 脚本包含一个派生自[`Scene`](#manim.scene.scene.Scene "手动场景.场景.场景")重写`Scene.contruct()`方法的类：
+典型的 manim 脚本包含一个派生自[`Scene`]()重写`Scene.contruct()`方法的类：
 
+
+```py
 class MyScene(Scene):
-def construct(self):
-self.play(Write(Text("Hello World!")))
+    def construct(self):
+        self.play(Write(Text("Hello World!")))
+```
 
-Copy to clipboard
 
 也可以看看
 
-[`Scene.setup()`](#manim.scene.scene.Scene.setup "manim.scene.scene.Scene.setup"), [`Scene.render()`](#manim.scene.scene.Scene.render "manim.场景.场景.场景.渲染"),[`Scene.tear_down()`](#manim.scene.scene.Scene.tear_down "manim.scene.scene.Scene.tear_down")
+[`Scene.setup()`](), [`Scene.render()`](),[`Scene.tear_down()`]()
 
-get*attrs ( *\*键\_)[\[来源\]](../_modules/manim/scene/scene.html#Scene.get_attrs)[#](#manim.scene.scene.Scene.get_attrs "此定义的固定链接")
+get*attrs ( *\\*键\_)
 
 给定属性的标识符/名称，获取场景的属性。
 
@@ -495,7 +502,7 @@ get*attrs ( *\*键\_)[\[来源\]](../_modules/manim/scene/scene.html#Scene.get_a
 
 列表
 
-get_mobject_family_members ( )[\[来源\]](../_modules/manim/scene/scene.html#Scene.get_mobject_family_members)[#](#manim.scene.scene.Scene.get_mobject_family_members "此定义的固定链接")
+get_mobject_family_members ( )
 
 返回场景中所有对象的家庭成员列表。如果添加了 Circle() 和 VGroup(Rectangle(),Triangle())，则它不仅返回 Circle()、Rectangle() 和 Triangle()，还返回 VGroup() 对象。
 
@@ -507,13 +514,13 @@ mobject 家族成员列表。
 
 列表
 
-get*moving_mobjects ( *\*动画\_)[\[来源\]](../_modules/manim/scene/scene.html#Scene.get_moving_mobjects)[#](#manim.scene.scene.Scene.get_moving_mobjects "此定义的固定链接")
+get*moving_mobjects ( *\\*动画\_)
 
 获取传递的动画中的所有移动对象。
 
 参数
 
-**\*animations** ( [_Animation_](manim.animation.animation.Animation.html#manim.animation.animation.Animation "manim.animation.animation.Animation") ) – 检查移动对象的动画。
+**\*animations** ( [_Animation_]() ) – 检查移动对象的动画。
 
 退货
 
@@ -523,7 +530,7 @@ get*moving_mobjects ( *\*动画\_)[\[来源\]](../_modules/manim/scene/scene.htm
 
 列表
 
-get*restructed_mobject*list ( \_mobjects* , \_to_remove* )[\[来源\]](../_modules/manim/scene/scene.html#Scene.get_restructured_mobject_list)[#](#manim.scene.scene.Scene.get_restructured_mobject_list "此定义的固定链接")
+get*restructed_mobject*list ( \_mobjects* , \_to_remove* )
 
 给定一个 mobject 列表和一个要删除的 mobject 列表，这会从 mobject 列表中过滤掉可删除的 mobject。
 
@@ -540,13 +547,13 @@ get*restructed_mobject*list ( \_mobjects* , \_to_remove* )[\[来源\]](../_modul
 
 列表
 
-get*run_time（*动画\_）[\[来源\]](../_modules/manim/scene/scene.html#Scene.get_run_time)[#](#manim.scene.scene.Scene.get_run_time "此定义的固定链接")
+get*run_time（*动画\_）
 
 获取动画列表的总运行时间。
 
 参数
 
-**animations** ( _list_ _\[_ [_Animation_](manim.animation.animation.Animation.html#manim.animation.animation.Animation "manim.animation.animation.Animation") _\]_`run_time` ) –要计算总数的动画列表 。
+**animations** ( _list_ _\[_ [_Animation_]() _\]_`run_time` ) –要计算总数的动画列表 。
 
 退货
 
@@ -556,7 +563,7 @@ get*run_time（*动画\_）[\[来源\]](../_modules/manim/scene/scene.html#Scene
 
 漂浮
 
-get*time_progression (*运行时间*,*描述*, \_n_iterations = None* , _override_skip_animations = False_ )[\[来源\]](../_modules/manim/scene/scene.html#Scene.get_time_progression)[#](#manim.scene.scene.Scene.get_time_progression "此定义的固定链接")
+get*time_progression (*运行时间*,*描述*, \_n_iterations = None* , _override_skip_animations = False_ )
 
 当你制作自己的动画时，你几乎不会使用它。该方法供 Manim 内部使用。
 
@@ -576,7 +583,7 @@ get*time_progression (*运行时间*,*描述*, \_n_iterations = None* , _overrid
 
 时间进度
 
-get_top_level_mobjects ( )[\[来源\]](../_modules/manim/scene/scene.html#Scene.get_top_level_mobjects)[#](#manim.scene.scene.Scene.get_top_level_mobjects "此定义的固定链接")
+get_top_level_mobjects ( )
 
 返回所有不是子对象的对象。
 
@@ -588,11 +595,11 @@ get_top_level_mobjects ( )[\[来源\]](../_modules/manim/scene/scene.html#Scene.
 
 列表
 
-交互式嵌入( )[\[来源\]](../_modules/manim/scene/scene.html#Scene.interactive_embed)[#](#manim.scene.scene.Scene.interactive_embed "此定义的固定链接")
+交互式嵌入( )
 
 与 embed() 类似，但允许屏幕交互。
 
-is_current_animation_frozen_frame ( )[\[来源\]](../_modules/manim/scene/scene.html#Scene.is_current_animation_frozen_frame)[#](#manim.scene.scene.Scene.is_current_animation_frozen_frame "此定义的固定链接")
+is_current_animation_frozen_frame ( )
 
 返回当前动画是否产生静态帧（通常是 Wait）。
 
@@ -600,9 +607,9 @@ is_current_animation_frozen_frame ( )[\[来源\]](../_modules/manim/scene/scene.
 
 布尔值
 
-next*section（*名称= '未命名'*，*类型= DefaultSectionType.NORMAL*， \_skip_animations = False*）[\[来源\]](../_modules/manim/scene/scene.html#Scene.next_section)[#](#manim.scene.scene.Scene.next_section "此定义的固定链接")
+next*section（*名称= '未命名'*，*类型= DefaultSectionType.NORMAL*， \_skip_animations = False*）
 
-在这里创建分离；最后一部分完成并创建一个新部分。 `skip_animations`跳过本节中所有动画的渲染。请参阅有关如何使用部分的[文档。](../tutorials/output_and_config.html)
+在这里创建分离；最后一部分完成并创建一个新部分。 `skip_animations`跳过本节中所有动画的渲染。请参阅有关如何使用部分的[文档。]()
 
 参数
 
@@ -614,11 +621,11 @@ next*section（*名称= '未命名'*，*类型= DefaultSectionType.NORMAL*， \_
 
 没有任何
 
-暂停（_持续时间= 1.0_）[\[来源\]](../_modules/manim/scene/scene.html#Scene.pause)[#](#manim.scene.scene.Scene.pause "此定义的固定链接")
+暂停（_持续时间= 1.0_）[\[来源\]]()
 
 暂停场景（即显示冻结的帧）。
 
-[`wait()`](#manim.scene.scene.Scene.wait "manim.scene.scene.Scene.wait")这是 with `frozen_frame` set to 的别名`True`。
+[`wait()`]()这是 with `frozen_frame` set to 的别名`True`。
 
 参数
 
@@ -626,9 +633,9 @@ next*section（*名称= '未命名'*，*类型= DefaultSectionType.NORMAL*， \_
 
 也可以看看
 
-[`wait()`](#manim.scene.scene.Scene.wait "manim.scene.scene.Scene.wait"),[`Wait`](manim.animation.animation.Wait.html#manim.animation.animation.Wait "manim.animation.animation.Wait")
+[`wait()`](),[`Wait`]()
 
-播放( _\* args_ , _subcaption = None_ , _subcaption_duration = None_ , _subcaption_offset = 0_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/scene/scene.html#Scene.play)[#](#manim.scene.scene.Scene.play "此定义的固定链接")
+播放( _\* args_ , _subcaption = None_ , _subcaption_duration = None_ , _subcaption_offset = 0_ , _\*\* kwargs_ )
 
 在此场景中播放动画。
 
@@ -640,7 +647,7 @@ next*section（*名称= '未命名'*，*类型= DefaultSectionType.NORMAL*， \_
 - **subcaption_offset** – 添加的子标题的开始时间的偏移量（以秒为单位）。
 - **kwargs** – 所有其他关键字都会传递给渲染器。
 
-play*internal ( \_skip_rendering = False* )[\[来源\]](../_modules/manim/scene/scene.html#Scene.play_internal)[#](#manim.scene.scene.Scene.play_internal "此定义的固定链接")
+play*internal ( \_skip_rendering = False* )
 
 此方法用于准备要渲染的动画、应用动画所需的参数和参数、渲染它们并将它们写入视频文件。
 
@@ -648,21 +655,21 @@ play*internal ( \_skip_rendering = False* )[\[来源\]](../_modules/manim/scene/
 
 **Skip_rendering** ( _bool_ ) – 是否应该跳过渲染，默认为 False
 
-删除（_\* mobjects_）[\[来源\]](../_modules/manim/scene/scene.html#Scene.remove)[#](#manim.scene.scene.Scene.remove "此定义的固定链接")
+删除（_\* mobjects_）
 
 通过从“mobjects”和“foreground_mobjects”中删除 mobjects，从场景和前景中删除传递的 mobjects 列表中的 mobjects
 
 参数
 
-**\*mobjects** ( [_Mobject_](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject") ) – 要删除的 mobject。
+**\*mobjects** ( [_Mobject_]() ) – 要删除的 mobject。
 
-删除前景 mobject（_mobject_）[\[来源\]](../_modules/manim/scene/scene.html#Scene.remove_foreground_mobject)[#](#manim.scene.scene.Scene.remove_foreground_mobject "此定义的固定链接")
+删除前景 mobject（_mobject_）
 
 从前台删除单个 mobject，并在内部从 foreground_mobjects 列表中删除。
 
 参数
 
-**mobject** ( [_Mobject_](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject") ) – 要从前台删除的 mobject。
+**mobject** ( [_Mobject_]() ) – 要从前台删除的 mobject。
 
 退货
 
@@ -670,15 +677,15 @@ play*internal ( \_skip_rendering = False* )[\[来源\]](../_modules/manim/scene/
 
 返回类型
 
-[场景](#manim.scene.scene.Scene "手动场景.场景.场景")
+[场景]()
 
-删除前景对象( _\* to_remove_ )[\[来源\]](../_modules/manim/scene/scene.html#Scene.remove_foreground_mobjects)[#](#manim.scene.scene.Scene.remove_foreground_mobjects "此定义的固定链接")
+删除前景对象( _\* to_remove_ )
 
 从前台删除 mobject，并在内部从 foreground_mobjects 列表中删除。
 
 参数
 
-**\*to_remove** ( [_Mobject_](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject") ) – 要从前台删除的 mobject。
+**\*to_remove** ( [_Mobject_]() ) – 要从前台删除的 mobject。
 
 退货
 
@@ -686,9 +693,9 @@ play*internal ( \_skip_rendering = False* )[\[来源\]](../_modules/manim/scene/
 
 返回类型
 
-[场景](#manim.scene.scene.Scene "手动场景.场景.场景")
+[场景]()
 
-删除更新程序（_函数_）[\[来源\]](../_modules/manim/scene/scene.html#Scene.remove_updater)[#](#manim.scene.scene.Scene.remove_updater "此定义的固定链接")
+删除更新程序（_函数_）
 
 从场景中删除更新功能。
 
@@ -702,9 +709,9 @@ play*internal ( \_skip_rendering = False* )[\[来源\]](../_modules/manim/scene/
 
 也可以看看
 
-[`Scene.add_updater()`](#manim.scene.scene.Scene.add_updater "manim.scene.scene.Scene.add_updater"),[`Scene.update_self()`](#manim.scene.scene.Scene.update_self "manim.scene.scene.Scene.update_self")
+[`Scene.add_updater()`](),[`Scene.update_self()`]()
 
-渲染（_预览= False_）[\[来源\]](../_modules/manim/scene/scene.html#Scene.render)[#](#manim.scene.scene.Scene.render "此定义的固定链接")
+渲染（_预览= False_）
 
 渲染此场景。
 
@@ -712,22 +719,22 @@ play*internal ( \_skip_rendering = False* )[\[来源\]](../_modules/manim/scene/
 
 **Preview** ( _bool_ ) – 如果为 true，则在文件查看器中打开场景。
 
-替换（_old_mobject_， _new_mobject_）[\[来源\]](../_modules/manim/scene/scene.html#Scene.replace)[#](#manim.scene.scene.Scene.replace "此定义的固定链接")
+替换（_old_mobject_， _new_mobject_）
 
 将场景中的一个 mobject 替换为另一个 mobject，保留绘制顺序。
 
-如果`old_mobject`是某个其他 Mobject（例如 a [`Group`](manim.mobject.mobject.Group.html#manim.mobject.mobject.Group "manim.mobject.mobject.Group")）的子对象，则 new_mobject 将在组内替换它，而不更改父对象。
+如果`old_mobject`是某个其他 Mobject（例如 a [`Group`]()）的子对象，则 new_mobject 将在组内替换它，而不更改父对象。
 
 参数
 
-- **old_mobject** ( [_Mobject_](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject") ) – 要替换的 mobject。必须出现在场景中。
-- **new_mobject** ( [_Mobject_](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject") ) – 场景中尚未存在的 mobject。
+- **old_mobject** ( [_Mobject_]() ) – 要替换的 mobject。必须出现在场景中。
+- **new_mobject** ( [_Mobject_]() ) – 场景中尚未存在的 mobject。
 
 返回类型
 
 没有任何
 
-restruct*mobjects ( \_to_remove* , _mobject_list_name = 'mobjects'_ , _extract_families = True_ )[\[来源\]](../_modules/manim/scene/scene.html#Scene.restructure_mobjects)[#](#manim.scene.scene.Scene.restructure_mobjects "此定义的固定链接")
+restruct*mobjects ( \_to_remove* , _mobject_list_name = 'mobjects'_ , _extract_families = True_ )
 
 TL:WR
 
@@ -737,7 +744,7 @@ TL:WR
 
 参数
 
-- **to_remove** ( [_Mobject_](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject") ) – 要删除的 Mobject。
+- **to_remove** ( [_Mobject_]() ) – 要删除的 Mobject。
 - **mobject_list_name** ( _str_ ) – 要从中删除的 mobject（“mobjects”、“foreground_mobjects”等）列表。
 - **extract_families** ( _bool_ ) – 是否应递归提取 mobject 的族。
 
@@ -747,21 +754,21 @@ TL:WR
 
 返回类型
 
-[场景](#manim.scene.scene.Scene "手动场景.场景.场景")
+[场景]()
 
-设置( )[\[来源\]](../_modules/manim/scene/scene.html#Scene.setup)[#](#manim.scene.scene.Scene.setup "此定义的固定链接")
+设置( )
 
 这意味着由通常子类化的任何场景来实现，并且在调用构造方法之前涉及一些常见的设置。
 
-应该\_update_mobjects ( )[\[来源\]](../_modules/manim/scene/scene.html#Scene.should_update_mobjects)[#](#manim.scene.scene.Scene.should_update_mobjects "此定义的固定链接")
+应该\_update_mobjects ( )
 
 如果该场景的 mobject 应该更新，则返回 True。
 
 特别是，这会检查是否
 
-- 的`always_update_mobjects`属性[`Scene`](#manim.scene.scene.Scene "手动场景.场景.场景") 设置为`True`,
-- 它[`Scene`](#manim.scene.scene.Scene "手动场景.场景.场景")本身附加了基于时间的更新程序，
-- 其中的任何对象都[`Scene`](#manim.scene.scene.Scene "手动场景.场景.场景")附加了基于时间的更新程序。
+- 的`always_update_mobjects`属性[`Scene`]() 设置为`True`,
+- 它[`Scene`]()本身附加了基于时间的更新程序，
+- 其中的任何对象都[`Scene`]()附加了基于时间的更新程序。
 
 仅当播放单个等待动画时才会调用此函数。
 
@@ -769,11 +776,11 @@ TL:WR
 
 布尔值
 
-拆解( )[\[来源\]](../_modules/manim/scene/scene.html#Scene.tear_down)[#](#manim.scene.scene.Scene.tear_down "此定义的固定链接")
+拆解( )
 
 这意味着由通常子类化的任何场景来实现，并且在场景结束之前具有要调用的一些通用方法。
 
-update*mobjects ( \_dt* )[\[来源\]](../_modules/manim/scene/scene.html#Scene.update_mobjects)[#](#manim.scene.scene.Scene.update_mobjects "此定义的固定链接")
+update*mobjects ( \_dt* )
 
 开始更新场景中的所有 mobject。
 
@@ -781,7 +788,7 @@ update*mobjects ( \_dt* )[\[来源\]](../_modules/manim/scene/scene.html#Scene.u
 
 **dt** ( _float_ ) – 更新之间的时间变化。默认（大部分）为 1/frames_per_second
 
-更新自身（_dt_）[\[来源\]](../_modules/manim/scene/scene.html#Scene.update_self)[#](#manim.scene.scene.Scene.update_self "此定义的固定链接")
+更新自身（_dt_）
 
 运行所有场景更新程序功能。
 
@@ -793,9 +800,9 @@ update*mobjects ( \_dt* )[\[来源\]](../_modules/manim/scene/scene.html#Scene.u
 
 也可以看看
 
-[`Scene.add_updater()`](#manim.scene.scene.Scene.add_updater "manim.scene.scene.Scene.add_updater"),[`Scene.remove_updater()`](#manim.scene.scene.Scene.remove_updater "manim.scene.scene.Scene.remove_updater")
+[`Scene.add_updater()`](),[`Scene.remove_updater()`]()
 
-等待（_持续时间= 1.0_， _stop_condition = None_， _frozen_frame = None_）[\[来源\]](../_modules/manim/scene/scene.html#Scene.wait)[#](#manim.scene.scene.Scene.wait "此定义的固定链接")
+等待（_持续时间= 1.0_， _stop_condition = None_， _frozen_frame = None_）
 
 播放“无操作”动画。
 
@@ -807,9 +814,9 @@ update*mobjects ( \_dt* )[\[来源\]](../_modules/manim/scene/scene.html#Scene.u
 
 也可以看看
 
-[`Wait`](manim.animation.animation.Wait.html#manim.animation.animation.Wait "manim.animation.animation.Wait"),`should_mobjects_update()`
+[`Wait`](),`should_mobjects_update()`
 
-等待直到（_停止条件_，_最大时间= 60_）[\[来源\]](../_modules/manim/scene/scene.html#Scene.wait_until)[#](#manim.scene.scene.Scene.wait_until "此定义的固定链接")
+等待直到（_停止条件_，_最大时间= 60_）
 
 等待直到满足条件，直至达到给定的最大持续时间。
 

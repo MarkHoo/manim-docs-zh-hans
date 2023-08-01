@@ -1,10 +1,10 @@
-# 简单函数[#](#module-manim.utils.simple_functions "此标题的固定链接")
+# 简单函数
 
 简单函数的集合。
 
 功能
 
-二进制搜索（_函数_，_目标_，_下限_，_上限_，_公差= 0.0001_）[\[来源\]](../_modules/manim/utils/simple_functions.html#binary_search)[#](#manim.utils.simple_functions.binary_search "此定义的固定链接")
+二进制搜索（_函数_，_目标_，_下限_，_上限_，_公差= 0.0001_）
 
 通过重复将范围一分为二来搜索范围内的值。
 
@@ -42,7 +42,7 @@ Copy to clipboard
 
 整数 | 浮动| 没有任何
 
-选择( _n_ , _k_ )[\[来源\]](../_modules/manim/utils/simple_functions.html#choose)[#](#manim.utils.simple_functions.choose "此定义的固定链接")
+选择( _n_ , _k_ )
 
 二项式系数 n 选择 k。
 
@@ -62,7 +62,7 @@ Copy to clipboard
 
 整数
 
-剪辑（_a_、 _min_a_、 _max_a_）[\[来源\]](../_modules/manim/utils/simple_functions.html#clip)[#](#manim.utils.simple_functions.clip "此定义的固定链接")
+剪辑（_a_、 _min_a_、 _max_a_）
 
 剪辑`a`到区间 \[ `min_a`, `max_a`\]。
 
@@ -77,7 +77,7 @@ Copy to clipboard
 
 Copy to clipboard
 
-获取参数（_函数_）[\[来源\]](../_modules/manim/utils/simple_functions.html#get_parameters)[#](#manim.utils.simple_functions.get_parameters "此定义的固定链接")
+获取参数（_函数_）
 
 返回 的参数`function`作为参数名称到其对应对象的有序映射`Parameter`。
 
@@ -99,7 +99,7 @@ Copy to clipboard
 
 MappingProxyType\[str，inspect.Parameter\]
 
-乙状结肠( _x_ )[\[来源\]](../_modules/manim/utils/simple_functions.html#sigmoid)[#](#manim.utils.simple_functions.sigmoid "此定义的固定链接")
+乙状结肠( _x_ )
 
 返回逻辑函数的输出。
 

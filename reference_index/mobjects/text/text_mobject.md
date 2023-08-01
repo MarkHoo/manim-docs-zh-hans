@@ -1,4 +1,4 @@
-# 文本对象[#](#module-manim.mobject.text.text_mobject "此标题的固定链接")
+# 文本对象
 
 用于显示（非 LaTeX）文本的 Mobjects。
 

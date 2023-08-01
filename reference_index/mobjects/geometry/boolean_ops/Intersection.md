@@ -1,4 +1,4 @@
-# 交叉口[#](#intersection "此标题的固定链接")
+# 交叉口
 
 合格名称：`manim.mobject.geometry.boolean\_ops.Intersection`
 

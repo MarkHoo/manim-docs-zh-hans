@@ -1,4 +1,4 @@
-# 函数图[#](#functiongraph "此标题的固定链接")
+# 函数图
 
 合格名称：`manim.mobject.graphing.functions.FunctionGraph`
 

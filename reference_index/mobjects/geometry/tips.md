@@ -1,4 +1,4 @@
-# 提示[#](#module-manim.mobject.geometry.tips "此标题的固定链接")
+# 提示
 
 与 一起使用的提示 mobject 的集合[`TipableVMobject`](manim.mobject.geometry.arc.TipableVMobject.html#manim.mobject.geometry.arc.TipableVMobject "manim.mobject.geometry.arc.TipableVMobject")。
 

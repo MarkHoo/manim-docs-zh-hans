@@ -1,4 +1,4 @@
-# 代码[#](#code "此标题的固定链接")
+# 代码
 
 合格名称：`manim.mobject.text.code\_mobject.Code`
 

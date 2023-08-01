@@ -1,10 +1,10 @@
-# 弃用[#](#module-manim.utils.deprecation "此标题的固定链接")
+# 弃用
 
 用于弃用类、函数和函数参数的装饰器。
 
 功能
 
-已弃用（_func = None_、 _since = None_、 _until = None_、 _replacement = None_、 _message = ''_）[\[来源\]](../_modules/manim/utils/deprecation.html#deprecated)[#](#manim.utils.deprecation.deprecated "此定义的固定链接")
+已弃用（_func = None_、 _since = None_、 _until = None_、 _replacement = None_、 _message = ''_）
 
 将可调用标记为已弃用的装饰器。
 
@@ -30,64 +30,26 @@
 
 基本用法：
 
-from manim.utils.deprecation import deprecated
+```py
 
-@deprecated
-def foo(\*\*kwargs):
-pass
+```
 
-@deprecated
-class Bar:
-def \_\_init\_\_(self):
-pass
-
-    @deprecated
-    def baz(self):
-        pass
-
-foo()
-\# WARNING The function foo has been deprecated and may be removed in a later version.
-
-a = Bar()
-\# WARNING The class Bar has been deprecated and may be removed in a later version.
-
-a.baz()
-\# WARNING The method Bar.baz has been deprecated and may be removed in a later version.
-
-Copy to clipboard
 
 您可以指定附加信息以获得更精确的警告：
 
-from manim.utils.deprecation import deprecated
+```py
 
-@deprecated(
-since="v0.2",
-until="v0.4",
-replacement="bar",
-message="It is cooler."
-)
-def foo():
-pass
+```
 
-foo()
-\# WARNING The function foo has been deprecated since v0.2 and is expected to be removed after v0.4. Use bar instead. It is cooler.
-
-Copy to clipboard
 
 您还可以使用日期而不是版本：
 
-from manim.utils.deprecation import deprecated
+```py
 
-@deprecated(since="05/01/2021", until="06/01/2021")
-def foo():
-pass
+```
 
-foo()
-\# WARNING The function foo has been deprecated since 05/01/2021 and is expected to be removed after 06/01/2021.
 
-Copy to clipboard
-
-deprecated*pa​​rams（\_params = None*， _since = None_， _until = None_， _message = ''_，_重定向= None_）[\[来源\]](../_modules/manim/utils/deprecation.html#deprecated_params)[#](#manim.utils.deprecation.deprecated_params "此定义的固定链接")
+deprecated*pa​​rams（\_params = None*， _since = None_， _until = None_， _message = ''_，_重定向= None_）
 
 将可调用参数标记为已弃用的装饰器。
 
@@ -131,105 +93,39 @@ deprecated*pa​​rams（\_params = None*， _since = None_， _until = None_�
 
 基本用法：
 
-from manim.utils.deprecation import deprecated_params
+```py
 
-@deprecated_params(params="a, b, c")
-def foo(\*\*kwargs):
-pass
+```
 
-foo(x=2, y=3, z=4)
-\# No warning
-
-foo(a=2, b=3, z=4)
-\# WARNING The parameters a and b of method foo have been deprecated and may be removed in a later version.
-
-Copy to clipboard
 
 您还可以指定附加信息以获得更精确的警告：
 
-from manim.utils.deprecation import deprecated_params
+```py
 
-@deprecated_params(
-params="a, b, c",
-since="v0.2",
-until="v0.4",
-message="The letters x, y, z are cooler."
-)
-def foo(\*\*kwargs):
-pass
+```
 
-foo(a=2)
-\# WARNING The parameter a of method foo has been deprecated since v0.2 and is expected to be removed after v0.4. The letters x, y, z are cooler.
-
-Copy to clipboard
 
 基本参数重定向：
 
-from manim.utils.deprecation import deprecated_params
+```py
 
-@deprecated_params(redirections=\[
-\# Two ways to redirect one parameter to another:
-("old_param", "new_param"),
-lambda old_param2: {"new_param22": old_param2}
-\])
-def foo(\*\*kwargs):
-return kwargs
-
-foo(x=1, old_param=2)
-\# WARNING The parameter old_param of method foo has been deprecated and may be removed in a later version.
-\# returns {"x": 1, "new_param": 2}
-
-Copy to clipboard
+```
 
 使用计算值重定向：
 
-from manim.utils.deprecation import deprecated_params
+```py
 
-@deprecated_params(redirections=\[
-lambda runtime_in_ms: {"run_time": runtime_in_ms / 1000}
-\])
-def foo(\*\*kwargs):
-return kwargs
+```
 
-foo(runtime_in_ms=500)
-\# WARNING The parameter runtime_in_ms of method foo has been deprecated and may be removed in a later version.
-\# returns {"run_time": 0.5}
-
-Copy to clipboard
 
 将多个参数值重定向为一个：
 
-from manim.utils.deprecation import deprecated_params
+```py
 
-@deprecated_params(redirections=\[
-lambda buff_x=1, buff_y=1: {"buff": (buff_x, buff_y)}
-\])
-def foo(\*\*kwargs):
-return kwargs
-
-foo(buff_x=2)
-\# WARNING The parameter buff_x of method foo has been deprecated and may be removed in a later version.
-\# returns {"buff": (2, 1)}
-
-Copy to clipboard
+```
 
 将一个参数重定向为多个：
 
-from manim.utils.deprecation import deprecated_params
+```py
 
-@deprecated_params(redirections=\[
-lambda buff=1: {"buff_x": buff\[0\], "buff_y": buff\[1\]} if isinstance(buff, tuple)
-else {"buff_x": buff, "buff_y": buff}
-\])
-def foo(\*\*kwargs):
-return kwargs
-
-foo(buff=0)
-\# WARNING The parameter buff of method foo has been deprecated and may be removed in a later version.
-\# returns {"buff_x": 0, buff_y: 0}
-
-foo(buff=(1,2))
-\# WARNING The parameter buff of method foo has been deprecated and may be removed in a later version.
-\# returns {"buff_x": 1, buff_y: 2}
-
-Copy to clipboard
+```

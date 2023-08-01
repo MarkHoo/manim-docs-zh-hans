@@ -1,4 +1,4 @@
-# ArcPolygonFromArcs [#](#arcpolygonfromarcs "此标题的固定链接")
+# ArcPolygonFromArcs 
 
 合格名称：`manim.mobject.geometry.arc.ArcPolygonFromArcs`
 

@@ -1,10 +1,12 @@
-# 广播[#](#broadcast "此标题的固定链接")
+# 广播
 
 合格名称：`manim.animation.specialized.Broadcast`
 
-广播*类*（_mobject = None_， _\* args_， _use_override = True_， _\*\* kwargs_）[\[来源\]](../_modules/manim/animation/specialized.html#Broadcast)[#](#manim.animation.specialized.Broadcast "此定义的固定链接")
+```py
+class Broadcast(mobject=None, *args, use_override=True, **kwargs)
+```
 
-基地：[`LaggedStart`](manim.animation.composition.LaggedStart.html#manim.animation.composition.LaggedStart "manim.animation.composition.LaggedStart")
+Bases: LaggedStart
 
 广播一个从 an 开始的 mobject `initial_width`，直到 mobject 的实际大小。
 
@@ -19,19 +21,19 @@
 - **remover** – 动画结束后是否应将 mobject 从场景中删除，默认为 True。
 - **lag_ratio** – mobject 每次迭代之间的时间，默认为 0.2。
 - **run_time** – 动画的总持续时间，默认为 3。
-- **kwargs** – 要传递给 的附加参数[`LaggedStart`](manim.animation.composition.LaggedStart.html#manim.animation.composition.LaggedStart "manim.animation.composition.LaggedStart")。
+- **kwargs** – 要传递给 的附加参数[`LaggedStart`]()。
 
 例子
 
-示例：广播示例[¶](#broadcastexample)
+示例：广播示例
 
-from manim import \*
+```py
+from manim import *
 
 class BroadcastExample(Scene):
-def construct(self):
-mob = Circle(radius=4, color=TEAL_A)
-self.play(Broadcast(mob))
-
-Copy to clipboard
+    def construct(self):
+        mob = Circle(radius=4, color=TEAL_A)
+        self.play(Broadcast(mob))
+```
 
 方法

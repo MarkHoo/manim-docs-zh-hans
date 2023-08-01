@@ -1,4 +1,4 @@
-# 直角[#](#rightangle "此标题的固定链接")
+# 直角
 
 合格名称：`manim.mobject.geometry.line.RightAngle`
 

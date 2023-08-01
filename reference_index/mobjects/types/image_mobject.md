@@ -1,4 +1,4 @@
-# 图像对象[#](#module-manim.mobject.types.image_mobject "此标题的固定链接")
+# 图像对象
 
 表示光栅图像的 Mobject。
 

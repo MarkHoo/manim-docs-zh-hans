@@ -1,66 +1,63 @@
 # 部分
-==================================================================
+
 
 合格名称：`manim.scene.section.Section`
 
-_类_ 部分（_类型_，_视频_，_名称_， _skip_animations_）[\[来源\]](../_modules/manim/scene/section.html#Section)[#](#manim.scene.section.Section "此定义的固定链接")
+```py
+class Section(type, video, name, skip_animations)
+```
 
-基地：`object`
+Bases: object
 
-A[`Scene`](manim.scene.scene.Scene.html#manim.scene.scene.Scene "手动场景.场景.场景")可以被分割成多个Section。请参阅[文档](../tutorials/output_and_config.html)以获取更多信息。它由多个动画组成。
+一个[`Scene`]()可以被分割成多个Section。请参阅[文档]()以获取更多信息。它由多个动画组成。
 
 参数
 
-*   **类型**( _str_ ) –
+*   **type**( _str_ ) –
     
-*   **视频**( _str_ _|__无_) –
+*   **video**( _str_ _|_\_None_) –
     
-*   **名称**( _str_ ) –
+*   **name**( _str_ ) –
     
-*   **跳过动画**( _bool_ ) –
+*   **skip_animations**( _bool_ ) –
     
 
-输入[#](#manim.scene.section.Section.type "此定义的固定链接")
+type
 
 第三方应用程序可以使用它来对不同类型的部分进行分类。
 
-视频[#](#manim.scene.section.Section.video "此定义的固定链接")
+video
 
 包含属于相对于节目录的节的动画的视频文件的路径。如果`None`，则该部分将不会被保存。
 
-名字[#](#manim.scene.section.Section.name "此定义的固定链接")
+name
 
 此部分的人类可读的非唯一名称。
 
-跳过动画[#](#manim.scene.section.Section.skip_animations "此定义的固定链接")
+skip_animations
 
 当 时，跳过本节中的动画渲染`True`。
 
-部分电影文件[#](#manim.scene.section.Section.partial_movie_files "此定义的固定链接")
+partial_movie_files
 
 属于本节的动画。
 
-也可以看看
 
-[`DefaultSectionType`](manim.scene.section.DefaultSectionType.html#manim.scene.section.DefaultSectionType "manim.scene.section.DefaultSectionType"), `CairoRenderer.update_skipping_status()`,`OpenGLRenderer.update_skipping_status()`
+> 也可以看看
+
+> [`DefaultSectionType`](), `CairoRenderer.update_skipping_status()`,`OpenGLRenderer.update_skipping_status()`
+
 
 方法
 
-  
+|||
+|-|-|
+[`get_clean_partial_movie_files`]()|返回所有不属于`None`.
+[`get_dict`]()|获取带有输出视频元数据的字典表示。
+[`is_empty`](")|检查该部分是否为空。
 
-[`get_clean_partial_movie_files`](#manim.scene.section.Section.get_clean_partial_movie_files "manim.scene.section.Section.get_clean_partial_movie_files")
 
-返回所有不属于`None`.
-
-[`get_dict`](#manim.scene.section.Section.get_dict "manim.scene.section.Section.get_dict")
-
-获取带有输出视频元数据的字典表示。
-
-[`is_empty`](#manim.scene.section.Section.is_empty "manim.scene.section.Section.is_empty")
-
-检查该部分是否为空。
-
-获取\_clean\_partial\_movie\_files ( )[\[来源\]](../_modules/manim/scene/section.html#Section.get_clean_partial_movie_files)[#](#manim.scene.section.Section.get_clean_partial_movie_files "此定义的固定链接")
+`get_clean_partial_movie_files()`
 
 返回所有不属于`None`.
 
@@ -68,7 +65,7 @@ A[`Scene`](manim.scene.scene.Scene.html#manim.scene.scene.Scene "手动场景.�
 
 列表\[字符串\]
 
-get_dict ( _sections_dir_ )[\[来源\]](../_modules/manim/scene/section.html#Section.get_dict)[#](#manim.scene.section.Section.get_dict "此定义的固定链接")
+`get_dict(sections_dir)`
 
 获取带有输出视频元数据的字典表示。
 
@@ -82,7 +79,7 @@ get_dict ( _sections_dir_ )[\[来源\]](../_modules/manim/scene/section.html#Sec
 
 字典\[str，任意\]
 
-为空( )[\[来源\]](../_modules/manim/scene/section.html#Section.is_empty)[#](#manim.scene.section.Section.is_empty "此定义的固定链接")
+`is_empty()`
 
 检查该部分是否为空。
 

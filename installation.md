@@ -8,10 +8,10 @@
 
 > 请注意，Manim 有多个不同版本。本网站上的说明**仅**适用于*社区版*。如果您不确定应该安装哪个版本，请详细了解[Manim 版本之间的差异。](./tutorials_guides/faqs/installation.md)
 
-1.  [将 Manim 安装到 conda 环境](#conda-installation)
-2.  [将 Manim 安装到系统的 Python 中](#local-installation)
-3.  [通过 Docker 使用 Manim](#docker-installation)
-4.  [通过 Binder / Google Colab 的交互式 Jupyter 笔记本](#interactive-online)
+1.  [将 Manim 安装到 conda 环境]()
+2.  [将 Manim 安装到系统的 Python 中]()
+3.  [通过 Docker 使用 Manim]()
+4.  [通过 Binder / Google Colab 的交互式 Jupyter 笔记本]()
 
 ## 在 conda 中安装 Manim
 
@@ -22,7 +22,7 @@ Conda 是 Python 的包管理器，允许创建存储所有依赖项的环境。
 - [康达](./installations/conda)
   - [所需的依赖项](./installations/conda)
   - [可选依赖项](./installations/conda)
-  - [与马尼姆合作](./installations/conda)
+  - [与Manim合作](./installations/conda)
 
 ## 在本地安装 Manim
 
@@ -34,18 +34,18 @@ Manim 需要 Python 版本`3.7`或更高版本才能运行。
 
 根据您的特定设置，安装过程可能会略有不同。确保您已尝试仔细按照以下页面上的步骤进行操作，但如果您遇到困难，我们很乐意提供帮助：[加入我们的 Discord ，或](https://www.manim.community/discord/)[直接在 GitHub 上](https://github.com/ManimCommunity/manim/discussions)开始新的讨论。
 
-- [视窗](./installations/windows)
+- [Windows](./installations/windows)
   - [所需的依赖项](./installations/windows)
   - [可选依赖项](./installations/windows)
-  - [与马尼姆合作](./installations/windows)
+  - [与Manim合作](./installations/windows)
 - [苹果系统](./installations/macos)
   - [所需的依赖项](./installations/macos)
   - [可选依赖项](./installations/macos)
-  - [与马尼姆合作](./installations/macos)
+  - [与Manim合作](./installations/macos)
 - [Linux](./installations/linux)
   - [所需的依赖项](./installations/linux)
   - [可选依赖项](./installations/linux)
-  - [与马尼姆合作](./installations/linux)
+  - [与Manim合作](./installations/linux)
 
 在本地安装 Manim 后，您可以继续阅读我们的 [快速入门指南](tutorials/quickstart)
 
@@ -57,7 +57,7 @@ Manim 需要 Python 版本`3.7`或更高版本才能运行。
 
 以下页面包含有关社区维护的 docker 映像的更多信息`manimcommunity/manim`：
 
-- [码头工人](./installations/docker)
+- [Docker](./installations/docker)
   - [Docker 容器的基本使用](./installations/docker)
   - [通过 Docker 运行 JupyterLab](./installations/docker)
 

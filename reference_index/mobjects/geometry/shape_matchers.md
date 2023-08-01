@@ -1,4 +1,4 @@
-# 形状匹配器[#](#module-manim.mobject.geometry.shape_matchers "此标题的固定链接")
+# 形状匹配器
 
 Mobject 用于标记和注释其他 mobject。
 

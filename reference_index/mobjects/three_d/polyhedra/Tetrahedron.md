@@ -1,4 +1,4 @@
-# 四面体[#](#tetrahedron "此标题的固定链接")
+# 四面体
 
 合格名称：`manim.mobject.three\_d.polyhedra.Tetrahedron`
 

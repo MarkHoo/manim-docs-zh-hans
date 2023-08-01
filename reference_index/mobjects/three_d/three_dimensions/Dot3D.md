@@ -1,4 +1,4 @@
-# 点 3D [#](#dot3d "此标题的固定链接")
+# 点 3D 
 
 合格名称：`manim.mobject.three\_d.three\_dimensions.Dot3D`
 

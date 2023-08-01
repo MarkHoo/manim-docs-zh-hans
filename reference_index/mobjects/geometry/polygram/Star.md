@@ -1,4 +1,4 @@
-# 星[#](#star "此标题的固定链接")
+# 星
 
 合格名称：`manim.mobject.geometry.polygram.Star`
 

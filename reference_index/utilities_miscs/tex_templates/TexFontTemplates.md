@@ -1,8 +1,8 @@
-# 文本字体模板[#](#texfonttemplates "此标题的固定链接")
+# 文本字体模板
 
 合格名称：`manim.utils.tex\_templates.TexFontTemplates`
 
-_类_ TexFontTemplates[\[来源\]](../_modules/manim/utils/tex_templates.html#TexFontTemplates)[#](#manim.utils.tex_templates.TexFontTemplates "此定义的固定链接")
+_类_ TexFontTemplates
 
 基地：`object`
 
@@ -30,418 +30,418 @@ Copy to clipboard
 
 属性
 
-[`american_typewriter`](#manim.utils.tex_templates.TexFontTemplates.american_typewriter "manim.utils.tex_templates.TexFontTemplates.american_typewriter")
+[`american_typewriter`]()
 
 美国打字机
 
-[`antykwa`](#manim.utils.tex_templates.TexFontTemplates.antykwa "manim.utils.tex_templates.TexFontTemplates.antykwa")
+[`antykwa`]()
 
 Antykwa Półtawskiego（希腊语和数学符号的 TX 字体）
 
-[`apple_chancery`](#manim.utils.tex_templates.TexFontTemplates.apple_chancery "manim.utils.tex_templates.TexFontTemplates.apple_chancery")
+[`apple_chancery`]()
 
 苹果办公厅
 
-[`auriocus_kalligraphicus`](#manim.utils.tex_templates.TexFontTemplates.auriocus_kalligraphicus "manim.utils.tex_templates.TexFontTemplates.auriocus_kalligraphicus")
+[`auriocus_kalligraphicus`]()
 
 Auriocus Kalligraphicus（希腊符号）
 
-[`baskervald_adf_fourier`](#manim.utils.tex_templates.TexFontTemplates.baskervald_adf_fourier "manim.utils.tex_templates.TexFontTemplates.baskervald_adf_fourier")
+[`baskervald_adf_fourier`]()
 
 带傅里叶的 Baskervald ADF
 
-[`baskerville_it`](#manim.utils.tex_templates.TexFontTemplates.baskerville_it "manim.utils.tex_templates.TexFontTemplates.baskerville_it")
+[`baskerville_it`]()
 
 巴斯克维尔（斜体）
 
-[`biolinum`](#manim.utils.tex_templates.TexFontTemplates.biolinum "manim.utils.tex_templates.TexFontTemplates.biolinum")
+[`biolinum`]()
 
 比奥林
 
-[`brushscriptx`](#manim.utils.tex_templates.TexFontTemplates.brushscriptx "manim.utils.tex_templates.TexFontTemplates.brushscriptx")
+[`brushscriptx`]()
 
 BrushScriptX-斜体（PX 数学和希腊语）
 
-[`chalkboard_se`](#manim.utils.tex_templates.TexFontTemplates.chalkboard_se "manim.utils.tex_templates.TexFontTemplates.chalkboard_se")
+[`chalkboard_se`]()
 
 黑板 SE
 
-[`chalkduster`](#manim.utils.tex_templates.TexFontTemplates.chalkduster "manim.utils.tex_templates.TexFontTemplates.chalkduster")
+[`chalkduster`]()
 
 粉笔末
 
-[`comfortaa`](#manim.utils.tex_templates.TexFontTemplates.comfortaa "manim.utils.tex_templates.TexFontTemplates.comfortaa")
+[`comfortaa`]()
 
 康福塔
 
-[`comic_sans`](#manim.utils.tex_templates.TexFontTemplates.comic_sans "manim.utils.tex_templates.TexFontTemplates.comic_sans")
+[`comic_sans`]()
 
 漫画无 MS
 
-[`droid_sans`](#manim.utils.tex_templates.TexFontTemplates.droid_sans "manim.utils.tex_templates.TexFontTemplates.droid_sans")
+[`droid_sans`]()
 
 机器人 Sans
 
-[`droid_sans_it`](#manim.utils.tex_templates.TexFontTemplates.droid_sans_it "manim.utils.tex_templates.TexFontTemplates.droid_sans_it")
+[`droid_sans_it`]()
 
 Droid Sans（斜体）
 
-[`droid_serif`](#manim.utils.tex_templates.TexFontTemplates.droid_serif "manim.utils.tex_templates.TexFontTemplates.droid_serif")
+[`droid_serif`]()
 
 机器人衬线
 
-[`droid_serif_px_it`](#manim.utils.tex_templates.TexFontTemplates.droid_serif_px_it "manim.utils.tex_templates.TexFontTemplates.droid_serif_px_it")
+[`droid_serif_px_it`]()
 
 Droid Serif（PX 数学符号）（斜体）
 
-[`ecf_augie`](#manim.utils.tex_templates.TexFontTemplates.ecf_augie "manim.utils.tex_templates.TexFontTemplates.ecf_augie")
+[`ecf_augie`]()
 
 ECF Augie（欧拉希腊语）
 
-[`ecf_jd`](#manim.utils.tex_templates.TexFontTemplates.ecf_jd "manim.utils.tex_templates.TexFontTemplates.ecf_jd")
+[`ecf_jd`]()
 
 ECF JD（带 TX 字体）
 
-[`ecf_skeetch`](#manim.utils.tex_templates.TexFontTemplates.ecf_skeetch "manim.utils.tex_templates.TexFontTemplates.ecf_skeetch")
+[`ecf_skeetch`]()
 
 ECF 草图（CM 希腊语）
 
-[`ecf_tall_paul`](#manim.utils.tex_templates.TexFontTemplates.ecf_tall_paul "manim.utils.tex_templates.TexFontTemplates.ecf_tall_paul")
+[`ecf_tall_paul`]()
 
 ECF Tall Paul（带 Symbol 字体）
 
-[`ecf_webster`](#manim.utils.tex_templates.TexFontTemplates.ecf_webster "manim.utils.tex_templates.TexFontTemplates.ecf_webster")
+[`ecf_webster`]()
 
 ECF Webster（带有 TX 字体）
 
-[`electrum_adf`](#manim.utils.tex_templates.TexFontTemplates.electrum_adf "manim.utils.tex_templates.TexFontTemplates.electrum_adf")
+[`electrum_adf`]()
 
 金金银 ADF（CM 希腊语）
 
-[`epigrafica`](#manim.utils.tex_templates.TexFontTemplates.epigrafica "manim.utils.tex_templates.TexFontTemplates.epigrafica")
+[`epigrafica`]()
 
 警句
 
-[`fourier_utopia`](#manim.utils.tex_templates.TexFontTemplates.fourier_utopia "manim.utils.tex_templates.TexFontTemplates.fourier_utopia")
+[`fourier_utopia`]()
 
 傅立叶乌托邦（傅立叶立式希腊语）
 
-[`french_cursive`](#manim.utils.tex_templates.TexFontTemplates.french_cursive "manim.utils.tex_templates.TexFontTemplates.french_cursive")
+[`french_cursive`]()
 
 法语草书（欧拉希腊语）
 
-[`gfs_bodoni`](#manim.utils.tex_templates.TexFontTemplates.gfs_bodoni "manim.utils.tex_templates.TexFontTemplates.gfs_bodoni")
+[`gfs_bodoni`]()
 
 GFS 博多尼
 
-[`gfs_didot`](#manim.utils.tex_templates.TexFontTemplates.gfs_didot "manim.utils.tex_templates.TexFontTemplates.gfs_didot")
+[`gfs_didot`]()
 
 GFS Didot（斜体）
 
-[`gfs_neoHellenic`](#manim.utils.tex_templates.TexFontTemplates.gfs_neoHellenic "manim.utils.tex_templates.TexFontTemplates.gfs_neoHellenic")
+[`gfs_neoHellenic`]()
 
 GFS 新希腊语
 
-[`gnu_freesans_tx`](#manim.utils.tex_templates.TexFontTemplates.gnu_freesans_tx "manim.utils.tex_templates.TexFontTemplates.gnu_freesans_tx")
+[`gnu_freesans_tx`]()
 
 GNU FreeSerif（和 TX 字体符号）
 
-[`gnu_freeserif_freesans`](#manim.utils.tex_templates.TexFontTemplates.gnu_freeserif_freesans "manim.utils.tex_templates.TexFontTemplates.gnu_freeserif_freesans")
+[`gnu_freeserif_freesans`]()
 
 GNU FreeSerif 和 FreeSans
 
-[`helvetica_fourier_it`](#manim.utils.tex_templates.TexFontTemplates.helvetica_fourier_it "manim.utils.tex_templates.TexFontTemplates.helvetica_fourier_it")
+[`helvetica_fourier_it`]()
 
 带傅里叶的 Helvetica（斜体）
 
-[`latin_modern_tw`](#manim.utils.tex_templates.TexFontTemplates.latin_modern_tw "manim.utils.tex_templates.TexFontTemplates.latin_modern_tw")
+[`latin_modern_tw`]()
 
 拉丁现代打字机比例
 
-[`latin_modern_tw_it`](#manim.utils.tex_templates.TexFontTemplates.latin_modern_tw_it "manim.utils.tex_templates.TexFontTemplates.latin_modern_tw_it")
+[`latin_modern_tw_it`]()
 
 拉丁现代打字机比例（CM 希腊语）（斜体）
 
-[`libertine`](#manim.utils.tex_templates.TexFontTemplates.libertine "manim.utils.tex_templates.TexFontTemplates.libertine")
+[`libertine`]()
 
 浪荡子
 
-[`libris_adf_fourier`](#manim.utils.tex_templates.TexFontTemplates.libris_adf_fourier "manim.utils.tex_templates.TexFontTemplates.libris_adf_fourier")
+[`libris_adf_fourier`]()
 
 Libris ADF 与傅里叶
 
-[`minion_pro_myriad_pro`](#manim.utils.tex_templates.TexFontTemplates.minion_pro_myriad_pro "manim.utils.tex_templates.TexFontTemplates.minion_pro_myriad_pro")
+[`minion_pro_myriad_pro`]()
 
 Minion Pro 和 Myriad Pro（以及 TX 字体符号）
 
-[`minion_pro_tx`](#manim.utils.tex_templates.TexFontTemplates.minion_pro_tx "manim.utils.tex_templates.TexFontTemplates.minion_pro_tx")
+[`minion_pro_tx`]()
 
 Minion Pro（和 TX 字体符号）
 
-[`new_century_schoolbook`](#manim.utils.tex_templates.TexFontTemplates.new_century_schoolbook "manim.utils.tex_templates.TexFontTemplates.new_ century_schoolbook")
+[`new_century_schoolbook`]()
 
 新世纪教科书（符号希腊语）
 
-[`new_century_schoolbook_px`](#manim.utils.tex_templates.TexFontTemplates.new_century_schoolbook_px "manim.utils.tex_templates.TexFontTemplates.new_ century_schoolbook_px")
+[`new_century_schoolbook_px`]()
 
 新世纪教科书（符号希腊语、PX 数学符号）
 
-[`noteworthy_light`](#manim.utils.tex_templates.TexFontTemplates.noteworthy_light "manim.utils.tex_templates.TexFontTemplates.noteworthy_light")
+[`noteworthy_light`]()
 
 值得注意的光
 
-[`palatino`](#manim.utils.tex_templates.TexFontTemplates.palatino "manim.utils.tex_templates.TexFontTemplates.palatino")
+[`palatino`]()
 
 Palatino（希腊符号）
 
-[`papyrus`](#manim.utils.tex_templates.TexFontTemplates.papyrus "manim.utils.tex_templates.TexFontTemplates.papyrus")
+[`papyrus`]()
 
 纸莎草纸
 
-[`romande_adf_fourier_it`](#manim.utils.tex_templates.TexFontTemplates.romande_adf_fourier_it "manim.utils.tex_templates.TexFontTemplates.romande_adf_fourier_it")
+[`romande_adf_fourier_it`]()
 
 带傅里叶的 Romande ADF（斜体）
 
-[`slitex`](#manim.utils.tex_templates.TexFontTemplates.slitex "manim.utils.tex_templates.TexFontTemplates.slitex")
+[`slitex`]()
 
 SliTeX（欧拉希腊语）
 
-[`times_fourier_it`](#manim.utils.tex_templates.TexFontTemplates.times_fourier_it "manim.utils.tex_templates.TexFontTemplates.times_fourier_it")
+[`times_fourier_it`]()
 
 傅里叶时代（斜体）
 
-[`urw_avant_garde`](#manim.utils.tex_templates.TexFontTemplates.urw_avant_garde "manim.utils.tex_templates.TexFontTemplates.urw_avant_garde")
+[`urw_avant_garde`]()
 
 URW 前卫（希腊符号）
 
-[`urw_zapf_chancery`](#manim.utils.tex_templates.TexFontTemplates.urw_zapf_chancery "manim.utils.tex_templates.TexFontTemplates.urw_zapf_chancery")
+[`urw_zapf_chancery`]()
 
 URW Zapf 办公厅（CM 希腊语）
 
-[`venturis_adf_fourier_it`](#manim.utils.tex_templates.TexFontTemplates.venturis_adf_fourier_it "manim.utils.tex_templates.TexFontTemplates.venturis_adf_fourier_it")
+[`venturis_adf_fourier_it`]()
 
 带傅里叶的文丘里 ADF（斜体）
 
-[`verdana_it`](#manim.utils.tex_templates.TexFontTemplates.verdana_it "manim.utils.tex_templates.TexFontTemplates.verdana_it")
+[`verdana_it`]()
 
 Verdana（斜体）
 
-[`vollkorn`](#manim.utils.tex_templates.TexFontTemplates.vollkorn "manim.utils.tex_templates.TexFontTemplates.vollkorn")
+[`vollkorn`]()
 
 Vollkorn（希腊语和数学符号的 TX 字体）
 
-[`vollkorn_fourier_it`](#manim.utils.tex_templates.TexFontTemplates.vollkorn_fourier_it "manim.utils.tex_templates.TexFontTemplates.vollkorn_fourier_it")
+[`vollkorn_fourier_it`]()
 
 Vollkorn 与 Fourier（斜体）
 
-[`zapf_chancery`](#manim.utils.tex_templates.TexFontTemplates.zapf_chancery "manim.utils.tex_templates.TexFontTemplates.zapf_chancery")
+[`zapf_chancery`]()
 
 扎普夫办公厅
 
-american*typewriter *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.american_typewriter "Permalink to this definition")[](#manim.utils.tex_templates.TexFontTemplates.american_typewriter "此定义的固定链接")
+american*typewriter *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 美国打字机
 
-antykwa _=_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.antykwa "Permalink to this definition")[](#manim.utils.tex_templates.TexFontTemplates.antykwa "此定义的固定链接")
+antykwa _=_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 Antykwa Półtawskiego（希腊语和数学符号的 TX 字体）
 
-apple*chancery *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.apple_chancery "Permalink to this definition")[](#manim.utils.tex_templates.TexFontTemplates.apple_chancery "此定义的固定链接")
+apple*chancery *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 苹果办公厅
 
-auriocus*kalligraphicus *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.auriocus_kalligraphicus "Permalink to this definition")[](#manim.utils.tex_templates.TexFontTemplates.auriocus_kalligraphicus "此定义的固定链接")
+auriocus*kalligraphicus *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 Auriocus Kalligraphicus（希腊符号）
 
-baskervald*adf_fourier *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.baskervald_adf_fourier "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.baskervald_adf_fourier "此定义的固定链接")
+baskervald*adf_fourier *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 带傅里叶的 Baskervald ADF
 
-baskerville*it *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.baskerville_it "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.baskerville_it "此定义的固定链接")
+baskerville*it *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 巴斯克维尔（斜体）
 
-biolinum _=_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.biolinum "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.biolinum "此定义的固定链接")
+biolinum _=_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 比奥林
 
-Brushscriptx _=_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.brushscriptx "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.brushscriptx "此定义的固定链接")
+Brushscriptx _=_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 BrushScriptX-斜体（PX 数学和希腊语）
 
-chalkboard*se *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.chalkboard_se "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.chalkboard_se "此定义的固定链接")
+chalkboard*se *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 黑板 SE
 
-chalkduster _=_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.chalkduster "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.chalkduster "此定义的固定链接")
+chalkduster _=_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 粉笔末
 
-Comfortaa _=_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.comfortaa "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.comfortaa "此定义的固定链接")
+Comfortaa _=_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 康福塔
 
-Comic*sans *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.comic_sans "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.comic_sans "此定义的固定链接")
+Comic*sans *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 漫画无 MS
 
-droid*sans *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.droid_sans "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.droid_sans "此定义的固定链接")
+droid*sans *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 机器人 Sans
 
-droid*sans_it *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.droid_sans_it "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.droid_sans_it "此定义的固定链接")
+droid*sans_it *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 Droid Sans（斜体）
 
-droid*serif *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.droid_serif "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.droid_serif "此定义的固定链接")
+droid*serif *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 机器人衬线
 
-droid*serif_px*it _=\_ _<manim.utils.tex.TexTemplate\_\_对象>\_ [#](#manim.utils.tex_templates.TexFontTemplates.droid_serif_px_it "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.droid_serif_px_it "此定义的固定链接")
+droid*serif_px*it _=\_ _<manim.utils.tex.TexTemplate\_\_对象>\_ 
 
 Droid Serif（PX 数学符号）（斜体）
 
-ecf*augie *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.ecf_augie "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.ecf_augie "此定义的固定链接")
+ecf*augie *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 ECF Augie（欧拉希腊语）
 
-ecf*jd *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.ecf_jd "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.ecf_jd "此定义的固定链接")
+ecf*jd *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 ECF JD（带 TX 字体）
 
-ecf*skeetch *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.ecf_skeetch "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.ecf_skeetch "此定义的固定链接")
+ecf*skeetch *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 ECF 草图（CM 希腊语）
 
-ecf*tall_paul *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.ecf_tall_paul "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.ecf_tall_paul "此定义的固定链接")
+ecf*tall_paul *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 ECF Tall Paul（带 Symbol 字体）
 
-ecf*webster *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.ecf_webster "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.ecf_webster "此定义的固定链接")
+ecf*webster *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 ECF Webster（带有 TX 字体）
 
-electrum*adf *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.electrum_adf "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.electrum_adf "此定义的固定链接")
+electrum*adf *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 金金银 ADF（CM 希腊语）
 
-epigrafica _=_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.epigrafica "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.epigrafica "此定义的固定链接")
+epigrafica _=_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 警句
 
-fourier*utopia *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.fourier_utopia "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.fourier_utopia "此定义的固定链接")
+fourier*utopia *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 傅立叶乌托邦（傅立叶立式希腊语）
 
-french*cursive *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.french_cursive "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.french_cursive "此定义的固定链接")
+french*cursive *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 法语草书（欧拉希腊语）
 
-gfs*bodoni *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.gfs_bodoni "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.gfs_bodoni "此定义的固定链接")
+gfs*bodoni *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 GFS 博多尼
 
-gfs*didot *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.gfs_didot "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.gfs_didot "此定义的固定链接")
+gfs*didot *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 GFS Didot（斜体）
 
-gfs*neoHellenic *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.gfs_neoHellenic "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.gfs_neoHellenic "此定义的固定链接")
+gfs*neoHellenic *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 GFS 新希腊语
 
-gnu*freesans_tx *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.gnu_freesans_tx "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.gnu_freesans_tx "此定义的固定链接")
+gnu*freesans_tx *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 GNU FreeSerif（和 TX 字体符号）
 
-gnu*freeserif_freesans *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.gnu_freeserif_freesans "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.gnu_freeserif_freesans "此定义的固定链接")
+gnu*freeserif_freesans *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 GNU FreeSerif 和 FreeSans
 
-helvetica*fourier_it *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.helvetica_fourier_it "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.helvetica_fourier_it "此定义的固定链接")
+helvetica*fourier_it *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 带傅里叶的 Helvetica（斜体）
 
-latin*modern_tw *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.latin_modern_tw "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.latin_modern_tw "此定义的固定链接")
+latin*modern_tw *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 拉丁现代打字机比例
 
-latin*modern_tw*it _=\_ _<manim.utils.tex.TexTemplate\_\_对象>\_ [#](#manim.utils.tex_templates.TexFontTemplates.latin_modern_tw_it "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.latin_modern_tw_it "此定义的固定链接")
+latin*modern_tw*it _=\_ _<manim.utils.tex.TexTemplate\_\_对象>\_ 
 
 拉丁现代打字机比例（CM 希腊语）（斜体）
 
-libertine _=_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.libertine "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.libertine "此定义的固定链接")
+libertine _=_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 浪荡子
 
-libris*adf_fourier *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.libris_adf_fourier "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.libris_adf_fourier "此定义的固定链接")
+libris*adf_fourier *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 Libris ADF 与傅里叶
 
-minion*pro_myriad*pro _=\_ _<manim.utils.tex.TexTemplate\_\_对象>\_ [#](#manim.utils.tex_templates.TexFontTemplates.minion_pro_myriad_pro "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.minion_pro_myriad_pro "此定义的固定链接")
+minion*pro_myriad*pro _=\_ _<manim.utils.tex.TexTemplate\_\_对象>\_ 
 
 Minion Pro 和 Myriad Pro（以及 TX 字体符号）
 
-minion*pro_tx *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.minion_pro_tx "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.minion_pro_tx "此定义的固定链接")
+minion*pro_tx *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 Minion Pro（和 TX 字体符号）
 
-new* century_schoolbook *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.new_century_schoolbook "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.new_century_schoolbook "此定义的固定链接")
+new* century_schoolbook *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 新世纪教科书（符号希腊语）
 
-new* century_schoolbook_px *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.new_century_schoolbook_px "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.new_century_schoolbook_px "此定义的固定链接")
+new* century_schoolbook_px *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 新世纪教科书（符号希腊语、PX 数学符号）
 
-noteworthy*light *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.noteworthy_light "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.noteworthy_light "此定义的固定链接")
+noteworthy*light *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 值得注意的光
 
-palatino _=_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.palatino "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.palatino "此定义的固定链接")
+palatino _=_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 Palatino（希腊符号）
 
-纸莎草*=* _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.papyrus "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.papyrus "此定义的固定链接")
+纸莎草*=* _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 纸莎草纸
 
-romande*adf_fourier*it _=\_ _<manim.utils.tex.TexTemplate\_\_对象>\_ [#](#manim.utils.tex_templates.TexFontTemplates.romande_adf_fourier_it "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.romande_adf_fourier_it "此定义的固定链接")
+romande*adf_fourier*it _=\_ _<manim.utils.tex.TexTemplate\_\_对象>\_ 
 
 带傅里叶的 Romande ADF（斜体）
 
-slimex _=_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.slitex "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.slitex "此定义的固定链接")
+slimex _=_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 SliTeX（欧拉希腊语）
 
-times*fourier_it *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.times_fourier_it "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.times_fourier_it "此定义的固定链接")
+times*fourier_it *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 傅里叶时代（斜体）
 
-urw*avant_garde *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.urw_avant_garde "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.urw_avant_garde "此定义的固定链接")
+urw*avant_garde *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 URW 前卫（希腊符号）
 
-urw*zapf_chancery *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.urw_zapf_chancery "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.urw_zapf_chancery "此定义的固定链接")
+urw*zapf_chancery *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 URW Zapf 办公厅（CM 希腊语）
 
-venturis*adf_fourier*it _=\_ _<manim.utils.tex.TexTemplate\_\_对象>\_ [#](#manim.utils.tex_templates.TexFontTemplates.venturis_adf_fourier_it "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.venturis_adf_fourier_it "此定义的固定链接")
+venturis*adf_fourier*it _=\_ _<manim.utils.tex.TexTemplate\_\_对象>\_ 
 
 带傅里叶的文丘里 ADF（斜体）
 
-verdana*it *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.verdana_it "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.verdana_it "此定义的固定链接")
+verdana*it *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 Verdana（斜体）
 
-vollkorn _=_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.vollkorn "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.vollkorn "此定义的固定链接")
+vollkorn _=_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 Vollkorn（希腊语和数学符号的 TX 字体）
 
-vollkorn*fourier_it *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.vollkorn_fourier_it "此定义的固定链接")[](#manim.utils.tex_templates.TexFontTemplates.vollkorn_fourier_it "此定义的固定链接")
+vollkorn*fourier_it *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 Vollkorn 与 Fourier（斜体）
 
-zapf*chancery *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ [#](#manim.utils.tex_templates.TexFontTemplates.zapf_chancery "Permalink to this definition")[](#manim.utils.tex_templates.TexFontTemplates.zapf_chancery "此定义的固定链接")
+zapf*chancery *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
 
 扎普夫办公厅

@@ -1,4 +1,4 @@
-# 马尼姆横幅[#](#manimbanner "此标题的固定链接")
+# Manim横幅
 
 合格名称：`manim.mobject.logo.ManimBanner`
 

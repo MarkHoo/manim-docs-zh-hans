@@ -1,4 +1,4 @@
-# 组[#](#group "此标题的固定链接")
+# 组
 
 合格名称：`manim.mobject.mobject.Group`
 

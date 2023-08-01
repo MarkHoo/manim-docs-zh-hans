@@ -1,11 +1,14 @@
-外接[#](#circumscribe "此标题的固定链接")
-===============================
+# 外接
+
 
 合格名称：`manim.animation.indication.Circumscribe`
 
-_类_ Circumscribe ( _mobject = None_ , _\* args_ , _use_override = True_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/animation/indication.html#Circumscribe)[#](#manim.animation.indication.Circumscribe "此定义的固定链接")
 
-基地：[`Succession`](manim.animation.composition.Succession.html#manim.animation.composition.Succession "manim.animation.composition.Succession")
+```py
+class Circumscribe(mobject=None, *args, use_override=True, **kwargs)
+```
+
+Bases: Succession
 
 在对象周围画一条临时线。
 
@@ -13,7 +16,7 @@ _类_ Circumscribe ( _mobject = None_ , _\* args_ , _use_override = True_ , _\*\
 
 *   **mobject** – 要限制的 mobject。
     
-*   **shape** – 包围给定对象的形状。应该是 [`Rectangle`](manim.mobject.geometry.polygram.Rectangle.html#manim.mobject.geometry.polygram.Rectangle "manim.mobject.geometry.polygram.矩形")或者[`Circle`](manim.mobject.geometry.arc.Circle.html#manim.mobject.geometry.arc.Circle "manim.mobject.geometry.arc.Circle")
+*   **shape** – 包围给定对象的形状。应该是 [`Rectangle`]()或者[`Circle`]()
     
 *   **fade_in** – 是否使周围的形状淡入。否则将绘制它。
     
@@ -23,29 +26,29 @@ _类_ Circumscribe ( _mobject = None_ , _\* args_ , _use_override = True_ , _\*\
     
 *   **buff** – 周围形状与给定对象之间的距离。
     
-*   **颜色**– 周围形状的颜色。
+*   **color**– 周围形状的颜色。
     
 *   **run_time** – 整个动画的持续时间。
     
-*   **kwargs** – 要传递给[`Succession`](manim.animation.composition.Succession.html#manim.animation.composition.Succession "manim.animation.composition.Succession")构造函数的附加参数
+*   **kwargs** – 要传递给[`Succession`]()构造函数的附加参数
     
 
 例子
 
-示例：使用Circumscribe [¶](#usingcircumscribe)
+示例：使用Circumscribe 
 
+```py
 from manim import *
 
 class UsingCircumscribe(Scene):
     def construct(self):
-        lbl = Tex(r"Circum-\\\scribe").scale(2)
+        lbl = Tex(r"Circum-\\scribe").scale(2)
         self.add(lbl)
         self.play(Circumscribe(lbl))
         self.play(Circumscribe(lbl, Circle))
         self.play(Circumscribe(lbl, fade_out=True))
         self.play(Circumscribe(lbl, time_width=2))
         self.play(Circumscribe(lbl, Circle, True))
-
-Copy to clipboard
+```
 
 方法

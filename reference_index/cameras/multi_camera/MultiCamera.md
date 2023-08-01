@@ -1,10 +1,12 @@
-# 多相机[#](#multicamera "此标题的固定链接")
+# 多相机
 
 合格名称：`manim.camera.multi\_camera.MultiCamera`
 
-多相机*类*（_image_mobjects_from_cameras = None_， _allow_cameras_to_capture_their_own_display = False_， _\*\* kwargs_）[\[来源\]](../_modules/manim/camera/multi_camera.html#MultiCamera)[#](#manim.camera.multi_camera.MultiCamera "此定义的固定链接")
+```py
+class MultiCamera(image_mobjects_from_cameras=None, allow_cameras_to_capture_their_own_display=False, **kwargs)
+```
 
-基地：[`MovingCamera`](manim.camera.moving_camera.MovingCamera.html#manim.camera.moving_camera.MovingCamera "manim.camera.movi​​ng_camera.MovingCamera")
+Bases: MovingCamera
 
 允许多个视角的相机对象。
 
@@ -12,58 +14,42 @@
 
 参数
 
-- **image_mobjects_from_cameras** ( [_ImageMobject_](manim.mobject.types.image_mobject.ImageMobject.html#manim.mobject.types.image_mobject.ImageMobject "manim.mobject.types.image_mobject.ImageMobject") _|\_\_无_) –
+- **image_mobjects_from_cameras** ( [_ImageMobject_]() _|\_\_无_) –
 - **kwargs** – MovingCamera 的任何有效关键字参数。
 
 方法
 
-[`add_image_mobject_from_camera`](#manim.camera.multi_camera.MultiCamera.add_image_mobject_from_camera "manim.camera.multi_camera.MultiCamera.add_image_mobject_from_camera")
+|||
+|-|-|
+[`add_image_mobject_from_camera`]()|将从相机获取的 ImageMobject 添加到列表中`self.image_mobject_from_cameras`
+[`capture_mobjects`]()|通过将 mobject 打印在 上来捕获它们`pixel_array`。
+[`get_mobjects_indicating_movement`]()|返回所有其移动意味着相机应将屏幕上的所有其他 mobject 视为移动的 mobject
+[`reset`]()|重置多摄像机。
+[`update_sub_cameras`]()|重塑子相机像素数组
 
-将从相机获取的 ImageMobject 添加到列表中`self.image_mobject_from_cameras`
-
-[`capture_mobjects`](#manim.camera.multi_camera.MultiCamera.capture_mobjects "manim.camera.multi_camera.MultiCamera.capture_mobjects")
-
-通过将 mobject 打印在 上来捕获它们`pixel_array`。
-
-[`get_mobjects_indicating_movement`](#manim.camera.multi_camera.MultiCamera.get_mobjects_indicating_movement "manim.camera.multi_camera.MultiCamera.get_mobjects_indicating_movement")
-
-返回所有其移动意味着相机应将屏幕上的所有其他 mobject 视为移动的 mobject
-
-[`reset`](#manim.camera.multi_camera.MultiCamera.reset "manim.camera.multi_camera.MultiCamera.reset")
-
-重置多摄像机。
-
-[`update_sub_cameras`](#manim.camera.multi_camera.MultiCamera.update_sub_cameras "manim.camera.multi_camera.MultiCamera.update_sub_cameras")
-
-重塑子相机像素数组
 
 属性
 
-`background_color`
+|||
+|-|-|
+`background_color`|
+`background_opacity`|
+`frame_center`|返回笛卡尔坐标系中框架的中心点。
+`frame_height`|返回框架的高度。
+`frame_width`|返回框架的宽度
 
-`background_opacity`
 
-`frame_center`
-
-返回笛卡尔坐标系中框架的中心点。
-
-`frame_height`
-
-返回框架的高度。
-
-`frame_width`
-
-返回框架的宽度
-
-添加\_image*mobject_from_camera ( \_image_mobject_from_camera* )[\[来源\]](../_modules/manim/camera/multi_camera.html#MultiCamera.add_image_mobject_from_camera)[#](#manim.camera.multi_camera.MultiCamera.add_image_mobject_from_camera "此定义的固定链接")
+```py
+add_image_mobject_from_camera(image_mobject_from_camera)
+```
 
 将从相机获取的 ImageMobject 添加到列表中`self.image_mobject_from_cameras`
 
 参数
 
-**image_mobject_from_camera** ( [_ImageMobject_](manim.mobject.types.image_mobject.ImageMobject.html#manim.mobject.types.image_mobject.ImageMobject "manim.mobject.types.image_mobject.ImageMobject") ) – 要添加到 self.image_mobject_from_cameras 的 ImageMobject
+**image_mobject_from_camera** ( [_ImageMobject_]() ) – 要添加到 self.image_mobject_from_cameras 的 ImageMobject
 
-capture*mobjects ( \_mobjects* , _\*\* kwargs_ )[\[来源\]](../_modules/manim/camera/multi_camera.html#MultiCamera.capture_mobjects)[#](#manim.camera.multi_camera.MultiCamera.capture_mobjects "此定义的固定链接")
+capture*mobjects ( \_mobjects* , _\*\* kwargs_ )
 
 通过将 mobject 打印在 上来捕获它们`pixel_array`。
 
@@ -78,7 +64,7 @@ capture*mobjects ( \_mobjects* , _\*\* kwargs_ )[\[来源\]](../_modules/manim/c
 
 有关当前可以呈现的类的列表，请参阅`display_funcs()`。
 
-get_mobjects_indicating_movement ( )[\[来源\]](../_modules/manim/camera/multi_camera.html#MultiCamera.get_mobjects_indicating_movement)[#](#manim.camera.multi_camera.MultiCamera.get_mobjects_indicating_movement "此定义的固定链接")
+get_mobjects_indicating_movement ( )
 
 返回所有其移动意味着相机应将屏幕上的所有其他 mobject 视为移动的 mobject
 
@@ -86,7 +72,7 @@ get_mobjects_indicating_movement ( )[\[来源\]](../_modules/manim/camera/multi_
 
 列表
 
-重置( )[\[来源\]](../_modules/manim/camera/multi_camera.html#MultiCamera.reset)[#](#manim.camera.multi_camera.MultiCamera.reset "此定义的固定链接")
+重置( )
 
 重置多摄像机。
 
@@ -96,8 +82,8 @@ get_mobjects_indicating_movement ( )[\[来源\]](../_modules/manim/camera/multi_
 
 返回类型
 
-[多机位](#manim.camera.multi_camera.MultiCamera "manim.camera.multi_camera.MultiCamera")
+[多机位]()
 
-update_sub_cameras ( )[\[来源\]](../_modules/manim/camera/multi_camera.html#MultiCamera.update_sub_cameras)[#](#manim.camera.multi_camera.MultiCamera.update_sub_cameras "此定义的固定链接")
+update_sub_cameras ( )
 
 重塑子相机像素数组

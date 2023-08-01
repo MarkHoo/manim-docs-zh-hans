@@ -1,4 +1,4 @@
-# svg_mobject [#](#module-manim.mobject.svg.svg_mobject "此标题的固定链接")
+# svg_mobject
 
 从 SVG 文件生成的 Mobject。
 

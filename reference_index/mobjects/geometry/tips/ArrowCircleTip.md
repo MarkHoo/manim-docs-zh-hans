@@ -1,4 +1,4 @@
-# 箭头圆圈提示[#](#arrowcircletip "此标题的固定链接")
+# 箭头圆圈提示
 
 合格名称：`manim.mobject.geometry.tips.ArrowCircleTip`
 

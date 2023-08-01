@@ -1,4 +1,4 @@
-# 联盟[#](#union "此标题的固定链接")
+# 联盟
 
 合格名称：`manim.mobject.geometry.boolean\_ops.Union`
 

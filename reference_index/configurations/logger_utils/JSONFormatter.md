@@ -1,10 +1,12 @@
-# JSONFormatter [#](#jsonformatter "此标题的固定链接")
+# JSONFormatter 
 
 合格名称：`manim.\_config.logger\_utils.JSONFormatter`
 
-_类_ JSONFormatter ( _fmt = None_、 _datefmt = None_、 _style = '%'_、 _validate = True_ )[\[来源\]](../_modules/manim/_config/logger_utils.html#JSONFormatter)[#](#manim._config.logger_utils.JSONFormatter "此定义的固定链接")
+```py
+class JSONFormatter(fmt=None, datefmt=None, style='%', validate=True)
+```
 
-基地：`Formatter`
+Bases: Formatter
 
 以自定义 JSON 格式输出日志的格式化程序。
 
@@ -20,14 +22,13 @@ _类_ JSONFormatter ( _fmt = None_、 _datefmt = None_、 _style = '%'_、 _vali
 
 方法
 
-[`format`](#manim._config.logger_utils.JSONFormatter.format "manim._config.logger_utils.JSONFormatter.format")
-
-将记录格式化为自定义 JSON 格式。
+|||
+|-|-|
+[`format`]()|将记录格式化为自定义 JSON 格式。
 
 属性
 
 `default_msec_format`
-
 `default_time_format`
 
 格式（_记录_）[\[来源\]](../_modules/manim/_config/logger_utils.html#JSONFormatter.format)[#](#manim._config.logger_utils.JSONFormatter.format "此定义的固定链接")

@@ -1,4 +1,4 @@
-# 隐身提示[#](#stealthtip "此标题的固定链接")
+# 隐身提示
 
 合格名称：`manim.mobject.geometry.tips.StealthTip`
 

@@ -1,4 +1,4 @@
-# 标题[#](#title "此标题的固定链接")
+# 标题
 
 合格名称：`manim.mobject.text.tex\_mobject.Title`
 

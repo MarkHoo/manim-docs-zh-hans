@@ -1,4 +1,4 @@
-# 点云对象[#](#module-manim.mobject.types.point_cloud_mobject "此标题的固定链接")
+# 点云对象
 
 表示点云的 Mobject。
 

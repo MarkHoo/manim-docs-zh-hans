@@ -1,4 +1,4 @@
-# 函数[#](#module-manim.mobject.graphing.functions "此标题的固定链接")
+# 函数
 
 表示函数图的 Mobject。
 

@@ -1,4 +1,4 @@
-# 通用图[#](#genericgraph "此标题的固定链接")
+# 通用图
 
 合格名称：`manim.mobject.graph.GenericGraph`
 

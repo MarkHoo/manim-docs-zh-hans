@@ -1,4 +1,4 @@
-# 方[#](#square "此标题的固定链接")
+# 方
 
 合格名称：`manim.mobject.geometry.polygram.Square`
 

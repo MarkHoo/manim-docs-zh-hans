@@ -1,4 +1,4 @@
-# 表[#](#table "此标题的固定链接")
+# 表
 
 合格名称：`manim.mobject.table.Table`
 

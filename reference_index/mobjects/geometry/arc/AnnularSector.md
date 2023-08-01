@@ -1,4 +1,4 @@
-# 环形扇区[#](#annularsector "此标题的固定链接")
+# 环形扇区
 
 合格名称：`manim.mobject.geometry.arc.AnnularSector`
 

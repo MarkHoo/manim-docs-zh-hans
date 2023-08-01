@@ -1,4 +1,4 @@
-# 扇区[#](#sector "此标题的固定链接")
+# 扇区
 
 合格名称：`manim.mobject.geometry.arc.Sector`
 

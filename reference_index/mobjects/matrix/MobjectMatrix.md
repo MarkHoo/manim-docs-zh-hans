@@ -1,4 +1,4 @@
-# 对象矩阵[#](#mobjectmatrix "此标题的固定链接")
+# 对象矩阵
 
 合格名称：`manim.mobject.matrix.MobjectMatrix`
 

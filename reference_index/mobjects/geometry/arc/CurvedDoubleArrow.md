@@ -1,4 +1,4 @@
-# 弯曲双箭头[#](#curveddoublearrow "此标题的固定链接")
+# 弯曲双箭头
 
 合格名称：`manim.mobject.geometry.arc.CurvedDoubleArrow`
 

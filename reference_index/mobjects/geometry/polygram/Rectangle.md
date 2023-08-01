@@ -1,4 +1,4 @@
-# 矩形[#](#rectangle "此标题的固定链接")
+# 矩形
 
 合格名称：`manim.mobject.geometry.polygram.Rectangle`
 

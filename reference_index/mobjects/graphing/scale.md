@@ -1,4 +1,4 @@
-# 规模[#](#module-manim.mobject.graphing.scale "此标题的固定链接")
+# 规模
 
 课程
 

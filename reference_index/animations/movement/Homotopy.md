@@ -1,10 +1,12 @@
-# 同伦[#](#homotopy "此标题的固定链接")
+# 同伦
 
 合格名称：`manim.animation.movement.Homotopy`
 
-_类同_ 伦（_mobject = None_， _\* args_， _use_override = True_， _\*\* kwargs_）[\[来源\]](../_modules/manim/animation/movement.html#Homotopy)[#](#manim.animation.movement.Homotopy "此定义的固定链接")
+```py
+class Homotopy(mobject=None, *args, use_override=True, **kwargs)
+```
 
-基地：[`Animation`](manim.animation.animation.Animation.html#manim.animation.animation.Animation "manim.animation.animation.Animation")
+Bases: Animation
 
 同伦。
 
@@ -12,7 +14,7 @@ _类同_ 伦（_mobject = None_， _\* args_， _use_override = True_， _\*\* k
 
 参数
 
-- **同伦**——函数映射(x,y,z,t)到(x′,y′,z′)。
+- **homotopy**——函数映射(x,y,z,t)到(x′,y′,z′)。
 - **mobject** – 在给定同伦下变换的 mobject。
 - **run_time** – 动画的运行时间。
 - **apply_function_kwargs** – 传播到 的关键字参数`Mobject.apply_function()`。
@@ -20,6 +22,7 @@ _类同_ 伦（_mobject = None_， _\* args_， _use_override = True_， _\*\* k
 
 方法
 
-`function_at_time_t`
-
-`interpolate_submobject`
+|||
+|-|-|
+`function_at_time_t`|
+`interpolate_submobject`|

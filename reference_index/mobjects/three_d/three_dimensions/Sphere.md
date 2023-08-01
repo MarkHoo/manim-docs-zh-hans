@@ -1,4 +1,4 @@
-# 球体[#](#sphere "此标题的固定链接")
+# 球体
 
 合格名称：`manim.mobject.three\_d.three\_dimensions.Sphere`
 

@@ -1,4 +1,4 @@
-# 图像对象[#](#imagemobject "此标题的固定链接")
+# 图像对象
 
 合格名称：`manim.mobject.types.image\_mobject.ImageMobject`
 

@@ -1,4 +1,4 @@
-# 椭圆[#](#ellipse "此标题的固定链接")
+# 椭圆
 
 合格名称：`manim.mobject.geometry.arc.Ellipse`
 

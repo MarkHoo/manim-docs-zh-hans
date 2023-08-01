@@ -1,4 +1,4 @@
-# 大括号[#](#module-manim.mobject.svg.brace "此标题的固定链接")
+# 大括号
 
 Mobject 代表花括号。
 

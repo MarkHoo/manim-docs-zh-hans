@@ -1,4 +1,4 @@
-# 矢量场[#](#vectorfield "此标题的固定链接")
+# 矢量场
 
 合格名称：`manim.mobject.vector\_field.VectorField`
 

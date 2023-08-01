@@ -1,4 +1,4 @@
-# 点之间的大括号[#](#bracebetweenpoints "此标题的固定链接")
+# 点之间的大括号
 
 合格名称：`manim.mobject.svg.brace.BraceBetweenPoints`
 

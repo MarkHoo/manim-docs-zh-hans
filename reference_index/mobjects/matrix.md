@@ -1,10 +1,10 @@
-# 矩阵[#](#module-manim.mobject.matrix "此标题的固定链接")
+# 矩阵
 
 表示矩阵的 Mobject。
 
 例子
 
-示例：矩阵示例[¶](#matrixexamples)
+示例：矩阵示例
 
 ![../_images/MatrixExamples-1.png](../_images/MatrixExamples-1.png)
 

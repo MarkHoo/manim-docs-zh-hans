@@ -1,4 +1,4 @@
-# 三轴[#](#threedaxes "此标题的固定链接")
+# 三轴
 
 合格名称：`manim.mobject.graphing.coordinate\_systems.ThreeDAxes`
 

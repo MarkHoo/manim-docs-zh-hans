@@ -1,4 +1,4 @@
-# 表面[#](#surface "此标题的固定链接")
+# 表面
 
 合格名称：`manim.mobject.three\_d.three\_dimensions.Surface`
 

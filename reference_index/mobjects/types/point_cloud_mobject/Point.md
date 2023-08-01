@@ -1,4 +1,4 @@
-# 点[#](#point "此标题的固定链接")
+# 点
 
 合格名称：`manim.mobject.types.point\_cloud\_mobject.Point`
 

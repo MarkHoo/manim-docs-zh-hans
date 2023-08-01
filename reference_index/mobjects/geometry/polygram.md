@@ -1,4 +1,4 @@
-# 多字母[#](#module-manim.mobject.geometry.polygram "此标题的固定链接")
+# 多字母
 
 Mobjects 是简单的几何形状。
 

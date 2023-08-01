@@ -1,4 +1,4 @@
-# 流线[#](#streamlines "此标题的固定链接")
+# 流线
 
 合格名称：`manim.mobject.vector\_field.StreamLines`
 

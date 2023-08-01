@@ -1,4 +1,4 @@
-# 正多边形[#](#regularpolygon "此标题的固定链接")
+# 正多边形
 
 合格名称：`manim.mobject.geometry.polygram.RegularPolygon`
 

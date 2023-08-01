@@ -1,4 +1,4 @@
-# 隐式函数[#](#implicitfunction "此标题的固定链接")
+# 隐式函数
 
 合格名称：`manim.mobject.graphing.functions.ImplicitFunction`
 

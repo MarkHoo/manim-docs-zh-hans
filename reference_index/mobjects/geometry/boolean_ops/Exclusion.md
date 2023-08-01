@@ -1,4 +1,4 @@
-# 排除[#](#exclusion "此标题的固定链接")
+# 排除
 
 合格名称：`manim.mobject.geometry.boolean\_ops.Exclusion`
 

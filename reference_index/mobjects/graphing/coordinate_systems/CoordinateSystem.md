@@ -1,4 +1,4 @@
-# 坐标系[#](#coordinatesystem "此标题的固定链接")
+# 坐标系
 
 合格名称：`manim.mobject.graphing.coordinate\_systems.CoordinateSystem`
 

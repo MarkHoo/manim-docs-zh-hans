@@ -1,5 +1,4 @@
-三次贝塞尔曲线[#](#cubicbezier "此标题的固定链接")
-===================================
+# 三次贝塞尔曲线
 
 合格名称：`manim.mobject.geometry.arc.CubicBezier`
 

@@ -1,4 +1,4 @@
-# 剪纸[#](#cutout "此标题的固定链接")
+# 剪纸
 
 合格名称：`manim.mobject.geometry.polygram.Cutout`
 

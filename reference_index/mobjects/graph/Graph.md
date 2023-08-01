@@ -1,4 +1,4 @@
-# 图[#](#graph "此标题的固定链接")
+# 图
 
 合格名称：`manim.mobject.graph.Graph`
 

@@ -1,4 +1,4 @@
-# 背景矩形[#](#backgroundrectangle "此标题的固定链接")
+# 背景矩形
 
 合格名称：`manim.mobject.geometry.shape\_matchers.BackgroundRectangle`
 

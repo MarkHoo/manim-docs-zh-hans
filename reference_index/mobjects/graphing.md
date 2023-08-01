@@ -1,8 +1,8 @@
-# 绘图[#](#module-manim.mobject.graphing "此标题的固定链接")
+# 绘图
 
 坐标系和函数绘图相关的对象。
 
-## 模块[#](#modules "此标题的固定链接")
+## 模块
 
 [`coordinate_systems`](manim.mobject.graphing.coordinate_systems.html#module-manim.mobject.graphing.coordinate_systems "manim.mobject.graphing.coordinate_systems")
 

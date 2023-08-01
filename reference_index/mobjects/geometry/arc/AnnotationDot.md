@@ -1,4 +1,4 @@
-# 注释点[#](#annotationdot "此标题的固定链接")
+# 注释点
 
 合格名称：`manim.mobject.geometry.arc.AnnotationDot`
 

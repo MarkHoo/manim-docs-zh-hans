@@ -1,4 +1,4 @@
-# 箭头提示[#](#arrowtip "此标题的固定链接")
+# 箭头提示
 
 合格名称：`manim.mobject.geometry.tips.ArrowTip`
 

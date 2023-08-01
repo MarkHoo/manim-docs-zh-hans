@@ -1,4 +1,4 @@
-# 变量[#](#variable "此标题的固定链接")
+# 变量
 
 合格名称：`manim.mobject.text.numbers.Variable`
 

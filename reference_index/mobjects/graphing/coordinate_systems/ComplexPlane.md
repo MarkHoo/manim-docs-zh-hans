@@ -1,4 +1,4 @@
-# 复杂平面[#](#complexplane "此标题的固定链接")
+# 复杂平面
 
 合格名称：`manim.mobject.graphing.coordinate\_systems.ComplexPlane`
 

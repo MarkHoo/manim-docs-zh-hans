@@ -1,4 +1,4 @@
-# 线性基础[#](#linearbase "此标题的固定链接")
+# 线性基础
 
 合格名称：`manim.mobject.graphing.scale.LinearBase`
 

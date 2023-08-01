@@ -1,4 +1,4 @@
-# 整数矩阵[#](#integermatrix "此标题的固定链接")
+# 整数矩阵
 
 合格名称：`manim.mobject.matrix.IntegerMatrix`
 

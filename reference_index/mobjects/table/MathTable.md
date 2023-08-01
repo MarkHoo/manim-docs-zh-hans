@@ -1,4 +1,4 @@
-# 数学表[#](#mathtable "此标题的固定链接")
+# 数学表
 
 合格名称：`manim.mobject.table.MathTable`
 

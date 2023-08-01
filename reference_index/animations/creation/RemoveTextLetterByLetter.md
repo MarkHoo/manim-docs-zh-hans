@@ -1,8 +1,10 @@
-# 按字母删除文本[#](#removetextletterbyletter "此标题的固定链接")
+# 按字母删除文本
 
 合格名称：`manim.animation.creation.RemoveTextLetterByLetter`
 
-_类_ RemoveTextLetterByLetter ( _mobject = None_ , _\* args_ , _use_override = True_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/animation/creation.html#RemoveTextLetterByLetter)[#](#manim.animation.creation.RemoveTextLetterByLetter "此定义的固定链接")
+```py
+class RemoveTextLetterByLetter(mobject=None, *args, use_override=True, **kwargs)
+```
 
 基地：[`AddTextLetterByLetter`](manim.animation.creation.AddTextLetterByLetter.html#manim.animation.creation.AddTextLetterByLetter "manim.animation.creation.AddTextLetterByLetter")
 

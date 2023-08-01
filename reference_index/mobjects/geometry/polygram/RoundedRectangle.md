@@ -1,4 +1,4 @@
-# 圆角矩形[#](#roundedrectangle "此标题的固定链接")
+# 圆角矩形
 
 合格名称：`manim.mobject.geometry.polygram.RoundedRectangle`
 

@@ -1,4 +1,4 @@
-# 差异[#](#difference "此标题的固定链接")
+# 差异
 
 合格名称：`manim.mobject.geometry.boolean\_ops.Difference`
 

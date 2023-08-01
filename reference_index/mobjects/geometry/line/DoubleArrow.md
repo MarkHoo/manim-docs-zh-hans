@@ -1,4 +1,4 @@
-# 双箭头[#](#doublearrow "此标题的固定链接")
+# 双箭头
 
 合格名称：`manim.mobject.geometry.line.DoubleArrow`
 

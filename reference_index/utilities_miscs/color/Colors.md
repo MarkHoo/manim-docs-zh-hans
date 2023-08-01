@@ -1,8 +1,8 @@
-# 颜色[#](#colors "此标题的固定链接")
+# 颜色
 
 合格名称：`manim.utils.color.Colors`
 
-颜色*类别*（_值_）[\[来源\]](../_modules/manim/utils/color.html#Colors)[#](#manim.utils.color.Colors "此定义的固定链接")
+颜色*类别*（_值_）
 
 基地：`Enum`
 
@@ -14,21 +14,19 @@
 
 使用这些颜色的首选方法是从 manim 导入它们的常量：
 
-> > \> from manim import RED, GREEN, BLUE
-> > \> RED
-> > '#FC6255'
+```py
 
-Copy to clipboard
+```
+
 
 请注意，这种方式使用大写的颜色名称。
 
 或者，您也可以通过使用 . 直接导入此 Enum 并直接使用其成员`color.value`。请注意，这种方式使用小写的颜色名称。
 
-> > \> from manim.utils.color import Colors
-> > \> Colors.red.value
-> > '#FC6255'
+```py
 
-Copy to clipboard
+```
+
 
 笔记
 

@@ -1,4 +1,4 @@
-# 价值追踪器[#](#valuetracker "此标题的固定链接")
+# 值追踪器
 
 合格名称：`manim.mobject.value\_tracker.ValueTracker`
 

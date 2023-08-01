@@ -1,10 +1,10 @@
-# 实用程序[#](#module-manim.mobject.utils "此标题的固定链接")
+# 实用程序
 
 用于处理 mobject 的实用程序。
 
 功能
 
-获取对象类( )[\[来源\]](../_modules/manim/mobject/utils.html#get_mobject_class)[#](#manim.mobject.utils.get_mobject_class "此定义的固定链接")
+获取对象类( )
 
 获取 mobject 基类，具体取决于当前活动的渲染器。
 
@@ -26,7 +26,7 @@ Copy to clipboard
 
 类型
 
-获取点对象类( )[\[来源\]](../_modules/manim/mobject/utils.html#get_point_mobject_class)[#](#manim.mobject.utils.get_point_mobject_class "此定义的固定链接")
+获取点对象类( )
 
 获取点云 mobject 类，具体取决于当前活动的渲染器。
 
@@ -48,7 +48,7 @@ Copy to clipboard
 
 类型
 
-获取向量化对象类( )[\[来源\]](../_modules/manim/mobject/utils.html#get_vectorized_mobject_class)[#](#manim.mobject.utils.get_vectorized_mobject_class "此定义的固定链接")
+获取向量化对象类( )
 
 获取矢量化 mobject 类，具体取决于当前活动的渲染器。
 

@@ -1,4 +1,4 @@
-# 数行[#](#numberline "此标题的固定链接")
+# 数行
 
 合格名称：`manim.mobject.graphing.number\_line.NumberLine`
 

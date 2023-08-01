@@ -1,4 +1,4 @@
-# 弧撑[#](#arcbrace "此标题的固定链接")
+# 弧撑
 
 合格名称：`manim.mobject.svg.brace.ArcBrace`
 

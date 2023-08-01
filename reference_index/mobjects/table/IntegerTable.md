@@ -1,4 +1,4 @@
-# 整数表[#](#integertable "此标题的固定链接")
+# 整数表
 
 合格名称：`manim.mobject.table.IntegerTable`
 

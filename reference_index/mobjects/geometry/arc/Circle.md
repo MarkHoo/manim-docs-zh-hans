@@ -1,4 +1,4 @@
-# 圈[#](#circle "此标题的固定链接")
+# 圈
 
 合格名称：`manim.mobject.geometry.arc.Circle`
 

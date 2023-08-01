@@ -1,4 +1,4 @@
-# 箭头三角形提示[#](#arrowtriangletip "此标题的固定链接")
+# 箭头三角形提示
 
 合格名称：`manim.mobject.geometry.tips.ArrowTriangleTip`
 

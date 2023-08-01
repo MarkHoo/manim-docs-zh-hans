@@ -1,4 +1,4 @@
-# 复杂值追踪器[#](#complexvaluetracker "此标题的固定链接")
+# 复杂值追踪器
 
 合格名称：`manim.mobject.value\_tracker.ComplexValueTracker`
 

@@ -1,4 +1,4 @@
-# 多面体[#](#module-manim.mobject.three_d.polyhedra "此标题的固定链接")
+# 多面体
 
 一般多面体类和柏拉图立体。
 

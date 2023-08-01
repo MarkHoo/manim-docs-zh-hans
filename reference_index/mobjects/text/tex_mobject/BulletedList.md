@@ -1,4 +1,4 @@
-# 项目符号列表[#](#bulletedlist "此标题的固定链接")
+# 项目符号列表
 
 合格名称：`manim.mobject.text.tex\_mobject.BulletedList`
 

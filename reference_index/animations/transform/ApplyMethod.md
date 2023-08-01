@@ -1,10 +1,12 @@
-# 应用方法[#](#applymethod "此标题的固定链接")
+# 应用方法
 
 合格名称：`manim.animation.transform.ApplyMethod`
 
-_类_ ApplyMethod ( _mobject = None_ , _\* args_ , _use_override = True_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/animation/transform.html#ApplyMethod)[#](#manim.animation.transform.ApplyMethod "此定义的固定链接")
+```py
+class ApplyMethod(mobject=None, *args, use_override=True, **kwargs)
+```
 
-基地：[`Transform`](manim.animation.transform.Transform.html#manim.animation.transform.Transform "manim.animation.transform.Transform")
+Bases: Transform
 
 通过应用方法对 mobject 进行动画处理。
 
@@ -19,11 +21,9 @@ _类_ ApplyMethod ( _mobject = None_ , _\* args_ , _use_override = True_ , _\*\*
 方法
 
 `check_validity_of_input`
-
 `create_target`
 
 属性
 
 `path_arc`
-
 `path_func`

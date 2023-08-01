@@ -54,7 +54,7 @@ to `Circle`, and passes them on to the base class of {class}`.Circle`, {class}`.
 让我们考虑一个具体的例子，比如 {class}`.Circle` 类。 当寻找时
 在其文档页面中，仅列出了两个特定的关键字参数
 （“半径”和“颜色”）。 除了这些具体的论点之外，还有一个
-包罗万象的“**kwargs”参数捕获传递的所有其他参数
+包罗万象的“\*\*kwargs”参数捕获传递的所有其他参数
 到 `Circle`，并将它们传递给 {class}`.Circle`、{class}`.Arc` 的基类。
 
 The same holds for {class}`.Arc`: some arguments are explicitly documented, and
@@ -62,7 +62,7 @@ there is again a catchall `**kwargs` argument that passes unprocessed arguments
 to the next base class -- and so on.
 
 这同样适用于 {class}`.Arc`：一些参数被明确记录，并且
-又存在一个包罗万象的“**kwargs”参数，它传递未处理的参数
+又存在一个包罗万象的“\*\*kwargs”参数，它传递未处理的参数
 到下一个基类——等等。
 
 The most important keyword arguments relevant to styling your mobjects are the

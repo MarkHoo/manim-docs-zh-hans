@@ -1,4 +1,4 @@
-# 三\_d_utils [#](#module-manim.mobject.three_d.three_d_utils "此标题的固定链接")
+# 三\_d_utils
 
 三维 mobject 的效用函数。
 

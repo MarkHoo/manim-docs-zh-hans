@@ -1,4 +1,4 @@
-# ArrowTriangleFilledTip [#](#arrowtrianglefilledtip "此标题的固定链接")
+# ArrowTriangleFilledTip 
 
 合格名称：`manim.mobject.geometry.tips.ArrowTriangleFilledTip`
 

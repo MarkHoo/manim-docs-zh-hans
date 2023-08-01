@@ -1,4 +1,4 @@
-# 行号[#](#module-manim.mobject.graphing.number_line "此标题的固定链接")
+# 行号
 
 Mobject 代表数轴。
 

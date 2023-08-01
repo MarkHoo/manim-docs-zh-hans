@@ -1,10 +1,12 @@
-# 摆动[#](#wiggle "此标题的固定链接")
+# 摆动
 
 合格名称：`manim.animation.indication.Wiggle`
 
-_类_ Wiggle ( _mobject = None_ , _\* args_ , _use_override = True_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/animation/indication.html#Wiggle)[#](#manim.animation.indication.Wiggle "此定义的固定链接")
+```py
+class Wiggle(mobject=None, *args, use_override=True, **kwargs)
+```
 
-基地：[`Animation`](manim.animation.animation.Animation.html#manim.animation.animation.Animation "manim.animation.animation.Animation")
+Bases: Animation
 
 摆动一个 Mobject。
 
@@ -22,15 +24,15 @@ _类_ Wiggle ( _mobject = None_ , _\* args_ , _use_override = True_ , _\*\* kwar
 
 示例：应用 Waves [¶](#applyingwaves)
 
-from manim import \*
+```py
+from manim import *
 
 class ApplyingWaves(Scene):
-def construct(self):
-tex = Tex("Wiggle").scale(3)
-self.play(Wiggle(tex))
-self.wait()
-
-Copy to clipboard
+    def construct(self):
+        tex = Tex("Wiggle").scale(3)
+        self.play(Wiggle(tex))
+        self.wait()
+```
 
 方法
 

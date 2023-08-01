@@ -1,4 +1,4 @@
-# 段落[#](#paragraph "此标题的固定链接")
+# 段落
 
 合格名称：`manim.mobject.text.text\_mobject.Paragraph`
 

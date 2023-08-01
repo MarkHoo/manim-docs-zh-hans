@@ -1,4 +1,4 @@
-# 三维[#](#module-manim.mobject.three_d.three_dimensions "此标题的固定链接")
+# 三维
 
 三维物体。
 

@@ -1,4 +1,4 @@
-# 二十面体[#](#icosahedron "此标题的固定链接")
+# 二十面体
 
 合格名称：`manim.mobject.three\_d.polyhedra.Icosahedron`
 

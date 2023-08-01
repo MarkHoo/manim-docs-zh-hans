@@ -1,4 +1,4 @@
-# 箭头 3D [#](#arrow3d "此标题的固定链接")
+# 箭头 3D 
 
 合格名称：`manim.mobject.three\_d.three\_dimensions.Arrow3D`
 

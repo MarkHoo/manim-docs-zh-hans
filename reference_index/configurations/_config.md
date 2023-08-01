@@ -1,10 +1,12 @@
-# \_配置[#](#module-manim._config "此标题的固定链接")
+# \_配置
 
 设置全局配置和记录器。
 
 功能
 
-临时配置（_临时_）[\[来源\]](../_modules/manim/_config.html#tempconfig)[#](#manim._config.tempconfig "此定义的固定链接")
+```py
+tempconfig(temp)
+```
 
 临时修改全局`config`对象的上下文管理器。
 
@@ -12,7 +14,7 @@
 
 参数
 
-**temp** ( [_ManimConfig_](manim._config.utils.ManimConfig.html#manim._config.utils.ManimConfig "manim._config.utils.ManimConfig") _|_ _dict_ ) – 其键将用于临时更新全局的对象 `config`。
+**temp** ( [_ManimConfig_]() _|_ _dict_ ) – 其键将用于临时更新全局的对象 `config`。
 
 返回类型
 
@@ -22,13 +24,13 @@
 
 用于临时更改某些配置选项的默认值。`with tempconfig({...})`
 
-> > \> config\["frame_height"\]
-> > 8.0
-> > \> with tempconfig({"frame_height": 100.0}):
-> > ... print(config\["frame_height"\])
-> > ...
-> > 100.0
-> > \> config\["frame_height"\]
-> > 8.0
-
-Copy to clipboard
+```sh
+>>> config["frame_height"]
+8.0
+>>> with tempconfig({"frame_height": 100.0}):
+···     print(config["frame_height"])
+···
+100.0
+>>> config["frame_height"]
+8.0
+```

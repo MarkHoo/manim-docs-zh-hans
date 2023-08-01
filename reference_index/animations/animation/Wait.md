@@ -1,10 +1,12 @@
-# 等等[#](#wait "此标题的固定链接")
+# 等待
 
 合格名称：`manim.animation.animation.Wait`
 
-等待*类*（_mobject = None_， _\* args_， _use_override = True_， _\*\* kwargs_）[\[来源\]](../_modules/manim/animation/animation.html#Wait)[#](#manim.animation.animation.Wait "此定义的固定链接")
+```py
+class Wait(mobject=None, *args, use_override=True, **kwargs)
+```
 
-基地：[`Animation`](manim.animation.animation.Animation.html#manim.animation.animation.Animation "manim.animation.animation.Animation")
+Bases: Animation
 
 “无操作”动画。
 
@@ -17,27 +19,17 @@
 
 方法
 
-[`begin`](#manim.animation.animation.Wait.begin "manim.animation.animation.Wait.begin")
+|||
+|-|-|
+|[`begin`](#manim.animation.animation.Wait.begin "manim.animation.animation.Wait.begin")|开始动画。|
+|[`clean_up_from_scene`](#manim.animation.animation.Wait.clean_up_from_scene "manim.animation.animation.Wait.clean_up_from_scene")|[`Scene`](manim.scene.scene.Scene.html#manim.scene.scene.Scene "手动场景.场景.场景")完成动画后清理。|
+|[`finish`](#manim.animation.animation.Wait.finish "manim.animation.animation.Wait.finish")|完成动画。|
+|[`interpolate`](#manim.animation.animation.Wait.interpolate "manim.animation.animation.Wait.interpolate")|设置动画进度。|
+|[`update_mobjects`](#manim.animation.animation.Wait.update_mobjects "manim.animation.animation.Wait.update_mobjects")|更新诸如 starting_mobject 和（对于变换）target_mobject 之类的内容。|
 
-开始动画。
 
-[`clean_up_from_scene`](#manim.animation.animation.Wait.clean_up_from_scene "manim.animation.animation.Wait.clean_up_from_scene")
 
-[`Scene`](manim.scene.scene.Scene.html#manim.scene.scene.Scene "手动场景.场景.场景")完成动画后清理。
-
-[`finish`](#manim.animation.animation.Wait.finish "manim.animation.animation.Wait.finish")
-
-完成动画。
-
-[`interpolate`](#manim.animation.animation.Wait.interpolate "manim.animation.animation.Wait.interpolate")
-
-设置动画进度。
-
-[`update_mobjects`](#manim.animation.animation.Wait.update_mobjects "manim.animation.animation.Wait.update_mobjects")
-
-更新诸如 starting_mobject 和（对于变换）target_mobject 之类的内容。
-
-开始( )[\[来源\]](../_modules/manim/animation/animation.html#Wait.begin)[#](#manim.animation.animation.Wait.begin "此定义的固定链接")
+开始( )
 
 开始动画。
 
@@ -47,7 +39,7 @@
 
 没有任何
 
-clean_up_from*scene（*场景\_）[\[来源\]](../_modules/manim/animation/animation.html#Wait.clean_up_from_scene)[#](#manim.animation.animation.Wait.clean_up_from_scene "此定义的固定链接")
+clean_up_from*scene（*场景\_）
 
 [`Scene`](manim.scene.scene.Scene.html#manim.scene.scene.Scene "手动场景.场景.场景")完成动画后清理。
 

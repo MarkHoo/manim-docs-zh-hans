@@ -1,4 +1,4 @@
-# 极地平面[#](#polarplane "此标题的固定链接")
+# 极地平面
 
 合格名称：`manim.mobject.graphing.coordinate\_systems.PolarPlane`
 

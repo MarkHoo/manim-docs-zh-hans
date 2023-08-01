@@ -1,6 +1,6 @@
 # 常见问题：安装
 
-## 为什么Manim 有不同的版本？
+## 为什么Manim有不同的版本？
 
 Manim was originally created by Grant Sanderson as a personal project and for use
 in his YouTube channel,

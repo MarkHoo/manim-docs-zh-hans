@@ -1,18 +1,22 @@
-# 旋转[#](#rotating "此标题的固定链接")
+# 旋转
 
 合格名称：`manim.animation.rotation.Rotating`
 
-旋转*类*（_mobject = None_， _\* args_， _use_override = True_， _\*\* kwargs_）[\[来源\]](../_modules/manim/animation/rotation.html#Rotating)[#](#manim.animation.rotation.Rotating "此定义的固定链接")
+```py
+class Rotating(mobject=None, *args, use_override=True, **kwargs)
+```
 
-基地：[`Animation`](manim.animation.animation.Animation.html#manim.animation.animation.Animation "manim.animation.animation.Animation")
+Bases: Animation
 
 方法
 
-[`interpolate_mobject`](#manim.animation.rotation.Rotating.interpolate_mobject "manim.animation.rotation.Rotating.interpolate_mobject")
+|||
+|-|-|
+[`interpolate_mobject`]()|根据 alpha 值对 mobject 进行插值`Animation`。
 
-根据 alpha 值对 mobject 进行插值`Animation`。
 
-interpolate*mobject (*阿尔法\_)[\[来源\]](../_modules/manim/animation/rotation.html#Rotating.interpolate_mobject)[#](#manim.animation.rotation.Rotating.interpolate_mobject "此定义的固定链接")
+
+interpolate*mobject (*阿尔法\_)
 
 根据 alpha 值对 mobject 进行插值`Animation`。
 

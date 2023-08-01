@@ -1,4 +1,4 @@
-# 宝丽码[#](#polygram "此标题的固定链接")
+# 宝丽码
 
 合格名称：`manim.mobject.geometry.polygram.Polygram`
 

@@ -1,4 +1,4 @@
-# 切线[#](#tangentline "此标题的固定链接")
+# 切线
 
 合格名称：`manim.mobject.geometry.line.TangentLine`
 

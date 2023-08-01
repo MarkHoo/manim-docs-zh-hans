@@ -1,33 +1,36 @@
-# 替换变换[#](#replacementtransform "此标题的固定链接")
+# 替换变换
 
 合格名称：`manim.animation.transform.ReplacementTransform`
 
-_类_ ReplacementTransform ( _mobject = None_ , _\* args_ , _use_override = True_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/animation/transform.html#ReplacementTransform)[#](#manim.animation.transform.ReplacementTransform "此定义的固定链接")
+```py
+class ReplacementTransform(mobject=None, *args, use_override=True, **kwargs)
+```
 
-基地：[`Transform`](manim.animation.transform.Transform.html#manim.animation.transform.Transform "manim.animation.transform.Transform")
+Bases: Transform
 
 将 mobject 替换并变形为目标 mobject。
 
 参数
 
-- **mobject** – 起始[`Mobject`](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject").
-- **target_mobject** – 目标[`Mobject`](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject")。
-- **kwargs** – 传递给 的更多关键字参数[`Transform`](manim.animation.transform.Transform.html#manim.animation.transform.Transform "manim.animation.transform.Transform")。
+- **mobject** – 起始[`Mobject`]().
+- **target_mobject** – 目标[`Mobject`]()。
+- **kwargs** – 传递给 的更多关键字参数[`Transform`]()。
 
 例子
 
-示例：替换变换或变换[¶](#replacementtransformortransform)
+示例：替换变换或变换
 
-from manim import \*
+```py
+from manim import *
 
 class ReplacementTransformOrTransform(Scene):
-def construct(self):
-\# set up the numbers
-r_transform = VGroup(\*\[Integer(i) for i in range(1,4)\])
-text_1 = Text("ReplacementTransform", color=RED)
-r_transform.add(text_1)
+    def construct(self):
+        # set up the numbers
+        r_transform = VGroup(*[Integer(i) for i in range(1,4)])
+        text_1 = Text("ReplacementTransform", color=RED)
+        r_transform.add(text_1)
 
-        transform = VGroup(*\[Integer(i) for i in range(4,7)\])
+        transform = VGroup(*[Integer(i) for i in range(4,7)])
         text_2 = Text("Transform", color=BLUE)
         transform.add(text_2)
 
@@ -39,21 +42,19 @@ r_transform.add(text_1)
         ints.arrange(buff=2)
         self.add(ints, texts)
 
-        \# The mobs replace each other and none are left behind
-        self.play(ReplacementTransform(r_transform\[0\], r_transform\[1\]))
-        self.play(ReplacementTransform(r_transform\[1\], r_transform\[2\]))
+        # The mobs replace each other and none are left behind
+        self.play(ReplacementTransform(r_transform[0], r_transform[1]))
+        self.play(ReplacementTransform(r_transform[1], r_transform[2]))
 
-        \# The mobs linger after the Transform()
-        self.play(Transform(transform\[0\], transform\[1\]))
-        self.play(Transform(transform\[1\], transform\[2\]))
+        # The mobs linger after the Transform()
+        self.play(Transform(transform[0], transform[1]))
+        self.play(Transform(transform[1], transform[2]))
         self.wait()
-
-Copy to clipboard
+```
 
 方法
 
 属性
 
 `path_arc`
-
 `path_func`

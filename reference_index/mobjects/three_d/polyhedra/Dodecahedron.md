@@ -1,4 +1,4 @@
-# 十二面体[#](#dodecahedron "此标题的固定链接")
+# 十二面体
 
 合格名称：`manim.mobject.three\_d.polyhedra.Dodecahedron`
 
