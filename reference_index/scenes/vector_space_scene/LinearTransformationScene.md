@@ -142,7 +142,7 @@ add*title（*标题*， \_scale_factor = 1.5*， _animate = False_）
 
 参数
 
-- **title** ( _str_ _|_ [_MathTex_](manim.mobject.text.tex_mobject.MathTex.html#manim.mobject.text.tex_mobject.MathTex "manim.mobject.text.tex_mobject.MathTex") _|_ [_Tex_]() ) – 标题应该是什么。
+- **title** ( _str_ _|_ [_MathTex_]() _|_ [_Tex_]() ) – 标题应该是什么。
 - **scale_factor** ( _float_ ) – 标题应缩放多少。
 - **animate** ( _bool_ ) – 是否为添加添加动画。
 

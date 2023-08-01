@@ -1,36 +1,35 @@
-# 排除
+# 差异
 
-合格名称：`manim.mobject.geometry.boolean\_ops.Exclusion`
+合格名称：`manim.mobject.geometry.boolean\_ops.Difference`
 
-`class Exclusion(subject, clip, **kwargs)`
+`class Difference(subject, clip, **kwargs)`
 
 Bases: `_BooleanOps`
 
-
-求两个 之间的异或[`VMobject`]()。这将创建一个新的[`VMobject`]()区域，该区域由其中一个区域所覆盖。
+从一个中减去[`VMobject`]()另一个。
 
 参数
 
-- **主题**——第一[`VMobject`]()。
-- **剪辑**– 第二个[`VMobject`]()
+- **subject**——第一[`VMobject`]()。
+- **clip**– 第二个[`VMobject`]()
 
 例子
 
-示例：Intersection 示例
+示例：差异示例
 
-![IntersectionExample-1.png](../static/IntersectionExample-1.png)
+![DifferenceExample-1.png](../static/DifferenceExample-1.png)
 
 ```py
 from manim import *
 
-class IntersectionExample(Scene):
+class DifferenceExample(Scene):
     def construct(self):
         sq = Square(color=RED, fill_opacity=1)
         sq.move_to([-2, 0, 0])
         cr = Circle(color=BLUE, fill_opacity=1)
         cr.move_to([-1.3, 0.7, 0])
-        un = Exclusion(sq, cr, color=GREEN, fill_opacity=1)
-        un.move_to([1.5, 0.4, 0])
+        un = Difference(sq, cr, color=GREEN, fill_opacity=1)
+        un.move_to([1.5, 0, 0])
         self.add(sq, cr, un)
 ```
 

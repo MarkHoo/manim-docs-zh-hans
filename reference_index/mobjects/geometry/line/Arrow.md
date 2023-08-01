@@ -27,72 +27,21 @@ _类_ 箭头（_\* args_，_笔画宽度= 6_，_缓冲= 0.25_，_最大笔尖长
 
 ![../_images/ArrowExample-1.png](../_images/ArrowExample-1.png)
 
-from manim import \*
 
-from manim.mobject.geometry.tips import ArrowSquareTip
-class ArrowExample(Scene):
-def construct(self):
-arrow_1 = Arrow(start=RIGHT, end=LEFT, color=GOLD)
-arrow_2 = Arrow(start=RIGHT, end=LEFT, color=GOLD, tip_shape=ArrowSquareTip).shift(DOWN)
-g1 = Group(arrow_1, arrow_2)
+```py
 
-        \# the effect of buff
-        square = Square(color=MAROON_A)
-        arrow_3 = Arrow(start=LEFT, end=RIGHT)
-        arrow_4 = Arrow(start=LEFT, end=RIGHT, buff=0).next_to(arrow_1, UP)
-        g2 = Group(arrow_3, arrow_4, square)
+```
 
-        \# a shorter arrow has a shorter tip and smaller stroke width
-        arrow_5 = Arrow(start=ORIGIN, end=config.top).shift(LEFT * 4)
-        arrow_6 = Arrow(start=config.top + DOWN, end=config.top).shift(LEFT * 3)
-        g3 = Group(arrow_5, arrow_6)
-
-        self.add(Group(g1, g2, g3).arrange(buff=2))
-
-Copy to clipboard
 
 示例：箭头示例[¶](#arrowexample)
 
 ![../_images/ArrowExample-2.png](../_images/ArrowExample-2.png)
 
-from manim import \*
 
-class ArrowExample(Scene):
-def construct(self):
-left*group = VGroup()
-\# As buff increases, the size of the arrow decreases.
-for buff in np.arange(0, 2.2, 0.45):
-left_group += Arrow(buff=buff, start=2 * LEFT, end=2 \_ RIGHT)
-\# Required to arrange arrows.
-left_group.arrange(DOWN)
-left_group.move_to(4 \* LEFT)
+```py
 
-        middle_group = VGroup()
-        \# As max\_stroke\_width\_to\_length_ratio gets bigger,
-        \# the width of stroke increases.
-        for i in np.arange(0, 5, 0.5):
-            middle_group += Arrow(max\_stroke\_width\_to\_length_ratio=i)
-        middle_group.arrange(DOWN)
+```
 
-        UR_group = VGroup()
-        \# As max\_tip\_length\_to\_length_ratio increases,
-        \# the length of the tip increases.
-        for i in np.arange(0, 0.3, 0.1):
-            UR_group += Arrow(max\_tip\_length\_to\_length_ratio=i)
-        UR_group.arrange(DOWN)
-        UR_group.move_to(4 * RIGHT + 2 * UP)
-
-        DR_group = VGroup()
-        DR_group += Arrow(start=LEFT, end=RIGHT, color=BLUE, tip_shape=ArrowSquareTip)
-        DR_group += Arrow(start=LEFT, end=RIGHT, color=BLUE, tip_shape=ArrowSquareFilledTip)
-        DR_group += Arrow(start=LEFT, end=RIGHT, color=YELLOW, tip_shape=ArrowCircleTip)
-        DR_group += Arrow(start=LEFT, end=RIGHT, color=YELLOW, tip_shape=ArrowCircleFilledTip)
-        DR_group.arrange(DOWN)
-        DR_group.move_to(4 * RIGHT + 2 * DOWN)
-
-        self.add(left_group, middle_group, UR_group, DR_group)
-
-Copy to clipboard
 
 方法
 
@@ -150,10 +99,11 @@ mobject 的宽度。
 
 例子
 
-> > \> Arrow().get_default_tip_length()
-> > 0.35
 
-Copy to clipboard
+```py
+
+```
+
 
 返回类型
 
@@ -165,10 +115,10 @@ Copy to clipboard
 
 例子
 
-> > \> np.round(Arrow().get_normal_vector()) + 0. \# add 0. to avoid negative 0 in output
-> > array(\[ 0., 0., -1.\])
+```py
 
-Copy to clipboard
+```
+
 
 返回类型
 
@@ -188,21 +138,16 @@ _ndarray_
 
 例子
 
-> > \> arrow = Arrow(np.array(\[-1, -1, 0\]), np.array(\[1, 1, 0\]), buff=0)
-> > \> scaled_arrow = arrow.scale(2)
-> > \> np.round(scaled_arrow.get_start_and_end(), 8) + 0
-> > array(\[\[-2., -2., 0.\],
-> > \[ 2., 2., 0.\]\])
-> > \> arrow.tip.length == scaled_arrow.tip.length
-> > True
 
-Copy to clipboard
+```py
+
+```
+
 
 使用默认方法手动缩放对象 [`scale()`](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject.scale "manim.mobject.mobject.Mobject.scale")不具有相同的属性：
 
-> > \> new_arrow = Arrow(np.array(\[-1, -1, 0\]), np.array(\[1, 1, 0\]), buff=0)
-> > \> another_scaled_arrow = VMobject.scale(new_arrow, 2)
-> > \> another_scaled_arrow.tip.length == arrow.tip.length
-> > False
 
-Copy to clipboard
+```py
+
+```
+

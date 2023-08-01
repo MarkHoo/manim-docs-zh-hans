@@ -31,7 +31,7 @@ Bases: Formatter
 `default_msec_format`
 `default_time_format`
 
-格式（_记录_）[\[来源\]](../_modules/manim/_config/logger_utils.html#JSONFormatter.format)[#](#manim._config.logger_utils.JSONFormatter.format "此定义的固定链接")
+格式（_记录_）
 
 将记录格式化为自定义 JSON 格式。
 

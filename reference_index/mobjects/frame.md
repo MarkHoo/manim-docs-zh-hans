@@ -2,8 +2,7 @@
 
 特殊的矩形。
 
-课程
+Classes
 
 [`FullScreenRectangle`]()
-
 [`ScreenRectangle`]()

@@ -2,9 +2,9 @@
 
 合格名称：`manim.mobject.geometry.arc.ArcPolygonFromArcs`
 
-_类_ ArcPolygonFromArcs ( _\*弧_, _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/geometry/arc.html#ArcPolygonFromArcs)[#](#manim.mobject.geometry.arc.ArcPolygonFromArcs "此定义的固定链接")
+`class ArcPolygonFromArcs(*arcs, **kwargs)`
 
-基地：[`VMobject`](manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject "manim.mobject.types.vectorized_mobject.VMobject")
+Bases: VMobject
 
 允许用弧连接点的广义多边形。
 
@@ -16,31 +16,31 @@ _类_ ArcPolygonFromArcs ( _\*弧_, _\*\* kwargs_ )[\[来源\]](../_modules/mani
 
 参数
 
-- **arcs** ( [_Arc_](manim.mobject.geometry.arc.Arc.html#manim.mobject.geometry.arc.Arc "manim.mobject.geometry.arc.Arc") _|_ [_ArcBetweenPoints_](manim.mobject.geometry.arc.ArcBetweenPoints.html#manim.mobject.geometry.arc.ArcBetweenPoints "manim.mobject.geometry.arc.ArcBetweenPoints") ) – 这些是组装 arcpolygon 的弧。
-- **kwargs** – 传递给 的构造函数的关键字参数 [`VMobject`](manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject "manim.mobject.types.vectorized_mobject.VMobject")。影响 ArcPolygon 本身的绘制方式，但不影响传递的弧。
+- **arcs** ( [_Arc_]() _|_ [_ArcBetweenPoints_]() ) – 这些是组装 arcpolygon 的弧。
+- **kwargs** – 传递给 的构造函数的关键字参数 [`VMobject`]()。影响 ArcPolygon 本身的绘制方式，但不影响传递的弧。
 
-弧线[#](#manim.mobject.geometry.arc.ArcPolygonFromArcs.arcs "此定义的固定链接")
+弧线
 
 用于初始化 ArcPolygonFromArcs 的弧：
 
-> > \> from manim import ArcPolygonFromArcs, Arc, ArcBetweenPoints
-> > \> ap = ArcPolygonFromArcs(Arc(), ArcBetweenPoints(\[1,0,0\], \[0,1,0\]), Arc())
-> > \> ap.arcs
-> > \[Arc, ArcBetweenPoints, Arc\]
+```py
+>>> from manim import ArcPolygonFromArcs, Arc, ArcBetweenPoints
+>>> ap = ArcPolygonFromArcs(Arc(), ArcBetweenPoints([1,0,0], [0,1,0]), Arc())
+>>> ap.arcs
+[Arc, ArcBetweenPoints, Arc]
+```
 
-Copy to clipboard
+> 提示
 
-提示
+> 两个的实例也[`ArcPolygon`]()可以正确地相互转换。请注意，使用 初始化的任何圆弧`angle=0` 实际上都是直线，因此，如果直线部分应无缝转换为弧形部分，反之亦然，请使用可忽略的角度（例如 ）来初始化直线部分`angle=0.0001`。
 
-的两个实例也[`ArcPolygon`](manim.mobject.geometry.arc.ArcPolygon.html#manim.mobject.geometry.arc.ArcPolygon "manim.mobject.geometry.arc.ArcPolygon")可以正确地相互转换。请注意，使用 初始化的任何圆弧`angle=0` 实际上都是直线，因此，如果直线部分应无缝转换为弧形部分，反之亦然，请使用可忽略的角度（例如 ）来初始化直线部分`angle=0.0001`。
+> 笔记
 
-笔记
+> 有一个替代版本 ( [`ArcPolygon`]()) 可以用点实例化。
 
-有一个替代版本 ( [`ArcPolygon`](manim.mobject.geometry.arc.ArcPolygon.html#manim.mobject.geometry.arc.ArcPolygon "manim.mobject.geometry.arc.ArcPolygon")) 可以用点实例化。
+> 也可以看看
 
-也可以看看
-
-[`ArcPolygon`](manim.mobject.geometry.arc.ArcPolygon.html#manim.mobject.geometry.arc.ArcPolygon "manim.mobject.geometry.arc.ArcPolygon")
+> [`ArcPolygon`]()
 
 例子
 
@@ -48,82 +48,67 @@ Copy to clipboard
 
 传递的弧作为子对象存储在 arcpolygon 中。这意味着弧与弧多边形一起改变，例如当它移动时，并且可以在弧多边形初始化后操作这些弧。
 
-此外，还会绘制 中包含的弧[`ArcPolygonFromArcs`](#manim.mobject.geometry.arc.ArcPolygonFromArcs "manim.mobject.geometry.arc.ArcPolygonFromArcs")以及 arcpolygon 本身，这会影响[`Create`](manim.animation.creation.Create.html#manim.animation.creation.Create "manim.animation.creation.Create") 例如中的绘制时间。在大多数情况下，弧线本身不需要绘制，在这种情况下，它们可以作为不可见的传递。
+此外，还会绘制 中包含的弧[`ArcPolygonFromArcs`]()以及 arcpolygon 本身，这会影响[`Create`]() 例如中的绘制时间。在大多数情况下，弧线本身不需要绘制，在这种情况下，它们可以作为不可见的传递。
 
-示例：ArcPolygon 示例[¶](#arcpolygonexample)
+示例：ArcPolygon 示例
 
-from manim import \*
+```py
+from manim import *
 
 class ArcPolygonExample(Scene):
-def construct(self):
-arc_conf = {"stroke_width": 0}
-poly_conf = {"stroke_width": 10, "stroke_color": BLUE,
-"fill_opacity": 1, "color": PURPLE}
-a = \[-1, 0, 0\]
-b = \[1, 0, 0\]
-c = \[0, np.sqrt(3), 0\]
-arc0 = ArcBetweenPoints(a, b, radius=2, **arc_conf)
-arc1 = ArcBetweenPoints(b, c, radius=2, **arc_conf)
-arc2 = ArcBetweenPoints(c, a, radius=2, **arc_conf)
-reuleaux_tri = ArcPolygonFromArcs(arc0, arc1, arc2, **poly_conf)
-self.play(FadeIn(reuleaux_tri))
-self.wait(2)
-
-Copy to clipboard
+    def construct(self):
+        arc_conf = {"stroke_width": 0}
+        poly_conf = {"stroke_width": 10, "stroke_color": BLUE,
+              "fill_opacity": 1, "color": PURPLE}
+        a = [-1, 0, 0]
+        b = [1, 0, 0]
+        c = [0, np.sqrt(3), 0]
+        arc0 = ArcBetweenPoints(a, b, radius=2, **arc_conf)
+        arc1 = ArcBetweenPoints(b, c, radius=2, **arc_conf)
+        arc2 = ArcBetweenPoints(c, a, radius=2, **arc_conf)
+        reuleaux_tri = ArcPolygonFromArcs(arc0, arc1, arc2, **poly_conf)
+        self.play(FadeIn(reuleaux_tri))
+        self.wait(2)
+```
 
 弧形多边形本身也可以隐藏，以便只绘制包含的弧。这可用于轻松调试弧或突出显示它们。
 
-示例：ArcPolygonExample2 [¶](#arcpolygonexample2)
+示例：ArcPolygonExample2 
 
-from manim import \*
+```py
+from manim import *
 
 class ArcPolygonExample2(Scene):
-def construct(self):
-arc_conf = {"stroke_width": 3, "stroke_color": BLUE,
-"fill_opacity": 0.5, "color": GREEN}
-poly_conf = {"color": None}
-a = \[-1, 0, 0\]
-b = \[1, 0, 0\]
-c = \[0, np.sqrt(3), 0\]
-arc0 = ArcBetweenPoints(a, b, radius=2, **arc_conf)
-arc1 = ArcBetweenPoints(b, c, radius=2, **arc_conf)
-arc2 = ArcBetweenPoints(c, a, radius=2, stroke_color=RED)
-reuleaux_tri = ArcPolygonFromArcs(arc0, arc1, arc2, \*\*poly_conf)
-self.play(FadeIn(reuleaux_tri))
-self.wait(2)
-
-Copy to clipboard
+    def construct(self):
+        arc_conf = {"stroke_width": 3, "stroke_color": BLUE,
+            "fill_opacity": 0.5, "color": GREEN}
+        poly_conf = {"color": None}
+        a = [-1, 0, 0]
+        b = [1, 0, 0]
+        c = [0, np.sqrt(3), 0]
+        arc0 = ArcBetweenPoints(a, b, radius=2, **arc_conf)
+        arc1 = ArcBetweenPoints(b, c, radius=2, **arc_conf)
+        arc2 = ArcBetweenPoints(c, a, radius=2, stroke_color=RED)
+        reuleaux_tri = ArcPolygonFromArcs(arc0, arc1, arc2, **poly_conf)
+        self.play(FadeIn(reuleaux_tri))
+        self.wait(2)
+```
 
 方法
 
+
+
 属性
 
-`animate`
-
-用于对 的任何方法的应用程序进行动画处理`self`。
-
-`animation_overrides`
-
-`color`
-
-`depth`
-
-对象的深度。
-
-`fill_color`
-
-如果有多种颜色（对于渐变），则返回第一个颜色
-
-`height`
-
-mobject 的高度。
-
-`n_points_per_curve`
-
-`sheen_factor`
-
-`stroke_color`
-
-`width`
-
-mobject 的宽度。
+|||
+|-|-|
+`animate`|用于对 的任何方法的应用程序进行动画处理`self`。
+`animation_overrides`|
+`color`|
+`depth`|对象的深度。
+`fill_color`|如果有多种颜色（对于渐变），则返回第一个颜色
+`height`|mobject 的高度。
+`n_points_per_curve`|
+`sheen_factor`|
+`stroke_color`|
+`width`|mobject 的宽度。

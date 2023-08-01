@@ -2,59 +2,46 @@
 
 合格名称：`manim.mobject.geometry.polygram.Polygram`
 
-_类_ Polygram ( _\* vertex_groups_ , _color = '#58C4DD'_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/geometry/polygram.html#Polygram)[#](#manim.mobject.geometry.polygram.Polygram "此定义的固定链接")
+_类_ Polygram ( _\* vertex_groups_ , _color = '#58C4DD'_ , _\*\* kwargs_ )
 
-基地：[`VMobject`](manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject "manim.mobject.types.vectorized_mobject.VMobject")
+基地：[`VMobject`]()
 
-广义的[`Polygon`](manim.mobject.geometry.polygram.Polygon.html#manim.mobject.geometry.polygram.Polygon "manim.mobject.geometry.polygram.Polygon")，允许断开连接的边集。
+广义的[`Polygon`]()，允许断开连接的边集。
 
 参数
 
 - **vertex_groups** (_可迭代**\[**序列\_\_\[_ _float_ _\]_ _\]_ ) –
 
-  组成 的顶点组[`Polygram`](#manim.mobject.geometry.polygram.Polygram "manim.mobject.geometry.polygram.Polygram")。
+  组成 的顶点组[`Polygram`]()。
 
   重复每组中的第一个顶点以闭合形状。每个点必须是 3 维的：`[x,y,z]`
 
-- **颜色**– 的颜色[`Polygram`](#manim.mobject.geometry.polygram.Polygram "manim.mobject.geometry.polygram.Polygram")。
+- **颜色**– 的颜色[`Polygram`]()。
 - **kwargs** – 转发到父构造函数。
 
 例子
 
-示例：Polygram 示例[¶](#polygramexample)
+示例：Polygram 示例
 
-from manim import \*
 
-import numpy as np
+```py
 
-class PolygramExample(Scene):
-def construct(self):
-hexagram = Polygram(
-\[\[0, 2, 0\], \[-np.sqrt(3), -1, 0\], \[np.sqrt(3), -1, 0\]\],
-\[\[-np.sqrt(3), 1, 0\], \[0, -2, 0\], \[np.sqrt(3), 1, 0\]\],
-)
-self.add(hexagram)
+```
 
-        dot = Dot()
-        self.play(MoveAlongPath(dot, hexagram), run_time=5, rate_func=linear)
-        self.remove(dot)
-        self.wait()
-
-Copy to clipboard
 
 方法
 
-[`get_vertex_groups`](#manim.mobject.geometry.polygram.Polygram.get_vertex_groups "manim.mobject.geometry.polygram.Polygram.get_vertex_groups")
+[`get_vertex_groups`]()
 
-获取 的顶点组[`Polygram`](#manim.mobject.geometry.polygram.Polygram "manim.mobject.geometry.polygram.Polygram")。
+获取 的顶点组[`Polygram`]()。
 
-[`get_vertices`](#manim.mobject.geometry.polygram.Polygram.get_vertices "manim.mobject.geometry.polygram.Polygram.get_vertices")
+[`get_vertices`]()
 
-获取 的顶点[`Polygram`](#manim.mobject.geometry.polygram.Polygram "manim.mobject.geometry.polygram.Polygram")。
+获取 的顶点[`Polygram`]()。
 
-[`round_corners`](#manim.mobject.geometry.polygram.Polygram.round_corners "manim.mobject.geometry.polygram.Polygram.round_corners")
+[`round_corners`]()
 
-将 的角磨圆[`Polygram`](#manim.mobject.geometry.polygram.Polygram "manim.mobject.geometry.polygram.Polygram")。
+将 的角磨圆[`Polygram`]()。
 
 属性
 
@@ -88,13 +75,13 @@ mobject 的高度。
 
 mobject 的宽度。
 
-获取顶点组( )[\[来源\]](../_modules/manim/mobject/geometry/polygram.html#Polygram.get_vertex_groups)[#](#manim.mobject.geometry.polygram.Polygram.get_vertex_groups "此定义的固定链接")
+获取顶点组( )
 
-获取 的顶点组[`Polygram`](#manim.mobject.geometry.polygram.Polygram "manim.mobject.geometry.polygram.Polygram")。
+获取 的顶点组[`Polygram`]()。
 
 退货
 
-的顶点组[`Polygram`](#manim.mobject.geometry.polygram.Polygram "manim.mobject.geometry.polygram.Polygram")。
+的顶点组[`Polygram`]()。
 
 返回类型
 
@@ -102,25 +89,19 @@ mobject 的宽度。
 
 例子
 
-> > \> poly = Polygram(\[ORIGIN, RIGHT, UP\], \[LEFT, LEFT + UP, 2 \* LEFT\])
-> > \> poly.get_vertex_groups()
-> > array(\[\[\[ 0., 0., 0.\],
-> > \[ 1., 0., 0.\],
-> > \[ 0., 1., 0.\]\],
 
-\[\[-1., 0., 0.\],
-\[-1., 1., 0.\],
-\[-2., 0., 0.\]\]\])
+```py
 
-Copy to clipboard
+```
 
-获取顶点( )[\[来源\]](../_modules/manim/mobject/geometry/polygram.html#Polygram.get_vertices)[#](#manim.mobject.geometry.polygram.Polygram.get_vertices "此定义的固定链接")
 
-获取 的顶点[`Polygram`](#manim.mobject.geometry.polygram.Polygram "manim.mobject.geometry.polygram.Polygram")。
+获取顶点( )
+
+获取 的顶点[`Polygram`]()。
 
 退货
 
-的顶点[`Polygram`](#manim.mobject.geometry.polygram.Polygram "manim.mobject.geometry.polygram.Polygram")。
+的顶点[`Polygram`]()。
 
 返回类型
 
@@ -128,22 +109,19 @@ Copy to clipboard
 
 例子
 
-> > \> sq = Square()
-> > \> sq.get_vertices()
-> > array(\[\[ 1., 1., 0.\],
-> > \[-1., 1., 0.\],
-> > \[-1., -1., 0.\],
-> > \[ 1., -1., 0.\]\])
 
-Copy to clipboard
+```py
 
-圆角（_半径= 0.5_，_均匀分配锚点=假_，_组件每个圆角= 2_）[\[来源\]](../_modules/manim/mobject/geometry/polygram.html#Polygram.round_corners)[#](#manim.mobject.geometry.polygram.Polygram.round_corners "此定义的固定链接")
+```
 
-将 的角磨圆[`Polygram`](#manim.mobject.geometry.polygram.Polygram "manim.mobject.geometry.polygram.Polygram")。
+
+圆角（_半径= 0.5_，_均匀分配锚点=假_，_组件每个圆角= 2_）
+
+将 的角磨圆[`Polygram`]()。
 
 参数
 
-- **radius** ( _float_ _|_ _list_ _\[_ _float_ _\]_ ) – 角点的曲率[`Polygram`](#manim.mobject.geometry.polygram.Polygram "manim.mobject.geometry.polygram.Polygram")。
+- **radius** ( _float_ _|_ _list_ _\[_ _float_ _\]_ ) – 角点的曲率[`Polygram`]()。
 - **Evenly_distribute_anchors** ( _bool_ ) – 将长线段分成按比例大小的线段。
 - **Components_per_rounded_corner** ( _int_ ) – 用于表示圆角曲线的点数。
 
@@ -161,21 +139,11 @@ Copy to clipboard
 
 例子
 
-示例：PolygramRoundCorners [¶](#polygramroundcorners)
+示例：PolygramRoundCorners 
 
-![../_images/PolygramRoundCorners-1.png](../_images/PolygramRoundCorners-1.png)
+![PolygramRoundCorners-1.png](../static/PolygramRoundCorners-1.png)
 
-from manim import \*
+```py
 
-class PolygramRoundCorners(Scene):
-def construct(self):
-star = Star(outer_radius=2)
+```
 
-        shapes = VGroup(star)
-        shapes.add(star.copy().round_corners(radius=0.1))
-        shapes.add(star.copy().round_corners(radius=0.25))
-
-        shapes.arrange(RIGHT)
-        self.add(shapes)
-
-Copy to clipboard

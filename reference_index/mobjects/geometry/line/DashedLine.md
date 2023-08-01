@@ -25,19 +25,11 @@ _类_ DashedLine（_\* args_， _dash_length = 0.05_， _dashed_ratio = 0.5_， 
 
 ![../_images/DashedLineExample-1.png](../_images/DashedLineExample-1.png)
 
-from manim import \*
 
-class DashedLineExample(Scene):
-def construct(self):
-\# dash_length increased
-dashed_1 = DashedLine(config.left_side, config.right_side, dash_length=2.0).shift(UP*2)
-\# normal
-dashed_2 = DashedLine(config.left_side, config.right_side)
-\# dashed_ratio decreased
-dashed_3 = DashedLine(config.left_side, config.right_side, dashed_ratio=0.1).shift(DOWN*2)
-self.add(dashed_1, dashed_2, dashed_3)
+```py
 
-Copy to clipboard
+```
+
 
 方法
 
@@ -95,10 +87,11 @@ mobject 的宽度。
 
 例子
 
-> > \> DashedLine().get_end()
-> > array(\[1., 0., 0.\])
 
-Copy to clipboard
+```py
+
+```
+
 
 返回类型
 
@@ -110,10 +103,11 @@ _ndarray_
 
 例子
 
-> > \> DashedLine().get_first_handle()
-> > array(\[-0.98333333, 0. , 0. \])
 
-Copy to clipboard
+```py
+
+```
+
 
 返回类型
 
@@ -125,10 +119,11 @@ _ndarray_
 
 例子
 
-> > \> DashedLine().get_last_handle()
-> > array(\[0.98333333, 0. , 0. \])
 
-Copy to clipboard
+```py
+
+```
+
 
 返回类型
 
@@ -140,10 +135,11 @@ _ndarray_
 
 例子
 
-> > \> DashedLine().get_start()
-> > array(\[-1., 0., 0.\])
 
-Copy to clipboard
+```py
+
+```
+
 
 返回类型
 
