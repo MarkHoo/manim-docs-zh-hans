@@ -4,10 +4,47 @@
 
 示例：RateFuncExample 
 
-![../_images/RateFuncExample-1.png](../_images/RateFuncExample-1.png)
+![RateFuncExample-1.png](../static/RateFuncExample-1.png)
 
 ```py
+from manim import *
 
+class RateFuncExample(Scene):
+    def construct(self):
+        x = VGroup()
+        for k, v in rate_functions.__dict__.items():
+            if "function" in str(v):
+                if (
+                    not k.startswith("__")
+                    and not k.startswith("sqrt")
+                    and not k.startswith("bezier")
+                ):
+                    try:
+                        rate_func = v
+                        plot = (
+                            ParametricFunction(
+                                lambda x: [x, rate_func(x), 0],
+                                t_range=[0, 1, .01],
+                                use_smoothing=False,
+                                color=YELLOW,
+                            )
+                            .stretch_to_fit_width(1.5)
+                            .stretch_to_fit_height(1)
+                        )
+                        plot_bg = SurroundingRectangle(plot).set_color(WHITE)
+                        plot_title = (
+                            Text(rate_func.__name__, weight=BOLD)
+                            .scale(0.5)
+                            .next_to(plot_bg, UP, buff=0.1)
+                        )
+                        x.add(VGroup(plot_bg, plot, plot_title))
+                    except: # because functions `not_quite_there`, `function squish_rate_func` are not working.
+                        pass
+        x.arrange_in_grid(cols=8)
+        x.height = config.frame_height
+        x.width = config.frame_width
+        x.move_to(ORIGIN).scale(0.95)
+        self.add(x)
 ```
 
 标准缓动函数主要有 3 种：
@@ -16,469 +53,542 @@
 2.  Ease Out - 动画有一个平滑的结尾。
 3.  Ease In Out - 动画有一个平滑的开始和平滑的结束。
 
-笔记
+> 笔记
 
-标准函数不会导出，因此要使用它们，您可以执行以下操作：rate_func=rate_functions.ease_in_sine 另一方面，更常用的非标准函数被导出并可以直接使用。
+> 标准函数不会导出，因此要使用它们，您可以执行以下操作：rate_func=rate_functions.ease_in_sine 另一方面，更常用的非标准函数被导出并可以直接使用。
 
 示例：RateFunctions1 示例
 
 ```py
+from manim import *
 
+class RateFunctions1Example(Scene):
+    def construct(self):
+        line1 = Line(3*LEFT, 3*RIGHT).shift(UP).set_color(RED)
+        line2 = Line(3*LEFT, 3*RIGHT).set_color(GREEN)
+        line3 = Line(3*LEFT, 3*RIGHT).shift(DOWN).set_color(BLUE)
+
+        dot1 = Dot().move_to(line1.get_left())
+        dot2 = Dot().move_to(line2.get_left())
+        dot3 = Dot().move_to(line3.get_left())
+
+        label1 = Tex("Ease In").next_to(line1, RIGHT)
+        label2 = Tex("Ease out").next_to(line2, RIGHT)
+        label3 = Tex("Ease In Out").next_to(line3, RIGHT)
+
+        self.play(
+            FadeIn(VGroup(line1, line2, line3)),
+            FadeIn(VGroup(dot1, dot2, dot3)),
+            Write(VGroup(label1, label2, label3)),
+        )
+        self.play(
+            MoveAlongPath(dot1, line1, rate_func=rate_functions.ease_in_sine),
+            MoveAlongPath(dot2, line2, rate_func=rate_functions.ease_out_sine),
+            MoveAlongPath(dot3, line3, rate_func=rate_functions.ease_in_out_sine),
+            run_time=7
+        )
+        self.wait()
 ```
 
 Functions
 
-双平滑( _t_ )
+
+`double_smooth(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-轻松返回（_t_）
+
+`ease_in_back(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-ease*in_bounce ( \_t* )
+
+`ease_in_bounce(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-循环中的缓和( _t_ )
+`ease_in_circ(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-三次方缓和( _t_ )
+
+`ease_in_cubic(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-弹性( _t_ )
+
+`ease_in_elastic(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-轻松在世博会( _t_ )
+
+`ease_in_expo(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-ease_in_out*back ( \_t* )
+
+`ease_in_out_back(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-ease_in_out*bounce ( \_t* )
+
+`ease_in_out_bounce(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-ease_in_out*circ ( \_t* )
+
+`ease_in_out_circ(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-ease_in_out*cubic ( \_t* )
+
+`ease_in_out_cubic(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-ease_in_out*elastic ( \_t* )
+
+`ease_in_out_elastic(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-ease_in_out*expo ( \_t* )
+
+`ease_in_out_expo(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-ease_in_out*quad ( \_t* )
+
+`ease_in_out_quad(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-ease_in_out*quart ( \_t* )
+
+`ease_in_out_quart(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-ease_in_out*quint ( \_t* )
+
+`ease_in_out_quint(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-ease_in_out*sine ( \_t* )
+
+`ease_in_out_sine(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-ease*in_quad ( \_t* )
+
+`ease_in_quad(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-ease*in_quart ( \_t* )
+
+`ease_in_quart(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-ease*in_quint ( \_t* )
+
+`ease_in_quint(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-正弦缓和( _t_ )
+
+`ease_in_sine(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-ease*out_back ( \_t* )
+
+`ease_out_back(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-ease*out_bounce ( \_t* )
+
+`ease_out_bounce(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-ease*out_circ ( \_t* )
+
+`ease_out_circ(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-ease*out_cubic ( \_t* )
+
+`ease_out_cubic(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-ease*out_elastic ( \_t* )
+
+`ease_out_elastic(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-ease*out_expo ( \_t* )
+
+`ease_out_expo(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-ease*out_quad ( \_t* )
+
+`ease_out_quad(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-ease*out_quart ( \_t* )
+
+`ease_out_quart(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-ease*out_quint ( \_t* )
+
+`ease_out_quint(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-ease*out_sine ( \_t* )
+
+`ease_out_sine(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-指数衰减( _t_ , _half_life = 0.1_ )
+
+`exponential_decay(t, half_life=0.1)`
 
 参数
 
-- **t**（_浮动_）–
-- **half_life** (_浮点数_) –
+- **t**（_float_）–
+- **half_life** (_float_) –
 
 返回类型
 
-漂浮
+float
 
-线性（_t_）
+
+`linear(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-徘徊( _t_ )
+
+`lingering(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-not*quite_there ( \_func=<函数 平滑>* ,_比例=0.7_ )
+
+`not_quite_there(func=<function smooth>, proportion=0.7)`
 
 参数
 
-- **func** (_可调用\_\_\[_ _\[_ _float_ _\]_ _,_ _float_ _\]_ ) –
-- **比例**（_浮动_）–
+- **func** (*Callable[[float], float]*) –
+- **proportion**（_float_）–
 
 返回类型
 
-_可调用_\[\[float\], float\]
+*Callable[[float], float]*
 
-running*start ( \_t* , _pull_factor = \- 0.5_ )
+
+`running_start(t, pull_factor=- 0.5)`
 
 参数
 
-- **t**（_浮动_）–
-- **pull_factor** (_浮点数_) –
+- **t**（_float_）–
+- **pull_factor** (_float_) –
 
 返回类型
 
-_可迭代_
+_Iterable_
 
-rush*from ( \_t* ,_拐点= 10.0_ )
+
+`rush_from(t, inflection=10.0)`
 
 参数
 
-- **t**（_浮动_）–
-- **变形**（_浮动_）–
+- **t**（_float_）–
+- **inflection**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-rush*into ( \_t* ,_拐点= 10.0_ )
+
+`rush_into(t, inflection=10.0)`
 
 参数
 
-- **t**（_浮动_）–
-- **变形**（_浮动_）–
+- **t**（_float_）–
+- **inflection**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-慢速进入（_t_）
+
+`slow_into(t)`
 
 参数
 
-**t**（_浮动_）–
+**t**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-平滑（_t_，_拐点= 10.0_）
+
+`smooth(t, inflection=10.0)`
 
 参数
 
-- **t**（_浮动_）–
-- **变形**（_浮动_）–
+- **t**（_float_）–
+- **inflection**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-挤压速率函数（_函数_， _a = 0.4_， _b = 0.6_）
+
+`squish_rate_func(func, a=0.4, b=0.6)`
 
 参数
 
-- **func** (_可调用\_\_\[_ _\[_ _float_ _\]_ _,_ _float_ _\]_ ) –
-- **一个**（_浮动_）–
-- **b**（_浮动_）–
+- **func** (_Callable[[float], float]_ ) –
+- **a**（_float_）–
+- **b**（_float_）–
 
 返回类型
 
-_可调用_\[\[float\], float\]
+_Callable[[float], float]_
 
-There*and_back ( \_t* ,_变形= 10.0_ )
+
+
+`there_and_back(t, inflection=10.0)`
 
 参数
 
-- **t**（_浮动_）–
-- **变形**（_浮动_）–
+- **t**（_float_）–
+- **inflection**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-There*and_back_with_pause ( \_t* , _pause_ratio = 0.3333333333333333_ )
+
+`there_and_back_with_pause(t, pause_ratio=0.3333333333333333)`
 
 参数
 
-- **t**（_浮动_）–
-- **暂停比率**（_浮动_）–
+- **t**（_float_）–
+- **pause_ratio**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-单位间隔（_函数_）
 
-摆动( _t_ ,_摆动= 2_ )
+`unit_interval(function)`
+
+
+`wiggle(t, wiggles=2)`
 
 参数
 
-- **t**（_浮动_）–
-- **摆动**（_浮动_）–
+- **t**（_float_）–
+- **wiggles**（_float_）–
 
 返回类型
 
-漂浮
+float
 
-零（_函数_）
+
+`zero(function)`

@@ -4,7 +4,9 @@
 
 Functions
 
-已弃用（_func = None_、 _since = None_、 _until = None_、 _replacement = None_、 _message = ''_）
+```py
+deprecated(func=None, since=None, until=None, replacement=None, message='')
+```
 
 将可调用标记为已弃用的装饰器。
 
@@ -14,42 +16,85 @@ Functions
 
 - **func** ( _Callable_ ) – 要装饰的函数。不应由用户设置。
 - **since** ( _str_ _|_ _None_ ) – 自弃用以来的版本或日期。
-- **直到**( _str_ _|_ _None_ ) – 删除已弃用的可调用函数之前的版本或日期。
+- **until**( _str_ _|_ _None_ ) – 删除已弃用的可调用函数之前的版本或日期。
 - **replacement** ( _str_ _|_ _None_ ) – 替换已弃用的可调用函数的标识符。
 - **message** ( _str_ _|_ _None_ ) – 可调用对象已被弃用的原因。
 
-退货
+返回
 
 装饰后的可调用。
 
 返回类型
 
-可调用
+Callable
 
 例子
 
 基本用法：
 
 ```py
+from manim.utils.deprecation import deprecated
 
+@deprecated
+def foo(**kwargs):
+    pass
+
+@deprecated
+class Bar:
+    def __init__(self):
+        pass
+
+    @deprecated
+    def baz(self):
+        pass
+
+foo()
+# WARNING  The function foo has been deprecated and may be removed in a later version.
+
+a = Bar()
+# WARNING  The class Bar has been deprecated and may be removed in a later version.
+
+a.baz()
+# WARNING  The method Bar.baz has been deprecated and may be removed in a later version.
 ```
 
 
 您可以指定附加信息以获得更精确的警告：
 
 ```py
+from manim.utils.deprecation import deprecated
 
+@deprecated(
+    since="v0.2",
+    until="v0.4",
+    replacement="bar",
+    message="It is cooler."
+)
+def foo():
+    pass
+
+foo()
+# WARNING  The function foo has been deprecated since v0.2 and is expected to be removed after v0.4. Use bar instead. It is cooler.
 ```
 
 
 您还可以使用日期而不是版本：
 
 ```py
+from manim.utils.deprecation import deprecated
 
+@deprecated(since="05/01/2021", until="06/01/2021")
+def foo():
+    pass
+
+foo()
+# WARNING  The function foo has been deprecated since 05/01/2021 and is expected to be removed after 06/01/2021.
 ```
 
 
-deprecated*pa​​rams（\_params = None*， _since = None_， _until = None_， _message = ''_，_重定向= None_）
+```py
+deprecated_params(params=None, since=None, until=None, message='', redirections=None)
+```
 
 将可调用参数标记为已弃用的装饰器。
 
@@ -65,9 +110,9 @@ deprecated*pa​​rams（\_params = None*， _since = None_， _until = None_�
   - 单个字符串，参数名称以逗号或空格分隔。
 
 - **since** ( _str_ _|_ _None_ ) – 自弃用以来的版本或日期。
-- **直到**( _str_ _|_ _None_ ) – 删除已弃用的可调用函数之前的版本或日期。
+- **until**( _str_ _|_ _None_ ) – 删除已弃用的可调用函数之前的版本或日期。
 - **message** ( _str_ _|_ _None_ ) – 可调用对象已被弃用的原因。
-- **重定向**( _None_ _|_ _Iterable_ _\[_ _tuple_ _\[_ _str_ _,_ _str_ _\]_ _|_ _Callable_ _\[_ _..._ _,_ _dict_ _\[_ _str_ _,_ _Any_ _\]_ _\]_ _\]_ ) –
+- **redirections**( _None_ _|_ _Iterable_ _\[_ _tuple_ _\[_ _str_ _,_ _str_ _\]_ _|_ _Callable_ _\[_ _..._ _,_ _dict_ _\[_ _str_ _,_ _Any_ _\]_ _\]_ _\]_ ) –
 
   参数重定向列表。每个重定向可以是以下之一：
 
@@ -76,15 +121,16 @@ deprecated*pa​​rams（\_params = None*， _since = None_， _until = None_�
 
   重定向参数也被隐式弃用。
 
-退货
+返回
 
 装饰后的可调用。
 
 返回类型
 
-可调用
+Callable
 
-提高
+
+RAISES
 
 - **ValueError** – 如果未定义任何参数（无论是显式还是隐式）。
 - **ValueError** – 如果定义的参数是无效的 python 标识符。
@@ -94,38 +140,107 @@ deprecated*pa​​rams（\_params = None*， _since = None_， _until = None_�
 基本用法：
 
 ```py
+from manim.utils.deprecation import deprecated_params
 
+@deprecated_params(params="a, b, c")
+def foo(**kwargs):
+    pass
+
+foo(x=2, y=3, z=4)
+# No warning
+
+foo(a=2, b=3, z=4)
+# WARNING  The parameters a and b of method foo have been deprecated and may be removed in a later version.
 ```
 
 
 您还可以指定附加信息以获得更精确的警告：
 
 ```py
+from manim.utils.deprecation import deprecated_params
 
+@deprecated_params(
+    params="a, b, c",
+    since="v0.2",
+    until="v0.4",
+    message="The letters x, y, z are cooler."
+)
+def foo(**kwargs):
+    pass
+
+foo(a=2)
+# WARNING  The parameter a of method foo has been deprecated since v0.2 and is expected to be removed after v0.4. The letters x, y, z are cooler.
 ```
 
 
 基本参数重定向：
 
 ```py
+from manim.utils.deprecation import deprecated_params
 
+@deprecated_params(redirections=[
+    # Two ways to redirect one parameter to another:
+    ("old_param", "new_param"),
+    lambda old_param2: {"new_param22": old_param2}
+])
+def foo(**kwargs):
+    return kwargs
+
+foo(x=1, old_param=2)
+# WARNING  The parameter old_param of method foo has been deprecated and may be removed in a later version.
+# returns {"x": 1, "new_param": 2}
 ```
 
 使用计算值重定向：
 
 ```py
+from manim.utils.deprecation import deprecated_params
 
+@deprecated_params(redirections=[
+    lambda runtime_in_ms: {"run_time": runtime_in_ms / 1000}
+])
+def foo(**kwargs):
+    return kwargs
+
+foo(runtime_in_ms=500)
+# WARNING  The parameter runtime_in_ms of method foo has been deprecated and may be removed in a later version.
+# returns {"run_time": 0.5}
 ```
 
 
 将多个参数值重定向为一个：
 
 ```py
+from manim.utils.deprecation import deprecated_params
 
+@deprecated_params(redirections=[
+    lambda buff_x=1, buff_y=1: {"buff": (buff_x, buff_y)}
+])
+def foo(**kwargs):
+    return kwargs
+
+foo(buff_x=2)
+# WARNING  The parameter buff_x of method foo has been deprecated and may be removed in a later version.
+# returns {"buff": (2, 1)}
 ```
 
 将一个参数重定向为多个：
 
 ```py
+from manim.utils.deprecation import deprecated_params
 
+@deprecated_params(redirections=[
+    lambda buff=1: {"buff_x": buff[0], "buff_y": buff[1]} if isinstance(buff, tuple)
+            else {"buff_x": buff,    "buff_y": buff}
+])
+def foo(**kwargs):
+    return kwargs
+
+foo(buff=0)
+# WARNING  The parameter buff of method foo has been deprecated and may be removed in a later version.
+# returns {"buff_x": 0, buff_y: 0}
+
+foo(buff=(1,2))
+# WARNING  The parameter buff of method foo has been deprecated and may be removed in a later version.
+# returns {"buff_x": 1, buff_y: 2}
 ```

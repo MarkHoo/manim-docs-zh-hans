@@ -4,46 +4,51 @@
 
 Functions
 
-Change_to_rgba*array (*图像*, \_dtype = 'uint8'* )
+
+`change_to_rgba_array(image, dtype='uint8')`
 
 将 RGB 数组转换为 RGBA，且 alpha 值不透明度最大化。
 
-拖动像素（_帧_）
+
+`drag_pixels(frames)`
 
 参数
 
-**框架**（_列表\_\_\[_ _np.array_ _\]_）-
+**frames**（_list[np.array]_）-
 
 返回类型
 
-列表\[np.数组\]
+list[np.array]
 
-获取完整光栅图像路径（_图像文件名_）
+
+`get_full_raster_image_path(image_file_name)`
 
 参数
 
-**图像文件名**( _str_ ) –
+**image_file_name**( _str_ ) –
 
 返回类型
 
-_小路_
+_Path_
 
-获取完整矢量图像路径（_图像文件名_）
+
+`get_full_vector_image_path(image_file_name)`
 
 参数
 
-**图像文件名**( _str_ ) –
+**image_file_name**( _str_ ) –
 
 返回类型
 
-_小路_
+_Path_
 
-反转图像（_图像_）
+
+`invert_image(image)`
 
 参数
 
-**图像**( _np.array_ ) –
+**image**( _np.array_ ) –
 
 返回类型
 
-图像
+Image

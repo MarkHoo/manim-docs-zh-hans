@@ -4,7 +4,10 @@
 
 Functions
 
-二进制搜索（_函数_，_目标_，_下限_，_上限_，_公差= 0.0001_）
+
+```py
+binary_search(function, target, lower_bound, upper_bound, tolerance=0.0001)
+```
 
 通过重复将范围一分为二来搜索范围内的值。
 
@@ -14,35 +17,37 @@ Functions
 
 考虑多项式 x2+3x+1 我们搜索的目标值是 11。精确解是 x=2。
 
-> > \> solution = binary_search(lambda x: x**2 + 3\*x + 1, 11, 0, 5)
-> > \> abs(solution - 2) < 1e-4
-> > True
-> > \> solution = binary_search(lambda x: x**2 + 3\*x + 1, 11, 0, 5, tolerance=0.01)
-> > \> abs(solution - 2) < 0.01
-> > True
+```sh
+>>> solution = binary_search(lambda x: x**2 + 3*x + 1, 11, 0, 5)
+>>> abs(solution - 2) < 1e-4
+True
+>>> solution = binary_search(lambda x: x**2 + 3*x + 1, 11, 0, 5, tolerance=0.01)
+>>> abs(solution - 2) < 0.01
+True
+```
 
-Copy to clipboard
 
 在区间内搜索\[0,5\]对于目标值 71 没有产生解决方案：
 
-> > \> binary_search(lambda x: x\**2 + 3*x + 1, 71, 0, 5) is None
-> > True
-
-Copy to clipboard
+```sh
+>>> binary_search(lambda x: x**2 + 3*x + 1, 71, 0, 5) is None
+True
+```
 
 参数
 
-- **函数**(_可调用\_\_\[_ _\[_ _int_ _|_ _float_ _\]_ _,_ _int_ _|_ _float_ _\]_ ) –
-- **目标**( _int_ _|_ _float_ ) –
+- **function**(_Callable[[int | float], int | float]_ ) –
+- **target**( _int_ _|_ _float_ ) –
 - **lower_bound** ( _int_ _|_ _float_ ) –
 - **upper_bound** ( _int_ _|_ _float_ ) –
-- **公差**( _int_ _|_ _float_ ) –
+- **tolerance**( _int_ _|_ _float_ ) –
 
 返回类型
 
-整数 | 浮动| 没有任何
+int | float | None
 
-选择( _n_ , _k_ )
+
+`choose(n, k)`
 
 二项式系数 n 选择 k。
 
@@ -55,14 +60,15 @@ Copy to clipboard
 
 参数
 
-- **n** (_整数_) –
-- **k** (_整数_) –
+- **n** (_int_) –
+- **k** (_int_) –
 
 返回类型
 
-整数
+int
 
-剪辑（_a_、 _min_a_、 _max_a_）
+
+`clip(a, min_a, max_a)`
 
 剪辑`a`到区间 \[ `min_a`, `max_a`\]。
 
@@ -70,36 +76,37 @@ Copy to clipboard
 
 例子
 
-> > \> clip(15, 11, 20)
-> > 15
-> > \> clip('a', 'h', 'k')
-> > 'h'
+```sh
+>>> clip(15, 11, 20)
+15
+>>> clip('a', 'h', 'k')
+'h'
+```
 
-Copy to clipboard
-
-获取参数（_函数_）
+`get_parameters(function)`
 
 返回 的参数`function`作为参数名称到其对应对象的有序映射`Parameter`。
 
 例子
 
-> > \> get_parameters(get_parameters)
-> > mappingproxy(OrderedDict(\[('function', <Parameter "function: 'Callable'">)\]))
+```sh
+>>> get_parameters(get_parameters)
+mappingproxy(OrderedDict([('function', <Parameter "function: 'Callable'">)]))
 
-> > \> tuple(get_parameters(choose))
-> > ('n', 'k')
-
-Copy to clipboard
+>>> tuple(get_parameters(choose))
+('n', 'k')
+```
 
 参数
 
-**函数**（_可调用_）-
+**function**（_Callable_）-
 
 返回类型
 
 MappingProxyType\[str，inspect.Parameter\]
 
-乙状结肠( _x_ )
+
+`sigmoid(x)`
 
 返回逻辑函数的输出。
 
@@ -112,8 +119,8 @@ MappingProxyType\[str，inspect.Parameter\]
 
 参数
 
-**x**（_浮动_）–
+**x**（_float_）–
 
 返回类型
 
-漂浮
+float

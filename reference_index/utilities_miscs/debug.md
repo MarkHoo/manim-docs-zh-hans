@@ -4,7 +4,9 @@
 
 Functions
 
-index*labels（\_mobject*， _label_height = 0.15_， _background_lines_width = 5_， _background_lines_color = '＃000000'_， _\*\* kwargs_）
+```py
+index_labels(mobject, label_height=0.15, background_stroke_width=5, background_stroke_color='#000000', **kwargs)
+```
 
 返回 mobjects[`VGroup`]()的一个[`Integer`]()，显示每个子对象的索引。
 
@@ -22,13 +24,30 @@ index*labels（\_mobject*， _label_height = 0.15_， _background_lines_width = 
 
 示例：IndexLabelsExample 
 
-![../_images/IndexLabelsExample-1.png](../static/IndexLabelsExample-1.png)
+![IndexLabelsExample-1.png](../static/IndexLabelsExample-1.png)
 
 ```py
+from manim import *
 
+class IndexLabelsExample(Scene):
+    def construct(self):
+        text = MathTex(
+            "\\frac{d}{dx}f(x)g(x)=",
+            "f(x)\\frac{d}{dx}g(x)",
+            "+",
+            "g(x)\\frac{d}{dx}f(x)",
+        )
+
+        #index the fist term in the MathTex mob
+        indices = index_labels(text[0])
+
+        text[0][1].set_color(PURPLE_B)
+        text[0][8:12].set_color(DARK_BLUE)
+
+        self.add(text, indices)
 ```
 
 
-print*family ( \_mobject* , _n_tabs = 0_ )
+`print_family(mobject, n_tabs=0)`
 
 用于调试目的
