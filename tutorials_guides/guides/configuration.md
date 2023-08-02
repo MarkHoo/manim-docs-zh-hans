@@ -210,7 +210,7 @@ Made with <3 by Manim Community developers.
 
 ## ManimConfig 类
 
-配置 Manim 最直接的方法是通过全局`config`对象，它是[`ManimConfig`](../reference/manim._config.utils.ManimConfig.html#manim._config.utils.ManimConfig "manim._config.utils.ManimConfig"). 此类的每个属性都是一个配置选项，可以使用标准属性语法或类似字典的语法来访问：
+配置 Manim 最直接的方法是通过全局`config`对象，它是[`ManimConfig`](). 此类的每个属性都是一个配置选项，可以使用标准属性语法或类似字典的语法来访问：
 
 ```sh
 >>> from manim import *
@@ -222,7 +222,7 @@ Made with <3 by Manim Community developers.
 
 > 前者是优选的；提供后者是为了向后兼容。
 
-大多数类（包括[`Camera`](../reference/manim.camera.camera.Camera.html#manim.camera.camera.Camera "manim.camera.camera.Camera")、[`Mobject`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject")和 [`Animation`](../reference/manim.animation.animation.Animation.html#manim.animation.animation.Animation "manim.animation.animation.Animation")）从全局 中读取一些默认配置 `config`。
+大多数类（包括[`Camera`]()、[`Mobject`]()和 [`Animation`]()）从全局 中读取一些默认配置 `config`。
 
 ```sh
 >>> Camera({}).background_color
@@ -232,7 +232,7 @@ Made with <3 by Manim Community developers.
 <Color #fc6255>
 ```
 
-[`ManimConfig`](../reference/manim._config.utils.ManimConfig.html#manim._config.utils.ManimConfig "manim._config.utils.ManimConfig")旨在保持内部一致性。例如，设置`frame_y_radius`将影响`frame_height`：
+[`ManimConfig`]()旨在保持内部一致性。例如，设置`frame_y_radius`将影响`frame_height`：
 
 ```sh
 >>> config.frame_height

@@ -18,9 +18,9 @@ class Fading(Scene):
         self.play(FadeOut(tex_out, shift=DOWN * 2, scale=1.5))
 ```
 
-课程
+Classes
 
 |||
 |-|-|
-[`FadeIn`](manim.animation.fading.FadeIn.html#manim.animation.fading.FadeIn "manim.animation.fading.FadeIn")|淡入[`Mobject`](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject")s。
-[`FadeOut`](manim.animation.fading.FadeOut.html#manim.animation.fading.FadeOut "manim.animation.fading.FadeOut")|淡出[`Mobject`](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject")s.
+[`FadeIn`]()|淡入[`Mobject`]()s。
+[`FadeOut`]()|淡出[`Mobject`]()s.

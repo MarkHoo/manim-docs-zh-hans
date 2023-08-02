@@ -12,7 +12,7 @@
 
 > 提示
 
-> 有关可用插件的列表，请参阅https://plugins.manim.community/。
+> 有关可用插件的列表，请参阅 [https://plugins.manim.community/](https://plugins.manim.community/) 。
 
 ### 安装插件
 

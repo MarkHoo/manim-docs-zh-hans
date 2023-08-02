@@ -2,7 +2,7 @@
 
 > 笔记
 
-> [在继续之前，请按照安装](../installation.html)中的步骤安装 Manim 并确保其正常运行。有关将 Manim 与 Jupyterlab 或 Jupyter Notebook 结合使用的信息，请参阅、 的文档 。[`IPython magic command`](../reference/manim.utils.ipython_magic.ManimMagic.html#manim.utils.ipython_magic.ManimMagic.manim "manim.utils.ipython_magic.ManimMagic.manim")`%%manim`
+> [在继续之前，请按照安装]()中的步骤安装 Manim 并确保其正常运行。有关将 Manim 与 Jupyterlab 或 Jupyter Notebook 结合使用的信息，请参阅、 的文档 。[`IPython magic command`]()`%%manim`
 
 ## 概述
 
@@ -57,7 +57,7 @@ Manim 将输出渲染信息，然后创建 MP4 文件。您的默认电影播放
 
 如果您看到绘制粉红色圆圈的动画，那么恭喜您！您刚刚从头开始编写了第一个 Manim 场景。
 
-如果您收到错误消息，看不到视频，或者视频输出看起来不像前面的动画，则很可能 Manim 尚未正确安装。请参阅我们的[常见问题解答部分](../faq/index.html) ，获取有关最常见问题的帮助。
+如果您收到错误消息，看不到视频，或者视频输出看起来不像前面的动画，则很可能 Manim 尚未正确安装。请参阅我们的[常见问题解答部分]() ，获取有关最常见问题的帮助。
 
 ### 解释
 
@@ -79,7 +79,7 @@ class CreateCircle(Scene):
         ...
 ```
 
-大多数时候，编写动画脚本的代码完全包含在类[`construct()`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene.construct "manim.scene.scene.Scene.construct")的方法中[`Scene`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene "手动场景.场景.场景")。在里面[`construct()`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene.construct "manim.scene.scene.Scene.construct")，您可以创建对象，将它们显示在屏幕上，并为它们设置动画。
+大多数时候，编写动画脚本的代码完全包含在类[`construct()`]()的方法中[`Scene`]()。在里面[`construct()`]()，您可以创建对象，将它们显示在屏幕上，并为它们设置动画。
 
 接下来的两行创建一个圆圈并设置其颜色和不透明度：
 
@@ -88,7 +88,7 @@ circle = Circle()  # create a circle
 circle.set_fill(PINK, opacity=0.5)  # set the color and transparency
 ```
 
-最后，最后一行使用动画[`Create`](../reference/manim.animation.creation.Create.html#manim.animation.creation.Create "manim.animation.creation.Create")在屏幕上显示圆圈：
+最后，最后一行使用动画[`Create`]()在屏幕上显示圆圈：
 
 ```py
 self.play(Create(circle))  # show the circle on screen
@@ -96,7 +96,7 @@ self.play(Create(circle))  # show the circle on screen
 
 > 提示
 
-> 所有动画必须驻留在[`construct()`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene.construct "manim.scene.scene.Scene.construct")派生自 的类的方法中[`Scene`](../reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene "手动场景.场景.场景")。其他代码（例如辅助函数或数学函数）可能驻留在类之外。
+> 所有动画必须驻留在[`construct()`]()派生自 的类的方法中[`Scene`]()。其他代码（例如辅助函数或数学函数）可能驻留在类之外。
 
 ## 将正方形变成圆形
 
@@ -171,7 +171,7 @@ manim -pql scene.py SquareAndCircle
 
 使用定位方法，您可以渲染具有多个 s 的场景`Mobject`，使用坐标设置它们在场景中的位置或相对于彼此定位它们。
 
-有关定位方法和其他定位方法的更多信息，请查看我们的参考手册中的方法`next_to`列表。[`Mobject`](../reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject")
+有关定位方法和其他定位方法的更多信息，请查看我们的参考手册中的方法`next_to`列表。[`Mobject`]()
 
 ## 使用`.animate`语法到动画方法
 
@@ -242,4 +242,4 @@ manim -pql scene.py DifferentRotations
 
 ### 你完成了！
 
-有了 Manim 的工作安装和这个示例项目，您就可以开始创建自己的动画了。要了解有关 Manim 幕后功能的更多信息，请继续学习下一个教程： [Manim 的输出设置](output_and_config.html)。有关 Manim 功能及其配置和其他设置的概述，请查看其他[教程](index.html)。有关所有可用功能的列表，请参阅 [参考手册](../reference.html)页面。
+有了 Manim 的工作安装和这个示例项目，您就可以开始创建自己的动画了。要了解有关 Manim 幕后功能的更多信息，请继续学习下一个教程： [Manim 的输出设置]()。有关 Manim 功能及其配置和其他设置的概述，请查看其他[教程]()。有关所有可用功能的列表，请参阅 [参考手册]()页面。

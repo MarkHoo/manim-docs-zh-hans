@@ -2,16 +2,16 @@
 
 您可以通过两种不同的方式在视频中渲染 **文本**：
 
-1.  使用 Pango ( [`text_mobject`](../reference/manim.mobject.text.text_mobject.md "manim.mobject.text.text_mobject"))
-2.  使用 LaTeX ( [`tex_mobject`](../reference/manim.mobject.text.tex_mobject.md "manim.mobject.text.tex_mobject"))
+1.  使用 Pango ( [`text_mobject`]())
+2.  使用 LaTeX ( [`tex_mobject`]())
 
-如果您想渲染简单的文本，您应该使用[`Text`](../reference/manim.mobject.text.text_mobject.Text.md "manim.mobject.text.text_mobject.Text")or [`MarkupText`](../reference/manim.mobject.text.text_mobject.MarkupText.mdt "manim.mobject.text.text_mobject.MarkupText")，或其派生之一，例如[`Paragraph`](../reference/manim.mobject.text.text_mobject.Paragraph.md "manim.mobject.text.text_mobject.Paragraph")。有关详细信息，请参阅[没有 LaTeX 的文本。](#using-text-objects)
+如果您想渲染简单的文本，您应该使用[`Text`]()or [`MarkupText`]()，或其派生之一，例如[`Paragraph`]()。有关详细信息，请参阅[没有 LaTeX 的文本。]()
 
-当你需要数学排版时应该使用 LaTeX。有关详细信息，请参阅 [使用 LaTeX 编写文本。](#rendering-with-latex)
+当你需要数学排版时应该使用 LaTeX。有关详细信息，请参阅 [使用 LaTeX 编写文本。]()
 
 ## 没有 LaTeX 的文本
 
-向动画添加文本的最简单方法是使用该类[`Text`](../reference/manim.mobject.text.text_mobject.Text.md "manim.mobject.text.text_mobject.Text") 。它使用[Pango 库](https://pango.gnome.org)来渲染文本。使用 Pango，您还可以渲染非英语字母，例如 hi 或 こんにちは 或 안녕하세요 或 Мрубя babæה。
+向动画添加文本的最简单方法是使用该类[`Text`]() 。它使用[Pango 库](https://pango.gnome.org)来渲染文本。使用 Pango，您还可以渲染非英语字母，例如 hi 或 こんにちは 或 안녕하세요 或 Мрубя babæה。
 
 这是一个简单的*Hello World*动画。
 
@@ -29,9 +29,9 @@ class HelloWorld(Scene):
         self.add(text)
 ```
 
-参考：[`Text`](../reference/manim.mobject.text.text_mobject.Text.md "manim.mobject.text.text_mobject.Text")
+参考：[`Text`]()
 
-您还可以使用[`MarkupText`](../reference/manim.mobject.text.text_mobject.MarkupText.md "manim.mobject.text.text_mobject.MarkupText")它允许使用 PangoMarkup（有关[`MarkupText`](../reference/manim.mobject.text.text_mobject.MarkupText.md "manim.mobject.text.text_mobject.MarkupText")详细信息，请参阅 的文档）来渲染文本。例如：
+您还可以使用[`MarkupText`]()它允许使用 PangoMarkup（有关[`MarkupText`]()详细信息，请参阅 的文档）来渲染文本。例如：
 
 示例：单线颜色
 
@@ -48,11 +48,11 @@ class SingleLineColor(Scene):
         self.add(text)
 ```
 
-参考：[`MarkupText`](../reference/manim.mobject.text.text_mobject.MarkupText.md "manim.mobject.text.text_mobject.MarkupText")
+参考：[`MarkupText`]()
 
-### 与[#一起工作](#working-with-text "Permalink to this heading")[`Text`](../reference/manim.mobject.text.text_mobject.Text.md "manim.mobject.text.text_mobject.Text")[](#working-with-text "此标题的固定链接")
+### 与`Text`一起工作
 
-本节介绍 的属性[`Text`](../reference/manim.mobject.text.text_mobject.Text.md "manim.mobject.text.text_mobject.Text")以及如何在动画中使用它。
+本节介绍 的属性[`Text`]()以及如何在动画中使用它。
 
 #### 使用字体
 
@@ -247,9 +247,9 @@ class DisableLigature(Scene):
         self.add(Group(li, nli).arrange(DOWN, buff=.8))
 ```
 
-#### 迭代[`Text`](../reference/manim.mobject.text.text_mobject.Text.md "manim.mobject.text.text_mobject.Text")
+#### 迭代[`Text`]()
 
-文本对象的行为类似于[`VGroups`](../reference/manim.mobject.types.vectorized_mobject.VGroup.md "manim.mobject.types.vectorized_mobject.VGroup"). 因此，您可以对文本进行切片和索引。
+文本对象的行为类似于[`VGroups`](). 因此，您可以对文本进行切片和索引。
 
 例如，您可以通过迭代将每个字母设置为不同的颜色。
 
@@ -270,13 +270,13 @@ class IterateColor(Scene):
 
 > 警告
 
-> 请注意，[连字](<https://en.wikipedia.org/wiki/Ligature_(writing)>)可能会在此处引起问题。如果您需要字符到子对象的一对一映射，您应该将参数传递`disable_ligatures`给[`Text`](../reference/manim.mobject.text.text_mobject.Text.md "manim.mobject.text.text_mobject.Text"). 请参阅[禁用连字](#disable-ligatures)。
+> 请注意，[连字](<https://en.wikipedia.org/wiki/Ligature_(writing)>)可能会在此处引起问题。如果您需要字符到子对象的一对一映射，您应该将参数传递`disable_ligatures`给[`Text`](). 请参阅[禁用连字]()。
 
-### 与[#一起工作](#working-with-markuptext "此标题的固定链接")[`MarkupText`](../reference/manim.mobject.text.text_mobject.MarkupText.md "manim.mobject.text.text_mobject.MarkupText")
+### 与`MarkupText`一起工作
 
-MarkupText 与 类似[`Text`](../reference/manim.mobject.text.text_mobject.Text.md "manim.mobject.text.text_mobject.Text")，它们之间唯一的区别是它接受并处理 PangoMarkup （类似于 html），而不是仅仅渲染纯文本。
+MarkupText 与 类似[`Text`]()，它们之间唯一的区别是它接受并处理 PangoMarkup （类似于 html），而不是仅仅渲染纯文本。
 
-[`MarkupText`](../reference/manim.mobject.text.text_mobject.MarkupText.md "manim.mobject.text.text_mobject.MarkupText")有关 PangoMarkup 的更多详细信息和进一步参考，请参阅 的文档。
+[`MarkupText`]()有关 PangoMarkup 的更多详细信息和进一步参考，请参阅 的文档。
 
 示例：标记测试
 
@@ -297,7 +297,7 @@ class MarkupTest(Scene):
 
 ## 使用 LaTeX 编写文本
 
-正如您可以用来[`Text`](../reference/manim.mobject.text.text_mobject.Text.md "manim.mobject.text.text_mobject.Text")向视频添加文本一样，您也可以用来[`Tex`](../reference/manim.mobject.text.tex_mobject.Tex.md "manim.mobject.text.tex_mobject.Tex")插入 LaTeX。
+正如您可以用来[`Text`]()向视频添加文本一样，您也可以用来[`Tex`]()插入 LaTeX。
 
 例如，
 
@@ -318,9 +318,9 @@ class HelloLaTeX(Scene):
 
 > 请注意，我们使用原始字符串 ( `r'...'`) 而不是常规字符串 ( `'...'`)。这是因为 TeX 代码使用了很多特殊字符（例如`\`），这些字符在常规 Python 字符串中具有特殊含义。另一种方法是编写`\\`以避免反斜杠：`Tex('\\LaTeX')`。
 
-### 与[#一起工作](#working-with-mathtex "此标题的固定链接")[`MathTex`](../reference/manim.mobject.text.tex_mobject.MathTex.md "manim.mobject.text.tex_mobject.MathTex")
+### 与`MathTex`一起工作
 
-默认情况下，传递到的所有内容都[`MathTex`](../reference/manim.mobject.text.tex_mobject.MathTex.md "manim.mobject.text.tex_mobject.MathTex")处于数学模式。更准确地说， [`MathTex`](../reference/manim.mobject.text.tex_mobject.MathTex.md "manim.mobject.text.tex_mobject.MathTex")是在`align*`环境中进行处理。[`Tex`](../reference/manim.mobject.text.tex_mobject.Tex.md "manim.mobject.text.tex_mobject.Tex")您可以通过用`$`符号 将公式括起来来实现类似的效果`$\xrightarrow{x^6y^8}$`：：
+默认情况下，传递到的所有内容都[`MathTex`]()处于数学模式。更准确地说， [`MathTex`]()是在`align*`环境中进行处理。[`Tex`]()您可以通过用`$`符号 将公式括起来来实现类似的效果`$\xrightarrow{x^6y^8}$`：：
 
 示例：MathTeXDemo
 
@@ -354,7 +354,7 @@ class AMSLaTeX(Scene):
         self.add(tex)
 ```
 
-在 Manim 方面，该类[`Tex`](../reference/manim.mobject.text.tex_mobject.Tex.md "manim.mobject.text.tex_mobject.Tex")还接受属性来更改输出的外观。这与 [`Text`](../reference/manim.mobject.text.text_mobject.Text.md "manim.mobject.text.text_mobject.Text")类非常相似。例如，`color`关键字更改 TeX mobject 的颜色。
+在 Manim 方面，该类[`Tex`]()还接受属性来更改输出的外观。这与 [`Text`]()类非常相似。例如，`color`关键字更改 TeX mobject 的颜色。
 
 示例：LaTeXAttributes
 
@@ -447,13 +447,13 @@ class CorrectLaTeXSubstringColoring(Scene):
         self.add(equation)
 ```
 
-通过设置`substrings_to_isolate`，`x`我们会自动将 拆分 [`MathTex`](../reference/manim.mobject.text.tex_mobject.MathTex.md "manim.mobject.text.tex_mobject.MathTex")为子字符串，并将各个`x`组件隔离为单独的子字符串。只有这样才能`set_color_by_tex()`达到预期的效果。
+通过设置`substrings_to_isolate`，`x`我们会自动将 拆分 [`MathTex`]()为子字符串，并将各个`x`组件隔离为单独的子字符串。只有这样才能`set_color_by_tex()`达到预期的效果。
 
-请注意，Manim 还支持自定义语法，可以轻松地将 TeX 字符串拆分为子字符串：只需用双括号将要隔离的公式部分括起来即可。在 string 中 ，渲染的 mobject 将由子字符串, , , , 和组成。这使得使用 可以轻松编写相似文本片段之间的转换。` MathTex(r"{{ a^2 }} + {{ b^2 }} = {{ c^2 }}")``a^2``+``b^2``=``c^2 `[`TransformMatchingTex`](../reference/manim.animation.transform_matching_parts.TransformMatchingTex.md "manim.animation.transform_matching_parts.TransformMatchingTex")
+请注意，Manim 还支持自定义语法，可以轻松地将 TeX 字符串拆分为子字符串：只需用双括号将要隔离的公式部分括起来即可。在 string 中 ，渲染的 mobject 将由子字符串, , , , 和组成。这使得使用 可以轻松编写相似文本片段之间的转换。` MathTex(r"{{ a^2 }} + {{ b^2 }} = {{ c^2 }}")``a^2``+``b^2``=``c^2 `[`TransformMatchingTex`]()
 
 ### 用于`index_labels`处理复杂的字符串
 
-有时您可能会使用非常复杂的[`MathTex`](../reference/manim.mobject.text.tex_mobject.MathTex.md "manim.mobject.text.tex_mobject.MathTex")对象，这使得使用其各个组件变得困难。这就是调试功能[`index_labels()`](../reference/manim.utils.debug.md "manim.utils.debug.index_labels")非常有用的地方。
+有时您可能会使用非常复杂的[`MathTex`]()对象，这使得使用其各个组件变得困难。这就是调试功能[`index_labels()`]()非常有用的地方。
 
 该方法显示 mobject 的子 mobject 的索引，使您可以轻松找到要更改的 mobject 的组件。
 
@@ -478,7 +478,7 @@ class IndexLabelsMathTex(Scene):
 
 ### LaTeX 数学字体 - 模板库
 
-在排版数学公式时更改 LaTeX 中的字体比常规文本更棘手。它需要更改用于编译 TeX 的模板。Manim 附带了一系列[`TexFontTemplates`](../reference/manim.utils.tex_templates.TexFontTemplates.md "manim.utils.tex_templates.TexFontTemplates") 可供您使用的工具。这些模板都将在数学模式下工作：
+在排版数学公式时更改 LaTeX 中的字体比常规文本更棘手。它需要更改用于编译 TeX 的模板。Manim 附带了一系列[`TexFontTemplates`]() 可供您使用的工具。这些模板都将在数学模式下工作：
 
 示例：LaTeXMathFonts
 
@@ -497,7 +497,7 @@ class LaTeXMathFonts(Scene):
         self.add(tex)
 ```
 
-Manim 还包含[`TexTemplateLibrary`](../reference/manim.utils.tex_templates.TexTemplateLibrary.md "manim.utils.tex_templates.TexTemplateLibrary")3Blue1Brown 使用的 TeX 模板。一个例子是 ctex 模板，用于排版中文脚本。为此，您的系统上必须安装 ctex LaTeX 软件包。[`Tex`](../reference/manim.mobject.text.tex_mobject.Tex.md "manim.mobject.text.tex_mobject.Tex")此外，如果您只是排版文本，您可能根本不需要，而应该使用[`Text`](../reference/manim.mobject.text.text_mobject.Text.md "manim.mobject.text.text_mobject.Text")。
+Manim 还包含[`TexTemplateLibrary`]()3Blue1Brown 使用的 TeX 模板。一个例子是 ctex 模板，用于排版中文脚本。为此，您的系统上必须安装 ctex LaTeX 软件包。[`Tex`]()此外，如果您只是排版文本，您可能根本不需要，而应该使用[`Text`]()。
 
 示例：LaTeXTemplateLibrary
 
@@ -513,7 +513,7 @@ class LaTeXTemplateLibrary(Scene):
 ```
 ### 对齐公式
 
-[`MathTex`](../reference/manim.mobject.text.tex_mobject.MathTex.md#manim.mobject.text.tex_mobject.MathTex "manim.mobject.text.tex_mobject.MathTex")mobject 在 LaTeX 环境中排版 `align*` 。这意味着您可以在排版多行公式时使用`&`对齐字符：
+[`MathTex`]()mobject 在 LaTeX 环境中排版 `align*` 。这意味着您可以在排版多行公式时使用`&`对齐字符：
 
 示例：LaTeXAlignEnvironment
 
