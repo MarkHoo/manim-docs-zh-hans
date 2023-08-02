@@ -2,7 +2,9 @@
 
 合格名称：`manim.mobject.geometry.boolean\_ops.Intersection`
 
-`class Intersection(*vmobjects, **kwargs)`
+```py
+class Intersection(*vmobjects, **kwargs)
+```
 
 Bases: `_BooleanOps`
 

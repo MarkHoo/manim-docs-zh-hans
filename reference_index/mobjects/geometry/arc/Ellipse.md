@@ -2,7 +2,9 @@
 
 合格名称：`manim.mobject.geometry.arc.Ellipse`
 
-`class Ellipse(width=2, height=1, **kwargs)`
+```py
+class Ellipse(width=2, height=1, **kwargs)
+```
 
 Bases: Circle
 

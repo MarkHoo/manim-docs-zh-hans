@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.types.vectorized\_mobject.CurvesAsSubmobjects`
 
-_类_ CurvesAsSubmobjects ( _vmobject_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/types/vectorized_mobject.html#CurvesAsSubmobjects)[#](#manim.mobject.types.vectorized_mobject.CurvesAsSubmobjects "此定义的固定链接")
 
-基地：[`VGroup`](manim.mobject.types.vectorized_mobject.VGroup.html#manim.mobject.types.vectorized_mobject.VGroup "manim.mobject.types.vectorized_mobject.VGroup")
+```py
+
+```
 
 将曲线的元素转换为子对象。
 
@@ -14,16 +15,9 @@ _类_ CurvesAsSubmobjects ( _vmobject_ , _\*\* kwargs_ )[\[来源\]](../_modules
 
 ![../_images/LineGradientExample-1.png](../_images/LineGradientExample-1.png)
 
-from manim import \*
+```py
 
-class LineGradientExample(Scene):
-def construct(self):
-curve = ParametricFunction(lambda t: \[t, np.sin(t), 0\], t_range=\[-PI, PI, 0.01\], stroke_width=10)
-new_curve = CurvesAsSubmobjects(curve)
-new_curve.set_color_by_gradient(BLUE, RED)
-self.add(new_curve.shift(UP), curve)
-
-Copy to clipboard
+```
 
 方法
 

@@ -2,15 +2,16 @@
 
 合格名称：`manim.mobject.mobject.Group`
 
-_类_ 组（_\* mobjects_， _\*\* kwargs_）[\[来源\]](../_modules/manim/mobject/mobject.html#Group)[#](#manim.mobject.mobject.Group "此定义的固定链接")
 
-基地：[`Mobject`](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject")
+```py
 
-多个组合在一起[`Mobjects`](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject")。
+```
+
+多个组合在一起[`Mobjects`]()。
 
 笔记
 
-当多次添加相同的 mobject 时，重复的内容将被忽略。用于[`Mobject.copy()`](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject.copy "manim.mobject.mobject.Mobject.copy")创建一个单独的副本，然后可以将其添加到组中。
+当多次添加相同的 mobject 时，重复的内容将被忽略。用于[`Mobject.copy()`]()创建一个单独的副本，然后可以将其添加到组中。
 
 方法
 

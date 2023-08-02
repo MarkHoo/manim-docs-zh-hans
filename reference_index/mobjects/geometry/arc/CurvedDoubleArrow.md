@@ -2,7 +2,9 @@
 
 合格名称：`manim.mobject.geometry.arc.CurvedDoubleArrow`
 
-`class CurvedDoubleArrow(start_point, end_point, **kwargs)`
+```py
+class CurvedDoubleArrow(start_point, end_point, **kwargs)
+```
 
 Bases: `CurvedArrow`
 

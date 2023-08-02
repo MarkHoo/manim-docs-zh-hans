@@ -1,85 +1,80 @@
-# 宝丽码
+# 多边图形
 
 合格名称：`manim.mobject.geometry.polygram.Polygram`
 
-_类_ Polygram ( _\* vertex_groups_ , _color = '#58C4DD'_ , _\*\* kwargs_ )
+```py
+class Polygram(*vertex_groups, color='#58C4DD', **kwargs)
+```
 
-基地：[`VMobject`]()
+Bases: `VMobject`
 
 广义的[`Polygon`]()，允许断开连接的边集。
 
 参数
 
-- **vertex_groups** (_可迭代**\[**序列\_\_\[_ _float_ _\]_ _\]_ ) –
+- **vertex_groups** (*可迭代[序列[float]]*) –
 
   组成 的顶点组[`Polygram`]()。
 
   重复每组中的第一个顶点以闭合形状。每个点必须是 3 维的：`[x,y,z]`
 
-- **颜色**– 的颜色[`Polygram`]()。
+- **color**– 的颜色[`Polygram`]()。
 - **kwargs** – 转发到父构造函数。
 
 例子
 
 示例：Polygram 示例
 
-
 ```py
+from manim import *
 
+import numpy as np
+
+class PolygramExample(Scene):
+    def construct(self):
+        hexagram = Polygram(
+            [[0, 2, 0], [-np.sqrt(3), -1, 0], [np.sqrt(3), -1, 0]],
+            [[-np.sqrt(3), 1, 0], [0, -2, 0], [np.sqrt(3), 1, 0]],
+        )
+        self.add(hexagram)
+
+        dot = Dot()
+        self.play(MoveAlongPath(dot, hexagram), run_time=5, rate_func=linear)
+        self.remove(dot)
+        self.wait()
 ```
 
 
 方法
 
-[`get_vertex_groups`]()
+|||
+|-|-|
+[`get_vertex_groups`]()|获取 的顶点组[`Polygram`]()。
+[`get_vertices`]()|获取 的顶点[`Polygram`]()。
+[`round_corners`]()|将 的角磨圆[`Polygram`]()。
 
-获取 的顶点组[`Polygram`]()。
-
-[`get_vertices`]()
-
-获取 的顶点[`Polygram`]()。
-
-[`round_corners`]()
-
-将 的角磨圆[`Polygram`]()。
 
 属性
 
-`animate`
+|||
+|-|-|
+`animate`|用于对 的任何方法的应用程序进行动画处理`self`。
+`animation_overrides`|
+`color`|
+`depth`|对象的深度。
+`fill_color`|如果有多种颜色（对于渐变），则返回第一个颜色
+`height`|mobject 的高度。
+`n_points_per_curve`|
+`sheen_factor`|
+`stroke_color`|
+`width`|mobject 的宽度。
 
-用于对 的任何方法的应用程序进行动画处理`self`。
 
-`animation_overrides`
-
-`color`
-
-`depth`
-
-对象的深度。
-
-`fill_color`
-
-如果有多种颜色（对于渐变），则返回第一个颜色
-
-`height`
-
-mobject 的高度。
-
-`n_points_per_curve`
-
-`sheen_factor`
-
-`stroke_color`
-
-`width`
-
-mobject 的宽度。
-
-获取顶点组( )
+`get_vertex_groups()`
 
 获取 的顶点组[`Polygram`]()。
 
-退货
+返回
 
 的顶点组[`Polygram`]()。
 
@@ -89,17 +84,24 @@ mobject 的宽度。
 
 例子
 
+```sh
+>>> poly = Polygram([ORIGIN, RIGHT, UP], [LEFT, LEFT + UP, 2 * LEFT])
+>>> poly.get_vertex_groups()
+array([[[ 0.,  0.,  0.],
+        [ 1.,  0.,  0.],
+        [ 0.,  1.,  0.]],
 
-```py
-
+       [[-1.,  0.,  0.],
+        [-1.,  1.,  0.],
+        [-2.,  0.,  0.]]])
 ```
 
 
-获取顶点( )
+`get_vertices()`
 
 获取 的顶点[`Polygram`]()。
 
-退货
+返回
 
 的顶点[`Polygram`]()。
 
@@ -110,12 +112,19 @@ mobject 的宽度。
 例子
 
 
-```py
-
+```sh
+>>> sq = Square()
+>>> sq.get_vertices()
+array([[ 1.,  1.,  0.],
+       [-1.,  1.,  0.],
+       [-1., -1.,  0.],
+       [ 1., -1.,  0.]])
 ```
 
 
-圆角（_半径= 0.5_，_均匀分配锚点=假_，_组件每个圆角= 2_）
+```py
+round_corners(radius=0.5, evenly_distribute_anchors=False, components_per_rounded_corner=2)
+```
 
 将 的角磨圆[`Polygram`]()。
 
@@ -125,13 +134,13 @@ mobject 的宽度。
 - **Evenly_distribute_anchors** ( _bool_ ) – 将长线段分成按比例大小的线段。
 - **Components_per_rounded_corner** ( _int_ ) – 用于表示圆角曲线的点数。
 
-也可以看看
+> 也可以看看
 
-`RoundedRectangle`
+> `RoundedRectangle`
 
-笔记
+> 笔记
 
-如果半径作为单个值提供，则相同的半径将应用于所有角。如果 radius 是一个列表，则将按顺序应用各个值，第一个角接收 radius\[0\]，第二个角接收 radius\[1\]等。半径列表将根据需要重复。
+> 如果半径作为单个值提供，则相同的半径将应用于所有角。如果 radius 是一个列表，则将按顺序应用各个值，第一个角接收 radius\[0\]，第二个角接收 radius\[1\]等。半径列表将根据需要重复。
 
 提供 components_per_rounded_corner 值以便可以根据需要微调圆角的保真度。2 对于大多数形状来说都是合适的值，但是如果圆角特别大，则可能需要更大的值。2 是允许的最小数字，代表曲线的起点和终点。3 将产生起点、中间点和终点，这意味着将生成 2 条曲线。
 
@@ -144,6 +153,17 @@ mobject 的宽度。
 ![PolygramRoundCorners-1.png](../static/PolygramRoundCorners-1.png)
 
 ```py
+from manim import *
 
+class PolygramRoundCorners(Scene):
+    def construct(self):
+        star = Star(outer_radius=2)
+
+        shapes = VGroup(star)
+        shapes.add(star.copy().round_corners(radius=0.1))
+        shapes.add(star.copy().round_corners(radius=0.25))
+
+        shapes.arrange(RIGHT)
+        self.add(shapes)
 ```
 

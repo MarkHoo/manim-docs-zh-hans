@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.text.code\_mobject.Code`
 
-_类_ 代码（_file_name = None_， _code = None_， _tab_width = 3_， _line_spacing = 0.3_， _font_size = 24_， _font = 'Monospace'_， _Stroke_width = 0_， _margin = 0.3_， _indentation_chars = '     '_，_背景= '长方形'_， _background_lines_width = 1_ ,*背景*笔画颜色= '#FFFFFF'* ,*角半径= 0.2* , \_insert_line_no = True* , _line_no_from = 1_ , _line_no_buff = 0.4_ ,_样式= 'vim'_ ,_语言= None_ , _generate_html_file = False_ , _warn_missing_font = True_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/text/code_mobject.html#Code)[#](#manim.mobject.text.code_mobject.Code "此定义的固定链接")
 
-基地：[`VGroup`](manim.mobject.types.vectorized_mobject.VGroup.html#manim.mobject.types.vectorized_mobject.VGroup "manim.mobject.types.vectorized_mobject.VGroup")
+```py
+
+```
 
 突出显示的源代码列表。
 
@@ -22,43 +23,21 @@ _类_ 代码（_file_name = None_， _code = None_， _tab_width = 3_， _line_s
 
 正常使用：
 
-listing = Code(
-"helloworldcpp.cpp",
-tab_width=4,
-background_stroke_width=1,
-background_stroke_color=WHITE,
-insert_line_no=True,
-style=Code.styles_list\[15\],
-background="window",
-language="cpp",
-)
+```py
 
-Copy to clipboard
+```
+
 
 我们还可以渲染作为字符串传递的代码（但请注意，在这种情况下必须指定语言）：
 
-示例：CodeFromString [¶](#codefromstring)
+示例：CodeFromString 
 
 ![../_images/CodeFromString-1.png](../_images/CodeFromString-1.png)
 
-from manim import \*
+```py
 
-class CodeFromString(Scene):
-def construct(self):
-code = '''from manim import Scene, Square
+```
 
-class FadeInSquare(Scene):
-def construct(self):
-s = Square()
-self.play(FadeIn(s))
-self.play(s.animate.scale(2))
-self.wait()
-'''
-rendered_code = Code(code=code, tab_width=4, background="window",
-language="Python", font="Monospace")
-self.add(rendered_code)
-
-Copy to clipboard
 
 参数
 

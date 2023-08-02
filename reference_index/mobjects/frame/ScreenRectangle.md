@@ -2,9 +2,11 @@
 
 合格名称：`manim.mobject.frame.ScreenRectangle`
 
-`class ScreenRectangle(aspect_ratio=1.7777777777777777, height=4, **kwargs)`
+```py
+class ScreenRectangle(aspect_ratio=1.7777777777777777, height=4, **kwargs)
+```
 
-Bases: Rectangle
+Bases: `Rectangle`
 
 方法
 

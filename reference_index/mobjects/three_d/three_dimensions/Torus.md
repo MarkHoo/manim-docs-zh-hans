@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.three\_d.three\_dimensions.Torus`
 
-环面*类*（_major_radius = 3_， _minor_radius = 1_， _u_range = （ 0，6.283185307179586）_， _v_range = （ 0，6.283185307179586）_，_分辨率= None_， _\*\* kwargs_）[\[来源\]](../_modules/manim/mobject/three_d/three_dimensions.html#Torus)[#](#manim.mobject.three_d.three_dimensions.Torus "此定义的固定链接")
 
-基地：[`Surface`](manim.mobject.three_d.three_dimensions.Surface.html#manim.mobject.three_d.three_dimensions.Surface "manim.mobject. Three_d. Three_dimensions.Surface")
+```py
+
+```
 
 一个环面。
 
@@ -22,16 +23,11 @@
 
 ![../_images/ExampleTorus-1.png](../_images/ExampleTorus-1.png)
 
-from manim import \*
 
-class ExampleTorus(ThreeDScene):
-def construct(self):
-axes = ThreeDAxes()
-torus = Torus()
-self.set*camera_orientation(phi=75 * DEGREES, theta=30 \_ DEGREES)
-self.add(axes, torus)
+```py
 
-Copy to clipboard
+```
+
 
 方法
 

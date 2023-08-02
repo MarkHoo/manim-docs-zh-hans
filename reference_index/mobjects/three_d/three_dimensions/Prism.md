@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.three\_d.three\_dimensions.Prism`
 
-Prism*类*（_维度= \[3, 2, 1\]_ , _\*\* kwargs_）[\[来源\]](../_modules/manim/mobject/three_d/three_dimensions.html#Prism)[#](#manim.mobject.three_d.three_dimensions.Prism "此定义的固定链接")
 
-基地：[`Cube`](manim.mobject.three_d.three_dimensions.Cube.html#manim.mobject.three_d.three_dimensions.Cube "manim.mobject. Three_d. Three_dimensions.Cube")
+```py
+
+```
 
 直立长方体（或长方体）。由格式中每边的长度定义。`[x, y, z]`
 
@@ -16,18 +17,10 @@ Prism*类*（_维度= \[3, 2, 1\]_ , _\*\* kwargs_）[\[来源\]](../_modules/ma
 
 示例：ExamplePrism [¶](#exampleprism)
 
-![../_images/ExamplePrism-1.png](../_images/ExamplePrism-1.png)
 
-from manim import \*
+```py
 
-class ExamplePrism(ThreeDScene):
-def construct(self):
-self.set*camera_orientation(phi=60 * DEGREES, theta=150 \_ DEGREES)
-prismSmall = Prism(dimensions=\[1, 2, 3\]).rotate(PI / 2)
-prismLarge = Prism(dimensions=\[1.5, 3, 4.5\]).move_to(\[2, 0, 0\])
-self.add(prismSmall, prismLarge)
-
-Copy to clipboard
+```
 
 方法
 

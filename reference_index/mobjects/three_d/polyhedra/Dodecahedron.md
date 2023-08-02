@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.three\_d.polyhedra.Dodecahedron`
 
-十二面*体类*（_edge_length = 1_， _\*\* kwargs_）[\[来源\]](../_modules/manim/mobject/three_d/polyhedra.html#Dodecahedron)[#](#manim.mobject.three_d.polyhedra.Dodecahedron "此定义的固定链接")
 
-基地：[`Polyhedron`](manim.mobject.three_d.polyhedra.Polyhedron.html#manim.mobject.three_d.polyhedra.Polyhedron "manim.mobject.two_d.polyhedra.Polyhedron")
+```py
+
+```
 
 十二面体，五个柏拉图立体之一。它有 12 个面、30 条边和 20 个顶点。
 
@@ -18,15 +19,11 @@
 
 ![../_images/十二面体场景-1.png](../_images/DodecahedronScene-1.png)
 
-from manim import \*
 
-class DodecahedronScene(ThreeDScene):
-def construct(self):
-self.set*camera_orientation(phi=75 * DEGREES, theta=30 \_ DEGREES)
-obj = Dodecahedron()
-self.add(obj)
+```py
 
-Copy to clipboard
+```
+
 
 方法
 

@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.logo.ManimBanner`
 
-_类_ ManimBanner ( _dark_theme = True_ )[\[来源\]](../_modules/manim/mobject/logo.html#ManimBanner)[#](#manim.mobject.logo.ManimBanner "此定义的固定链接")
 
-基地：[`VGroup`](manim.mobject.types.vectorized_mobject.VGroup.html#manim.mobject.types.vectorized_mobject.VGroup "manim.mobject.types.vectorized_mobject.VGroup")
+```py
+
+```
 
 代表 Manim 旗帜的便利类。
 
@@ -16,46 +17,31 @@ _类_ ManimBanner ( _dark_theme = True_ )[\[来源\]](../_modules/manim/mobject/
 
 例子
 
-示例：DarkThemeBanner [¶](#darkthemebanner)
+示例：DarkThemeBanner
 
-from manim import \*
+```py
 
-class DarkThemeBanner(Scene):
-def construct(self):
-banner = ManimBanner()
-self.play(banner.create())
-self.play(banner.expand())
-self.wait()
-self.play(Unwrite(banner))
+```
 
-Copy to clipboard
 
-示例：LightThemeBanner [¶](#lightthemebanner)
+示例：LightThemeBanner 
 
-from manim import \*
+```py
 
-class LightThemeBanner(Scene):
-def construct(self):
-self.camera.background_color = "#ece6e2"
-banner = ManimBanner(dark_theme=False)
-self.play(banner.create())
-self.play(banner.expand())
-self.wait()
-self.play(Unwrite(banner))
+```
 
-Copy to clipboard
 
 方法
 
-[`create`](#manim.mobject.logo.ManimBanner.create "manim.mobject.logo.ManimBanner.create")
+[`create`]()
 
 Manim 标志的创作动画。
 
-[`expand`](#manim.mobject.logo.ManimBanner.expand "manim.mobject.logo.ManimBanner.expand")
+[`expand`]()
 
 将 Manim 的徽标扩展到其横幅中的动画。
 
-[`scale`](#manim.mobject.logo.ManimBanner.scale "manim.mobject.logo.ManimBanner.scale")
+[`scale`]()
 
 按指定的比例因子缩放横幅。
 
@@ -91,7 +77,7 @@ mobject 的高度。
 
 mobject 的宽度。
 
-创建（_运行时间= 2_）[\[来源\]](../_modules/manim/mobject/logo.html#ManimBanner.create)[#](#manim.mobject.logo.ManimBanner.create "此定义的固定链接")
+创建（_运行时间= 2_）
 
 Manim 标志的创作动画。
 
@@ -101,13 +87,13 @@ Manim 标志的创作动画。
 
 退货
 
-通话中使用的动画[`Scene.play()`](manim.scene.scene.Scene.html#manim.scene.scene.Scene.play "manim.场景.场景.场景.play")。
+通话中使用的动画[`Scene.play()`]()。
 
 返回类型
 
-[`AnimationGroup`](manim.animation.composition.AnimationGroup.html#manim.animation.composition.AnimationGroup "manim.animation.composition.AnimationGroup")
+[`AnimationGroup`]()
 
-展开（_运行时间= 1.5_，_方向= '中心'_）[\[来源\]](../_modules/manim/mobject/logo.html#ManimBanner.expand)[#](#manim.mobject.logo.ManimBanner.expand "此定义的固定链接")
+展开（_运行时间= 1.5_，_方向= '中心'_）
 
 将 Manim 的徽标扩展到其横幅中的动画。
 
@@ -126,30 +112,22 @@ Manim 标志的创作动画。
 
 退货
 
-通话中使用的动画[`Scene.play()`](manim.scene.scene.Scene.html#manim.scene.scene.Scene.play "manim.场景.场景.场景.play")。
+通话中使用的动画[`Scene.play()`](")。
 
 返回类型
 
-[`Succession`](manim.animation.composition.Succession.html#manim.animation.composition.Succession "manim.animation.composition.Succession")
+[`Succession`]()
 
 例子
 
-示例：展开方向[¶](#expanddirections)
+示例：展开方向
 
-from manim import \*
+```py
 
-class ExpandDirections(Scene):
-def construct(self):
-banners = \[ManimBanner().scale(0.5).shift(UP\*x) for x in \[-2, 0, 2\]\]
-self.play(
-banners\[0\].expand(direction="right"),
-banners\[1\].expand(direction="center"),
-banners\[2\].expand(direction="left"),
-)
+```
 
-Copy to clipboard
 
-比例（_比例因子_， _\*\* kwargs_）[\[来源\]](../_modules/manim/mobject/logo.html#ManimBanner.scale)[#](#manim.mobject.logo.ManimBanner.scale "此定义的固定链接")
+比例（_比例因子_， _\*\* kwargs_）
 
 按指定的比例因子缩放横幅。
 
@@ -163,4 +141,4 @@ Copy to clipboard
 
 返回类型
 
-[`ManimBanner`](#manim.mobject.logo.ManimBanner "manim.mobject.logo.ManimBanner")
+[`ManimBanner`]()

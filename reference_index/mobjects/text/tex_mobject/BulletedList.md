@@ -2,27 +2,21 @@
 
 合格名称：`manim.mobject.text.tex\_mobject.BulletedList`
 
-_类_ BulletedList ( _\* items_ , _buff = 0.5_ , _dot_scale_factor = 2_ , _tex_environment = None_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/text/tex_mobject.html#BulletedList)[#](#manim.mobject.text.tex_mobject.BulletedList "此定义的固定链接")
 
-基地：[`Tex`](manim.mobject.text.tex_mobject.Tex.html#manim.mobject.text.tex_mobject.Tex "manim.mobject.text.tex_mobject.Tex")
+```py
+
+```
 
 例子
 
-示例：项目符号列表示例[¶](#bulletedlistexample)
+示例：项目符号列表示例
 
 ![../_images/BulletedListExample-1.png](../_images/BulletedListExample-1.png)
 
-from manim import \*
+```py
 
-class BulletedListExample(Scene):
-def construct(self):
-blist = BulletedList("Item 1", "Item 2", "Item 3", height=2, width=2)
-blist.set_color_by_tex("Item 1", RED)
-blist.set_color_by_tex("Item 2", GREEN)
-blist.set_color_by_tex("Item 3", BLUE)
-self.add(blist)
+```
 
-Copy to clipboard
 
 方法
 

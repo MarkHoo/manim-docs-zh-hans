@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.types.vectorized\_mobject.VMobject`
 
-_类_ VMobject ( _fill_color = None_ , _fill_opacity = 0.0_ , _Stroke_color = None_ , _Stroke_opacity = 1.0_ , _Stroke_width = 4_ , _background_lines_color = '#000000'_ , _background_lines_opacity = 1.0_ , _background_lines_width = 0_ , _sheen_factor = 0.0_ , _joint_type = None_ , _sheen_direction = array( \[- 1.、 1.、 0.\])_、 _close_new_points = False_、 _pre_function_handle_to_anchor_scale_factor = 0.01_、 _make_smooth_after_applying_functions = False_、 _background_image = None_、 _shade_in_3d = False_、 _tolerance_for_point_equality = 1e-06_、 _n_points_per_cubic_curve = 4_、 _\*\*夸格斯_）[\[来源\]](../_modules/manim/mobject/types/vectorized_mobject.html#VMobject)[#](#manim.mobject.types.vectorized_mobject.VMobject "此定义的固定链接")
 
-基地：[`Mobject`](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject")
+```py
+
+```
 
 矢量化对象。
 
@@ -584,11 +585,11 @@ _可迭代_\[_元组_\[_可调用_\[\[float\], np.ndarray\], float\]\]
 
 a 的默认方向[`Circle`](manim.mobject.geometry.arc.Circle.html#manim.mobject.geometry.arc.Circle "manim.mobject.geometry.arc.Circle")是逆时针：
 
-> > \> from manim import Circle
-> > \> Circle().get_direction()
-> > 'CCW'
 
-Copy to clipboard
+```py
+
+```
+
 
 退货
 
@@ -889,19 +890,11 @@ resize*points ( \_new_length* , _resize_func=<函数 resize_array>_ )[\[来源\]
 
 示例：改变方向[¶](#changeofdirection)
 
-from manim import \*
 
-class ChangeOfDirection(Scene):
-def construct(self):
-ccw = RegularPolygon(5)
-ccw.shift(LEFT)
-cw = RegularPolygon(5)
-cw.shift(RIGHT).reverse_direction()
+```py
 
-        self.play(Create(ccw), Create(cw),
-        run_time=4)
+```
 
-Copy to clipboard
 
 旋转(_角度_,_轴= array(\[0., 0., 1.\])_ , _about_point = None_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/types/vectorized_mobject.html#VMobject.rotate)[#](#manim.mobject.types.vectorized_mobject.VMobject.rotate "此定义的固定链接")
 
@@ -999,19 +992,11 @@ set*fill（*颜色=无*，*不透明度=无*，*族=真\_）[\[来源\]](../_mod
 
 ![../_images/SetFill-1.png](../_images/SetFill-1.png)
 
-from manim import \*
 
-class SetFill(Scene):
-def construct(self):
-square = Square().scale(2).set_fill(WHITE,1)
-circle1 = Circle().set_fill(GREEN,0.8)
-circle2 = Circle().set_fill(YELLOW) \# No fill_opacity
-circle3 = Circle().set_fill(color = '#FF2135', opacity = 0.2)
-group = Group(circle1,circle2,circle3).arrange()
-self.add(square)
-self.add(group)
+```py
 
-Copy to clipboard
+```
+
 
 也可以看看
 
@@ -1050,14 +1035,11 @@ set*sheen (*因子*,*方向= None* , \_family = True* )[\[来源\]](../_modules/
 
 ![../_images/SetSheen-1.png](../_images/SetSheen-1.png)
 
-from manim import \*
 
-class SetSheen(Scene):
-def construct(self):
-circle = Circle(fill_opacity=1).set_sheen(-0.3, DR)
-self.add(circle)
+```py
 
-Copy to clipboard
+```
+
 
 set*sheen_direction (*方向*, \_family = True* )[\[来源\]](../_modules/manim/mobject/types/vectorized_mobject.html#VMobject.set_sheen_direction)[#](#manim.mobject.types.vectorized_mobject.VMobject.set_sheen_direction "此定义的固定链接")
 
@@ -1071,9 +1053,11 @@ set*sheen_direction (*方向*, \_family = True* )[\[来源\]](../_modules/manim/
 
 正常使用：
 
-Circle().set_sheen_direction(UP)
 
-Copy to clipboard
+```py
+
+```
+
 
 也可以看看
 

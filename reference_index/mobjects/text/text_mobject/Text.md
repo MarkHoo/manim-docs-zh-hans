@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.text.text\_mobject.Text`
 
-_类_ Text (_文本_, _fill_opacity = 1.0_ , _border_width = 0_ , _\*_ , _color = '#FFFFFF'_ , _font_size = 48_ , _line_spacing = \- 1_ , _font = ''_ , _slant = 'NORMAL'_ , _Weight = 'NORMAL'_ , _t2c =无_, _t2f =无_, _t2g =无_,_t2s =无_， _t2w =无_，_渐变=无_， _tab_width = 4_， _warn_missing_font = True_，_高度= None_，_宽度= None_， _should_center = True_， _disable_ligatures = False_， _\*\* kwargs_）[\[来源\]](../_modules/manim/mobject/text/text_mobject.html#Text)[#](#manim.mobject.text.text_mobject.Text "此定义的固定链接")
 
-基地：[`SVGMobject`](manim.mobject.svg.svg_mobject.SVGMobject.html#manim.mobject.svg.svg_mobject.SVGMobject "manim.mobject.svg.svg_mobject.SVGMobject")
+```py
+
+```
 
 [显示使用 Pango](https://pango.gnome.org/)渲染的（非 LaTeX）文本。
 
@@ -44,73 +45,44 @@ _类_ Text (_文本_, _fill_opacity = 1.0_ , _border_width = 0_ , _\*_ , _color 
 
 例子
 
-示例：Example1Text [¶](#example1text)
+示例：Example1Text
 
 ![../_images/Example1Text-1.png](../_images/Example1Text-1.png)
 
-from manim import \*
+```py
 
-class Example1Text(Scene):
-def construct(self):
-text = Text('Hello world').scale(3)
-self.add(text)
+```
 
-Copy to clipboard
 
-示例：文本颜色示例[¶](#textcolorexample)
+示例：文本颜色示例
 
 ![../_images/TextColorExample-1.png](../_images/TextColorExample-1.png)
 
-from manim import \*
 
-class TextColorExample(Scene):
-def construct(self):
-text1 = Text('Hello world', color=BLUE).scale(3)
-text2 = Text('Hello world', gradient=(BLUE, GREEN)).scale(3).next_to(text1, DOWN)
-self.add(text1, text2)
+```py
 
-Copy to clipboard
+```
 
-示例：TextItalicAndBoldExample [¶](#textitalicandboldexample)
+
+示例：TextItalicAndBoldExample 
 
 ![../_images/TextItalicAndBoldExample-1.png](../_images/TextItalicAndBoldExample-1.png)
 
-from manim import \*
 
-class TextItalicAndBoldExample(Scene):
-def construct(self):
-text1 = Text("Hello world", slant=ITALIC)
-text2 = Text("Hello world", t2s={'world':ITALIC})
-text3 = Text("Hello world", weight=BOLD)
-text4 = Text("Hello world", t2w={'world':BOLD})
-text5 = Text("Hello world", t2c={'o':YELLOW}, disable_ligatures=True)
-text6 = Text(
-"Visit us at docs.manim.community",
-t2c={"docs.manim.community": YELLOW},
-disable_ligatures=True,
-)
-text6.scale(1.3).shift(DOWN)
-self.add(text1, text2, text3, text4, text5 , text6)
-Group(\*self.mobjects).arrange(DOWN, buff=.8).set_height(config.frame_height-LARGE_BUFF)
+```py
 
-Copy to clipboard
+```
 
-示例：文本更多自定义[¶](#textmorecustomization)
+
+示例：文本更多自定义
 
 ![../_images/TextMoreCustomization-1.png](../_images/TextMoreCustomization-1.png)
 
-from manim import \*
 
-class TextMoreCustomization(Scene):
-def construct(self):
-text1 = Text(
-'Google',
-t2c={'\[:1\]': '#3174f0', '\[1:2\]': '#e53125',
-'\[2:3\]': '#fbb003', '\[3:4\]': '#3174f0',
-'\[4:5\]': '#269a43', '\[5:\]': '#e53125'}, font_size=58).scale(3)
-self.add(text1)
+```py
 
-Copy to clipboard
+```
+
 
 由于[`Text`](#manim.mobject.text.text_mobject.Text "manim.mobject.text.text_mobject.Text")使用 Pango 渲染文本，渲染非英文字符是很容易的：
 
@@ -118,51 +90,32 @@ Copy to clipboard
 
 ![../_images/MultipleFonts-1.png](../_images/MultipleFonts-1.png)
 
-from manim import \*
+```py
 
-class MultipleFonts(Scene):
-def construct(self):
-morning = Text("வணக்கம்", font="sans-serif")
-japanese = Text(
-"日本へようこそ", t2c={"日本": BLUE}
-) \# works same as \`\`Text\`\`.
-mess = Text("Multi-Language", weight=BOLD)
-russ = Text("Здравствуйте मस नम म ", font="sans-serif")
-hin = Text("नमस्ते", font="sans-serif")
-arb = Text(
-"صباح الخير \\n تشرفت بمقابلتك", font="sans-serif"
-) \# don't mix RTL and LTR languages nothing shows up then ;-)
-chinese = Text("臂猿「黛比」帶著孩子", font="sans-serif")
-self.add(morning, japanese, mess, russ, hin, arb, chinese)
-for i,mobj in enumerate(self.mobjects):
-mobj.shift(DOWN\*(i-3))
+```
 
-Copy to clipboard
 
-示例：PangoRender [¶](#pangorender)
+示例：PangoRender 
 
-from manim import \*
 
-class PangoRender(Scene):
-def construct(self):
-morning = Text("வணக்கம்", font="sans-serif")
-self.play(Write(morning))
-self.wait(2)
+```py
 
-Copy to clipboard
+```
+
 
 测试
 
 检查作品创作情况[`Text`](#manim.mobject.text.text_mobject.Text "manim.mobject.text.text_mobject.Text")：
 
-> > \> Text('The horse does not eat cucumber salad.')
-> > Text('The horse does not eat cucumber salad.')
 
-Copy to clipboard
+```py
+
+```
+
 
 方法
 
-[`init_colors`](#manim.mobject.text.text_mobject.Text.init_colors "manim.mobject.text.text_mobject.Text.init_colors")
+[`init_colors`]()
 
 初始化颜色。
 
@@ -204,7 +157,7 @@ mobject 的高度。
 
 mobject 的宽度。
 
-init*colors ( \_propagate_colors = True* )[\[来源\]](../_modules/manim/mobject/text/text_mobject.html#Text.init_colors)[#](#manim.mobject.text.text_mobject.Text.init_colors "此定义的固定链接")
+init*colors ( \_propagate_colors = True* )
 
 初始化颜色。
 

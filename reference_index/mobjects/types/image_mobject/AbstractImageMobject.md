@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.types.image\_mobject.AbstractImageMobject`
 
-_类_ AbstractImageMobject（_scale_to_resolution_， _pixel_array_dtype = 'uint8'_， _resampling_algorithm = Resampling.BICUBIC_， _\*\* kwargs_）[\[来源\]](../_modules/manim/mobject/types/image_mobject.html#AbstractImageMobject)[#](#manim.mobject.types.image_mobject.AbstractImageMobject "此定义的固定链接")
 
-基地：[`Mobject`](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject")
+```py
+
+```
 
 自动过滤掉黑色像素
 

@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.types.image\_mobject.ImageMobjectFromCamera`
 
-_类_ ImageMobjectFromCamera (_相机_, _default_display_frame_config = None_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/types/image_mobject.html#ImageMobjectFromCamera)[#](#manim.mobject.types.image_mobject.ImageMobjectFromCamera "此定义的固定链接")
 
-基地：[`AbstractImageMobject`](manim.mobject.types.image_mobject.AbstractImageMobject.html#manim.mobject.types.image_mobject.AbstractImageMobject "manim.mobject.types.image_mobject.AbstractImageMobject")
+```py
+
+```
 
 方法
 

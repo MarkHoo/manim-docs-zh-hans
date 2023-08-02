@@ -2,28 +2,20 @@
 
 合格名称：`manim.mobject.graphing.probability.SampleSpace`
 
-_类_ SampleSpace (_高度= 3_，_宽度= 3_，_填充颜色= '#444444'_，_填充不透明度= 1_，_描边宽度= 0.5_，_描边颜色= '#BBBBBB'_， _default_label_scale_val = 1_ )[\[来源\]](../_modules/manim/mobject/graphing/probability.html#SampleSpace)[#](#manim.mobject.graphing.probability.SampleSpace "此定义的固定链接")
+```py
 
-基地：[`Rectangle`](manim.mobject.geometry.polygram.Rectangle.html#manim.mobject.geometry.polygram.Rectangle "manim.mobject.geometry.polygram.矩形")
+```
 
 例子
 
-示例：ExampleSampleSpace [¶](#examplesamplespace)
+示例：ExampleSampleSpace
 
-![../_images/ExampleSampleSpace-1.png](../_images/ExampleSampleSpace-1.png)
+![ExampleSampleSpace-1.png](../static/ExampleSampleSpace-1.png)
 
-from manim import \*
+```py
 
-class ExampleSampleSpace(Scene):
-def construct(self):
-poly1 = SampleSpace(stroke_width=15, fill_opacity=1)
-poly2 = SampleSpace(width=5, height=3, stroke_width=5, fill_opacity=0.5)
-poly3 = SampleSpace(width=2, height=2, stroke_width=5, fill_opacity=0.1)
-poly3.divide_vertically(p_list=np.array(\[0.37, 0.13, 0.5\]), colors=\[BLACK, WHITE, GRAY\], vect=RIGHT)
-poly_group = VGroup(poly1, poly2, poly3).arrange()
-self.add(poly_group)
+```
 
-Copy to clipboard
 
 方法
 

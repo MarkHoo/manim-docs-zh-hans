@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.graphing.scale.LinearBase`
 
-_类_ LinearBase ( _scale_factor = 1.0_ )[\[来源\]](../_modules/manim/mobject/graphing/scale.html#LinearBase)[#](#manim.mobject.graphing.scale.LinearBase "此定义的固定链接")
 
-基地：`_ScaleBase`
+```py
+
+```
 
 默认缩放类别。
 
@@ -14,15 +15,15 @@ _类_ LinearBase ( _scale_factor = 1.0_ )[\[来源\]](../_modules/manim/mobject/
 
 方法
 
-[`function`](#manim.mobject.graphing.scale.LinearBase.function "manim.mobject.graphing.scale.LinearBase.function")
+[`function`]()
 
 将值乘以比例因子。
 
-[`inverse_function`](#manim.mobject.graphing.scale.LinearBase.inverse_function "manim.mobject.graphing.scale.LinearBase.inverse_function")
+[`inverse_function`]()
 
 函数的反函数。
 
-函数（_值_）[\[来源\]](../_modules/manim/mobject/graphing/scale.html#LinearBase.function)[#](#manim.mobject.graphing.scale.LinearBase.function "此定义的固定链接")
+函数（_值_）
 
 将值乘以比例因子。
 
@@ -34,7 +35,7 @@ _类_ LinearBase ( _scale_factor = 1.0_ )[\[来源\]](../_modules/manim/mobject/
 
 漂浮
 
-反函数（_值_）[\[来源\]](../_modules/manim/mobject/graphing/scale.html#LinearBase.inverse_function)[#](#manim.mobject.graphing.scale.LinearBase.inverse_function "此定义的固定链接")
+反函数（_值_）
 
 函数的反函数。将值除以比例因子。
 

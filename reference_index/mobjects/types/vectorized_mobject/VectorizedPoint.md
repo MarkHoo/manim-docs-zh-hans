@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.types.vectorized\_mobject.VectorizedPoint`
 
-_类_ VectorizedPoint (_位置= array(\[0., 0., 0.\])_ ,_颜色= '#000000'_ , _fill_opacity = 0_ ,_描边宽度= 0_ ,_人工宽度= 0.01_ ,_人工高度= 0.01_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/types/vectorized_mobject.html#VectorizedPoint)[#](#manim.mobject.types.vectorized_mobject.VectorizedPoint "此定义的固定链接")
 
-基地：[`VMobject`](manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject "manim.mobject.types.vectorized_mobject.VMobject")
+```py
+
+```
 
 方法
 
@@ -60,21 +61,10 @@ mobject 的高度。
 
 示例：高度示例[¶](#heightexample)
 
-from manim import \*
+```py
 
-class HeightExample(Scene):
-def construct(self):
-decimal = DecimalNumber().to_edge(UP)
-rect = Rectangle(color=BLUE)
-rect_copy = rect.copy().set_stroke(GRAY, opacity=0.5)
+```
 
-        decimal.add_updater(lambda d: d.set_value(rect.height))
-
-        self.add(rect_copy, rect, decimal)
-        self.play(rect.animate.set(height=5))
-        self.wait()
-
-Copy to clipboard
 
 也可以看看
 
@@ -92,21 +82,10 @@ mobject 的宽度。
 
 示例：宽度示例[¶](#widthexample)
 
-from manim import \*
+```py
 
-class WidthExample(Scene):
-def construct(self):
-decimal = DecimalNumber().to_edge(UP)
-rect = Rectangle(color=BLUE)
-rect_copy = rect.copy().set_stroke(GRAY, opacity=0.5)
+```
 
-        decimal.add_updater(lambda d: d.set_value(rect.width))
-
-        self.add(rect_copy, rect, decimal)
-        self.play(rect.animate.set(width=7))
-        self.wait()
-
-Copy to clipboard
 
 也可以看看
 

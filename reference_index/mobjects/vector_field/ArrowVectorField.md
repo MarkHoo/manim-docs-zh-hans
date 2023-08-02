@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.vector\_field.ArrowVectorField`
 
-_类_ ArrowVectorField ( _func, color=None, color_scheme=None, min_color_scheme_value=0, max_color_scheme_value=2, 颜色=\['#236B8E', '#83C167', '#FFFF00', '#FC6255'\], x_range=None, y_range =无， z_range =无， Three_dimensions = False， length_func = <函数 ArrowVectorField.<lambda >>， opacity = 1.0， vector_config =无， \*\* kwargs_）[\[来源\]](../_modules/manim/mobject/vector_field.html#ArrowVectorField)[#](#manim.mobject.vector_field.ArrowVectorField "此定义的固定链接")
 
-基地：[`VectorField`](manim.mobject.vector_field.VectorField.html#manim.mobject.vector_field.VectorField "manim.mobject.vector_field.VectorField")
+```py
+
+```
 
 A[`VectorField`](manim.mobject.vector_field.VectorField.html#manim.mobject.vector_field.VectorField "manim.mobject.vector_field.VectorField")由一组变化向量表示。
 
@@ -33,51 +34,25 @@ A[`VectorField`](manim.mobject.vector_field.VectorField.html#manim.mobject.vecto
 
 ![../_images/BasicUsage-1.png](../_images/BasicUsage-1.png)
 
-from manim import \*
+```py
 
-class BasicUsage(Scene):
-def construct(self):
-func = lambda pos: ((pos\[0\] _ UR + pos\[1\] _ LEFT) - pos) / 3
-self.add(ArrowVectorField(func))
+```
 
-Copy to clipboard
 
 示例：调整大小和间距[¶](#sizingandspacing)
 
-from manim import \*
+```py
 
-class SizingAndSpacing(Scene):
-def construct(self):
-func = lambda pos: np.sin(pos\[0\] / 2) _ UR + np.cos(pos\[1\] / 2) _ LEFT
-vf = ArrowVectorField(func, x_range=\[-7, 7, 1\])
-self.add(vf)
-self.wait()
+```
 
-        length_func = lambda x: x / 3
-        vf2 = ArrowVectorField(func, x_range=\[-7, 7, 1\], length_func=length_func)
-        self.play(vf.animate.become(vf2))
-        self.wait()
-
-Copy to clipboard
 
 示例：着色[¶](#coloring)
 
 ![../_images/着色-1.png](../_images/Coloring-1.png)
 
-from manim import \*
+```py
 
-class Coloring(Scene):
-def construct(self):
-func = lambda pos: pos - LEFT _ 5
-colors = \[RED, YELLOW, BLUE, DARK_GRAY\]
-min_radius = Circle(radius=2, color=colors\[0\]).shift(LEFT _ 5)
-max_radius = Circle(radius=10, color=colors\[-1\]).shift(LEFT \* 5)
-vf = ArrowVectorField(
-func, min_color_scheme_value=2, max_color_scheme_value=10, colors=colors
-)
-self.add(vf, min_radius, max_radius)
-
-Copy to clipboard
+```
 
 方法
 

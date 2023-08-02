@@ -18,41 +18,19 @@
 
 ![../_images/HelloWorld-2.png](../_images/HelloWorld-2.png)
 
-from manim import \*
+```py
 
-class HelloWorld(Scene):
-def construct(self):
-text = Text('Hello world').scale(3)
-self.add(text)
+```
 
-Copy to clipboard
 
 示例：文本对齐[¶](#textalignment)
 
 ![../_images/TextAlignment-1.png](../_images/TextAlignment-1.png)
 
-from manim import \*
+```py
 
-class TextAlignment(Scene):
-def construct(self):
-title = Text("K-means clustering and Logistic Regression", color=WHITE)
-title.scale(0.75)
-self.add(title.to_edge(UP))
+```
 
-        t1 = Text("1\. Measuring").set_color(WHITE)
-
-        t2 = Text("2\. Clustering").set_color(WHITE)
-
-        t3 = Text("3\. Regression").set_color(WHITE)
-
-        t4 = Text("4\. Prediction").set_color(WHITE)
-
-        x = VGroup(t1, t2, t3, t4).arrange(direction=DOWN, aligned_edge=LEFT).scale(0.7).next_to(ORIGIN,DR)
-        x.set_opacity(0.5)
-        x.submobjects\[1\].set_opacity(1)
-        self.add(x)
-
-Copy to clipboard
 
 课程
 
@@ -89,10 +67,10 @@ Copy to clipboard
 
 用于将字体文件添加到搜索路径。`with register_font(...)`
 
-with register_font("path/to/font_file.ttf"):
-a = Text("Hello", font="Custom Font Name")
+```py
 
-Copy to clipboard
+```
+
 
 提高
 

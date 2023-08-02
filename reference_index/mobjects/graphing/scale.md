@@ -1,11 +1,8 @@
 # 规模
 
-课程
+Classes
 
-[`LinearBase`](manim.mobject.graphing.scale.LinearBase.html#manim.mobject.graphing.scale.LinearBase "manim.mobject.graphing.scale.LinearBase")
-
-默认缩放类别。
-
-[`LogBase`](manim.mobject.graphing.scale.LogBase.html#manim.mobject.graphing.scale.LogBase "manim.mobject.graphing.scale.LogBase")
-
-对数图/函数的刻度。
+|||
+|-|-|
+[`LinearBase`]()|默认缩放类别。
+[`LogBase`]()|对数图/函数的刻度。

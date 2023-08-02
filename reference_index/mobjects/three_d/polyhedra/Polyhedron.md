@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.three\_d.polyhedra.Polyhedron`
 
-多面体*类*（_vertex_coords_、 _faces_list_、 _faces_config = {}_、 _graph_config = {}_）[\[来源\]](../_modules/manim/mobject/three_d/polyhedra.html#Polyhedron)[#](#manim.mobject.three_d.polyhedra.Polyhedron "此定义的固定链接")
 
-基地：[`VGroup`](manim.mobject.types.vectorized_mobject.VGroup.html#manim.mobject.types.vectorized_mobject.VGroup "manim.mobject.types.vectorized_mobject.VGroup")
+```py
+
+```
 
 一个抽象的多面体类。
 
@@ -25,29 +26,11 @@
 
 ![../_images/SquarePyramidScene-1.png](../_images/SquarePyramidScene-1.png)
 
-from manim import \*
 
-class SquarePyramidScene(ThreeDScene):
-def construct(self):
-self.set*camera_orientation(phi=75 * DEGREES, theta=30 \_ DEGREES)
-vertex_coords = \[
-\[1, 1, 0\],
-\[1, -1, 0\],
-\[-1, -1, 0\],
-\[-1, 1, 0\],
-\[0, 0, 2\]
-\]
-faces_list = \[
-\[0, 1, 4\],
-\[1, 2, 4\],
-\[2, 3, 4\],
-\[3, 0, 4\],
-\[0, 1, 2, 3\]
-\]
-pyramid = Polyhedron(vertex_coords, faces_list)
-self.add(pyramid)
+```py
 
-Copy to clipboard
+```
+
 
 在定义上面的多面体时，我们首先定义了顶点的坐标。这些是正方形底边的角，以顶点列表中的前四个坐标给出，而顶点是列表中的最后一个坐标。
 
@@ -59,17 +42,10 @@ Copy to clipboard
 
 ![../_images/PolyhedronSubMobjects-1.png](../_images/PolyhedronSubMobjects-1.png)
 
-from manim import \*
+```py
 
-class PolyhedronSubMobjects(ThreeDScene):
-def construct(self):
-self.set*camera_orientation(phi=75 * DEGREES, theta=30 \_ DEGREES)
-octahedron = Octahedron(edge_length = 3)
-octahedron.graph\[0\].set_color(RED)
-octahedron.faces\[2\].set_color(YELLOW)
-self.add(octahedron)
+```
 
-Copy to clipboard
 
 方法
 

@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.types.point\_cloud\_mobject.PointCloudDot`
 
-_类_ PointCloudDot (_中心= array(\[0., 0., 0.\])_ ,_半径= 2.0_ ,_描边宽度= 2_ ,_密度= 10_ ,_颜色= '#FFFF00'_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/types/point_cloud_mobject.html#PointCloudDot)[#](#manim.mobject.types.point_cloud_mobject.PointCloudDot "此定义的固定链接")
 
-基地：[`Mobject1D`](manim.mobject.types.point_cloud_mobject.Mobject1D.html#manim.mobject.types.point_cloud_mobject.Mobject1D "manim.mobject.types.point_cloud_mobject.Mobject1D")
+```py
+
+```
 
 由点云组成的圆盘 .. 标题:: 示例
 
@@ -12,36 +13,16 @@ _类_ PointCloudDot (_中心= array(\[0., 0., 0.\])_ ,_半径= 2.0_ ,_描边宽�
 
 ![../_images/PointCloudDotExample-1.png](../_images/PointCloudDotExample-1.png)
 
-from manim import \*
+```py
 
-class PointCloudDotExample(Scene):
-def construct(self):
-cloud_1 = PointCloudDot(color=RED)
-cloud_2 = PointCloudDot(stroke_width=4, radius=1)
-cloud_3 = PointCloudDot(density=15)
-
-        group = Group(cloud_1, cloud_2, cloud_3).arrange()
-        self.add(group)
-
-Copy to clipboard
+```
 
 示例：PointCloudDotExample2 [¶](#pointclouddotexample2)
 
-from manim import \*
+```py
 
-class PointCloudDotExample2(Scene):
-def construct(self):
-plane = ComplexPlane()
-cloud = PointCloudDot(color=RED)
-self.add(
-plane, cloud
-)
-self.wait()
-self.play(
-cloud.animate.apply_complex_function(lambda z: np.exp(z))
-)
+```
 
-Copy to clipboard
 
 方法
 

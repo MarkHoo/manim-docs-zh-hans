@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.value\_tracker.ValueTracker`
 
-_类_ ValueTracker (_值= 0_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/value_tracker.html#ValueTracker)[#](#manim.mobject.value_tracker.ValueTracker "此定义的固定链接")
 
-基地：[`Mobject`](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject")
+```py
+
+```
 
 可用于跟踪（实值）参数的 mobject。对于动画参数更改很有用。
 
@@ -16,33 +17,10 @@ _类_ ValueTracker (_值= 0_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/mob
 
 示例：ValueTrackerExample [¶](#valuetrackerexample)
 
-from manim import \*
+```py
 
-class ValueTrackerExample(Scene):
-def construct(self):
-number_line = NumberLine()
-pointer = Vector(DOWN)
-label = MathTex("x").add_updater(lambda m: m.next_to(pointer, UP))
+```
 
-        tracker = ValueTracker(0)
-        pointer.add_updater(
-            lambda m: m.next_to(
-                        number_line.n2p(tracker.get_value()),
-                        UP
-                    )
-        )
-        self.add(number_line, pointer,label)
-        tracker += 1.5
-        self.wait(1)
-        tracker -= 4
-        self.wait(0.5)
-        self.play(tracker.animate.set_value(5)),
-        self.wait(0.5)
-        self.play(tracker.animate.set_value(3))
-        self.play(tracker.animate.increment_value(-2))
-        self.wait(0.5)
-
-Copy to clipboard
 
 笔记
 
@@ -50,18 +28,11 @@ Copy to clipboard
 
 示例：ValueTrackerExample [¶](#valuetrackerexample)
 
-from manim import \*
 
-class ValueTrackerExample(Scene):
-def construct(self):
-tracker = ValueTracker(0)
-label = Dot(radius=3).add_updater(lambda x : x.set_x(tracker.get_value()))
-self.add(label)
-self.add(tracker)
-tracker.add_updater(lambda mobject, dt: mobject.increment_value(dt))
-self.wait(2)
+```py
 
-Copy to clipboard
+```
+
 
 方法
 

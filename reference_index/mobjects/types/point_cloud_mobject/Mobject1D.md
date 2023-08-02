@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.types.point\_cloud\_mobject.Mobject1D`
 
-Mobject1D*类*（_密度= 10_， _\*\* kwargs_）[\[来源\]](../_modules/manim/mobject/types/point_cloud_mobject.html#Mobject1D)[#](#manim.mobject.types.point_cloud_mobject.Mobject1D "此定义的固定链接")
 
-基地：[`PMobject`](manim.mobject.types.point_cloud_mobject.PMobject.html#manim.mobject.types.point_cloud_mobject.PMobject "manim.mobject.types.point_cloud_mobject.PMobject")
+```py
+
+```
 
 方法
 

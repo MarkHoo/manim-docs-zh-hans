@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.text.tex\_mobject.Tex`
 
-_类_ Tex ( _\* tex_strings_ , _arg_separator = ''_ , _tex_environment = 'center'_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/text/tex_mobject.html#Tex)[#](#manim.mobject.text.tex_mobject.Tex "此定义的固定链接")
 
-基地：[`MathTex`](manim.mobject.text.tex_mobject.MathTex.html#manim.mobject.text.tex_mobject.MathTex "manim.mobject.text.tex_mobject.MathTex")
+```py
+
+```
 
 在正常模式下用 LaTeX 编译的字符串。
 
@@ -12,10 +13,10 @@ _类_ Tex ( _\* tex_strings_ , _arg_separator = ''_ , _tex_environment = 'center
 
 检查写入 LaTeX 字符串是否有效：
 
-> > \> Tex('The horse does not eat cucumber salad.')
-> > Tex('The horse does not eat cucumber salad.')
 
-Copy to clipboard
+```py
+
+```
 
 方法
 

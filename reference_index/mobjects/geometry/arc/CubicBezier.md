@@ -2,7 +2,9 @@
 
 合格名称：`manim.mobject.geometry.arc.CubicBezier`
 
-`class CubicBezier(start_anchor, start_handle, end_handle, end_anchor, **kwargs)`
+```py
+class CubicBezier(start_anchor, start_handle, end_handle, end_anchor, **kwargs)
+```
 
 Bases: `VMobject`
 

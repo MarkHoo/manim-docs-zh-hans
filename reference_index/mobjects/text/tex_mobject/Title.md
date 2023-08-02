@@ -2,27 +2,21 @@
 
 合格名称：`manim.mobject.text.tex\_mobject.Title`
 
-_类_ 标题( _\* text_parts_ , _include_underline = True_ , _match_underline_width_to_text = False_ , _underline_buff = 0.25_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/text/tex_mobject.html#Title)[#](#manim.mobject.text.tex_mobject.Title "此定义的固定链接")
 
-基地：[`Tex`](manim.mobject.text.tex_mobject.Tex.html#manim.mobject.text.tex_mobject.Tex "manim.mobject.text.tex_mobject.Tex")
+```py
+
+```
 
 例子
 
-示例：标题示例[¶](#titleexample)
+示例：标题示例
 
-![../_images/TitleExample-1.png](../_images/TitleExample-1.png)
+![TitleExample-1.png](../_images/TitleExample-1.png)
 
-from manim import \*
+```py
 
-import manim
+```
 
-class TitleExample(Scene):
-def construct(self):
-banner = ManimBanner()
-title = Title(f"Manim version {manim.\_\_version\_\_}")
-self.add(banner, title)
-
-Copy to clipboard
 
 方法
 

@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.svg.brace.BraceLabel`
 
-_类_ BraceLabel ( _obj_ ,_文本_,_大括号\_direction=array(\[ 0._ , _-1._ , _0.\])_ , _label_constructor=<class 'manim.mobject.text.tex_mobject.MathTex'>_ , _font_size=48_ , _buff=0.2_ ,_大括号\_config =无_， _\*\*kwargs_）[\[来源\]](../_modules/manim/mobject/svg/brace.html#BraceLabel)[#](#manim.mobject.svg.brace.BraceLabel "此定义的固定链接")
 
-基地：[`VMobject`](manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject "manim.mobject.types.vectorized_mobject.VMobject")
+```py
+
+```
 
 创建一个带有标签的支架。
 

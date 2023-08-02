@@ -2,9 +2,9 @@
 
 合格名称：`manim.mobject.graphing.coordinate\_systems.PolarPlane`
 
-_类_ PolarPlane ( _radius_max = 4.0_、 _size = None_、 _radius_step = 1_、 _azimuth_step = None_、 _azimuth_units = 'PI 弧度'_、 _azimuth_compact_fraction = True_、 _azimuth_offset = 0_、 _azimuth_direction = 'CCW'_、 _azimuth_label_buff = 0.1_、 *azimuth_label_font*大小= 24*，*半径配置=没有任何*，\_background_line_style = None*，_faded_line_style = None_，_faded_line_ratio = 1_，_make_smooth_after_applying_functions = True_，_\*\* kwargs_）[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems.html#PolarPlane)[#](#manim.mobject.graphing.coordinate_systems.PolarPlane "此定义的固定链接")
+```py
 
-基地：[`Axes`](manim.mobject.graphing.coordinate_systems.Axes.html#manim.mobject.graphing.coordinate_systems.Axes "manim.mobject.graphing.coordinate_systems.Axes")
+```
 
 创建带有背景线的极平面。
 
@@ -53,37 +53,28 @@ _类_ PolarPlane ( _radius_max = 4.0_、 _size = None_、 _radius_step = 1_、 _
 
 例子
 
-示例：PolarPlane 示例[¶](#polarplaneexample)
+示例：PolarPlane 示例
 
-![../_images/PolarPlaneExample-1.png](../_images/PolarPlaneExample-1.png)
+![PolarPlaneExample-1.png](../_images/PolarPlaneExample-1.png)
 
-from manim import \*
+```py
 
-class PolarPlaneExample(Scene):
-def construct(self):
-polarplane_pi = PolarPlane(
-azimuth_units="PI radians",
-size=6,
-azimuth_label_font_size=33.6,
-radius_config={"font_size": 33.6},
-).add_coordinates()
-self.add(polarplane_pi)
+```
 
-Copy to clipboard
 
-参考：[`PolarPlane`](#manim.mobject.graphing.coordinate_systems.PolarPlane "manim.mobject.graphing.coordinate_systems.PolarPlane")
+参考：[`PolarPlane`]()
 
 方法
 
-[`add_coordinates`](#manim.mobject.graphing.coordinate_systems.PolarPlane.add_coordinates "manim.mobject.graphing.coordinate_systems.PolarPlane.add_coordinates")
+[`add_coordinates`]()
 
 添加坐标。
 
-[`get_axes`](#manim.mobject.graphing.coordinate_systems.PolarPlane.get_axes "manim.mobject.graphing.coordinate_systems.PolarPlane.get_axes")
+[`get_axes`]()
 
 获取轴。
 
-[`get_coordinate_labels`](#manim.mobject.graphing.coordinate_systems.PolarPlane.get_coordinate_labels "manim.mobject.graphing.coordinate_systems.PolarPlane.get_coefficient_labels")
+[`get_coordinate_labels`]()
 
 获取坐标的标签
 
@@ -125,7 +116,7 @@ mobject 的高度。
 
 mobject 的宽度。
 
-添加坐标（_r_values = None_， _a_values = None_）[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems.html#PolarPlane.add_coordinates)[#](#manim.mobject.graphing.coordinate_systems.PolarPlane.add_coordinates "此定义的固定链接")
+添加坐标（_r_values = None_， _a_values = None_）
 
 添加坐标。
 
@@ -134,7 +125,7 @@ mobject 的宽度。
 - **r_values** ( _Iterable_ _\[_ _float_ _\]_ _|_ _None_ ) – 沿半径的可迭代值，默认为 None。
 - **a_values** ( _Iterable_ _\[_ _float_ _\]_ _|_ _None_ ) – 沿方位角的可迭代值，默认为 None。
 
-获取轴( )[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems.html#PolarPlane.get_axes)[#](#manim.mobject.graphing.coordinate_systems.PolarPlane.get_axes "此定义的固定链接")
+获取轴( )
 
 获取轴。
 
@@ -144,9 +135,9 @@ mobject 的宽度。
 
 返回类型
 
-[`VGroup`](manim.mobject.types.vectorized_mobject.VGroup.html#manim.mobject.types.vectorized_mobject.VGroup "manim.mobject.types.vectorized_mobject.VGroup")
+[`VGroup`]()
 
-get*coordinate_labels ( \_r_values = None* , _a_values = None_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems.html#PolarPlane.get_coordinate_labels)[#](#manim.mobject.graphing.coordinate_systems.PolarPlane.get_coordinate_labels "此定义的固定链接")
+get*coordinate_labels ( \_r_values = None* , _a_values = None_ , _\*\* kwargs_ )
 
 获取坐标的标签
 
@@ -161,4 +152,4 @@ get*coordinate_labels ( \_r_values = None* , _a_values = None_ , _\*\* kwargs_ )
 
 返回类型
 
-[虚拟词典](manim.mobject.types.vectorized_mobject.VDict.html#manim.mobject.types.vectorized_mobject.VDict "manim.mobject.types.vectorized_mobject.VDict")
+[虚拟词典]()

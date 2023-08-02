@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.svg.svg\_mobject.SVGMobject`
 
-_类_ SVGMobject (_文件名=无_,_应该中心= True_ ,_高度= 2_ ,_宽度=无_,_颜色=无_,_不透明度=无_, *fill_color = 无 , fill_opacity =**无**, 描边**颜色**=*无*,**描边\_\_**不透明度*=无**,*描边*宽度=**无*, \_svg_default =无*， _path_string_config =无_， _use_svg_cache = True_， _\*\* kwargs_）[\[来源\]](../_modules/manim/mobject/svg/svg_mobject.html#SVGMobject)[#](#manim.mobject.svg.svg_mobject.SVGMobject "此定义的固定链接")
 
-基地：[`VMobject`](manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject "manim.mobject.types.vectorized_mobject.VMobject")
+```py
+
+```
 
 通过导入 SVG 文件创建的矢量化对象。
 
@@ -110,7 +111,7 @@ _类_ SVGMobject (_文件名=无_,_应该中心= True_ ,_高度= 2_ ,_宽度=无
 
 如果有多种颜色（对于渐变），则返回第一个颜色
 
-[`hash_seed`](#manim.mobject.svg.svg_mobject.SVGMobject.hash_seed "manim.mobject.svg.svg_mobject.SVGMobject.hash_seed")
+[`hash_seed`]()
 
 表示生成的对象点结果的唯一哈希值。
 
@@ -128,20 +129,20 @@ mobject 的高度。
 
 mobject 的宽度。
 
-_静态_ apply_style_to*mobject（*生物*，*形状\_）[\[来源\]](../_modules/manim/mobject/svg/svg_mobject.html#SVGMobject.apply_style_to_mobject)[#](#manim.mobject.svg.svg_mobject.SVGMobject.apply_style_to_mobject "此定义的固定链接")
+_静态_ apply_style_to*mobject（*生物*，*形状\_）
 
 将 SVG 样式信息应用到转换后的 mobject。
 
 参数
 
-- **mob** ( [_VMobject_](manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject "manim.mobject.types.vectorized_mobject.VMobject") ) – 转换后的 mobject。
+- **mob** ( [_VMobject_]() ) – 转换后的 mobject。
 - **shape** ( _GraphicObject_ ) – 已解析的 SVG 元素。
 
 返回类型
 
-[_虚拟机对象_](manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject "manim.mobject.types.vectorized_mobject.VMobject")
+[_虚拟机对象_]()
 
-_静态_ ellipse*to_mobject (*椭圆\_)[\[来源\]](../_modules/manim/mobject/svg/svg_mobject.html#SVGMobject.ellipse_to_mobject)[#](#manim.mobject.svg.svg_mobject.SVGMobject.ellipse_to_mobject "此定义的固定链接")
+_静态_ ellipse*to_mobject (*椭圆\_)
 
 将椭圆或圆形元素转换为矢量化对象。
 
@@ -151,9 +152,9 @@ _静态_ ellipse*to_mobject (*椭圆\_)[\[来源\]](../_modules/manim/mobject/sv
 
 返回类型
 
-[圆圈](manim.mobject.geometry.arc.Circle.html#manim.mobject.geometry.arc.Circle "manim.mobject.geometry.arc.Circle")
+[圆圈]()
 
-生成配置样式字典( )[\[来源\]](../_modules/manim/mobject/svg/svg_mobject.html#SVGMobject.generate_config_style_dict)[#](#manim.mobject.svg.svg_mobject.SVGMobject.generate_config_style_dict "此定义的固定链接")
+生成配置样式字典( )
 
 生成一个包含默认样式信息的字典。
 
@@ -161,7 +162,7 @@ _静态_ ellipse*to_mobject (*椭圆\_)[\[来源\]](../_modules/manim/mobject/sv
 
 字典\[str, str\]
 
-生成对象（）[\[来源\]](../_modules/manim/mobject/svg/svg_mobject.html#SVGMobject.generate_mobject)[#](#manim.mobject.svg.svg_mobject.SVGMobject.generate_mobject "此定义的固定链接")
+生成对象（）
 
 解析 SVG 并将其元素转换为子对象。
 
@@ -169,7 +170,7 @@ _静态_ ellipse*to_mobject (*椭圆\_)[\[来源\]](../_modules/manim/mobject/sv
 
 没有任何
 
-获取文件路径( )[\[来源\]](../_modules/manim/mobject/svg/svg_mobject.html#SVGMobject.get_file_path)[#](#manim.mobject.svg.svg_mobject.SVGMobject.get_file_path "此定义的固定链接")
+获取文件路径( )
 
 根据指定的文件名搜索现有文件。
 
@@ -177,7 +178,7 @@ _静态_ ellipse*to_mobject (*椭圆\_)[\[来源\]](../_modules/manim/mobject/sv
 
 _小路_
 
-获取对象（_svg_）[\[来源\]](../_modules/manim/mobject/svg/svg_mobject.html#SVGMobject.get_mobjects_from)[#](#manim.mobject.svg.svg_mobject.SVGMobject.get_mobjects_from "此定义的固定链接")
+获取对象（_svg_）
 
 将 SVG 的元素转换为 mobject 列表。
 
@@ -187,34 +188,34 @@ _小路_
 
 返回类型
 
-列表\[ [VMobject](manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject "manim.mobject.types.vectorized_mobject.VMobject") \]
+列表\[ [VMobject]() \]
 
-_静态_ handle*transform（*生物*，*矩阵\_）[\[来源\]](../_modules/manim/mobject/svg/svg_mobject.html#SVGMobject.handle_transform)[#](#manim.mobject.svg.svg_mobject.SVGMobject.handle_transform "此定义的固定链接")
+_静态_ handle*transform（*生物*，*矩阵\_）
 
 将 SVG 转换应用于转换后的 mobject。
 
 参数
 
-- **mob** ( [_VMobject_](manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject "manim.mobject.types.vectorized_mobject.VMobject") ) – 转换后的 mobject。
+- **mob** ( [_VMobject_]() ) – 转换后的 mobject。
 - **矩阵**( _Matrix_ ) – 由 SVG 变换确定的变换矩阵。
 
 返回类型
 
-[_虚拟机对象_](manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject "manim.mobject.types.vectorized_mobject.VMobject")
+[_虚拟机对象_]()
 
-_属性_ hash*seed *:元组\_ [#](#manim.mobject.svg.svg_mobject.SVGMobject.hash_seed "此定义的固定链接")
+_属性_ hash*seed *:元组\_ 
 
 表示生成的对象点结果的唯一哈希值。
 
 用作`SVG_HASH_TO_MOB_MAP`缓存字典中的键。
 
-init*svg_mobject ( \_use_svg_cache* )[\[来源\]](../_modules/manim/mobject/svg/svg_mobject.html#SVGMobject.init_svg_mobject)[#](#manim.mobject.svg.svg_mobject.SVGMobject.init_svg_mobject "此定义的固定链接")
+init*svg_mobject ( \_use_svg_cache* )
 
 检查 SVG 是否已导入，如果没有则生成它。
 
 也可以看看
 
-[`SVGMobject.generate_mobject()`](#manim.mobject.svg.svg_mobject.SVGMobject.generate_mobject "manim.mobject.svg.svg_mobject.SVGMobject.generate_mobject")
+[`SVGMobject.generate_mobject()`]()
 
 参数
 
@@ -224,7 +225,7 @@ init*svg_mobject ( \_use_svg_cache* )[\[来源\]](../_modules/manim/mobject/svg/
 
 没有任何
 
-_静态_ line*to_mobject ( \_line* )[\[来源\]](../_modules/manim/mobject/svg/svg_mobject.html#SVGMobject.line_to_mobject)[#](#manim.mobject.svg.svg_mobject.SVGMobject.line_to_mobject "此定义的固定链接")
+_静态_ line*to_mobject ( \_line* )
 
 将线元素转换为矢量化对象。
 
@@ -236,7 +237,7 @@ _静态_ line*to_mobject ( \_line* )[\[来源\]](../_modules/manim/mobject/svg/s
 
 [_线_](manim.mobject.geometry.line.Line.html#manim.mobject.geometry.line.Line "manim.mobject.geometry.line.Line")
 
-修改\_xml\_树（_元素树_）[\[来源\]](../_modules/manim/mobject/svg/svg_mobject.html#SVGMobject.modify_xml_tree)[#](#manim.mobject.svg.svg_mobject.SVGMobject.modify_xml_tree "此定义的固定链接")
+修改\_xml\_树（_元素树_）
 
 修改 SVG 元素树以包含默认样式信息。
 
@@ -248,7 +249,7 @@ _静态_ line*to_mobject ( \_line* )[\[来源\]](../_modules/manim/mobject/svg/s
 
 _元素树_
 
-移动到位置( )[\[来源\]](../_modules/manim/mobject/svg/svg_mobject.html#SVGMobject.move_into_position)[#](#manim.mobject.svg.svg_mobject.SVGMobject.move_into_position "此定义的固定链接")
+移动到位置( )
 
 缩放生成的 mobject 并将其移动到位。
 
@@ -256,7 +257,7 @@ _元素树_
 
 没有任何
 
-对象的路径（_路径_）[\[来源\]](../_modules/manim/mobject/svg/svg_mobject.html#SVGMobject.path_to_mobject)[#](#manim.mobject.svg.svg_mobject.SVGMobject.path_to_mobject "此定义的固定链接")
+对象的路径（_路径_）
 
 将路径元素转换为矢量化 mobject。
 
@@ -266,9 +267,9 @@ _元素树_
 
 返回类型
 
-[_VMobjectFromSVGPath_](manim.mobject.svg.svg_mobject.VMobjectFromSVGPath.html#manim.mobject.svg.svg_mobject.VMobjectFromSVGPath "manim.mobject.svg.svg_mobject.VMobjectFromSVGPath")
+[_VMobjectFromSVGPath_]()
 
-_静态_ 多边形到对象（_多边形_）[\[来源\]](../_modules/manim/mobject/svg/svg_mobject.html#SVGMobject.polygon_to_mobject)[#](#manim.mobject.svg.svg_mobject.SVGMobject.polygon_to_mobject "此定义的固定链接")
+_静态_ 多边形到对象（_多边形_）
 
 将多边形元素转换为矢量化对象。
 
@@ -278,9 +279,9 @@ _静态_ 多边形到对象（_多边形_）[\[来源\]](../_modules/manim/mobje
 
 返回类型
 
-[_多边形_](manim.mobject.geometry.polygram.Polygon.html#manim.mobject.geometry.polygram.Polygon "manim.mobject.geometry.polygram.Polygon")
+[_多边形_]()
 
-polyline*to_mobject (*折线\_)[\[来源\]](../_modules/manim/mobject/svg/svg_mobject.html#SVGMobject.polyline_to_mobject)[#](#manim.mobject.svg.svg_mobject.SVGMobject.polyline_to_mobject "此定义的固定链接")
+polyline*to_mobject (*折线\_)
 
 将折线元素转换为矢量化对象。
 
@@ -290,9 +291,9 @@ polyline*to_mobject (*折线\_)[\[来源\]](../_modules/manim/mobject/svg/svg_mo
 
 返回类型
 
-[_虚拟机对象_](manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject "manim.mobject.types.vectorized_mobject.VMobject")
+[_虚拟机对象_]()
 
-_静态_ rect*to_mobject (*矩形\_)[\[来源\]](../_modules/manim/mobject/svg/svg_mobject.html#SVGMobject.rect_to_mobject)[#](#manim.mobject.svg.svg_mobject.SVGMobject.rect_to_mobject "此定义的固定链接")
+_静态_ rect*to_mobject (*矩形\_)
 
 将矩形元素转换为矢量化对象。
 
@@ -302,9 +303,9 @@ _静态_ rect*to_mobject (*矩形\_)[\[来源\]](../_modules/manim/mobject/svg/s
 
 返回类型
 
-[_长方形_](manim.mobject.geometry.polygram.Rectangle.html#manim.mobject.geometry.polygram.Rectangle "manim.mobject.geometry.polygram.矩形")
+[_长方形_]()
 
-_静态_ text*to_mobject (*文本\_)[\[来源\]](../_modules/manim/mobject/svg/svg_mobject.html#SVGMobject.text_to_mobject)[#](#manim.mobject.svg.svg_mobject.SVGMobject.text_to_mobject "此定义的固定链接")
+_静态_ text*to_mobject (*文本\_)
 
 将文本元素转换为矢量化对象。
 

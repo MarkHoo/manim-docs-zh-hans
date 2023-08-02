@@ -2,7 +2,9 @@
 
 合格名称：`manim.mobject.geometry.arc.ArcPolygonFromArcs`
 
-`class ArcPolygonFromArcs(*arcs, **kwargs)`
+```py
+class ArcPolygonFromArcs(*arcs, **kwargs)
+```
 
 Bases: VMobject
 
@@ -23,7 +25,7 @@ Bases: VMobject
 
 用于初始化 ArcPolygonFromArcs 的弧：
 
-```py
+```sh
 >>> from manim import ArcPolygonFromArcs, Arc, ArcBetweenPoints
 >>> ap = ArcPolygonFromArcs(Arc(), ArcBetweenPoints([1,0,0], [0,1,0]), Arc())
 >>> ap.arcs

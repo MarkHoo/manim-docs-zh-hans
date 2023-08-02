@@ -2,7 +2,9 @@
 
 合格名称：`manim.mobject.geometry.arc.Circle`
 
-`class Circle(radius=None, color='#FC6255', **kwargs)`
+```py
+class Circle(radius=None, color='#FC6255', **kwargs)
+```
 
 Bases: `Arc`
 

@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.three\_d.three\_dimensions.Line3D`
 
-_类_ Line3D ( _start = array(\[- 1., 0., 0.\])_ , _end = array(\[1., 0., 0.\])_ ,_厚度= 0.02_ , _color = None_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/three_d/three_dimensions.html#Line3D)[#](#manim.mobject.three_d.three_dimensions.Line3D "此定义的固定链接")
 
-基地：[`Cylinder`](manim.mobject.three_d.three_dimensions.Cylinder.html#manim.mobject.three_d.three_dimensions.Cylinder "manim.mobject. Three_d. Three_dimensions.Cylinder")
+```py
+
+```
 
 圆柱线，用于 ThreeDScene。
 
@@ -21,16 +22,10 @@ _类_ Line3D ( _start = array(\[- 1., 0., 0.\])_ , _end = array(\[1., 0., 0.\])_
 
 ![../_images/ExampleLine3D-1.png](../_images/ExampleLine3D-1.png)
 
-from manim import \*
+```py
 
-class ExampleLine3D(ThreeDScene):
-def construct(self):
-axes = ThreeDAxes()
-line = Line3D(start=np.array(\[0, 0, 0\]), end=np.array(\[2, 2, 2\]))
-self.set*camera_orientation(phi=75 * DEGREES, theta=30 \_ DEGREES)
-self.add(axes, line)
+```
 
-Copy to clipboard
 
 方法
 
@@ -139,17 +134,11 @@ _类方法_ parallel*to ( \_line* , _point = array(\[0., 0., 0.\])_ , _length = 
 
 ![../_images/ParallelLineExample-1.png](../_images/ParallelLineExample-1.png)
 
-from manim import \*
 
-class ParallelLineExample(ThreeDScene):
-def construct(self):
-self.set_camera_orientation(PI / 3, -PI / 4)
-ax = ThreeDAxes((-5, 5), (-5, 5), (-5, 5), 10, 10, 10)
-line1 = Line3D(RIGHT \* 2, UP + OUT, color=RED)
-line2 = Line3D.parallel_to(line1, color=YELLOW)
-self.add(ax, line1, line2)
+```py
 
-Copy to clipboard
+```
+
 
 _类方法_ Vertical*to ( \_line* , _point = array(\[0., 0., 0.\])_ , _length = 5_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/three_d/three_dimensions.html#Line3D.perpendicular_to)[#](#manim.mobject.three_d.three_dimensions.Line3D.perpendicular_to "此定义的固定链接")
 
@@ -176,17 +165,9 @@ _类方法_ Vertical*to ( \_line* , _point = array(\[0., 0., 0.\])_ , _length = 
 
 ![../_images/PerpLineExample-1.png](../_images/PerpLineExample-1.png)
 
-from manim import \*
+```py
 
-class PerpLineExample(ThreeDScene):
-def construct(self):
-self.set_camera_orientation(PI / 3, -PI / 4)
-ax = ThreeDAxes((-5, 5), (-5, 5), (-5, 5), 10, 10, 10)
-line1 = Line3D(RIGHT \* 2, UP + OUT, color=RED)
-line2 = Line3D.perpendicular_to(line1, color=BLUE)
-self.add(ax, line1, line2)
-
-Copy to clipboard
+```
 
 pointify ( _mob_or_point_，_方向= None_ )[\[来源\]](../_modules/manim/mobject/three_d/three_dimensions.html#Line3D.pointify)[#](#manim.mobject.three_d.three_dimensions.Line3D.pointify "此定义的固定链接")
 

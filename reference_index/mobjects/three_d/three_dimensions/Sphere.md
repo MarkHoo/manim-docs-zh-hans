@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.three\_d.three\_dimensions.Sphere`
 
-球体*类*（_中心= array(\[0., 0., 0.\])_，_半径= 1_，_分辨率= None_， _u_range = (0, 6.283185307179586)_， _v_range = (0, 3.141592653589793)_， _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/three_d/three_dimensions.html#Sphere)[#](#manim.mobject.three_d.three_dimensions.Sphere "此定义的固定链接")
 
-基地：[`Surface`](manim.mobject.three_d.three_dimensions.Surface.html#manim.mobject.three_d.three_dimensions.Surface "manim.mobject. Three_d. Three_dimensions.Surface")
+```py
+
+```
 
 三维球体。
 
@@ -22,28 +23,10 @@
 
 ![../_images/ExampleSphere-1.png](../_images/ExampleSphere-1.png)
 
-from manim import \*
+```py
 
-class ExampleSphere(ThreeDScene):
-def construct(self):
-self.set_camera_orientation(phi=PI / 6, theta=PI / 6)
-sphere1 = Sphere(
-center=(3, 0, 0),
-radius=1,
-resolution=(20, 20),
-u_range=\[0.001, PI - 0.001\],
-v_range=\[0, TAU\]
-)
-sphere1.set_color(RED)
-self.add(sphere1)
-sphere2 = Sphere(center=(-1, -3, 0), radius=2, resolution=(18, 18))
-sphere2.set_color(GREEN)
-self.add(sphere2)
-sphere3 = Sphere(center=(-1, 2, 0), radius=2, resolution=(16, 16))
-sphere3.set_color(BLUE)
-self.add(sphere3)
+```
 
-Copy to clipboard
 
 方法
 

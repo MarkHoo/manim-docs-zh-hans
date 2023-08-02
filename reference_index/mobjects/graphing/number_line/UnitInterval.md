@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.graphing.number\_line.UnitInterval`
 
-_类_ UnitInterval（_unit_size = 10_， _numbers_with_elongated_ticks = None_， _decimal_number_config = None_， _\*\* kwargs_）[\[来源\]](../_modules/manim/mobject/graphing/number_line.html#UnitInterval)[#](#manim.mobject.graphing.number_line.UnitInterval "此定义的固定链接")
 
-基地：[`NumberLine`](manim.mobject.graphing.number_line.NumberLine.html#manim.mobject.graphing.number_line.NumberLine "manim.mobject.graphing.number_line.NumberLine")
+```py
+
+```
 
 方法
 

@@ -2,7 +2,9 @@
 
 合格名称：`manim.mobject.geometry.boolean\_ops.Difference`
 
-`class Difference(subject, clip, **kwargs)`
+```py
+class Difference(subject, clip, **kwargs)
+```
 
 Bases: `_BooleanOps`
 

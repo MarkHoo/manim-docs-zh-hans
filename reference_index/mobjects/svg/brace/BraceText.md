@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.svg.brace.BraceText`
 
-_类_ BraceText ( _obj_ , _text_ , _label_constructor=<class 'manim.mobject.text.tex_mobject.Tex'>_ , _\*\*kwargs_ )[\[来源\]](../_modules/manim/mobject/svg/brace.html#BraceText)[#](#manim.mobject.svg.brace.BraceText "此定义的固定链接")
 
-基地：[`BraceLabel`](manim.mobject.svg.brace.BraceLabel.html#manim.mobject.svg.brace.BraceLabel "manim.mobject.svg.brace.BraceLabel")
+```py
+
+```
 
 方法
 

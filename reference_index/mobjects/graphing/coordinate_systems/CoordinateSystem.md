@@ -2,62 +2,23 @@
 
 合格名称：`manim.mobject.graphing.coordinate\_systems.CoordinateSystem`
 
-坐标系统*类*（_x_range = None_， _y_range = None_， _x_length = None_， _y_length = None_，_维度= 2_）[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems.html#CoordinateSystem)[#](#manim.mobject.graphing.coordinate_systems.CoordinateSystem "此定义的固定链接")
 
-基地：`object`
+```py
+
+```
 
 Axes 和 NumberPlane 的抽象基类。
 
 例子
 
-示例：CoordSysExample [¶](#coordsysexample)
+示例：CoordSysExample
 
-![../_images/CoordSysExample-1.png](../_images/CoordSysExample-1.png)
+![CoordSysExample-1.png](../_images/CoordSysExample-1.png)
 
-from manim import \*
+```py
 
-class CoordSysExample(Scene):
-def construct(self):
-\# the location of the ticks depends on the x_range and y_range.
-grid = Axes(
-x_range=\[0, 1, 0.05\], \# step size determines num_decimal_places.
-y_range=\[0, 1, 0.05\],
-x_length=9,
-y_length=5.5,
-axis_config={
-"numbers_to_include": np.arange(0, 1 + 0.1, 0.1),
-"font_size": 24,
-},
-tips=False,
-)
+```
 
-        \# Labels for the x-axis and y-axis.
-        y_label = grid.get\_y\_axis_label("y", edge=LEFT, direction=LEFT, buff=0.4)
-        x_label = grid.get\_x\_axis_label("x")
-        grid_labels = VGroup(x_label, y_label)
-
-        graphs = VGroup()
-        for n in np.arange(1, 20 + 0.5, 0.5):
-            graphs += grid.plot(lambda x: x ** n, color=WHITE)
-            graphs += grid.plot(
-                lambda x: x ** (1 / n), color=WHITE, use_smoothing=False
-            )
-
-        \# Extra lines and labels for point (1,1)
-        graphs += grid.get\_horizontal\_line(grid.c2p(1, 1, 0), color=BLUE)
-        graphs += grid.get\_vertical\_line(grid.c2p(1, 1, 0), color=BLUE)
-        graphs += Dot(point=grid.c2p(1, 1, 0), color=YELLOW)
-        graphs += Tex("(1,1)").scale(0.75).next_to(grid.c2p(1, 1, 0))
-        title = Title(
-            \# spaces between braces to prevent SyntaxError
-            r"Graphs of $y=x^{ {1}\\over{n} }$ and $y=x^n (n=1,2,3,...,20)$",
-            include_underline=False,
-            font_size=40,
-        )
-
-        self.add(title, graphs, grid, grid_labels)
-
-Copy to clipboard
 
 方法
 
@@ -223,25 +184,17 @@ Copy to clipboard
 
 例子
 
-ax = ThreeDAxes()
-x_labels = range(-4, 5)
-z_labels = range(-4, 4, 2)
-ax.add_coordinates(x_labels, None, z_labels) \# default y labels, custom x & z labels
-ax.add_coordinates(x_labels) \# only x labels
+```py
 
-Copy to clipboard
+```
+
 
 您还可以使用字典专门控制标签的位置和值。
 
-ax = Axes(x_range=\[0, 7\])
-x_pos = \[x for x in range(1, 8)\]
+```py
 
-\# strings are automatically converted into a Tex mobject.
-x_vals = \["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"\]
-x_dict = dict(zip(x_pos, x_vals))
-ax.add_coordinates(x_dict)
+```
 
-Copy to clipboard
 
 切线角度( _x_ ,_图形_, _dx = 1e-08_ )[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems.html#CoordinateSystem.angle_of_tangent)[#](#manim.mobject.graphing.coordinate_systems.CoordinateSystem.angle_of_tangent "此定义的固定链接")
 
@@ -263,12 +216,10 @@ Copy to clipboard
 
 例子
 
-ax = Axes()
-curve = ax.plot(lambda x: x\*\*2)
-ax.angle_of_tangent(x=3, graph=curve)
-\# 1.4056476493802699
+```py
 
-Copy to clipboard
+```
+
 
 c2p ( _\*坐标_)[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems.html#CoordinateSystem.c2p)[#](#manim.mobject.graphing.coordinate_systems.CoordinateSystem.c2p "此定义的固定链接")
 
@@ -303,18 +254,10 @@ get*T_label ( \_x_val*、 _graph_、 _label=None_、 _label_color=None_、 _tria
 
 ![../_images/TLabelExample-1.png](../_images/TLabelExample-1.png)
 
-from manim import \*
+```py
 
-class TLabelExample(Scene):
-def construct(self):
-\# defines the axes and linear function
-axes = Axes(x_range=\[-1, 10\], y_range=\[-1, 10\], x_length=9, y_length=6)
-func = axes.plot(lambda x: x, color=BLUE)
-\# creates the T_label
-t_label = axes.get_T_label(x_val=4, graph=func, label=Tex("x-value"))
-self.add(axes, func, t_label)
+```
 
-Copy to clipboard
 
 get*area (*图形*, \_x_range =无*,_颜色= \['#58C4DD', '#83C167'\]_ ,_不透明度= 0.3_ ,_有界图=无_, _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems.html#CoordinateSystem.get_area)[#](#manim.mobject.graphing.coordinate_systems.CoordinateSystem.get_area "此定义的固定链接")
 
@@ -347,22 +290,10 @@ get*area (*图形*, \_x_range =无*,_颜色= \['#58C4DD', '#83C167'\]_ ,_不透�
 
 ![../_images/GetAreaExample-1.png](../_images/GetAreaExample-1.png)
 
-from manim import \*
+```py
 
-class GetAreaExample(Scene):
-def construct(self):
-ax = Axes().add*coordinates()
-curve = ax.plot(lambda x: 2 * np.sin(x), color=DARK*BLUE)
-area = ax.get_area(
-curve,
-x_range=(PI / 2, 3 * PI / 2),
-color=(GREEN_B, GREEN_D),
-opacity=1,
-)
+```
 
-        self.add(ax, curve, area)
-
-Copy to clipboard
 
 get*graph_label ( \_graph* , _label = 'f(x)'_ , _x_val = None_ , _Direction = array(\[1., 0., 0.\])_ , _buff = 0.25_ , _color = None_ , _dot = False_ , _dot_config = None_ )[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems.html#CoordinateSystem.get_graph_label)[#](#manim.mobject.graphing.coordinate_systems.CoordinateSystem.get_graph_label "此定义的固定链接")
 
@@ -393,23 +324,10 @@ get*graph_label ( \_graph* , _label = 'f(x)'_ , _x_val = None_ , _Direction = ar
 
 ![../_images/GetGraphLabelExample-1.png](../_images/GetGraphLabelExample-1.png)
 
-from manim import \*
+```py
 
-class GetGraphLabelExample(Scene):
-def construct(self):
-ax = Axes()
-sin = ax.plot(lambda x: np.sin(x), color=PURPLE_B)
-label = ax.get_graph_label(
-graph=sin,
-label= MathTex(r"\\frac{\\pi}{2}"),
-x_val=PI / 2,
-dot=True,
-direction=UR,
-)
+```
 
-        self.add(ax, sin, label)
-
-Copy to clipboard
 
 get*horizo​​ntal_line (*点*, *\*\* kwargs\_ )[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems.html#CoordinateSystem.get_horizontal_line)[#](#manim.mobject.graphing.coordinate_systems.CoordinateSystem.get_horizontal_line "此定义的固定链接")
 
@@ -434,19 +352,10 @@ get*horizo​​ntal_line (*点*, *\*\* kwargs\_ )[\[来源\]](../_modules/manim
 
 ![../_images/GetHorizo​​ntalLineExample-1.png](../_images/GetHorizontalLineExample-1.png)
 
-from manim import \*
+```py
 
-class GetHorizontalLineExample(Scene):
-def construct(self):
-ax = Axes().add_coordinates()
-point = ax.c2p(-4, 1.5)
+```
 
-        dot = Dot(point)
-        line = ax.get\_horizontal\_line(point, line_func=Line)
-
-        self.add(ax, line, dot)
-
-Copy to clipboard
 
 get*line_from_axis_to*point (*索引*,*点*, \_line_func=<class 'manim.mobject.geometry.line.DashedLine'>* , \_line_config=None* , _color=None_ , _stroke_width=2_ )[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems.html#CoordinateSystem.get_line_from_axis_to_point)[#](#manim.mobject.graphing.coordinate_systems.CoordinateSystem.get_line_from_axis_to_point "此定义的固定链接")
 
@@ -500,18 +409,10 @@ A[`VGroup`](manim.mobject.types.vectorized_mobject.VGroup.html#manim.mobject.typ
 
 ![../_images/GetLinesToPointExample-1.png](../_images/GetLinesToPointExample-1.png)
 
-from manim import \*
+```py
 
-class GetLinesToPointExample(Scene):
-def construct(self):
-ax = Axes()
-circ = Circle(radius=0.5).move_to(\[-4, -1.5, 0\])
+```
 
-        lines_1 = ax.get\_lines\_to_point(circ.get_right(), color=GREEN_B)
-        lines_2 = ax.get\_lines\_to_point(circ.get_corner(DL), color=BLUE_B)
-        self.add(ax, lines_1, lines_2, circ)
-
-Copy to clipboard
 
 获取原点( )[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems.html#CoordinateSystem.get_origin)[#](#manim.mobject.graphing.coordinate_systems.CoordinateSystem.get_origin "此定义的固定链接")
 
@@ -558,46 +459,10 @@ A[`VGroup`](manim.mobject.types.vectorized_mobject.VGroup.html#manim.mobject.typ
 
 ![../_images/GetRiemannRectanglesExample-1.png](../_images/GetRiemannRectanglesExample-1.png)
 
-from manim import \*
+```py
 
-class GetRiemannRectanglesExample(Scene):
-def construct(self):
-ax = Axes(y_range=\[-2, 10\])
-quadratic = ax.plot(lambda x: 0.5 \* x \*\* 2 - 0.5)
+```
 
-        \# the rectangles are constructed from their top right corner.
-        \# passing an iterable to \`color\` produces a gradient
-        rects_right = ax.get\_riemann\_rectangles(
-            quadratic,
-            x_range=\[-4, -3\],
-            dx=0.25,
-            color=(TEAL, BLUE_B, DARK_BLUE),
-            input\_sample\_type="right",
-        )
-
-        \# the colour of rectangles below the x-axis is inverted
-        \# due to show\_signed\_area
-        rects_left = ax.get\_riemann\_rectangles(
-            quadratic, x_range=\[-1.5, 1.5\], dx=0.15, color=YELLOW
-        )
-
-        bounding_line = ax.plot(
-            lambda x: 1.5 * x, color=BLUE_B, x_range=\[3.3, 6\]
-        )
-        bounded_rects = ax.get\_riemann\_rectangles(
-            bounding_line,
-            bounded_graph=quadratic,
-            dx=0.15,
-            x_range=\[4, 5\],
-            show\_signed\_area=False,
-            color=(MAROON_A, RED_B, PURPLE_D),
-        )
-
-        self.add(
-            ax, bounding_line, quadratic, rects_right, rects_left, bounded_rects
-        )
-
-Copy to clipboard
 
 get*secant_slope*group ( \_x* , \_graph* , _dx = None_ , _dx_line_color = '#FFFF00'_ , _dy_line_color = None_ , _dx_label = None_ , _dy_label = None_ , _include_secant_line = True_ , _secant_line_color = '#83C167'_ , _secant_line_length = 10_ )[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems.html#CoordinateSystem.get_secant_slope_group)[#](#manim.mobject.graphing.coordinate_systems.CoordinateSystem.get_secant_slope_group "此定义的固定链接")
 
@@ -632,26 +497,10 @@ get*secant_slope*group ( \_x* , \_graph* , _dx = None_ , _dx_line_color = '#FFFF
 
 ![../_images/GetSecantSlopeGroupExample-1.png](../_images/GetSecantSlopeGroupExample-1.png)
 
-from manim import \*
+```py
 
-class GetSecantSlopeGroupExample(Scene):
-def construct(self):
-ax = Axes(y_range=\[-1, 7\])
-graph = ax.plot(lambda x: 1 / 4 \* x \*\* 2, color=BLUE)
-slopes = ax.get_secant_slope_group(
-x=2.0,
-graph=graph,
-dx=1.0,
-dx_label=Tex("dx = 1.0"),
-dy_label="dy",
-dx_line_color=GREEN_B,
-secant_line_length=4,
-secant_line_color=RED_D,
-)
+```
 
-        self.add(ax, graph, slopes)
-
-Copy to clipboard
 
 get*vertical_line（*点*， *\*\* kwargs\_）[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems.html#CoordinateSystem.get_vertical_line)[#](#manim.mobject.graphing.coordinate_systems.CoordinateSystem.get_vertical_line "此定义的固定链接")
 
@@ -676,19 +525,10 @@ get*vertical_line（*点*， *\*\* kwargs\_）[\[来源\]](../_modules/manim/mob
 
 ![../_images/GetVerticalLineExample-1.png](../_images/GetVerticalLineExample-1.png)
 
-from manim import \*
+```py
 
-class GetVerticalLineExample(Scene):
-def construct(self):
-ax = Axes().add_coordinates()
-point = ax.coords_to_point(-3.5, 2)
+```
 
-        dot = Dot(point)
-        line = ax.get\_vertical\_line(point, line_config={"dashed_ratio": 0.85})
-
-        self.add(ax, line, dot)
-
-Copy to clipboard
 
 get*vertical_lines_to_graph (*图形*, \_x_range = None* , _num_lines = 20_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems.html#CoordinateSystem.get_vertical_lines_to_graph)[#](#manim.mobject.graphing.coordinate_systems.CoordinateSystem.get_vertical_lines_to_graph "此定义的固定链接")
 
@@ -715,25 +555,10 @@ get*vertical_lines_to_graph (*图形*, \_x_range = None* , _num_lines = 20_ , _\
 
 ![../_images/GetVerticalLinesToGraph-1.png](../_images/GetVerticalLinesToGraph-1.png)
 
-from manim import \*
+```py
 
-class GetVerticalLinesToGraph(Scene):
-def construct(self):
-ax = Axes(
-x_range=\[0, 8.0, 1\],
-y_range=\[-1, 1, 0.2\],
-axis_config={"font_size": 24},
-).add_coordinates()
+```
 
-        curve = ax.plot(lambda x: np.sin(x) / np.e ** 2 * x)
-
-        lines = ax.get\_vertical\_lines\_to\_graph(
-            curve, x_range=\[0, 4\], num_lines=30, color=BLUE
-        )
-
-        self.add(ax, curve, lines)
-
-Copy to clipboard
 
 get*x_axis*label (*标签*,*边缘= array(\[1., 1., 0.\])* ,*方向= array(\[1., 1., 0.\])* , \_buff = 0.1* , *\*\* kwargs\_ )[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems.html#CoordinateSystem.get_x_axis_label)[#](#manim.mobject.graphing.coordinate_systems.CoordinateSystem.get_x_axis_label "此定义的固定链接")
 
@@ -760,17 +585,10 @@ get*x_axis*label (*标签*,*边缘= array(\[1., 1., 0.\])* ,*方向= array(\[1.,
 
 ![../_images/GetXAxisLabelExample-1.png](../_images/GetXAxisLabelExample-1.png)
 
-from manim import \*
+```py
 
-class GetXAxisLabelExample(Scene):
-def construct(self):
-ax = Axes(x_range=(0, 8), y_range=(0, 5), x_length=8, y_length=5)
-x_label = ax.get_x_axis_label(
-Tex("$x$-values").scale(0.65), edge=DOWN, direction=DOWN, buff=0.5
-)
-self.add(ax, x_label)
+```
 
-Copy to clipboard
 
 get*y_axis*label (*标签*,*边缘= array(\[1., 1., 0.\])* ,*方向= array(\[1., 0.5, 0.\])* , \_buff = 0.1* , *\*\* kwargs\_ )[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems.html#CoordinateSystem.get_y_axis_label)[#](#manim.mobject.graphing.coordinate_systems.CoordinateSystem.get_y_axis_label "此定义的固定链接")
 
@@ -797,20 +615,10 @@ get*y_axis*label (*标签*,*边缘= array(\[1., 1., 0.\])* ,*方向= array(\[1.,
 
 ![../_images/GetYAxisLabelExample-1.png](../_images/GetYAxisLabelExample-1.png)
 
-from manim import \*
+```py
 
-class GetYAxisLabelExample(Scene):
-def construct(self):
-ax = Axes(x_range=(0, 8), y_range=(0, 5), x_length=8, y_length=5)
-y_label = ax.get_y_axis_label(
-Tex("$y$-values").scale(0.65).rotate(90 \* DEGREES),
-edge=LEFT,
-direction=LEFT,
-buff=0.3,
-)
-self.add(ax, y_label)
+```
 
-Copy to clipboard
 
 i2gc（_x_，_图_）[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems.html#CoordinateSystem.i2gc)[#](#manim.mobject.graphing.coordinate_systems.CoordinateSystem.i2gc "此定义的固定链接")
 
@@ -844,13 +652,10 @@ input*to_graph*coords（\_x*，*图\_）[\[来源\]](../_modules/manim/mobject/g
 
 例子
 
-> > \> from manim import Axes
-> > \> ax = Axes()
-> > \> parabola = ax.plot(lambda x: x\*\*2)
-> > \> ax.input_to_graph_coords(x=3, graph=parabola)
-> > (3, 9)
+```py
 
-Copy to clipboard
+```
+
 
 参数
 
@@ -888,20 +693,10 @@ Copy to clipboard
 
 ![../_images/InputToGraphPointExample-1.png](../_images/InputToGraphPointExample-1.png)
 
-from manim import \*
+```py
 
-class InputToGraphPointExample(Scene):
-def construct(self):
-ax = Axes()
-curve = ax.plot(lambda x : np.cos(x))
+```
 
-        \# move a square to PI on the cosine curve.
-        position = ax.input\_to\_graph_point(x=PI, graph=curve)
-        sq = Square(side_length=1, color=YELLOW).move_to(position)
-
-        self.add(ax, curve, sq)
-
-Copy to clipboard
 
 p2c（_点_）[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems.html#CoordinateSystem.p2c)[#](#manim.mobject.graphing.coordinate_systems.CoordinateSystem.p2c "此定义的固定链接")
 
@@ -936,49 +731,9 @@ p2c（_点_）[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems
 
 ![../_images/PlotExample-1.png](../_images/PlotExample-1.png)
 
-from manim import \*
+```py
 
-class PlotExample(Scene):
-def construct(self):
-\# construct the axes
-ax_1 = Axes(
-x_range=\[0.001, 6\],
-y_range=\[-8, 2\],
-x_length=5,
-y_length=3,
-tips=False,
-)
-ax_2 = ax_1.copy()
-ax_3 = ax_1.copy()
-
-        \# position the axes
-        ax_1.to_corner(UL)
-        ax_2.to_corner(UR)
-        ax_3.to_edge(DOWN)
-        axes = VGroup(ax_1, ax_2, ax_3)
-
-        \# create the logarithmic curves
-        def log_func(x):
-            return np.log(x)
-
-        \# a curve without adjustments; poor interpolation.
-        curve_1 = ax_1.plot(log_func, color=PURE_RED)
-
-        \# disabling interpolation makes the graph look choppy as not enough
-        \# inputs are available
-        curve_2 = ax_2.plot(log_func, use_smoothing=False, color=ORANGE)
-
-        \# taking more inputs of the curve by specifying a step for the
-        \# x_range yields expected results, but increases rendering time.
-        curve_3 = ax_3.plot(
-            log_func, x_range=(0.001, 6, 0.001), color=PURE_GREEN
-        )
-
-        curves = VGroup(curve_1, curve_2, curve_3)
-
-        self.add(axes, curves)
-
-Copy to clipboard
+```
 
 plot*antiderivative_graph（*图*， \_y_intercept = 0*，_样本= 50_， _use_vectorized = False_， _\*\* kwargs_）[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems.html#CoordinateSystem.plot_antiderivative_graph)[#](#manim.mobject.graphing.coordinate_systems.CoordinateSystem.plot_antiderivative_graph "此定义的固定链接")
 
@@ -1010,19 +765,9 @@ plot*antiderivative_graph（*图*， \_y_intercept = 0*，_样本= 50_， _use_v
 
 ![../_images/AntiderivativeExample-1.png](../_images/AntiderivativeExample-1.png)
 
-from manim import \*
+```py
 
-class AntiderivativeExample(Scene):
-def construct(self):
-ax = Axes()
-graph1 = ax.plot(
-lambda x: (x \*\* 2 - 2) / 3,
-color=RED,
-)
-graph2 = ax.plot_antiderivative_graph(graph1, color=BLUE)
-self.add(ax, graph1, graph2)
-
-Copy to clipboard
+```
 
 plot*derivative_graph (*图形*,*颜色= '#83C167'_ , _\*\* kwargs\_ )[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems.html#CoordinateSystem.plot_derivative_graph)[#](#manim.mobject.graphing.coordinate_systems.CoordinateSystem.plot_derivative_graph "此定义的固定链接")
 
@@ -1048,23 +793,10 @@ plot*derivative_graph (*图形*,*颜色= '#83C167'_ , _\*\* kwargs\_ )[\[来源\
 
 ![../_images/DerivativeGraphExample-1.png](../_images/DerivativeGraphExample-1.png)
 
-from manim import \*
+```py
 
-class DerivativeGraphExample(Scene):
-def construct(self):
-ax = NumberPlane(y_range=\[-1, 7\], background_line_style={"stroke_opacity": 0.4})
+```
 
-        curve_1 = ax.plot(lambda x: x ** 2, color=PURPLE_B)
-        curve_2 = ax.plot\_derivative\_graph(curve_1)
-        curves = VGroup(curve_1, curve_2)
-
-        label_1 = ax.get\_graph\_label(curve_1, "x^2", x_val=-2, direction=DL)
-        label_2 = ax.get\_graph\_label(curve_2, "2x", x_val=3, direction=RIGHT)
-        labels = VGroup(label_1, label_2)
-
-        self.add(ax, curves, labels)
-
-Copy to clipboard
 
 plot*implicit_curve ( \_func* , *min*深度= 5* , \_max_quads = 1500* , _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems.html#CoordinateSystem.plot_implicit_curve)[#](#manim.mobject.graphing.coordinate_systems.CoordinateSystem.plot_implicit_curve "此定义的固定链接")
 
@@ -1087,17 +819,10 @@ plot*implicit_curve ( \_func* , *min*深度= 5* , \_max_quads = 1500* , _\*\* kw
 
 ![../_images/ImplicitExample-1.png](../_images/ImplicitExample-1.png)
 
-from manim import \*
+```py
 
-class ImplicitExample(Scene):
-def construct(self):
-ax = Axes()
-a = ax.plot*implicit_curve(
-lambda x, y: y * (x - y) \*\* 2 - 4 \_ x - 8, color=BLUE
-)
-self.add(ax, a)
+```
 
-Copy to clipboard
 
 plot*parametric_curve (*函数*, \_use_vectorized = False* , _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems.html#CoordinateSystem.plot_parametric_curve)[#](#manim.mobject.graphing.coordinate_systems.CoordinateSystem.plot_parametric_curve "此定义的固定链接")
 
@@ -1119,25 +844,10 @@ plot*parametric_curve (*函数*, \_use_vectorized = False* , _\*\* kwargs_ )[\[�
 
 ![../_images/ParametricCurveExample-1.png](../_images/ParametricCurveExample-1.png)
 
-from manim import \*
+```py
 
-class ParametricCurveExample(Scene):
-def construct(self):
-ax = Axes()
-cardioid = ax.plot*parametric_curve(
-lambda t: np.array(
-\[
-np.exp(1) * np.cos(t) _ (1 - np.cos(t)),
-np.exp(1) _ np.sin(t) \_ (1 - np.cos(t)),
-0,
-\]
-),
-t_range=\[0, 2 \* PI\],
-color="#0FF1CE",
-)
-self.add(ax, cardioid)
+```
 
-Copy to clipboard
 
 绘图极性图（_r_func_， _theta_range = \[0, 6.283185307179586\]_， _\*\* kwargs_）[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems.html#CoordinateSystem.plot_polar_graph)[#](#manim.mobject.graphing.coordinate_systems.CoordinateSystem.plot_polar_graph "此定义的固定链接")
 
@@ -1159,16 +869,10 @@ Copy to clipboard
 
 ![../_images/PolarGraphExample-1.png](../_images/PolarGraphExample-1.png)
 
-from manim import \*
+```py
 
-class PolarGraphExample(Scene):
-def construct(self):
-plane = PolarPlane()
-r = lambda theta: 2 _ np.sin(theta _ 5)
-graph = plane.plot_polar_graph(r, \[0, 2 \* PI\], color=ORANGE)
-self.add(plane, graph)
+```
 
-Copy to clipboard
 
 参考：[`PolarPlane`](manim.mobject.graphing.coordinate_systems.PolarPlane.html#manim.mobject.graphing.coordinate_systems.PolarPlane "manim.mobject.graphing.coordinate_systems.PolarPlane")
 
@@ -1199,28 +903,10 @@ Copy to clipboard
 
 ![../_images/PlotSurfaceExample-1.png](../_images/PlotSurfaceExample-1.png)
 
-from manim import \*
+```py
 
-class PlotSurfaceExample(ThreeDScene):
-def construct(self):
-resolution*fa = 16
-self.set_camera_orientation(phi=75 * DEGREES, theta=-60 _ DEGREES)
-axes = ThreeDAxes(x_range=(-3, 3, 1), y_range=(-3, 3, 1), z_range=(-5, 5, 1))
-def param_trig(u, v):
-x = u
-y = v
-z = 2 _ np.sin(x) + 2 \_ np.cos(y)
-return z
-trig_plane = axes.plot_surface(
-param_trig,
-resolution=(resolution_fa, resolution_fa),
-u_range = (-3, 3),
-v_range = (-3, 3),
-colorscale = \[BLUE, GREEN, YELLOW, ORANGE, RED\],
-)
-self.add(axes, trig_plane)
+```
 
-Copy to clipboard
 
 点到极（_点_）[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems.html#CoordinateSystem.point_to_polar)[#](#manim.mobject.graphing.coordinate_systems.CoordinateSystem.point_to_polar "此定义的固定链接")
 
@@ -1261,16 +947,10 @@ numpy.ndarray
 
 ![../_images/PolarToPointExample-1.png](../_images/PolarToPointExample-1.png)
 
-from manim import \*
+```py
 
-class PolarToPointExample(Scene):
-def construct(self):
-polarplane_pi = PolarPlane(azimuth_units="PI radians", size=6)
-polartopoint_vector = Vector(polarplane_pi.polar_to_point(3, PI/4))
-self.add(polarplane_pi)
-self.add(polartopoint_vector)
+```
 
-Copy to clipboard
 
 参考：[`PolarPlane`](manim.mobject.graphing.coordinate_systems.PolarPlane.html#manim.mobject.graphing.coordinate_systems.PolarPlane "manim.mobject.graphing.coordinate_systems.PolarPlane") [`Vector`](manim.mobject.geometry.line.Vector.html#manim.mobject.geometry.line.Vector "manim.mobject.geometry.line.Vector")
 
@@ -1318,9 +998,7 @@ pt2pr（_点_）[\[来源\]](../_modules/manim/mobject/graphing/coordinate_syste
 
 例子
 
-ax = Axes()
-curve = ax.plot(lambda x: x\*\*2)
-ax.slope_of_tangent(x=-2, graph=curve)
-\# -3.5000000259052038
+```py
 
-Copy to clipboard
+```
+

@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.graphing.functions.ParametricFunction`
 
-_类_ ParametricFunction (_函数_, _t_range=None_ ,_缩放=<manim.mobject.graphing.scale.LinearBase object>_ , _dt=1e-08_ , _discontinuities=None_ , _use_smoothing=True_ , _use_vectorized=False_ , _\*\*kwargs_ )[\[来源\]](../_modules/manim/mobject/graphing/functions.html#ParametricFunction)[#](#manim.mobject.graphing.functions.ParametricFunction "此定义的固定链接")
 
-基地：[`VMobject`](manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject "manim.mobject.types.vectorized_mobject.VMobject")
+```py
+
+```
 
 参数曲线。
 
@@ -12,7 +13,7 @@ _类_ ParametricFunction (_函数_, _t_range=None_ ,_缩放=<manim.mobject.graph
 
 - **function** ( _Callable_ _\[_ _\[_ _float_ _,_ _float_ _\]_ _,_ _float_ _\]_ ) – 以以下形式绘制的函数`(lambda x: x**2)`
 - **t_range** ( _Sequence_ _\[_ _float_ _\]_ _|_ _None_ ) – 确定函数跨越的长度。默认情况下`[0, 1]`
-- **scaling** ( \__ScaleBase_ ) – 应用于函数点的缩放类。默认为[`LinearBase`](manim.mobject.graphing.scale.LinearBase.html#manim.mobject.graphing.scale.LinearBase "manim.mobject.graphing.scale.LinearBase").
+- **scaling** ( \__ScaleBase_ ) – 应用于函数点的缩放类。默认为[`LinearBase`]().
 - **use_smoothing** ( _bool_ ) – 创建函数后是否在函数点之间进行插值。（分数较低时会出现奇怪的行为）
 - **use_vectorized** ( _bool_ ) – 是否将生成的 t 值数组传递给函数 as 。仅当您的函数支持时才使用它。输出应该是形状的 numpy 数组，但如果轴是二维的，也可以为 0` [t_0, t_1, ...]``[[x_0, x_1, ...], [y_0, y_1, ...], [z_0, z_1, ...]]``z `
 - **discontinuities** ( _Iterable_ _\[_ _float_ _\]_ _|_ _None_ ) – 函数经历不连续性时的 t 值。
@@ -20,74 +21,38 @@ _类_ ParametricFunction (_函数_, _t_range=None_ ,_缩放=<manim.mobject.graph
 
 例子
 
-示例：绘图参数函数[¶](#plotparametricfunction)
+示例：绘图参数函数
 
-![../_images/PlotParametricFunction-1.png](../_images/PlotParametricFunction-1.png)
+![PlotParametricFunction-1.png](../_images/PlotParametricFunction-1.png)
 
-from manim import \*
+```py
 
-class PlotParametricFunction(Scene):
-def func(self, t):
-return np.array((np.sin(2 _ t), np.sin(3 _ t), 0))
+```
 
-    def construct(self):
-        func = ParametricFunction(self.func, t_range = np.array(\[0, TAU\]), fill_opacity=0).set_color(RED)
-        self.add(func.scale(3))
+示例：ThreeDParametricSpring 
 
-Copy to clipboard
+![ThreeDParametricSpring-1.png](../_images/ThreeDParametricSpring-1.png)
 
-示例：ThreeDParametricSpring [¶](#threedparametricspring)
+```py
 
-![../_images/ThreeDParametricSpring-1.png](../_images/ThreeDParametricSpring-1.png)
+```
 
-from manim import \*
-
-class ThreeDParametricSpring(ThreeDScene):
-def construct(self):
-curve1 = ParametricFunction(
-lambda u: np.array(\[
-1.2 _ np.cos(u),
-1.2 _ np.sin(u),
-u * 0.05
-\]), color=RED, t_range = np.array(\[-3*TAU, 5*TAU, 0.01\])
-).set_shade_in_3d(True)
-axes = ThreeDAxes()
-self.add(axes, curve1)
-self.set_camera_orientation(phi=80 * DEGREES, theta=-60 \* DEGREES)
-self.wait()
-
-Copy to clipboard
 
 注意力
 
 如果您的函数存在不连续性，则必须手动指定不连续性的位置。请参阅以下示例以获取指导。
 
-示例：不连续示例[¶](#discontinuousexample)
+示例：不连续示例
 
-![../_images/DiscontinuousExample-1.png](../_images/DiscontinuousExample-1.png)
+![DiscontinuousExample-1.png](../_images/DiscontinuousExample-1.png)
 
-from manim import \*
+```py
 
-class DiscontinuousExample(Scene):
-def construct(self):
-ax1 = NumberPlane((-3, 3), (-4, 4))
-ax2 = NumberPlane((-3, 3), (-4, 4))
-VGroup(ax1, ax2).arrange()
-discontinuous_function = lambda x: (x ** 2 - 2) / (x ** 2 - 4)
-incorrect = ax1.plot(discontinuous_function, color=RED)
-correct = ax2.plot(
-discontinuous_function,
-discontinuities=\[-2, 2\], \# discontinuous points
-dt=0.1, \# left and right tolerance of discontinuity
-color=GREEN,
-)
-self.add(ax1, ax2, incorrect, correct)
-
-Copy to clipboard
+```
 
 方法
 
-[`generate_points`](#manim.mobject.graphing.functions.ParametricFunction.generate_points "manim.mobject.graphing.functions.ParametricFunction.generate_points")
+[`generate_points`]()
 
 初始化`points`并因此初始化形状。
 
@@ -95,7 +60,7 @@ Copy to clipboard
 
 `get_point_from_function`
 
-[`init_points`](#manim.mobject.graphing.functions.ParametricFunction.init_points "manim.mobject.graphing.functions.ParametricFunction.init_points")
+[`init_points`]()
 
 初始化`points`并因此初始化形状。
 
@@ -131,13 +96,13 @@ mobject 的高度。
 
 mobject 的宽度。
 
-生成点( )[\[来源\]](../_modules/manim/mobject/graphing/functions.html#ParametricFunction.generate_points)[#](#manim.mobject.graphing.functions.ParametricFunction.generate_points "此定义的固定链接")
+生成点( )
 
 初始化`points`并因此初始化形状。
 
 被创造召唤。这是一个空方法，可以由子类实现。
 
-初始化点（）[#](#manim.mobject.graphing.functions.ParametricFunction.init_points "此定义的固定链接")
+初始化点（）
 
 初始化`points`并因此初始化形状。
 

@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.three\_d.polyhedra.Tetrahedron`
 
-四面体*类*（_edge_length = 1_， _\*\* kwargs_）[\[来源\]](../_modules/manim/mobject/three_d/polyhedra.html#Tetrahedron)[#](#manim.mobject.three_d.polyhedra.Tetrahedron "此定义的固定链接")
 
-基地：[`Polyhedron`](manim.mobject.three_d.polyhedra.Polyhedron.html#manim.mobject.three_d.polyhedra.Polyhedron "manim.mobject.two_d.polyhedra.Polyhedron")
+```py
+
+```
 
 四面体，五个柏拉图立体之一。它有 4 个面、6 条边和 4 个顶点。
 
@@ -18,15 +19,11 @@
 
 ![../_images/TetrahedronScene-1.png](../_images/TetrahedronScene-1.png)
 
-from manim import \*
 
-class TetrahedronScene(ThreeDScene):
-def construct(self):
-self.set*camera_orientation(phi=75 * DEGREES, theta=30 \_ DEGREES)
-obj = Tetrahedron()
-self.add(obj)
+```py
 
-Copy to clipboard
+```
+
 
 方法
 

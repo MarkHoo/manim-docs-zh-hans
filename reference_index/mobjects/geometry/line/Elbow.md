@@ -2,9 +2,11 @@
 
 合格名称：`manim.mobject.geometry.line.Elbow`
 
-弯头*类*（_宽度= 0.2_，_角度= 0_， _\*\* kwargs_）
+```py
+class Elbow(width=0.2, angle=0, **kwargs)
+```
 
-基地：[`VMobject`]()
+Bases: `VMobject`
 
 两条线相互成直角：L 形。
 
@@ -23,7 +25,16 @@
 
 
 ```py
+from manim import *
 
+class ElbowExample(Scene):
+    def construct(self):
+        elbow_1 = Elbow()
+        elbow_2 = Elbow(width=2.0)
+        elbow_3 = Elbow(width=2.0, angle=5*PI/4)
+
+        elbow_group = Group(elbow_1, elbow_2, elbow_3).arrange(buff=1)
+        self.add(elbow_group)
 ```
 
 
@@ -32,19 +43,15 @@
 
 属性
 
-
-`animate`
-用于对 的任何方法的应用程序进行动画处理`self`。
-`animation_overrides`
-`color`
-`depth`
-对象的深度。
-`fill_color`
-如果有多种颜色（对于渐变），则返回第一个颜色
-`height`
-mobject 的高度。
-`n_points_per_curve`
-`sheen_factor`
-`stroke_color`
-`width`
-mobject 的宽度。
+|||
+|-|-|
+`animate`|用于对 的任何方法的应用程序进行动画处理`self`。
+`animation_overrides`|
+`color`|
+`depth`|对象的深度。
+`fill_color`|如果有多种颜色（对于渐变），则返回第一个颜色
+`height`|mobject 的高度。
+`n_points_per_curve`|
+`sheen_factor`|
+`stroke_color`|
+`width`|mobject 的宽度。

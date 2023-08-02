@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.three\_d.three\_dimensions.Surface`
 
-_类_ Surface ( _func_ , _u_range = \[0, 1\]_ , _v_range = \[0, 1\]_ ,_分辨率= 32_ , _surface_piece_config = {}_ , _fill_color = '#29ABCA'_ , _fill_opacity = 1.0_ , _checkerboard_colors = \['#29ABCA', ' #236B8E'\]_，_笔划颜色= '#BBBBBB'_，_笔划宽度= 0.5_， _should_make_jagged = False_, _pre_function_handle_to_anchor_scale_factor = 1e-05_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/three_d/three_dimensions.html#Surface)[#](#manim.mobject.three_d.three_dimensions.Surface "此定义的固定链接")
 
-基地：[`VGroup`](manim.mobject.types.vectorized_mobject.VGroup.html#manim.mobject.types.vectorized_mobject.VGroup "manim.mobject.types.vectorized_mobject.VGroup")
+```py
+
+```
 
 使用棋盘图案创建参数化曲面。
 
@@ -29,24 +30,10 @@ _类_ Surface ( _func_ , _u_range = \[0, 1\]_ , _v_range = \[0, 1\]_ ,_分辨率
 
 ![../_images/ParaSurface-1.png](../_images/ParaSurface-1.png)
 
-from manim import \*
 
-class ParaSurface(ThreeDScene):
-def func(self, u, v):
-return np.array(\[np.cos(u) _ np.cos(v), np.cos(u) _ np.sin(v), u\])
+```py
 
-    def construct(self):
-        axes = ThreeDAxes(x_range=\[-4,4\], x_length=8)
-        surface = Surface(
-            lambda u, v: axes.c2p(*self.func(u, v)),
-            u_range=\[-PI, PI\],
-            v_range=\[0, TAU\],
-            resolution=8,
-        )
-        self.set\_camera\_orientation(theta=70 * DEGREES, phi=75 * DEGREES)
-        self.add(axes, surface)
-
-Copy to clipboard
+```
 
 方法
 
@@ -152,26 +139,7 @@ set*fill_by*value (*轴*, \_colorscale = None* , \_axis = 2* , _\*\* kwargs_ )[\
 
 ![../_images/FillByValueExample-1.png](../_images/FillByValueExample-1.png)
 
-from manim import \*
 
-class FillByValueExample(ThreeDScene):
-def construct(self):
-resolution*fa = 8
-self.set_camera_orientation(phi=75 * DEGREES, theta=-160 \_ DEGREES)
-axes = ThreeDAxes(x_range=(0, 5, 1), y_range=(0, 5, 1), z_range=(-1, 1, 0.5))
-def param_surface(u, v):
-x = u
-y = v
-z = np.sin(x) \* np.cos(y)
-return z
-surface_plane = Surface(
-lambda u, v: axes.c2p(u, v, param_surface(u, v)),
-resolution=(resolution_fa, resolution_fa),
-v_range=\[0, 5\],
-u_range=\[0, 5\],
-)
-surface_plane.set_style(fill_opacity=1)
-surface_plane.set_fill_by_value(axes=axes, colorscale=\[(RED, -0.5), (YELLOW, 0), (GREEN, 0.5)\], axis=2)
-self.add(axes, surface_plane)
+```py
 
-Copy to clipboard
+```

@@ -2,39 +2,23 @@
 
 合格名称：`manim.mobject.table.MobjectTable`
 
-_类_ MobjectTable (_表_, _element_to_mobject=<function MobjectTable.<lambda>>_ , _\*\*kwargs_ )[\[来源\]](../_modules/manim/mobject/table.html#MobjectTable)[#](#manim.mobject.table.MobjectTable "此定义的固定链接")
 
-基地：[`Table`](manim.mobject.table.Table.html#manim.mobject.table.Table "manim.mobject.table.Table")
+```py
+
+```
 
 [`Table`](manim.mobject.table.Table.html#manim.mobject.table.Table "manim.mobject.table.Table")与 一起使用的专用对象[`Mobject`](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject")。
 
 例子
 
-示例：MobjectTableExample [¶](#mobjecttableexample)
+示例：MobjectTableExample 
 
 ![../_images/MobjectTableExample-1.png](../_images/MobjectTableExample-1.png)
 
-from manim import \*
+```py
 
-class MobjectTableExample(Scene):
-def construct(self):
-cross = VGroup(
-Line(UP + LEFT, DOWN + RIGHT),
-Line(UP + RIGHT, DOWN + LEFT),
-)
-a = Circle().set_color(RED).scale(0.5)
-b = cross.set_color(BLUE).scale(0.5)
-t0 = MobjectTable(
-\[\[a.copy(),b.copy(),a.copy()\],
-\[b.copy(),a.copy(),a.copy()\],
-\[a.copy(),b.copy(),b.copy()\]\]
-)
-line = Line(
-t0.get_corner(DL), t0.get_corner(UR)
-).set_color(RED)
-self.add(t0, line)
+```
 
-Copy to clipboard
 
 [`Table`](manim.mobject.table.Table.html#manim.mobject.table.Table "manim.mobject.table.Table")with`element_to_mobject`设置为恒等函数的特殊情况。在这里， 中的每一项都`table`必须已经是类型[`Mobject`](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject")。
 

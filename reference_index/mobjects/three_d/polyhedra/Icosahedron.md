@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.three\_d.polyhedra.Icosahedron`
 
-二十面*体类*（_edge_length = 1_， _\*\* kwargs_）[\[来源\]](../_modules/manim/mobject/three_d/polyhedra.html#Icosahedron)[#](#manim.mobject.three_d.polyhedra.Icosahedron "此定义的固定链接")
 
-基地：[`Polyhedron`](manim.mobject.three_d.polyhedra.Polyhedron.html#manim.mobject.three_d.polyhedra.Polyhedron "manim.mobject.two_d.polyhedra.Polyhedron")
+```py
+
+```
 
 二十面体，五个柏拉图立体之一。它有 20 个面、30 条边和 12 个顶点。
 
@@ -18,15 +19,10 @@
 
 ![../_images/二十面体Scene-1.png](../_images/IcosahedronScene-1.png)
 
-from manim import \*
 
-class IcosahedronScene(ThreeDScene):
-def construct(self):
-self.set*camera_orientation(phi=75 * DEGREES, theta=30 \_ DEGREES)
-obj = Icosahedron()
-self.add(obj)
+```py
 
-Copy to clipboard
+```
 
 方法
 

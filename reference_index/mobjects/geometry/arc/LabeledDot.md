@@ -2,7 +2,9 @@
 
 合格名称：`manim.mobject.geometry.arc.LabeledDot`
 
-`class LabeledDot(label, radius=None, **kwargs)`
+```py
+class LabeledDot(label, radius=None, **kwargs)
+```
 
 Bases: `Dot`
 

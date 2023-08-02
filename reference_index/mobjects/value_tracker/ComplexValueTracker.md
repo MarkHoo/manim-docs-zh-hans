@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.value\_tracker.ComplexValueTracker`
 
-_类_ ComplexValueTracker (_值= 0_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/value_tracker.html#ComplexValueTracker)[#](#manim.mobject.value_tracker.ComplexValueTracker "此定义的固定链接")
 
-基地：[`ValueTracker`](manim.mobject.value_tracker.ValueTracker.html#manim.mobject.value_tracker.ValueTracker "manim.mobject.value_tracker.ValueTracker")
+```py
+
+```
 
 跟踪复值参数。
 
@@ -14,23 +15,10 @@ _类_ ComplexValueTracker (_值= 0_ , _\*\* kwargs_ )[\[来源\]](../_modules/ma
 
 示例：ComplexValueTrackerExample [¶](#complexvaluetrackerexample)
 
-from manim import \*
+```py
 
-class ComplexValueTrackerExample(Scene):
-def construct(self):
-tracker = ComplexValueTracker(-2+1j)
-dot = Dot().add_updater(
-lambda x: x.move_to(tracker.points)
-)
+```
 
-        self.add(NumberPlane(), dot)
-
-        self.play(tracker.animate.set_value(3+2j))
-        self.play(tracker.animate.set_value(tracker.get_value() * 1j))
-        self.play(tracker.animate.set_value(tracker.get_value() - 2j))
-        self.play(tracker.animate.set_value(tracker.get_value() / (-2 + 3j)))
-
-Copy to clipboard
 
 方法
 

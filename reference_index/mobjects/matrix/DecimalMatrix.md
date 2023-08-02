@@ -2,38 +2,31 @@
 
 合格名称：`manim.mobject.matrix.DecimalMatrix`
 
-_类_ DecimalMatrix (_矩阵_, _element_to_mobject=<class 'manim.mobject.text.numbers.DecimalNumber'>_ , _element_to_mobject_config={'num_decimal_places': 1}_ , _\*\*kwargs_ )[\[来源\]](../_modules/manim/mobject/matrix.html#DecimalMatrix)[#](#manim.mobject.matrix.DecimalMatrix "此定义的固定链接")
 
-基地：[`Matrix`](manim.mobject.matrix.Matrix.html#manim.mobject.matrix.Matrix "manim.mobject.matrix.Matrix")
+```py
+
+```
 
 一个在屏幕上显示带有十进制条目的矩阵的 mobject。
 
 例子
 
-示例：DecimalMatrix 示例[¶](#decimalmatrixexample)
+示例：DecimalMatrix 示例
 
-![../_images/DecimalMatrixExample-1.png](../_images/DecimalMatrixExample-1.png)
+![DecimalMatrixExample-1.png](../_images/DecimalMatrixExample-1.png)
 
-from manim import \*
+```py
 
-class DecimalMatrixExample(Scene):
-def construct(self):
-m0 = DecimalMatrix(
-\[\[3.456, 2.122\], \[33.2244, 12\]\],
-element_to_mobject_config={"num_decimal_places": 2},
-left_bracket="\\{",
-right_bracket="\\}")
-self.add(m0)
+```
 
-Copy to clipboard
 
 将根据提供的配置舍入/截断小数位。
 
 参数
 
 - **矩阵**( _Iterable_ ) – numpy 二维数组或列表列表
-- **element_to_mobject** ( [_Mobject_](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject") ) – 要使用的 Mobject，默认为 DecimalNumber
-- **element_to_mobject_config** ( _dict_ _\[_ _str_ _,_ [_Mobject_](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject") _\]_ ) – 所需 mobject 的配置，默认为 {“num_decimal_places”: 1}
+- **element_to_mobject** ( [_Mobject_]() ) – 要使用的 Mobject，默认为 DecimalNumber
+- **element_to_mobject_config** ( _dict_ _\[_ _str_ _,_ [_Mobject_]() _\]_ ) – 所需 mobject 的配置，默认为 {“num_decimal_places”: 1}
 
 方法
 

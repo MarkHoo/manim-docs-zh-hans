@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.three\_d.three\_dimensions.Dot3D`
 
-_类_ Dot3D (_点= array(\[0., 0., 0.\])_ ,_半径= 0.08_ ,_颜色= '#FFFFFF'_ ,_分辨率= (8, 8)_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/three_d/three_dimensions.html#Dot3D)[#](#manim.mobject.three_d.three_dimensions.Dot3D "此定义的固定链接")
 
-基地：[`Sphere`](manim.mobject.three_d.three_dimensions.Sphere.html#manim.mobject.three_d.three_dimensions.Sphere "manim.mobject. Three_d. Three_dimensions.Sphere")
+```py
+
+```
 
 一个球形点。
 
@@ -21,19 +22,11 @@ _类_ Dot3D (_点= array(\[0., 0., 0.\])_ ,_半径= 0.08_ ,_颜色= '#FFFFFF'_ ,
 
 ![../_images/Dot3DExample-1.png](../_images/Dot3DExample-1.png)
 
-from manim import \*
 
-class Dot3DExample(ThreeDScene):
-def construct(self):
-self.set_camera_orientation(phi=75*DEGREES, theta=-45*DEGREES)
+```py
 
-        axes = ThreeDAxes()
-        dot_1 = Dot3D(point=axes.coords\_to\_point(0, 0, 1), color=RED)
-        dot_2 = Dot3D(point=axes.coords\_to\_point(2, 0, 0), radius=0.1, color=BLUE)
-        dot_3 = Dot3D(point=\[0, 0, 0\], radius=0.1, color=ORANGE)
-        self.add(axes, dot_1, dot_2,dot_3)
+```
 
-Copy to clipboard
 
 方法
 

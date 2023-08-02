@@ -2,46 +2,39 @@
 
 合格名称：`manim.mobject.text.tex\_mobject.MathTex`
 
-_类_ MathTex ( _\* tex_strings_ , _arg_separator = ' '_ , _substrings_to_isolate = None_ , _tex_to_color_map = None_ , _tex_environment = 'align\*'_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/text/tex_mobject.html#MathTex)[#](#manim.mobject.text.tex_mobject.MathTex "此定义的固定链接")
 
-基地：[`SingleStringMathTex`](manim.mobject.text.tex_mobject.SingleStringMathTex.html#manim.mobject.text.tex_mobject.SingleStringMathTex "manim.mobject.text.tex_mobject.SingleStringMathTex")
+```py
+
+```
 
 在数学模式下用 LaTeX 编译的字符串。
 
 例子
 
-示例：公式[¶](#formula)
+示例：公式
 
-![../_images/Formula-1.png](../_images/Formula-1.png)
+![Formula-1.png](../_images/Formula-1.png)
 
-from manim import \*
+```py
 
-class Formula(Scene):
-def construct(self):
-t = MathTex(r"\\int_a^b f'(x) dx = f(b)- f(a)")
-self.add(t)
+```
 
-Copy to clipboard
 
 测试
 
 检查是否创建[`MathTex`](#manim.mobject.text.tex_mobject.MathTex "manim.mobject.text.tex_mobject.MathTex")作品：
 
-> > \> MathTex('a^2 + b^2 = c^2')
-> > MathTex('a^2 + b^2 = c^2')
 
-Copy to clipboard
+```py
+
+```
 
 检查双括号组分割是否正确：
 
-> > \> t1 = MathTex('{{ a }} + {{ b }} = {{ c }}')
-> > \> len(t1.submobjects)
-> > 5
-> > \> t2 = MathTex(r"\\frac{1}{a+b\\sqrt{2}}")
-> > \> len(t2.submobjects)
-> > 1
 
-Copy to clipboard
+```py
+
+```
 
 方法
 

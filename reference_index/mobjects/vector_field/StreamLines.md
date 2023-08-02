@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.vector\_field.StreamLines`
 
-_类_ StreamLines ( _func_ , _color = None_ , _color_scheme = None_ , _min_color_scheme_value = 0_ , _max_color_scheme_value = 2_ , _colors = \['#236B8E', '#83C167', '#FFFF00', '#FC6255'\]_ , _x_range = None_ , _y_range =无_、 _z_range =无_、 _Three_dimensions = False_、_噪声因子=无_，_n_repeats = 1_，_dt = 0.05_，_virtual_time = 3_，_max_anchors_per_line = 100_，_padding = 3_，_行程宽度= 1_，_不透明度= 1_，_\*\* kwargs_）[\[来源\]](../_modules/manim/mobject/vector_field.html#StreamLines)[#](#manim.mobject.vector_field.StreamLines "此定义的固定链接")
 
-基地：[`VectorField`](manim.mobject.vector_field.VectorField.html#manim.mobject.vector_field.VectorField "manim.mobject.vector_field.VectorField")
+```py
+
+```
 
 [`VectorField`](manim.mobject.vector_field.VectorField.html#manim.mobject.vector_field.VectorField "manim.mobject.vector_field.VectorField")流线表示使用移动主体的轨迹的流动。
 
@@ -37,37 +38,19 @@ _类_ StreamLines ( _func_ , _color = None_ , _color_scheme = None_ , _min_color
 
 ![../_images/BasicUsage-2.png](../_images/BasicUsage-2.png)
 
-from manim import \*
+```py
 
-class BasicUsage(Scene):
-def construct(self):
-func = lambda pos: ((pos\[0\] _ UR + pos\[1\] _ LEFT) - pos) / 3
-self.add(StreamLines(func))
+```
 
-Copy to clipboard
 
 示例：SpawningAndFlowingArea [¶](#spawningandflowingarea)
 
 ![../_images/SpawningAndFlowingArea-1.png](../_images/SpawningAndFlowingArea-1.png)
 
-from manim import \*
+```py
 
-class SpawningAndFlowingArea(Scene):
-def construct(self):
-func = lambda pos: np.sin(pos\[0\]) _ UR + np.cos(pos\[1\]) _ LEFT + pos / 5
-stream_lines = StreamLines(
-func, x_range=\[-3, 3, 0.2\], y_range=\[-2, 2, 0.2\], padding=1
-)
+```
 
-        spawning_area = Rectangle(width=6, height=4)
-        flowing_area = Rectangle(width=8, height=6)
-        labels = \[Tex("Spawning Area"), Tex("Flowing Area").shift(DOWN * 2.5)\]
-        for lbl in labels:
-            lbl.add\_background\_rectangle(opacity=0.6, buff=0.05)
-
-        self.add(stream_lines, spawning_area, flowing_area, *labels)
-
-Copy to clipboard
 
 方法
 
@@ -138,24 +121,10 @@ mobject 的宽度。
 
 示例：StreamLineCreation [¶](#streamlinecreation)
 
-from manim import \*
+```py
 
-class StreamLineCreation(Scene):
-def construct(self):
-func = lambda pos: (pos\[0\] _ UR + pos\[1\] _ LEFT) - pos
-stream_lines = StreamLines(
-func,
-color=YELLOW,
-x_range=\[-7, 7, 1\],
-y_range=\[-4, 4, 1\],
-stroke_width=3,
-virtual_time=1, \# use shorter lines
-max_anchors_per_line=5, \# better performance with fewer anchors
-)
-self.play(stream_lines.create()) \# uses virtual_time as run_time
-self.wait()
+```
 
-Copy to clipboard
 
 动画结束( )[\[来源\]](../_modules/manim/mobject/vector_field.html#StreamLines.end_animation)[#](#manim.mobject.vector_field.StreamLines.end_animation "此定义的固定链接")
 
@@ -179,20 +148,10 @@ Copy to clipboard
 
 示例：结束动画[¶](#endanimation)
 
-from manim import \*
+```py
 
-class EndAnimation(Scene):
-def construct(self):
-func = lambda pos: np.sin(pos\[0\] / 2) _ UR + np.cos(pos\[1\] / 2) _ LEFT
-stream_lines = StreamLines(
-func, stroke_width=3, max_anchors_per_line=5, virtual_time=1, color=BLUE
-)
-self.add(stream_lines)
-stream_lines.start_animation(warm_up=False, flow_speed=1.5, time_width=0.5)
-self.wait(1)
-self.play(stream_lines.end_animation())
+```
 
-Copy to clipboard
 
 start*animation ( \_Warm_up=True* , _flow_speed=1_ , _time_width=0.3_ , _rate_func=< 线性函数>_ , _line_animation_class=<class 'manim.animation.inspiration.ShowPassingFlash'>_ , _\*\*kwargs_ )[\[来源\]](../_modules/manim/mobject/vector_field.html#StreamLines.start_animation)[#](#manim.mobject.vector_field.StreamLines.start_animation "此定义的固定链接")
 
@@ -216,14 +175,6 @@ start*animation ( \_Warm_up=True* , _flow_speed=1_ , _time_width=0.3_ , _rate_fu
 
 示例：连续运动[¶](#continuousmotion)
 
-from manim import \*
+```py
 
-class ContinuousMotion(Scene):
-def construct(self):
-func = lambda pos: np.sin(pos\[0\] / 2) _ UR + np.cos(pos\[1\] / 2) _ LEFT
-stream_lines = StreamLines(func, stroke_width=3, max_anchors_per_line=30)
-self.add(stream_lines)
-stream_lines.start_animation(warm_up=False, flow_speed=1.5)
-self.wait(stream_lines.virtual_time / stream_lines.flow_speed)
-
-Copy to clipboard
+```

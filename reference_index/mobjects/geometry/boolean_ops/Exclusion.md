@@ -2,7 +2,9 @@
 
 合格名称：`manim.mobject.geometry.boolean\_ops.Exclusion`
 
-`class Exclusion(subject, clip, **kwargs)`
+```py
+class Exclusion(subject, clip, **kwargs)
+```
 
 Bases: `_BooleanOps`
 

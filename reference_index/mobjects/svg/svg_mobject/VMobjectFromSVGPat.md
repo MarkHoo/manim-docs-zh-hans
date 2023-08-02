@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.svg.svg\_mobject.VMobjectFromSVGPath`
 
-_类_ VMobjectFromSVGPath（_path_obj_， _long_lines = False_， _should_subdivide_sharp_curves = False_， _should_remove_null_curves = False_， _\*\* kwargs_）[\[来源\]](../_modules/manim/mobject/svg/svg_mobject.html#VMobjectFromSVGPath)[#](#manim.mobject.svg.svg_mobject.VMobjectFromSVGPath "此定义的固定链接")
 
-基地：[`VMobject`](manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject "manim.mobject.types.vectorized_mobject.VMobject")
+```py
+
+```
 
 表示 SVG 路径的矢量化 mobject。
 
@@ -62,7 +63,7 @@ mobject 的高度。
 
 mobject 的宽度。
 
-生成点（）[#](#manim.mobject.svg.svg_mobject.VMobjectFromSVGPath.generate_points "此定义的固定链接")
+生成点（）
 
 初始化`points`并因此初始化形状。
 

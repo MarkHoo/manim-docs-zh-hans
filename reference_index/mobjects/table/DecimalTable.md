@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.table.DecimalTable`
 
-_类_ DecimalTable (_表_, _element_to_mobject=<class 'manim.mobject.text.numbers.DecimalNumber'>_ , _element_to_mobject_config={'num_decimal_places': 1}_ , _\*\*kwargs_ )[\[来源\]](../_modules/manim/mobject/table.html#DecimalTable)[#](#manim.mobject.table.DecimalTable "此定义的固定链接")
 
-基地：[`Table`](manim.mobject.table.Table.html#manim.mobject.table.Table "manim.mobject.table.Table")
+```py
+
+```
 
 [`Table`](manim.mobject.table.Table.html#manim.mobject.table.Table "manim.mobject.table.Table")用于[`DecimalNumber`](manim.mobject.text.numbers.DecimalNumber.html#manim.mobject.text.numbers.DecimalNumber "manim.mobject.text.numbers.DecimalNumber")显示十进制条目的专用 mobject。
 
@@ -14,20 +15,10 @@ _类_ DecimalTable (_表_, _element_to_mobject=<class 'manim.mobject.text.number
 
 ![../_images/DecimalTableExample-1.png](../_images/DecimalTableExample-1.png)
 
-from manim import \*
+```py
 
-class DecimalTableExample(Scene):
-def construct(self):
-x_vals = \[-2,-1,0,1,2\]
-y_vals = np.exp(x_vals)
-t0 = DecimalTable(
-\[x_vals, y_vals\],
-row_labels=\[MathTex("x"), MathTex("f(x)=e^{x}")\],
-h_buff=1,
-element_to_mobject_config={"num_decimal_places": 2})
-self.add(t0)
+```
 
-Copy to clipboard
 
 的特殊情况[`Table`](manim.mobject.table.Table.html#manim.mobject.table.Table "manim.mobject.table.Table")设置`element_to_mobject`为[`DecimalNumber`](manim.mobject.text.numbers.DecimalNumber.html#manim.mobject.text.numbers.DecimalNumber "manim.mobject.text.numbers.DecimalNumber")。默认情况下，`num_decimal_places`设置为 1。将根据提供的 舍入/截断小数位`element_to_mobject_config`。
 

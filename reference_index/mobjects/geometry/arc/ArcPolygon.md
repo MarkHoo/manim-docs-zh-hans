@@ -2,7 +2,9 @@
 
 合格名称：`manim.mobject.geometry.arc.ArcPolygon`
 
-`class ArcPolygon(*vertices, angle=0.7853981633974483, radius=None, arc_config=None, **kwargs)`
+```py
+class ArcPolygon(*vertices, angle=0.7853981633974483, radius=None, arc_config=None, **kwargs)
+```
 
 Bases: `VMobject`
 
@@ -22,7 +24,7 @@ Bases: `VMobject`
 
 根据输入参数创建的弧：
 
-```py
+```sh
 >>> from manim import ArcPolygon
 >>> ap = ArcPolygon([0, 0, 0], [2, 0, 0], [0, 2, 0])
 >>> ap.arcs

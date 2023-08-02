@@ -10,23 +10,14 @@ _类_ MathTable (_表_, _element_to_mobject=<class 'manim.mobject.text.tex_mobje
 
 例子
 
-示例：MathTable 示例[¶](#mathtableexample)
+示例：MathTable 示例
 
-![../_images/MathTableExample-1.png](../_images/MathTableExample-1.png)
+![MathTableExample-1.png](../_images/MathTableExample-1.png)
 
-from manim import \*
+```py
 
-class MathTableExample(Scene):
-def construct(self):
-t0 = MathTable(
-\[\["+", 0, 5, 10\],
-\[0, 0, 5, 10\],
-\[2, 2, 7, 12\],
-\[4, 4, 9, 14\]\],
-include_outer_lines=True)
-self.add(t0)
+```
 
-Copy to clipboard
 
 element_to_mobject 设置[`Table`](manim.mobject.table.Table.html#manim.mobject.table.Table "manim.mobject.table.Table")为的特殊情况。表中的每个条目都是在 Latex 对齐环境中设置的。[`MathTex`](manim.mobject.text.tex_mobject.MathTex.html#manim.mobject.text.tex_mobject.MathTex "manim.mobject.text.tex_mobject.MathTex")
 

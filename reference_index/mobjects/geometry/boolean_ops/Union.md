@@ -2,7 +2,9 @@
 
 合格名称：`manim.mobject.geometry.boolean\_ops.Union`
 
-`class Union(*vmobjects, **kwargs)`
+```py
+class Union(*vmobjects, **kwargs)
+```
 
 Bases: `_BooleanOps`
 

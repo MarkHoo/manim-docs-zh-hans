@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.three\_d.three\_dimensions.ThreeDVMobject`
 
-_类_ ThreeDVMobject（_shade_in_3d = True_， _\*\* kwargs_）[\[来源\]](../_modules/manim/mobject/three_d/three_dimensions.html#ThreeDVMobject)[#](#manim.mobject.three_d.three_dimensions.ThreeDVMobject "此定义的固定链接")
 
-基地：[`VMobject`](manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject "manim.mobject.types.vectorized_mobject.VMobject")
+```py
+
+```
 
 方法
 

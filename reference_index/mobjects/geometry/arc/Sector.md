@@ -2,7 +2,9 @@
 
 合格名称：`manim.mobject.geometry.arc.Sector`
 
-`class Sector(outer_radius=1, inner_radius=0, **kwargs)`
+```py
+class Sector(outer_radius=1, inner_radius=0, **kwargs)
+```
 
 Bases: AnnularSector
 

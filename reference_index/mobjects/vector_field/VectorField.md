@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.vector\_field.VectorField`
 
-_类_ VectorField ( _func_ , _color = None_ , _color_scheme = None_ , _min_color_scheme_value = 0_ , _max_color_scheme_value = 2_ , _colors = \['#236B8E', '#83C167', '#FFFF00', '#FC6255'\]_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/vector_field.html#VectorField)[#](#manim.mobject.vector_field.VectorField "此定义的固定链接")
 
-基地：[`VGroup`](manim.mobject.types.vectorized_mobject.VGroup.html#manim.mobject.types.vectorized_mobject.VGroup "manim.mobject.types.vectorized_mobject.VGroup")
+```py
+
+```
 
 向量场。
 
@@ -180,28 +181,10 @@ get*vectorized_rgba_gradient_function（*开始*，*结束*，*颜色\_）[\[来
 
 示例：轻推[¶](#nudging)
 
-from manim import \*
+```py
 
-class Nudging(Scene):
-def construct(self):
-func = lambda pos: np.sin(pos\[1\] / 2) _ RIGHT + np.cos(pos\[0\] / 2) _ UP
-vector_field = ArrowVectorField(
-func, x_range=\[-7, 7, 1\], y_range=\[-4, 4, 1\], length_func=lambda x: x / 2
-)
-self.add(vector_field)
-circle = Circle(radius=2).shift(LEFT)
-self.add(circle.copy().set_color(GRAY))
-dot = Dot().move_to(circle)
+```
 
-        vector_field.nudge(circle, -2, 60, True)
-        vector_field.nudge(dot, -2, 60)
-
-        circle.add_updater(vector_field.get\_nudge\_updater(pointwise=True))
-        dot.add_updater(vector_field.get\_nudge\_updater())
-        self.add(circle, dot)
-        self.wait(6)
-
-Copy to clipboard
 
 nudge*submobjects ( \_dt = 1* , _substeps = 1_ , _pointwise = False_ )[\[来源\]](../_modules/manim/mobject/vector_field.html#VectorField.nudge_submobjects)[#](#manim.mobject.vector_field.VectorField.nudge_submobjects "此定义的固定链接")
 
@@ -238,20 +221,10 @@ _可调用_\[\[ _ndarray_ \], _ndarray_ \]
 
 示例：ScaleVectorFieldFunction [¶](#scalevectorfieldfunction)
 
-from manim import \*
+```py
 
-class ScaleVectorFieldFunction(Scene):
-def construct(self):
-func = lambda pos: np.sin(pos\[1\]) _ RIGHT + np.cos(pos\[0\]) _ UP
-vector_field = ArrowVectorField(func)
-self.add(vector_field)
-self.wait()
+```
 
-        func = VectorField.scale_func(func, 0.5)
-        self.play(vector_field.animate.become(ArrowVectorField(func)))
-        self.wait()
-
-Copy to clipboard
 
 退货
 

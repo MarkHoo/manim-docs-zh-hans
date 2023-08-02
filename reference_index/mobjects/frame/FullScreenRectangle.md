@@ -2,9 +2,11 @@
 
 合格名称：`manim.mobject.frame.FullScreenRectangle`
 
-`class FullScreenRectangle(**kwargs)`
+```py
+class FullScreenRectangle(**kwargs)
+```
 
-Bases: ScreenRectangle
+Bases: `ScreenRectangle`
 
 
 方法

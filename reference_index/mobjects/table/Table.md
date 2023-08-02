@@ -2,80 +2,32 @@
 
 合格名称：`manim.mobject.table.Table`
 
-_类_ 表（_table_、 _row_labels=None_、 _col_labels=None_、 _top_left_entry=None_、 _v_buff=0.8_、 _h_buff=1.3_、 _include_outer_lines=False_、 _add_background_rectangles_to_entries=False_、 _Entrys_background_color='#000000'_、 _include_background_rectangle=False_、 _background_rectangle_color='#0000 00'_、 _element_to_mobject=<class 'manim.mobject.text.text_mobject.Paragraph'>_、 _element_to_mobject_config={}_、 _arrange_in_grid_config={}_、 _line_config={}_, _\*\*夸格斯_)[\[来源\]](../_modules/manim/mobject/table.html#Table)[#](#manim.mobject.table.Table "此定义的固定链接")
 
-基地：[`VGroup`](manim.mobject.types.vectorized_mobject.VGroup.html#manim.mobject.types.vectorized_mobject.VGroup "manim.mobject.types.vectorized_mobject.VGroup")
+```py
+
+```
 
 在屏幕上显示表格的 mobject。
 
 例子
 
-示例：表示例[¶](#tableexamples)
+示例：表示例
 
-![../_images/TableExamples-2.png](../_images/TableExamples-2.png)
+![TableExamples-2.png](../_images/TableExamples-2.png)
 
-from manim import \*
+```py
 
-class TableExamples(Scene):
-def construct(self):
-t0 = Table(
-\[\["This", "is a"\],
-\["simple", "Table in \\n Manim."\]\])
-t1 = Table(
-\[\["This", "is a"\],
-\["simple", "Table."\]\],
-row_labels=\[Text("R1"), Text("R2")\],
-col_labels=\[Text("C1"), Text("C2")\])
-t1.add_highlighted_cell((2,2), color=YELLOW)
-t2 = Table(
-\[\["This", "is a"\],
-\["simple", "Table."\]\],
-row_labels=\[Text("R1"), Text("R2")\],
-col_labels=\[Text("C1"), Text("C2")\],
-top_left_entry=Star().scale(0.3),
-include_outer_lines=True,
-arrange_in_grid_config={"cell_alignment": RIGHT})
-t2.add(t2.get_cell((2,2), color=RED))
-t3 = Table(
-\[\["This", "is a"\],
-\["simple", "Table."\]\],
-row_labels=\[Text("R1"), Text("R2")\],
-col_labels=\[Text("C1"), Text("C2")\],
-top_left_entry=Star().scale(0.3),
-include_outer_lines=True,
-line_config={"stroke_width": 1, "color": YELLOW})
-t3.remove(\*t3.get_vertical_lines())
-g = Group(
-t0,t1,t2,t3
-).scale(0.7).arrange_in_grid(buff=1)
-self.add(g)
+```
 
-Copy to clipboard
 
 示例：背景矩形示例[¶](#backgroundrectanglesexample)
 
 ![../_images/BackgroundRectanglesExample-2.png](../_images/BackgroundRectanglesExample-2.png)
 
-from manim import \*
+```py
 
-class BackgroundRectanglesExample(Scene):
-def construct(self):
-background = Rectangle(height=6.5, width=13)
-background.set_fill(opacity=.5)
-background.set_color(\[TEAL, RED, YELLOW\])
-self.add(background)
-t0 = Table(
-\[\["This", "is a"\],
-\["simple", "Table."\]\],
-add_background_rectangles_to_entries=True)
-t1 = Table(
-\[\["This", "is a"\],
-\["simple", "Table."\]\],
-include_background_rectangle=True)
-g = Group(t0, t1).scale(0.7).arrange(buff=0.5)
-self.add(g)
+```
 
-Copy to clipboard
 
 参数
 
@@ -230,19 +182,10 @@ add*highlighted_cell ( \_pos = (1, 1)* , _color = '#FFFF00'_ , _\*\* kwargs_ )[\
 
 ![../_images/AddHighlightedCellExample-1.png](../_images/AddHighlightedCellExample-1.png)
 
-from manim import \*
+```py
 
-class AddHighlightedCellExample(Scene):
-def construct(self):
-table = Table(
-\[\["First", "Second"\],
-\["Third","Fourth"\]\],
-row_labels=\[Text("R1"), Text("R2")\],
-col_labels=\[Text("C1"), Text("C2")\])
-table.add_highlighted_cell((2,2), color=GREEN)
-self.add(table)
+```
 
-Copy to clipboard
 
 创建（_lag_ratio=1_、 _line_animation=<class 'manim.animation.creation.Create'>_、 _label_animation=<class 'manim.animation.creation.Write'>_、 _element_animation=<class 'manim.animation.creation.Create'>_， _entry_animation=<类 'manim.animation.fading.FadeIn'>_， _\*\*kwargs_）[\[来源\]](../_modules/manim/mobject/table.html#Table.create)[#](#manim.mobject.table.Table.create "此定义的固定链接")
 
@@ -269,20 +212,10 @@ Copy to clipboard
 
 示例：创建表示例[¶](#createtableexample)
 
-from manim import \*
+```py
 
-class CreateTableExample(Scene):
-def construct(self):
-table = Table(
-\[\["First", "Second"\],
-\["Third","Fourth"\]\],
-row_labels=\[Text("R1"), Text("R2")\],
-col_labels=\[Text("C1"), Text("C2")\],
-include_outer_lines=True)
-self.play(table.create())
-self.wait()
+```
 
-Copy to clipboard
 
 get*cell ( \_pos = (1, 1)* , _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/table.html#Table.get_cell)[#](#manim.mobject.table.Table.get_cell "此定义的固定链接")
 
@@ -307,19 +240,9 @@ get*cell ( \_pos = (1, 1)* , _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobje
 
 ![../_images/GetCellExample-1.png](../_images/GetCellExample-1.png)
 
-from manim import \*
+```py
 
-class GetCellExample(Scene):
-def construct(self):
-table = Table(
-\[\["First", "Second"\],
-\["Third","Fourth"\]\],
-row_labels=\[Text("R1"), Text("R2")\],
-col_labels=\[Text("C1"), Text("C2")\])
-cell = table.get_cell((2,2), color=RED)
-self.add(table, cell)
-
-Copy to clipboard
+```
 
 获取*列*标签( )[\[来源\]](../_modules/manim/mobject/table.html#Table.get_col_labels)[#](#manim.mobject.table.Table.get_col_labels "此定义的固定链接")
 
@@ -339,21 +262,10 @@ Copy to clipboard
 
 ![../_images/GetColLabelsExample-1.png](../_images/GetColLabelsExample-1.png)
 
-from manim import \*
+```py
 
-class GetColLabelsExample(Scene):
-def construct(self):
-table = Table(
-\[\["First", "Second"\],
-\["Third","Fourth"\]\],
-row_labels=\[Text("R1"), Text("R2")\],
-col_labels=\[Text("C1"), Text("C2")\])
-lab = table.get_col_labels()
-for item in lab:
-item.set_color(random_bright_color())
-self.add(table)
+```
 
-Copy to clipboard
 
 获取列( )[\[来源\]](../_modules/manim/mobject/table.html#Table.get_columns)[#](#manim.mobject.table.Table.get_columns "此定义的固定链接")
 
@@ -373,19 +285,9 @@ Copy to clipboard
 
 ![../_images/GetColumnsExample-2.png](../_images/GetColumnsExample-2.png)
 
-from manim import \*
+```py
 
-class GetColumnsExample(Scene):
-def construct(self):
-table = Table(
-\[\["First", "Second"\],
-\["Third","Fourth"\]\],
-row_labels=\[Text("R1"), Text("R2")\],
-col_labels=\[Text("C1"), Text("C2")\])
-table.add(SurroundingRectangle(table.get_columns()\[1\]))
-self.add(table)
-
-Copy to clipboard
+```
 
 get*entries ( \_pos =无*)[\[来源\]](../_modules/manim/mobject/table.html#Table.get_entries)[#](#manim.mobject.table.Table.get_entries "此定义的固定链接")
 
@@ -409,22 +311,10 @@ get*entries ( \_pos =无*)[\[来源\]](../_modules/manim/mobject/table.html#Tabl
 
 ![../_images/GetEntriesExample-2.png](../_images/GetEntriesExample-2.png)
 
-from manim import \*
+```py
 
-class GetEntriesExample(Scene):
-def construct(self):
-table = Table(
-\[\["First", "Second"\],
-\["Third","Fourth"\]\],
-row_labels=\[Text("R1"), Text("R2")\],
-col_labels=\[Text("C1"), Text("C2")\])
-ent = table.get_entries()
-for item in ent:
-item.set_color(random_bright_color())
-table.get_entries((2,2)).rotate(PI)
-self.add(table)
+```
 
-Copy to clipboard
 
 get_entries_without*labels ( \_pos = None* )[\[来源\]](../_modules/manim/mobject/table.html#Table.get_entries_without_labels)[#](#manim.mobject.table.Table.get_entries_without_labels "此定义的固定链接")
 
@@ -448,23 +338,10 @@ get_entries_without*labels ( \_pos = None* )[\[来源\]](../_modules/manim/mobje
 
 ![../_images/GetEntriesWithoutLabelsExample-1.png](../_images/GetEntriesWithoutLabelsExample-1.png)
 
-from manim import \*
+```py
 
-class GetEntriesWithoutLabelsExample(Scene):
-def construct(self):
-table = Table(
-\[\["First", "Second"\],
-\["Third","Fourth"\]\],
-row_labels=\[Text("R1"), Text("R2")\],
-col_labels=\[Text("C1"), Text("C2")\])
-ent = table.get_entries_without_labels()
-colors = \[BLUE, GREEN, YELLOW, RED\]
-for k in range(len(colors)):
-ent\[k\].set_color(colors\[k\])
-table.get_entries_without_labels((2,2)).rotate(PI)
-self.add(table)
+```
 
-Copy to clipboard
 
 get*highlighted_cell ( \_pos = (1, 1)* , _color = '#FFFF00'_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/table.html#Table.get_highlighted_cell)[#](#manim.mobject.table.Table.get_highlighted_cell "此定义的固定链接")
 
@@ -486,20 +363,10 @@ get*highlighted_cell ( \_pos = (1, 1)* , _color = '#FFFF00'_ , _\*\* kwargs_ )[\
 
 ![../_images/GetHighlightedCellExample-1.png](../_images/GetHighlightedCellExample-1.png)
 
-from manim import \*
+```py
 
-class GetHighlightedCellExample(Scene):
-def construct(self):
-table = Table(
-\[\["First", "Second"\],
-\["Third","Fourth"\]\],
-row_labels=\[Text("R1"), Text("R2")\],
-col_labels=\[Text("C1"), Text("C2")\])
-highlight = table.get_highlighted_cell((2,2), color=GREEN)
-table.add_to_back(highlight)
-self.add(table)
+```
 
-Copy to clipboard
 
 获取水平线( )[\[来源\]](../_modules/manim/mobject/table.html#Table.get_horizontal_lines)[#](#manim.mobject.table.Table.get_horizontal_lines "此定义的固定链接")
 
@@ -519,19 +386,10 @@ Copy to clipboard
 
 ![../_images/GetHorizo​​ntalLinesExample-1.png](../_images/GetHorizontalLinesExample-1.png)
 
-from manim import \*
+```py
 
-class GetHorizontalLinesExample(Scene):
-def construct(self):
-table = Table(
-\[\["First", "Second"\],
-\["Third","Fourth"\]\],
-row_labels=\[Text("R1"), Text("R2")\],
-col_labels=\[Text("C1"), Text("C2")\])
-table.get_horizontal_lines().set_color(RED)
-self.add(table)
+```
 
-Copy to clipboard
 
 获取标签( )[\[来源\]](../_modules/manim/mobject/table.html#Table.get_labels)[#](#manim.mobject.table.Table.get_labels "此定义的固定链接")
 
@@ -547,26 +405,13 @@ Copy to clipboard
 
 例子
 
-示例：GetLabelsExample [¶](#getlabelsexample)
+示例：GetLabelsExample
 
 ![../_images/GetLabelsExample-1.png](../_images/GetLabelsExample-1.png)
 
-from manim import \*
+```py
 
-class GetLabelsExample(Scene):
-def construct(self):
-table = Table(
-\[\["First", "Second"\],
-\["Third","Fourth"\]\],
-row_labels=\[Text("R1"), Text("R2")\],
-col_labels=\[Text("C1"), Text("C2")\])
-lab = table.get_labels()
-colors = \[BLUE, GREEN, YELLOW, RED\]
-for k in range(len(colors)):
-lab\[k\].set_color(colors\[k\])
-self.add(table)
-
-Copy to clipboard
+```
 
 获取行标签( )[\[来源\]](../_modules/manim/mobject/table.html#Table.get_row_labels)[#](#manim.mobject.table.Table.get_row_labels "此定义的固定链接")
 
@@ -582,25 +427,13 @@ Copy to clipboard
 
 例子
 
-示例：GetRowLabelsExample [¶](#getrowlabelsexample)
+示例：GetRowLabelsExample 
 
 ![../_images/GetRowLabelsExample-1.png](../_images/GetRowLabelsExample-1.png)
 
-from manim import \*
+```py
 
-class GetRowLabelsExample(Scene):
-def construct(self):
-table = Table(
-\[\["First", "Second"\],
-\["Third","Fourth"\]\],
-row_labels=\[Text("R1"), Text("R2")\],
-col_labels=\[Text("C1"), Text("C2")\])
-lab = table.get_row_labels()
-for item in lab:
-item.set_color(random_bright_color())
-self.add(table)
-
-Copy to clipboard
+```
 
 获取行数( )[\[来源\]](../_modules/manim/mobject/table.html#Table.get_rows)[#](#manim.mobject.table.Table.get_rows "此定义的固定链接")
 
@@ -616,23 +449,13 @@ Copy to clipboard
 
 例子
 
-示例：GetRowsExample [¶](#getrowsexample)
+示例：GetRowsExample 
 
 ![../_images/GetRowsExample-2.png](../_images/GetRowsExample-2.png)
 
-from manim import \*
+```py
 
-class GetRowsExample(Scene):
-def construct(self):
-table = Table(
-\[\["First", "Second"\],
-\["Third","Fourth"\]\],
-row_labels=\[Text("R1"), Text("R2")\],
-col_labels=\[Text("C1"), Text("C2")\])
-table.add(SurroundingRectangle(table.get_rows()\[1\]))
-self.add(table)
-
-Copy to clipboard
+```
 
 获取垂直线( )[\[来源\]](../_modules/manim/mobject/table.html#Table.get_vertical_lines)[#](#manim.mobject.table.Table.get_vertical_lines "此定义的固定链接")
 
@@ -652,21 +475,12 @@ Copy to clipboard
 
 ![../_images/GetVerticalLinesExample-1.png](../_images/GetVerticalLinesExample-1.png)
 
-from manim import \*
+```py
 
-class GetVerticalLinesExample(Scene):
-def construct(self):
-table = Table(
-\[\["First", "Second"\],
-\["Third","Fourth"\]\],
-row_labels=\[Text("R1"), Text("R2")\],
-col_labels=\[Text("C1"), Text("C2")\])
-table.get_vertical_lines()\[0\].set_color(RED)
-self.add(table)
+```
 
-Copy to clipboard
 
-比例（_比例因子_， _\*\* kwargs_）[\[来源\]](../_modules/manim/mobject/table.html#Table.scale)[#](#manim.mobject.table.Table.scale "此定义的固定链接")
+比例（_比例因子_， _\*\* kwargs_）
 
 按一个因子缩放大小。
 
@@ -687,23 +501,14 @@ Copy to clipboard
 
 例子
 
-示例：MobjectScaleExample [¶](#mobjectscaleexample)
+示例：MobjectScaleExample 
 
-![../_images/MobjectScaleExample-2.png](../_images/MobjectScaleExample-2.png)
+![MobjectScaleExample-2.png](../_images/MobjectScaleExample-2.png)
 
-from manim import \*
+```py
 
-class MobjectScaleExample(Scene):
-def construct(self):
-f1 = Text("F")
-f2 = Text("F").scale(2)
-f3 = Text("F").scale(0.5)
-f4 = Text("F").scale(-1)
+```
 
-        vgroup = VGroup(f1, f2, f3, f4).arrange(6 * RIGHT)
-        self.add(vgroup)
-
-Copy to clipboard
 
 也可以看看
 
@@ -727,19 +532,9 @@ set*column_colors ( *\*颜色\_)[\[来源\]](../_modules/manim/mobject/table.htm
 
 ![../_images/SetColumnColorsExample-2.png](../_images/SetColumnColorsExample-2.png)
 
-from manim import \*
+```py
 
-class SetColumnColorsExample(Scene):
-def construct(self):
-table = Table(
-\[\["First", "Second"\],
-\["Third","Fourth"\]\],
-row_labels=\[Text("R1"), Text("R2")\],
-col_labels=\[Text("C1"), Text("C2")\]
-).set_column_colors(\[RED,BLUE\], GREEN)
-self.add(table)
-
-Copy to clipboard
+```
 
 set*row_colors ( *\*颜色\_)[\[来源\]](../_modules/manim/mobject/table.html#Table.set_row_colors)[#](#manim.mobject.table.Table.set_row_colors "此定义的固定链接")
 
@@ -759,16 +554,6 @@ set*row_colors ( *\*颜色\_)[\[来源\]](../_modules/manim/mobject/table.html#T
 
 ![../_images/SetRowColorsExample-2.png](../_images/SetRowColorsExample-2.png)
 
-from manim import \*
+```py
 
-class SetRowColorsExample(Scene):
-def construct(self):
-table = Table(
-\[\["First", "Second"\],
-\["Third","Fourth"\]\],
-row_labels=\[Text("R1"), Text("R2")\],
-col_labels=\[Text("C1"), Text("C2")\]
-).set_row_colors(\[RED,BLUE\], GREEN)
-self.add(table)
-
-Copy to clipboard
+```

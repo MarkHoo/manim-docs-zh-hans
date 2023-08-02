@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.text.text\_mobject.Paragraph`
 
-_类_ 段落（_\*文本_， _line_spacing = \- 1_，_对齐=无_， _\*\* kwargs_）[\[来源\]](../_modules/manim/mobject/text/text_mobject.html#Paragraph)[#](#manim.mobject.text.text_mobject.Paragraph "此定义的固定链接")
 
-基地：[`VGroup`](manim.mobject.types.vectorized_mobject.VGroup.html#manim.mobject.types.vectorized_mobject.VGroup "manim.mobject.types.vectorized_mobject.VGroup")
+```py
+
+```
 
 显示一段文本。
 
@@ -20,19 +21,19 @@ _类_ 段落（_\*文本_， _line_spacing = \- 1_，_对齐=无_， _\*\* kwarg
 
 正常使用：
 
-paragraph = Paragraph('this is a awesome', 'paragraph',
-'With \\nNewlines', '\\tWith Tabs',
-' With Spaces', 'With Alignments',
-'center', 'left', 'right')
 
-Copy to clipboard
+```py
+
+```
+
 
 删除不需要的不可见字符：
 
-self.play(Transform(remove_invisible_chars(paragraph.chars\[0:2\]),
-remove_invisible_chars(paragraph.chars\[3\]\[0:3\]))
 
-Copy to clipboard
+```py
+
+```
+
 
 方法
 

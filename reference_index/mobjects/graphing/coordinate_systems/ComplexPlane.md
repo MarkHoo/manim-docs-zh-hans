@@ -2,62 +2,49 @@
 
 合格名称：`manim.mobject.graphing.coordinate\_systems.ComplexPlane`
 
-_类_ ComplexPlane ( _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems.html#ComplexPlane)[#](#manim.mobject.graphing.coordinate_systems.ComplexPlane "此定义的固定链接")
 
-基地：[`NumberPlane`](manim.mobject.graphing.coordinate_systems.NumberPlane.html#manim.mobject.graphing.coordinate_systems.NumberPlane "manim.mobject.graphing.coordinate_systems.NumberPlane")
+```py
 
-专门[`NumberPlane`](manim.mobject.graphing.coordinate_systems.NumberPlane.html#manim.mobject.graphing.coordinate_systems.NumberPlane "manim.mobject.graphing.coordinate_systems.NumberPlane")用于复数。
+```
+
+专门[`NumberPlane`]()用于复数。
 
 例子
 
-示例：ComplexPlaneExample [¶](#complexplaneexample)
+示例：ComplexPlaneExample 
 
-![../_images/ComplexPlaneExample-1.png](../_images/ComplexPlaneExample-1.png)
+![ComplexPlaneExample-1.png](../_images/ComplexPlaneExample-1.png)
 
-from manim import \*
+```py
 
-class ComplexPlaneExample(Scene):
-def construct(self):
-plane = ComplexPlane().add_coordinates()
-self.add(plane)
-d1 = Dot(plane.n2p(2 + 1j), color=YELLOW)
-d2 = Dot(plane.n2p(-3 - 2j), color=YELLOW)
-label1 = MathTex("2+i").next_to(d1, UR, 0.1)
-label2 = MathTex("-3-2i").next_to(d2, UR, 0.1)
-self.add(
-d1,
-label1,
-d2,
-label2,
-)
+```
 
-Copy to clipboard
 
-参考：[`Dot`](manim.mobject.geometry.arc.Dot.html#manim.mobject.geometry.arc.Dot "manim.mobject.geometry.arc.Dot") [`MathTex`](manim.mobject.text.tex_mobject.MathTex.html#manim.mobject.text.tex_mobject.MathTex "manim.mobject.text.tex_mobject.MathTex")
+参考：[`Dot`]() [`MathTex`]()
 
 方法
 
-[`add_coordinates`](#manim.mobject.graphing.coordinate_systems.ComplexPlane.add_coordinates "manim.mobject.graphing.coordinate_systems.ComplexPlane.add_coordinates")
+[`add_coordinates`]()
 
 将生成的标签添加`get_coordinate_labels()`到平面上。
 
-[`get_coordinate_labels`](#manim.mobject.graphing.coordinate_systems.ComplexPlane.get_coordinate_labels "manim.mobject.graphing.coordinate_systems.ComplexPlane.get_coordinate_labels")
+[`get_coordinate_labels`]()
 
-生成[`DecimalNumber`](manim.mobject.text.numbers.DecimalNumber.html#manim.mobject.text.numbers.DecimalNumber "manim.mobject.text.numbers.DecimalNumber")平面坐标的 mobject。
+生成[`DecimalNumber`](")平面坐标的 mobject。
 
-[`n2p`](#manim.mobject.graphing.coordinate_systems.ComplexPlane.n2p "manim.mobject.graphing.coordinate_systems.ComplexPlane.n2p")
+[`n2p`]()
 
-的缩写[`number_to_point()`](#manim.mobject.graphing.coordinate_systems.ComplexPlane.number_to_point "manim.mobject.graphing.coordinate_systems.ComplexPlane.number_to_point")。
+的缩写[`number_to_point()`]()。
 
-[`number_to_point`](#manim.mobject.graphing.coordinate_systems.ComplexPlane.number_to_point "manim.mobject.graphing.coordinate_systems.ComplexPlane.number_to_point")
+[`number_to_point`]()
 
 接受浮点/复数并返回平面上的等效点。
 
-[`p2n`](#manim.mobject.graphing.coordinate_systems.ComplexPlane.p2n "manim.mobject.graphing.coordinate_systems.ComplexPlane.p2n")
+[`p2n`]()
 
-的缩写[`point_to_number()`](#manim.mobject.graphing.coordinate_systems.ComplexPlane.point_to_number "manim.mobject.graphing.coordinate_systems.ComplexPlane.point_to_number")。
+的缩写[`point_to_number()`]()。
 
-[`point_to_number`](#manim.mobject.graphing.coordinate_systems.ComplexPlane.point_to_number "manim.mobject.graphing.coordinate_systems.ComplexPlane.point_to_number")
+[`point_to_number`]()
 
 接受一个点并返回与平面上该点等效的复数。
 
@@ -93,35 +80,35 @@ mobject 的高度。
 
 mobject 的宽度。
 
-添加坐标（_\*数字_， _\*\* kwargs_）[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems.html#ComplexPlane.add_coordinates)[#](#manim.mobject.graphing.coordinate_systems.ComplexPlane.add_coordinates "此定义的固定链接")
+添加坐标（_\*数字_， _\*\* kwargs_）
 
 将生成的标签添加`get_coordinate_labels()`到平面上。
 
 参数
 
 - **numbers** ( _Iterable_ _\[_ _float_ _|_ _complex_ _\]_ ) – 浮点/复数的可迭代。浮点沿 x 轴定位，复数沿 y 轴定位。
-- **kwargs** – 要传递给 的附加参数[`get_number_mobject()`](manim.mobject.graphing.number_line.NumberLine.html#manim.mobject.graphing.number_line.NumberLine.get_number_mobject "manim.mobject.graphing.number_line.NumberLine.get_number_mobject")，即[`DecimalNumber`](manim.mobject.text.numbers.DecimalNumber.html#manim.mobject.text.numbers.DecimalNumber "manim.mobject.text.numbers.DecimalNumber")。
+- **kwargs** – 要传递给 的附加参数[`get_number_mobject()`]()，即[`DecimalNumber`]()。
 
-获取坐标标签（_\*数字_， _\*\* kwargs_）[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems.html#ComplexPlane.get_coordinate_labels)[#](#manim.mobject.graphing.coordinate_systems.ComplexPlane.get_coordinate_labels "此定义的固定链接")
+获取坐标标签（_\*数字_， _\*\* kwargs_）
 
-生成[`DecimalNumber`](manim.mobject.text.numbers.DecimalNumber.html#manim.mobject.text.numbers.DecimalNumber "manim.mobject.text.numbers.DecimalNumber")平面坐标的 mobject。
+生成[`DecimalNumber`]()平面坐标的 mobject。
 
 参数
 
 - **numbers** ( _Iterable_ _\[_ _float_ _|_ _complex_ _\]_ ) – 浮点/复数的可迭代。浮点沿 x 轴定位，复数沿 y 轴定位。
-- **kwargs** – 要传递给 的附加参数[`get_number_mobject()`](manim.mobject.graphing.number_line.NumberLine.html#manim.mobject.graphing.number_line.NumberLine.get_number_mobject "manim.mobject.graphing.number_line.NumberLine.get_number_mobject")，即[`DecimalNumber`](manim.mobject.text.numbers.DecimalNumber.html#manim.mobject.text.numbers.DecimalNumber "manim.mobject.text.numbers.DecimalNumber")。
+- **kwargs** – 要传递给 的附加参数[`get_number_mobject()`]()，即[`DecimalNumber`]()。
 
 退货
 
-[`VGroup`](manim.mobject.types.vectorized_mobject.VGroup.html#manim.mobject.types.vectorized_mobject.VGroup "manim.mobject.types.vectorized_mobject.VGroup")包含定位标签 mobjects 的 A。
+[`VGroup`]()包含定位标签 mobjects 的 A。
 
 返回类型
 
-[`VGroup`](manim.mobject.types.vectorized_mobject.VGroup.html#manim.mobject.types.vectorized_mobject.VGroup "manim.mobject.types.vectorized_mobject.VGroup")
+[`VGroup`]()
 
-n2p（_数_）[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems.html#ComplexPlane.n2p)[#](#manim.mobject.graphing.coordinate_systems.ComplexPlane.n2p "此定义的固定链接")
+n2p（_数_）
 
-的缩写[`number_to_point()`](#manim.mobject.graphing.coordinate_systems.ComplexPlane.number_to_point "manim.mobject.graphing.coordinate_systems.ComplexPlane.number_to_point")。
+的缩写[`number_to_point()`]()。
 
 参数
 
@@ -131,7 +118,7 @@ n2p（_数_）[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems
 
 np.ndarray
 
-到点数量(_数量_)[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems.html#ComplexPlane.number_to_point)[#](#manim.mobject.graphing.coordinate_systems.ComplexPlane.number_to_point "此定义的固定链接")
+到点数量(_数量_)
 
 接受浮点/复数并返回平面上的等效点。
 
@@ -147,9 +134,9 @@ np.ndarray
 
 np.ndarray
 
-p2n（_点_）[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems.html#ComplexPlane.p2n)[#](#manim.mobject.graphing.coordinate_systems.ComplexPlane.p2n "此定义的固定链接")
+p2n（_点_）
 
-的缩写[`point_to_number()`](#manim.mobject.graphing.coordinate_systems.ComplexPlane.point_to_number "manim.mobject.graphing.coordinate_systems.ComplexPlane.point_to_number")。
+的缩写[`point_to_number()`]()。
 
 参数
 
@@ -159,7 +146,7 @@ p2n（_点_）[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems
 
 复杂的
 
-点到数字（_点_）[\[来源\]](../_modules/manim/mobject/graphing/coordinate_systems.html#ComplexPlane.point_to_number)[#](#manim.mobject.graphing.coordinate_systems.ComplexPlane.point_to_number "此定义的固定链接")
+点到数字（_点_）
 
 接受一个点并返回与平面上该点等效的复数。
 

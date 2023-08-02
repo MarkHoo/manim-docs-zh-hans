@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.three\_d.three\_dimensions.Cylinder`
 
-_类_ Cylinder (_半径= 1_ ,_高度= 2_ ,_方向= array(\[0., 0., 1.\])_ , _v_range = \[0, 6.283185307179586\]_ , _show_ends = True_ ,_分辨率= (24, 24)_ , _\*\* kwargs_）[\[来源\]](../_modules/manim/mobject/three_d/three_dimensions.html#Cylinder)[#](#manim.mobject.three_d.three_dimensions.Cylinder "此定义的固定链接")
 
-基地：[`Surface`](manim.mobject.three_d.three_dimensions.Surface.html#manim.mobject.three_d.three_dimensions.Surface "manim.mobject. Three_d. Three_dimensions.Surface")
+```py
+
+```
 
 圆柱体，由其高度、半径和方向定义，
 
@@ -23,16 +24,11 @@ _类_ Cylinder (_半径= 1_ ,_高度= 2_ ,_方向= array(\[0., 0., 1.\])_ , _v_r
 
 ![../_images/ExampleCylinder-1.png](../_images/ExampleCylinder-1.png)
 
-from manim import \*
 
-class ExampleCylinder(ThreeDScene):
-def construct(self):
-axes = ThreeDAxes()
-cylinder = Cylinder(radius=2, height=3)
-self.set*camera_orientation(phi=75 * DEGREES, theta=30 \_ DEGREES)
-self.add(axes, cylinder)
+```py
 
-Copy to clipboard
+```
+
 
 方法
 

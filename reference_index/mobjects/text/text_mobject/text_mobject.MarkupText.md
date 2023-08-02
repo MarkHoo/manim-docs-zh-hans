@@ -2,59 +2,48 @@
 
 合格名称：`manim.mobject.text.text\_mobject.MarkupText`
 
-_类_ MarkupText (_文本_， _fill_opacity = 1_，_描边宽度= 0_，_颜色=无_， _font_size = 48_， _line_spacing = \- 1_，_字体= ''_，_倾斜= '正常'_，_权重= '正常'_， _justify = False_，_渐变=无_, _tab_width = 4_ ,_高度=无_，_宽度=无_， _should_center = True_， _disable_ligatures = False_， _warn_missing_font = True_， _\*\* kwargs_）[\[来源\]](../_modules/manim/mobject/text/text_mobject.html#MarkupText)[#](#manim.mobject.text.text_mobject.MarkupText "此定义的固定链接")
 
-基地：[`SVGMobject`](manim.mobject.svg.svg_mobject.SVGMobject.html#manim.mobject.svg.svg_mobject.SVGMobject "manim.mobject.svg.svg_mobject.SVGMobject")
+```py
+
+```
 
 [显示使用 Pango](https://pango.gnome.org/)渲染的（非 LaTeX）文本。
 
-文本对象的行为类似于[`VGroup`](manim.mobject.types.vectorized_mobject.VGroup.html#manim.mobject.types.vectorized_mobject.VGroup "manim.mobject.types.vectorized_mobject.VGroup")给定文本中所有字符的类似迭代。特别地，切片是可能的。
+文本对象的行为类似于[`VGroup`]()给定文本中所有字符的类似迭代。特别地，切片是可能的。
 
 **什么是 PangoMarkup？**
 
-PangoMarkup 是一种类似于 html 的小型标记语言，它可以帮助您在对文本片段进行着色或设计样式时避免使用“字符范围”。您可以将这种语言与[`MarkupText`](#manim.mobject.text.text_mobject.MarkupText "manim.mobject.text.text_mobject.MarkupText").
+PangoMarkup 是一种类似于 html 的小型标记语言，它可以帮助您在对文本片段进行着色或设计样式时避免使用“字符范围”。您可以将这种语言与[`MarkupText`]().
 
 标记字符串的一个简单示例可能是：
 
-<span foreground="blue" size="x-large">Blue text</span> is <i>cool</i>!"
 
-Copy to clipboard
+```py
 
-它可以与[`MarkupText`](#manim.mobject.text.text_mobject.MarkupText "manim.mobject.text.text_mobject.MarkupText")as 一起使用
+```
 
-示例：标记示例[¶](#markupexample)
 
-![../_images/MarkupExample-1.png](../_images/MarkupExample-1.png)
+它可以与[`MarkupText`]()as 一起使用
 
-from manim import \*
+示例：标记示例
 
-class MarkupExample(Scene):
-def construct(self):
-text = MarkupText('<span foreground="blue" size="x-large">Blue text</span> is <i>cool</i>!"')
-self.add(text)
+![MarkupExample-1.png](../_images/MarkupExample-1.png)
 
-Copy to clipboard
+```py
+
+```
+
 
 一个更详细的例子是：
 
-示例：MarkupElaborateExample [¶](#markupelaborateexample)
+示例：MarkupElaborateExample
 
-![../_images/MarkupElaborateExample-1.png](../_images/MarkupElaborateExample-1.png)
+![MarkupElaborateExample-1.png](../_images/MarkupElaborateExample-1.png)
 
-from manim import \*
+```py
 
-class MarkupElaborateExample(Scene):
-def construct(self):
-text = MarkupText(
-'<span foreground="purple">ا</span><span foreground="red">َ</span>'
-'ل<span foreground="blue">ْ</span>ع<span foreground="red">َ</span>ر'
-'<span foreground="red">َ</span>ب<span foreground="red">ِ</span>ي'
-'<span foreground="green">ّ</span><span foreground="red">َ</span>ة'
-'<span foreground="blue">ُ</span>'
-)
-self.add(text)
+```
 
-Copy to clipboard
 
 PangoMarkup 还可以包含 XML 功能，例如数字字符实体，例如`&#169;`也可以使用 for ©。
 
@@ -78,9 +67,10 @@ PangoMarkup 还可以包含 XML 功能，例如数字字符实体，例如`&#169
 
 对于`<span>`标记，颜色可以指定为十六进制三元组，如`#aabbcc`或命名为 CSS 颜色，如 `AliceBlue`. 该`<gradient>`标签由 Manim 而不是 Pango 处理，并支持十六进制三元组或 Manim 常量，例如 `RED`或`RED_A`。`RED_A`如果你想像 with 一样使用 Manim 常量`<span>`，则需要使用 Python 的 f-String 语法，如下所示：
 
-MarkupText(f'<span foreground="{RED_A}">here you go</span>')
+```py
 
-Copy to clipboard
+```
+
 
 如果您的文本包含连字，则[`MarkupText`](#manim.mobject.text.text_mobject.MarkupText "manim.mobject.text.text_mobject.MarkupText")班级在创建渐变时可能会错误地确定第一个和最后一个字母。这是因为它们`fl`是两个单独的字符，但可以设置为一个字形 \- 连字。如果您的语言不依赖于连字，请考虑设置`disable_ligatures` 为`True`。如果必须使用连字，则`gradient`标记支持可选属性`offset`，可用于补偿该错误。
 
@@ -128,197 +118,87 @@ Copy to clipboard
 
 例子
 
-示例：BasicMarkupExample [¶](#basicmarkupexample)
+示例：BasicMarkupExample
 
-![../_images/BasicMarkupExample-1.png](../_images/BasicMarkupExample-1.png)
+![BasicMarkupExample-1.png](../_images/BasicMarkupExample-1.png)
 
-from manim import \*
+```py
 
-class BasicMarkupExample(Scene):
-def construct(self):
-text1 = MarkupText("<b>foo</b> <i>bar</i> <b><i>foobar</i></b>")
-text2 = MarkupText("<s>foo</s> <u>bar</u> <big>big</big> <small>small</small>")
-text3 = MarkupText("H<sub>2</sub>O and H<sub>3</sub>O<sup>+</sup>")
-text4 = MarkupText("type <tt>help</tt> for help")
-text5 = MarkupText(
-'<span underline="double">foo</span> <span underline="error">bar</span>'
-)
-group = VGroup(text1, text2, text3, text4, text5).arrange(DOWN)
-self.add(group)
+```
 
-Copy to clipboard
 
-示例：颜色示例[¶](#colorexample)
+示例：颜色示例
 
-![../_images/ColorExample-1.png](../_images/ColorExample-1.png)
+![ColorExample-1.png](../_images/ColorExample-1.png)
 
-from manim import \*
+```py
 
-class ColorExample(Scene):
-def construct(self):
-text1 = MarkupText(
-f'all in red <span fgcolor="{YELLOW}">except this</span>', color=RED
-)
-text2 = MarkupText("nice gradient", gradient=(BLUE, GREEN))
-text3 = MarkupText(
-'nice <gradient from="RED" to="YELLOW">intermediate</gradient> gradient',
-gradient=(BLUE, GREEN),
-)
-text4 = MarkupText(
-'fl ligature <gradient from="RED" to="YELLOW">causing trouble</gradient> here'
-)
-text5 = MarkupText(
-'fl ligature <gradient from="RED" to="YELLOW" offset="1">defeated</gradient> with offset'
-)
-text6 = MarkupText(
-'fl ligature <gradient from="RED" to="YELLOW" offset="1">floating</gradient> inside'
-)
-text7 = MarkupText(
-'fl ligature <gradient from="RED" to="YELLOW" offset="1,1">floating</gradient> inside'
-)
-group = VGroup(text1, text2, text3, text4, text5, text6, text7).arrange(DOWN)
-self.add(group)
+```
 
-Copy to clipboard
+示例：下划线示例
 
-示例：下划线示例[¶](#underlineexample)
+![UnderlineExample-1.png](../_images/UnderlineExample-1.png)
 
-![../_images/UnderlineExample-1.png](../_images/UnderlineExample-1.png)
+```py
 
-from manim import \*
+```
 
-class UnderlineExample(Scene):
-def construct(self):
-text1 = MarkupText(
-'<span underline="double" underline_color="green">bla</span>'
-)
-text2 = MarkupText(
-'<span underline="single" underline_color="green">xxx</span><gradient from="#ffff00" to="RED">aabb</gradient>y'
-)
-text3 = MarkupText(
-'<span underline="single" underline_color="green">xxx</span><gradient from="#ffff00" to="RED" offset="-1">aabb</gradient>y'
-)
-text4 = MarkupText(
-'<span underline="double" underline_color="green">xxx</span><gradient from="#ffff00" to="RED">aabb</gradient>y'
-)
-text5 = MarkupText(
-'<span underline="double" underline_color="green">xxx</span><gradient from="#ffff00" to="RED" offset="-2">aabb</gradient>y'
-)
-group = VGroup(text1, text2, text3, text4, text5).arrange(DOWN)
-self.add(group)
 
-Copy to clipboard
+示例：字体示例
 
-示例：字体示例[¶](#fontexample)
+![FontExample-1.png](../_images/FontExample-1.png)
 
-![../_images/FontExample-1.png](../_images/FontExample-1.png)
+```py
 
-from manim import \*
+```
 
-class FontExample(Scene):
-def construct(self):
-text1 = MarkupText(
-'all in sans <span font_family="serif">except this</span>', font="sans"
-)
-text2 = MarkupText(
-'<span font_family="serif">mixing</span> <span font_family="sans">fonts</span> <span font_family="monospace">is ugly</span>'
-)
-text3 = MarkupText("special char > or &gt;")
-text4 = MarkupText("special char &lt; and &amp;")
-group = VGroup(text1, text2, text3, text4).arrange(DOWN)
-self.add(group)
 
-Copy to clipboard
+示例：换行示例
 
-示例：换行示例[¶](#newlineexample)
+![NewlineExample-1.png](../_images/NewlineExample-1.png)
 
-![../_images/NewlineExample-1.png](../_images/NewlineExample-1.png)
+```py
 
-from manim import \*
+```
 
-class NewlineExample(Scene):
-def construct(self):
-text = MarkupText('foooo<span foreground="red">oo\\nbaa</span>aar')
-self.add(text)
 
-Copy to clipboard
+示例：NoLigaturesExample 
 
-示例：NoLigaturesExample [¶](#noligaturesexample)
+![NoLigaturesExample-1.png](../_images/NoLigaturesExample-1.png)
 
-![../_images/NoLigaturesExample-1.png](../_images/NoLigaturesExample-1.png)
+```py
 
-from manim import \*
+```
 
-class NoLigaturesExample(Scene):
-def construct(self):
-text1 = MarkupText('fl<gradient from="RED" to="GREEN">oat</gradient>ing')
-text2 = MarkupText('fl<gradient from="RED" to="GREEN">oat</gradient>ing', disable_ligatures=True)
-group = VGroup(text1, text2).arrange(DOWN)
-self.add(group)
-
-Copy to clipboard
 
 由于[`MarkupText`](#manim.mobject.text.text_mobject.MarkupText "manim.mobject.text.text_mobject.MarkupText")使用 Pango 渲染文本，渲染非英文字符是很容易的：
 
-示例：多语言[¶](#multilanguage)
+示例：多语言
 
-![../_images/MultiLanguage-1.png](../_images/MultiLanguage-1.png)
+![MultiLanguage-1.png](../_images/MultiLanguage-1.png)
 
-from manim import \*
+```py
 
-class MultiLanguage(Scene):
-def construct(self):
-morning = MarkupText("வணக்கம்", font="sans-serif")
-japanese = MarkupText(
-'<span fgcolor="blue">日本</span>へようこそ'
-) \# works as in \`\`Text\`\`.
-mess = MarkupText("Multi-Language", weight=BOLD)
-russ = MarkupText("Здравствуйте मस नम म ", font="sans-serif")
-hin = MarkupText("नमस्ते", font="sans-serif")
-chinese = MarkupText("臂猿「黛比」帶著孩子", font="sans-serif")
-group = VGroup(morning, japanese, mess, russ, hin, chinese).arrange(DOWN)
-self.add(group)
+```
 
-Copy to clipboard
 
 您可以通过传递参数来调整文本`justify`。
 
-示例：对齐文本[¶](#justifytext)
+示例：对齐文本
 
-from manim import \*
+```py
 
-class JustifyText(Scene):
-def construct(self):
-ipsum_text = (
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-"Praesent feugiat metus sit amet iaculis pulvinar. Nulla posuere "
-"quam a ex aliquam, eleifend consectetur tellus viverra. Aliquam "
-"fermentum interdum justo, nec rutrum elit pretium ac. Nam quis "
-"leo pulvinar, dignissim est at, venenatis nisi."
-)
-justified_text = MarkupText(ipsum_text, justify=True).scale(0.4)
-not_justified_text = MarkupText(ipsum_text, justify=False).scale(0.4)
-just_title = Title("Justified")
-njust_title = Title("Not Justified")
-self.add(njust_title, not_justified_text)
-self.play(
-FadeOut(not_justified_text),
-FadeIn(justified_text),
-FadeOut(njust_title),
-FadeIn(just_title),
-)
-self.wait(1)
+```
 
-Copy to clipboard
 
 测试
 
 检查作品创作情况[`MarkupText`](#manim.mobject.text.text_mobject.MarkupText "manim.mobject.text.text_mobject.MarkupText")：
 
-> > \> MarkupText('The horse does not eat cucumber salad.')
-> > MarkupText('The horse does not eat cucumber salad.')
+```py
 
-Copy to clipboard
+```
+
 
 方法
 

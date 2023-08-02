@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.three\_d.three\_dimensions.Cube`
 
-_立方体_ 类（_边长= 2_，_填充不透明度= 0.75_，_填充颜色= '#58C4DD'_，_描边宽度= 0_， _\*\* kwargs_）[\[来源\]](../_modules/manim/mobject/three_d/three_dimensions.html#Cube)[#](#manim.mobject.three_d.three_dimensions.Cube "此定义的固定链接")
 
-基地：[`VGroup`](manim.mobject.types.vectorized_mobject.VGroup.html#manim.mobject.types.vectorized_mobject.VGroup "manim.mobject.types.vectorized_mobject.VGroup")
+```py
+
+```
 
 三维立方体。
 
@@ -21,17 +22,10 @@ _立方体_ 类（_边长= 2_，_填充不透明度= 0.75_，_填充颜色= '#58
 
 ![../_images/CubeExample-1.png](../_images/CubeExample-1.png)
 
-from manim import \*
+```py
 
-class CubeExample(ThreeDScene):
-def construct(self):
-self.set_camera_orientation(phi=75*DEGREES, theta=-45*DEGREES)
+```
 
-        axes = ThreeDAxes()
-        cube = Cube(side_length=3, fill_opacity=0.7, fill_color=BLUE)
-        self.add(cube)
-
-Copy to clipboard
 
 方法
 

@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.svg.brace.BraceBetweenPoints`
 
-_类_ BraceBetweenPoints ( _point_1_ , _point_2_ ,_方向= array(\[0., 0., 0.\])_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/svg/brace.html#BraceBetweenPoints)[#](#manim.mobject.svg.brace.BraceBetweenPoints "此定义的固定链接")
 
-基地：[`Brace`](manim.mobject.svg.brace.Brace.html#manim.mobject.svg.brace.Brace "manim.mobject.svg.brace.Brace")
+```py
+
+```
 
 与 Brace 类似，但它不使用 mobject，而是使用 2 个点来放置支架。
 
@@ -18,20 +19,12 @@ _类_ BraceBetweenPoints ( _point_1_ , _point_2_ ,_方向= array(\[0., 0., 0.\])
 
 例子
 
-示例：BraceBP 示例[¶](#bracebpexample)
+示例：BraceBP 示例
 
-from manim import \*
+```py
 
-class BraceBPExample(Scene):
-def construct(self):
-p1 = \[0,0,0\]
-p2 = \[1,2,0\]
-brace = BraceBetweenPoints(p1,p2)
-self.play(Create(NumberPlane()))
-self.play(Create(brace))
-self.wait(2)
+```
 
-Copy to clipboard
 
 方法
 

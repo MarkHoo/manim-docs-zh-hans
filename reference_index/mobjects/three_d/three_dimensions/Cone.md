@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.three\_d.three\_dimensions.Cone`
 
-_类_ Cone ( _base_radius = 1_ , _height = 1_ , _Direction = array(\[0., 0., 1.\])_ , _show_base = False_ , _v_range = \[0, 6.283185307179586\]_ , _u_min = 0_ , _checkerboard_colors = False_ , _\*\* kwargs_）[\[来源\]](../_modules/manim/mobject/three_d/three_dimensions.html#Cone)[#](#manim.mobject.three_d.three_dimensions.Cone "此定义的固定链接")
 
-基地：[`Surface`](manim.mobject.three_d.three_dimensions.Surface.html#manim.mobject.three_d.three_dimensions.Surface "manim.mobject. Three_d. Three_dimensions.Surface")
+```py
+
+```
 
 一个圆锥体。可以使用 2 个参数来定义：高度和底半径。极角 theta 可以使用 arctan(base_radius / height) 计算。球半径 r 使用毕达哥拉斯定理计算。
 
@@ -24,16 +25,11 @@ _类_ Cone ( _base_radius = 1_ , _height = 1_ , _Direction = array(\[0., 0., 1.\
 
 ![../_images/ExampleCone-1.png](../_images/ExampleCone-1.png)
 
-from manim import \*
 
-class ExampleCone(ThreeDScene):
-def construct(self):
-axes = ThreeDAxes()
-cone = Cone(direction=X_AXIS+Y_AXIS+2*Z_AXIS, resolution=8)
-self.set_camera_orientation(phi=5*PI/11, theta=PI/9)
-self.add(axes, cone)
+```py
 
-Copy to clipboard
+```
+
 
 方法
 

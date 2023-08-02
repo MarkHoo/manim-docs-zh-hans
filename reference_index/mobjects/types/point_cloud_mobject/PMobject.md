@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.types.point\_cloud\_mobject.PMobject`
 
-PMobject*类*（_笔画宽度= 4_， _\*\* kwargs_）[\[来源\]](../_modules/manim/mobject/types/point_cloud_mobject.html#PMobject)[#](#manim.mobject.types.point_cloud_mobject.PMobject "此定义的固定链接")
 
-基地：[`Mobject`](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject")
+```py
+
+```
 
 由点云组成的圆盘
 
@@ -14,27 +15,10 @@ PMobject*类*（_笔画宽度= 4_， _\*\* kwargs_）[\[来源\]](../_modules/ma
 
 ![../_images/PMobjectExample-1.png](../_images/PMobjectExample-1.png)
 
-from manim import \*
 
-class PMobjectExample(Scene):
-def construct(self):
+```py
 
-        pG = PGroup()  \# This is just a collection of PMobject's
-
-        \# As the scale factor increases, the number of points
-        \# removed increases.
-        for sf in range(1, 9 + 1):
-            p = PointCloudDot(density=20, radius=1).thin_out(sf)
-            \# PointCloudDot is a type of PMobject
-            \# and can therefore be added to a PGroup
-            pG.add(p)
-
-        \# This organizes all the shapes in a grid.
-        pG.arrange\_in\_grid()
-
-        self.add(pG)
-
-Copy to clipboard
+```
 
 方法
 

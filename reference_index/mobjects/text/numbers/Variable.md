@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.text.numbers.Variable`
 
-_类_ 变量（_var_、 _label_、 _var_type=<class 'manim.mobject.text.numbers.DecimalNumber'>_、 _num_decimal_places=2_、 _\*\*kwargs_）[\[来源\]](../_modules/manim/mobject/text/numbers.html#Variable)[#](#manim.mobject.text.numbers.Variable "此定义的固定链接")
 
-基地：[`VMobject`](manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject "manim.mobject.types.vectorized_mobject.VMobject")
+```py
+
+```
 
 一个用于显示文本的类，该文本显示“label = value”，并且值从[`ValueTracker`](manim.mobject.value_tracker.ValueTracker.html#manim.mobject.value_tracker.ValueTracker "manim.mobject.value_tracker.ValueTracker").
 
@@ -44,85 +45,25 @@ _类_ 变量（_var_、 _label_、 _var_type=<class 'manim.mobject.text.numbers.
 
 正常使用：
 
-\# DecimalNumber type
-var = 0.5
-on_screen_var = Variable(var, Text("var"), num_decimal_places=3)
-\# Integer type
-int*var = 0
-on_screen_int_var = Variable(int_var, Text("int_var"), var_type=Integer)
-\# Using math mode for the label
-on_screen_int_var = Variable(int_var, "{a}*{i}", var_type=Integer)
 
-Copy to clipboard
+```py
 
-示例：VariablesWithValueTracker [¶](#variableswithvaluetracker)
+```
 
-from manim import \*
 
-class VariablesWithValueTracker(Scene):
-def construct(self):
-var = 0.5
-on_screen_var = Variable(var, Text("var"), num_decimal_places=3)
+示例：VariablesWithValueTracker
 
-        \# You can also change the colours for the label and value
-        on\_screen\_var.label.set_color(RED)
-        on\_screen\_var.value.set_color(GREEN)
+```py
 
-        self.play(Write(on\_screen\_var))
-        \# The above line will just display the variable with
-        \# its initial value on the screen. If you also wish to
-        \# update it, you can do so by accessing the \`tracker\` attribute
-        self.wait()
-        var_tracker = on\_screen\_var.tracker
-        var = 10.5
-        self.play(var_tracker.animate.set_value(var))
-        self.wait()
+```
 
-        int_var = 0
-        on\_screen\_int_var = Variable(
-            int_var, Text("int_var"), var_type=Integer
-        ).next_to(on\_screen\_var, DOWN)
-        on\_screen\_int_var.label.set_color(RED)
-        on\_screen\_int_var.value.set_color(GREEN)
 
-        self.play(Write(on\_screen\_int_var))
-        self.wait()
-        var_tracker = on\_screen\_int_var.tracker
-        var = 10.5
-        self.play(var_tracker.animate.set_value(var))
-        self.wait()
+示例：变量示例
 
-        \# If you wish to have a somewhat more complicated label for your
-        \# variable with subscripts, superscripts, etc. the default class
-        \# for the label is MathTex
-        subscript\_label\_var = 10
-        on\_screen\_subscript_var = Variable(subscript\_label\_var, "{a}_{i}").next_to(
-            on\_screen\_int_var, DOWN
-        )
-        self.play(Write(on\_screen\_subscript_var))
-        self.wait()
+```py
 
-Copy to clipboard
+```
 
-示例：变量示例[¶](#variableexample)
-
-from manim import \*
-
-class VariableExample(Scene):
-def construct(self):
-start = 2.0
-
-        x_var = Variable(start, 'x', num\_decimal\_places=3)
-        sqr_var = Variable(start**2, 'x^2', num\_decimal\_places=3)
-        Group(x_var, sqr_var).arrange(DOWN)
-
-        sqr_var.add_updater(lambda v: v.tracker.set_value(x_var.tracker.get_value()**2))
-
-        self.add(x_var, sqr_var)
-        self.play(x_var.tracker.animate.set_value(5), run_time=2, rate_func=linear)
-        self.wait(0.1)
-
-Copy to clipboard
 
 方法
 

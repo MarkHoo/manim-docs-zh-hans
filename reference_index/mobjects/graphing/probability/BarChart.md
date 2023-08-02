@@ -2,11 +2,12 @@
 
 合格名称：`manim.mobject.graphing.probability.BarChart`
 
-_类_ BarChart (_值_, _bar_names = None_ , _y_range = None_ , _x_length = None_ , _y_length = None_ , _bar_colors = \['#003f5c', '#58508d', '#bc5090', '#ff6361', '#ffa600'\]_ , _bar_width = 0.6_ , _bar_fill_opacity = 0.7_ , _bar_lines_width = 3_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/graphing/probability.html#BarChart)[#](#manim.mobject.graphing.probability.BarChart "此定义的固定链接")
 
-基地：[`Axes`](manim.mobject.graphing.coordinate_systems.Axes.html#manim.mobject.graphing.coordinate_systems.Axes "manim.mobject.graphing.coordinate_systems.Axes")
+```py
 
-创建条形图。继承自[`Axes`](manim.mobject.graphing.coordinate_systems.Axes.html#manim.mobject.graphing.coordinate_systems.Axes "manim.mobject.graphing.coordinate_systems.Axes")，因此它共享其方法和属性。每个轴都继承自[`NumberLine`](manim.mobject.graphing.number_line.NumberLine.html#manim.mobject.graphing.number_line.NumberLine "manim.mobject.graphing.number_line.NumberLine")，因此传入`x_axis_config`/`y_axis_config` 来控制它们的属性。
+```
+
+创建条形图。继承自[`Axes`]()，因此它共享其方法和属性。每个轴都继承自[`NumberLine`]()，因此传入`x_axis_config`/`y_axis_config` 来控制它们的属性。
 
 参数
 
@@ -22,36 +23,22 @@ _类_ BarChart (_值_, _bar_names = None_ , _y_range = None_ , _x_length = None_
 
 例子
 
-示例：条形图示例[¶](#barchartexample)
+示例：条形图示例
 
-![../_images/BarChartExample-1.png](../_images/BarChartExample-1.png)
+![BarChartExample-1.png](../static/BarChartExample-1.png)
 
-from manim import \*
+```py
 
-class BarChartExample(Scene):
-def construct(self):
-chart = BarChart(
-values=\[-5, 40, -10, 20, -3\],
-bar_names=\["one", "two", "three", "four", "five"\],
-y_range=\[-20, 50, 10\],
-y_length=6,
-x_length=10,
-x_axis_config={"font_size": 36},
-)
+```
 
-        c\_bar\_lbls = chart.get\_bar\_labels(font_size=48)
-
-        self.add(chart, c\_bar\_lbls)
-
-Copy to clipboard
 
 方法
 
-[`change_bar_values`](#manim.mobject.graphing.probability.BarChart.change_bar_values "manim.mobject.graphing.probability.BarChart.change_bar_values")
+[`change_bar_values`]()
 
 更新图表条形的高度。
 
-[`get_bar_labels`](#manim.mobject.graphing.probability.BarChart.get_bar_labels "manim.mobject.graphing.probability.BarChart.get_bar_labels")
+[`get_bar_labels`]()
 
 用相应的值注释每个条。
 
@@ -87,7 +74,7 @@ mobject 的高度。
 
 mobject 的宽度。
 
-change*bar_values（*值*， \_update_colors = True*）[\[来源\]](../_modules/manim/mobject/graphing/probability.html#BarChart.change_bar_values)[#](#manim.mobject.graphing.probability.BarChart.change_bar_values "此定义的固定链接")
+change*bar_values（*值*， \_update_colors = True*）
 
 更新图表条形的高度。
 
@@ -98,29 +85,16 @@ change*bar_values（*值*， \_update_colors = True*）[\[来源\]](../_modules/
 
 例子
 
-示例：ChangeBarValuesExample [¶](#changebarvaluesexample)
+示例：ChangeBarValuesExample 
 
-![../_images/ChangeBarValuesExample-1.png](../_images/ChangeBarValuesExample-1.png)
+![ChangeBarValuesExample-1.png](../static/ChangeBarValuesExample-1.png)
 
-from manim import \*
+```py
 
-class ChangeBarValuesExample(Scene):
-def construct(self):
-values=\[-10, -8, -6, -4, -2, 0, 2, 4, 6, 8, 10\]
+```
 
-        chart = BarChart(
-            values,
-            y_range=\[-10, 10, 2\],
-            y\_axis\_config={"font_size": 24},
-        )
-        self.add(chart)
 
-        chart.change\_bar\_values(list(reversed(values)))
-        self.add(chart.get\_bar\_labels(font_size=24))
-
-Copy to clipboard
-
-get*bar_labels ( \_color=None* , _font_size=24_ , _buff=0.25_ , _label_constructor=<class 'manim.mobject.text.tex_mobject.Tex'_ \> )[\[来源\]](../_modules/manim/mobject/graphing/probability.html#BarChart.get_bar_labels)[#](#manim.mobject.graphing.probability.BarChart.get_bar_labels "此定义的固定链接")
+get*bar_labels ( \_color=None* , _font_size=24_ , _buff=0.25_ , _label_constructor=<class 'manim.mobject.text.tex_mobject.Tex'_ \> )
 
 用相应的值注释每个条。用于`self.bar_labels`在创建后访问标签。
 
@@ -129,24 +103,14 @@ get*bar_labels ( \_color=None* , _font_size=24_ , _buff=0.25_ , _label_construct
 - **color** ( _Color_ _|_ _None_ ) – 每个标签的颜色。默认情况下`None`，基于父级的条形颜色。
 - **font_size** ( _float_ ) – 每个标签的字体大小。
 - **buff** ( _float_ ) – 每个标签到其条形的距离。默认为 0.4。
-- **label_constructor** ( _type_ _\[_ [_VMobject_](manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject "manim.mobject.types.vectorized_mobject.VMobject") _\]_ ) – 默认情况下，用于构造标签的 Mobject 类[`Tex`](manim.mobject.text.tex_mobject.Tex.html#manim.mobject.text.tex_mobject.Tex "manim.mobject.text.tex_mobject.Tex")。
+- **label_constructor** ( _type_ _\[_ [_VMobject_]() _\]_ ) – 默认情况下，用于构造标签的 Mobject 类[`Tex`]()。
 
 例子
 
-示例：GetBarLabelsExample [¶](#getbarlabelsexample)
+示例：GetBarLabelsExample 
 
-![../_images/GetBarLabelsExample-1.png](../_images/GetBarLabelsExample-1.png)
+![GetBarLabelsExample-1.png](../static/GetBarLabelsExample-1.png)
 
-from manim import \*
+```py
 
-class GetBarLabelsExample(Scene):
-def construct(self):
-chart = BarChart(values=\[10, 9, 8, 7, 6, 5, 4, 3, 2, 1\], y_range=\[0, 10, 1\])
-
-        c\_bar\_lbls = chart.get\_bar\_labels(
-            color=WHITE, label_constructor=MathTex, font_size=36
-        )
-
-        self.add(chart, c\_bar\_lbls)
-
-Copy to clipboard
+```

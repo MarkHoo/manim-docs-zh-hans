@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.types.point\_cloud\_mobject.Point`
 
-_类_ Point (_位置= array(\[0., 0., 0.\])_ ,_颜色= '#000000'_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/types/point_cloud_mobject.html#Point)[#](#manim.mobject.types.point_cloud_mobject.Point "此定义的固定链接")
 
-基地：[`PMobject`](manim.mobject.types.point_cloud_mobject.PMobject.html#manim.mobject.types.point_cloud_mobject.PMobject "manim.mobject.types.point_cloud_mobject.PMobject")
+```py
+
+```
 
 例子
 
@@ -12,20 +13,10 @@ _类_ Point (_位置= array(\[0., 0., 0.\])_ ,_颜色= '#000000'_ , _\*\* kwargs
 
 ![../_images/ExamplePoint-1.png](../_images/ExamplePoint-1.png)
 
-from manim import \*
+```py
 
-class ExamplePoint(Scene):
-def construct(self):
-colorList = \[RED, GREEN, BLUE, YELLOW\]
-for i in range(200):
-point = Point(location=\[0.63 _ np.random.randint(-4, 4), 0.37 _ np.random.randint(-4, 4), 0\], color=np.random.choice(colorList))
-self.add(point)
-for i in range(200):
-point = Point(location=\[0.37 _ np.random.randint(-4, 4), 0.63 _ np.random.randint(-4, 4), 0\], color=np.random.choice(colorList))
-self.add(point)
-self.add(point)
+```
 
-Copy to clipboard
 
 方法
 

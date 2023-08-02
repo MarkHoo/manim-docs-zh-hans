@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.types.vectorized\_mobject.VGroup`
 
-VGroup*类*（_\* vmobjects_， _\*\* kwargs_）[\[来源\]](../_modules/manim/mobject/types/vectorized_mobject.html#VGroup)[#](#manim.mobject.types.vectorized_mobject.VGroup "此定义的固定链接")
 
-基地：[`VMobject`](manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject "manim.mobject.types.vectorized_mobject.VMobject")
+```py
+
+```
 
 一组矢量化的对象。
 
@@ -18,47 +19,19 @@ VGroup*类*（_\* vmobjects_， _\*\* kwargs_）[\[来源\]](../_modules/manim/m
 
 要添加`VGroup`，您可以使用 [`add()`](#manim.mobject.types.vectorized_mobject.VGroup.add "manim.mobject.types.vectorized_mobject.VGroup.add")方法，或使用+和+=运算符。`remove()`同样，您可以通过方法或 -和-=运算符减去 VGroup 的元素：
 
-> > \> from manim import Triangle, Square, VGroup
-> > \> vg = VGroup()
-> > \> triangle, square = Triangle(), Square()
-> > \> vg.add(triangle)
-> > VGroup(Triangle)
-> > \> vg + square \# a new VGroup is constructed
-> > VGroup(Triangle, Square)
-> > \> vg \# not modified
-> > VGroup(Triangle)
-> > \> vg += square; vg \# modifies vg
-> > VGroup(Triangle, Square)
-> > \> vg.remove(triangle)
-> > VGroup(Square)
-> > \> vg - square; \# a new VGroup is constructed
-> > VGroup()
-> > \> vg \# not modified
-> > VGroup(Square)
-> > \> vg -= square; vg \# modifies vg
-> > VGroup()
+```py
 
-Copy to clipboard
+```
+
 
 示例：ArcShapeIris [¶](#arcshapeiris)
 
 ![../_images/ArcShapeIris-1.png](../_images/ArcShapeIris-1.png)
 
-from manim import \*
+```py
 
-class ArcShapeIris(Scene):
-def construct(self):
-colors = \[DARK_BROWN, BLUE_E, BLUE_D, BLUE_A, TEAL_B, GREEN_B, YELLOW_E\]
-radius = \[1 + rad \* 0.1 for rad in range(len(colors))\]
+```
 
-        circles_group = VGroup()
-
-        \# zip(radius, color) makes the iterator \[(radius\[i\], color\[i\]) for i in range(radius)\]
-        circles_group.add(*\[Circle(radius=rad, stroke_width=10, color=col)
-                            for rad, col in zip(radius, colors)\])
-        self.add(circles_group)
-
-Copy to clipboard
 
 方法
 
@@ -118,33 +91,6 @@ mobject 的宽度。
 
 示例：添加到 VGroup [¶](#addtovgroup)
 
-from manim import \*
+```py
 
-class AddToVGroup(Scene):
-def construct(self):
-circle_red = Circle(color=RED)
-circle_green = Circle(color=GREEN)
-circle_blue = Circle(color=BLUE)
-circle_red.shift(LEFT)
-circle_blue.shift(RIGHT)
-gr = VGroup(circle_red, circle_green)
-gr2 = VGroup(circle_blue) \# Constructor uses add directly
-self.add(gr,gr2)
-self.wait()
-gr += gr2 \# Add group to another
-self.play(
-gr.animate.shift(DOWN),
-)
-gr -= gr2 \# Remove group
-self.play( \# Animate groups separately
-gr.animate.shift(LEFT),
-gr2.animate.shift(UP),
-)
-self.play( #Animate groups without modification
-(gr+gr2).animate.shift(RIGHT)
-)
-self.play( \# Animate group without component
-(gr-circle_red).animate.shift(RIGHT)
-)
-
-Copy to clipboard
+```

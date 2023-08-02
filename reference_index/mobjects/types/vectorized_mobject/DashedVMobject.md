@@ -2,9 +2,10 @@
 
 合格名称：`manim.mobject.types.vectorized\_mobject.DashedVMobject`
 
-_类_ DashedVMobject ( _vmobject_、 _num_dashes = 15_、 _dashed_ratio = 0.5_、 _dash_offset = 0_、 _color = '#FFFFFF'_、 _equal_lengths = True_、 _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/types/vectorized_mobject.html#DashedVMobject)[#](#manim.mobject.types.vectorized_mobject.DashedVMobject "此定义的固定链接")
 
-基地：[`VMobject`](manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject "manim.mobject.types.vectorized_mobject.VMobject")
+```py
+
+```
 
 [`VMobject`](manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject "manim.mobject.types.vectorized_mobject.VMobject")由破折号而不是直线组成。
 
@@ -22,36 +23,10 @@ _类_ DashedVMobject ( _vmobject_、 _num_dashes = 15_、 _dashed_ratio = 0.5_�
 
 ![../_images/DashedVMobjectExample-1.png](../_images/DashedVMobjectExample-1.png)
 
-from manim import \*
+```py
 
-class DashedVMobjectExample(Scene):
-def construct(self):
-r = 0.5
+```
 
-        top_row = VGroup()  \# Increasing num_dashes
-        for dashes in range(1, 12):
-            circ = DashedVMobject(Circle(radius=r, color=WHITE), num_dashes=dashes)
-            top_row.add(circ)
-
-        middle_row = VGroup()  \# Increasing dashed_ratio
-        for ratio in np.arange(1 / 11, 1, 1 / 11):
-            circ = DashedVMobject(
-                Circle(radius=r, color=WHITE), dashed_ratio=ratio
-            )
-            middle_row.add(circ)
-
-        func1 = FunctionGraph(lambda t: t**5,\[-1,1\],color=WHITE)
-        func_even = DashedVMobject(func1,num_dashes=6,equal_lengths=True)
-        func_stretched = DashedVMobject(func1, num_dashes=6, equal_lengths=False)
-        bottom_row = VGroup(func_even,func_stretched)
-
-        top_row.arrange(buff=0.3)
-        middle_row.arrange()
-        bottom_row.arrange(buff=1)
-        everything = VGroup(top_row, middle_row, bottom_row).arrange(DOWN, buff=1)
-        self.add(everything)
-
-Copy to clipboard
 
 方法
 

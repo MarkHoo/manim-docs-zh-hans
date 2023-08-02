@@ -2,9 +2,11 @@
 
 合格名称：`manim.mobject.geometry.line.TangentLine`
 
-_类_ TangentLine ( _vmob_ , _alpha_ ,_长度= 1_ , _d_alpha = 1e-06_ , _\*\* kwargs_ )[\[来源\]](../_modules/manim/mobject/geometry/line.html#TangentLine)[#](#manim.mobject.geometry.line.TangentLine "此定义的固定链接")
+```py
+class TangentLine(vmob, alpha, length=1, d_alpha=1e-06, **kwargs)
+```
 
-基地：[`Line`](manim.mobject.geometry.line.Line.html#manim.mobject.geometry.line.Line "manim.mobject.geometry.line.Line")
+Bases: `Line`
 
 构造一条[`VMobject`]()在特定点与 a 相切的线。
 
@@ -16,9 +18,9 @@ _类_ TangentLine ( _vmob_ , _alpha_ ,_长度= 1_ , _d_alpha = 1e-06_ , _\*\* kw
 - **d_alpha** ( _float_ ) –`dx`值
 - **kwargs** – 要传递给的附加参数[`Line`]()
 
-也可以看看
+> 也可以看看
 
-[`point_from_proportion()`]()
+> [`point_from_proportion()`]()
 
 例子
 
@@ -28,7 +30,14 @@ _类_ TangentLine ( _vmob_ , _alpha_ ,_长度= 1_ , _d_alpha = 1e-06_ , _\*\* kw
 
 
 ```py
+from manim import *
 
+class TangentLineExample(Scene):
+    def construct(self):
+        circle = Circle(radius=2)
+        line_1 = TangentLine(circle, alpha=0.0, length=4, color=BLUE_D) # right
+        line_2 = TangentLine(circle, alpha=0.4, length=4, color=GREEN) # top left
+        self.add(circle, line_1, line_2)
 ```
 
 
@@ -38,19 +47,15 @@ _类_ TangentLine ( _vmob_ , _alpha_ ,_长度= 1_ , _d_alpha = 1e-06_ , _\*\* kw
 
 属性
 
-
-`animate`
-用于对 的任何方法的应用程序进行动画处理`self`。
-`animation_overrides`
-`color`
-`depth`
-对象的深度。
-`fill_color`
-如果有多种颜色（对于渐变），则返回第一个颜色
-`height`
-mobject 的高度。
-`n_points_per_curve`
-`sheen_factor`
-`stroke_color`
-`width`
-mobject 的宽度。
+|||
+|-|-|
+`animate`|用于对 的任何方法的应用程序进行动画处理`self`。
+`animation_overrides`|
+`color`|
+`depth`|对象的深度。
+`fill_color`|如果有多种颜色（对于渐变），则返回第一个颜色
+`height`|mobject 的高度。
+`n_points_per_curve`|
+`sheen_factor`|
+`stroke_color`|
+`width`|mobject 的宽度。
