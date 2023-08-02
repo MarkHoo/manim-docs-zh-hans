@@ -8,6 +8,7 @@ Manim Community Edition
 
 先完成，再完善，再完美
 
+
 - [x] 所有内容初稿
 - [ ] 全部文档排版校对
 	- [x] **示例库**初次排版校对
@@ -26,6 +27,11 @@ Manim Community Edition
 - [x] 准备`v0.18.0`和`v1.0`版本发布后的文档更新
 
 Milestones：截至9月30号完成所有文档初次排版校对
+=======
+- **参考手册**初稿，当前首要任务
+- 全部文档校对，语句语义及优化
+- 文档在实践中的准确性校对及优化
+- 准备`v0.18.0`和`v1.0`版本发布后的文档更新
 
 ### 赞助
 
@@ -36,6 +42,7 @@ Milestones：截至9月30号完成所有文档初次排版校对
 
 感谢以下优秀的开发者对本项目的支持:
 
+
 |赞助者|金额|留言|
 |-|-|-|
 |梦想风暴zz|50元||
@@ -45,5 +52,18 @@ Milestones：截至9月30号完成所有文档初次排版校对
 学习交流QQ群：`731872950`
 
 #### License
+
+=======
+
+|赞助者|金额|留言|
+|-|-|-|
+|梦想风暴zz|50元||
+|战国万年|50元||
+
+
+学习交流QQ群：`731872950`
+
+#### License
+
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
