@@ -1,84 +1,86 @@
-# 颜色
+# Color
 
-用于不同颜色模型之间转换的颜色和实用函数。
+用于不同Color模型之间转换的Color和实用函数。
 
-课程
+Classes
 
-[`Colors`]()
+|||
+|-|-|
+[`Colors`]()|预定义Color的列表。
 
-预定义颜色的列表。
+Functions
 
-功能
-
-平均颜色( _\*颜色_)
+`average_color(*colors)`
 
 参数
 
-**颜色**（_颜色_）–
+**colors**（_Color_）–
 
 返回类型
 
-_颜色_
+_Color_
 
-颜色渐变（_参考颜色_，_输出 ​​ 长度_）
+`color_gradient(reference_colors, length_of_output)`
 
 参数
 
-- **Reference_colors** (_可迭代**\[**颜色\_\_\]_ ) –
-- **输出长度**( _int_ ) –
+- **Reference_colors** (_Iterable**\[**Color\_\_\]_ ) –
+- **length_of_output**( _int_ ) –
 
 返回类型
 
-列表\[颜色\]
+list\[Color\]
 
-color_to_int*rgb（*颜色\_）
-
-参数
-
-**颜色**（_颜色_）–
-
-返回类型
-
-_ndarray_
-
-color_to_int*rgba（*颜色*，\*不透明度= 1.0\_）
+`color_to_int_rgb(color)`
 
 参数
 
-- **颜色**（_颜色_）–
-- **不透明度**（_浮动_）–
+**color**（_Color_）–
 
 返回类型
 
 _ndarray_
 
-color*to_rgb（*颜色\_）
+`color_to_int_rgba(color, opacity=1.0)`
 
 参数
 
-**颜色**(_颜色\_\_|_ _str_ ) –
+- **color**（_Color_）–
+- **opacity**（_float_）–
+
+返回类型
+
+_ndarray_
+
+`color_to_rgb(color)`
+
+参数
+
+**color**(_Color\_\_|_ _str_ ) –
 
 返回类型
 
 np.ndarray
 
-color*to_rgba（*颜色*， \_alpha = 1*）
+
+`color_to_rgba(color, alpha=1)`
 
 参数
 
-- **颜色**(_颜色\_\_|_ _str_ ) –
-- **阿尔法**（_浮动_）–
+- **color**(_Color\_\_|_ _str_ ) –
+- **alpha**（_float_）–
 
 返回类型
 
 np.ndarray
 
-get*shaded_rgb（\_rgb*，_点_， _unit_normal_vect_， _light_source_）
+
+`get_shaded_rgb(rgb, point, unit_normal_vect, light_source)`
 
 参数
 
 - **rgb** ( _ndarray_ ) –
-- **点**( _ndarray_ ) –
+- **point**( _ndarray_ ) –
 - **unit_normal_vect** ( _ndarray_ ) –
 - **light_source** ( _ndarray_ ) –
 
@@ -86,80 +88,89 @@ get*shaded_rgb（\_rgb*，_点_， _unit_normal_vect_， _light_source_）
 
 _ndarray_
 
-hex*to_rgb (*十六进制代码\_)
+
+`hex_to_rgb(hex_code)`
 
 参数
 
-**十六进制代码**( _str_ ) –
+**hex_code**( _str_ ) –
 
 返回类型
 
 _ndarray_
 
-interpolate*color (*颜色 1* ,*颜色 2* ,\*阿尔法\_)
+
+`interpolate_color(color1, color2, alpha)`
 
 参数
 
-- **颜色 1**（_颜色_）–
-- **颜色 2**（_颜色_）–
-- **阿尔法**（_浮动_）–
+- **Color 1**（_Color_）–
+- **Color 2**（_Color_）–
+- **alpha**（_float_）–
 
 返回类型
 
-_颜色_
+_Color_
 
-反转颜色（_颜色_）
+
+`invert_color(color)`
 
 参数
 
-**颜色**（_颜色_）–
+**color**（_Color_）–
 
 返回类型
 
-_颜色_
+_Color_
 
-打印常量定义( )
+
+`print_constant_definitions()`
 
 用于生成以下常量值的简单函数。要运行它，请将此函数和 Colors 类粘贴到文件中并运行它们。
 
-随机明亮颜色( )
+
+`random_bright_color()`
 
 返回类型
 
-_颜色_
+_Color_
 
-随机颜色( )
+
+`random_color()`
 
 返回类型
 
-_颜色_
+_Color_
 
-rgb*to_color ( \_rgb* )
+
+`rgb_to_color(rgb)`
 
 参数
 
-**rgb** (_可迭代\_\_\[_ _float_ _\]_ ) –
+**rgb** (_Iterable\_\_\[_ _float_ _\]_ ) –
 
 返回类型
 
-_颜色_
+_Color_
 
-rgb*to_hex ( \_rgb* )
+
+`rgb_to_hex(rgb)`
 
 参数
 
-**rgb** (_可迭代\_\_\[_ _float_ _\]_ ) –
+**rgb** (_Iterable\_\_\[_ _float_ _\]_ ) –
 
 返回类型
 
-斯特
+str
 
-rgba*to_color（\_rgba*）
+
+`rgba_to_color(rgba)`
 
 参数
 
-**rgba** (_可迭代\_\_\[_ _float_ _\]_ ) –
+**rgba** (_Iterable\_\_\[_ _float_ _\]_ ) –
 
 返回类型
 
-_颜色_
+_Color_

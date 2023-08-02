@@ -24,7 +24,7 @@ True
 
 返回类型
 
-类型
+type
 
 `get_point_mobject_class()`
 
@@ -46,7 +46,7 @@ True
 
 返回类型
 
-类型
+type
 
 `get_vectorized_mobject_class()`
 
@@ -68,4 +68,4 @@ True
 
 返回类型
 
-类型
+type

@@ -57,6 +57,7 @@ class MovingAndZoomingCamera(MovingCameraScene):
 ```
 
 示例：MovingCameraOnGraph 
+
 ```py
 from manim import *
 

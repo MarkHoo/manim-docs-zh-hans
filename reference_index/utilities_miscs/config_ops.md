@@ -2,13 +2,13 @@
 
 可能对配置字典有用的实用程序。
 
-课程
+Classes
 
 [`DictAsObject`]()
 
-功能
+Functions
 
-merge_dicts_recursively ( _\*字典_)
+`merge_dicts_recursively(*dicts)`
 
 创建一个字典，其键集是所有输入字典的并集。每个键的值基于列表中具有该键的第一个字典。
 
@@ -16,4 +16,4 @@ merge_dicts_recursively ( _\*字典_)
 
 当值是字典时，会递归应用
 
-update_dict_recursively ( _current_dict_ , _\* other_ )
+`update_dict_recursively(current_dict, *others)`

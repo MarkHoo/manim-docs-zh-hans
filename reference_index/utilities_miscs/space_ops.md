@@ -2,7 +2,7 @@
 
 二维和三维向量的效用函数。
 
-功能
+Functions
 
 R3*to_complex（*点\_）
 

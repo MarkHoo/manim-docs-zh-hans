@@ -2,7 +2,7 @@
 
 调试实用程序。
 
-功能
+Functions
 
 index*labels（\_mobject*， _label_height = 0.15_， _background_lines_width = 5_， _background_lines_color = '＃000000'_， _\*\* kwargs_）
 
@@ -22,7 +22,7 @@ index*labels（\_mobject*， _label_height = 0.15_， _background_lines_width = 
 
 示例：IndexLabelsExample 
 
-![../_images/IndexLabelsExample-1.png](../_images/IndexLabelsExample-1.png)
+![../_images/IndexLabelsExample-1.png](../static/IndexLabelsExample-1.png)
 
 ```py
 

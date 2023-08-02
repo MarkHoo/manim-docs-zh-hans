@@ -1,8 +1,8 @@
-# \_配置
+# \_config
 
 设置全局配置和记录器。
 
-功能
+Functions
 
 ```py
 tempconfig(temp)

@@ -1,4 +1,4 @@
-# 实用程序
+# utils
 
 用于创建和设置配置的实用程序。
 
@@ -27,13 +27,13 @@ config_file_paths()
 
 这些文件（如果存在）旨在加载到单个 `configparser.ConfigParser`对象中，然后由 [`ManimConfig`]().
 
-退货
+返回
 
 可能包含文件的路径列表`.cfg`，按优先级升序排列。
 
 返回类型
 
-列表\[ `Path`\]
+List\[ `Path`\]
 
 
 > 也可以看看
@@ -45,7 +45,7 @@ config_file_paths()
 
 用户范围的配置文件的位置是特定于操作系统的。
 
-make*config_parser（*自定义文件=无\_）
+`make_config_parser(custom_file=None)`
 
 创建一个`ConfigParser`对象并加载任何`.cfg`文件。
 
@@ -57,7 +57,7 @@ make*config_parser（*自定义文件=无\_）
 
 **custom_file** ( _str_ _|_ _os.PathLike_ _|_ _None_ ) – 自定义配置文件的路径。如果使用，相关目录中的文件夹范围文件将被忽略（如果存在）。如果没有，则将使用文件夹范围的文件（如果存在）。
 
-退货
+返回
 
 包含在找到的 .cfg 文件中找到的配置选项的解析器。它保证至少包含在库范围文件中找到的配置选项。
 

@@ -2,7 +2,7 @@
 
 图像处理实用程序。
 
-功能
+Functions
 
 Change_to_rgba*array (*图像*, \_dtype = 'uint8'* )
 

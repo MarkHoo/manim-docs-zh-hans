@@ -6,5 +6,5 @@
 
 |||
 |-|-|
-[`mobject_update_utils`](manim.animation.updaters.mobject_update_utils.html#module-manim.animation.updaters.mobject_update_utils "manim.animation.updaters.mobject_update_utils")|用于 mobject 连续动画的实用函数。
-[`update`](manim.animation.updaters.update.html#module-manim.animation.updaters.update "manim.animation.updaters.update")|更新 mobject 的动画。
+[`mobject_update_utils`]()|用于 mobject 连续动画的实用函数。
+[`update`]()|更新 mobject 的动画。

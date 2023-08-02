@@ -21,13 +21,13 @@
 > 提示：提前升级 `pip` 到最新版本，否则会在本地安装依赖包时会报错提示因版本问题要求更新 `pip` ，命令如下：
 
 ```sh
-python -m pip install --upgrade pip -i https://pypi.douban.com/simple
+python -m pip install --upgrade pip -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 ### 安装 Manim
 
 ```sh
-pip install manim -i https://pypi.douban.com/simple
+pip install manim -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 运行以下命令，检查是否安装完成

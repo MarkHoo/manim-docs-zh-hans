@@ -2,7 +2,7 @@
 
 用于弃用类、函数和函数参数的装饰器。
 
-功能
+Functions
 
 已弃用（_func = None_、 _since = None_、 _until = None_、 _replacement = None_、 _message = ''_）
 

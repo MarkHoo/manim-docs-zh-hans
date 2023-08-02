@@ -6,7 +6,7 @@
 
 `mobject.svg.tex_mobject`
 
-功能
+Functions
 
 编译*tex ( \_tex_file* , _tex_compiler_ ,_输出格式_)
 

@@ -86,6 +86,6 @@ class DeterminantOfAMatrix(Scene):
         self.add(det)
 ```
 
-矩阵到对象（_矩阵_）
+`matrix_to_mobject(matrix)`
 
-矩阵到文本字符串（_矩阵_）
+`matrix_to_tex_string(matrix)`

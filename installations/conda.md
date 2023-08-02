@@ -7,7 +7,9 @@
 安装 conda 后，您可以创建一个新环境并`manim`通过运行在里面安装
 
 ```sh
-
+conda create -n my-manim-environment
+conda activate my-manim-environment
+conda install -c conda-forge manim
 ```
 
 由于所有依赖项（LaTeX 除外）均由 conda 处理，因此您无需担心需要安装额外的依赖项。

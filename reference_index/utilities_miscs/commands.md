@@ -1,22 +1,24 @@
 # 命令
 
-功能
+Functions
 
-捕获（_命令_， _cwd =无_， _command_input =无_）
+`capture(command, cwd=None, command_input=None)`
 
-get*dir_layout（*目录路径\_）
+
+`get_dir_layout(dirpath)`
 
 递归获取 dir 和子目录中所有文件相对于 dirpath 的路径列表。
 
 参数
 
-**dirpath**（_路径_）–
+**dirpath**（_Path_）–
 
 返回类型
 
-_生成器_\[str、无、无\]
+_Generator_\[str、None、None\]
 
-获取视频元数据（_视频路径_）
+
+`get_video_metadata(path_to_video)`
 
 参数
 
@@ -24,4 +26,4 @@ _生成器_\[str、无、无\]
 
 返回类型
 
-字典\[字符串\]
+dict[str]

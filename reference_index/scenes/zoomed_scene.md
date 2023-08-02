@@ -20,6 +20,7 @@ class UseZoomedScene(ZoomedScene):
 ```
 
 示例：更改缩放比例
+
 ```py
 from manim import *
 

@@ -2,6 +2,6 @@
 
 与声音相关的实用函数。
 
-功能
+Functions
 
-get\_full\_sound\_file\_path ( _sound\_file\_name_ )
+`get_full_sound_file_path(sound_file_name)`
