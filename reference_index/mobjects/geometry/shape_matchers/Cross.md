@@ -21,7 +21,7 @@ Bases: `VGroup`
 
 示例：ExampleCross
 
-![ExampleCross-1.png](../static/ExampleCross-1.png)
+![ExampleCross-1.png](../../static/ExampleCross-1.png)
 
 ```py
 from manim import *

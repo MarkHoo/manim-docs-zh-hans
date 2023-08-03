@@ -134,7 +134,7 @@ class ChangeGraphLayout(Scene):
 
 - **layout**( _str_ _|_ _dict_ ) –
 - **layout_scale**（_float_）-
-- **layout_config**(_dict**|**无_) –
+- **layout_config**(_dict**|**None_) –
 - **partitions**( _list_ _\[_ _list_ _\[_ _Hashable_ _\]_ _\]_ _|_ _None_ ) –
 - **root_vertex** ( _Hashable_ _|_ _None_ ) –
 
@@ -151,7 +151,7 @@ classmethod from_networkx(nxgraph, **kwargs)
 参数
 
 - **nxgraph** ( _nx.classes.graph.Graph_ _|_ _nx.classes.digraph.DiGraph_ ) –`networkx`图或有向图。
-- \***\*kwargs** – 要传递给 的构造函数的关键字[`Graph`]()。
+- **\*\*kwargs** – 要传递给 的构造函数的关键字[`Graph`]()。
 
 例子
 

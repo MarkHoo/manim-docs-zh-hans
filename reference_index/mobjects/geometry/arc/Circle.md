@@ -20,7 +20,7 @@ Bases: `Arc`
 
 示例：圆形示例
 
-![CircleExample-1.png](../static/CircleExample-1.png)
+![CircleExample-1.png](../../static/CircleExample-1.png)
 
 ```py
 from manim import *
@@ -68,7 +68,7 @@ class CircleExample(Scene):
 
 示例：CircleFromPointsExample
 
-![CircleFromPointsExample-1.png](../static/CircleFromPointsExample-1.png)
+![CircleFromPointsExample-1.png](../../static/CircleFromPointsExample-1.png)
 
 ```py
 from manim import *
@@ -110,7 +110,7 @@ class CircleFromPointsExample(Scene):
 
 示例：PointAtAngleExample
 
-![PointAtAngleExample-1.png](../static/PointAtAngleExample-1.png)
+![PointAtAngleExample-1.png](../../static/PointAtAngleExample-1.png)
 
 ```py
 from manim import *
@@ -141,7 +141,7 @@ class PointAtAngleExample(Scene):
 
 示例：圆形环绕
 
-![CircleSurround-1.png](../static/CircleSurround-1.png)
+![CircleSurround-1.png](../../static/CircleSurround-1.png)
 
 ```py
 from manim import *

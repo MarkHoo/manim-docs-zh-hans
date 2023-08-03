@@ -14,7 +14,7 @@ Bases: `Line`
 
 示例：下划线
 
-![UnderLine-1.png](../static/UnderLine-1.png)
+![UnderLine-1.png](../../static/UnderLine-1.png)
 
 
 ```py

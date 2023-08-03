@@ -7,7 +7,7 @@
 class Arc(radius=1.0, start_angle=0, angle=1.5707963267948966, num_components=9, arc_center=array([0., 0., 0.]), **kwargs)
 ```
 
-Bases: TipableVMobject
+Bases: `TipableVMobject`
 
 一个圆弧。
 
@@ -17,7 +17,7 @@ Bases: TipableVMobject
 
 示例：ArcExample 
 
-![ArcExample-1.png](../static/ArcExample-1.png)
+![ArcExample-1.png](../../static/ArcExample-1.png)
 
 ```py
 from manim import *

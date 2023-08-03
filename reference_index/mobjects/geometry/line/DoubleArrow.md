@@ -23,7 +23,7 @@ Bases: `Arrow`
 
 示例：双箭头示例
 
-![DoubleArrowExample-1.png](../static/DoubleArrowExample-1.png)
+![DoubleArrowExample-1.png](../../static/DoubleArrowExample-1.png)
 
 ```py
 from manim import *
@@ -40,7 +40,7 @@ class DoubleArrowExample(Scene):
 
 示例：DoubleArrowExample2
 
-![DoubleArrowExample2-1.png](../static/DoubleArrowExample2-1.png)
+![DoubleArrowExample2-1.png](../../static/DoubleArrowExample2-1.png)
 
 
 ```py

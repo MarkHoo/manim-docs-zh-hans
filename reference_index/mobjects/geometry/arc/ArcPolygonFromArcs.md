@@ -6,7 +6,7 @@
 class ArcPolygonFromArcs(*arcs, **kwargs)
 ```
 
-Bases: VMobject
+Bases: `VMobject`
 
 允许用弧连接点的广义多边形。
 

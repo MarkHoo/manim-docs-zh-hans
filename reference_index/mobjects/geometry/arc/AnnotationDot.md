@@ -6,7 +6,7 @@
 class AnnotationDot(radius=0.10400000000000001, stroke_width=5, stroke_color='#FFFFFF', fill_color='#58C4DD', **kwargs)
 ```
 
-Bases: Dot
+Bases: `Dot`
 
 具有较大半径和粗笔画的点来注释场景。
 
@@ -30,4 +30,4 @@ Bases: Dot
 
 参数
 
-**半径**（_浮动_）–
+**radius**（_float_）–

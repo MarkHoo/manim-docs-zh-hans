@@ -14,7 +14,7 @@ Bases: `Polygon`
 
 - **n** ( _int_ ) – 上有多少个点[`Star`]()。
 - **outer_radius** ( _float_ ) – 外部顶点所在圆的半径。
-- **inner_radius**（_浮动**|**无_）–
+- **inner_radius**（_float**|**None_）–
 
   内部顶点所在圆的半径。
 
@@ -37,7 +37,7 @@ Bases: `Polygon`
 
 示例：StarExample 
 
-![StarExample-1.gif](../static/StarExample-1.gif)
+![StarExample-1.gif](../../static/StarExample-1.gif)
 
 ```py
 from manim import *
@@ -55,7 +55,7 @@ class StarExample(Scene):
 
 示例：不同密度示例
 
-![DifferentDensitiesExample-1.png](../static/DifferentDensitiesExample-1.png)
+![DifferentDensitiesExample-1.png](../../static/DifferentDensitiesExample-1.png)
 
 ```py
 from manim import *

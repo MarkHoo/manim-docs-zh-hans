@@ -6,13 +6,13 @@
 class Sector(outer_radius=1, inner_radius=0, **kwargs)
 ```
 
-Bases: AnnularSector
+Bases: `AnnularSector`
 
 例子
 
 示例：ExampleSector
 
-![ExampleSector-1.png](../static/ExampleSector-1.png)
+![ExampleSector-1.png](../../static/ExampleSector-1.png)
 
 ```py
 from manim import *

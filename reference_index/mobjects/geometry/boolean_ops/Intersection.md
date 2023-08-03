@@ -22,7 +22,7 @@ Bases: `_BooleanOps`
 
 示例：Intersection 示例
 
-![IntersectionExample-2.png](../static/IntersectionExample-2.png)
+![IntersectionExample-2.png](../../static/IntersectionExample-2.png)
 
 ```py
 from manim import *

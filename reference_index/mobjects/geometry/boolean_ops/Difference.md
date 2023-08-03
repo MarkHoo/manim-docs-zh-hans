@@ -12,14 +12,14 @@ Bases: `_BooleanOps`
 
 参数
 
-- **subject**——第一[`VMobject`]()。
-- **clip**– 第二个[`VMobject`]()
+- **subject** — 第一个[`VMobject`]()。
+- **clip** – 第二个[`VMobject`]()
 
 例子
 
 示例：差异示例
 
-![DifferenceExample-1.png](../static/DifferenceExample-1.png)
+![DifferenceExample-1.png](../../static/DifferenceExample-1.png)
 
 ```py
 from manim import *

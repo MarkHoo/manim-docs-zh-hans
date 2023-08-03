@@ -27,7 +27,7 @@ A[`Polygram`]()具有规则间隔的顶点。
 
 示例：RegularPolygram 示例
 
-![RegularPolygramExample-1.png](../static/RegularPolygramExample-1.png)
+![RegularPolygramExample-1.png](../../static/RegularPolygramExample-1.png)
 
 
 ```py

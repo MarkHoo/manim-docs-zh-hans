@@ -19,7 +19,7 @@ Bases: `Polygram`
 
 示例：多边形示例
 
-![PolygonExample-1.png](../static/PolygonExample-1.png)
+![PolygonExample-1.png](../../static/PolygonExample-1.png)
 
 
 ```py

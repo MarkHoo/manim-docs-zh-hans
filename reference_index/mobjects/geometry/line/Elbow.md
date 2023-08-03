@@ -21,7 +21,7 @@ Bases: `VMobject`
 
 示例：Elbow 示例
 
-![ElbowExample-1.png](../static/ElbowExample-1.png)
+![ElbowExample-1.png](../../static/ElbowExample-1.png)
 
 
 ```py

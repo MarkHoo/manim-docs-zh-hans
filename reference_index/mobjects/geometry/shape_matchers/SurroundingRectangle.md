@@ -14,7 +14,7 @@ Bases: `RoundedRectangle`
 
 示例：SurroundingRectExample 
 
-![SurroundingRectExample-1.png](../static/SurroundingRectExample-1.png)
+![SurroundingRectExample-1.png](../../static/SurroundingRectExample-1.png)
 
 
 ```py

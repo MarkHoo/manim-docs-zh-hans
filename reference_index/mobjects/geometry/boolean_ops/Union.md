@@ -22,7 +22,7 @@ Bases: `_BooleanOps`
 
 示例：UnionExample 
 
-![UnionExample-1.png](../static/UnionExample-1.png)
+![UnionExample-1.png](../../static/UnionExample-1.png)
 
 ```py
 from manim import *
