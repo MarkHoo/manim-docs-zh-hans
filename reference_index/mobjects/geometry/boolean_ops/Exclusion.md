@@ -13,14 +13,14 @@ Bases: `_BooleanOps`
 
 参数
 
-- **主题**——第一[`VMobject`]()。
+- **主题**——第一个[`VMobject`]()。
 - **剪辑**– 第二个[`VMobject`]()
 
 例子
 
 示例：Intersection 示例
 
-![IntersectionExample-1.png](../static/IntersectionExample-1.png)
+![IntersectionExample-1.png](../../static/IntersectionExample-1.png)
 
 ```py
 from manim import *

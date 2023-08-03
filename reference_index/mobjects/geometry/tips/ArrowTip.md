@@ -66,7 +66,7 @@ True
 
 示例：ArrowTipsShowcase 
 
-![ArrowTipsShowcase-1.png](../static/ArrowTipsShowcase-1.png)
+![ArrowTipsShowcase-1.png](../../static/ArrowTipsShowcase-1.png)
 
 
 ```py

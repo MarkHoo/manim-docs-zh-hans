@@ -4,8 +4,10 @@
 
 
 ```py
-
+class LinearBase(scale_factor=1.0)
 ```
+
+Bases: `_ScaleBase`
 
 默认缩放类别。
 
@@ -15,15 +17,13 @@
 
 方法
 
-[`function`]()
+|||
+|-|-|
+[`function`]()|将值乘以比例因子。
+[`inverse_function`]()|函数的反函数。
 
-将值乘以比例因子。
 
-[`inverse_function`]()
-
-函数的反函数。
-
-函数（_值_）
+`function(value)`
 
 将值乘以比例因子。
 
@@ -33,9 +33,10 @@
 
 返回类型
 
-漂浮
+float
 
-反函数（_值_）
+
+`inverse_function(value)`
 
 函数的反函数。将值除以比例因子。
 
@@ -45,4 +46,4 @@
 
 返回类型
 
-漂浮
+float

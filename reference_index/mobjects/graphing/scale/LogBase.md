@@ -4,8 +4,10 @@
 
 
 ```py
-
+class LogBase(base=10, custom_labels=True)
 ```
+
+Bases: `_ScaleBase`
 
 对数图/函数的刻度。
 
@@ -14,27 +16,24 @@
 - **base** ( _float_ ) – 日志的底数，默认为 10。
 - **custom_labels** ( _bool_ ) – 用于[`Axes`]()：是否包含`LaTeX`轴标签，默认为 True。
 
+
 例子
 
+```py
 func = ParametricFunction(lambda x: x, scaling=LogBase(base=2))
-
-Copy to clipboard
+```
 
 方法
 
-[`function`]()
+|||
+|-|-|
+[`function`]()|缩放值以适合对数刻度。\`\`self.function(5)==10\*\*5\`\`
+[`get_custom_labels`]()|生成 10^2 形式的自定义整数标签
+[`inverse_function`]()|`function`的反函数。
 
-缩放值以适合对数刻度。\`\`self.function(5)==10\*\*5\`\`
 
-[`get_custom_labels`]()
 
-生成. [`Integer`]()\_`10^2`
-
-[`inverse_function`]()
-
-的逆`function`。
-
-函数（_值_）
+`function(value)`
 
 缩放值以适合对数刻度。\`\`self.function(5)==10\*\*5\`\`
 
@@ -46,8 +45,10 @@ Copy to clipboard
 
 漂浮
 
-get*custom_labels ( \_val_range* , _unit_decimal_places = 0_ , _\*\* base_config_ )
 
+```py
+get_custom_labels(val_range, unit_decimal_places=0, **base_config)
+```
 生成. [`Integer`]()\_`10^2`
 
 参数
@@ -58,16 +59,18 @@ get*custom_labels ( \_val_range* , _unit_decimal_places = 0_ , _\*\* base_config
 
 返回类型
 
-列表\[ [Mobject]() \]
+list\[ [Mobject]() \]
 
-反函数（_值_）
 
-的逆`function`。该值必须大于 0
+`inverse_function(value)`
+
+`function`的反函数
+。该值必须大于 0
 
 参数
 
-**值**（_浮点数_）–
+**value**（_float_）–
 
 返回类型
 
-漂浮
+float

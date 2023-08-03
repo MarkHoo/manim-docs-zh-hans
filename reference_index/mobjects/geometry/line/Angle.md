@@ -30,7 +30,7 @@ Bases: `VMobject`
 
 示例：RightArcAngle 示例
 
-![RightArcAngleExample-1.png](../static/RightArcAngleExample-1.png)
+![RightArcAngleExample-1.png](../../static/RightArcAngleExample-1.png)
 
 
 ```py
@@ -57,7 +57,7 @@ class RightArcAngleExample(Scene):
 
 示例：角度示例
 
-![AngleExample-1.png](../static/AngleExample-1.png)
+![AngleExample-1.png](../../static/AngleExample-1.png)
 
 
 ```py
@@ -88,7 +88,7 @@ class AngleExample(Scene):
 
 示例：填充角度
 
-![FilledAngle-1.png](../static/FilledAngle-1.png)
+![FilledAngle-1.png](../../static/FilledAngle-1.png)
 
 
 ```py
@@ -153,7 +153,7 @@ class FilledAngle(Scene):
 - **A** ( _ndarray_ ) – 第一个角腿的端点
 - **B** ( _ndarray_ ) – 角度的顶点
 - **C** ( _ndarray_ ) – 第二条角腿的端点
-- \***\*kwargs** – 更多关键字参数被传递给[`Angle`](")
+- \***\*kwargs** – 更多关键字参数被传递给[`Angle`]()
 
 返回
 
@@ -167,7 +167,7 @@ class FilledAngle(Scene):
 
 示例：AngleFromThreePoints 示例
 
-![AngleFromThreePointsExample-1.png](../static/AngleFromThreePointsExample-1.png)
+![AngleFromThreePointsExample-1.png](../../static/AngleFromThreePointsExample-1.png)
 
 
 ```py
@@ -224,7 +224,7 @@ VGroup(Line, Line)
 
 示例：获取值示例
 
-![GetValueExample-1.png](../static/GetValueExample-1.png)
+![GetValueExample-1.png](../../static/GetValueExample-1.png)
 
 ```py
 from manim import *

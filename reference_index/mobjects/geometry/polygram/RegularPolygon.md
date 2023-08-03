@@ -19,7 +19,7 @@ n 边正则[`Polygon`]().
 
 示例：正则多边形示例
 
-![RegularPolygonExample-1.png](../static/RegularPolygonExample-1.png)
+![RegularPolygonExample-1.png](../../static/RegularPolygonExample-1.png)
 
 ```py
 from manim import *

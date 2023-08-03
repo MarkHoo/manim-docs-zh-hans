@@ -4,8 +4,10 @@
 
 
 ```py
-
+class NumberLine(x_range=None, length=None, unit_size=1, include_ticks=True, tick_size=0.1, numbers_with_elongated_ticks=None, longer_tick_multiple=2, exclude_origin_tick=False, rotation=0, stroke_width=2.0, include_tip=False, tip_width=0.35, tip_height=0.35, tip_shape=None, include_numbers=False, font_size=36, label_direction=array([ 0., -1., 0.]), label_constructor=<class 'manim.mobject.text.tex_mobject.MathTex'>, scaling=<manim.mobject.graphing.scale.LinearBase object>, line_to_number_buff=0.25, decimal_number_config=None, numbers_to_exclude=None, numbers_to_include=None, **kwargs)
 ```
+
+Bases: `Line`
 
 创建带有刻度线的数轴。
 
@@ -18,14 +20,14 @@
 - **tick_size** ( _float_ ) – 每个刻度线的长度。
 - **Numbers_with_elongated_ticks** ( _Iterable_ _\[_ _float_ _\]_ _|_ _None_ ) – 具有拉长刻度的特定值的可迭代。
 - **long_tick_multiple** ( _int_ ) – 影响细长刻度比常规刻度大多少倍 (2 = 2x)。
-- **旋转**( _float_ ) – 线旋转的角度（以弧度为单位）。
+- **rotation**( _float_ ) – 线旋转的角度（以弧度为单位）。
 - **stroke_width** ( _float_ ) – 线条的粗细。
 - **include_tip** ( _bool_ ) – 是否在行尾添加提示。
 - **tip_width** ( _float_ ) – 尖端的宽度。
 - **tip_height** ( _float_ ) – 尖端的高度。
 - **tip_shape** ( _type_ _\[_ [_ArrowTip_]() _\]_ _|_ _None_ ) – 用于构造提示的 mobject 类，或者`None`（默认）用于默认箭头提示。传递的类必须继承自[`ArrowTip`]().
 - **include_numbers** ( _bool_ ) – 是否向刻度线添加数字。小数位数由步长决定，可以通过 覆盖此默认值`decimal_number_config`。
-- **缩放**( \__ScaleBase_`x_range` ) –值缩放的方式，即[`LogBase`]()对于对数数轴。默认为[`LinearBase`]().
+- **scaling**( \__ScaleBase_`x_range` ) –值缩放的方式，即[`LogBase`]()对于对数数轴。默认为[`LinearBase`]().
 - **font_size** ( _float_ ) – 标签 mobject 的大小。默认为 36。
 - **label_direction** ( _Sequence_ _\[_ _float_ _\]_ ) – 在线上添加标签 mobject 的具体位置。
 - **label_constructor** ( [_VMobject_]() ) – 确定将用于构造数轴标签的 mobject 类。
@@ -34,111 +36,104 @@
 - **Numbers_to_exclude** ( _Iterable_ _\[_ _float_ _\]_ _|_ _None_ ) – 不添加到数轴的数字的显式迭代。
 - **Numbers_to_include** ( _Iterable_ _\[_ _float_ _\]_ _|_ _None_ ) – 要添加到数轴的数字的显式迭代
 - **kwargs** – 要传递给 的附加参数[`Line`]()。
-- **except_origin_tick** (_布尔_) –
+- **except_origin_tick** (_bool_) –
 
-笔记
 
-包含负值和正值的数字范围将从 0 点生成，并且可能不包含最小/最大值处的刻度，因为刻度位置取决于步长。
+> 笔记
+
+> 包含负值和正值的数字范围将从 0 点生成，并且可能不包含最小/最大值处的刻度，因为刻度位置取决于步长。
 
 例子
 
 示例：NumberLine 示例
 
-![NumberLineExample-1.png](../_images/NumberLineExample-1.png)
+![NumberLineExample-1.png](../../static/NumberLineExample-1.png)
 
 ```py
+from manim import *
 
+class NumberLineExample(Scene):
+    def construct(self):
+        l0 = NumberLine(
+            x_range=[-10, 10, 2],
+            length=10,
+            color=BLUE,
+            include_numbers=True,
+            label_direction=UP,
+        )
+
+        l1 = NumberLine(
+            x_range=[-10, 10, 2],
+            unit_size=0.5,
+            numbers_with_elongated_ticks=[-2, 4],
+            include_numbers=True,
+            font_size=24,
+        )
+        num6 = l1.numbers[8]
+        num6.set_color(RED)
+
+        l2 = NumberLine(
+            x_range=[-2.5, 2.5 + 0.5, 0.5],
+            length=12,
+            decimal_number_config={"num_decimal_places": 2},
+            include_numbers=True,
+        )
+
+        l3 = NumberLine(
+            x_range=[-5, 5 + 1, 1],
+            length=6,
+            include_tip=True,
+            include_numbers=True,
+            rotation=10 * DEGREES,
+        )
+
+        line_group = VGroup(l0, l1, l2, l3).arrange(DOWN, buff=1)
+        self.add(line_group)
 ```
 
 方法
 
-[`add_labels`]()
+|||
+|-|-|
+[`add_labels`]()|[`NumberLine`]()使用向 中添加专门定位的标签`dict`。
+[`add_numbers`]()|添加[`DecimalNumber`]()代表其在数轴每个刻度处位置的 mobject。
+[`add_ticks`]()|在数轴上添加刻度。
+`get_labels`|
+[`get_number_mobject`]()|生成[`DecimalNumber`]()根据 生成的定位 mobject `label_constructor`。
+`get_number_mobjects`|
+[`get_tick`]()|生成一个刻度并将其沿数轴定位。
+`get_tick_marks`|
+[`get_tick_range`]()|`x_range`根据数轴的属性生成在其上绘制标签的值范围。
+`get_unit_size`|
+`get_unit_vector`|
+[`n2p`]()||[`number_to_point()`]()的缩写。
+[`number_to_point`]()|接受沿数轴的值并返回相对于场景的点。
+[`p2n`]()|[`point_to_number()`]()的缩写。
+[`point_to_number`]()|接受相对于场景的点并返回沿数轴的浮点数。
+`rotate_about_number`|
+`rotate_about_zero`|
 
-[`NumberLine`]()使用向 中添加专门定位的标签`dict`。
 
-[`add_numbers`]()
-
-添加[`DecimalNumber`]()代表其在数轴每个刻度处位置的 mobject。
-
-[`add_ticks`]()
-
-在数轴上添加刻度。
-
-`get_labels`
-
-[`get_number_mobject`]()
-
-生成[`DecimalNumber`]()根据 生成的定位 mobject `label_constructor`。
-
-`get_number_mobjects`
-
-[`get_tick`]()
-
-生成一个刻度并将其沿数轴定位。
-
-`get_tick_marks`
-
-[`get_tick_range`]()
-
-`x_range`根据数轴的属性生成在其上绘制标签的值范围。
-
-`get_unit_size`
-
-`get_unit_vector`
-
-[`n2p`]()
-
-的缩写[`number_to_point()`]()。
-
-[`number_to_point`]()
-
-接受沿数轴的值并返回相对于场景的点。
-
-[`p2n`]()
-
-的缩写[`point_to_number()`]()。
-
-[`point_to_number`]()
-
-接受相对于场景的点并返回沿数轴的浮点数。
-
-`rotate_about_number`
-
-`rotate_about_zero`
 
 属性
 
-`animate`
 
-用于对 的任何方法的应用程序进行动画处理`self`。
+`animate`|用于对 的任何方法的应用程序进行动画处理`self`。
+`animation_overrides`|
+`color`|
+`depth`|对象的深度。
+`fill_color`|如果有多种颜色（对于渐变），则返回第一个颜色
+`height`|mobject 的高度。
+`n_points_per_curve`|
+`sheen_factor`|
+`stroke_color`|
+`width`|mobject 的宽度。
 
-`animation_overrides`
 
-`color`
 
-`depth`
-
-对象的深度。
-
-`fill_color`
-
-如果有多种颜色（对于渐变），则返回第一个颜色
-
-`height`
-
-mobject 的高度。
-
-`n_points_per_curve`
-
-`sheen_factor`
-
-`stroke_color`
-
-`width`
-
-mobject 的宽度。
-
-add*labels ( \_dict_values*，_方向= None_， _buff = None_， _font_size = None_， _label_constructor = None_ )
+```py
+add_labels(dict_values, direction=None, buff=None, font_size=None, label_constructor=None)
+```
 
 [`NumberLine`]()使用向 中添加专门定位的标签`dict`。创建后可以通过 访问标签`self.labels`。
 
@@ -154,22 +149,29 @@ add*labels ( \_dict_values*，_方向= None_， _buff = None_， _font_size = No
 
 **AttributeError** – 如果标签没有属性`font_size`，`AttributeError`则会引发错误。
 
-add*numbers ( \_x_values = None* ,_排除= None_ , _font_size = None_ , _label_constructor = None_ , _\*\* kwargs_ )
+
+```py
+add_numbers(x_values=None, excluding=None, font_size=None, label_constructor=None, **kwargs)
+```
 
 添加[`DecimalNumber`]()代表其在数轴每个刻度处位置的 mobject。创建后可以通过 访问这些号码`self.numbers`。
 
 参数
 
 - **x_values** ( _Iterable_ _\[_ _float_ _\]_ _|_ _None_ ) – 用于定位和创建标签的值的可迭代。默认为由产生的输出[`get_tick_range()`]()
-- **排除**( _Iterable_ _\[_ _float_ _\]_ _|_ _None_ ) – 要排除的值的列表`x_values`。
+- **excluding**( _Iterable_ _\[_ _float_ _\]_ _|_ _None_ ) – 要排除的值的列表`x_values`。
 - **font_size** ( _float_ _|_ _None_ ) – 标签的字体大小。默认`font_size`为数轴的属性。
 - **label_constructor** ( [_VMobject_]() _|_ _None_ ) –[`VMobject`]()将用于构造标签的类。如果未指定，则默认`label_constructor`为数轴的属性。
 
-添加标记( )
+
+`add_ticks()`
 
 在数轴上添加刻度。创建后可以通过 访问蜱虫`self.ticks`。
 
-get*number_mobject ( \_x* ,_方向= None_ , _buff = None_ , _font_size = None_ , _label_constructor = None_ , _\*\* number_config_ )
+
+```py
+get_number_mobject(x, direction=None, buff=None, font_size=None, label_constructor=None, **number_config)
+```
 
 生成[`DecimalNumber`]()根据 生成的定位 mobject `label_constructor`。
 
@@ -181,7 +183,7 @@ get*number_mobject ( \_x* ,_方向= None_ , _buff = None_ , _font_size = None_ ,
 - **font_size** ( _float_ _|_ _None_ ) – 标签 mobject 的字体大小。
 - **label_constructor** ( [_VMobject_]() _|_ _None_ ) –[`VMobject`]()将用于构造标签的类。如果未指定，则默认`label_constructor`为数轴的属性。
 
-退货
+返回
 
 定位的对象。
 
@@ -189,7 +191,8 @@ get*number_mobject ( \_x* ,_方向= None_ , _buff = None_ , _font_size = None_ ,
 
 [`DecimalNumber`]()
 
-get*tick（\_x*，_大小=无_）
+
+`get_tick(x, size=None)`
 
 生成一个刻度并将其沿数轴定位。
 
@@ -198,7 +201,7 @@ get*tick（\_x*，_大小=无_）
 - **x** ( _float_ ) – 刻度线的位置。
 - **size** ( _float_ _|_ _None_ ) – 刻度缩放的因子。
 
-退货
+返回
 
 定位的刻度线。
 
@@ -206,11 +209,12 @@ get*tick（\_x*，_大小=无_）
 
 [`Line`](")
 
-获取刻度范围( )
+
+`get_tick_range()`
 
 `x_range`根据数轴的属性生成在其上绘制标签的值范围 。
 
-退货
+返回
 
 代表数轴上的值的 numpy 浮点数组。
 
@@ -218,19 +222,21 @@ get*tick（\_x*，_大小=无_）
 
 np.ndarray
 
-n2p（_数_）
+
+`n2p(number)`
 
 的缩写[`number_to_point()`]()。
 
 参数
 
-**数字**( _float_ _|_ _np.ndarray_ ) –
+**number**( _float_ _|_ _np.ndarray_ ) –
 
 返回类型
 
 np.ndarray
 
-到点数量(_数量_)
+
+`number_to_point(number)`
 
 接受沿数轴的值并返回相对于场景的点。
 
@@ -238,7 +244,7 @@ np.ndarray
 
 **number** ( _float_ _|_ _np.ndarray_ ) – 要转换为坐标的值。或者值列表。
 
-退货
+返回
 
 相对于场景坐标系的点。或者点列表。
 
@@ -249,39 +255,57 @@ np.ndarray
 例子
 
 ```py
-
+from manim import NumberLine
+number_line = NumberLine()
+number_line.number_to_point(0)
+array([0., 0., 0.])
+number_line.number_to_point(1)
+array([1., 0., 0.])
+number_line.number_to_point([1,2,3])
+array([[1., 0., 0.],
+       [2., 0., 0.],
+       [3., 0., 0.]])
 ```
 
-p2n（_点_）
 
-的缩写[`point_to_number()`]()。
+`p2n(point)`
+
+[`point_to_number()`]()的缩写。
 
 参数
 
-**点**(_序列\_\_\[_ _float_ _\]_ ) –
+**point**(_Sequence[float]_) –
 
 返回类型
 
-漂浮
+float
 
-点到数字（_点_）
+
+`point_to_number(point)`
 
 接受相对于场景的点并返回沿数轴的浮点数。
 
 参数
 
-**point** ( _Sequence_ _\[_ _float_ _\]_ ) – 由 组成的值序列。`(x_coord, y_coord, z_coord)`
+**point** (_Sequence[float]_) – 由 组成的值序列。`(x_coord, y_coord, z_coord)`
 
-退货
+返回
 
 表示沿数轴的值的浮点数。
 
 返回类型
 
-漂浮
+float
 
 例子
 
 ```py
-
+from manim import NumberLine
+number_line = NumberLine()
+number_line.point_to_number((0,0,0))
+0.0
+number_line.point_to_number((1,0,0))
+1.0
+number_line.point_to_number([[0.5,0,0],[1,0,0],[1.5,0,0]])
+array([0.5, 1. , 1.5])
 ```

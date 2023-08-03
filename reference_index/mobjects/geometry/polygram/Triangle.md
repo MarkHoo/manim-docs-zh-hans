@@ -18,7 +18,7 @@ Bases: `RegularPolygon`
 
 示例：三角形示例
 
-![TriangleExample-1.png](../static/TriangleExample-1.png)
+![TriangleExample-1.png](../../static/TriangleExample-1.png)
 
 
 ```py

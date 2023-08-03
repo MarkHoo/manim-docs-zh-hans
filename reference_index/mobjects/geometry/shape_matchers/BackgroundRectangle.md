@@ -14,7 +14,7 @@ Bases: `SurroundingRectangle`
 
 示例：示例背景矩形
 
-![ExampleBackgroundRectangle-1.png](../static/ExampleBackgroundRectangle-1.png)
+![ExampleBackgroundRectangle-1.png](../../static/ExampleBackgroundRectangle-1.png)
 
 
 ```py

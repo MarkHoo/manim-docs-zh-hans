@@ -6,7 +6,7 @@
 class Ellipse(width=2, height=1, **kwargs)
 ```
 
-Bases: Circle
+Bases: `Circle`
 
 圆形；椭圆形、圆形。
 
@@ -20,7 +20,7 @@ Bases: Circle
 
 示例：椭圆示例
 
-![EllipseExample-1.png](../static/EllipseExample-1.png)
+![EllipseExample-1.png](../../static/EllipseExample-1.png)
 
 ```py
 from manim import *

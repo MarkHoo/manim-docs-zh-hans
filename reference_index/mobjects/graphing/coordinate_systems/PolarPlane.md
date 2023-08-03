@@ -3,8 +3,10 @@
 合格名称：`manim.mobject.graphing.coordinate\_systems.PolarPlane`
 
 ```py
-
+class PolarPlane(radius_max=4.0, size=None, radius_step=1, azimuth_step=None, azimuth_units='PI radians', azimuth_compact_fraction=True, azimuth_offset=0, azimuth_direction='CCW', azimuth_label_buff=0.1, azimuth_label_font_size=24, radius_config=None, background_line_style=None, faded_line_style=None, faded_line_ratio=1, make_smooth_after_applying_functions=True, **kwargs)
 ```
+
+Bases: `Axes`
 
 创建带有背景线的极平面。
 
@@ -36,7 +38,7 @@
 
 - **azimuth_compact_fraction** ( _bool_ ) – 如果`azimuth_units`选项有小数标签，则选择是否以紧凑形式组合常量 xuy 相对于 xyu， 在哪里 u 是常数。
 - **azimuth_offset** ( _float_ ) – 方位角的角度偏移，以弧度表示。
-- **方位角方向**( _str_ ) –
+- **azimuth_direction**( _str_ ) –
 
   方位角的方向。
 
@@ -55,68 +57,54 @@
 
 示例：PolarPlane 示例
 
-![PolarPlaneExample-1.png](../_images/PolarPlaneExample-1.png)
+![PolarPlaneExample-1.png](../../static/PolarPlaneExample-1.png)
 
 ```py
+from manim import *
 
+class PolarPlaneExample(Scene):
+    def construct(self):
+        polarplane_pi = PolarPlane(
+            azimuth_units="PI radians",
+            size=6,
+            azimuth_label_font_size=33.6,
+            radius_config={"font_size": 33.6},
+        ).add_coordinates()
+        self.add(polarplane_pi)
 ```
-
 
 参考：[`PolarPlane`]()
 
+
 方法
 
-[`add_coordinates`]()
+|||
+|-|-|
+[`add_coordinates`]()|添加坐标。
+[`get_axes`]()|获取轴。
+[`get_coordinate_labels`]()|获取坐标的标签
+`get_radian_label`|
+`get_vector`|
+`prepare_for_nonlinear_transform`|
 
-添加坐标。
-
-[`get_axes`]()
-
-获取轴。
-
-[`get_coordinate_labels`]()
-
-获取坐标的标签
-
-`get_radian_label`
-
-`get_vector`
-
-`prepare_for_nonlinear_transform`
 
 属性
 
-`animate`
+|||
+|-|-|
+`animate`|用于对 的任何方法的应用程序进行动画处理`self`。
+`animation_overrides`|
+`color`|
+`depth`|对象的深度。
+`fill_color`|如果有多种颜色（对于渐变），则返回第一个颜色
+`height`|mobject 的高度。
+`n_points_per_curve`|
+`sheen_factor`|
+`stroke_color`|
+`width`|mobject 的宽度。
 
-用于对 的任何方法的应用程序进行动画处理`self`。
 
-`animation_overrides`
-
-`color`
-
-`depth`
-
-对象的深度。
-
-`fill_color`
-
-如果有多种颜色（对于渐变），则返回第一个颜色
-
-`height`
-
-mobject 的高度。
-
-`n_points_per_curve`
-
-`sheen_factor`
-
-`stroke_color`
-
-`width`
-
-mobject 的宽度。
-
-添加坐标（_r_values = None_， _a_values = None_）
+`add_coordinates(r_values=None, a_values=None)`
 
 添加坐标。
 
@@ -125,11 +113,12 @@ mobject 的宽度。
 - **r_values** ( _Iterable_ _\[_ _float_ _\]_ _|_ _None_ ) – 沿半径的可迭代值，默认为 None。
 - **a_values** ( _Iterable_ _\[_ _float_ _\]_ _|_ _None_ ) – 沿方位角的可迭代值，默认为 None。
 
-获取轴( )
+
+`get_axes()`
 
 获取轴。
 
-退货
+返回
 
 一对轴。
 
@@ -137,7 +126,8 @@ mobject 的宽度。
 
 [`VGroup`]()
 
-get*coordinate_labels ( \_r_values = None* , _a_values = None_ , _\*\* kwargs_ )
+
+`get_coordinate_labels(r_values=None, a_values=None, **kwargs)`
 
 获取坐标的标签
 
@@ -146,10 +136,10 @@ get*coordinate_labels ( \_r_values = None* , _a_values = None_ , _\*\* kwargs_ )
 - **r_values** ( _Iterable_ _\[_ _float_ _\]_ _|_ _None_ ) – 沿半径的可迭代值，默认为 None。
 - **a_values** ( _Iterable_ _\[_ _float_ _\]_ _|_ _None_ ) – 沿方位角的可迭代值，默认为 None。
 
-退货
+返回
 
 半径和方位角值的标签。
 
 返回类型
 
-[虚拟词典]()
+[VDict]()

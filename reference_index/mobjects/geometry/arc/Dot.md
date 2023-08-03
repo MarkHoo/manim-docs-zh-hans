@@ -23,7 +23,7 @@ Bases: `Circle`
 
 示例：点示例
 
-![DotExample-1.png](../static/DotExample-1.png)
+![DotExample-1.png](../../static/DotExample-1.png)
 
 ```py
 from manim import *

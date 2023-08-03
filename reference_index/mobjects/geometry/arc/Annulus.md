@@ -20,7 +20,7 @@ Bases: Circle
 
 示例： Annulus 示例
 
-![AnnulusExample-1.png](../static/AnnulusExample-1.png)
+![AnnulusExample-1.png](../../static/AnnulusExample-1.png)
 
 ```py
 from manim import *

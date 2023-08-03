@@ -6,7 +6,7 @@
 class AnnularSector(inner_radius=1, outer_radius=2, angle=1.5707963267948966, start_angle=0, fill_opacity=1, stroke_width=0, color='#FFFFFF', **kwargs)
 ```
 
-Bases: Arc
+Bases: `Arc`
 
 参数
 
@@ -22,7 +22,7 @@ Bases: Arc
 
 示例：环形扇区示例
 
-![AnnularSectorExample-1.png](../static/AnnularSectorExample-1.png)
+![AnnularSectorExample-1.png](../../static/AnnularSectorExample-1.png)
 
 ```py
 from manim import *

@@ -4,8 +4,10 @@
 
 
 ```py
-
+class Polyhedron(vertex_coords, faces_list, faces_config={}, graph_config={})
 ```
+
+Bases: `VGroup`
 
 一个抽象的多面体类。
 
@@ -18,17 +20,38 @@
 - **faces_config** ( _dict_ _\[_ _str_ _,_ _str_ _|_ _int_ _|_ _float_ _|_ _bool_ _\]_ ) – 表示多面体面的多边形的配置。
 - **graph_config** ( _dict_ _\[_ _str_ _,_ _str_ _|_ _int_ _|_ _float_ _|_ _bool_ _\]_ ) – 包含多面体的顶点和边的图的配置。
 
+
 例子
 
 为了了解如何创建自定义多面体，让我们使用一个相当简单的例子 \- 方形金字塔。
 
-示例：SquarePyramidScene [¶](#squarepyramidscene)
+示例：SquarePyramidScene 
 
-![../_images/SquarePyramidScene-1.png](../_images/SquarePyramidScene-1.png)
+![SquarePyramidScene-1.png](../../static/SquarePyramidScene-1.png)
 
 
 ```py
+from manim import *
 
+class SquarePyramidScene(ThreeDScene):
+    def construct(self):
+        self.set_camera_orientation(phi=75 * DEGREES, theta=30 * DEGREES)
+        vertex_coords = [
+            [1, 1, 0],
+            [1, -1, 0],
+            [-1, -1, 0],
+            [-1, 1, 0],
+            [0, 0, 2]
+        ]
+        faces_list = [
+            [0, 1, 4],
+            [1, 2, 4],
+            [2, 3, 4],
+            [3, 0, 4],
+            [0, 1, 2, 3]
+        ]
+        pyramid = Polyhedron(vertex_coords, faces_list)
+        self.add(pyramid)
 ```
 
 
@@ -38,91 +61,81 @@
 
 实例化后，多面体的图形和面也可以直接访问和修改。它们分别存储在 graph 和 faces 属性中。
 
-示例：PolyhedronSubMobjects [¶](#polyhedronsubmobjects)
+示例：PolyhedronSubMobjects 
 
-![../_images/PolyhedronSubMobjects-1.png](../_images/PolyhedronSubMobjects-1.png)
+![PolyhedronSubMobjects-1.png](../../static/PolyhedronSubMobjects-1.png)
 
 ```py
+from manim import *
 
+class PolyhedronSubMobjects(ThreeDScene):
+    def construct(self):
+        self.set_camera_orientation(phi=75 * DEGREES, theta=30 * DEGREES)
+        octahedron = Octahedron(edge_length = 3)
+        octahedron.graph[0].set_color(RED)
+        octahedron.faces[2].set_color(YELLOW)
+        self.add(octahedron)
 ```
 
 
 方法
 
-[`create_faces`](#manim.mobject.three_d.polyhedra.Polyhedron.create_faces "manim.mobject.two_d.polyhedra.Polyhedron.create_faces")
+|||
+|-|-|
+[`create_faces`]()|从面坐标列表创建面 VGroup。
+[`extract_face_coords`]()|提取图中顶点的坐标。
+[`get_edges`]()|创建循环成对元组列表。
+`update_faces`|
 
-从面坐标列表创建面 VGroup。
-
-[`extract_face_coords`](#manim.mobject.three_d.polyhedra.Polyhedron.extract_face_coords "manim.mobject.two_d.polyhedra.Polyhedron.extract_face_coords")
-
-提取图中顶点的坐标。
-
-[`get_edges`](#manim.mobject.three_d.polyhedra.Polyhedron.get_edges "manim.mobject.two_d.polyhedra.Polyhedron.get_edges")
-
-创建循环成对元组列表。
-
-`update_faces`
 
 属性
 
-`animate`
+|||
+|-|-|
+`animate`|用于对 的任何方法的应用程序进行动画处理`self`。
+`animation_overrides`|
+`color`|
+`depth`|对象的深度。
+`fill_color`|如果有多种颜色（对于渐变），则返回第一个颜色
+`height`|mobject 的高度。
+`n_points_per_curve`|
+`sheen_factor`|
+`stroke_color`|
+`width`|mobject 的宽度。
 
-用于对 的任何方法的应用程序进行动画处理`self`。
 
-`animation_overrides`
 
-`color`
-
-`depth`
-
-对象的深度。
-
-`fill_color`
-
-如果有多种颜色（对于渐变），则返回第一个颜色
-
-`height`
-
-mobject 的高度。
-
-`n_points_per_curve`
-
-`sheen_factor`
-
-`stroke_color`
-
-`width`
-
-mobject 的宽度。
-
-创建面（_面坐标_）[\[来源\]](../_modules/manim/mobject/three_d/polyhedra.html#Polyhedron.create_faces)[#](#manim.mobject.three_d.polyhedra.Polyhedron.create_faces "此定义的固定链接")
+`create_faces(face_coords)`
 
 从面坐标列表创建面 VGroup。
 
 参数
 
-**face_coords** (_列表**\[**列表**\[**列表\_\_|_ _np.ndarray_ _\]_ _\]_ ) –
+**face_coords** (_list\[list\[list | np.ndarray\]\]_) –
 
 返回类型
 
-[V 组](manim.mobject.types.vectorized_mobject.VGroup.html#manim.mobject.types.vectorized_mobject.VGroup "manim.mobject.types.vectorized_mobject.VGroup")
+[VGroup]()
 
-提取人脸坐标( )[\[来源\]](../_modules/manim/mobject/three_d/polyhedra.html#Polyhedron.extract_face_coords)[#](#manim.mobject.three_d.polyhedra.Polyhedron.extract_face_coords "此定义的固定链接")
+
+`extract_face_coords()`
 
 提取图中顶点的坐标。用于更新面孔。
 
 返回类型
 
-列表\[列表\[np.ndarray\]\]
+list\[list\[np.ndarray\]\]
 
-获取边（_faces_list_）[\[来源\]](../_modules/manim/mobject/three_d/polyhedra.html#Polyhedron.get_edges)[#](#manim.mobject.three_d.polyhedra.Polyhedron.get_edges "此定义的固定链接")
+
+
+`get_edges(faces_list)`
 
 创建循环成对元组列表。
 
 参数
 
-**faces_list** (_列表**\[**列表\_\_\[_ _int_ _\]_ _\]_ ) –
+**faces_list** (_list\[list\[int]\]\]_) –
 
 返回类型
 
-列表\[元组\[int, int\]\]
+list\[tuple\[int, int\]\]

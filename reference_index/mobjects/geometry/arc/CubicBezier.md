@@ -12,7 +12,7 @@ Bases: `VMobject`
 
 示例：BezierSpline示例
 
-![BezierSplineExample-1.png](../static/BezierSplineExample-1.png)
+![BezierSplineExample-1.png](../../static/BezierSplineExample-1.png)
 
 ```py
 from manim import *

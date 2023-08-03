@@ -15,13 +15,13 @@ Bases: `Angle`
 - **line1** ( [_Line_]() ) – 第一行。
 - **line2** ( [_Line_]() ) – 第二行。
 - **length** ( _float_ _|_ _None_ ) – 手臂的长度。
-- \***\*kwargs** – 传递给 的构造函数的更多关键字参数[`Angle`]()。
+- **\*\*kwargs** – 传递给 的构造函数的更多关键字参数[`Angle`]()。
 
 例子
 
 示例：RightAngle 示例
 
-![RightAngleExample-1.png](../static/RightAngleExample-1.png)
+![RightAngleExample-1.png](../../static/RightAngleExample-1.png)
 
 
 ```py

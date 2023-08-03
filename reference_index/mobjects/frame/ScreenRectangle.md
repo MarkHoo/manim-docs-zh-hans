@@ -29,7 +29,7 @@ Bases: `Rectangle`
 `width`|mobject 的宽度。
 
 
-_属性_ 纵横比
+`property aspect_ratio`
 
 纵横比。
 

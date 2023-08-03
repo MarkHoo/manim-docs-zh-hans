@@ -19,7 +19,7 @@ Bases: `Rectangle`
 
 示例：Square 示例
 
-![SquareExample-1.png](../static/SquareExample-1.png)
+![SquareExample-1.png](../../static/SquareExample-1.png)
 
 
 ```py
