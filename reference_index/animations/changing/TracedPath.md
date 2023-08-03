@@ -5,7 +5,7 @@
 ```py
 class TracedPath(traced_point_func, stroke_width=2, stroke_color='#FFFFFF', dissipating_time=None, **kwargs)
 ```
-Bases: VMobject
+Bases: `VMobject`
 
 跟踪函数调用返回的点的路径。
 
@@ -18,7 +18,7 @@ Bases: VMobject
 
 例子
 
-示例：TracedPathExample [¶](#tracedpathexample)
+示例：TracedPathExample
 
 ```py
 from manim import *
@@ -34,7 +34,7 @@ class TracedPathExample(Scene):
         self.play(rolling_circle.animate.shift(8*RIGHT), run_time=4, rate_func=linear)
 ```
 
-示例：DissipatingPathExample [¶](#dissipatingpathexample)
+示例：DissipatingPathExample 
 
 ```py
 from manim import *

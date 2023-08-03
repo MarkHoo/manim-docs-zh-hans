@@ -8,7 +8,7 @@ class AnimatedBoundary(vmobject, colors=['#29ABCA', '#9CDCEB', '#236B8E', '#7363
 
 基地：[`VGroup`]()
 
-具有动画颜色变化的边界[`VMobject`](manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject "manim.mobject.types.vectorized_mobject.VMobject")。
+具有动画颜色变化的边界[`VMobject`]()。
 
 例子
 

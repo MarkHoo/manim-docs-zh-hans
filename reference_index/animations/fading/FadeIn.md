@@ -1,4 +1,4 @@
-# 淡入[#](#fadein "此标题的固定链接")
+# 淡入
 
 合格名称：`manim.animation.fading.FadeIn`
 
@@ -15,7 +15,8 @@ Bases: `_Fade`
 - **mobjects** – 要淡入的 mobjects。
 - **shift** – 对象在淡入时移动的向量。
 - **target_position** – 淡入时 mobject 开始的位置。如果指定另一个 mobject 作为目标位置，则使用其中心。
-- **缩放**– 淡入时对象在重新缩放至原始大小之前最初缩放的系数。
+- **scale**– 淡入时对象在重新缩放至原始大小之前最初缩放的系数。
+
 
 例子
 

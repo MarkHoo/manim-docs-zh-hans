@@ -8,7 +8,7 @@
 class Circumscribe(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: Succession
+Bases: `Succession`
 
 在对象周围画一条临时线。
 

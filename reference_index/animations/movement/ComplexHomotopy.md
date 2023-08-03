@@ -6,7 +6,7 @@
 class ComplexHomotopy(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: Homotopy
+Bases: `Homotopy`
 
 复同伦函数 Cx\[0, 1\] 到 C
 

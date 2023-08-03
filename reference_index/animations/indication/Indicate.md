@@ -6,7 +6,7 @@
 class Indicate(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: Transform
+Bases: `Transform`
 
 
 通过暂时调整 Mobject 的大小和重新着色来指示它。
@@ -18,6 +18,7 @@ Bases: Transform
 - **color** – 对象暂时采用的颜色。
 - **rate_func** – 定义每个时间点的动画进度的函数。
 - **kwargs** – 要传递给[`Succession`]()构造函数的附加参数
+
 
 例子
 

@@ -6,7 +6,7 @@
 class TransformMatchingAbstractBase(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: AnimationGroup
+Bases: `AnimationGroup`
 
 用于跟踪匹配部分的转换的抽象基类。
 
@@ -23,9 +23,10 @@ Bases: AnimationGroup
 - **key_map** – 可选。将属于某些起始 mobject 的子对象的键（即方法的返回值`get_mobject_key`）映射到属于目标 mobject 的子对象的某些键的字典，尽管键不匹配，但仍应进行转换。
 - **kwargs** – 所有其他关键字参数都传递给子对象转换。
 
-笔记
+> 笔记
 
-如果 和 均未`transform_mismatches`设置`fade_transform_mismatches` 为`True`，则起始对象中不匹配键的子对象将从目标对象中不匹配的子对象的方向淡出，目标对象中不匹配的子对象将从起始对象中不匹配的子对象的方向淡入对象。
+> 如果 和 均未`transform_mismatches`设置`fade_transform_mismatches` 为`True`，则起始对象中不匹配键的子对象将从目标对象中不匹配的子对象的方向淡出，目标对象中不匹配的子对象将从起始对象中不匹配的子对象的方向淡入对象。
+
 
 方法
 
@@ -37,7 +38,8 @@ Bases: AnimationGroup
 `get_shape_map`|
 
 
-clean_up_from*scene（*场景\_）
+
+`clean_up_from_scene(scene)`
 
 [`Scene`]()完成动画后清理。
 
@@ -49,4 +51,4 @@ clean_up_from*scene（*场景\_）
 
 返回类型
 
-没有任何
+None

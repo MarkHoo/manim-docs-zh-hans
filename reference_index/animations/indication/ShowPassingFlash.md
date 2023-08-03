@@ -6,7 +6,7 @@
 class ShowPassingFlash(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: ShowPartial
+Bases: `ShowPartial`
 
 每帧仅显示 VMobject 的一小部分。
 
@@ -14,6 +14,7 @@ Bases: ShowPartial
 
 - **mobject** – 其笔划具有动画效果的 mobject。
 - **time_width** – 条子的长度相对于笔划的长度。
+
 
 例子
 
@@ -41,6 +42,7 @@ class TimeWidthValues(Scene):
 
 > [`Create`]()
 
+
 方法
 
 |||
@@ -49,7 +51,7 @@ class TimeWidthValues(Scene):
 
 
 
-clean_up_from*scene（*场景\_）
+`clean_up_from_scene(scene)`
 
 [`Scene`]()完成动画后清理。
 
@@ -61,4 +63,4 @@ clean_up_from*scene（*场景\_）
 
 返回类型
 
-没有任何
+None

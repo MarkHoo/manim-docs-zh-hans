@@ -5,9 +5,9 @@
 ```py
 class GrowFromEdge(mobject=None, *args, use_override=True, **kwargs)
 ```
-Bases: GrowFromPoint
+Bases: `GrowFromPoint`
 
-[`Mobject`](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject")通过从其边界框边缘之一增长它来引入。
+[`Mobject`]()通过从其边界框边缘之一增长它来引入。
 
 参数
 

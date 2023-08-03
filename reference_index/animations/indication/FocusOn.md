@@ -6,7 +6,7 @@
 class FocusOn(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: Transform
+Bases: `Transform`
 
 
 将聚光灯缩小到某个位置。
@@ -18,6 +18,7 @@ Bases: Transform
 - **color**– 聚光灯的颜色。
 - **run_time** – 动画的持续时间。
 - **kwargs** – 要传递给[`Succession`]()构造函数的附加参数
+
 
 例子
 

@@ -4,23 +4,25 @@
 
 Functions
 
-always(_method_, _\*args_, _\*\*kwargs_)[\[source\]]()
+`always(method, *args, **kwargs)`
 
-always*redraw(\_func*)
+`always_redraw(func)`
 
-always*rotate(\_mobject*, _rate=0.3490658503988659_, _\*\*kwargs_)
+`always_rotate(mobject, rate=0.3490658503988659, **kwargs)`
 
-always*shift(\_mobject*, _direction=array(\[1., 0., 0.\])_, _rate=0.1_)
+`always_shift(mobject, direction=array([1., 0., 0.]), rate=0.1)`
 
-assert_is_mobject*method(\_method*)
+`assert_is_mobject_method(method)`
 
-cycle*animation(\_animation*, _\*\*kwargs_)
+`cycle_animation(animation, **kwargs)`
 
-f*always(\_method*, _\*arg_generators_, _\*\*kwargs_)
+
+`f_always(method, *arg_generators, **kwargs)`
 
 Always 的更多功能版本，它不接受参数，而是接受输出相关参数的函数。
 
-turn*animation_into*updater(\_animation*, \_cycle=False*, _\*\*kwargs_)
+
+`turn_animation_into_updater(animation, cycle=False, **kwargs)`
 
 向动画的 mobject 添加更新程序，该更新程序应用动画的插值和更新功能
 

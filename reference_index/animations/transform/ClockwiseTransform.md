@@ -6,13 +6,14 @@
 class ClockwiseTransform(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: Transform
+Bases: `Transform`
 
 沿顺时针方向的弧变换对象的点。
 
 > 也可以看看
 
 > [`Transform`](),[`CounterclockwiseTransform`]()
+
 
 例子
 
@@ -38,7 +39,9 @@ class ClockwiseExample(Scene):
         self.wait()
 ```
 
+
 方法
+
 
 属性
 

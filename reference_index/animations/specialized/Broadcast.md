@@ -6,7 +6,7 @@
 class Broadcast(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: LaggedStart
+Bases: `LaggedStart`
 
 广播一个从 an 开始的 mobject `initial_width`，直到 mobject 的实际大小。
 
@@ -22,6 +22,7 @@ Bases: LaggedStart
 - **lag_ratio** – mobject 每次迭代之间的时间，默认为 0.2。
 - **run_time** – 动画的总持续时间，默认为 3。
 - **kwargs** – 要传递给 的附加参数[`LaggedStart`]()。
+
 
 例子
 

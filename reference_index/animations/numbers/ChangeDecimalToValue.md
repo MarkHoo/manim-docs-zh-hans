@@ -6,6 +6,6 @@
 class ChangeDecimalToValue(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: ChangingDecimal
+Bases: `ChangingDecimal`
 
 方法

@@ -4,8 +4,10 @@
 
 
 ```py
-
+class CurvesAsSubmobjects(vmobject, **kwargs)
 ```
+
+Bases: `VGroup`
 
 将曲线的元素转换为子对象。
 
@@ -16,7 +18,14 @@
 ![LineGradientExample-1.png](../../static/LineGradientExample-1.png)
 
 ```py
+from manim import *
 
+class LineGradientExample(Scene):
+    def construct(self):
+        curve = ParametricFunction(lambda t: [t, np.sin(t), 0], t_range=[-PI, PI, 0.01], stroke_width=10)
+        new_curve = CurvesAsSubmobjects(curve)
+        new_curve.set_color_by_gradient(BLUE, RED)
+        self.add(new_curve.shift(UP), curve)
 ```
 
 

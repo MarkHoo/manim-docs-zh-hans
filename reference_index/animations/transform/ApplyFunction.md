@@ -6,11 +6,13 @@
 class ApplyFunction(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: Transform
+Bases: `Transform`
+
 
 方法
 
 `create_target`
+
 
 属性
 

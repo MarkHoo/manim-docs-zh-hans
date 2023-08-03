@@ -6,9 +6,12 @@
 class ApplyComplexFunction(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: ApplyMethod
+Bases: `ApplyMethod`
+
 
 方法
+
+
 
 属性
 

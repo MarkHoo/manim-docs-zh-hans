@@ -6,9 +6,10 @@
 class ApplyPointwiseFunction(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: ApplyMethod
+Bases: `ApplyMethod`
 
 将逐点函数应用于 mobject 的动画。
+
 
 例子
 

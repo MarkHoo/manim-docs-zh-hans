@@ -4,8 +4,10 @@
 
 
 ```py
-
+class VectorizedPoint(location=array([0., 0., 0.]), color='#000000', fill_opacity=0, stroke_width=0, artificial_width=0.01, artificial_height=0.01, **kwargs)
 ```
+
+Bases: `VMobject`
 
 方法
 
@@ -31,11 +33,12 @@
 [`width`]()|mobject 的宽度。
 
 
-基数
 
-的别名[`VMobject`]()
+`basecls`
 
-_属性_ 高度
+[`VMobject`]()的别名
+
+_属性_ height
 
 mobject 的高度。
 
@@ -43,20 +46,33 @@ mobject 的高度。
 
 `float`
 
+
 例子
 
 示例：高度示例
 
 ```py
+from manim import *
 
+class HeightExample(Scene):
+    def construct(self):
+        decimal = DecimalNumber().to_edge(UP)
+        rect = Rectangle(color=BLUE)
+        rect_copy = rect.copy().set_stroke(GRAY, opacity=0.5)
+
+        decimal.add_updater(lambda d: d.set_value(rect.height))
+
+        self.add(rect_copy, rect, decimal)
+        self.play(rect.animate.set(height=5))
+        self.wait()
 ```
 
 
-也可以看看
+> 也可以看看
 
-`length_over_dim()`
+> `length_over_dim()`
 
-_属性_ 宽度
+_属性_ width
 
 mobject 的宽度。
 
@@ -64,15 +80,28 @@ mobject 的宽度。
 
 `float`
 
+
 例子
 
 示例：宽度示例
 
 ```py
+from manim import *
 
+class WidthExample(Scene):
+    def construct(self):
+        decimal = DecimalNumber().to_edge(UP)
+        rect = Rectangle(color=BLUE)
+        rect_copy = rect.copy().set_stroke(GRAY, opacity=0.5)
+
+        decimal.add_updater(lambda d: d.set_value(rect.width))
+
+        self.add(rect_copy, rect, decimal)
+        self.play(rect.animate.set(width=7))
+        self.wait()
 ```
 
 
-也可以看看
+> 也可以看看
 
-`length_over_dim()`
+> `length_over_dim()`

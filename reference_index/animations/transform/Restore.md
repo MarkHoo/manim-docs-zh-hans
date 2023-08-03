@@ -6,11 +6,12 @@
 class Restore(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: ApplyMethod
+Bases: `ApplyMethod`
 
 将 mobject 转换为其上次保存的状态。
 
 要保存 mobject 的状态，请使用[`save_state()`]()方法。
+
 
 例子
 
@@ -30,7 +31,10 @@ class RestoreExample(Scene):
         self.play(Restore(s), run_time=2)
 ```
 
+
 方法
+
+
 
 属性
 

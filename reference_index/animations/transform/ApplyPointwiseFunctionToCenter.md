@@ -6,13 +6,15 @@
 class ApplyPointwiseFunctionToCenter(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: ApplyPointwiseFunction
+Bases: `ApplyPointwiseFunction`
+
 
 方法
 
 |||
 |-|-|
 [`begin`]()|开始动画。
+
 
 属性
 
@@ -21,7 +23,7 @@ Bases: ApplyPointwiseFunction
 
 
 
-开始( )
+`begin()`
 
 开始动画。
 
@@ -29,4 +31,4 @@ Bases: ApplyPointwiseFunction
 
 返回类型
 
-没有任何
+None

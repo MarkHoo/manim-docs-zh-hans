@@ -6,7 +6,7 @@
 class Rotate(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: Transform
+Bases: `Transform`
 
 旋转 Mobject 的动画。
 
@@ -17,6 +17,7 @@ Bases: Transform
 - **axis** – numpy 向量形式的旋转轴。
 - **about_point** – 旋转中心。
 - **about_edge** – 如果，则此参数指定要作为旋转中心的边界框点的方向。` about_point``is ``None `
+
 
 例子
 

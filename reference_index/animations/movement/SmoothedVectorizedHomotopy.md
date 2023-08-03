@@ -7,7 +7,7 @@
 class SmoothedVectorizedHomotopy(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: Homotopy
+Bases: `Homotopy`
 
 方法
 

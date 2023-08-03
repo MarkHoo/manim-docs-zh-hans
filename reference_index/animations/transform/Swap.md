@@ -6,9 +6,11 @@
 class Swap(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: CyclicReplace
+Bases: `CyclicReplace`
+
 
 方法
+
 
 属性
 

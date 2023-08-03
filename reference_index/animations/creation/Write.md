@@ -6,9 +6,10 @@
 class Write(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: DrawBorderThenFill
+Bases: `DrawBorderThenFill`
 
-模拟手写[`Text`](manim.mobject.text.text_mobject.Text.html#manim.mobject.text.text_mobject.Text "manim.mobject.text.text_mobject.Text")或手绘[`VMobject`](manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject "manim.mobject.types.vectorized_mobject.VMobject")。
+模拟手写[`Text`]()或手绘[`VMobject`]()。
+
 
 例子
 
@@ -36,7 +37,7 @@ class ShowWriteReversed(Scene):
 
 测试
 
-检查创建空[`Write`](#manim.animation.creation.Write "manim.animation.creation.Write")动画是否有效：
+检查创建空[`Write`]()动画是否有效：
 
 ```sh
 >>> from manim import Write, Text
@@ -47,17 +48,15 @@ Write(Text(''))
 
 方法
 
-[`begin`]()
+|||
+|-|-|
+[`begin`]()|开始动画。
+[`finish`]()|完成动画。
+`reverse_submobjects`|
 
-开始动画。
 
-[`finish`]()
 
-完成动画。
-
-`reverse_submobjects`
-
-开始( )
+`begin()`
 
 开始动画。
 
@@ -65,9 +64,11 @@ Write(Text(''))
 
 返回类型
 
-没有任何
+None
 
-完成( )
+
+
+`finish()`
 
 完成动画。
 
@@ -75,4 +76,4 @@ Write(Text(''))
 
 返回类型
 
-没有任何
+None
