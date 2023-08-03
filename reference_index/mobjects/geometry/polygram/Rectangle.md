@@ -25,7 +25,7 @@ Bases: `Polygon`
 
 示例：矩形示例
 
-![RectangleExample-1.png](../static/RectangleExample-1.png)
+![RectangleExample-1.png](../../static/RectangleExample-1.png)
 
 
 ```py

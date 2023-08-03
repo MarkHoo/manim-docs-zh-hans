@@ -4,8 +4,10 @@
 
 
 ```py
-
+class ParametricFunction(function, t_range=None, scaling=<manim.mobject.graphing.scale.LinearBase object>, dt=1e-08, discontinuities=None, use_smoothing=True, use_vectorized=False, **kwargs)
 ```
+
+Bases: `VMobject`
 
 参数曲线。
 
@@ -23,86 +25,105 @@
 
 示例：绘图参数函数
 
-![PlotParametricFunction-1.png](../_images/PlotParametricFunction-1.png)
+![PlotParametricFunction-1.png](../../static/PlotParametricFunction-1.png)
 
 ```py
+from manim import *
 
+class PlotParametricFunction(Scene):
+    def func(self, t):
+        return np.array((np.sin(2 * t), np.sin(3 * t), 0))
+
+    def construct(self):
+        func = ParametricFunction(self.func, t_range = np.array([0, TAU]), fill_opacity=0).set_color(RED)
+        self.add(func.scale(3))
 ```
 
 示例：ThreeDParametricSpring 
 
-![ThreeDParametricSpring-1.png](../_images/ThreeDParametricSpring-1.png)
+![ThreeDParametricSpring-1.png](../../static/ThreeDParametricSpring-1.png)
 
 ```py
+from manim import *
 
+class ThreeDParametricSpring(ThreeDScene):
+    def construct(self):
+        curve1 = ParametricFunction(
+            lambda u: np.array([
+                1.2 * np.cos(u),
+                1.2 * np.sin(u),
+                u * 0.05
+            ]), color=RED, t_range = np.array([-3*TAU, 5*TAU, 0.01])
+        ).set_shade_in_3d(True)
+        axes = ThreeDAxes()
+        self.add(axes, curve1)
+        self.set_camera_orientation(phi=80 * DEGREES, theta=-60 * DEGREES)
+        self.wait()
 ```
 
 
-注意力
+> 请注意
 
-如果您的函数存在不连续性，则必须手动指定不连续性的位置。请参阅以下示例以获取指导。
+> 如果您的函数存在不连续性，则必须手动指定不连续性的位置。请参阅以下示例以获取指导。
+
 
 示例：不连续示例
 
-![DiscontinuousExample-1.png](../_images/DiscontinuousExample-1.png)
+![DiscontinuousExample-1.png](../../static/DiscontinuousExample-1.png)
 
 ```py
+from manim import *
 
+class DiscontinuousExample(Scene):
+    def construct(self):
+        ax1 = NumberPlane((-3, 3), (-4, 4))
+        ax2 = NumberPlane((-3, 3), (-4, 4))
+        VGroup(ax1, ax2).arrange()
+        discontinuous_function = lambda x: (x ** 2 - 2) / (x ** 2 - 4)
+        incorrect = ax1.plot(discontinuous_function, color=RED)
+        correct = ax2.plot(
+            discontinuous_function,
+            discontinuities=[-2, 2],  # discontinuous points
+            dt=0.1,  # left and right tolerance of discontinuity
+            color=GREEN,
+        )
+        self.add(ax1, ax2, incorrect, correct)
 ```
 
 方法
 
-[`generate_points`]()
+|||
+|-|-|
+[`generate_points`]()|初始化`points`并因此初始化形状。
+`get_function`|
+`get_point_from_function`|
+[`init_points`]()|初始化`points`并因此初始化形状。
 
-初始化`points`并因此初始化形状。
-
-`get_function`
-
-`get_point_from_function`
-
-[`init_points`]()
-
-初始化`points`并因此初始化形状。
 
 属性
 
-`animate`
+|||
+|-|-|
+`animate`|用于对 的任何方法的应用程序进行动画处理`self`。
+`animation_overrides`|
+`color`|
+`depth`|对象的深度。
+`fill_color`|如果有多种颜色（对于渐变），则返回第一个颜色
+`height`|mobject 的高度。
+`n_points_per_curve`|
+`sheen_factor`|
+`stroke_color`|
+`width`|mobject 的宽度。
 
-用于对 的任何方法的应用程序进行动画处理`self`。
 
-`animation_overrides`
-
-`color`
-
-`depth`
-
-对象的深度。
-
-`fill_color`
-
-如果有多种颜色（对于渐变），则返回第一个颜色
-
-`height`
-
-mobject 的高度。
-
-`n_points_per_curve`
-
-`sheen_factor`
-
-`stroke_color`
-
-`width`
-
-mobject 的宽度。
-
-生成点( )
+`generate_points()`
 
 初始化`points`并因此初始化形状。
 
 被创造召唤。这是一个空方法，可以由子类实现。
 
-初始化点（）
+
+`init_points()`
 
 初始化`points`并因此初始化形状。
 

@@ -6,7 +6,7 @@
 class DashedLine(*args, dash_length=0.05, dashed_ratio=0.5, **kwargs)
 ```
 
-Bases: Line
+Bases: `Line`
 
 一个虚线[`Line`]()。
 
@@ -25,7 +25,7 @@ Bases: Line
 
 示例：虚线示例
 
-![DashedLineExample-1.png](../static/DashedLineExample-1.png)
+![DashedLineExample-1.png](../../static/DashedLineExample-1.png)
 
 ```py
 from manim import *

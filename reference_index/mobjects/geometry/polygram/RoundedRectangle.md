@@ -19,7 +19,7 @@ Bases: `Rectangle`
 
 示例：圆角矩形示例
 
-![RoundedRectangleExample-1.png](../static/RoundedRectangleExample-1.png)
+![RoundedRectangleExample-1.png](../../static/RoundedRectangleExample-1.png)
 
 
 ```py

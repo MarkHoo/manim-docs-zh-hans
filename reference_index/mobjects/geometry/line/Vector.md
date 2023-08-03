@@ -20,7 +20,7 @@ Bases: `Arrow`
 
 示例：矢量示例
 
-![VectorExample-1.png](../static/VectorExample-1.png)
+![VectorExample-1.png](../../static/VectorExample-1.png)
 
 
 ```py
@@ -81,7 +81,7 @@ class VectorExample(Scene):
 
 示例：矢量坐标标签
 
-![VectorCooperativeLabel-1.png](../static/VectorCoordinateLabel-1.png)
+![VectorCooperativeLabel-1.png](../../static/VectorCoordinateLabel-1.png)
 
 
 ```py

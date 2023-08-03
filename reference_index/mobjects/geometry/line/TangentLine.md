@@ -26,7 +26,7 @@ Bases: `Line`
 
 示例：TangentLine 示例
 
-![TangentLineExample-1.png](../static/TangentLineExample-1.png)
+![TangentLineExample-1.png](../../static/TangentLineExample-1.png)
 
 
 ```py

@@ -6,7 +6,7 @@
 class ArcBetweenPoints(start, end, angle=1.5707963267948966, radius=None, **kwargs)
 ```
 
-Bases: Arc
+Bases: `Arc`
 
 继承自 Arc，并另外获取弧跨越的 2 个点。
 

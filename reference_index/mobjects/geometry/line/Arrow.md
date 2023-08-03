@@ -6,7 +6,7 @@
 class Arrow(*args, stroke_width=6, buff=0.25, max_tip_length_to_length_ratio=0.25, max_stroke_width_to_length_ratio=5, **kwargs)
 ```
 
-Bases: Line
+Bases: `Line`
 
 一个箭头。
 
@@ -27,7 +27,7 @@ Bases: Line
 
 示例：箭头示例
 
-![ArrowExample-1.png](../static/ArrowExample-1.png)
+![ArrowExample-1.png](../../static/ArrowExample-1.png)
 
 
 ```py
@@ -57,7 +57,7 @@ class ArrowExample(Scene):
 
 示例：箭头示例
 
-![ArrowExample-2.png](../static/ArrowExample-2.png)
+![ArrowExample-2.png](../../static/ArrowExample-2.png)
 
 
 ```py

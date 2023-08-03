@@ -6,7 +6,7 @@
 class TipableVMobject(tip_length=0.35, normal_vector=array([0., 0., 1.]), tip_style={}, **kwargs)
 ```
 
-Bases: VMobject
+Bases: `VMobject`
 
 用于圆弧和直线之间的共享功能。功能可大致分为以下几组：
 

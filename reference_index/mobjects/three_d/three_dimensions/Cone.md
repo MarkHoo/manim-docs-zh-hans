@@ -4,8 +4,10 @@
 
 
 ```py
-
+class Cone(base_radius=1, height=1, direction=array([0., 0., 1.]), show_base=False, v_range=[0, 6.283185307179586], u_min=0, checkerboard_colors=False, **kwargs)
 ```
+
+Bases: `Surface`
 
 一个圆锥体。可以使用 2 个参数来定义：高度和底半径。极角 theta 可以使用 arctan(base_radius / height) 计算。球半径 r 使用毕达哥拉斯定理计算。
 
@@ -19,65 +21,53 @@
 - **u_min** ( _float_ ) – 顶点处的半径。
 - **checkerboard_colors** ( _bool_ ) – 在锥体上显示棋盘网格纹理。
 
+
 例子
 
-示例：ExampleCone [¶](#examplecone)
+示例：ExampleCone
 
-![../_images/ExampleCone-1.png](../_images/ExampleCone-1.png)
+![ExampleCone-1.png](../../static/ExampleCone-1.png)
 
 
 ```py
+from manim import *
 
+class ExampleCone(ThreeDScene):
+    def construct(self):
+        axes = ThreeDAxes()
+        cone = Cone(direction=X_AXIS+Y_AXIS+2*Z_AXIS, resolution=8)
+        self.set_camera_orientation(phi=5*PI/11, theta=PI/9)
+        self.add(axes, cone)
 ```
 
 
 方法
 
-[`func`](#manim.mobject.three_d.three_dimensions.Cone.func "manim.mobject. Three_d. Three_dimensions.Cone.func")
+|||
+|-|-|
+[`func`]()|从球坐标转换为笛卡尔坐标。
+[`get_direction`]()|返回 顶点的当前方向[`Cone`]()。
+[`set_direction`]()|更改 顶点的方向[`Cone`]()。
 
-从球坐标转换为笛卡尔坐标。
-
-[`get_direction`](#manim.mobject.three_d.three_dimensions.Cone.get_direction "manim.mobject. Three_d. Three_dimensions.Cone.get_direction")
-
-返回 顶点的当前方向[`Cone`](#manim.mobject.three_d.three_dimensions.Cone "manim.mobject. Three_d. Three_dimensions.Cone")。
-
-[`set_direction`](#manim.mobject.three_d.three_dimensions.Cone.set_direction "manim.mobject. Three_d. Three_dimensions.Cone.set_direction")
-
-更改 顶点的方向[`Cone`](#manim.mobject.three_d.three_dimensions.Cone "manim.mobject. Three_d. Three_dimensions.Cone")。
 
 属性
 
-`animate`
+|||
+|-|-|
+`animate`|用于对 的任何方法的应用程序进行动画处理`self`。
+`animation_overrides`|
+`color`|
+`depth`|对象的深度。
+`fill_color`|如果有多种颜色（对于渐变），则返回第一个颜色
+`height`|mobject 的高度。
+`n_points_per_curve`|
+`sheen_factor`|
+`stroke_color`|
+`width`|mobject 的宽度。
 
-用于对 的任何方法的应用程序进行动画处理`self`。
 
-`animation_overrides`
 
-`color`
-
-`depth`
-
-对象的深度。
-
-`fill_color`
-
-如果有多种颜色（对于渐变），则返回第一个颜色
-
-`height`
-
-mobject 的高度。
-
-`n_points_per_curve`
-
-`sheen_factor`
-
-`stroke_color`
-
-`width`
-
-mobject 的宽度。
-
-函数（_u_， _v_）[\[来源\]](../_modules/manim/mobject/three_d/three_dimensions.html#Cone.func)[#](#manim.mobject.three_d.three_dimensions.Cone.func "此定义的固定链接")
+`func(u, v)`
 
 从球坐标转换为笛卡尔坐标。
 
@@ -86,34 +76,38 @@ mobject 的宽度。
 - **u** ( _float_ ) – 半径。
 - **v** ( _float_ ) – 方位角。
 
-退货
+返回
 
-定义 的点[`Cone`](#manim.mobject.three_d.three_dimensions.Cone "manim.mobject. Three_d. Three_dimensions.Cone")。
-
-返回类型
-
-`numpy.array`
-
-获取方向( )[\[来源\]](../_modules/manim/mobject/three_d/three_dimensions.html#Cone.get_direction)[#](#manim.mobject.three_d.three_dimensions.Cone.get_direction "此定义的固定链接")
-
-返回 顶点的当前方向[`Cone`](#manim.mobject.three_d.three_dimensions.Cone "manim.mobject. Three_d. Three_dimensions.Cone")。
-
-退货
-
-**方向**– 顶点的方向。
+定义 的点[`Cone`]()。
 
 返回类型
 
 `numpy.array`
 
-设置方向（_方向_）[\[来源\]](../_modules/manim/mobject/three_d/three_dimensions.html#Cone.set_direction)[#](#manim.mobject.three_d.three_dimensions.Cone.set_direction "此定义的固定链接")
 
-更改 顶点的方向[`Cone`](#manim.mobject.three_d.three_dimensions.Cone "manim.mobject. Three_d. Three_dimensions.Cone")。
+
+`get_direction()`
+
+返回 顶点的当前方向[`Cone`]()。
+
+返回
+
+**direction** – 顶点的方向。
+
+返回类型
+
+`numpy.array`
+
+
+
+`set_direction(direction)`
+
+更改 顶点的方向[`Cone`]()。
 
 参数
 
-**Direction** ( _ndarray_ ) – 顶点的方向。
+**Direction** (_ndarray_) – 顶点的方向。
 
 返回类型
 
-没有任何
+None

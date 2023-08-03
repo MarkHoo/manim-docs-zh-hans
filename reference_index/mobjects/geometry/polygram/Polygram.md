@@ -150,7 +150,7 @@ round_corners(radius=0.5, evenly_distribute_anchors=False, components_per_rounde
 
 示例：PolygramRoundCorners 
 
-![PolygramRoundCorners-1.png](../static/PolygramRoundCorners-1.png)
+![PolygramRoundCorners-1.png](../../static/PolygramRoundCorners-1.png)
 
 ```py
 from manim import *
