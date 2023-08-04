@@ -6,7 +6,7 @@
 class RerunSceneHandler(queue)
 ```
 
-Bases: FileSystemEventHandler
+Bases: `FileSystemEventHandler`
 
 一个类，用于在输入文件修改后处理重新运行场景。
 
@@ -16,6 +16,7 @@ Bases: FileSystemEventHandler
 |||
 |-|-|
 [`on_modified`]()|当文件或目录被修改时调用。
+
 
 on_modified（_事件_）
 

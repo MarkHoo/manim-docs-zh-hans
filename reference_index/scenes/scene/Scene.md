@@ -6,7 +6,7 @@
 class Scene(renderer=None, camera_class=<class 'manim.camera.camera.Camera'>, always_update_mobjects=False, random_seed=None, skip_animations=False)
 ```
 
-Bases: object
+Bases: `object`
 
 场景是动画的画布。
 
@@ -18,6 +18,7 @@ A[`Scene`]()通过调用在内部呈现[`Scene.render()`]()。这依次按顺序
 
 不建议`__init__`在用户场景中重写该方法。对于应该在渲染场景之前运行的代码，请改用[`Scene.setup()`]()。
 
+
 例子
 
 用您的代码覆盖该[`Scene.construct()`]()方法。
@@ -27,6 +28,7 @@ class MyScene(Scene):
     def construct(self):
         self.play(Write(Text("Hello World!")))
 ```
+
 
 方法
 
@@ -223,9 +225,11 @@ TL:WR
 
 等待直到满足条件，直至达到给定的最大持续时间。
 
+
 属性
 
 `camera`
+
 
 添加（_\* mobjects_）
 
@@ -235,7 +239,7 @@ Mobject 将按照添加顺序从背景到前景显示。
 
 **\*mobjects** ( [_Mobject_]() ) – 要添加的 Mobjects。
 
-退货
+返回
 
 添加 Mobjects 后的相同场景。
 
@@ -251,7 +255,7 @@ add*foreground_mobject ( \_mobject* )
 
 **mobject** ( [_Mobject_]() ) – 要添加到前台的 Mobject。
 
-退货
+返回
 
 添加了前景 mobject 的场景。
 
@@ -267,7 +271,7 @@ add*foreground_mobjects ( *\\* mobjects\_ )
 
 **\*mobjects** ( [_Mobject_]() ) – 要添加到前台的 Mobject。
 
-退货
+返回
 
 添加了前景对象的场景。
 
@@ -284,6 +288,7 @@ add*sound ( \_sound_file* , _time_offset = 0_ ,_增益= None_ , _\*\* kwargs_ )
 - **sound_file** ( _str_ ) – 声音文件的路径。
 - **time_offset** ( _float_ ) – 声音文件中的偏移量，在此之后可以播放声音。
 - **增益**( _float_ _|_ _None_ ) – 声音的放大。
+
 
 例子
 
@@ -309,6 +314,7 @@ class SoundExample(Scene):
 
 [在此处](https://github.com/ManimCommunity/manim/blob/main/docs/source/_static/click.wav)下载上一个示例的资源。
 
+
 add*subcaption (*内容*,*持续时间= 1* ,\*偏移量= 0\_ )
 
 在当前时间戳的相应子字幕文件中添加一个条目。
@@ -324,6 +330,7 @@ add*subcaption (*内容*,*持续时间= 1* ,\*偏移量= 0\_ )
 返回类型
 
 没有任何
+
 
 例子
 
@@ -388,7 +395,7 @@ Bring*to_back ( *\\* mobjects\_ )
 
 **\*mobjects** ( [_Mobject_]() ) – 要推到场景后面的 mobject。
 
-退货
+返回
 
 场景，mobject 被推到场景的后面。
 
@@ -404,7 +411,7 @@ Bring*to_front ( *\\* mobjects\_ )
 
 **\*mobjects** ( [_Mobject_]() ) – 带到场景前面的 mobject。
 
-退货
+返回
 
 场景，mobjects 被带到场景的前面。
 
@@ -416,7 +423,7 @@ Bring*to_front ( *\\* mobjects\_ )
 
 从场景中移除 self.mobjects 和 self.foreground_mobjects 中存在的所有 mobject。
 
-退货
+返回
 
 场景，已删除 self.mobjects 和 self.foreground_mobjects 中的所有 mobject。
 
@@ -435,7 +442,7 @@ Bring*to_front ( *\\* mobjects\_ )
 - **动画**( [_Animation_]() ) – 带有 mobject 方法和参数的动画或 mobject
 - **play_kwargs** – 影响传入内容的命名参数`animations`，例如`run_time`，`lag_ratio`等等。
 
-退货
+返回
 
 如果没有什么可玩的，则无，否则为 self。
 
@@ -452,7 +459,7 @@ Bring*to_front ( *\\* mobjects\_ )
 - **\*args** ( [_Animation_]() ) – 要播放的动画。
 - \***\*kwargs** – 调用 play() 的配置。
 
-退货
+返回
 
 要播放的动画。
 
@@ -469,6 +476,7 @@ Bring*to_front ( *\\* mobjects\_ )
 笔记
 
 初始化代码应该放在[`Scene.setup()`](). 终止代码应输入[`Scene.tear_down()`]().
+
 
 例子
 
@@ -494,7 +502,7 @@ get*attrs ( *\\*键\_)
 
 **\*keys** ( _str_ ) – 要返回其属性的参数的名称。
 
-退货
+返回
 
 传递的标识符的属性列表。
 
@@ -506,7 +514,7 @@ get_mobject_family_members ( )
 
 返回场景中所有对象的家庭成员列表。如果添加了 Circle() 和 VGroup(Rectangle(),Triangle())，则它不仅返回 Circle()、Rectangle() 和 Triangle()，还返回 VGroup() 对象。
 
-退货
+返回
 
 mobject 家族成员列表。
 
@@ -522,7 +530,7 @@ get*moving_mobjects ( *\\*动画\_)
 
 **\*animations** ( [_Animation_]() ) – 检查移动对象的动画。
 
-退货
+返回
 
 可以在动画中移动的 mobject 列表
 
@@ -539,7 +547,7 @@ get*restructed_mobject*list ( \_mobjects* , \_to_remove* )
 - **mobjects** ( _list_ ) – 要检查的 Mobjects。
 - **to_remove** ( _list_ ) – 要删除的 mobject 列表。
 
-退货
+返回
 
 包含要删除的 mobject 的 mobject 列表已删除。
 
@@ -555,7 +563,7 @@ get*run_time（*动画\_）
 
 **animations** ( _list_ _\[_ [_Animation_]() _\]_`run_time` ) –要计算总数的动画列表 。
 
-退货
+返回
 
 `run_time`列表中所有动画的总数。
 
@@ -575,7 +583,7 @@ get*time_progression (*运行时间*,*描述*, \_n_iterations = None* , _overrid
 - **n_iterations** ( _int_ _|_ _None_ ) – 动画中的迭代次数。
 - **override_skip_animations** ( _bool_ ) – 是否在进度栏中显示跳过的动画。
 
-退货
+返回
 
 命令行进度条。
 
@@ -587,7 +595,7 @@ get_top_level_mobjects ( )
 
 返回所有不是子对象的对象。
 
-退货
+返回
 
 顶级 mobject 列表。
 
@@ -671,7 +679,7 @@ play*internal ( \_skip_rendering = False* )
 
 **mobject** ( [_Mobject_]() ) – 要从前台删除的 mobject。
 
-退货
+返回
 
 场景，删除了前景对象。
 
@@ -687,7 +695,7 @@ play*internal ( \_skip_rendering = False* )
 
 **\*to_remove** ( [_Mobject_]() ) – 要从前台删除的 mobject。
 
-退货
+返回
 
 场景，前景对象被移除。
 
@@ -748,7 +756,7 @@ TL:WR
 - **mobject_list_name** ( _str_ ) – 要从中删除的 mobject（“mobjects”、“foreground_mobjects”等）列表。
 - **extract_families** ( _bool_ ) – 是否应递归提取 mobject 的族。
 
-退货
+返回
 
 具有重构 Mobject 的场景 mobject。
 

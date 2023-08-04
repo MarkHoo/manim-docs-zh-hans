@@ -6,13 +6,14 @@
 class MovingCameraScene(camera_class=<class 'manim.camera.moving_camera.MovingCamera'>, **kwargs)
 ```
 
-Bases: Scene
+Bases: `Scene`
 
 这是一个场景，具有特殊的配置和属性，使其适合相机必须四处移动的情况。
 
 > 也可以看看
 
 > [`MovingCamera`]()
+
 
 方法
 

@@ -6,69 +6,34 @@
 class VectorScene(basis_vector_stroke_width=6, **kwargs)
 ```
 
-Bases: Scene
+Bases: `Scene`
+
 
 方法
 
-[`add_axes`]()
+|||
+|-|-|
+[`add_axes`]()|将一对轴添加到场景中。
+[`add_plane`]()|将 NumberPlane 对象添加到背景。
+[`add_vector`]()|将向量添加到平面后返回向量。
+[`coords_to_vector`]()|该方法将向量写为列矩阵（以下称为标签），逐一获取其中的值，并形成构成向量的 x 和 y 分量的相应行。
+[`get_basis_vector_labels`]()|返回基本向量的命名标签。
+[`get_basis_vectors`]()|返回基向量 (1,0) 和 (0,1) 的 VGroup
+[`get_vector`]()|给定输入数值向量，返回平面上的箭头。
+[`get_vector_label`]()|返回传递的向量的命名标签。
+[`label_vector`]()|用于创建矢量标签并为其添加动画的快捷方法。
+[`lock_in_faded_grid`]()|此方法冻结已经在后台的 NumberPlane 和 Axes，并将新的、可操作的添加到前台。
+`position_x_coordinate`|
+`position_y_coordinate`|
+[`show_ghost_movement`]()|此方法播放一个动画，部分显示整个平面沿特定向量的方向移动。
+[`vector_to_coords`]()|此方法将向量显示为基于 Vector() 的向量，然后显示构成向量的 x 和 y 分量的相应线。
+[`write_vector_coordinates`]()|将向量写入屏幕后，返回指示向量坐标的列矩阵。
 
-将一对轴添加到场景中。
-
-[`add_plane`]()
-
-将 NumberPlane 对象添加到背景。
-
-[`add_vector`]()
-
-将向量添加到平面后返回向量。
-
-[`coords_to_vector`]()
-
-该方法将向量写为列矩阵（以下称为标签），逐一获取其中的值，并形成构成向量的 x 和 y 分量的相应行。
-
-[`get_basis_vector_labels`]()
-
-返回基本向量的命名标签。
-
-[`get_basis_vectors`]()
-
-返回基向量 (1,0) 和 (0,1) 的 VGroup
-
-[`get_vector`]()
-
-给定输入数值向量，返回平面上的箭头。
-
-[`get_vector_label`]()
-
-返回传递的向量的命名标签。
-
-[`label_vector`]()
-
-用于创建矢量标签并为其添加动画的快捷方法。
-
-[`lock_in_faded_grid`]()
-
-此方法冻结已经在后台的 NumberPlane 和 Axes，并将新的、可操作的添加到前台。
-
-`position_x_coordinate`
-
-`position_y_coordinate`
-
-[`show_ghost_movement`]()
-
-此方法播放一个动画，部分显示整个平面沿特定向量的方向移动。
-
-[`vector_to_coords`]()
-
-此方法将向量显示为基于 Vector() 的向量，然后显示构成向量的 x 和 y 分量的相应线。
-
-[`write_vector_coordinates`]()
-
-将向量写入屏幕后，返回指示向量坐标的列矩阵。
 
 属性
 
 `camera`
+
 
 add*axes (*动画= False* ,*颜色= '#FFFFFF'_ , _\\*\* kwargs\_ )
 
@@ -88,7 +53,7 @@ add*plane (*动画= False* , *\\*\* kwargs\_ )
 - **animate** ( _bool_ ) – 是否通过 Create 为添加平面添加动画。
 - \***\*kwargs** – NumberPlane 接受的任何有效关键字参数。
 
-退货
+返回
 
 NumberPlane 对象。
 
@@ -107,7 +72,7 @@ add*vector（*向量*，*颜色= '#FFFF00'*，*动画= True*， *\\*\* kwargs\_�
 - **animate** ( _bool_ ) – 是否使用 GrowArrow 对向量的相加进行动画处理
 - \***\*kwargs** – Arrow 的任何有效关键字参数。仅当向量不是箭头时才考虑这些。
 
-退货
+返回
 
 代表向量的箭头。
 
@@ -146,7 +111,7 @@ get*basis_vectors ( \_i_hat_color = '#83C167'* , _j_hat_color = '#FC6255'_ )
 - **i_hat_color** ( _str_ ) – 用于 x 方向基本向量的十六进制颜色
 - **j_hat_color** ( _str_ ) – 用于 y 方向基本向量的十六进制颜色
 
-退货
+返回
 
 表示基向量的向量 Mobject 的 VGroup。
 
@@ -163,7 +128,7 @@ get*basis_vectors ( \_i_hat_color = '#83C167'* , _j_hat_color = '#FC6255'_ )
 - **numeric_vector** ( _np.ndarray_ _|_ _list_ _|_ _tuple_ ) – 要绘制的向量。
 - \***\*kwargs** – Arrow 的任何有效关键字参数。
 
-退货
+返回
 
 代表向量的箭头。
 
@@ -184,7 +149,7 @@ get*vector_label (*向量*,*标签*, \_at_tip = False* ,_方向= 'left'_ ,_旋�
 - **color** ( _str_ _|_ _None_ ) – 标签的颜色。
 - **label_scale_factor** ( _float_ ) – 标签缩放的程度。
 
-退货
+返回
 
 标签的 MathTex。
 
@@ -203,7 +168,7 @@ label*vector（*向量*，*标签*，*动画= True*， *\\*\* kwargs\_）
 - **animate** ( _bool_ ) – 是否使用 Write 对标签进行动画处理
 - \***\*kwargs** – get_vector_label 的任何有效关键字参数
 
-退货
+返回
 
 标签的 MathTex。
 
@@ -247,7 +212,7 @@ write*向量*坐标（_向量_， _\*\* kwargs_）
 - **矢量**([_箭头_]()) – 代表矢量的箭头。
 - \***\*kwargs** – 任何有效的关键字参数[`coordinate_label()`]()：
 
-退货
+返回
 
 表示向量的列矩阵。
 
