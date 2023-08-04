@@ -6,9 +6,10 @@
 class DefaultSectionType(value)
 ```
 
-Bases: str, Enum
+Bases: `str`, `Enum`
 
 节的类型可用于第三方应用程序。例如，演示系统可以使用这些类型来创建循环。
+
 
 例子
 

@@ -2,9 +2,11 @@
 
 合格名称：`manim.utils.tex.TexTemplate`
 
-_类_ TexTemplate（_tex_compiler = None_， _output_format = None_， _documentclass = None_， _preamble = None_， _placeholder_text = None_， _post_doc_commands = None_， _\*\* kwargs_）
 
-基地：`object`
+```py
+
+```
+
 
 TeX 模板用于创建 Tex() 和 MathTex() 对象。
 
@@ -65,25 +67,17 @@ post_doc_commands
 
 `str`
 
+
 方法
 
-[`add_to_document`]()
+|||
+|-|-|
+[`add_to_document`]()|将 txt 添加到 TeX 模板中紧接 begin{document} 之后，例如
+[`add_to_preamble`]()|将内容添加到 TeX 模板的序言中（例如
+`copy`|
+[`get_texcode_for_expression`]()|将表达式逐字插入 TeX 模板中。
+[`get_texcode_for_expression_in_env`]()|将表达式插入到包含在 begin{environment} 和 end{environment} 中的 TeX 模板中
 
-将 txt 添加到 TeX 模板中紧接 begin{document} 之后，例如
-
-[`add_to_preamble`]()
-
-将内容添加到 TeX 模板的序言中（例如
-
-`copy`
-
-[`get_texcode_for_expression`]()
-
-将表达式逐字插入 TeX 模板中。
-
-[`get_texcode_for_expression_in_env`]()
-
-将表达式插入到包含在 begin{environment} 和 end{environment} 中的 TeX 模板中
 
 属性
 
@@ -98,6 +92,7 @@ post_doc_commands
 `default_preamble`
 
 `default_tex_compiler`
+
 
 添加到文档（_txt_）
 
@@ -124,7 +119,7 @@ get_texcode_for*expression (*表达式\_)
 
 **表达式**( _str_ ) – 包含要排版的表达式的字符串，例如`$\sqrt{2}$`
 
-退货
+返回
 
 基于当前模板的 LaTeX 代码，包含给定`expression`并准备排版
 
@@ -141,7 +136,7 @@ get_texcode_for_expression_in*env（*表达式*，\*环境\_）
 - **表达式**( _str_ ) – 包含要排版的表达式的字符串，例如`$\\sqrt{2}$`
 - **环境**( _str_ ) – 包含应在其中排版表达式的环境的字符串，例如`align*`
 
-退货
+返回
 
 基于模板的 LaTeX 代码，在其环境中包含给定的表达式，准备排版
 

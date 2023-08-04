@@ -6,7 +6,7 @@
 class SceneFileWriter(renderer, scene_name, **kwargs)
 ```
 
-Bases: object
+Bases: `object`
 
 SceneFileWriter 是使用 FFMPEG 将播放的动画实际写入视频文件的对象。这主要供 Manim 内部使用。你很少（如果有的话）必须使用此类的方法，除非修改 Manim 现实的结构。
 
@@ -48,111 +48,44 @@ sections_output_dir
 
 所有部分电影文件的列表。
 
+
 方法
 
-[`add_audio_segment`]()
+|||
+|-|-|
+[`add_audio_segment`]()|此方法从 AudioSegment 类型对象添加音频片段和合适的参数。
+[`add_partial_movie_file`]()|将新的部分影片文件路径添加到 scene.partial_movie_files 和哈希中的当前部分。
+[`add_sound`]()|此方法添加声音文件中的音频片段。
+[`begin_animation`]()|由 manim 在内部使用，将动画流式传输到 FFMPEG 以显示或写入文件。
+[`clean_cache`]()|将通过删除最旧的 partial_movie_files 来清理缓存。
+[`close_movie_pipe`]()|由 Manim 在内部使用以正常停止写入 FFMPEG 的输入缓冲区
+`combine_files`|
+[`combine_to_movie`]()|由 Manim 在内部使用，将构成场景的单独的部分影片文件组合成该场景的单个视频文件。
+[`combine_to_section_videos`]()|连接每个部分的部分电影文件。
+[`create_audio_segment`]()|创建一个空的、无声的音频段。
+[`end_animation`]()|Manim 在内部使用它来优雅地停止流式传输到 FFMPEG。
+[`finish`]()|完成对 FFMPEG 缓冲区的写入或将图像写入输出目录。
+[`finish_last_section`]()|如果当前节为空，则删除它。
+[`flush_cache_directory`]()|删除所有缓存的部分电影文件
+[`get_resolution_directory`]()|获取直接包含视频文件的分辨率目录的名称。
+[`init_audio`]()|帮助编剧为电影添加音频做好准备。
+[`init_output_directories`]()|初始化输出目录。
+[`is_already_cached`]()|将检查是否存在以 hash_inplication 命名的文件。
+[`next_section`]()|在此创建分段剪切。
+[`open_movie_pipe`]()|由 Manim 在内部使用来初始化 FFMPEG 并开始写入 FFMPEG 的输入缓冲区。
+`output_image`|
+`output_image_from_array`|
+[`print_file_ready_message`]()|将“文件就绪”消息打印到 STDOUT。
+[`save_final_image`]()|这个名字用词不当。
+[`write_frame`]()|Manim 在内部使用它来将帧写入 FFMPEG 输入缓冲区。
+`write_opengl_frame`|
+[`write_subcaption_file`]()|写入子字幕文件。
 
-此方法从 AudioSegment 类型对象添加音频片段和合适的参数。
-
-[`add_partial_movie_file`]()
-
-将新的部分影片文件路径添加到 scene.partial_movie_files 和哈希中的当前部分。
-
-[`add_sound`]()
-
-此方法添加声音文件中的音频片段。
-
-[`begin_animation`]()
-
-由 manim 在内部使用，将动画流式传输到 FFMPEG 以显示或写入文件。
-
-[`clean_cache`]()
-
-将通过删除最旧的 partial_movie_files 来清理缓存。
-
-[`close_movie_pipe`]()
-
-由 Manim 在内部使用以正常停止写入 FFMPEG 的输入缓冲区
-
-`combine_files`
-
-[`combine_to_movie`]()
-
-由 Manim 在内部使用，将构成场景的单独的部分影片文件组合成该场景的单个视频文件。
-
-[`combine_to_section_videos`]()
-
-连接每个部分的部分电影文件。
-
-[`create_audio_segment`](")
-
-创建一个空的、无声的音频段。
-
-[`end_animation`]()
-
-Manim 在内部使用它来优雅地停止流式传输到 FFMPEG。
-
-[`finish`](")
-
-完成对 FFMPEG 缓冲区的写入或将图像写入输出目录。
-
-[`finish_last_section`]()
-
-如果当前节为空，则删除它。
-
-[`flush_cache_directory`]()
-
-删除所有缓存的部分电影文件
-
-[`get_resolution_directory`]()
-
-获取直接包含视频文件的分辨率目录的名称。
-
-[`init_audio`]()
-
-帮助编剧为电影添加音频做好准备。
-
-[`init_output_directories`]()
-
-初始化输出目录。
-
-[`is_already_cached`]()
-
-将检查是否存在以 hash_inplication 命名的文件。
-
-[`next_section`]()
-
-在此创建分段剪切。
-
-[`open_movie_pipe`]()
-
-由 Manim 在内部使用来初始化 FFMPEG 并开始写入 FFMPEG 的输入缓冲区。
-
-`output_image`
-
-`output_image_from_array`
-
-[`print_file_ready_message`]()
-
-将“文件就绪”消息打印到 STDOUT。
-
-[`save_final_image`]()
-
-这个名字用词不当。
-
-[`write_frame`]()
-
-Manim 在内部使用它来将帧写入 FFMPEG 输入缓冲区。
-
-`write_opengl_frame`
-
-[`write_subcaption_file`]()
-
-写入子字幕文件。
 
 属性
 
 `force_output_as_scene_name`
+
 
 add*audio_segment（\_new_segment*，_时间=无_， _gain_to_background =无_）
 

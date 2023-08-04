@@ -7,7 +7,7 @@
 class Section(type, video, name, skip_animations)
 ```
 
-Bases: object
+Bases: `object`
 
 一个[`Scene`]()可以被分割成多个Section。请参阅[文档]()以获取更多信息。它由多个动画组成。
 

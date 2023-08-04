@@ -6,7 +6,7 @@
 class ManimConfig
 ```
 
-Bases: MutableMapping
+Bases: `MutableMapping`
 
 类似字典的类存储所有配置选项。
 
@@ -19,6 +19,7 @@ Bases: MutableMapping
 每个配置选项都作为此类的属性实现。
 
 每个配置选项都可以使用属性的全名通过配置文件进行设置。如果配置选项具有关联的 CLI 标志，则该标志等于属性的全名。那些承认替代标志或根本没有标志的记录在各个属性的文档字符串中。
+
 
 例子
 
@@ -91,6 +92,7 @@ class MyScene(Scene):
 ```
 
 `manim.cfg`无论调用 manim 时使用的 CLI 参数或内容如何，​​ 背景颜色都将设置为 RED 。
+
 
 方法
 
@@ -182,7 +184,7 @@ class MyScene(Scene):
 
 
 
-_属性_ 纵横比
+_属性_ aspect_ratio
 
 以像素为单位的宽高比（宽度/高度）（-分辨率，-r）。
 
@@ -190,22 +192,24 @@ _属性_ asset_dir
 
 用于查找视频资产的目录（无标志）。
 
-_属性_ 背景颜色
+_属性_ background_color
 
 场景的背景颜色 (-c)。
 
-_属性_ 背景不透明度
+_属性_ background_opacity
 
 0.0（完全透明）和 1.0（完全不透明）之间的数字。
 
-_属性_ 底部
+_属性_ bottom
 坐标位于框架的中心底部。
 
-复制( )
+
+
+`copy()`
 
 深度复制此 ManimConfig 的内容。
 
-退货
+返回
 
 该对象的副本不包含共享引用。
 
@@ -213,19 +217,21 @@ _属性_ 底部
 
 [`ManimConfig`]()
 
-也可以看看
+> 也可以看看
 
-`tempconfig()`
+> `tempconfig()`
 
 笔记
 
 这就是背后的主要机制`tempconfig()`。
 
-_属性_ 自定义文件夹
+_属性_ custom_folders
 
 是否使用自定义文件夹输出。
 
-摘要参数（_参数_）
+
+
+`digest_args(args)`
 
 处理 CLI 参数中存在的配置选项。
 
@@ -233,7 +239,7 @@ _属性_ 自定义文件夹
 
 **args** (_命名空间_) – 由 . 返回的对象`main_utils.parse_args()`。
 
-退货
+返回
 
 **self** – 该对象在处理`parser`.
 
@@ -241,15 +247,16 @@ _属性_ 自定义文件夹
 
 [`ManimConfig`]()
 
-也可以看看
+> 也可以看看
 
-`main_utils.parse_args()`, [`digest_parser()`](), [`digest_file()`]()
+> `main_utils.parse_args()`, [`digest_parser()`](), [`digest_file()`]()
 
 笔记
 
 如果`args.config_file`是非空字符串，则在消化任何其他 CLI 参数之前`ManimConfig`尝试消化所述文件的内容。[`digest_file()`]()
 
-摘要文件（_文件名_）
+
+`digest_file(filename)`
 
 处理文件中存在的配置选项`.cfg`。
 
@@ -259,7 +266,7 @@ _属性_ 自定义文件夹
 
 **filename** ( _str_ _|_ _os.PathLike_ ) – 文件的路径`.cfg`。
 
-退货
+返回
 
 **self** – 该对象在处理`filename`.
 
@@ -267,15 +274,16 @@ _属性_ 自定义文件夹
 
 [`ManimConfig`]()
 
-也可以看看
+> 也可以看看
 
-[`digest_file()`](), [`digest_args()`](),[`make_config_parser()`]()
+> [`digest_file()`](), [`digest_args()`](),[`make_config_parser()`]()
 
 笔记
 
 如果有多个`.cfg`文件需要处理，首先将它们解析为单个`ConfigParser`对象并通过一次调用来消化它们 [`digest_parser()`]()总是比多次调用此方法更有效。
 
-摘要解析器（_解析器_）
+
+`digest_parser(parser)`
 
 处理对象中存在的配置选项`ConfigParser`。
 
@@ -285,7 +293,7 @@ _属性_ 自定义文件夹
 
 **parser** ( _ConfigParser_ ) – 反映一个或多个文件内容的对象`.cfg`。特别地，它可以反映已经以级联方式解析的多个文件的内容。
 
-退货
+返回
 
 **self** – 该对象在处理`parser`.
 
@@ -293,13 +301,14 @@ _属性_ 自定义文件夹
 
 [`ManimConfig`]()
 
-也可以看看
+> 也可以看看
 
-[`make_config_parser()`](), [`digest_file()`](),[`digest_args()`]()
+> [`make_config_parser()`](), [`digest_file()`](),[`digest_args()`]()
 
 笔记
 
 如果有多个文件需要处理，首先将它们解析为单个对象，然后调用此函数一次（而不是 多次调用）`.cfg`总是更有效。`ConfigParser`[`digest_file()`]()
+
 
 例子
 
@@ -330,11 +339,11 @@ _属性_ dry_run
 
 是否启用试运行。
 
-_属性_ 启用\_gui
+_属性_ enable_gui
 
 启用 GUI 交互。
 
-_属性_ 启用\_线框
+_属性_ enable_wireframe
 
 在 opengl 中启用线框调试模式。
 
@@ -354,7 +363,7 @@ _属性_ force_window
 
 使用 opengl 渲染器时设置为强制窗口
 
-_属性_ 格式
+_属性_ format
 
 文件格式; “png”、“gif”、“mp4”、“webm”或“mov”。
 
@@ -362,7 +371,7 @@ _属性_ frame_height
 
 以逻辑单位表示的帧高度（无标志）。
 
-_属性_ 帧速率
+_属性_ frame_rate
 帧速率（以每秒帧数为单位）。
 
 _属性_ frame_size 
@@ -385,11 +394,13 @@ _属性_ from_animation_number
 
 以此数字 (-n) 开始渲染动画。
 
-_属性_ 全屏
+_属性_ fullscreen
 
 将窗口扩展至其可能的最大尺寸。
 
-get*dir (*键*, *\\*\* kwargs\_ )
+
+
+`get_dir(key, **kwargs)`
 
 解决存储目录的配置选项。
 
@@ -400,7 +411,7 @@ get*dir (*键*, *\\*\* kwargs\_ )
 - **key** ( _str_ ) – 要解析的配置选项。必须是以 结尾的选项 `'_dir'`，例如`'media_dir'`或`'video_dir'`。
 - **kwargs** ( _str_ ) – 解析目录时要使用的任何字符串。
 
-退货
+返回
 
 请求目录的路径。如果路径解析为空字符串，`None`则返回。
 
@@ -415,6 +426,7 @@ get*dir (*键*, *\\*\* kwargs\_ )
 笔记
 
 标准`str.format()`语法用于解析路径，因此路径可以包含使用 f 字符串表示法的任意占位符。但是，这些将需要`kwargs`包含所需的值。
+
 
 例子
 
@@ -489,11 +501,11 @@ _属性_ images_dir
 
 放置图像的目录（无标志）。见[`ManimConfig.get_dir()`]()。
 
-_属性_ 输入文件
+_属性_ input_file
 
 输入文件名。
 
-_属性_ 左侧
+_属性_ left_side
 坐标位于框架的中间左侧。
 
 _属性_ log_dir 
@@ -516,7 +528,7 @@ _属性_ media_embed
 
 在 Jupyter 笔记本中嵌入视频
 
-_属性_ 媒体宽度
+_属性_ media_width
 
 Jupyter 笔记本中的媒体宽度
 
@@ -528,7 +540,7 @@ _属性_ notify_outdated_version
 
 是否有可用版本更新时通知。
 
-_属性_ 输出文件
+_属性_ output_file
 
 输出文件名 (-o)。
 
@@ -536,19 +548,19 @@ _属性_ partial_movie_dir
 
 放置部分电影文件的目录（无标志）。见[`ManimConfig.get_dir()`]()。
 
-_属性_ 像素高度
+_属性_ pixel_height
 
 帧高度以像素为单位（-分辨率，-r）。
 
-_属性_ 像素宽度
+_属性_ pixel_width
 
 帧宽度以像素为单位（–分辨率，-r）。
 
-_属性_ 插件
+_属性_ plugins
 
 要启用的插件列表。
 
-_属性_ 预览
+_属性_ preview
 
 是否播放渲染的影片(-p)。
 
@@ -556,11 +568,11 @@ _属性_ progress_bar
 
 渲染动画时是否显示进度条。
 
-_物业_ 质量
+_物业_ quality
 
 视频质量 (-q)。
 
-_属性_ 渲染器
+_属性_ renderer
 
 当前活动的渲染器。
 
@@ -637,15 +649,17 @@ _属性_ text_dir
 
 放置文本的目录（无标志）。见[`ManimConfig.get_dir()`]()。
 
-_属性_ 顶部
+_属性_ top
 
 坐标位于框架的中心顶部。
 
-_属性_ 透明
+_属性_ transparent
 
 背景不透明度是否为 0.0 (-t)。
 
-更新（_对象_）
+
+
+`update(obj)`
 
 [`ManimConfig`]()消化在另一个或字典中找到的选项。
 
@@ -657,15 +671,15 @@ _属性_ 透明
 
 返回类型
 
-没有任何
+None
 
 提高
 
 **AttributeError** – 如果`obj`是一个字典，但包含不属于任何配置选项的键。
 
-也可以看看
+> 也可以看看
 
-[`digest_file()`](), [`digest_args()`](),[`digest_parser()`]()
+> [`digest_file()`](), [`digest_args()`](),[`digest_parser()`]()
 
 _属性_ upto_animation_number
 
@@ -679,7 +693,7 @@ _属性_ use_projection_lines_shaders
 
 使用与变换矩阵兼容的 OpenGLVM 对象描边着色器。
 
-_属性_ 详细信息
+_属性_ verbosity
 记录器冗长；“调试”、“信息”、“警告”、“错误”或“严重”(-v)。
 
 _属性_ video_dir 
@@ -706,6 +720,6 @@ _属性_ write_to_movie
 
 是否将场景渲染为电影文件 (-w)。
 
-_属性_ 零垫
+_属性_ zero_pad
 
 PNG 零填充。0（无零填充）和 9（最少 9 列）之间的数字。

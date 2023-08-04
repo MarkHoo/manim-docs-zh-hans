@@ -2,8 +2,8 @@
 
 合格名称：`manim.utils.config\_ops.DictAsObject`
 
-_类_ DictAsObject ( _dictin_ )
+```py
 
-基地：`object`
+```
 
 方法

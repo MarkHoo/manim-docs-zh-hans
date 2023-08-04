@@ -6,7 +6,7 @@
 class LinearTransformationScene(include_background_plane=True, include_foreground_plane=True, background_plane_kwargs=None, foreground_plane_kwargs=None, show_coordinates=False, show_basis_vectors=True, basis_vector_stroke_width=6, i_hat_color='#83C167', j_hat_color='#FC6255', leave_ghost_vectors=False, **kwargs)
 ```
 
-Bases: VectorScene
+Bases: `VectorScene`
 
 该场景包含特殊方法，使其特别适合显示线性变换。
 
@@ -22,6 +22,7 @@ Bases: VectorScene
 - **i_hat_color** ( _Color_ ) – 向量的颜色`i_hat`。
 - **j_hat_color** ( _Color_ ) – 矢量的颜色`j_hat`。
 - **leave_ghost_vectors** ( _bool_ ) – 指示变换后基向量的先前位置。
+
 
 例子
 
@@ -44,63 +45,43 @@ class LinearTransformationSceneExample(LinearTransformationScene):
         self.wait()
 ```
 
+
 方法
 
-[`add_background_mobject`]()
-将 mobject 添加到特殊列表 self.background_mobjects。
-[`add_foreground_mobject`]()
-将 mobject 添加到特殊列表 self.foreground_mobjects。
-[`add_moving_mobject`]()
-将 mobject 添加到特殊列表 self.movi​​ng_mobject，并向 mobject 添加一个名为 mobject.target 的属性，该属性跟踪 mobject 将移动到什么或变成什么等。
-[`add_special_mobjects`]()
-如果这些 mobject 具有额外的重要性，则将 mobject 添加到可以跟踪的单独列表中。
-[`add_title`]()
-添加一个标题，缩放后，添加一个背景矩形，将其移动到顶部并将其添加到 foreground_mobjects，将其添加为 self 的局部变量。
-[`add_transformable_label`]()
-创建向量的可变形标签并为其添加动画的方法。
-[`add_transformable_mobject`]()
-将 mobject 添加到特殊列表 self.transformable_mobjects。
-[`add_unit_square`]()
-通过 self.get_unit_square 将单位方块添加到场景中。
-[`add_vector`]()
-将向量添加到场景中，并将其放入特殊列表 self.movi​​ng_vectors 中。
-[`apply_function`]()
-将给定的函数应用于 self.transformable_mobjects 中的每个 mobject，并播放显示此效果的动画。
-[`apply_inverse`]()
-此方法将由传递的矩阵的逆表示的线性变换应用于数平面及其上的每个向量/相似对象。
-[`apply_inverse_transpose`]()
-将给定转置矩阵表示的变换的逆应用于数平面及其上的每个向量/相似对象。
-[`apply_matrix`]()
-将给定矩阵表示的变换应用于数平面及其上的每个向量/相似对象。
-[`apply_nonlinear_transformation`]()
-将给定函数表示的非线性变换应用于数平面及其上的每个向量/相似对象。
-[`apply_transposed_matrix`]()
-将给定转置矩阵表示的变换应用于数字平面及其上的每个向量/相似对象。
-[`get_matrix_transformation`]()
-返回与传递的矩阵表示的线性变换相对应的函数。
-[`get_moving_mobject_movement`]()
-此方法返回一个动画，将“self.movi​​ng_mobjects”中的 mobject 移动到其相应的 .target 值。
-[`get_piece_movement`]()
-此方法返回一个动画，该动画将任意 mobject 以“片段”形式移动到其相应的 .target 值。
-[`get_transformable_label_movement`]()
-此方法返回一个动画，将“self.transformable_labels”中的所有标签移动到其相应的 .target 。
-[`get_transposed_matrix_transformation`]()
-返回与传递的转置矩阵表示的线性变换相对应的函数。
-[`get_unit_square`]()
-返回当前 NumberPlane 的单位正方形。
-[`get_vector_movement`]()
-此方法返回一个动画，该动画将“self.movi​​ng_vectors”中的 mobject 移动到其相应的 .target 值。
-[`setup`]()
-这意味着由通常子类化的任何场景来实现，并且在调用构造方法之前涉及一些常见的设置。
-`update_default_configs`
-[`write_vector_coordinates`]()
-将向量写入屏幕并将其添加到特殊列表 self.foreground_mobjects 后，返回一个指示向量坐标的列矩阵
+|||
+|-|-|
+[`add_background_mobject`]()|将 mobject 添加到特殊列表 self.background_mobjects。
+[`add_foreground_mobject`]()|将 mobject 添加到特殊列表 self.foreground_mobjects。
+[`add_moving_mobject`]()|将 mobject 添加到特殊列表 self.movi​​ng_mobject，并向 mobject 添加一个名为 mobject.target 的属性，该属性跟踪 mobject 将移动到什么或变成什么等。
+[`add_special_mobjects`]()|如果这些 mobject 具有额外的重要性，则将 mobject 添加到可以跟踪的单独列表中。
+[`add_title`]()|添加一个标题，缩放后，添加一个背景矩形，将其移动到顶部并将其添加到 foreground_mobjects，将其添加为 self 的局部变量。
+[`add_transformable_label`]()|创建向量的可变形标签并为其添加动画的方法。
+[`add_transformable_mobject`]()|将 mobject 添加到特殊列表 self.transformable_mobjects。
+[`add_unit_square`]()|通过 self.get_unit_square 将单位方块添加到场景中。
+[`add_vector`]()|将向量添加到场景中，并将其放入特殊列表 self.movi​​ng_vectors 中。
+[`apply_function`]()|将给定的函数应用于 self.transformable_mobjects 中的每个 mobject，并播放显示此效果的动画。
+[`apply_inverse`]()|此方法将由传递的矩阵的逆表示的线性变换应用于数平面及其上的每个向量/相似对象。
+[`apply_inverse_transpose`]()|将给定转置矩阵表示的变换的逆应用于数平面及其上的每个向量/相似对象。
+[`apply_matrix`]()|将给定矩阵表示的变换应用于数平面及其上的每个向量/相似对象。
+[`apply_nonlinear_transformation`]()|将给定函数表示的非线性变换应用于数平面及其上的每个向量/相似对象。
+[`apply_transposed_matrix`]()|将给定转置矩阵表示的变换应用于数字平面及其上的每个向量/相似对象。
+[`get_matrix_transformation`]()|返回与传递的矩阵表示的线性变换相对应的函数。
+[`get_moving_mobject_movement`]()|此方法返回一个动画，将“self.movi​​ng_mobjects”中的 mobject 移动到其相应的 .target 值。
+[`get_piece_movement`]()|此方法返回一个动画，该动画将任意 mobject 以“片段”形式移动到其相应的 .target 值。
+[`get_transformable_label_movement`]()|此方法返回一个动画，将“self.transformable_labels”中的所有标签移动到其相应的 .target 。
+[`get_transposed_matrix_transformation`]()|返回与传递的转置矩阵表示的线性变换相对应的函数。
+[`get_unit_square`]()|返回当前 NumberPlane 的单位正方形。
+[`get_vector_movement`]()|此方法返回一个动画，该动画将“self.movi​​ng_vectors”中的 mobject 移动到其相应的 .target 值。
+[`setup`]()|这意味着由通常子类化的任何场景来实现，并且在调用构造方法之前涉及一些常见的设置。
+`update_default_configs`|
+[`write_vector_coordinates`]()|将向量写入屏幕并将其添加到特殊列表 self.foreground_mobjects 后，返回一个指示向量坐标的列矩阵
 
 
 
 属性
 
 `camera`
+
 
 add*background_mobject ( *\\* mobjects\_ )
 
@@ -146,7 +127,7 @@ add*title（*标题*， \_scale_factor = 1.5*， _animate = False_）
 - **scale_factor** ( _float_ ) – 标题应缩放多少。
 - **animate** ( _bool_ ) – 是否为添加添加动画。
 
-退货
+返回
 
 添加了标题的场景。
 
@@ -166,7 +147,7 @@ add*transformable_label（*向量*，*标签*， \\_transformation_name = 'L'*�
 - **new_label** ( _str_ _|_ [_MathTex_]() _|_ _None_ ) – 线性变换后标签应显示的内容
 - \***\*kwargs** – get_vector_label 的任何有效关键字参数
 
-退货
+返回
 
 标签的 MathTex。
 
@@ -191,7 +172,7 @@ add*unit_square (*动画= False* , *\\*\* kwargs\_ )
 - **animate** ( _bool_ ) – 是否使用 DrawBorderThenFill 为添加添加动画。
 - \***\*kwargs** – self.get_unit_square() 的任何有效关键字参数
 
-退货
+返回
 
 单位正方形。
 
@@ -209,7 +190,7 @@ add*vector（*矢量*，*颜色= '#FFFF00'_， _\\*\* kwargs\_）
 - **color** ( _str_ ) – 向量的十六进制颜色的字符串。仅当“向量”不是箭头时才考虑这一点。默认为黄色。
 - \***\*kwargs** – VectorScene.add_vector 的任何有效关键字参数。
 
-退货
+返回
 
 代表向量的箭头。
 
@@ -288,7 +269,7 @@ get_moving_mobject*movement ( \_func* )
 
 **func** ( _Callable_ _\[_ _\[_ _ndarray_ _\]_ _,_ _ndarray_ _\]_ ) – 确定移动对象的 .target 去向的函数。
 
-退货
+返回
 
 运动的动画。
 
@@ -304,7 +285,7 @@ get*piece_movement (*件\_)
 
 **pieces** ( _list_ _|_ _tuple_ _|_ _np.ndarray_ ) – 必须显示运动的棋子。
 
-退货
+返回
 
 运动的动画。
 
@@ -316,7 +297,7 @@ get_transformable_label_movement ( )
 
 此方法返回一个动画，将“self.transformable_labels”中的所有标签移动到其相应的 .target 。
 
-退货
+返回
 
 运动的动画。
 
@@ -354,7 +335,7 @@ get*unit_square（*颜色= '#FFFF00'*，*不透明度= 0.3*，\*描边宽度= 3\
 
 **func** ( _Callable_ _\[_ _\[_ _ndarray_ _\]_ _,_ _ndarray_ _\]_ ) – 确定移动对象的 .target 去向的函数。
 
-退货
+返回
 
 运动的动画。
 
@@ -375,7 +356,7 @@ write*向量*坐标（_向量_， _\*\* kwargs_）
 - **矢量**([_箭头_]()) – 代表矢量的箭头。
 - \***\*kwargs** – VectorScene.write_vector_coordinates 的任何有效关键字参数
 
-退货
+返回
 
 表示向量的列矩阵。
 

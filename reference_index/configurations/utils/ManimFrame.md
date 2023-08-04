@@ -6,10 +6,12 @@
 class ManimFrame(c)
 ```
 
-Bases: Mapping
+Bases: `Mapping`
 
 
 方法
+
+
 
 属性
 
@@ -62,6 +64,7 @@ Bases: Mapping
 `right_side`
 
 `top`
+
 
 参数
 
