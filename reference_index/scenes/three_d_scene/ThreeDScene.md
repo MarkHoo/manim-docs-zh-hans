@@ -6,36 +6,27 @@
 class ThreeDScene(camera_class=<class 'manim.camera.three_d_camera.ThreeDCamera'>, ambient_camera_rotation=None, default_angled_camera_orientation_kwargs=None, **kwargs)
 ```
 
-Bases: Scene
+Bases: `Scene`
 
 这是一个场景，具有特殊的配置和属性，使其适合三维场景。
 
+
 方法
 
-[`add_fixed_in_frame_mobjects`]()
-该方法用于防止相机移动时对象的旋转和移动。
-[`add_fixed_orientation_mobjects`]()
-此方法用于防止相机移动时对象旋转和倾斜。
-[`begin_3dillusion_camera_rotation`]()
-此方法围绕当前相机方向创建 3D 相机旋转错觉。
-[`begin_ambient_camera_rotation`]()
-此方法开始相机围绕 Z_AXIS 沿逆时针方向进行环境旋转
-[`get_moving_mobjects`]()
-此方法返回场景中正在移动的所有 Mobject 的列表，这些 Mobject 也在传递的动画中。
-[`move_camera`]()
-此方法将相机移动到给定的球面坐标。
-[`remove_fixed_in_frame_mobjects`]()
-此方法撤消了 add_fixed_in_frame_mobjects 所做的操作。
-[`remove_fixed_orientation_mobjects`]()
-此方法“取消固定”所传递的 mobject 的方向，这意味着它们将不再相对于相机处于相同的角度。
-[`set_camera_orientation`]()
-此方法设置场景中相机的方向。
-[`set_to_default_angled_camera_orientation`]()
-此方法将 default_angle_camera_orientation 设置为传递的关键字参数，并将相机设置为该方向。
-[`stop_3dillusion_camera_rotation`]()
-此方法停止所有幻觉相机旋转。
-[`stop_ambient_camera_rotation`]()
-此方法停止所有环境相机旋转。
+|||
+|-|-|
+[`add_fixed_in_frame_mobjects`]()|该方法用于防止相机移动时对象的旋转和移动。
+[`add_fixed_orientation_mobjects`]()|此方法用于防止相机移动时对象旋转和倾斜。
+[`begin_3dillusion_camera_rotation`]()|此方法围绕当前相机方向创建 3D 相机旋转错觉。
+[`begin_ambient_camera_rotation`]()|此方法开始相机围绕 Z_AXIS 沿逆时针方向进行环境旋转
+[`get_moving_mobjects`]()|此方法返回场景中正在移动的所有 Mobject 的列表，这些 Mobject 也在传递的动画中。
+[`move_camera`]()|此方法将相机移动到给定的球面坐标。
+[`remove_fixed_in_frame_mobjects`]()|此方法撤消了 add_fixed_in_frame_mobjects 所做的操作。
+[`remove_fixed_orientation_mobjects`]()|此方法“取消固定”所传递的 mobject 的方向，这意味着它们将不再相对于相机处于相同的角度。
+[`set_camera_orientation`]()|此方法设置场景中相机的方向。
+[`set_to_default_angled_camera_orientation`]()|此方法将 default_angle_camera_orientation 设置为传递的关键字参数，并将相机设置为该方向。
+[`stop_3dillusion_camera_rotation`]()|此方法停止所有幻觉相机旋转。
+[`stop_ambient_camera_rotation`]()|此方法停止所有环境相机旋转。
 
 
 

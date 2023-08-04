@@ -2,9 +2,10 @@
 
 合格名称：`manim.utils.tex.TexTemplateFromFile`
 
-_类_ TexTemplateFromFile ( _\*_ , _tex_filename = 'tex_template.tex'_ , _\*\* kwargs_ )
 
-基地：[`TexTemplate`]()
+```py
+
+```
 
 从模板文件创建的 TexTemplate 对象（默认：tex_template.tex）
 
@@ -45,17 +46,15 @@ tex\_编译器
 
 `str`
 
+
 方法
 
-[`add_to_document`]()
+|||
+|-|-|
+[`add_to_document`]()|将 txt 添加到 TeX 模板中紧接 begin{document} 之后，例如
+[`add_to_preamble`]()|将内容添加到 TeX 模板的序言中（例如
+`file_not_mutable`|
 
-将 txt 添加到 TeX 模板中紧接 begin{document} 之后，例如
-
-[`add_to_preamble`]()
-
-将内容添加到 TeX 模板的序言中（例如
-
-`file_not_mutable`
 
 属性
 
@@ -70,6 +69,7 @@ tex\_编译器
 `default_preamble`
 
 `default_tex_compiler`
+
 
 添加到文档（_txt_）
 

@@ -2,15 +2,16 @@
 
 合格名称：`manim.utils.color.Colors`
 
-颜色*类别*（_值_）
+```py
 
-基地：`Enum`
+```
 
 预定义颜色的列表。
 
+
 例子
 
-![../_images/ColorsOverview-1.png](../_images/ColorsOverview-1.png)
+![ColorsOverview-1.png](../static/ColorsOverview-1.png)
 
 使用这些颜色的首选方法是从 manim 导入它们的常量：
 
@@ -31,6 +32,7 @@
 笔记
 
 “C”类型的颜色有一个别名，等于不带字母的颜色名称，例如 GREEN = GREEN_C
+
 
 属性
 

@@ -6,7 +6,7 @@
 class MultiCamera(image_mobjects_from_cameras=None, allow_cameras_to_capture_their_own_display=False, **kwargs)
 ```
 
-Bases: MovingCamera
+Bases: `MovingCamera`
 
 允许多个视角的相机对象。
 
@@ -14,8 +14,9 @@ Bases: MovingCamera
 
 参数
 
-- **image_mobjects_from_cameras** ( [_ImageMobject_]() _|\_\_无_) –
+- **image_mobjects_from_cameras** ( [_ImageMobject_]() _|\_\_None_) –
 - **kwargs** – MovingCamera 的任何有效关键字参数。
+
 
 方法
 
@@ -49,7 +50,9 @@ add_image_mobject_from_camera(image_mobject_from_camera)
 
 **image_mobject_from_camera** ( [_ImageMobject_]() ) – 要添加到 self.image_mobject_from_cameras 的 ImageMobject
 
-capture*mobjects ( \_mobjects* , _\*\* kwargs_ )
+
+
+`capture_mobjects(mobjects, **kwargs)`
 
 通过将 mobject 打印在 上来捕获它们`pixel_array`。
 
@@ -64,26 +67,31 @@ capture*mobjects ( \_mobjects* , _\*\* kwargs_ )
 
 有关当前可以呈现的类的列表，请参阅`display_funcs()`。
 
-get_mobjects_indicating_movement ( )
+
+`get_mobjects_indicating_movement()`
 
 返回所有其移动意味着相机应将屏幕上的所有其他 mobject 视为移动的 mobject
 
 返回类型
 
-列表
+list
 
-重置( )
+
+
+`reset()`
 
 重置多摄像机。
 
-退货
+返回
 
 重置多摄像头
 
 返回类型
 
-[多机位]()
+[MultiCamera]()
 
-update_sub_cameras ( )
+
+
+`update_sub_cameras()`
 
 重塑子相机像素数组

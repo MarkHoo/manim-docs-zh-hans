@@ -6,9 +6,12 @@
 class SplitScreenCamera(left_camera, right_camera, **kwargs)
 ```
 
-Bases: OldMultiCamera
+Bases: `OldMultiCamera`
+
 
 方法
+
+
 
 属性
 

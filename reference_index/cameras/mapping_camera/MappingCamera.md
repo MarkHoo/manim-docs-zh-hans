@@ -6,9 +6,10 @@
 class MappingCamera(mapping_func=<function MappingCamera.<lambda>>, min_num_curves=50, allow_object_intrusion=False, **kwargs)
 ```
 
-Bases: Camera
+Bases: `Camera`
 
 允许对象之间映射的相机对象。
+
 
 方法
 
@@ -21,10 +22,11 @@ Bases: Camera
 属性
 
 `background_color`
-
 `background_opacity`
 
-capture*mobjects ( \_mobjects* , _\*\* kwargs_ )
+
+
+`capture_mobjects(mobjects, **kwargs)`
 
 通过将 mobject 打印在 上来捕获它们`pixel_array`。
 

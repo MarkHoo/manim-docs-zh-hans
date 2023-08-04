@@ -6,7 +6,7 @@
 class JSONFormatter(fmt=None, datefmt=None, style='%', validate=True)
 ```
 
-Bases: Formatter
+Bases: `Formatter`
 
 以自定义 JSON 格式输出日志的格式化程序。
 
@@ -20,25 +20,30 @@ Bases: Formatter
 
 3.2 版本更改：添加了`style`参数。
 
+
 方法
 
 |||
 |-|-|
 [`format`]()|将记录格式化为自定义 JSON 格式。
 
+
 属性
 
 `default_msec_format`
 `default_time_format`
 
-格式（_记录_）
+
+
+
+`format(record)`
 
 将记录格式化为自定义 JSON 格式。
 
 参数
 
-**记录**（_字典_）–
+**record**（_dict_）–
 
 返回类型
 
-斯特
+str
