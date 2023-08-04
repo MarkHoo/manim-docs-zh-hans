@@ -6,7 +6,7 @@
 class Create(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: ShowPartial
+Bases: `ShowPartial`
 
 增量显示 VMobject。
 
@@ -16,11 +16,11 @@ Bases: ShowPartial
 
 提高
 
-**TypeError** – 如果`mobject`不是 的实例[`VMobject`](manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject "manim.mobject.types.vectorized_mobject.VMobject")。
+**TypeError** – 如果`mobject`不是 的实例[`VMobject`]()。
 
 例子
 
-示例：创建场景[¶](#createscene)
+示例：创建场景
 
 ```py
 from manim import *
@@ -31,8 +31,8 @@ class CreateScene(Scene):
 ```
 
 
-也可以看看
+> 也可以看看
 
-[`ShowPassingFlash`](manim.animation.indication.ShowPassingFlash.html#manim.animation.indication.ShowPassingFlash "manim.animation.inspiration.ShowPassingFlash")
+> [`ShowPassingFlash`]()
 
 方法

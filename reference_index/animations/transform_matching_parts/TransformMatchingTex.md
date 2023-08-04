@@ -6,7 +6,7 @@
 class TransformMatchingTex(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: TransformMatchingAbstractBase
+Bases: `TransformMatchingAbstractBase`
 
 尝试转换渲染的 LaTeX 字符串的转换。
 
@@ -15,6 +15,7 @@ Bases: TransformMatchingAbstractBase
 > 也可以看看
 
 > [`TransformMatchingAbstractBase`]()
+
 
 例子
 
@@ -38,6 +39,7 @@ class MatchingEquationParts(Scene):
         self.play(TransformMatchingTex(eq2, eq3))
         self.wait(0.5)
 ```
+
 
 方法
 

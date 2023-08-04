@@ -6,7 +6,7 @@
 class Succession(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: AnimationGroup
+Bases: `AnimationGroup`
 
 连续播放一系列动画。
 
@@ -55,7 +55,7 @@ class SuccessionExample(Scene):
 
 
 
-开始( )
+`begin()`
 
 开始动画。
 
@@ -63,9 +63,10 @@ class SuccessionExample(Scene):
 
 返回类型
 
-没有任何
+None
 
-完成( )
+
+`finish()`
 
 完成动画。
 
@@ -73,9 +74,10 @@ class SuccessionExample(Scene):
 
 返回类型
 
-没有任何
+None
 
-插值(_阿尔法_)
+
+`interpolate(alpha)`
 
 设置动画进度。
 
@@ -87,9 +89,10 @@ class SuccessionExample(Scene):
 
 返回类型
 
-没有任何
+None
 
-下一个动画( )
+
+`next_animation()`
 
 继续下一个动画。
 
@@ -97,16 +100,17 @@ class SuccessionExample(Scene):
 
 返回类型
 
-没有任何
+None
 
-update*mobjects ( \_dt* )
 
-更新诸如 starting_mobject 和（对于变换）target_mobject 之类的内容。请注意，由于通常（总是？） self.mobject 会在动画期间暂停其更新，因此这对 self.mobject 没有任何作用。
+`update_mobjects(dt)`
+
+更新诸如 starting_mobject 和（对于变换）target_mobject 之类的内容。请注意，由于通常（总是？） self.mobject 会在动画期间暂停其更新，因此这对 self.mobject None作用。
 
 参数
 
-**dt**（_浮动_）–
+**dt**（_float_）–
 
 返回类型
 
-没有任何
+None

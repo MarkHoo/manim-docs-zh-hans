@@ -6,7 +6,7 @@
 class PhaseFlow(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: Animation
+Bases: `Animation`
 
 方法
 
@@ -16,7 +16,7 @@ Bases: Animation
 
 
 
-interpolate*mobject (*阿尔法\_)
+`interpolate_mobject(alpha)`
 
 根据 alpha 值对 mobject 进行插值`Animation`。
 
@@ -26,4 +26,4 @@ interpolate*mobject (*阿尔法\_)
 
 返回类型
 
-没有任何
+None

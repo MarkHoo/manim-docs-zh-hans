@@ -6,7 +6,7 @@
 class Transform(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: Animation
+Bases: `Animation`
 
 Transform 将 Mobject 转换为目标 Mobject。
 
@@ -17,7 +17,7 @@ Transform 将 Mobject 转换为目标 Mobject。
 - **path_func** – 定义 的点沿其`mobject`移动直到与 的点匹配的路径的函数`target_mobject`，请参阅[`utils.paths`]()。
 - **path_arc** – 如果使用圆形路径弧，则 的点将`mobject`遵循的弧角（以弧度为单位）到达目标点，请参阅`path_arc_centers`。另请参阅[`manim.utils.paths.path_along_arc()`]()。
 - **path_arc_axis** – 如果使用圆形路径弧，则沿其旋转的轴，请参阅`path_arc_centers`。
-- **路径弧中心**–
+- **path_arc_centers**–
 
   圆弧的中心， 的点`mobject`通过变换移动。
 
@@ -28,6 +28,7 @@ Transform 将 Mobject 转换为目标 Mobject。
   控制转换完成后替换哪个对象。
 
   如果设置为 True，`mobject`将从场景中删除并`target_mobject`替换它。否则，`target_mobject`永远不会被添加，`mobject`只会形成其形状。
+
 
 例子
 
@@ -85,12 +86,15 @@ class TransformPathArc(Scene):
 [`get_all_mobjects`]()|获取动画中涉及的所有 mobject。
 `interpolate_submobject`|
 
+
 属性
 
 `path_arc`
 `path_func`
 
-开始( )
+
+
+`begin()`
 
 开始动画。
 
@@ -98,9 +102,11 @@ class TransformPathArc(Scene):
 
 返回类型
 
-没有任何
+None
 
-clean_up_from*scene（*场景\_）
+
+
+`clean_up_from_scene(scene)`
 
 [`Scene`]()完成动画后清理。
 
@@ -112,18 +118,20 @@ clean_up_from*scene（*场景\_）
 
 返回类型
 
-没有任何
+None
 
-获取所有对象( )
+
+
+`get_all_mobjects()`
 
 获取动画中涉及的所有 mobject。
 
 顺序必须与 interpolate_submobject 的参数顺序匹配
 
-退货
+返回
 
 mobject 的序列。
 
 返回类型
 
-序列\[ [Mobject]() \]
+Sequence\[ [Mobject]() \]

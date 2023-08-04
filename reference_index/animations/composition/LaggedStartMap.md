@@ -20,6 +20,7 @@ class LaggedStartMap(mobject=None, *args, use_override=True, **kwargs)
 例子
 
 示例：LaggedStartMapExample
+
 ```py
 from manim import *
 
@@ -43,3 +44,4 @@ class LaggedStartMapExample(Scene):
 ```
 
 方法
+

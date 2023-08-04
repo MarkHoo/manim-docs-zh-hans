@@ -6,9 +6,10 @@
 class TransformFromCopy(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: Transform
+Bases: `Transform`
 
 执行反向变换
+
 
 方法
 
@@ -16,12 +17,16 @@ Bases: Transform
 |-|-|
 [`interpolate`]()|设置动画进度。
 
+
 属性
 
 `path_arc`
 `path_func`
 
-插值(_阿尔法_)
+
+
+`interpolate(alpha)`
+
 设置动画进度。
 
 动画期间的每一帧都会调用此方法。
@@ -32,4 +37,4 @@ Bases: Transform
 
 返回类型
 
-没有任何
+None

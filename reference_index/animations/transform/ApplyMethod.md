@@ -6,7 +6,7 @@
 class ApplyMethod(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: Transform
+Bases: `Transform`
 
 通过应用方法对 mobject 进行动画处理。
 
@@ -16,12 +16,14 @@ Bases: Transform
 
 - **method** – 将在动画中应用的方法。
 - **args** – 应用该方法时要传递的任何位置参数。
-- **kwargs** – 传递给[`Transform`](manim.animation.transform.Transform.html#manim.animation.transform.Transform "manim.animation.transform.Transform").
+- **kwargs** – 传递给[`Transform`]().
+
 
 方法
 
 `check_validity_of_input`
 `create_target`
+
 
 属性
 

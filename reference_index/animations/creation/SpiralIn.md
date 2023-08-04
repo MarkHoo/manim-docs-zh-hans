@@ -6,7 +6,7 @@
 class SpiralIn(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: Animation
+Bases: `Animation`
 
 创建具有沿螺旋轨迹飞行的子 Mobject 的 Mobject。
 
@@ -16,9 +16,10 @@ Bases: Animation
 - **scale_factor** – 用于缩放效果的因子。
 - **fade_in_fraction** – 子 Mobject 向内飞行时初始淡入的分数持续时间。
 
+
 例子
 
-示例：SpiralInExample [¶](#spiralinexample)
+示例：SpiralInExample 
 
 ```py
 from manim import *
@@ -41,7 +42,8 @@ class SpiralInExample(Scene):
 [`interpolate_mobject`]()|根据 alpha 值对 mobject 进行插值`Animation`。
 
 
-interpolate*mobject (*阿尔法\_)[\[来源\]](../_modules/manim/animation/creation.html#SpiralIn.interpolate_mobject)[#](#manim.animation.creation.SpiralIn.interpolate_mobject "此定义的固定链接")
+
+`interpolate_mobject(alpha)`
 
 根据 alpha 值对 mobject 进行插值`Animation`。
 
@@ -51,4 +53,4 @@ interpolate*mobject (*阿尔法\_)[\[来源\]](../_modules/manim/animation/creat
 
 返回类型
 
-没有任何
+None

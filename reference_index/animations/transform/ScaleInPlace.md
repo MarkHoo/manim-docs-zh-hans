@@ -6,9 +6,10 @@
 class ScaleInPlace(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: ApplyMethod
+Bases: `ApplyMethod`
 
 按特定因子缩放对象的动画。
+
 
 例子
 
@@ -22,7 +23,10 @@ class ScaleInPlaceExample(Scene):
         self.play(ScaleInPlace(Text("Hello World!"), 2))
 ```
 
+
 方法
+
+
 
 属性
 

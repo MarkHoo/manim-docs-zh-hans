@@ -6,15 +6,16 @@
 class SpinInFromNothing(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: GrowFromCenter
+Bases: `GrowFromCenter`
 
 引入[`Mobject`]()旋转并从中心开始生长。
 
 参数
 
 - **mobject** – 要引入的 mobject。
-- **角度**– 物体达到其完整尺寸之前的旋转量。例如，2\*PI 表示物体在完全引入之前将完成一整圈旋转。
+- **angle**– 物体达到其完整尺寸之前的旋转量。例如，2\*PI 表示物体在完全引入之前将完成一整圈旋转。
 - **point_color** – mobject 在增长到其完整大小之前的初始颜色。留空以匹配对象的颜色。
+
 
 例子
 

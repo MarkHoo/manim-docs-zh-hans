@@ -6,7 +6,7 @@
 class ApplyWave(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: Homotopy
+Bases: `Homotopy`
 
 发送一个波穿过 Mobject，使其暂时扭曲。
 
@@ -19,6 +19,7 @@ Bases: Homotopy
 - **time_width** – 波的长度相对于对象的宽度。
 - **波纹**\- 波的波纹数
 - **run_time** – 动画的持续时间。
+
 
 例子
 

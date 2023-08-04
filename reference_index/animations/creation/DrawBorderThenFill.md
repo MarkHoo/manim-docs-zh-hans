@@ -6,13 +6,13 @@
 class DrawBorderThenFill(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: Animation
+Bases: `Animation`
 
 先绘制边框，然后显示填充。
 
 例子
 
-示例：ShowDrawBorderThenFill [¶](#showdrawborderthenfill)
+示例：ShowDrawBorderThenFill
 
 ```py
 from manim import *
@@ -34,7 +34,7 @@ class ShowDrawBorderThenFill(Scene):
 
 
 
-开始( )
+`begin()`
 
 开始动画。
 
@@ -42,18 +42,20 @@ class ShowDrawBorderThenFill(Scene):
 
 返回类型
 
-没有任何
+None
 
-获取所有对象( )[\[来源\]](../_modules/manim/animation/creation.html#DrawBorderThenFill.get_all_mobjects)[#](#manim.animation.creation.DrawBorderThenFill.get_all_mobjects "此定义的固定链接")
+
+
+`get_all_mobjects()`
 
 获取动画中涉及的所有 mobject。
 
 顺序必须与 interpolate_submobject 的参数顺序匹配
 
-退货
+返回
 
 mobject 的序列。
 
 返回类型
 
-序列\[ [Mobject](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject") \]
+Sequence\[ [Mobject]() \]

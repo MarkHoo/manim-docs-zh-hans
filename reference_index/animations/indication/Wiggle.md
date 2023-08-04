@@ -6,7 +6,7 @@
 class Wiggle(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: Animation
+Bases: `Animation`
 
 摆动一个 Mobject。
 
@@ -22,7 +22,7 @@ Bases: Animation
 
 例子
 
-示例：应用 Waves [¶](#applyingwaves)
+示例：应用 Waves
 
 ```py
 from manim import *
@@ -33,6 +33,7 @@ class ApplyingWaves(Scene):
         self.play(Wiggle(tex))
         self.wait()
 ```
+
 
 方法
 

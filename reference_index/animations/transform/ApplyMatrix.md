@@ -6,7 +6,7 @@
 class ApplyMatrix(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: ApplyPointwiseFunction
+Bases: `ApplyPointwiseFunction`
 
 对 mobject 应用矩阵变换。
 
@@ -16,6 +16,7 @@ Bases: ApplyPointwiseFunction
 - **mobject**– [`Mobject`]().
 - **about_point** – 变换的原点。默认为`ORIGIN`.
 - **kwargs** – 传递给 的更多关键字参数[`ApplyPointwiseFunction`]()。
+
 
 例子
 
@@ -34,6 +35,7 @@ class ApplyMatrixExample(Scene):
 方法
 
 `initialize_matrix`
+
 
 属性
 

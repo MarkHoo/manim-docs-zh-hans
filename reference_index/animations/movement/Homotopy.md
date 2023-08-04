@@ -6,7 +6,7 @@
 class Homotopy(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: Animation
+Bases: `Animation`
 
 同伦。
 

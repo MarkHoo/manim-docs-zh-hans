@@ -5,7 +5,7 @@
 ```py
 class GrowFromPoint(mobject=None, *args, use_override=True, **kwargs)
 ```
-Bases: Transform
+Bases: `Transform`
 
 [`Mobject`]()通过从一点增长来引入。
 
@@ -14,6 +14,7 @@ Bases: Transform
 - **mobject** – 要引入的 mobject。
 - **point** – 对象生长的点。
 - **point_color** – mobject 在增长到其完整大小之前的初始颜色。留空以匹配对象的颜色。
+
 
 例子
 

@@ -6,7 +6,7 @@
 class Unwrite(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: Write
+Bases: `Write`
 
 模拟用手擦除 a[`Text`]()或 a [`VMobject`]()。
 
@@ -14,9 +14,10 @@ Bases: Write
 
 **相反**– 设置 True 以使动画首先从最后一个子对象开始擦除。
 
+
 例子
 
-示例：UnwriteReverseTrue [¶](#unwritereversetrue)
+示例：UnwriteReverseTrue 
 
 ```py
 from manim import *
@@ -29,7 +30,7 @@ class UnwriteReverseTrue(Scene):
 ```
 
 
-示例：UnwriteReverseFalse [¶](#unwritereversefalse)
+示例：UnwriteReverseFalse 
 
 ```py
 from manim import *

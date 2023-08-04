@@ -6,7 +6,7 @@
 class ReplacementTransform(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: Transform
+Bases: `Transform`
 
 将 mobject 替换并变形为目标 mobject。
 
@@ -15,6 +15,7 @@ Bases: Transform
 - **mobject** – 起始[`Mobject`]().
 - **target_mobject** – 目标[`Mobject`]()。
 - **kwargs** – 传递给 的更多关键字参数[`Transform`]()。
+
 
 例子
 
@@ -52,7 +53,10 @@ class ReplacementTransformOrTransform(Scene):
         self.wait()
 ```
 
+
 方法
+
+
 
 属性
 

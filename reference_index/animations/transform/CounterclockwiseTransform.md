@@ -6,13 +6,14 @@
 class CounterclockwiseTransform(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: Transform
+Bases: `Transform`
 
 沿逆时针方向的弧变换对象的点。
 
 > 也可以看看
 
 > [`Transform`](),[`ClockwiseTransform`]()
+
 
 例子
 
@@ -49,6 +50,8 @@ class CounterclockwiseTransform_vs_Transform(Scene):
 
 
 方法
+
+
 
 属性
 

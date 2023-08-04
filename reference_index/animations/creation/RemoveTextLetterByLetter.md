@@ -6,9 +6,9 @@
 class RemoveTextLetterByLetter(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-基地：[`AddTextLetterByLetter`](manim.animation.creation.AddTextLetterByLetter.html#manim.animation.creation.AddTextLetterByLetter "manim.animation.creation.AddTextLetterByLetter")
+基地：[`AddTextLetterByLetter`]()
 
-[`Text`](manim.mobject.text.text_mobject.Text.html#manim.mobject.text.text_mobject.Text "manim.mobject.text.text_mobject.Text")从场景中逐个字母地删除。
+[`Text`]()从场景中逐个字母地删除。
 
 参数
 

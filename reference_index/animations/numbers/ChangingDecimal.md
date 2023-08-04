@@ -6,7 +6,7 @@
 class ChangingDecimal(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: Animation
+Bases: `Animation`
 
 方法
 
@@ -17,7 +17,7 @@ Bases: Animation
 
 
 
-interpolate\_mobject(alpha)
+`interpolate_mobject(alpha)`
 
 根据 alpha 值对 mobject 进行插值`Animation`。
 
@@ -27,4 +27,4 @@ interpolate\_mobject(alpha)
 
 返回类型
 
-没有任何
+None

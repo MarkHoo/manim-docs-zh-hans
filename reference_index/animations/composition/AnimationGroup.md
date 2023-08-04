@@ -6,7 +6,7 @@
 class AnimationGroup(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: Animation
+Bases: `Animation`
 
 播放一组或一系列的[`Animation`]().
 
@@ -26,7 +26,7 @@ Bases: Animation
 
 |||
 |-|-|
-[`begin`](")|开始动画。
+[`begin`]()|开始动画。
 [`build_animations_with_timings`]()|创建 (anim, start_time, end_time) 形式的三元组列表。
 [`clean_up_from_scene`]()|[`Scene`]()完成动画后清理。
 [`finish`]()|完成动画。
@@ -37,7 +37,7 @@ Bases: Animation
 
 
 
-开始( )
+`begin()`
 
 开始动画。
 
@@ -45,19 +45,21 @@ Bases: Animation
 
 返回类型
 
-没有任何
+None
 
-build_animations_with_timings ( )
+
+`build_animations_with_timings()`
 
 创建 (anim, start_time, end_time) 形式的三元组列表。
 
 返回类型
 
-没有任何
+None
 
-clean_up_from*scene（*场景\_）
 
-[`Scene`](manim.scene.scene.Scene.html#manim.scene.scene.Scene "手动场景.场景.场景")完成动画后清理。
+`clean_up_from_scene(scene)`
+
+[`Scene`]()完成动画后清理。
 
 如果动画是移除器，则这包括[`remove()`]()动画 [`Mobject`]()。
 
@@ -67,9 +69,10 @@ clean_up_from*scene（*场景\_）
 
 返回类型
 
-没有任何
+None
 
-完成( )
+
+`finish()`
 
 完成动画。
 
@@ -77,39 +80,42 @@ clean_up_from*scene（*场景\_）
 
 返回类型
 
-没有任何
+None
 
-获取所有对象( )
+
+`get_all_mobjects()`
 
 获取动画中涉及的所有 mobject。
 
 顺序必须与 interpolate_submobject 的参数顺序匹配
 
-退货
+返回
 
 mobject 的序列。
 
 返回类型
 
-序列\[ [Mobject]() \]
+Sequence\[ [Mobject]() \]
 
-初始化运行时间（_运行时间_）
 
-如果与 不同，则计算动画的运行时间`run_time`。
+`init_run_time(run_time)`
+
+如果与`run_time`不同，则计算动画的运行时间。
 
 参数
 
 **run_time** – 动画的持续时间（以秒为单位）。
 
-退货
+返回
 
 动画的持续时间（以秒为单位）。
 
 返回类型
 
-运行
+run_time
 
-插值(_阿尔法_)
+
+`interpolate(alpha)`
 
 设置动画进度。
 
@@ -121,16 +127,17 @@ mobject 的序列。
 
 返回类型
 
-没有任何
+None
 
-update*mobjects ( \_dt* )
 
-更新诸如 starting_mobject 和（对于变换）target_mobject 之类的内容。请注意，由于通常（总是？） self.mobject 会在动画期间暂停其更新，因此这对 self.mobject 没有任何作用。
+`update_mobjects(dt)`
+
+更新诸如 starting_mobject 和（对于变换）target_mobject 之类的内容。请注意，由于通常（总是？） self.mobject 会在动画期间暂停其更新，因此这对 self.mobject None作用。
 
 参数
 
-**dt**（_浮动_）–
+**dt**（_float_）–
 
 返回类型
 
-没有任何
+None

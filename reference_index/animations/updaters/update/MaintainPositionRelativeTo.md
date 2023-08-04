@@ -6,7 +6,7 @@
 class MaintainPositionRelativeTo(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: Animation
+Bases: `Animation`
 
 方法
 
@@ -15,7 +15,8 @@ Bases: Animation
 [`interpolate_mobject`]()|根据 alpha 值对 mobject 进行插值`Animation`。
 
 
-interpolate_mobject (_阿尔法_)
+
+`interpolate_mobject(alpha)`
 
 根据 alpha 值对 mobject 进行插值`Animation`。
 
@@ -25,4 +26,4 @@ interpolate_mobject (_阿尔法_)
 
 返回类型
 
-没有任何
+None

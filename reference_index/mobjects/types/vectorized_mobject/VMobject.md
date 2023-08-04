@@ -4,8 +4,10 @@
 
 
 ```py
-
+class VMobject(fill_color=None, fill_opacity=0.0, stroke_color=None, stroke_opacity=1.0, stroke_width=4, background_stroke_color='#000000', background_stroke_opacity=1.0, background_stroke_width=0, sheen_factor=0.0, joint_type=None, sheen_direction=array([- 1., 1., 0.]), close_new_points=False, pre_function_handle_to_anchor_scale_factor=0.01, make_smooth_after_applying_functions=False, background_image=None, shade_in_3d=False, tolerance_for_point_equality=1e-06, n_points_per_cubic_curve=4, **kwargs)
 ```
+
+Bases: `Mobject`
 
 矢量化对象。
 
@@ -138,7 +140,8 @@
 `width`|mobject 的宽度。
 
 
-add*cubic_bezier_curve_to（*手柄 1*，*手柄 2*，*锚点\_）
+
+`add_cubic_bezier_curve_to(handle1, handle2, anchor)`
 
 将三次贝塞尔曲线添加到路径中。
 
@@ -148,9 +151,9 @@ add*cubic_bezier_curve_to（*手柄 1*，*手柄 2*，*锚点\_）
 
 - **handle1** ( _ndarray_ ) – 第一个句柄
 - **handle2** ( _ndarray_ ) – 第二个句柄
-- **锚**( _ndarray_ ) – 锚
+- **anchor**( _ndarray_ ) – 锚
 
-退货
+返回
 
 `self`
 
@@ -158,7 +161,9 @@ add*cubic_bezier_curve_to（*手柄 1*，*手柄 2*，*锚点\_）
 
 [`VMobject`]()
 
-添加线到（_点_）
+
+
+`add_line_to(point)`
 
 添加一条从 VMobject 的最后一个点到给定点的直线。
 
@@ -166,7 +171,7 @@ add*cubic_bezier_curve_to（*手柄 1*，*手柄 2*，*锚点\_）
 
 **point** ( _ndarray_ ) – 直线的终点。
 
-退货
+返回
 
 `self`
 
@@ -174,11 +179,13 @@ add*cubic_bezier_curve_to（*手柄 1*，*手柄 2*，*锚点\_）
 
 [`VMobject`]()
 
-add*quadratic_bezier_curve_to（*手柄*，*锚点\_）
+
+
+`add_quadratic_bezier_curve_to(handle, anchor)`
 
 将二次贝塞尔曲线添加到路径中。
 
-退货
+返回
 
 `self`
 
@@ -188,18 +195,20 @@ add*quadratic_bezier_curve_to（*手柄*，*锚点\_）
 
 参数
 
-- **句柄**( _ndarray_ ) –
-- **锚点**( _ndarray_ ) –
+- **handle**( _ndarray_ ) –
+- **anchor**( _ndarray_ ) –
 
-add_smooth_curve*to ( *\*点\_)
+
+
+`add_smooth_curve_to(*points)`
 
 从给定点创建平滑曲线并将其添加到 VMobject。如果传入两个点，第一个点将被解释为句柄，第二个点将被解释为锚点。
 
 参数
 
-**点**( _array_ ) – 用于添加平滑曲线的点（锚点和手柄，或只是锚点）
+**points**( _array_ ) – 用于添加平滑曲线的点（锚点和手柄，或只是锚点）
 
-退货
+返回
 
 `self`
 
@@ -211,7 +220,8 @@ add_smooth_curve*to ( *\*点\_)
 
 **ValueError** – 如果给出 0 或超过 2 分。
 
-对齐点（_vmobject_）
+
+`align_points(vmobject)`
 
 向 self 和 vmobject 添加点，以便它们都具有相同数量的子路径，并且每个相应的子路径都包含相同数量的点。
 
@@ -221,7 +231,7 @@ add_smooth_curve*to ( *\*点\_)
 
 **vmobject** ( [_VMobject_]() ) – 用来对齐点的对象。
 
-退货
+返回
 
 `self`
 
@@ -229,13 +239,15 @@ add_smooth_curve*to ( *\*点\_)
 
 [`VMobject`]()
 
-更改锚点模式（_模式_）
+
+
+`change_anchor_mode(mode)`
 
 更改贝塞尔曲线的锚定模式。这将修改手柄。
 
 只能有两种模式：“锯齿状”和“平滑”。
 
-退货
+返回
 
 `self`
 
@@ -245,32 +257,35 @@ add_smooth_curve*to ( *\*点\_)
 
 参数
 
-**模式**( _str_ ) –
+**mode**( _str_ ) –
 
-考虑\_points*equals*2d（\_p0*， \_p1*）
+
+`consider_points_equals_2d(p0, p1)`
 
 确定两个点是否足够接近以被视为相等。
 
 这使用了 np.isclose() 中的算法，但在此处针对 2D 点情况进行了扩展。NumPy 对于这样一个小问题来说有点过分了。:param p0: 第一个点 :param p1: 第二个点
 
-退货
+返回
 
 两点是否接近。
 
 返回类型
 
-布尔值
+bool
 
 参数
 
 - **p0** ( _ndarray_ ) –
 - **p1** ( _ndarray_ ) –
 
-_属性_ 填充颜色
+_属性_ fill_color
 
 如果有多种颜色（对于渐变），则返回第一个颜色
 
-力方向（_目标方向_）
+
+
+`force_direction(target_direction)`
 
 确保点的方向是顺时针或逆时针。
 
@@ -278,7 +293,9 @@ _属性_ 填充颜色
 
 **target_direction** ( _str_ ) –`"CW"`或`"CCW"`。
 
-gen_cubic_bezier_tuples_from*points（*点\_）
+
+
+`gen_cubic_bezier_tuples_from_points(points)`
 
 从点数组返回贝塞尔曲线元组。
 
@@ -286,25 +303,29 @@ self.points 是 mobject 贝塞尔曲线的锚点和句柄的列表（即 \[ancho
 
 参数
 
-**点**( _ndarray_ ) – 将从中提取控制点的点。
+**points**( _ndarray_ ) – 将从中提取控制点的点。
 
-退货
+返回
 
 贝塞尔曲线控制点。
 
 返回类型
 
-_元组_
+_Tuple_
 
-generate*rgbas_array（*颜色*，*不透明度\_）
+
+
+`generate_rgbas_array(color, opacity)`
 
 第一个 arg 可以是颜色，也可以是颜色元组/列表。同样，不透明度可以是一个浮点数，也可以是浮点数的元组。如果 self.sheen_factor 不为零，并且只传入一种颜色，则会自动为渐变添加第二种稍浅的颜色
 
-获取锚点( )
+
+
+`get_anchors()`
 
 返回形成 VMobject 的曲线的锚点。
 
-退货
+返回
 
 锚。
 
@@ -312,19 +333,22 @@ generate*rgbas_array（*颜色*，*不透明度\_）
 
 np.ndarray
 
-获取锚点和句柄( )
 
-返回 anchors1、handles1、handles2、anchors2，其中 (anchors1\[i\]、handles1\[i\]、handles2\[i\]、anchors2\[i\]) 是为 range(0, len(锚 1))
+`get_anchors_and_handles()`
 
-退货
+返回 anchors1、handles1、handles2、anchors2，其中 (anchors1\[i\]、handles1\[i\]、handles2\[i\]、anchors2\[i\]) 是为 range(0, len(anchors1))
+
+返回
 
 锚点和手柄的可迭代。
 
 返回类型
 
-_可迭代_\[np.ndarray\]
+_Iterable_\[np.ndarray\]
 
-get*arc_length ( \_sample_points_per_curve = None* )
+
+
+`get_arc_length(sample_points_per_curve=None)`
 
 返回整条曲线的近似长度。
 
@@ -332,47 +356,54 @@ get*arc_length ( \_sample_points_per_curve = None* )
 
 **Sample_points_per_curve** ( _int_ _|_ _None_ ) – 用于近似长度的每条曲线的样本点数。更多的点会产生更好的近似值。
 
-退货
+返回
 
-的长度[`VMobject`]()。
+[`VMobject`]()的长度。
 
 返回类型
 
-漂浮
+float
 
-获取颜色( )
+
+
+`get_color()`
 
 返回的颜色[`Mobject`]()
 
-获取曲线函数( )
+
+`get_curve_functions()`
 
 获取 mobject 曲线的函数。
 
-退货
+返回
 
 曲线的函数。
 
 返回类型
 
-_可迭代_\[_可调用_\[\[float\], np.ndarray\]\]
+_Iterable\[Callable\[\[float\], np.ndarray\]\]_
 
-get*curve_functions_with_lengths ( *\*\* kwargs\_ )
+
+
+`get_curve_functions_with_lengths(**kwargs)`
 
 获取 mobject 的函数和曲线长度。
 
 参数
 
-\***\*kwargs** – 传递给的关键字参数[`get_nth_curve_function_with_length()`]()
+**\*\*kwargs** – 传递给的关键字参数[`get_nth_curve_function_with_length()`]()
 
-退货
+返回
 
 曲线的函数和长度。
 
 返回类型
 
-_可迭代_\[_元组_\[_可调用_\[\[float\], np.ndarray\], float\]\]
+_Iterable\[Tuple[Callable\[\[float\], np.ndarray\], float\]\]_
 
-获取方向( )
+
+
+`get_direction()`
 
 用于[`shoelace_direction()`]()计算方向。点的方向决定了绘制对象的方向，顺时针还是逆时针。
 
@@ -380,13 +411,13 @@ _可迭代_\[_元组_\[_可调用_\[\[float\], np.ndarray\], float\]\]
 
 a 的默认方向[`Circle`]()是逆时针：
 
-
 ```py
-
+>>> from manim import Circle
+>>> Circle().get_direction()
+'CCW'
 ```
 
-
-退货
+返回
 
 要么`"CW"`要么`"CCW"`.
 
@@ -394,11 +425,12 @@ a 的默认方向[`Circle`]()是逆时针：
 
 `str`
 
-获取结束锚点( )
+
+`get_end_anchors()`
 
 返回贝塞尔曲线的末端锚点。
 
-退货
+返回
 
 启动锚点
 
@@ -406,19 +438,25 @@ a 的默认方向[`Circle`]()是逆时针：
 
 np.ndarray
 
-获取填充颜色( )
+
+`get_fill_color()`
 
 如果有多种颜色（对于渐变），则返回第一个颜色
 
-获取填充不透明度( )
+
+
+`get_fill_opacity()`
 
 如果有多个不透明度，则返回第一个
 
-_静态_ get_mobject_type_class ( )
+
+
+`static get_mobject_type_class()`
 
 返回此 mobject 类型的基类。
 
-获取第 n 条曲线函数( _n_ )
+
+`get_nth_curve_function(n)`
 
 返回第 n 条曲线的表达式。
 
@@ -426,15 +464,17 @@ _静态_ get_mobject_type_class ( )
 
 **n** ( _int_ ) – 所需曲线的索引。
 
-退货
+返回
 
 第 n 条贝塞尔曲线的表达式。
 
 返回类型
 
-_可调用_\[浮动\]
+_Callable_\[float\]
 
-get*nth_curve_function_with*length（\_n*，*样本点=无\_）
+
+
+`get_nth_curve_function_with_length(n, sample_points=None)`
 
 返回第 n 条曲线的表达式及其（近似）长度。
 
@@ -443,16 +483,18 @@ get*nth_curve_function_with*length（\_n*，*样本点=无\_）
 - **n** ( _int_ ) – 所需曲线的索引。
 - **Sample_points** ( _int_ _|_ _None_ ) – 采样以查找长度的点数。
 
-退货
+返回
 
 - **curve** ( _typing.Callable\[\[float\], np.ndarray\]_ ) – 第 n 条曲线的函数。
 - **length** ( `float`) – 第 n 条曲线的长度。
 
 返回类型
 
-元组\[_可调用_\[\[float\], np.ndarray\], float\]
+tuple\[_Callable_\[\[float\], np.ndarray\], float\]
 
-get*nth_curve*length（\_n*，*样本点=无\_）
+
+
+`get_nth_curve_length(n, sample_points=None)`
 
 返回第 n 条曲线的（近似）长度。
 
@@ -461,7 +503,7 @@ get*nth_curve*length（\_n*，*样本点=无\_）
 - **n** ( _int_ ) – 所需曲线的索引。
 - **Sample_points** ( _int_ _|_ _None_ ) – 采样以查找长度的点数。
 
-退货
+返回
 
 **length** – 第 n 条曲线的长度。
 
@@ -469,7 +511,8 @@ get*nth_curve*length（\_n*，*样本点=无\_）
 
 `float`
 
-get*nth_curve_length_pieces（\_n*， _sample_points = None_）
+
+`get_nth_curve_length_pieces(n, sample_points=None)`
 
 返回用于长度近似的短线长度数组。
 
@@ -478,7 +521,7 @@ get*nth_curve_length_pieces（\_n*， _sample_points = None_）
 - **n** ( _int_ ) – 所需曲线的索引。
 - **Sample_points** ( _int_ _|_ _None_ ) – 采样以查找长度的点数。
 
-退货
+返回
 
 第 n 条曲线的短长度片段。
 
@@ -486,7 +529,9 @@ get*nth_curve_length_pieces（\_n*， _sample_points = None_）
 
 np.ndarray
 
-获取第 n 个曲线点( _n_ )
+
+
+`get_nth_curve_points(n)`
 
 返回定义 vmobject 第 n 条曲线的点。
 
@@ -494,7 +539,7 @@ np.ndarray
 
 **n** ( _int_ ) – 所需贝塞尔曲线的索引。
 
-退货
+返回
 
 定义第 n 条贝塞尔曲线的点（锚点、手柄）
 
@@ -502,27 +547,32 @@ np.ndarray
 
 np.ndarray
 
-获取曲线数( )
+
+
+`get_num_curves()`
 
 返回 vmobject 的曲线数。
 
-退货
+返回
 
-曲线数量。vmobject 的。
+vmobject 的曲线数量。
 
 返回类型
 
-整数
+int
 
-get*point_mobject（*中心=无\_）
+
+`get_point_mobject(center=None)`
 
 最简单的[`Mobject`]()就是转化为自我或转化为自我。应由适当类型的点
 
-获取开始锚点( )
+
+
+`get_start_anchors()`
 
 返回贝塞尔曲线的起始锚点。
 
-退货
+返回
 
 启动锚点
 
@@ -530,7 +580,8 @@ get*point_mobject（*中心=无\_）
 
 np.ndarray
 
-获取子曲线（_a_， _b_）
+
+`get_subcurve(a, b)`
 
 返回区间 \[a, b\] 之间 VMobject 的子曲线。曲线本身就是一个 VMobject。
 
@@ -539,35 +590,40 @@ np.ndarray
 - **a** ( _float_ ) – 下限。
 - **b** ( _float_ ) – 上限。
 
-退货
+返回
 
 \[a, b\] 之间的子曲线
 
 返回类型
 
-[虚拟机对象]()
+[VMobject]()
 
-获取子路径( )
+
+`get_subpaths()`
 
 返回由 VMobject 的曲线形成的子路径。
 
 子路径是曲线范围，每对连续曲线的终点/起点重合。
 
-退货
+返回
 
 子路径。
 
 返回类型
 
-_元组_
+_Tuple_
 
-init*colors ( \_propagate_colors = True* )
+
+
+`init_colors(propagate_colors=True)`
 
 初始化颜色。
 
 被创造召唤。这是一个空方法，可以由子类实现。
 
-insert*n_curves ( \_n* )
+
+
+`insert_n_curves(n)`
 
 将 n 条曲线插入到 vmobject 的贝塞尔曲线中。
 
@@ -575,7 +631,7 @@ insert*n_curves ( \_n* )
 
 **n** ( _int_ ) – 要插入的曲线数。
 
-退货
+返回
 
 `self`
 
@@ -583,16 +639,18 @@ insert*n_curves ( \_n* )
 
 [`VMobject`]()
 
-insert*n_curves_to_point*list（\_n*，*点\_）
+
+
+`insert_n_curves_to_point_list(n, points)`
 
 给定定义贝塞尔曲线（锚点和手柄）的 k 个点数组，返回精确定义 k + n 贝塞尔曲线的点。
 
 参数
 
 - **n** ( _int_ ) – 所需曲线的数量。
-- **点**( _ndarray_ ) – 起点。
+- **points**( _ndarray_ ) – 起点。
 
-退货
+返回
 
 生成积分。
 
@@ -600,7 +658,8 @@ insert*n_curves_to_point*list（\_n*，*点\_）
 
 np.ndarray
 
-比例点( _alpha_ )
+
+`point_from_proportion(alpha)`
 
 获取沿 路径的一定比例的点[`VMobject`](")。
 
@@ -608,7 +667,7 @@ np.ndarray
 
 **alpha** ( _float_ ) – 沿路径的比例[`VMobject`]()。
 
-退货
+返回
 
 上的点[`VMobject`]()。
 
@@ -619,9 +678,11 @@ np.ndarray
 提高
 
 - **ValueError** – 如果`alpha`不在 0 和 1 之间。
-- **例外**\- 如果[`VMobject`]()没有分数。
+- **Exception**\- 如果[`VMobject`]()没有分数。
 
-pointwise*become_partial ( \_vmobject* , _a_ , _b_ )
+
+
+`pointwise_become_partial(vmobject, a, b)`
 
 给定两个边界 a 和 b，将自身 vmobject 的点转换为相对于边界作为参数传递的 vmobject 的点。这里的点代表贝塞尔曲线的控制点（锚点和手柄）
 
@@ -631,7 +692,7 @@ pointwise*become_partial ( \_vmobject* , _a_ , _b_ )
 - **a** ( _float_ ) – 上限。
 - **b** ( _float_ ) – 下限
 
-退货
+返回
 
 `self`
 
@@ -639,7 +700,9 @@ pointwise*become_partial ( \_vmobject* , _a_ , _b_ )
 
 [`VMobject`]()
 
-从点开始的比例（_点_）
+
+
+`proportion_from_point(point)`
 
 [`VMobject`]() 返回沿特定给定点所在路径的比例。
 
@@ -647,20 +710,22 @@ pointwise*become_partial ( \_vmobject* , _a_ , _b_ )
 
 **point** ( _Iterable_ _\[_ _float_ _|_ _int_ _\]_ ) – 点的笛卡尔坐标，该点可能位于也可能不位于[`VMobject`]()
 
-退货
+返回
 
 沿路径的比例[`VMobject`]()。
 
 返回类型
 
-漂浮
+float
 
 提高
 
 - **ValueError** – 如果`point`不在曲线上。
-- **例外**\- 如果[`VMobject`]()没有分数。
+- **Exception**\- 如果[`VMobject`]()没有分数。
 
-resize*points ( \_new_length* , _resize_func=<函数 resize_array>_ )
+
+
+`resize_points(new_length, resize_func=<function resize_array>)`
 
 调整锚点和手柄数组的大小以具有指定的大小。
 
@@ -669,39 +734,53 @@ resize*points ( \_new_length* , _resize_func=<函数 resize_array>_ )
 - **new_length** ( _int_ ) – 新的（总）点数。
 - **resize_func** ( _Callable_ _\[_ _\[_ _ndarray_ _,_ _int_ _\]_ _,_ _ndarray_ _\]_ ) – 将 Numpy 数组（点）和整数（目标大小）映射到 Numpy 数组的函数。默认实现是基于 Numpy 的`resize`函数。
 
-反向方向( )
+
+
+`reverse_direction()`
 
 通过反转点顺序来恢复点方向。
 
-退货
+返回
 
-返回自我。
+返回self。
 
 返回类型
 
 [`VMobject`]()
 
+
 例子
 
 示例：改变方向
 
-
 ```py
+from manim import *
 
+class ChangeOfDirection(Scene):
+    def construct(self):
+        ccw = RegularPolygon(5)
+        ccw.shift(LEFT)
+        cw = RegularPolygon(5)
+        cw.shift(RIGHT).reverse_direction()
+
+        self.play(Create(ccw), Create(cw),
+        run_time=4)
 ```
 
 
-旋转(_角度_,_轴= array(\[0., 0., 1.\])_ , _about_point = None_ , _\*\* kwargs_ )
+
+`rotate(angle, axis=array([0., 0., 1.]), about_point=None, **kwargs)`
 
 [`Mobject`]()围绕某个点旋转。
 
 参数
 
-- **角度**（_浮动_）–
-- **轴**( _np.ndarray_ ) –
-- **about_point** (_序列\_\_\[_ _float_ _\]_ _|_ _None_ ) –
+- **angle**（_float_）–
+- **axis**( _np.ndarray_ ) –
+- **about_point** (_Sequence\[float\] | None_ ) –
 
-rotate*sheen_direction (*角度*,*轴= array(\[0., 0., 1.\])_ , \_family = True_ )
+
+`rotate_sheen_direction(angle, axis=array([0., 0., 1.]), family=True)`
 
 旋转应用光泽的方向。
 
@@ -710,19 +789,21 @@ rotate*sheen_direction (*角度*,*轴= array(\[0., 0., 1.\])_ , \_family = True_
 - **angle** ( _float_ ) – 光泽方向旋转的角度。
 - **axis** ( _ndarray_ ) – 旋转轴。
 
+
 例子
 
 正常使用：
 
+```py
 Circle().set_sheen_direction(UP).rotate_sheen_direction(PI)
+```
 
-Copy to clipboard
+> 也可以看看
 
-也可以看看
+> [`set_sheen_direction()`]()
 
-[`set_sheen_direction()`]()
 
-scale*handle_to_anchor_distances（*因子\_）
+`scale_handle_to_anchor_distances(factor)`
 
 如果给定手柄点 H 与其关联的锚点 A 之间的距离为 d，则它将 H 更改为距 A 的距离因子 \*d，但从 A 到 H 的线不会改变。这在应用（可微）函数的上下文中最有用，以保留相切属性。人们会将所有手柄拉近其锚点，应用该功能，然后再次将它们推出。
 
@@ -730,7 +811,7 @@ scale*handle_to_anchor_distances（*因子\_）
 
 **Factor** ( _float_ ) – 用于缩放的因子。
 
-退货
+返回
 
 `self`
 
@@ -738,13 +819,14 @@ scale*handle_to_anchor_distances（*因子\_）
 
 [`VMobject`]()
 
-set_anchors_and*handles（*锚点 1*，*手柄 1*，*手柄 2*，*锚点 2\_）
+
+`set_anchors_and_handles(anchors1, handles1, handles2, anchors2)`
 
 给定两组锚点和句柄，对它们进行处理以将它们设置为 VMobject 的锚点和句柄。
 
 anchors1\[i\]、handles1\[i\]、handles2\[i\] 和 anchors2\[i\] 定义 vmobject 的第 i 条贝塞尔曲线。有四个硬编码参数，这是一个问题，因为它使得每条三次曲线的点数不能从 4 个更改（两个锚点和两个手柄）。
 
-退货
+返回
 
 `self`
 
@@ -754,16 +836,18 @@ anchors1\[i\]、handles1\[i\]、handles2\[i\] 和 anchors2\[i\] 定义 vmobject 
 
 参数
 
-- **锚 1**（_序列\_\_\[_ _float_ _\]_）-
-- **句柄 1**（_序列\_\_\[_ _float_ _\]_）-
-- **句柄 2**（_序列\_\_\[_ _float_ _\]_）-
-- **锚点 2**（_序列\_\_\[_ _float_ _\]_）–
+- **anchors1**（_Sequence\_\_\[_ _float_ _\]_）-
+- **handles1**（_Sequence\_\_\[_ _float_ _\]_）-
+- **handles2**（_Sequence\_\_\[_ _float_ _\]_）-
+- **anchors2**（_Sequence\_\_\[_ _float_ _\]_）–
 
-set*color (*颜色*,*系列= True\_ )
+
+`set_color(color, family=True)`
 
 条件是接受一个参数 (x, y, z) 的函数。这里它只是递归到子对象，但是在子类中，这应该基于颜色的内部工作原理进一步实现
 
-set*fill（*颜色=无*，*不透明度=无*，*族=真\_）
+
+`set_fill(color=None, opacity=None, family=True)`
 
 设置 的填充颜色和填充不透明度[`VMobject`]()。
 
@@ -773,7 +857,7 @@ set*fill（*颜色=无*，*不透明度=无*，*族=真\_）
 - **opacity** ( _float_ _|_ _None_ ) – 填充 的不透明度[`VMobject`]()。
 - **family** ( _bool_ ) – 如果为`True`，则还设置所有子对象的填充颜色。
 
-退货
+返回
 
 `self`
 
@@ -787,17 +871,26 @@ set*fill（*颜色=无*，*不透明度=无*，*族=真\_）
 
 ![SetFill-1.png](../../static/SetFill-1.png)
 
-
 ```py
+from manim import *
 
+class SetFill(Scene):
+    def construct(self):
+        square = Square().scale(2).set_fill(WHITE,1)
+        circle1 = Circle().set_fill(GREEN,0.8)
+        circle2 = Circle().set_fill(YELLOW) # No fill_opacity
+        circle3 = Circle().set_fill(color = '#FF2135', opacity = 0.2)
+        group = Group(circle1,circle2,circle3).arrange()
+        self.add(square)
+        self.add(group)
 ```
 
+> 也可以看看
 
-也可以看看
+> `set_style()`
 
-`set_style()`
 
-set_points_as*corners (*点\_)
+`set_points_as_corners(points)`
 
 给定一个点数组，将它们设置为 vmobject 的角点。
 
@@ -807,7 +900,7 @@ set_points_as*corners (*点\_)
 
 **points** ( _Sequence_ _\[_ _float_ _\]_ ) – 将被设置为角点的点数组。
 
-退货
+返回
 
 `self`
 
@@ -815,14 +908,17 @@ set_points_as*corners (*点\_)
 
 [`VMobject`]()
 
-set*sheen (*因子*,*方向= None* , \_family = True* )
+
+
+`set_sheen(factor, direction=None, family=True)`
 
 从某个方向应用颜色渐变。
 
 参数
 
 - **Factor** ( _float_ ) – 应用的光泽/渐变程度。如果为负，则渐变从黑色开始，如果为正，则渐变从白色开始并更改为当前颜色。
-- **Direction** (_可选\_\_\[_ _ndarray_ _\]_ ) – 应用渐变的方向。
+- **Direction** (_Optional\_\_\[_ _ndarray_ _\]_ ) – 应用渐变的方向。
+
 
 例子
 
@@ -830,13 +926,18 @@ set*sheen (*因子*,*方向= None* , \_family = True* )
 
 ![SetSheen-1.png](../../static/SetSheen-1.png)
 
-
 ```py
+from manim import *
 
+class SetSheen(Scene):
+    def construct(self):
+        circle = Circle(fill_opacity=1).set_sheen(-0.3, DR)
+        self.add(circle)
 ```
 
 
-set*sheen_direction (*方向*, \_family = True* )
+
+`set_sheen_direction(direction, family=True)`
 
 设置应用光泽的方向。
 
@@ -844,16 +945,16 @@ set*sheen_direction (*方向*, \_family = True* )
 
 **Direction** ( _ndarray_ ) – 应用渐变的方向。
 
+
 例子
 
 正常使用：
 
-
 ```py
-
+Circle().set_sheen_direction(UP)
 ```
 
 
-也可以看看
+> 也可以看看
 
-[`set_sheen()`](),[`rotate_sheen_direction()`]()
+> [`set_sheen()`](),[`rotate_sheen_direction()`]()
