@@ -6,9 +6,10 @@
 class ShowIncreasingSubsets(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: Animation
+Bases: `Animation`
 
 一次显示一个子对象，使所有先前的子对象显示在屏幕上。
+
 
 例子
 
@@ -33,7 +34,8 @@ class ShowIncreasingSubsetsScene(Scene):
 `update_submobject_list`|
 
 
-interpolate*mobject (*阿尔法\_)
+
+`interpolate_mobject(alpha)`
 
 根据 alpha 值对 mobject 进行插值`Animation`。
 
@@ -43,4 +45,4 @@ interpolate*mobject (*阿尔法\_)
 
 返回类型
 
-没有任何
+None

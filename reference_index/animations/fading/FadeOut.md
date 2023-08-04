@@ -18,6 +18,7 @@ Bases: `_Fade`
 - **target_position** – mobject 在淡出时移动到的位置。如果另一个 mobject 被指定为目标位置，则使用其中心。
 - **scale**– 对象在淡出时缩放的系数。
 
+
 例子
 
 示例：淡入示例
@@ -56,16 +57,17 @@ class FadeInExample(Scene):
 `path_func`|
 
 
-clean_up_from*scene（*场景=无\_）
 
-[`Scene`](manim.scene.scene.Scene.html#manim.scene.scene.Scene "手动场景.场景.场景")完成动画后清理。
+`clean_up_from_scene(scene=None)`
 
-如果动画是移除器，则这包括[`remove()`](manim.scene.scene.Scene.html#manim.scene.scene.Scene.remove "manim.scene.scene.Scene.remove")动画 [`Mobject`](manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject "manim.mobject.mobject.Mobject")。
+[`Scene`]()完成动画后清理。
+
+如果动画是移除器，则这包括[`remove()`]()动画 [`Mobject`]()。
 
 参数
 
-**scene** (_可选\_\_\[_ [_Scene_](manim.scene.scene.Scene.html#manim.scene.scene.Scene "手动场景.场景.场景") _\]_ ) – 应清除动画的场景。
+**scene** (_Optional\_\_\[_ [_Scene_]() _\]_ ) – 应清除动画的场景。
 
 返回类型
 
-没有任何
+None

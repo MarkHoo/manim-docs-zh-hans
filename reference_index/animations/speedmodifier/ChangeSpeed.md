@@ -6,7 +6,7 @@
 class ChangeSpeed(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: Animation
+Bases: `Animation`
 
 修改传递动画的速度。 还可以使用`AnimationGroup`with different 将多个动画合并为一个。`lag_ratio`改变传递的动画`run_time`的 来修改速度。
 
@@ -15,6 +15,7 @@ Bases: Animation
 - **anim** – 要修改速度的动画。
 - **speedinfo** – 包含节点（ 的百分比`run_time`）及其相应的速度因子。
 - **rate_func** – 覆盖`rate_func`传递的动画，在更改速度之前应用。
+
 
 例子
 
@@ -40,6 +41,7 @@ class SpeedModifierExample(Scene):
         )
 ```
 
+
 示例：SpeedModifierUpdater 示例
 
 ```py
@@ -59,6 +61,7 @@ class SpeedModifierUpdaterExample(Scene):
             )
         )
 ```
+
 
 示例：SpeedModifierUpdaterExample2 
 
@@ -123,7 +126,9 @@ classmethod add_updater(mobject, update_function, index=None, call_updater=False
 
 > [`ChangeSpeed`](),[`Mobject.add_updater()`]()
 
-开始( )
+
+
+`begin()`
 
 开始动画。
 
@@ -131,9 +136,10 @@ classmethod add_updater(mobject, update_function, index=None, call_updater=False
 
 返回类型
 
-没有任何
+None
 
-clean_up_from*scene（*场景\_）
+
+`clean_up_from_scene(scene)`
 
 [`Scene`]()完成动画后清理。
 
@@ -145,9 +151,10 @@ clean_up_from*scene（*场景\_）
 
 返回类型
 
-没有任何
+None
 
-完成( )
+
+`finish()`
 
 完成动画。
 
@@ -155,17 +162,19 @@ clean_up_from*scene（*场景\_）
 
 返回类型
 
-没有任何
+None
 
-获取缩放总时间( )
+
+`get_scaled_total_time()`
 
 假设 为`run_time`1 时动画所花费的时间。
 
 返回类型
 
-漂浮
+float
 
-插值(_阿尔法_)
+
+`interpolate(alpha)`
 
 设置动画进度。
 
@@ -177,16 +186,17 @@ clean_up_from*scene（*场景\_）
 
 返回类型
 
-没有任何
+None
 
-update*mobjects ( \_dt* )
 
-更新诸如 starting_mobject 和（对于变换）target_mobject 之类的内容。请注意，由于通常（总是？） self.mobject 会在动画期间暂停其更新，因此这对 self.mobject 没有任何作用。
+`update_mobjects(dt)`
+
+更新诸如 starting_mobject 和（对于变换）target_mobject 之类的内容。请注意，由于通常（总是？） self.mobject 会在动画期间暂停其更新，因此这对 self.mobject None作用。
 
 参数
 
-**dt**（_浮动_）–
+**dt**（_float_）–
 
 返回类型
 
-没有任何
+None

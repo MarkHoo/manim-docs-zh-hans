@@ -6,7 +6,7 @@
 class UpdateFromFunc(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: Animation
+Bases: `Animation`
 
 update_function 形式为 func(mobject)，大概在一个 mobject 的状态依赖于另一个同时动画的 mobject 时使用
 
@@ -18,7 +18,8 @@ update_function 形式为 func(mobject)，大概在一个 mobject 的状态依�
 [`interpolate_mobject`]()|根据 alpha 值对 mobject 进行插值`Animation`。
 
 
-interpolate*mobject (*阿尔法\_)
+
+`interpolate_mobject(alpha)`
 
 根据 alpha 值对 mobject 进行插值`Animation`。
 
@@ -28,4 +29,4 @@ interpolate*mobject (*阿尔法\_)
 
 返回类型
 
-没有任何
+None

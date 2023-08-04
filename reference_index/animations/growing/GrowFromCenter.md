@@ -6,7 +6,7 @@
 class GrowFromCenter(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: GrowFromPoint
+Bases: `GrowFromPoint`
 
 [`Mobject`]()通过从中心生长来引入。
 
@@ -14,6 +14,7 @@ Bases: GrowFromPoint
 
 - **mobject** – 要引入的 mobject。
 - **point_color** – mobject 在增长到其完整大小之前的初始颜色。留空以匹配对象的颜色。
+
 
 例子
 

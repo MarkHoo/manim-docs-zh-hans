@@ -6,7 +6,7 @@
 class Flash(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: AnimationGroup
+Bases: `AnimationGroup`
 
 
 向各个方向发出线路。
@@ -22,6 +22,7 @@ Bases: AnimationGroup
 - **time_width** – 用于闪烁线的时间宽度。请参阅`ShowPassingFlash`了解更多详情。
 - **run_time** – 动画的持续时间。
 - **kwargs** – 要传递给[`Succession`]()构造函数的附加参数
+
 
 例子
 

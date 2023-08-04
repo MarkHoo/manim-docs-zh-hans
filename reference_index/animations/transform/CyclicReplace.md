@@ -7,7 +7,7 @@
 class CyclicReplace(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: Transform
+Bases: `Transform`
 
 循环移动对象的动画。
 
@@ -19,9 +19,10 @@ Bases: Transform
 - **path_arc** – mobjects 到达目标所遵循的弧线角度（以弧度为单位）。
 - **kwargs** – 传递给 的更多关键字参数[`Transform`]()。
 
+
 例子
 
-示例：循环替换示例[¶](#cyclicreplaceexample)
+示例：循环替换示例
 
 ```py
 from manim import *
@@ -36,13 +37,13 @@ class CyclicReplaceExample(Scene):
             self.play(CyclicReplace(*group))
 ```
 
-方法
 
+方法
 
 `create_target`
 
-属性
 
+属性
 
 `path_arc`
 `path_func`

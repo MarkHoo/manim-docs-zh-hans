@@ -2,7 +2,7 @@
 
 更新 mobject 的动画。
 
-课程
+Classes
 
 |||
 |-|-|

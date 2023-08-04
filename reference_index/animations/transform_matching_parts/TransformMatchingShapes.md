@@ -6,7 +6,7 @@
 class TransformMatchingShapes(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: TransformMatchingAbstractBase
+Bases: `TransformMatchingAbstractBase`
 
 试图通过匹配组的子对象的形状来变换组的动画。
 
@@ -15,6 +15,7 @@ Bases: TransformMatchingAbstractBase
 > 也可以看看
 
 > [`TransformMatchingAbstractBase`]()
+
 
 例子
 
@@ -32,6 +33,7 @@ class Anagram(Scene):
         self.play(TransformMatchingShapes(src, tar, path_arc=PI/2))
         self.wait(0.5)
 ```
+
 
 方法
 

@@ -6,9 +6,10 @@
 class Uncreate(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: Create
+Bases: `Create`
 
 类似[`Create`]()，但相反。
+
 
 例子
 

@@ -6,17 +6,21 @@
 class UpdateFromAlphaFunc(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: UpdateFromFunc
+Bases: `UpdateFromFunc`
+
 
 方法
 
-[`interpolate_mobject`]()alpha
+|||
+|-|-|
+[`interpolate_mobject`]()|根据 alpha 值对`Animation`的 mobject 进行插值。
 
-根据 alpha 值对 mobject 进行插值`Animation`。
 
-interpolate*mobject (*阿尔法\_)
 
-根据 alpha 值对 mobject 进行插值`Animation`。
+
+`interpolate_mobject(alpha)`
+
+根据 alpha 值对`Animation`的 mobject 进行插值。
 
 参数
 
@@ -24,4 +28,4 @@ interpolate*mobject (*阿尔法\_)
 
 返回类型
 
-没有任何
+None

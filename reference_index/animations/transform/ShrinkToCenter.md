@@ -6,9 +6,10 @@
 class ShrinkToCenter(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: ScaleInPlace
+Bases: `ScaleInPlace`
 
 使对象收缩到中心的动画。
+
 
 例子
 
@@ -24,6 +25,8 @@ class ShrinkToCenterExample(Scene):
 
 
 方法
+
+
 
 属性
 

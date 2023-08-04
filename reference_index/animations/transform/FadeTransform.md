@@ -6,7 +6,7 @@
 class FadeTransform(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: Transform
+Bases: `Transform`
 
 将一个对象淡入另一个对象。
 
@@ -17,6 +17,7 @@ Bases: Transform
 - **stretch**– 控制目标[`Mobject`]()在动画过程中是否拉伸。默认值：`True`.
 - **dim_to_match**[`Mobject`]() – 如果目标 mobject 没有自动拉伸，则可以在移入时调整目标的初始比例。分别将其设置为 0、1 和 2，使目标的长度与目标的长度相匹配[`Mobject`]()分别从 x、y 和 z 方向开始 。
 - **kwargs** – 更多关键字参数传递给父类。
+
 
 例子
 
@@ -59,13 +60,17 @@ class DifferentFadeTransforms(Scene):
 `path_arc`
 `path_func`
 
-开始( )
+
+
+`begin()`
 
 动画的初始设置。
 
 该动画绑定到的 mobject 是由起始 mobject 和结束 mobject 组成的组。开始时，结束 mobject 取代起始 mobject（并且完全褪色）。最终，事情注定会适得其反。
 
-clean_up_from*scene（*场景\_）
+
+
+`clean_up_from_scene(scene)`
 
 [`Scene`]()完成动画后清理。
 
@@ -75,21 +80,25 @@ clean_up_from*scene（*场景\_）
 
 **scene** – 应该清除动画的场景。
 
-获取所有对象( )
+
+
+`get_all_mobjects()`
 
 获取动画中涉及的所有 mobject。
 
 顺序必须与 interpolate_submobject 的参数顺序匹配
 
-退货
+返回
 
 mobject 的序列。
 
 返回类型
 
-序列\[ [Mobject]() \]
+Sequence\[ [Mobject]() \]
 
-Ghost*to（\*源\*，*目标\_）
+
+
+`ghost_to(source, target)`
 
 将源替换为目标并将不透明度设置为 0。
 

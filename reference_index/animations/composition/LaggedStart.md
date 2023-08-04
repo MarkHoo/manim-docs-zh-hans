@@ -5,18 +5,19 @@
 ```py
 class LaggedStart(mobject=None, *args, use_override=True, **kwargs)
 ```
-Bases: AnimationGroup
+Bases: `AnimationGroup`
 
-[`Animation`](manim.animation.animation.Animation.html#manim.animation.animation.Animation "manim.animation.animation.Animation")根据 调整一系列的时序`lag_ratio`。
+[`Animation`]()根据 调整一系列的时序`lag_ratio`。
 
 参数
 
-- **动画**[`Animation`](manim.animation.animation.Animation.html#manim.animation.animation.Animation "manim.animation.animation.Animation")–要播放的对象序列。
-- **滞后比率**–
+- **animations**[`Animation`]()–要播放的对象序列。
+- **lag_ratio**–
 
   定义动画应用于子对象之前的延迟。lag_ratio `n.nn`表示当前动画播放完毕后将播放`nnn%`下一个动画。默认为 0.05，这意味着下一个动画将在当前动画播放完 5% 时开始。
 
   这不会影响动画的总运行时间。相反，会调整各个动画的运行时间，以便完整的动画具有定义的运行时间。
+
 
 例子
 

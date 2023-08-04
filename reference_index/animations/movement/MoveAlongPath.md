@@ -6,11 +6,11 @@
 class MoveAlongPath(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: Animation
+Bases: `Animation`
 
 使一个 mobject 沿着另一 mobject 的路径移动。.. 标题:: 示例
 
-示例：MoveAlongPathExample [¶](#movealongpathexample)
+示例：MoveAlongPathExample 
 
 ```py
 from manim import *
@@ -33,7 +33,7 @@ class MoveAlongPathExample(Scene):
 
 
 
-interpolate*mobject (*阿尔法\_)
+`interpolate_mobject(alpha)`
 
 根据 alpha 值对 mobject 进行插值`Animation`。
 
@@ -43,4 +43,4 @@ interpolate*mobject (*阿尔法\_)
 
 返回类型
 
-没有任何
+None

@@ -6,9 +6,9 @@
 class AddTextLetterByLetter(mobject=None, *args, use_override=True, **kwargs)
 ```
 
-Bases: ShowIncreasingSubsets
+Bases: `ShowIncreasingSubsets`
 
-[`Text`](manim.mobject.text.text_mobject.Text.html#manim.mobject.text.text_mobject.Text "manim.mobject.text.text_mobject.Text")在现场逐个字母地展示。
+[`Text`]()在现场逐个字母地展示。
 
 参数
 
