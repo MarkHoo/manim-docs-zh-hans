@@ -28,7 +28,8 @@ Bases: `MovingCameraScene`
 `camera`
 
 
-activate*zooming (*动画= False\_ )
+
+`activate_zooming(animate=False)`
 
 此方法用于激活 Zoomed_camera 的缩放功能。
 
@@ -36,11 +37,14 @@ activate*zooming (*动画= False\_ )
 
 **animate** ( _bool_ ) – 是否以动画方式激活缩放相机。
 
-获取缩放因子( )
+
+`get_zoom_factor()`
 
 返回缩放相机的缩放系数。定义为变焦相机的高度与变焦迷你显示屏的高度之间的比率。:返回： 缩放系数。:r 类型：浮动
 
-get*zoom_in*animation ( \_run_time = 2* , *\\*\* kwargs\_ )
+
+
+`get_zoom_in_animation(run_time=2, **kwargs)`
 
 返回相机放大的动画。
 
@@ -49,26 +53,30 @@ get*zoom_in*animation ( \_run_time = 2* , *\\*\* kwargs\_ )
 - **run_time** ( _float_ ) – 相机放大动画的运行时间。
 - \***\*kwargs** – ApplyMethod() 的任何有效关键字参数
 
-退货
+返回
 
 相机放大的动画。
 
 返回类型
 
-[应用方法]()
+[ApplyMethod]()
 
-get_zoomed_display_pop_out*animation ( *\\*\* kwargs\_ )
+
+
+`get_zoomed_display_pop_out_animation(**kwargs)`
 
 这是迷你显示屏弹出的动画，显示变焦相机的内容。
 
-退货
+返回
 
 弹出缩放显示的动画。
 
 返回类型
 
-[应用方法]()
+[ApplyMethod]()
 
-设置( )
+
+
+`setup()`
 
 Manim 在内部使用此方法来设置场景以供正确使用。

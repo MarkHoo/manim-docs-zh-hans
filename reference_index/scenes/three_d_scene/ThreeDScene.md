@@ -55,13 +55,14 @@ add_fixed_orientation_mobjects(*mobjects, **kwargs)
 参数
 
 - **\*mobjects** ( [_Mobject_]() ) – 方向必须固定的 Mobject。
-- \***\*夸格斯**–
+- **\*\*kwargs** –
 
   一些有效的 kwargs 是
 
   use_static_center_func ：布尔 center_func ：函数
 
-begin*3dillusion_camera*rotation（*速率= 1*， \_origin_phi =无*， \_origin_theta =无*）
+
+`begin_3dillusion_camera_rotation(rate=1, origin_phi=None, origin_theta=None)`
 
 此方法围绕当前相机方向创建 3D 相机旋转错觉。
 
@@ -71,7 +72,8 @@ begin*3dillusion_camera*rotation（*速率= 1*， \_origin_phi =无*， \_origin
 - **origin_phi** ( _float_ _|_ _None_ ) – 相机应移动的极角。默认为当前 phi 角度。
 - **origin_theta** ( _float_ _|_ _None_ ) – 相机应移动的方位角。默认为当前 theta 角。
 
-begin_ambient_camera*rotation（*速率= 0.02*，\*约= 'theta'\_）
+
+`begin_ambient_camera_rotation(rate=0.02, about='theta')`
 
 此方法开始相机围绕 Z_AXIS 沿逆时针方向进行环境旋转
 
@@ -80,7 +82,8 @@ begin_ambient_camera*rotation（*速率= 0.02*，\*约= 'theta'\_）
 - **rate** ( _float_ ) – 相机围绕 Z_AXIS 旋转的速率。负利率表示顺时针旋转。
 - **about** ( _str_ ) – 3 个选项之一：\[“theta”、“phi”、“gamma”\]。默认为 θ。
 
-get*moving_mobjects ( *\\*动画\_)
+
+`get_moving_mobjects(*animations)`
 
 此方法返回场景中正在移动的所有 Mobject 的列表，这些 Mobject 也在传递的动画中。
 
@@ -88,7 +91,10 @@ get*moving_mobjects ( *\\*动画\_)
 
 **\*animations** ( [_Animation_]() ) – 将检查其 mobject 的动画。
 
-move*camera（\_phi =无*， _theta =无_， _gamma =无_，_变焦=无_， _focal_distance =无_， _frame_center =无_， _added_anims = \[\]_， _\*\* kwargs_）
+
+```
+move_camera(phi=None, theta=None, gamma=None, zoom=None, focal_distance=None, frame_center=None, added_anims=[], **kwargs)
+```
 
 此方法将相机移动到给定的球面坐标。
 
@@ -102,7 +108,9 @@ move*camera（\_phi =无*， _theta =无_， _gamma =无_，_变焦=无_， _foc
 - **frame_center** ( [_Mobject_]() _|_ _Sequence_ _\[_ _float_ _\]_ _|_ _None_ ) – 笛卡尔坐标中相机框架的新中心。
 - **added_anims** ( _Iterable_ _\[_ [_Animation_]() _\]_ ) – 要同时播放的任何其他动画。
 
-删除*固定\_in_frame_mobjects ( *\\* mobjects\_ )
+
+
+`remove_fixed_in_frame_mobjects(*mobjects)`
 
 > 此方法撤消了 add_fixed_in_frame_mobjects 所做的操作。它允许对象受到相机移动的影响。
 
@@ -110,7 +118,8 @@ move*camera（\_phi =无*， _theta =无_， _gamma =无_，_变焦=无_， _foc
 
 **\*mobjects** ( [_Mobject_]() ) – 位置和方向必须不固定的 Mobject。
 
-删除*固定*方向*mobjects ( *\\* mobjects\_ )
+
+`remove_fixed_orientation_mobjects(*mobjects)`
 
 此方法“取消固定”所传递的对象的方向，这意味着它们将不再相对于相机处于相同的角度。仅当 mobject 首先通过 add_fixed_orientation_mobjects 传递时，这才有意义。
 
@@ -118,7 +127,10 @@ move*camera（\_phi =无*， _theta =无_， _gamma =无_，_变焦=无_， _foc
 
 **\*mobjects** ( [_Mobject_]() ) – 方向必须不固定的 Mobject。
 
-set*camera_orientation（\_phi =无*， _theta =无_， _gamma =无_，_变焦=无_， _focal_distance =无_， _frame_center =无_， _\*\* kwargs_）
+
+```py
+set_camera_orientation(phi=None, theta=None, gamma=None, zoom=None, focal_distance=None, frame_center=None, **kwargs)
+```
 
 此方法设置场景中相机的方向。
 
@@ -131,18 +143,21 @@ set*camera_orientation（\_phi =无*， _theta =无_， _gamma =无_，_变焦=�
 - **Zoom** ( _float_ _|_ _None_ ) – 场景的缩放系数。
 - **frame_center** ( [_Mobject_]() _|_ _Sequence_ _\[_ _float_ _\]_ _|_ _None_ ) – 笛卡尔坐标中相机框架的新中心。
 
-set_to_default_angled_camera*orientation ( *\\*\* kwargs\_ )
+
+`set_to_default_angled_camera_orientation(**kwargs)`
 
 此方法将 default_angle_camera_orientation 设置为传递的关键字参数，并将相机设置为该方向。
 
 参数
 
-\***\*kwargs** – 一些公认的 kwargs 是 phi、theta、focal_distance、gamma，它们与 set_camera_orientation 中的参数含义相同。
+**\*\*kwargs** – 一些公认的 kwargs 是 phi、theta、focal_distance、gamma，它们与 set_camera_orientation 中的参数含义相同。
 
-stop_3dillusion_camera_rotation ( )
+
+`stop_3dillusion_camera_rotation()`
 
 此方法停止所有幻觉相机旋转。
 
-stop_ambient_camera*rotation ( \_about = 'theta'* )
+
+`stop_ambient_camera_rotation(about='theta')`
 
 此方法停止所有环境相机旋转。
