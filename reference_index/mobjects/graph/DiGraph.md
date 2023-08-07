@@ -14,9 +14,9 @@ Bases: `GenericGraph`
 
 与无向图相比，给定边中的顶点的指定顺序在这里是相关的。
 
-也可以看看
+> 也可以看看
 
-[`GenericGraph`]()
+> [`GenericGraph`]()
 
 参数
 

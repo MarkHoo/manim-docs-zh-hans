@@ -25,7 +25,7 @@ Bases: `Line`
 
 示例：虚线示例
 
-![DashedLineExample-1.png](../../static/DashedLineExample-1.png)
+![](../../static/DashedLineExample-1.png)
 
 ```py
 from manim import *
@@ -45,7 +45,7 @@ class DashedLineExample(Scene):
 
 |||
 |-|-|
-[`get_end`])|返回线的终点。
+[`get_end`]|返回线的终点。
 [`get_first_handle`]()|返回第一个句柄的点。
 [`get_last_handle`]()|返回最后一个句柄的点。
 [`get_start`]()|返回线的起点。

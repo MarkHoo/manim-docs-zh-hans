@@ -12,7 +12,7 @@ Bases: `AnnularSector`
 
 示例：ExampleSector
 
-![ExampleSector-1.png](../../static/ExampleSector-1.png)
+![](../../static/ExampleSector-1.png)
 
 ```py
 from manim import *
@@ -33,7 +33,7 @@ class ExampleSector(Scene):
 属性
 
 |||
-|||
+|-|-|
 `animate`|用于对 的任何方法的应用程序进行动画处理`self`。
 `animation_overrides`|
 `color`|

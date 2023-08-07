@@ -10,6 +10,8 @@ Bases: `Camera`
 
 方法
 
+|||
+|-|-|
 [`capture_mobjects`]()|通过将 mobject 打印在 上来捕获它们`pixel_array`。
 [`init_background`]()|初始化背景。
 [`set_background`]()|转换为有效的 RGB 值后，将背景设置为传递的 Pixel_array。
