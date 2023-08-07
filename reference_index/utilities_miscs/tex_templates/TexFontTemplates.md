@@ -4,9 +4,10 @@
 
 
 ```py
-
+class TexFontTemplates
 ```
 
+Bases: `object`
 
 [http://jf.burnol.free.fr/showcase.html](http://jf.burnol.free.fr/showcase.html)中描述的字体的 TeX 模板集合[](http://jf.burnol.free.fr/showcase.html)
 
@@ -18,7 +19,7 @@
 正常用作 Tex() 和 MathTex() mobject 的关键字参数 tex_template 的值：
 
 ```py
-
+``Tex("My TeX code", tex_template=TexFontTemplates.comic_sans)``
 ```
 
 笔记
@@ -27,7 +28,9 @@
 
 要进行实验，请尝试渲染 TexFontTemplateLibrary 示例场景：
 
-`manim path/to/manim/example_scenes/advanced_tex_fonts.py TexFontTemplateLibrary -p -ql`
+```sh
+manim path/to/manim/example_scenes/advanced_tex_fonts.py TexFontTemplateLibrary -p -ql
+```
 
 
 方法
@@ -92,15 +95,18 @@
 [`zapf_chancery`]()|扎普夫办公厅
 
 
-american*typewriter *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
+
+`american_typewriter = <manim.utils.tex.TexTemplate object>`
 
 美国打字机
 
-antykwa _=_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
+
+`antykwa = <manim.utils.tex.TexTemplate object>`
 
 Antykwa Półtawskiego（希腊语和数学符号的 TX 字体）
 
-apple*chancery *=\_ _<manim.utils.tex.TexTemplate\_\_对象>_ 
+
+`apple_chancery = <manim.utils.tex.TexTemplate object>`
 
 苹果办公厅
 

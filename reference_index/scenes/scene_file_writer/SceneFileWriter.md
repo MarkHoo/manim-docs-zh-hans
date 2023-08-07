@@ -10,15 +10,16 @@ Bases: `object`
 
 SceneFileWriter 是使用 FFMPEG 将播放的动画实际写入视频文件的对象。这主要供 Manim 内部使用。你很少（如果有的话）必须使用此类的方法，除非修改 Manim 现实的结构。
 
-部分
+`sections`
 
 用于分割场景
 
 类型
 
-列表[`Section`]()
+list[`Section`]()
 
-sections_output_dir 
+
+`sections_output_dir`
 
 部分视频存储在哪里
 
@@ -26,25 +27,28 @@ sections_output_dir
 
 `pathlib.Path`
 
-输出名称
+
+`output_name`
 
 不带扩展名的电影名称和部分视频名称的基础
 
 类型
 
-斯特
+str
 
 一些有用的属性是：
 
-“写入电影”（布尔=假）
+“write_to_movie” (bool=False)
 
 是否将动画写入视频文件。
 
-“电影文件扩展名”（str =“.mp4”）
+
+“movie_file_extension” (str=”.mp4”)
 
 输出视频的文件类型扩展名。
 
-“部分电影文件”
+
+“partial_movie_files”
 
 所有部分电影文件的列表。
 
@@ -87,7 +91,8 @@ sections_output_dir
 `force_output_as_scene_name`
 
 
-add*audio_segment（\_new_segment*，_时间=无_， _gain_to_background =无_）
+
+`add_audio_segment(new_segment, time=None, gain_to_background=None)`
 
 此方法从 AudioSegment 类型对象添加音频片段和合适的参数。
 
@@ -97,7 +102,8 @@ add*audio_segment（\_new_segment*，_时间=无_， _gain_to_background =无_�
 - **time** ( _float_ _|_ _None_ ) – 应添加声音的时间戳。
 - **Gain_to_background** ( _float_ _|_ _None_ ) – 片段相对于背景的增益。
 
-添加部分电影文件（_哈希动画_）
+
+`add_partial_movie_file(hash_animation)`
 
 将新的部分影片文件路径添加到 scene.partial_movie_files 和哈希中的当前部分。此方法将从哈希计算路径。除此之外，它还会将新动画添加到当前部分。
 
@@ -105,7 +111,8 @@ add*audio_segment（\_new_segment*，_时间=无_， _gain_to_background =无_�
 
 **hash_animation** ( _str_ ) – 动画的哈希值。
 
-add*sound ( \_sound_file* ,_时间= None_ ,_增益= None_ , _\*\* kwargs_ )
+
+`add_sound(sound_file, time=None, gain=None, **kwargs)`
 
 此方法添加声音文件中的音频片段。
 
@@ -116,7 +123,8 @@ add*sound ( \_sound_file* ,_时间= None_ ,_增益= None_ , _\*\* kwargs_ )
 - **Gain** ( _float_ _|_ _None_ ) – 给定音频片段的增益。
 - \***\*kwargs** – 此方法使用 add_audio_segment，因此可以在此处引用其中使用的任何关键字参数。
 
-开始动画（_allow_write = False_， _file_path = None_）
+
+`begin_animation(allow_write=False, file_path=None)`
 
 由 manim 在内部使用，将动画流式传输到 FFMPEG 以显示或写入文件。
 
@@ -124,31 +132,37 @@ add*sound ( \_sound_file* ,_时间= None_ ,_增益= None_ , _\*\* kwargs_ )
 
 **allowed_write** ( _bool_ ) – 是否写入视频文件。
 
-清理缓存( )
+
+`clean_cache()`
 
 将通过删除最旧的 partial_movie_files 来清理缓存。
 
-关闭电影管道( )
+
+`close_movie_pipe()`
 
 由 Manim 在内部使用以正常停止写入 FFMPEG 的输入缓冲区
 
-组合到电影( )
+
+`combine_to_movie()`
 
 由 Manim 在内部使用，将构成场景的单独的部分影片文件组合成该场景的单个视频文件。
 
-合并到部分视频( )
+
+`combine_to_section_videos()`
 
 连接每个部分的部分电影文件。
 
 返回类型
 
-没有任何
+None
 
-创建音频段（）
+
+`create_audio_segment()`
 
 创建一个空的、无声的音频段。
 
-动画结束（_allow_write = False_）
+
+`end_animation(allow_write=False)`
 
 Manim 在内部使用它来优雅地停止流式传输到 FFMPEG。
 
@@ -156,23 +170,28 @@ Manim 在内部使用它来优雅地停止流式传输到 FFMPEG。
 
 **allowed_write** ( _bool_ ) – 是否写入视频文件。
 
-完成( )
+
+`finish()`
 
 完成对 FFMPEG 缓冲区的写入或将图像写入输出目录。将部分电影文件合并到整个场景中。如果 save_last_frame 为 True，则将最后一帧保存在默认图像目录中。
 
-完成最后一个部分( )
+
+`finish_last_section()`
 
 如果当前节为空，则删除它。
 
 返回类型
 
-没有任何
+None
 
-刷新缓存目录( )
+
+
+`flush_cache_directory()`
 
 删除所有缓存的部分电影文件
 
-获取分辨率目录( )
+
+`get_resolution_directory()`
 
 获取直接包含视频文件的分辨率目录的名称。
 
@@ -198,11 +217,13 @@ MEDIA_DIR
 
 `str`
 
-初始化音频（）
+
+`init_audio()`
 
 帮助编剧为电影添加音频做好准备。
 
-init*output_directories (*场景名称\_)
+
+`init_output_directories(scene_name)`
 
 初始化输出目录。
 
@@ -210,7 +231,8 @@ init*output_directories (*场景名称\_)
 
 `config`例如， 可以读取目录`config['media_dir']`。如果目标目录尚不存在，则会创建它们。
 
-is*already_cached（*哈希调用\_）
+
+`is_already_cached(hash_invocation)`
 
 将检查是否存在以 hash_inplication 命名的文件。
 
@@ -226,29 +248,33 @@ is*already_cached（*哈希调用\_）
 
 `bool`
 
-next*section（*名称*，*类型*， \_skip_animations*）
+
+`next_section(name, type, skip_animations)`
 
 在此创建分段剪切。
 
 参数
 
-- **名称**( _str_ ) –
-- **类型**( _str_ ) –
-- **跳过动画**( _bool_ ) –
+- **name**( _str_ ) –
+- **type**( _str_ ) –
+- **skip_animations**( _bool_ ) –
 
 返回类型
 
-没有任何
+None
 
-open*movie_pipe（*文件路径=无\_）
+
+`open_movie_pipe(file_path=None)`
 
 由 Manim 在内部使用来初始化 FFMPEG 并开始写入 FFMPEG 的输入缓冲区。
 
-print_file_ready*message (*文件路径\_)
+
+`print_file_ready_message(file_path)`
 
 将“文件就绪”消息打印到 STDOUT。
 
-保存最终图像（_图像_）
+
+`save_final_image(image)`
 
 这个名字用词不当。此方法将传递给它的图像保存在默认图像目录中。
 
@@ -256,7 +282,8 @@ print_file_ready*message (*文件路径\_)
 
 **image** ( _ndarray_ ) – 要保存的图像的像素数组。
 
-write*frame ( \_frame_or_renderer* )
+
+`write_frame(frame_or_renderer)`
 
 Manim 在内部使用它来将帧写入 FFMPEG 输入缓冲区。
 
@@ -264,6 +291,7 @@ Manim 在内部使用它来将帧写入 FFMPEG 输入缓冲区。
 
 **frame_or_renderer** ( _np.ndarray_ _|_ _OpenGLRenderer_ ) – 帧的像素数组。
 
-write_subcaption_file ( )
+
+`write_subcaption_file()`
 
 写入子字幕文件。

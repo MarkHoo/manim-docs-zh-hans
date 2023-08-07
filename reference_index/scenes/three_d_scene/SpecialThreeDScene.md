@@ -32,7 +32,7 @@ Bases: `ThreeDScene`
 `camera`
 
 
-获取轴( )
+`get_axes()`
 
 返回一组 3D 轴。
 
@@ -44,7 +44,8 @@ Bases: `ThreeDScene`
 
 [`ThreeDAxes`]()
 
-获取默认相机位置( )
+
+`get_default_camera_position()`
 
 返回 default_angle_camera 位置。
 
@@ -54,9 +55,10 @@ phi、theta、focal_distance 和 gamma 的字典。
 
 返回类型
 
-词典
+dict
 
-get*sphere ( *\\*\* kwargs\_ )
+
+`get_sphere(**kwargs)`
 
 返回一个球体，其中传递的关键字参数作为属性。
 
@@ -72,6 +74,7 @@ get*sphere ( *\\*\* kwargs\_ )
 
 [`Sphere`]()
 
-设置相机到默认位置( )
+
+`set_camera_to_default_position()`
 
 将相机设置为其默认位置。

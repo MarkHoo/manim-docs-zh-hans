@@ -32,198 +32,63 @@ class MyScene(Scene):
 
 方法
 
-
-[`add`]()
-
-Mobject 将按照添加顺序从背景到前景显示。
-
-[`add_foreground_mobject`]()
-
-将单个 mobject 添加到前台，并在内部添加到列表 foreground_mobjects 和 mobjects。
-
-[`add_foreground_mobjects`]()
-
-将 mobject 添加到前台，并在内部添加到列表 foreground_mobjects 和 mobjects。
-
-`add_mobjects_from_animations`
-
-[`add_sound`]()
-
-该方法用于为动画添加声音。
-
-[`add_subcaption`]()
-
-在当前时间戳的相应子字幕文件中添加一个条目。
-
-[`add_updater`]()
-
-为场景添加更新功能。
-
-[`begin_animations`]()
-
-启动场景的动画。
-
-[`bring_to_back`]()
-
-从场景中移除 mobject 并将其添加到场景的后面。
-
-[`bring_to_front`]()
-
-将传递的对象再次添加到场景中，将它们推到场景的前面。
-
-`check_interactive_embed_is_valid`
-
-[`clear`]()
-
-从场景中移除 self.mobjects 和 self.foreground_mobjects 中存在的所有 mobject。
-
-[`compile_animation_data`]()
-
-给定动画列表，编译相应的静态和移动对象，并收集动画持续时间。
-
-[`compile_animations`]()
-
-从任何 \_AnimationBuilders 创建 \_MethodAnimations 并使用传递给 play() 的 kwargs 更新动画 kwargs。
-
-[`construct`]()
-
-将内容添加到场景中。
-
-`embed`
-
-[`get_attrs`]()
-
-给定属性的标识符/名称，获取场景的属性。
-
-[`get_mobject_family_members`]()
-
-返回场景中所有对象的家庭成员列表。
-
-`get_moving_and_static_mobjects`
-
-[`get_moving_mobjects`]()
-
-获取传递的动画中的所有移动对象。
-
-[`get_restructured_mobject_list`]()
-
-给定一个 mobject 列表和一个要删除的 mobject 列表，这会从 mobject 列表中过滤掉可删除的 mobject。
-
-[`get_run_time`]()
-
-获取动画列表的总运行时间。
-
-[`get_time_progression`]()
-
-当你制作自己的动画时，你几乎不会使用它。
-
-[`get_top_level_mobjects`]()
-
-返回所有不是子对象的对象。
-
-`interact`
-
-[`interactive_embed`]()
-
-与 embed() 类似，但允许屏幕交互。
-
-[`is_current_animation_frozen_frame`]()
-
-返回当前动画是否产生静态帧（通常是 Wait）。
-
-`mouse_drag_orbit_controls`
-
-`mouse_scroll_orbit_controls`
-
-[`next_section`]()
-
-在这里创建分离；最后一部分完成并创建一个新部分。
-
-`on_key_press`
-
-`on_key_release`
-
-`on_mouse_drag`
-
-`on_mouse_motion`
-
-`on_mouse_press`
-
-`on_mouse_scroll`
-
-[`pause`]()
-
-暂停场景（即显示冻结的帧）。
-
-[`play`]()
-
-在此场景中播放动画。
-
-[`play_internal`]()
-
-此方法用于准备要渲染的动画、应用动画所需的参数和参数、渲染它们并将它们写入视频文件。
-
-[`remove`]()
-
-通过从“mobjects”和“foreground_mobjects”中删除 mobjects，从场景和前景中删除传递的 mobjects 列表中的 mobjects
-
-[`remove_foreground_mobject`]()
-
-从前台删除单个 mobject，并在内部从 foreground_mobjects 列表中删除。
-
-[`remove_foreground_mobjects`]()
-
-从前台删除 mobject，并在内部从 foreground_mobjects 列表中删除。
-
-[`remove_updater`]()
-
-从场景中删除更新功能。
-
-[`render`]()
-
-渲染此场景。
-
-[`replace`]()
-
-将场景中的一个 mobject 替换为另一个 mobject，保留绘制顺序。
-
-[`restructure_mobjects`]()
-
-TL:WR
-
-`set_key_function`
-
-[`setup`]()
-
-这意味着由通常子类化的任何场景来实现，并且在调用构造方法之前涉及一些常见的设置。
-
-[`should_update_mobjects`]()
-
-如果该场景的 mobject 应该更新，则返回 True。
-
-[`tear_down`]()
-
-这意味着由通常子类化的任何场景来实现，并且在场景结束之前具有要调用的一些通用方法。
-
-`update_meshes`
-
-[`update_mobjects`]()
-
-开始更新场景中的所有 mobject。
-
-[`update_self`]()
-
-运行所有场景更新程序功能。
-
-`update_to_time`
-
-[`wait`]()
-
-播放“无操作”动画。
-
-[`wait_until`]()
-
-等待直到满足条件，直至达到给定的最大持续时间。
+|||
+|-|-|
+[`add`]()|Mobject 将按照添加顺序从背景到前景显示。
+[`add_foreground_mobject`]()|将单个 mobject 添加到前台，并在内部添加到列表 foreground_mobjects 和 mobjects。
+[`add_foreground_mobjects`]()|将 mobject 添加到前台，并在内部添加到列表 foreground_mobjects 和 mobjects。
+`add_mobjects_from_animations`|
+[`add_sound`]()|该方法用于为动画添加声音。
+[`add_subcaption`]()|在当前时间戳的相应子字幕文件中添加一个条目。
+[`add_updater`]()|为场景添加更新功能。
+[`begin_animations`]()|启动场景的动画。
+[`bring_to_back`]()|从场景中移除 mobject 并将其添加到场景的后面。
+[`bring_to_front`]()|将传递的对象再次添加到场景中，将它们推到场景的前面。
+`check_interactive_embed_is_valid`|
+[`clear`]()|从场景中移除 self.mobjects 和 self.foreground_mobjects 中存在的所有 mobject。
+[`compile_animation_data`]()|给定动画列表，编译相应的静态和移动对象，并收集动画持续时间。
+[`compile_animations`]()|从任何 \_AnimationBuilders 创建 \_MethodAnimations 并使用传递给 play() 的 kwargs 更新动画 kwargs。
+[`construct`]()|将内容添加到场景中。
+`embed`|
+[`get_attrs`]()|给定属性的标识符/名称，获取场景的属性。
+[`get_mobject_family_members`]()|返回场景中所有对象的家庭成员列表。
+`get_moving_and_static_mobjects`|
+[`get_moving_mobjects`]()|获取传递的动画中的所有移动对象。
+[`get_restructured_mobject_list`]()|给定一个 mobject 列表和一个要删除的 mobject 列表，这会从 mobject 列表中过滤掉可删除的 mobject。
+[`get_run_time`]()|获取动画列表的总运行时间。
+[`get_time_progression`]()|当你制作自己的动画时，你几乎不会使用它。
+[`get_top_level_mobjects`]()|返回所有不是子对象的对象。
+`interact`|
+[`interactive_embed`]()|与 embed() 类似，但允许屏幕交互。
+[`is_current_animation_frozen_frame`]()|返回当前动画是否产生静态帧（通常是 Wait）。
+`mouse_drag_orbit_controls`|
+`mouse_scroll_orbit_controls`|
+[`next_section`]()|在这里创建分离；最后一部分完成并创建一个新部分。
+`on_key_press`|
+`on_key_release`|
+`on_mouse_drag`|
+`on_mouse_motion`|
+`on_mouse_press`|
+`on_mouse_scroll`|
+[`pause`]()|暂停场景（即显示冻结的帧）。
+[`play`]()|在此场景中播放动画。
+[`play_internal`]()|此方法用于准备要渲染的动画、应用动画所需的参数和参数、渲染它们并将它们写入视频文件。
+[`remove`]()|通过从“mobjects”和“foreground_mobjects”中删除 mobjects，从场景和前景中删除传递的 mobjects 列表中的 mobjects
+[`remove_foreground_mobject`]()|从前台删除单个 mobject，并在内部从 foreground_mobjects 列表中删除。
+[`remove_foreground_mobjects`]()|从前台删除 mobject，并在内部从 foreground_mobjects 列表中删除。
+[`remove_updater`]()|从场景中删除更新功能。
+[`render`]()|渲染此场景。
+[`replace`]()|将场景中的一个 mobject 替换为另一个 mobject，保留绘制顺序。
+[`restructure_mobjects`]()|TL:WR
+`set_key_function`|
+[`setup`]()|这意味着由通常子类化的任何场景来实现，并且在调用构造方法之前涉及一些常见的设置。
+[`should_update_mobjects`]()|如果该场景的 mobject 应该更新，则返回 True。
+[`tear_down`]()|这意味着由通常子类化的任何场景来实现，并且在场景结束之前具有要调用的一些通用方法。
+`update_meshes`|
+[`update_mobjects`]()|开始更新场景中的所有 mobject。
+[`update_self`]()|运行所有场景更新程序功能。`update_to_time`|
+[`wait`]()|播放“无操作”动画。
+[`wait_until`]()|等待直到满足条件，直至达到给定的最大持续时间。
 
 
 属性
@@ -231,7 +96,8 @@ TL:WR
 `camera`
 
 
-添加（_\* mobjects_）
+
+`add(*mobjects)`
 
 Mobject 将按照添加顺序从背景到前景显示。
 
@@ -245,9 +111,10 @@ Mobject 将按照添加顺序从背景到前景显示。
 
 返回类型
 
-[场景]()
+[Scene]()
 
-add*foreground_mobject ( \_mobject* )
+
+`add_foreground_mobject(mobject)`
 
 将单个 mobject 添加到前台，并在内部添加到列表 foreground_mobjects 和 mobjects。
 
@@ -261,9 +128,10 @@ add*foreground_mobject ( \_mobject* )
 
 返回类型
 
-[场景]()
+[Scene]()
 
-add*foreground_mobjects ( *\\* mobjects\_ )
+
+`add_foreground_mobjects(*mobjects)`
 
 将 mobject 添加到前台，并在内部添加到列表 foreground_mobjects 和 mobjects。
 
@@ -277,9 +145,10 @@ add*foreground_mobjects ( *\\* mobjects\_ )
 
 返回类型
 
-[场景]()
+[Scene]()
 
-add*sound ( \_sound_file* , _time_offset = 0_ ,_增益= None_ , _\*\* kwargs_ )
+
+`add_sound(sound_file, time_offset=0, gain=None, **kwargs)`
 
 该方法用于为动画添加声音。
 
@@ -287,7 +156,7 @@ add*sound ( \_sound_file* , _time_offset = 0_ ,_增益= None_ , _\*\* kwargs_ )
 
 - **sound_file** ( _str_ ) – 声音文件的路径。
 - **time_offset** ( _float_ ) – 声音文件中的偏移量，在此之后可以播放声音。
-- **增益**( _float_ _|_ _None_ ) – 声音的放大。
+- **gain**( _float_ _|_ _None_ ) – 声音的放大。
 
 
 例子
@@ -315,7 +184,8 @@ class SoundExample(Scene):
 [在此处](https://github.com/ManimCommunity/manim/blob/main/docs/source/_static/click.wav)下载上一个示例的资源。
 
 
-add*subcaption (*内容*,*持续时间= 1* ,\*偏移量= 0\_ )
+
+`add_subcaption(content, duration=1, offset=0)`
 
 在当前时间戳的相应子字幕文件中添加一个条目。
 
@@ -324,18 +194,17 @@ add*subcaption (*内容*,*持续时间= 1* ,\*偏移量= 0\_ )
 参数
 
 - **content** ( _str_ ) – 子标题内容。
-- **持续时间**( _float_ ) – 显示子标题的持续时间（以秒为单位）。
+- **duration**( _float_ ) – 显示子标题的持续时间（以秒为单位）。
 - **offset** ( _float_ ) – 此偏移量（以秒为单位）将添加到子标题的开始时间戳中。
 
 返回类型
 
-没有任何
+None
 
 
 例子
 
 此示例说明了向动画添加子标题的两种可能性：
-
 
 ```py
 class SubcaptionExample(Scene):
@@ -355,15 +224,15 @@ class SubcaptionExample(Scene):
 ```
 
 
-添加更新程序（_函数_）
+`add_updater(func)`
 
 为场景添加更新功能。
 
 场景更新器函数每帧运行，它们是最后运行的更新器类型。
 
-警告
+> 警告
 
-使用 Cairo 渲染器时，不会以与 mobject 更新程序相同的方式检测修改 mobject 的场景更新程序。更具体地说，仅通过场景更新器修改的移动对象不一定会添加到*移动移动对象*列表中，因此可能不会每帧都更新。
+> 使用 Cairo 渲染器时，不会以与 mobject 更新程序相同的方式检测修改 mobject 的场景更新程序。更具体地说，仅通过场景更新器修改的移动对象不一定会添加到*移动移动对象*列表中，因此可能不会每帧都更新。
 
 TL;DR：使用 mobject 更新程序来更新 mobject。
 
@@ -373,21 +242,23 @@ TL;DR：使用 mobject 更新程序来更新 mobject。
 
 返回类型
 
-没有任何
+None
 
-也可以看看
+> 也可以看看
 
-[`Scene.remove_updater()`](),[`Scene.update_self()`]()
+> [`Scene.remove_updater()`](),[`Scene.update_self()`]()
 
-开始\_动画( )
+
+`begin_animations()`
 
 启动场景的动画。
 
 返回类型
 
-没有任何
+None
 
-Bring*to_back ( *\\* mobjects\_ )
+
+`bring_to_back(*mobjects)`
 
 从场景中移除 mobject 并将其添加到场景的后面。
 
@@ -401,9 +272,10 @@ Bring*to_back ( *\\* mobjects\_ )
 
 返回类型
 
-[场景]()
+[Scene]()
 
-Bring*to_front ( *\\* mobjects\_ )
+
+`bring_to_front(*mobjects)`
 
 将传递的对象再次添加到场景中，将它们推到场景的前面。
 
@@ -417,9 +289,10 @@ Bring*to_front ( *\\* mobjects\_ )
 
 返回类型
 
-[场景]()
+[Scene]()
 
-清除( )
+
+`clear()`
 
 从场景中移除 self.mobjects 和 self.foreground_mobjects 中存在的所有 mobject。
 
@@ -429,9 +302,10 @@ Bring*to_front ( *\\* mobjects\_ )
 
 返回类型
 
-[场景]()
+[Scene]()
 
-编译动画数据（_\*动画_， _\*\* play_kwargs_）
+
+`compile_animation_data(*animations, **play_kwargs)`
 
 给定动画列表，编译相应的静态和移动对象，并收集动画持续时间。
 
@@ -439,7 +313,7 @@ Bring*to_front ( *\\* mobjects\_ )
 
 参数
 
-- **动画**( [_Animation_]() ) – 带有 mobject 方法和参数的动画或 mobject
+- **animations**( [_Animation_]() ) – 带有 mobject 方法和参数的动画或 mobject
 - **play_kwargs** – 影响传入内容的命名参数`animations`，例如`run_time`，`lag_ratio`等等。
 
 返回
@@ -448,9 +322,11 @@ Bring*to_front ( *\\* mobjects\_ )
 
 返回类型
 
-自我，无
+self, None
 
-编译动画（_\* args_， _\*\* kwargs_）
+
+
+`compile_animations(*args, **kwargs)`
 
 从任何 \_AnimationBuilders 创建 \_MethodAnimations 并使用传递给 play() 的 kwargs 更新动画 kwargs。
 
@@ -465,9 +341,11 @@ Bring*to_front ( *\\* mobjects\_ )
 
 返回类型
 
-元组\[ `Animation`\]
+Tuple\[ `Animation`\]
 
-构造( )
+
+
+`construct()`
 
 将内容添加到场景中。
 
@@ -482,7 +360,6 @@ Bring*to_front ( *\\* mobjects\_ )
 
 典型的 manim 脚本包含一个派生自[`Scene`]()重写`Scene.contruct()`方法的类：
 
-
 ```py
 class MyScene(Scene):
     def construct(self):
@@ -490,11 +367,12 @@ class MyScene(Scene):
 ```
 
 
-也可以看看
+> 也可以看看
 
-[`Scene.setup()`](), [`Scene.render()`](),[`Scene.tear_down()`]()
+> [`Scene.setup()`](), [`Scene.render()`](),[`Scene.tear_down()`]()
 
-get*attrs ( *\\*键\_)
+
+`get_attrs(*keys)`
 
 给定属性的标识符/名称，获取场景的属性。
 
@@ -508,9 +386,10 @@ get*attrs ( *\\*键\_)
 
 返回类型
 
-列表
+list
 
-get_mobject_family_members ( )
+
+`get_mobject_family_members()`
 
 返回场景中所有对象的家庭成员列表。如果添加了 Circle() 和 VGroup(Rectangle(),Triangle())，则它不仅返回 Circle()、Rectangle() 和 Triangle()，还返回 VGroup() 对象。
 
@@ -520,9 +399,10 @@ mobject 家族成员列表。
 
 返回类型
 
-列表
+list
 
-get*moving_mobjects ( *\\*动画\_)
+
+`get_moving_mobjects(*animations)`
 
 获取传递的动画中的所有移动对象。
 
@@ -536,9 +416,10 @@ get*moving_mobjects ( *\\*动画\_)
 
 返回类型
 
-列表
+list
 
-get*restructed_mobject*list ( \_mobjects* , \_to_remove* )
+
+`get_restructured_mobject_list(mobjects, to_remove)`
 
 给定一个 mobject 列表和一个要删除的 mobject 列表，这会从 mobject 列表中过滤掉可删除的 mobject。
 
@@ -553,9 +434,10 @@ get*restructed_mobject*list ( \_mobjects* , \_to_remove* )
 
 返回类型
 
-列表
+list
 
-get*run_time（*动画\_）
+
+`get_run_time(animations)`
 
 获取动画列表的总运行时间。
 
@@ -569,9 +451,12 @@ get*run_time（*动画\_）
 
 返回类型
 
-漂浮
+float
 
-get*time_progression (*运行时间*,*描述*, \_n_iterations = None* , _override_skip_animations = False_ )
+
+```py
+get_time_progression(run_time, description, n_iterations=None, override_skip_animations=False)
+```
 
 当你制作自己的动画时，你几乎不会使用它。该方法供 Manim 内部使用。
 
@@ -589,9 +474,10 @@ get*time_progression (*运行时间*,*描述*, \_n_iterations = None* , _overrid
 
 返回类型
 
-时间进度
+time_progression
 
-get_top_level_mobjects ( )
+
+`get_top_level_mobjects()`
 
 返回所有不是子对象的对象。
 
@@ -601,35 +487,42 @@ get_top_level_mobjects ( )
 
 返回类型
 
-列表
+list
 
-交互式嵌入( )
+
+`interactive_embed()`
 
 与 embed() 类似，但允许屏幕交互。
 
-is_current_animation_frozen_frame ( )
+
+
+`is_current_animation_frozen_frame()`
 
 返回当前动画是否产生静态帧（通常是 Wait）。
 
 返回类型
 
-布尔值
+bool
 
-next*section（*名称= '未命名'*，*类型= DefaultSectionType.NORMAL*， \_skip_animations = False*）
+
+```py
+next_section(name='unnamed', type=DefaultSectionType.NORMAL, skip_animations=False)
+```
 
 在这里创建分离；最后一部分完成并创建一个新部分。 `skip_animations`跳过本节中所有动画的渲染。请参阅有关如何使用部分的[文档。]()
 
 参数
 
-- **名称**( _str_ ) –
-- **类型**( _str_ ) –
-- **跳过动画**( _bool_ ) –
+- **name**( _str_ ) –
+- **type**( _str_ ) –
+- **skip_animations**( _bool_ ) –
 
 返回类型
 
-没有任何
+None
 
-暂停（_持续时间= 1.0_）[\[来源\]]()
+
+`pause(duration=1.0)`
 
 暂停场景（即显示冻结的帧）。
 
@@ -637,13 +530,17 @@ next*section（*名称= '未命名'*，*类型= DefaultSectionType.NORMAL*， \_
 
 参数
 
-**持续时间**( _float_ ) – 暂停的持续时间。
+**duration**( _float_ ) – 暂停的持续时间。
 
-也可以看看
+> 也可以看看
 
-[`wait()`](),[`Wait`]()
+> [`wait()`](),[`Wait`]()
 
-播放( _\* args_ , _subcaption = None_ , _subcaption_duration = None_ , _subcaption_offset = 0_ , _\*\* kwargs_ )
+
+
+```py
+play(*args, subcaption=None, subcaption_duration=None, subcaption_offset=0, **kwargs)
+```
 
 在此场景中播放动画。
 
@@ -655,7 +552,8 @@ next*section（*名称= '未命名'*，*类型= DefaultSectionType.NORMAL*， \_
 - **subcaption_offset** – 添加的子标题的开始时间的偏移量（以秒为单位）。
 - **kwargs** – 所有其他关键字都会传递给渲染器。
 
-play*internal ( \_skip_rendering = False* )
+
+`play_internal(skip_rendering=False)`
 
 此方法用于准备要渲染的动画、应用动画所需的参数和参数、渲染它们并将它们写入视频文件。
 
@@ -663,7 +561,8 @@ play*internal ( \_skip_rendering = False* )
 
 **Skip_rendering** ( _bool_ ) – 是否应该跳过渲染，默认为 False
 
-删除（_\* mobjects_）
+
+`remove(*mobjects)`
 
 通过从“mobjects”和“foreground_mobjects”中删除 mobjects，从场景和前景中删除传递的 mobjects 列表中的 mobjects
 
@@ -671,7 +570,9 @@ play*internal ( \_skip_rendering = False* )
 
 **\*mobjects** ( [_Mobject_]() ) – 要删除的 mobject。
 
-删除前景 mobject（_mobject_）
+
+
+`remove_foreground_mobject(mobject)`
 
 从前台删除单个 mobject，并在内部从 foreground_mobjects 列表中删除。
 
@@ -685,9 +586,11 @@ play*internal ( \_skip_rendering = False* )
 
 返回类型
 
-[场景]()
+[Scene]()
 
-删除前景对象( _\* to_remove_ )
+
+
+`remove_foreground_mobjects(*to_remove)`
 
 从前台删除 mobject，并在内部从 foreground_mobjects 列表中删除。
 
@@ -701,9 +604,11 @@ play*internal ( \_skip_rendering = False* )
 
 返回类型
 
-[场景]()
+[Scene]()
 
-删除更新程序（_函数_）
+
+
+`remove_updater(func)`
 
 从场景中删除更新功能。
 
@@ -713,13 +618,14 @@ play*internal ( \_skip_rendering = False* )
 
 返回类型
 
-没有任何
+None
 
-也可以看看
+> 也可以看看
 
-[`Scene.add_updater()`](),[`Scene.update_self()`]()
+> [`Scene.add_updater()`](),[`Scene.update_self()`]()
 
-渲染（_预览= False_）
+
+`render(preview=False)`
 
 渲染此场景。
 
@@ -727,7 +633,9 @@ play*internal ( \_skip_rendering = False* )
 
 **Preview** ( _bool_ ) – 如果为 true，则在文件查看器中打开场景。
 
-替换（_old_mobject_， _new_mobject_）
+
+
+`replace(old_mobject, new_mobject)`
 
 将场景中的一个 mobject 替换为另一个 mobject，保留绘制顺序。
 
@@ -740,9 +648,12 @@ play*internal ( \_skip_rendering = False* )
 
 返回类型
 
-没有任何
+None
 
-restruct*mobjects ( \_to_remove* , _mobject_list_name = 'mobjects'_ , _extract_families = True_ )
+
+```py
+restructure_mobjects(to_remove, mobject_list_name='mobjects', extract_families=True)
+```
 
 TL:WR
 
@@ -762,13 +673,17 @@ TL:WR
 
 返回类型
 
-[场景]()
+[Scene]()
 
-设置( )
+
+
+`setup()`
 
 这意味着由通常子类化的任何场景来实现，并且在调用构造方法之前涉及一些常见的设置。
 
-应该\_update_mobjects ( )
+
+
+`should_update_mobjects()`
 
 如果该场景的 mobject 应该更新，则返回 True。
 
@@ -782,13 +697,16 @@ TL:WR
 
 返回类型
 
-布尔值
+bool
 
-拆解( )
+
+
+`tear_down()`
 
 这意味着由通常子类化的任何场景来实现，并且在场景结束之前具有要调用的一些通用方法。
 
-update*mobjects ( \_dt* )
+
+`update_mobjects(dt)`
 
 开始更新场景中的所有 mobject。
 
@@ -796,7 +714,8 @@ update*mobjects ( \_dt* )
 
 **dt** ( _float_ ) – 更新之间的时间变化。默认（大部分）为 1/frames_per_second
 
-更新自身（_dt_）
+
+`update_self(dt)`
 
 运行所有场景更新程序功能。
 
@@ -806,25 +725,27 @@ update*mobjects ( \_dt* )
 
 **dt** ( _float_ ) – 自上次更新以来的场景时间。
 
-也可以看看
+> 也可以看看
 
-[`Scene.add_updater()`](),[`Scene.remove_updater()`]()
+> [`Scene.add_updater()`](),[`Scene.remove_updater()`]()
 
-等待（_持续时间= 1.0_， _stop_condition = None_， _frozen_frame = None_）
+
+`wait(duration=1.0, stop_condition=None, frozen_frame=None)`
 
 播放“无操作”动画。
 
 参数
 
-- **持续时间**( _float_ ) – 动画的运行时间。
+- **duration**( _float_ ) – 动画的运行时间。
 - **stop_condition** ( _Callable_ _\[_ _\[_ _\]_ _,_ _bool_ _\]_ _|_ _None_ ) – 没有位置参数的函数，每次渲染帧时都会评估该函数。仅当函数的返回值为 true 或经过指定的时间时动画才会停止`duration` 。
 - **freeze_frame** ( _bool_ _|_ _None_ ) – 如果为 True，则不评估更新程序函数，并且动画输出冻结帧。如果为 False，则调用更新程序函数并照常渲染帧。如果“无”（默认值），则场景会尝试确定帧是否自行冻结。
 
-也可以看看
+> 也可以看看
 
-[`Wait`](),`should_mobjects_update()`
+> [`Wait`](),`should_mobjects_update()`
 
-等待直到（_停止条件_，_最大时间= 60_）
+
+`wait_until(stop_condition, max_time=60)`
 
 等待直到满足条件，直至达到给定的最大持续时间。
 

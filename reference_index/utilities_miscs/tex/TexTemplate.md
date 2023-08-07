@@ -4,9 +4,10 @@
 
 
 ```py
-
+class TexTemplate(tex_compiler=None, output_format=None, documentclass=None, preamble=None, placeholder_text=None, post_doc_commands=None, **kwargs)
 ```
 
+Bases: `object`
 
 TeX 模板用于创建 Tex() 和 MathTex() 对象。
 
@@ -19,7 +20,9 @@ TeX 模板用于创建 Tex() 和 MathTex() 对象。
 - **placeholder_text** ( _str_ _|_ _None_ ) – 文档中的文本将被要呈现的表达式替换
 - **post_doc_commands** ( _str_ _|_ _None_ ) – 要在之后插入的文本（定义、命令）`\begin{document}`，例如`\boldmath`
 
-tex\_编译器
+
+
+`tex_compiler`
 
 要使用的 TeX 编译器，例如`latex`,`pdflatex`或`lualatex`
 
@@ -27,7 +30,9 @@ tex\_编译器
 
 `str`
 
-输出格式
+
+
+`output_format`
 
 编译产生的输出格式，例如`.dvi`或`.pdf`
 
@@ -35,7 +40,9 @@ tex\_编译器
 
 `str`
 
-文档类
+
+
+`documentclass`
 
 定义文档类的命令，例如`\documentclass[preview]{standalone}`
 
@@ -43,7 +50,9 @@ tex\_编译器
 
 `str`
 
-序言
+
+
+`preamble`
 
 文件的序言，即`\documentclass`和之间的部分`\begin{document}`
 
@@ -51,7 +60,9 @@ tex\_编译器
 
 `str`
 
-占位符文本
+
+
+`placeholder_text`
 
 文档中的文本将被要呈现的表达式替换
 
@@ -59,7 +70,9 @@ tex\_编译器
 
 `str`
 
-post_doc_commands
+
+
+`post_doc_commands`
 
 要在 后面插入的文本（定义、命令）`\begin{document}`，例如`\boldmath`
 
@@ -94,7 +107,8 @@ post_doc_commands
 `default_tex_compiler`
 
 
-添加到文档（_txt_）
+
+`add_to_document(txt)`
 
 将 txt 添加到 TeX 模板中紧接 begin{document} 之后，例如`\boldmath`
 
@@ -102,7 +116,9 @@ post_doc_commands
 
 **txt** ( _str_ ) – 包含要添加的文本的字符串。
 
-add*to_preamble ( \_txt* , _prepend = False_ )
+
+
+`add_to_preamble(txt, prepend=False)`
 
 将内容添加到 TeX 模板的序言中（例如定义、包）。文本可以插入到序言的开头或结尾。
 
@@ -111,13 +127,15 @@ add*to_preamble ( \_txt* , _prepend = False_ )
 - **txt** ( _str_ ) – 包含要添加的文本的字符串，例如`\usepackage{hyperref}`
 - **prepend** ( _bool_ ) – 文本是否应添加在序言的开头，即紧接其后`\documentclass`。默认是将其添加到前导码的末尾，即之前`\begin{document}`
 
-get_texcode_for*expression (*表达式\_)
+
+
+`get_texcode_for_expression(expression)`
 
 将表达式逐字插入 TeX 模板中。
 
 参数
 
-**表达式**( _str_ ) – 包含要排版的表达式的字符串，例如`$\sqrt{2}$`
+**expression**( _str_ ) – 包含要排版的表达式的字符串，例如`$\sqrt{2}$`
 
 返回
 
@@ -127,14 +145,16 @@ get_texcode_for*expression (*表达式\_)
 
 `str`
 
-get_texcode_for_expression_in*env（*表达式*，\*环境\_）
+
+
+`get_texcode_for_expression_in_env(expression, environment)`
 
 将表达式插入到包含在 begin{environment} 和 end{environment} 中的 TeX 模板中
 
 参数
 
-- **表达式**( _str_ ) – 包含要排版的表达式的字符串，例如`$\\sqrt{2}$`
-- **环境**( _str_ ) – 包含应在其中排版表达式的环境的字符串，例如`align*`
+- **expression**( _str_ ) – 包含要排版的表达式的字符串，例如`$\\sqrt{2}$`
+- **environment**( _str_ ) – 包含应在其中排版表达式的环境的字符串，例如`align*`
 
 返回
 
