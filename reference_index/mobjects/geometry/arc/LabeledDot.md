@@ -19,7 +19,7 @@ A[`Dot`]()的中心包含一个标签。
 
 示例：几个 LabeledDots 
 
-![SeveralLabeledDots-1.png](../static/SeveralLabeledDots-1.png)
+![](../static/SeveralLabeledDots-1.png)
 
 ```py
 from manim import *
