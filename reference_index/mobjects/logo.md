@@ -2,7 +2,7 @@
 
 Manim 徽标和横幅的实用程序。
 
-课程
+Classes
 
 [`ManimBanner`]()
 
