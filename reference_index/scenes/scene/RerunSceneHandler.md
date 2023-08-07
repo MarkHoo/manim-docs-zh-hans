@@ -18,7 +18,8 @@ Bases: `FileSystemEventHandler`
 [`on_modified`]()|当文件或目录被修改时调用。
 
 
-on_modified（_事件_）
+
+`on_modified(event)`
 
 当文件或目录被修改时调用。
 

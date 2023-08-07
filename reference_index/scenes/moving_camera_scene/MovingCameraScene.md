@@ -26,7 +26,8 @@ Bases: `Scene`
 
 `camera`
 
-get*moving_mobjects ( *\\*动画\_)
+
+`get_moving_mobjects(*animations)`
 
 此方法返回场景中正在移动的所有 Mobject 的列表，这些 Mobject 也在传递的动画中。
 

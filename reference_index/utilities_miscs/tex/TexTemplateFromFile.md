@@ -4,8 +4,10 @@
 
 
 ```py
-
+class TexTemplateFromFile(*, tex_filename='tex_template.tex', **kwargs)
 ```
+
+Bases: `TexTemplate`
 
 从模板文件创建的 TexTemplate 对象（默认：tex_template.tex）
 
@@ -14,7 +16,9 @@
 - **tex_filename** ( _str_ _|_ _os.PathLike_ ) – 有效 TeX 模板文件的路径
 - **kwargs** – 的参数[`TexTemplate`]()。
 
-模板文件
+
+
+`template_file`
 
 有效 TeX 模板文件的路径
 
@@ -22,7 +26,9 @@
 
 `str`
 
-身体
+
+
+`body`
 
 TeX 模板文件的内容
 
@@ -30,7 +36,9 @@ TeX 模板文件的内容
 
 `str`
 
-tex\_编译器
+
+
+`tex_compiler`
 
 要使用的 TeX 编译器，例如`latex`,`pdflatex`或`lualatex`
 
@@ -38,13 +46,16 @@ tex\_编译器
 
 `str`
 
-输出格式
+
+
+`output_format`
 
 编译产生的输出格式，例如`.dvi`或`.pdf`
 
 类型
 
 `str`
+
 
 
 方法
@@ -71,7 +82,9 @@ tex\_编译器
 `default_tex_compiler`
 
 
-添加到文档（_txt_）
+
+
+`add_to_document(txt)`
 
 将 txt 添加到 TeX 模板中紧接 begin{document} 之后，例如`\boldmath`
 
@@ -79,7 +92,9 @@ tex\_编译器
 
 **txt** – 包含要添加的文本的字符串。
 
-add*to_preamble ( \_txt* , _prepend = False_ )
+
+
+`add_to_preamble(txt, prepend=False)`
 
 将内容添加到 TeX 模板的序言中（例如定义、包）。文本可以插入到序言的开头或结尾。
 

@@ -3,8 +3,10 @@
 合格名称：`manim.utils.color.Colors`
 
 ```py
-
+class Colors(value)
 ```
+
+Bases: `Enum`
 
 预定义颜色的列表。
 
@@ -15,8 +17,10 @@
 
 使用这些颜色的首选方法是从 manim 导入它们的常量：
 
-```py
-
+```sh
+>>> from manim import RED, GREEN, BLUE
+>>> RED
+'#FC6255'
 ```
 
 
@@ -24,8 +28,10 @@
 
 或者，您也可以通过使用 . 直接导入此 Enum 并直接使用其成员`color.value`。请注意，这种方式使用小写的颜色名称。
 
-```py
-
+```sh
+>>> from manim.utils.color import Colors
+>>> Colors.red.value
+'#FC6255'
 ```
 
 

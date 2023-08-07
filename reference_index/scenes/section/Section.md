@@ -22,23 +22,23 @@ Bases: `object`
 *   **skip_animations**( _bool_ ) –
     
 
-type
+`type`
 
 第三方应用程序可以使用它来对不同类型的部分进行分类。
 
-video
+`video`
 
 包含属于相对于节目录的节的动画的视频文件的路径。如果`None`，则该部分将不会被保存。
 
-name
+`name`
 
 此部分的人类可读的非唯一名称。
 
-skip_animations
+`skip_animations`
 
 当 时，跳过本节中的动画渲染`True`。
 
-partial_movie_files
+`partial_movie_files`
 
 属于本节的动画。
 
@@ -63,7 +63,8 @@ partial_movie_files
 
 返回类型
 
-列表\[字符串\]
+list\[str\]
+
 
 `get_dict(sections_dir)`
 
@@ -73,11 +74,12 @@ partial_movie_files
 
 参数
 
-**sections_dir** (_路径_) –
+**sections_dir** (_Path_) –
 
 返回类型
 
-字典\[str，任意\]
+dict\[str, Any\]
+
 
 `is_empty()`
 
@@ -87,4 +89,5 @@ partial_movie_files
 
 返回类型
 
-布尔值
+bool
+
