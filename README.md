@@ -1,7 +1,6 @@
+# Manim中文文档
 
 ![](./static/cropped.png)
-
-# Manim社区版中文文档
 
 [Manim Community Edition](https://www.manim.community/)
 
