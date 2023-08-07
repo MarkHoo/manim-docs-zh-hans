@@ -1,4 +1,4 @@
-# Manim社区版中文文档
+# Manim中文文档
 
 ![](./static/cropped.png)
 
