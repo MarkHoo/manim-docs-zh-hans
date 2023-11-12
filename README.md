@@ -4,7 +4,7 @@
 
 [Manim Community Edition](https://www.manim.community)
 
-当前版本：[`v0.17.3`](./changelogs/0.17.3-changelog.md)
+当前版本：[`v0.18.0`](./changelogs/0.17.3-changelog.md)
 
 学习交流QQ群：`731872950`
 
@@ -29,7 +29,7 @@
 	- [ ] **参考手册**校对
 	- [x] **插件**校对
 	- [x] **变更日志**校对
-- [x] 准备`v0.18.0`和`v1.0`版本发布后的文档更新
+- [x] 准备`v0.18.1`和`v1.0`版本发布后的文档更新
 
 ## License
 
