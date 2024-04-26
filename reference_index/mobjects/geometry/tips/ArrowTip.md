@@ -12,7 +12,6 @@ Bases: `VMobject`
 箭头提示的基类。
 
 > 也可以看看
-
 > [`ArrowTriangleTip`]() [`ArrowTriangleFilledTip`]() [`ArrowCircleTip`]() [`ArrowCircleFilledTip`]() [`ArrowSquareTip`]() [`ArrowSquareFilledTip`]() [`StealthTip`]()
 
 例子
@@ -116,7 +115,15 @@ class ArrowTipsShowcase(Scene):
 `width`|mobject 的宽度。
 
 
-_属性_ `base`
+`_original__init__(*args, **kwargs)`
+
+初始化自身。请参阅 help(type(self)) 以获取准确的签名。
+
+返回类型：
+None
+
+
+_属性_ `base`: Point3D
 
 箭头尖端的基点。
 
@@ -131,7 +138,7 @@ _属性_ `base`
 array([1.65, 0.  , 0.  ])
 ```
 
-_属性_ `length`
+_属性_ `length`: floating
 
 箭头尖端的长度。
 
@@ -145,7 +152,7 @@ _属性_ `length`
 ```
 
 
-_属性_ `tip_angle`
+_属性_ `tip_angle`: float
 
 箭头尖端的角度。
 
@@ -159,7 +166,7 @@ True
 ```
 
 
-_属性_ `tip_point`
+_属性_ `tip_point`: Point3D
 
 箭头尖端的尖端点。
 
@@ -173,7 +180,7 @@ array([2., 0., 0.])
 ```
 
 
-_属性_ `vector`
+_属性_ `vector`: Vector
 
 从基点指向端点的矢量。
 

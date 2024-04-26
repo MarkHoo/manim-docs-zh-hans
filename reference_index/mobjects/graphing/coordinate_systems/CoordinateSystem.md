@@ -799,11 +799,20 @@ ax.input_to_graph_coords(x=3, graph=parabola)
 参数
 
 - **x**（_float_）–
-- **图**（[_ParametricFunction]()）–
+- **graph**（[_ParametricFunction]()）–
 
 返回类型
 
-tuple
+tuple[float, float]
+
+
+
+
+
+
+
+
+
 
 
 `input_to_graph_point(x, graph)`
@@ -813,7 +822,7 @@ tuple
 参数
 
 - **x** ( _float_ ) – 上点的 x 值`graph`。
-- **graph** ( [_ParametricFunction_]() _|_ [_VMobject_]() ) –[`ParametricFunction`]()点所在的图。
+- **graph** ( manim.mobject.graphing.functions.ParametricFunction | manim.mobject.types.vectorized_mobject.VMobject ) – 该点所在的`ParametricFunction`。
 
 返回
 
@@ -823,7 +832,7 @@ tuple
 
 `np.ndarray`
 
-提高
+额外：
 
 **ValueError** – 当目标 x 不在折线图范围内时。
 
@@ -847,6 +856,21 @@ class InputToGraphPointExample(Scene):
 
         self.add(ax, curve, sq)
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 `p2c(point)`

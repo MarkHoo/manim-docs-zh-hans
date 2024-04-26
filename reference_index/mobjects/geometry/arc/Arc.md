@@ -55,7 +55,26 @@ class ArcExample(Scene):
 
 参数
 
-**radius**（_float_）–
+- **radius**（_float_）–
+- **start_angle** (float) –
+- **angle** (float) –
+- **num_components** (int) –
+- **arc_center** (Point3D) –
+
+
+```py
+_original__init__(radius=1.0, start_angle=0, angle=1.5707963267948966, num_components=9, arc_center=array([0., 0., 0.]), **kwargs)
+```
+
+初始化自身。请参阅 help(type(self)) 以获取准确的签名。
+
+参数：
+- **radius** (float) –
+- **start_angle** (float) –
+- **angle** (float) –
+- **num_components** (int) –
+- **arc_center** (Point3D) –
+
 
 `generate_points()`
 
@@ -63,7 +82,17 @@ class ArcExample(Scene):
 
 被创造召唤。这是一个空方法，可以由子类实现。
 
+返回类型:
+None
+
+
 `get_arc_center(warning=True)`
 
 查看前两个锚点的法线，并找到它们的交点
+
+参数:
+warning (bool) –
+
+返回类型:
+Point3D
 

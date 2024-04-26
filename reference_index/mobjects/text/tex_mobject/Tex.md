@@ -41,3 +41,8 @@ Tex('The horse does not eat cucumber salad.')
 `sheen_factor`|
 `stroke_color`|
 `width`|mobject 的宽度。
+
+
+`_original__init__(*tex_strings, arg_separator='', tex_environment='center', **kwargs)`
+
+初始化自身。请参阅 help(type(self)) 以获取准确的签名。

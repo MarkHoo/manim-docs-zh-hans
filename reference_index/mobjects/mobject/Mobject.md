@@ -802,6 +802,9 @@ become(mobject, copy_submobjects=True, match_height=False, match_width=False, ma
 - **mobject** ( [_Mobject_]() ) –
 - **copy_submobjects** ( _bool_ ) –
 
+返回类型：
+_Self_
+
 
 例子
 
@@ -819,6 +822,17 @@ class BecomeScene(Scene):
         circ.become(square)
         self.wait(0.5)
 ```
+
+
+`center()`
+
+将对象的中心移动到场景的中心。
+
+返回：
+居中的对象。
+
+返回类型：
+Mobject
 
 
 `clear_updaters(recursive=True)`
@@ -1401,12 +1415,9 @@ class MatchPointsScene(Scene):
 
 [`Mobject`]()
 
-> 笔记
-
+> 提示：
 > 子对象的所有更新程序都将被删除，但仅匹配给定对象的更新程序，而不是其子对象的更新程序。
-
 > 也可以看看
-
 > [`add_updater()`](),[`clear_updaters()`]()
 
 
@@ -1557,7 +1568,6 @@ mobject 的子类可以实现`-`和`-=`删除方法。
 [`Mobject`]()
 
 > 也可以看看
-
 > [`clear_updaters()`](), [`add_updater()`](),[`get_updaters()`]()
 
 
@@ -2048,7 +2058,6 @@ Square
 [`Mobject`]()
 
 > 也可以看看
-
 > [`resume_updating()`](),[`add_updater()`]()
 
 

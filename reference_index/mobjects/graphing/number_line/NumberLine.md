@@ -39,8 +39,7 @@ Bases: `Line`
 - **except_origin_tick** (_bool_) –
 
 
-> 笔记
-
+> 提示：
 > 包含负值和正值的数字范围将从 0 点生成，并且可能不包含最小/最大值处的刻度，因为刻度位置取决于步长。
 
 例子
@@ -130,6 +129,52 @@ class NumberLineExample(Scene):
 `width`|mobject 的宽度。
 
 
+`_create_label_tex(label_tex, label_constructor=None, **kwargs)`
+
+检查标签是否为 a ，否则，通过传递toVMobject创建标签。label_texlabel_constructor
+
+参数：
+- **label_tex** (str | float | manim.mobject.types.vectorized_mobject.VMobject) – 应为其创建 mobject 的标签。如果标签已经是一个 mobject，则不会创建新的 mobject。
+- **label_constructor** (Optional[Callable]) – 可选。label_tex作为参数传递时返回 mobject 的类或函数。如果None传递（默认），则`label_constructor` 使用属性中的标签构造函数。
+
+返回：
+The label.
+
+返回类型：
+VMobject
+
+
+```py
+_original__init__(x_range=None, length=None, unit_size=1, include_ticks=True, tick_size=0.1, numbers_with_elongated_ticks=None, longer_tick_multiple=2, exclude_origin_tick=False, rotation=0, stroke_width=2.0, include_tip=False, tip_width=0.35, tip_height=0.35, tip_shape=None, include_numbers=False, font_size=36, label_direction=array([ 0., -1., 0.]), label_constructor=<class 'manim.mobject.text.tex_mobject.MathTex'>, scaling=<manim.mobject.graphing.scale.LinearBase object>, line_to_number_buff=0.25, decimal_number_config=None, numbers_to_exclude=None, numbers_to_include=None, **kwargs)
+```
+
+初始化自身。请参阅 help(type(self)) 以获取准确的签名。
+
+参数：
+**x_range** (Sequence[float] | None) –
+**length** (float | None) –
+**unit_size** (float) –
+**include_ticks** (bool) –
+**tick_size** (float) –
+**numbers_with_elongated_ticks** (Iterable[float] | None) –
+**longer_tick_multiple** (int) –
+**exclude_origin_tick** (bool) –
+**rotation** (float) –
+**stroke_width** (float) –
+**include_tip** (bool) –
+**tip_width** (float) –
+**tip_height** (float) –
+**tip_shape** (type[ArrowTip] | None) –
+**include_numbers** (bool) –
+**font_size** (float) –
+**label_direction** (Sequence[float]) –
+**label_constructor** (VMobject) –
+**scaling** (\_ScaleBase) –
+**line_to_number_buff** (float) –
+**decimal_number_config** (dict | None) –
+**numbers_to_exclude** (Iterable[float] | None) –
+**numbers_to_include** (Iterable[float] | None) –
+
 
 ```py
 add_labels(dict_values, direction=None, buff=None, font_size=None, label_constructor=None)
@@ -145,8 +190,7 @@ add_labels(dict_values, direction=None, buff=None, font_size=None, label_constru
 - **font_size** ( _float_ _|_ _None_ ) – 要定位的 mobject 的字体大小。
 - **label_constructor** ( [_VMobject_]() _|_ _None_ ) –[`VMobject`]()将用于构造标签的类。如果未指定，则默认`label_constructor`为数轴的属性。
 
-提高
-
+额外
 **AttributeError** – 如果标签没有属性`font_size`，`AttributeError`则会引发错误。
 
 

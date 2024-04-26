@@ -1,176 +1,42 @@
-# Color
+# 颜色
 
-用于不同Color模型之间转换的Color和实用函数。
+用于处理颜色和预定义颜色常量的实用程序。
 
-Classes
+## 颜色数据结构
 
 |||
 |-|-|
-[`Colors`]()|预定义Color的列表。
+|[`core`]()||
 
-Functions
+Manim 的（内部）颜色数据结构和一些用于颜色转换的实用程序。
 
-`average_color(*colors)`
+## 预定义颜色
 
-参数
+Manim 中有多种预定义颜色可用：
 
-**colors**（_Color_）–
+- 中列出的颜色[`color.manim_colors`]()被加载到 Manim 的全局名称空间中。
+- [`color.AS2700`]()、[`color.X11`]()、 和中的颜色[`color.XKCD`]()需要通过其模块（在 Manim 的全局命名空间中可用）访问，或单独导入。例如：
 
-返回类型
+```
+>>> from manim import XKCD
+>>> XKCD.AVOCADO
+ManimColor('#90B134')
+```
 
-_Color_
+  或者，另一种选择：
 
-`color_gradient(reference_colors, length_of_output)`
+```
+>>> from manim.utils.color.XKCD import AVOCADO
+>>> AVOCADO
+ManimColor('#90B134')
+```
 
-参数
+以下模块包含预定义的颜色常量：
 
-- **Reference_colors** (_Iterable**\[**Color\_\_\]_ ) –
-- **length_of_output**( _int_ ) –
-
-返回类型
-
-list\[Color\]
-
-`color_to_int_rgb(color)`
-
-参数
-
-**color**（_Color_）–
-
-返回类型
-
-_ndarray_
-
-`color_to_int_rgba(color, opacity=1.0)`
-
-参数
-
-- **color**（_Color_）–
-- **opacity**（_float_）–
-
-返回类型
-
-_ndarray_
-
-`color_to_rgb(color)`
-
-参数
-
-**color**(_Color\_\_|_ _str_ ) –
-
-返回类型
-
-np.ndarray
-
-
-`color_to_rgba(color, alpha=1)`
-
-参数
-
-- **color**(_Color\_\_|_ _str_ ) –
-- **alpha**（_float_）–
-
-返回类型
-
-np.ndarray
-
-
-`get_shaded_rgb(rgb, point, unit_normal_vect, light_source)`
-
-参数
-
-- **rgb** ( _ndarray_ ) –
-- **point**( _ndarray_ ) –
-- **unit_normal_vect** ( _ndarray_ ) –
-- **light_source** ( _ndarray_ ) –
-
-返回类型
-
-_ndarray_
-
-
-`hex_to_rgb(hex_code)`
-
-参数
-
-**hex_code**( _str_ ) –
-
-返回类型
-
-_ndarray_
-
-
-`interpolate_color(color1, color2, alpha)`
-
-参数
-
-- **Color 1**（_Color_）–
-- **Color 2**（_Color_）–
-- **alpha**（_float_）–
-
-返回类型
-
-_Color_
-
-
-`invert_color(color)`
-
-参数
-
-**color**（_Color_）–
-
-返回类型
-
-_Color_
-
-
-`print_constant_definitions()`
-
-用于生成以下常量值的简单函数。要运行它，请将此函数和 Colors 类粘贴到文件中并运行它们。
-
-
-`random_bright_color()`
-
-返回类型
-
-_Color_
-
-
-`random_color()`
-
-返回类型
-
-_Color_
-
-
-`rgb_to_color(rgb)`
-
-参数
-
-**rgb** (_Iterable\_\_\[_ _float_ _\]_ ) –
-
-返回类型
-
-_Color_
-
-
-`rgb_to_hex(rgb)`
-
-参数
-
-**rgb** (_Iterable\_\_\[_ _float_ _\]_ ) –
-
-返回类型
-
-str
-
-
-`rgba_to_color(rgba)`
-
-参数
-
-**rgba** (_Iterable\_\_\[_ _float_ _\]_ ) –
-
-返回类型
-
-_Color_
+|||
+|-|-|
+[`manim_colors`]()|全局名称空间中包含的颜色。
+[`AS2700`]()|澳大利亚颜色标准
+[`BS381`]()|英国颜色标准
+[`XKCD`]()|XKCD 颜色名称调查中的颜色
+[`X11`]()|X11 颜色

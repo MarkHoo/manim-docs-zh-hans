@@ -98,6 +98,13 @@ class ImageInterpolationEx(Scene):
 `width`|mobject 的宽度。
 
 
+`_original__init__(filename_or_array, scale_to_resolution=1080, invert=False, image_mode='RGBA', **kwargs)`
+
+初始化自身。请参阅 help(type(self)) 以获取准确的签名。
+
+参数：
+**scale_to_resolution** (int) –
+
 
 `fade(darkness=0.5, family=True)`
 

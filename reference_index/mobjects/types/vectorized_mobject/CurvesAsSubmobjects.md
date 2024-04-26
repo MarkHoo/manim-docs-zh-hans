@@ -31,6 +31,9 @@ class LineGradientExample(Scene):
 
 方法
 
+|||
+|-|-|
+`point_from_proportion`|获取沿 路径的一定比例的点CurvesAsSubmobjects。
 
 
 属性
@@ -47,3 +50,42 @@ class LineGradientExample(Scene):
 `sheen_factor`|
 `stroke_color`|
 `width`|mobject 的宽度。
+
+
+参数：
+
+**vmobject** ( [_VMobject_]() ) –
+
+`_original__init__(vmobject, **kwargs)`
+
+初始化自身。请参阅 help(type(self)) 以获取准确的签名。
+
+参数：
+
+**vmobject** ( [_VMobject_]() ) –
+
+返回类型：
+
+None
+
+
+`point_from_proportion(alpha)`
+
+获取沿 路径的一定比例的点[`CurvesAsSubmobjects`]()。
+
+参数：
+
+**alpha** ( _float_ ) – 沿路径的比例[`CurvesAsSubmobjects`]()。
+
+返回：
+
+[`CurvesAsSubmobjects`]()上的点。
+
+返回类型：
+
+`numpy.ndarray`
+
+额外：
+
+- **ValueError** – 如果`alpha`不在 0 和 1 之间。
+- **Exception**\- 如果[`CurvesAsSubmobjects`]()没有子对象，或者没有子对象有点。

@@ -1,4 +1,4 @@
-# Manim横幅
+# ManimBanner
 
 合格名称：`manim.mobject.logo.ManimBanner`
 
@@ -55,8 +55,8 @@ class LightThemeBanner(Scene):
 |||
 |-|-|
 [`create`]()|Manim 标志的创作动画。
-[`expand`]()|将 Manim 的徽标扩展到其横幅中的动画。
-[`scale`]()|按指定的比例因子缩放横幅。
+[`expand`]()|将 Manim 的徽标扩展到其banner中的动画。
+[`scale`]()|按指定的比例因子缩放banner。
 
 
 属性
@@ -74,6 +74,13 @@ class LightThemeBanner(Scene):
 `stroke_color`|
 `width`|mobject 的宽度。
 
+
+`_original__init__(dark_theme=True)`
+
+初始化自身。请参阅 help(type(self)) 以获取准确的签名。
+
+参数
+**dark_theme** (bool) –
 
 
 `create(run_time=2)`
@@ -96,15 +103,14 @@ Manim 标志的创作动画。
 
 `expand(run_time=1.5, direction='center')`
 
-将 Manim 的徽标扩展到其横幅中的动画。
+将 Manim 的徽标扩展到其banner中的动画。
 
-返回的动画将横幅从其初始状态（仅代表 Manim 的徽标和图标）转换为展开状态（显示全名和图标）。
+返回的动画将banner从其初始状态（仅代表 Manim 的徽标和图标）转换为展开状态（显示全名和图标）。
 
 有关如何使用它的信息，请参阅类文档。
 
-> 笔记
-
-> 在调用此方法之前，文本“anim”不是横幅对象的子对象。扩展后，它被添加为子对象，因此横幅对象的后续动画也适用于文本“anim”。
+> 提示：
+> 在调用此方法之前，文本“anim”不是banner对象的子对象。扩展后，它被添加为子对象，因此banner对象的后续动画也适用于文本“anim”。
 
 参数
 
@@ -140,15 +146,15 @@ class ExpandDirections(Scene):
 
 `scale(scale_factor, **kwargs)`
 
-按指定的比例因子缩放横幅。
+按指定的比例因子缩放banner。
 
 参数
 
-**scale_factor** ( _float_ ) – 用于缩放横幅的因子。
+**scale_factor** ( _float_ ) – 用于缩放banner的因子。
 
 返回
 
-缩放横幅。
+缩放banner。
 
 返回类型
 

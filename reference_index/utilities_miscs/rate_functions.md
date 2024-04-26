@@ -54,7 +54,6 @@ class RateFuncExample(Scene):
 3.  Ease In Out - 动画有一个平滑的开始和平滑的结束。
 
 > 笔记
-
 > 标准函数不会导出，因此要使用它们，您可以执行以下操作：rate_func=rate_functions.ease_in_sine 另一方面，更常用的非标准函数被导出并可以直接使用。
 
 示例：RateFunctions1 示例
@@ -532,6 +531,45 @@ float
 
 - **t**（_float_）–
 - **inflection**（_float_）–
+
+返回类型
+
+float
+
+
+`smoothererstep(t)`
+
+三阶 SmoothStep sigmoid 函数的实现。一阶、二阶和三阶导数（速度、加速度和加加速度）在端点处为零。 https://en.wikipedia.org/wiki/Smoothstep
+
+参数
+
+**t**（_float_）–
+
+返回类型
+
+float
+
+
+`smootherstep(t)`
+
+二阶 SmoothStep sigmoid 函数的实现。一阶和二阶导数（速度和加速度）在端点处为零。 https://en.wikipedia.org/wiki/Smoothstep
+
+参数
+
+**t**（_float_）–
+
+返回类型
+
+float
+
+
+`smoothstep(t)`
+
+一阶 SmoothStep sigmoid 函数的实现。一阶导数（速度）在端点处为零。 https://en.wikipedia.org/wiki/Smoothstep
+
+参数
+
+**t**（_float_）–
 
 返回类型
 
