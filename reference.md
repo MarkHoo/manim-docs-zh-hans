@@ -4,28 +4,27 @@
 本参考手册详细介绍了 Manim 中包含的模块、函数和变量，描述了它们的含义和用途。要了解如何使用 Manim，请参阅[教程](./tutorials_guides/tutorial.md)。有关自上次版本以来的更改列表，请参阅[更改日志](./changelogs/0.17.3-changelog.md)。
 
 > 警告:
-
+> 
 > 链接到此处的页面目前正在开发中。
 
 ## 继承图
 
 ### 动画(Animations)
 
-![](./static/Animations.svg)
+![](https://docs.manim.community/en/stable/_images/inheritance-1898b66b1682d0e7a6f6433d8d6f94d0094a7d72.svg)
 
 ### 相机(Cameras)
 
-![](./static/Cameras.svg)
+![](https://docs.manim.community/en/stable/_images/inheritance-10268a578e8b4136776d007b0b3bd4e30d50f4a0.svg)
 
 ### 对象(Mobjects)
 
-![](./static/Mobjects.svg)
+![](https://docs.manim.community/en/stable/_images/inheritance-db7d27bd53559c1ae9add343e2649f89b2f14555.svg)
 
 ### 场景(Scenes)
 
-![](./static/Scenes.svg)
+![](https://docs.manim.community/en/stable/_images/inheritance-62a7880b4e0b659fb32a2261db4f2e9432426dd4.svg)
 
-\.creation\.
 
 ## 模块索引
 
