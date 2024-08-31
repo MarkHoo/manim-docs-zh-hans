@@ -1,11 +1,18 @@
 site_name: Manim中文文档
 site_description: 由社区维护用于创建数学动画的Python库
 site_url: https://manim.markhoo.cn
+
+repo_url: https://github.com/MarkHoo/manim-docs-zh-hans
+edit_uri: edit/main/docs/
+
 theme:
   name: material
   language: zh
   logo: assets/logo.svg
   favicon: favicon.ico
+
+  icon:
+    repo: fontawesome/brands/github
 
   features:
     - navigation.instant
@@ -85,7 +92,7 @@ extra:
 #   - projects
 
 
-copyright: 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议 | Copyright &copy; 2007 - 2024 MarkHoo
+copyright: <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> | Copyright &copy; 2007 - 2024 MarkHoo
 
 
 nav:
