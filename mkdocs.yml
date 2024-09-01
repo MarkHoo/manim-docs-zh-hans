@@ -84,7 +84,7 @@ extra:
 
   analytics:
     provider: google
-    property: G-XXXXXXXXXX
+    property: G-2VVHD11RGG
 
 
 # plugins:
