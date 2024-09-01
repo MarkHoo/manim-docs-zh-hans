@@ -5,6 +5,19 @@ site_url: https://manim.markhoo.cn
 repo_url: https://github.com/MarkHoo/manim-docs-zh-hans
 edit_uri: edit/main/docs/
 
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      auto_title: true
+      linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
 theme:
   name: material
   language: zh
@@ -29,29 +42,31 @@ theme:
     - search.highlight
     - search.share
     - navigation.footer
+    - content.code.copy
 
 
-  palette:
-
-    # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
-      primary: white
-      accent: indigo
-      scheme: default 
-      toggle:
-        icon: material/weather-night
-        name: 切换到深色模式
-
+  palette: 
     # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
+    - scheme: slate
       primary: black
       accent: indigo
-      scheme: slate
       toggle:
         icon: material/weather-sunny
         name: 切换到浅色模式
 
+    # Palette toggle for light mode
+    - scheme: default
+      primary: white
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: 切换到深色模式
+
+
   # font: false
+  font:
+    text: Roboto
+    code: Roboto Mono
 
 
 extra:
