@@ -1,4 +1,4 @@
-# 显示部分
+# 部分显示
 
 合格名称：`manim.animation.creation.ShowPartial`
 

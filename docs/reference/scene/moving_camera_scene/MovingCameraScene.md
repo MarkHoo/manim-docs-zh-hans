@@ -1,4 +1,4 @@
-# 移动相机场景
+# 移动摄像机场景
 
 合格名称：`manim.scene.moving\_camera\_scene.MovingCameraScene`
 

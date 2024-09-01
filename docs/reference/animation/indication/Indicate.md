@@ -1,4 +1,4 @@
-# 注明
+# 显示
 
 合格名称：`manim.animation.indication.Indicate`
 
@@ -9,7 +9,7 @@ class Indicate(mobject=None, *args, use_override=True, **kwargs)
 Bases: `Transform`
 
 
-通过暂时调整 Mobject 的大小和重新着色来指示它。
+通过暂时调整 Mobject 的大小和重新着色来显示它。
 
 参数
 
@@ -22,7 +22,7 @@ Bases: `Transform`
 
 例子
 
-示例：使用指示
+示例：使用显示
 
 ```py
 from manim import *

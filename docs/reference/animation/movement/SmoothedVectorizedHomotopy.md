@@ -1,4 +1,4 @@
-# 平滑向量同伦
+# 平滑向量化同伦变换
 
 合格名称：`manim.animation.movement.SmoothedVectorizedHomotopy`
 

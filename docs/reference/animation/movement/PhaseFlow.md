@@ -1,4 +1,4 @@
-# 相流
+# 相位流动
 
 合格名称：`manim.animation.movement.PhaseFlow`
 

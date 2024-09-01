@@ -1,8 +1,8 @@
-# 褪色
+# 渐显渐隐
 
 淡入淡出视野。
 
-示例：褪色
+示例：渐显渐隐
 
 [![视频缩略图]()](https://docs.manim.community/en/stable/reference/Fading-1.mp4)
 

@@ -1,4 +1,4 @@
-# 分屏相机
+# 分屏摄像机
 
 合格名称：`manim.camera.mapping\_camera.SplitScreenCamera`
 

@@ -1,4 +1,4 @@
-# 旋转
+# 正在旋转
 
 合格名称：`manim.animation.rotation.Rotating`
 

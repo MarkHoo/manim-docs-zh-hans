@@ -1,4 +1,4 @@
-# 从边缘生长
+# 从边缘扩大
 
 合格名称：`manim.animation.growing.GrowFromEdge`
 

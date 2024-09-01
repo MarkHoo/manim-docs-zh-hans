@@ -1,4 +1,4 @@
-# Mobject
+# 对象(Mobject)
 
 合格名称：`manim.mobject.mobject.Mobject`
 

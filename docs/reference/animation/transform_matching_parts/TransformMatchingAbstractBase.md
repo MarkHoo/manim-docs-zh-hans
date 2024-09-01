@@ -1,4 +1,4 @@
-# 转换匹配抽象基类
+# 变换匹配抽象基类
 
 合格名称：`manim.animation.transform\_matching\_parts.TransformMatchingAbstractBase`
 

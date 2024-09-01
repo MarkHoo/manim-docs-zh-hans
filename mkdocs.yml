@@ -92,7 +92,7 @@ extra:
 #   - projects
 
 
-copyright: <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> | Copyright &copy; 2007 - 2024 MarkHoo
+copyright: <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> | Copyright &copy; 2024 MarkHoo
 
 
 nav:
@@ -113,7 +113,7 @@ nav:
       - 渲染文本和公式: tutorials_guides/guides/using_text.md
       - 为视频添加旁白: tutorials_guides/guides/add_voiceovers.md
     - 常见问题: 
-      - tutorials_guides/index.md
+      - tutorials_guides/faq/index.md
       - 常见问题：一般用法: tutorials_guides/faq/general.md
       - 常见问题：寻求帮助: tutorials_guides/faq/help.md
       - 常见问题：安装: tutorials_guides/faq/installation.md
@@ -134,67 +134,67 @@ nav:
       - 成分:
         - reference/animation/composition/index.md
         - 动画组:  reference/animation/composition/AnimationGroup.md
-        - 滞后开始:  reference/animation/composition/LaggedStart.md
+        - 滞后启动:  reference/animation/composition/LaggedStart.md
         - 滞后启动映射:  reference/animation/composition/LaggedStartMap.md
         - 继承: reference/animation/composition/Succession.md
       - 创作:
         - reference/animation/creation/index.md
-        - 按字母添加文本: reference/animation/creation/AddTextLetterByLetter.md
+        - 逐个字母添加文本: reference/animation/creation/AddTextLetterByLetter.md
         - 逐字添加文本: reference/animation/creation/AddTextWordByWord.md
         - 创建: reference/animation/creation/Create.md
         - 绘制边框然后填充: reference/animation/creation/DrawBorderThenFill.md
-        - 按字母删除文本: reference/animation/creation/RemoveTextLetterByLetter.md
+        - 逐个字母删除文本: reference/animation/creation/RemoveTextLetterByLetter.md
         - 显示增加子集: reference/animation/creation/ShowIncreasingSubsets.md
-        - 显示部分: reference/animation/creation/ShowPartial.md
+        - 部分显示: reference/animation/creation/ShowPartial.md
         - 逐个显示子对象: reference/animation/creation/ShowSubmobjectsOneByOne.md
         - 螺旋: reference/animation/creation/SpiralIn.md
         - 取消创建: reference/animation/creation/Uncreate.md
         - 取消写入: reference/animation/creation/Unwrite.md
         - 写: reference/animation/creation/Write.md
-      - 衰落:
+      - 渐显渐隐:
         - reference/animation/fading/index.md
         - 淡入: reference/animation/fading/FadeIn.md
         - 淡出: reference/animation/fading/FadeOut.md
-      - 成长:
+      - 扩大:
         - reference/animation/growing/index.md
-        - 成长箭头: reference/animation/growing/GrowArrow.md
-        - 从中心成长: reference/animation/growing/GrowFromCenter.md
-        - 从边缘生长: reference/animation/growing/GrowFromEdge.md
-        - 从点开始生长: reference/animation/growing/GrowFromPoint.md
-        - 从无到有旋转: reference/animation/growing/SpinInFromNothing.md
-      - 指示:
+        - 扩大箭头: reference/animation/growing/GrowArrow.md
+        - 从中心扩大: reference/animation/growing/GrowFromCenter.md
+        - 从边缘扩大: reference/animation/growing/GrowFromEdge.md
+        - 从点开始扩大: reference/animation/growing/GrowFromPoint.md
+        - 从无到有: reference/animation/growing/SpinInFromNothing.md
+      - 显示:
         - reference/animation/indication/index.md
         - 应用波: reference/animation/indication/ApplyWave.md
         - 限制划界: reference/animation/indication/Circumscribe.md
-        - 闪光: reference/animation/indication/Flash.md
+        - 闪现: reference/animation/indication/Flash.md
         - 焦点: reference/animation/indication/FocusOn.md
-        - 注明: reference/animation/indication/Indicate.md
+        - 显示: reference/animation/indication/Indicate.md
         - 显示创建然后淡出: reference/animation/indication/ShowCreationThenFadeOut.md
-        - 显示传递 Flash: reference/animation/indication/ShowPassingFlash.md
+        - 一闪而过: reference/animation/indication/ShowPassingFlash.md
         - 以细化笔画宽度显示经过的闪光: reference/animation/indication/ShowPassingFlashWithThinningStrokeWidth.md
         - 摆动: reference/animation/indication/Wiggle.md
-      - 移动:
+      - 图形运动:
         - reference/animation/movement/index.md
-        - 复同伦: reference/animation/movement/ComplexHomotopy.md
-        - 通论: reference/animation/movement/Homotopy.md
+        - 复同伦变换: reference/animation/movement/ComplexHomotopy.md
+        - 同伦变换: reference/animation/movement/Homotopy.md
         - 沿路径移动: reference/animation/movement/MoveAlongPath.md
-        - 相流: reference/animation/movement/PhaseFlow.md
-        - 平滑向量同伦: reference/animation/movement/SmoothedVectorizedHomotopy.md
+        - 相位流动: reference/animation/movement/PhaseFlow.md
+        - 平滑向量化同伦变换: reference/animation/movement/SmoothedVectorizedHomotopy.md
       - 数字:
         - reference/animation/numbers/index.md
-        - 将小数转换为值: reference/animation/numbers/ChangeDecimalToValue.md
-        - 改变小数: reference/animation/numbers/ChangingDecimal.md
+        - 更改数字至数值: reference/animation/numbers/ChangeDecimalToValue.md
+        - 动态数字: reference/animation/numbers/ChangingDecimal.md
       - 旋转:
         - reference/animation/rotation/index.md
         - 旋转: reference/animation/rotation/Rotate.md
-        - 旋转ing: reference/animation/rotation/Rotating.md
+        - 正在旋转: reference/animation/rotation/Rotating.md
       - 广播:
         - reference/animation/specialized/index.md
         - 广播: reference/animation/specialized/Broadcast.md
       - 速度调节器:
         - reference/animation/speedmodifier/index.md
         - 改变速度: reference/animation/speedmodifier/ChangeSpeed.md
-      - 转换:
+      - 转换/变换:
         - reference/animation/transform/index.md
         - 应用复函数: reference/animation/transform/ApplyComplexFunction.md
         - 应用函数: reference/animation/transform/ApplyFunction.md
@@ -205,10 +205,10 @@ nav:
         - 顺时针变换: reference/animation/transform/ClockwiseTransform.md
         - 逆时针变换: reference/animation/transform/CounterclockwiseTransform.md
         - 循环替换: reference/animation/transform/CyclicReplace.md
-        - 淡入颜色: reference/animation/transform/FadeToColor.md
-        - 淡化变换: reference/animation/transform/FadeTransform.md
-        - 淡出变换片段: reference/animation/transform/FadeTransformPieces.md
-        - 移至目标: reference/animation/transform/MoveToTarget.md
+        - 淡入淡出颜色: reference/animation/transform/FadeToColor.md
+        - 淡入淡出变换: reference/animation/transform/FadeTransform.md
+        - 淡入淡出变换片段: reference/animation/transform/FadeTransformPieces.md
+        - 移动到目标: reference/animation/transform/MoveToTarget.md
         - 替换变换: reference/animation/transform/ReplacementTransform.md
         - 恢复: reference/animation/transform/Restore.md
         - 就地扩展: reference/animation/transform/ScaleInPlace.md
@@ -219,10 +219,10 @@ nav:
         - 从副本变换: reference/animation/transform/TransformFromCopy.md
       - 变换匹配部分:
         - reference/animation/transform_matching_parts/index.md
-        - 转换匹配抽象基类: reference/animation/transform_matching_parts/TransformMatchingAbstractBase.md
+        - 变换匹配抽象基类: reference/animation/transform_matching_parts/TransformMatchingAbstractBase.md
         - 变换匹配形状: reference/animation/transform_matching_parts/TransformMatchingShapes.md
         - 变换匹配Tex: reference/animation/transform_matching_parts/TransformMatchingTex.md
-      - 更新程序:
+      - 更新器:
         - reference/animation/updaters/index.md
         - mobject更新实用工具: reference/animation/updaters/mobject_update_utils.md
         - 更新: 
@@ -231,31 +231,31 @@ nav:
           - 从Alpha函数更新: reference/animation/updaters/update/UpdateFromAlphaFunc.md
           - 从函数更新: reference/animation/updaters/update/UpdateFromFunc.md
 
-    - 相机: 
+    - 摄像机: 
       - reference/camera/index.md
-      - 相机:
+      - 摄像机:
         - reference/camera/cameras/index.md
         - 背景: reference/camera/cameras/BackgroundColoredVMobjectDisplayer.md
-        - 相机: reference/camera/cameras/Camera.md
-      - 映射相机:
+        - 摄像机: reference/camera/cameras/Camera.md
+      - 映射摄像机:
         - reference/camera/mapping_camera/index.md
-        - 映射相机: reference/camera/mapping_camera/MappingCamera.md
-        - 旧式多摄像头: reference/camera/mapping_camera/OldMultiCamera.md
-        - 分屏相机: reference/camera/mapping_camera/SplitScreenCamera.md
+        - 映射摄像机: reference/camera/mapping_camera/MappingCamera.md
+        - 旧式多摄像机: reference/camera/mapping_camera/OldMultiCamera.md
+        - 分屏摄像机: reference/camera/mapping_camera/SplitScreenCamera.md
       - 移动摄像机:
         - reference/camera/moving_camera/index.md
         - 移动摄像机: reference/camera/moving_camera/MovingCamera.md
       - 多机位:
         - reference/camera/multi_camera/index.md
         - 多机位: reference/camera/multi_camera/MultiCamera.md
-      - 3D摄相机:
+      - 3D摄像机:
         - reference/camera/three_d_camera/index.md
-        - 3D摄相机: reference/camera/three_d_camera/ThreeDCamera.md
+        - 3D摄像机: reference/camera/three_d_camera/ThreeDCamera.md
 
     - 配置: 
       - reference/config/index.md
       - 配置: reference/config/_config.md
-      - 工具类:
+      - 实用工具:
         - reference/config/utils/index.md
         - Manim配置: reference/config/utils/ManimConfig.md
         - Manim框架: reference/config/utils/ManimFrame.md
@@ -263,13 +263,13 @@ nav:
         - reference/config/logger_utils/index.md
         - JSON格式化: reference/config/logger_utils/JSONFormatter.md
 
-    - Mobjects: 
+    - 对象(Mobjects): 
       - reference/mobject/index.md
-      - 框架:
+      - 帧:
         - reference/mobject/frame/index.md
         - 全屏矩形: reference/mobject/frame/FullScreenRectangle.md
         - 屏幕矩形: reference/mobject/frame/ScreenRectangle.md
-      - 几何学:
+      - 几何:
         - reference/mobject/geometry/index.md
         - 弧:
           - reference/mobject/geometry/arc/index.md
@@ -381,10 +381,10 @@ nav:
         - 整数矩阵: reference/mobject/matrix/IntegerMatrix.md
         - 矩阵: reference/mobject/matrix/Matrix.md
         - Mobject矩阵: reference/mobject/matrix/MobjectMatrix.md
-      - mobject:
+      - 对象(mobject):
         - reference/mobject/mobject/index.md
         - 组: reference/mobject/mobject/Group.md
-        - Mobject: reference/mobject/mobject/Mobject.md
+        - 对象(Mobject): reference/mobject/mobject/Mobject.md
       - svg:
         - reference/mobject/svg/index.md
         - 大括号:
@@ -473,22 +473,22 @@ nav:
           - 矢量化点: reference/mobject/types/vectorized_mobject/VectorizedPoint.md
           - VGroup: reference/mobject/types/vectorized_mobject/VGroup.md
           - VMobject: reference/mobject/types/vectorized_mobject/VMobject.md
-      - 工具类: reference/mobject/utils.md
+      - 实用工具: reference/mobject/utils.md
       - 值追踪器:
         - reference/mobject/value_tracker/index.md
         - 复杂值追踪器: reference/mobject/value_tracker/ComplexValueTracker.md
-        - 值追踪者: reference/mobject/value_tracker/ValueTracker.md
-      - 矢量场:
+        - 值追踪器: reference/mobject/value_tracker/ValueTracker.md
+      - 向量场:
         - reference/mobject/vector_field/index.md
         - 箭头向量场: reference/mobject/vector_field/ArrowVectorField.md
         - 流线: reference/mobject/vector_field/StreamLines.md
-        - 矢量场: reference/mobject/vector_field/VectorField.md
+        - 向量场: reference/mobject/vector_field/VectorField.md
 
     - 场景: 
       - reference/scene/index.md
       - 移动摄像机场景:
         - reference/scene/moving_camera_scene/index.md
-        - 移动相机场景: reference/scene/moving_camera_scene/MovingCameraScene.md
+        - 移动摄像机场景: reference/scene/moving_camera_scene/MovingCameraScene.md
       - 部分:
         - reference/scene/section/index.md
         - 默认部分类型: reference/scene/section/DefaultSectionType.md
@@ -504,10 +504,10 @@ nav:
         - reference/scene/three_d_scene/index.md
         - 特殊3D场景: reference/scene/three_d_scene/SpecialThreeDScene.md
         - 3D场景: reference/scene/three_d_scene/ThreeDScene.md
-      - 矢量空间场景:
+      - 向量空间场景:
         - reference/scene/vector_space_scene/index.md
         - 线性变换场景: reference/scene/vector_space_scene/LinearTransformationScene.md
-        - 矢量场景: reference/scene/vector_space_scene/VectorScene.md
+        - 向量场景: reference/scene/vector_space_scene/VectorScene.md
       - 缩放场景:
         - reference/scene/zoomed_scene/index.md
         - 缩放场景: reference/scene/zoomed_scene/ZoomedScene.md
@@ -534,7 +534,7 @@ nav:
         - 大写字母类型: reference/utils/constants/CapStyleType.md
         - 线连接类型: reference/utils/constants/LineJointType.md
         - 渲染器类型: reference/utils/constants/RendererType.md
-      - 调试: reference/utils/debug.md
+      - Debug/调试: reference/utils/debug.md
       - 弃用: reference/utils/deprecation.md
       - 文档构建:
         - reference/utils/docbuild/index.md

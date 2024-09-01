@@ -1,4 +1,4 @@
-# 矢量场景
+# 向量场景
 
 合格名称：`manim.scene.vector\_space\_scene.VectorScene`
 
@@ -21,7 +21,7 @@ Bases: `Scene`
 [`get_basis_vectors`]()|返回基向量 (1,0) 和 (0,1) 的 VGroup
 [`get_vector`]()|给定输入数值向量，返回平面上的箭头。
 [`get_vector_label`]()|返回传递的向量的命名标签。
-[`label_vector`]()|用于创建矢量标签并为其添加动画的快捷方法。
+[`label_vector`]()|用于创建向量标签并为其添加动画的快捷方法。
 [`lock_in_faded_grid`]()|此方法冻结已经在后台的 NumberPlane 和 Axes，并将新的、可操作的添加到前台。
 `position_x_coordinate`|
 `position_y_coordinate`|
@@ -153,7 +153,7 @@ get_vector_label(vector, label, at_tip=False, direction='left', rotate=False, co
 
 参数
 
-- **vector**( [_Vector_]() ) – 要获取其标签的矢量对象。
+- **vector**( [_Vector_]() ) – 要获取其标签的向量对象。
 - **at_tip** ( _bool_ ) – 是否将标签放置在向量的顶端。
 - **Direction** ( _str_ ) – 标签是否应位于向量的“左侧”或右侧。
 - **rotate** ( _bool_ ) – 是否旋转它以与向量对齐。
@@ -171,11 +171,11 @@ get_vector_label(vector, label, at_tip=False, direction='left', rotate=False, co
 
 `label_vector(vector, label, animate=True, **kwargs)`
 
-用于创建矢量标签并为其添加动画的快捷方法。
+用于创建向量标签并为其添加动画的快捷方法。
 
 参数
 
-- **vector**( [_Vector_]() ) – 必须添加标签的矢量。
+- **vector**( [_Vector_]() ) – 必须添加标签的向量。
 - **label** ( [_MathTex_]() _|_ _str_ ) – 标签的 MathTex/字符串。
 - **animate** ( _bool_ ) – 是否使用 Write 对标签进行动画处理
 - **\*\*kwargs** – get_vector_label 的任何有效关键字参数
@@ -226,7 +226,7 @@ get_vector_label(vector, label, at_tip=False, direction='left', rotate=False, co
 
 参数
 
-- **vector**([_Arrow_]()) – 代表矢量的箭头。
+- **vector**([_Arrow_]()) – 代表向量的箭头。
 - \***\*kwargs** – 任何有效的关键字参数[`coordinate_label()`]()：
 
 返回

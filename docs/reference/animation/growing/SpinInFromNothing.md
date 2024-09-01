@@ -1,4 +1,4 @@
-# 从无到有旋转
+# 从无到有
 
 合格名称：`manim.animation.growing.SpinInFromNothing`
 
@@ -8,7 +8,7 @@ class SpinInFromNothing(mobject=None, *args, use_override=True, **kwargs)
 
 Bases: `GrowFromCenter`
 
-引入[`Mobject`]()旋转并从中心开始生长。
+引入[`Mobject`]()旋转并从中心开始扩大。
 
 参数
 

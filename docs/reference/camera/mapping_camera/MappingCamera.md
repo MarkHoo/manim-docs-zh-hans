@@ -1,4 +1,4 @@
-# 映射相机
+# 映射摄像机
 
 合格名称：`manim.camera.mapping\_camera.MappingCamera`
 

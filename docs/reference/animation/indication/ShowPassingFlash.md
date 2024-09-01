@@ -1,4 +1,4 @@
-# 显示传递 Flash 
+# 一闪而过
 
 合格名称：`manim.animation.indication.ShowPassingFlash`
 

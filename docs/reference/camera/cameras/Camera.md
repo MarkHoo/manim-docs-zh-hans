@@ -1,4 +1,4 @@
-# 相机
+# 摄像机
 
 合格名称：`manim.camera.camera.Camera`
 

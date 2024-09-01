@@ -1,4 +1,4 @@
-# 按字母删除文本
+# 逐个字母删除文本
 
 合格名称：`manim.animation.creation.RemoveTextLetterByLetter`
 

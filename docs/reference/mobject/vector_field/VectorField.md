@@ -1,4 +1,4 @@
-# 矢量场
+# 向量场
 
 合格名称：`manim.mobject.vector\_field.VectorField`
 

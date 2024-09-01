@@ -1,4 +1,4 @@
-# 滞后开始
+# 滞后启动
 
 合格名称：`manim.animation.composition.LaggedStart`
 

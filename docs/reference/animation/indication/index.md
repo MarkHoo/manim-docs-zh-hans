@@ -1,10 +1,10 @@
-# 指示
+# 显示
 
 动画吸引人们对特定对象的注意。
 
 Classes
 
-示例：适应症
+示例：
 
 [![视频缩略图]()](https://docs.manim.community/en/stable/reference/Indications-1.mp4)
 

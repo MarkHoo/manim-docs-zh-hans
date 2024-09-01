@@ -1,4 +1,4 @@
-# 从中心成长
+# 从中心扩大
 
 合格名称：`manim.animation.growing.GrowFromCenter`
 

@@ -1,4 +1,4 @@
-# 闪光
+# 闪现
 
 合格名称：`manim.animation.indication.Flash`
 

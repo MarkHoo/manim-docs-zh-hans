@@ -1,4 +1,4 @@
-# 从点开始生长
+# 从点开始扩大
 
 合格名称：`manim.animation.growing.GrowFromPoint`
 

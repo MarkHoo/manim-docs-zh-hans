@@ -1,4 +1,4 @@
-# 同伦
+# 同伦变换
 
 合格名称：`manim.animation.movement.Homotopy`
 
@@ -8,7 +8,7 @@ class Homotopy(mobject=None, *args, use_override=True, **kwargs)
 
 Bases: `Animation`
 
-同伦。
+同伦变换。
 
 这是根据指定的变换函数变换 mobject 的点的动画。随着参数 t 在整个动画中从 0 到 1(x,y,z) 描述 mobject 点的坐标，传递给`homotopy`关键字参数的函数应该转换元组(x,y,z,t)到(x′,y′,z′)，原点在某时刻变换到的坐标 t。
 

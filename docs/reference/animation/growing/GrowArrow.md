@@ -1,4 +1,4 @@
-# 成长箭头
+# 扩大箭头
 
 合格名称：`manim.animation.growing.GrowArrow`
 

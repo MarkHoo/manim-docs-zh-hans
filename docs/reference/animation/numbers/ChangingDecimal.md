@@ -1,4 +1,4 @@
-# 改变小数
+# 动态数字
 
 合格名称：`manim.animation.numbers.ChangingDecimal`
 

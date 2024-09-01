@@ -1,4 +1,4 @@
-# 3D摄相机
+# 3D摄像机
 
 合格名称：`manim.camera.three\_d\_camera.ThreeDCamera`
 

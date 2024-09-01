@@ -1,4 +1,4 @@
-# 将小数转换为值
+# 更改数字至数值
 
 合格名称：`manim.animation.numbers.ChangeDecimalToValue`
 

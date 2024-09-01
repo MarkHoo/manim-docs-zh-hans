@@ -1,4 +1,4 @@
-# 显示增加子集
+# 显示增加的子集
 
 合格名称：`manim.animation.creation.ShowIncreasingSubsets`
 

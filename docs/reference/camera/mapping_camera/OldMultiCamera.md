@@ -1,4 +1,4 @@
-# 旧式多摄像头
+# 旧式多摄像机
 
 合格名称：`manim.camera.mapping\_camera.OldMultiCamera`
 
