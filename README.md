@@ -4,7 +4,7 @@
 
 [Manim Community Edition](https://www.manim.community)
 
-当前版本：[`v0.18.1`](./docs/changelog/0.18.1-changelog.md)
+当前版本：[`v0.19.0`](./docs/changelog/0.18.1-changelog.md)
 
 ## **赞助：**
 
@@ -19,9 +19,10 @@
 
 `梦想风暴zz`，`战国万年`，`j4ZpH8B4N`，`大灰狼`，`卷毛杨`
 
-学习交流QQ群：`731872950`
-
-[在线LaTeX公式编辑器](https://www.latexlive.com)
+- 学习交流QQ群①：`731872950`（满员）
+- 学习交流QQ群②：`584318196`
+- [在线LaTeX公式编辑器](https://www.latexlive.com)
+- [在线LaTeX公式编辑器](https://editor.codecogs.com)
 
 ## TODO：
 
@@ -32,7 +33,7 @@
 - [x] 参考手册
 - [x] 插件
 - [x] 变更日志
-- [x] 准备`v0.19.0`版本发布后的文档更新
+- [x] 准备`v0.20.0`版本发布后的文档更新
 
 ## License
 

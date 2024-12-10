@@ -19,7 +19,8 @@
 
 `梦想风暴zz`，`战国万年`，`j4ZpH8B4N`，`大灰狼`，`卷毛杨`
 
-- 学习交流QQ群：`731872950`
+- 学习交流QQ群①：`731872950`（满员）
+- 学习交流QQ群②：`584318196`
 - [在线LaTeX公式编辑器](https://www.latexlive.com)
 - [在线LaTeX公式编辑器](https://editor.codecogs.com)
 
