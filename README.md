@@ -21,17 +21,6 @@
 - [在线LaTeX公式编辑器](https://www.latexlive.com)
 - [在线LaTeX公式编辑器](https://editor.codecogs.com)
 
-## TODO：
-
-> 文档校对以及语义优化
-
-- [x] 示例库
-- [x] 教程和指南
-- [x] 参考手册
-- [x] 插件
-- [x] 变更日志
-- [x] 准备`v0.20.0`版本发布后的文档更新
-
 ## License
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
