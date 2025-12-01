@@ -1,0 +1,4620 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="由社区维护用于创建数学动画的Python库">
+      
+      
+      
+        <link rel="canonical" href="https://manim.markhoo.cn/reference/utils/color/X11/">
+      
+      
+        <link rel="prev" href="../XKCD/">
+      
+      
+        <link rel="next" href="../../commands/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>X11 - Manim中文文档</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-2VVHD11RGG"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-2VVHD11RGG",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-2VVHD11RGG",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#x11" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../.." title="Manim中文文档" class="md-header__button md-logo" aria-label="Manim中文文档" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manim中文文档
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              X11
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MarkHoo/manim-docs-zh-hans" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Manim中文文档" class="md-nav__button md-logo" aria-label="Manim中文文档" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.svg" alt="logo">
+
+    </a>
+    Manim中文文档
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MarkHoo/manim-docs-zh-hans" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../examples/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    示例库
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../tutorials_guides/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    教程和指南
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    参考手册
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    参考手册
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../animation/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    动画
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../camera/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    摄像机
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../config/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    配置
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../mobject/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    对象(Mobjects)
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../scene/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    场景
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    实用程序和其他模块
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    实用程序和其他模块
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bezier/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    贝塞尔
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    颜色
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_7_3" id="__nav_3_7_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    颜色
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../core/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    核
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manim_colors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manim颜色
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AS2700/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AS2700
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BS381/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BS381
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../XKCD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XKCD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    X11
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    X11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        颜色常数列表
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    命令
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../config_ops/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    配置操作
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../constants/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    常量
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../debug/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Debug/调试
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deprecation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    弃用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../docbuild/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文档构建
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hashing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    哈希
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../images/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    图片
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../ipython_magic/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ipython
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iterables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    可迭代对象
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    路径
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rate_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    速率函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simple_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简单函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sounds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    声音
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../space_ops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    空间操作
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../testing/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    测试
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../tex/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tex
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tex_file_writing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    tex文件写入
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../tex_templates/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    tex模板
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../typing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    类型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../plugins/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    插件
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../changelog/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    变更日志
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        颜色常数列表
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+  <nav class="md-path" aria-label="导航栏" >
+    <ol class="md-path__list">
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    参考手册
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    实用程序和其他模块
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    颜色
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="x11">X11</h1>
+<p>X11 颜色</p>
+<p>这些颜色及其名称（取自 <a href="https://www.w3schools.com/colors/colors_x11.asp">https://www.w3schools.com/colors/colors_x11.asp</a>）是马萨诸塞州理工学院 (MIT) 在开发基于颜色的计算机显示系统期间开发的。</p>
+<p>要使用此列表中的颜色，请直接从模块访问它们（该模块暴露于 Manim 的全局名称空间）：</p>
+<div class="language-shell highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>&gt;&gt;&gt;<span class="w"> </span>from<span class="w"> </span>manim<span class="w"> </span>import<span class="w"> </span>X11
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>&gt;&gt;&gt;<span class="w"> </span>X11.BEIGE
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>ManimColor<span class="o">(</span><span class="s1">&#39;#F5F5DC&#39;</span><span class="o">)</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="_1">颜色常数列表</h2>
+<table>
+<thead>
+<tr>
+<th>颜色名称</th>
+<th>RGB十六进制代码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ALICEBLUE</td>
+<td>#F0F8FF</td>
+</tr>
+<tr>
+<td>ANTIQUEWHITE</td>
+<td>#FAEBD7</td>
+</tr>
+<tr>
+<td>ANTIQUEWHITE1</td>
+<td>#FFEFDB</td>
+</tr>
+<tr>
+<td>ANTIQUEWHITE2</td>
+<td>#EEDFCC</td>
+</tr>
+<tr>
+<td>ANTIQUEWHITE3</td>
+<td>#CDC0B0</td>
+</tr>
+<tr>
+<td>ANTIQUEWHITE4</td>
+<td>#8B8378</td>
+</tr>
+<tr>
+<td>AQUAMARINE1</td>
+<td>#7FFFD4</td>
+</tr>
+<tr>
+<td>AQUAMARINE2</td>
+<td>#76EEC6</td>
+</tr>
+<tr>
+<td>AQUAMARINE4</td>
+<td>#458B74</td>
+</tr>
+<tr>
+<td>AZURE1</td>
+<td>#F0FFFF</td>
+</tr>
+<tr>
+<td>AZURE2</td>
+<td>#E0EEEE</td>
+</tr>
+<tr>
+<td>AZURE3</td>
+<td>#C1CDCD</td>
+</tr>
+<tr>
+<td>AZURE4</td>
+<td>#838B8B</td>
+</tr>
+<tr>
+<td>BEIGE</td>
+<td>#F5F5DC</td>
+</tr>
+<tr>
+<td>BISQUE1</td>
+<td>#FFE4C4</td>
+</tr>
+<tr>
+<td>BISQUE2</td>
+<td>#EED5B7</td>
+</tr>
+<tr>
+<td>BISQUE3</td>
+<td>#CDB79E</td>
+</tr>
+<tr>
+<td>BISQUE4</td>
+<td>#8B7D6B</td>
+</tr>
+<tr>
+<td>BLACK</td>
+<td>#000000</td>
+</tr>
+<tr>
+<td>BLANCHEDALMOND</td>
+<td>#FFEBCD</td>
+</tr>
+<tr>
+<td>BLUE1</td>
+<td>#0000FF</td>
+</tr>
+<tr>
+<td>BLUE2</td>
+<td>#0000EE</td>
+</tr>
+<tr>
+<td>BLUE4</td>
+<td>#00008B</td>
+</tr>
+<tr>
+<td>BLUEVIOLET</td>
+<td>#8A2BE2</td>
+</tr>
+<tr>
+<td>BROWN</td>
+<td>#A52A2A</td>
+</tr>
+<tr>
+<td>BROWN1</td>
+<td>#FF4040</td>
+</tr>
+<tr>
+<td>BROWN2</td>
+<td>#EE3B3B</td>
+</tr>
+<tr>
+<td>BROWN3</td>
+<td>#CD3333</td>
+</tr>
+<tr>
+<td>BROWN4</td>
+<td>#8B2323</td>
+</tr>
+<tr>
+<td>BURLYWOOD</td>
+<td>#DEB887</td>
+</tr>
+<tr>
+<td>BURLYWOOD1</td>
+<td>#FFD39B</td>
+</tr>
+<tr>
+<td>BURLYWOOD2</td>
+<td>#EEC591</td>
+</tr>
+<tr>
+<td>BURLYWOOD3</td>
+<td>#CDAA7D</td>
+</tr>
+<tr>
+<td>BURLYWOOD4</td>
+<td>#8B7355</td>
+</tr>
+<tr>
+<td>CADETBLUE</td>
+<td>#5F9EA0</td>
+</tr>
+<tr>
+<td>CADETBLUE1</td>
+<td>#98F5FF</td>
+</tr>
+<tr>
+<td>CADETBLUE2</td>
+<td>#8EE5EE</td>
+</tr>
+<tr>
+<td>CADETBLUE3</td>
+<td>#7AC5CD</td>
+</tr>
+<tr>
+<td>CADETBLUE4</td>
+<td>#53868B</td>
+</tr>
+<tr>
+<td>CHARTREUSE1</td>
+<td>#7FFF00</td>
+</tr>
+<tr>
+<td>CHARTREUSE2</td>
+<td>#76EE00</td>
+</tr>
+<tr>
+<td>CHARTREUSE3</td>
+<td>#66CD00</td>
+</tr>
+<tr>
+<td>CHARTREUSE4</td>
+<td>#458B00</td>
+</tr>
+<tr>
+<td>CHOCOLATE</td>
+<td>#D2691E</td>
+</tr>
+<tr>
+<td>CHOCOLATE1</td>
+<td>#FF7F24</td>
+</tr>
+<tr>
+<td>CHOCOLATE2</td>
+<td>#EE7621</td>
+</tr>
+<tr>
+<td>CHOCOLATE3</td>
+<td>#CD661D</td>
+</tr>
+<tr>
+<td>CORAL</td>
+<td>#FF7F50</td>
+</tr>
+<tr>
+<td>CORAL1</td>
+<td>#FF7256</td>
+</tr>
+<tr>
+<td>CORAL2</td>
+<td>#EE6A50</td>
+</tr>
+<tr>
+<td>CORAL3</td>
+<td>#CD5B45</td>
+</tr>
+<tr>
+<td>CORAL4</td>
+<td>#8B3E2F</td>
+</tr>
+<tr>
+<td>CORNFLOWERBLUE</td>
+<td>#6495ED</td>
+</tr>
+<tr>
+<td>CORNSILK1</td>
+<td>#FFF8DC</td>
+</tr>
+<tr>
+<td>CORNSILK2</td>
+<td>#EEE8CD</td>
+</tr>
+<tr>
+<td>CORNSILK3</td>
+<td>#CDC8B1</td>
+</tr>
+<tr>
+<td>CORNSILK4</td>
+<td>#8B8878</td>
+</tr>
+<tr>
+<td>CYAN1</td>
+<td>#00FFFF</td>
+</tr>
+<tr>
+<td>CYAN2</td>
+<td>#00EEEE</td>
+</tr>
+<tr>
+<td>CYAN3</td>
+<td>#00CDCD</td>
+</tr>
+<tr>
+<td>CYAN4</td>
+<td>#008B8B</td>
+</tr>
+<tr>
+<td>DARKGOLDENROD</td>
+<td>#B8860B</td>
+</tr>
+<tr>
+<td>DARKGOLDENROD1</td>
+<td>#FFB90F</td>
+</tr>
+<tr>
+<td>DARKGOLDENROD2</td>
+<td>#EEAD0E</td>
+</tr>
+<tr>
+<td>DARKGOLDENROD3</td>
+<td>#CD950C</td>
+</tr>
+<tr>
+<td>DARKGOLDENROD4</td>
+<td>#8B6508</td>
+</tr>
+<tr>
+<td>DARKGREEN</td>
+<td>#006400</td>
+</tr>
+<tr>
+<td>DARKKHAKI</td>
+<td>#BDB76B</td>
+</tr>
+<tr>
+<td>DARKOLIVEGREEN</td>
+<td>#556B2F</td>
+</tr>
+<tr>
+<td>DARKOLIVEGREEN1</td>
+<td>#CAFF70</td>
+</tr>
+<tr>
+<td>DARKOLIVEGREEN2</td>
+<td>#BCEE68</td>
+</tr>
+<tr>
+<td>DARKOLIVEGREEN3</td>
+<td>#A2CD5A</td>
+</tr>
+<tr>
+<td>DARKOLIVEGREEN4</td>
+<td>#6E8B3D</td>
+</tr>
+<tr>
+<td>DARKORANGE</td>
+<td>#FF8C00</td>
+</tr>
+<tr>
+<td>DARKORANGE1</td>
+<td>#FF7F00</td>
+</tr>
+<tr>
+<td>DARKORANGE2</td>
+<td>#EE7600</td>
+</tr>
+<tr>
+<td>DARKORANGE3</td>
+<td>#CD6600</td>
+</tr>
+<tr>
+<td>DARKORANGE4</td>
+<td>#8B4500</td>
+</tr>
+<tr>
+<td>DARKORCHID</td>
+<td>#9932CC</td>
+</tr>
+<tr>
+<td>DARKORCHID1</td>
+<td>#BF3EFF</td>
+</tr>
+<tr>
+<td>DARKORCHID2</td>
+<td>#B23AEE</td>
+</tr>
+<tr>
+<td>DARKORCHID3</td>
+<td>#9A32CD</td>
+</tr>
+<tr>
+<td>DARKORCHID4</td>
+<td>#68228B</td>
+</tr>
+<tr>
+<td>DARKSALMON</td>
+<td>#E9967A</td>
+</tr>
+<tr>
+<td>DARKSEAGREEN</td>
+<td>#8FBC8F</td>
+</tr>
+<tr>
+<td>DARKSEAGREEN1</td>
+<td>#C1FFC1</td>
+</tr>
+<tr>
+<td>DARKSEAGREEN2</td>
+<td>#B4EEB4</td>
+</tr>
+<tr>
+<td>DARKSEAGREEN3</td>
+<td>#9BCD9B</td>
+</tr>
+<tr>
+<td>DARKSEAGREEN4</td>
+<td>#698B69</td>
+</tr>
+<tr>
+<td>DARKSLATEBLUE</td>
+<td>#483D8B</td>
+</tr>
+<tr>
+<td>DARKSLATEGRAY</td>
+<td>#2F4F4F</td>
+</tr>
+<tr>
+<td>DARKSLATEGRAY1</td>
+<td>#97FFFF</td>
+</tr>
+<tr>
+<td>DARKSLATEGRAY2</td>
+<td>#8DEEEE</td>
+</tr>
+<tr>
+<td>DARKSLATEGRAY3</td>
+<td>#79CDCD</td>
+</tr>
+<tr>
+<td>DARKSLATEGRAY4</td>
+<td>#528B8B</td>
+</tr>
+<tr>
+<td>DARKTURQUOISE</td>
+<td>#00CED1</td>
+</tr>
+<tr>
+<td>DARKVIOLET</td>
+<td>#9400D3</td>
+</tr>
+<tr>
+<td>DEEPPINK1</td>
+<td>#FF1493</td>
+</tr>
+<tr>
+<td>DEEPPINK2</td>
+<td>#EE1289</td>
+</tr>
+<tr>
+<td>DEEPPINK3</td>
+<td>#CD1076</td>
+</tr>
+<tr>
+<td>DEEPPINK4</td>
+<td>#8B0A50</td>
+</tr>
+<tr>
+<td>DEEPSKYBLUE1</td>
+<td>#00BFFF</td>
+</tr>
+<tr>
+<td>DEEPSKYBLUE2</td>
+<td>#00B2EE</td>
+</tr>
+<tr>
+<td>DEEPSKYBLUE3</td>
+<td>#009ACD</td>
+</tr>
+<tr>
+<td>DEEPSKYBLUE4</td>
+<td>#00688B</td>
+</tr>
+<tr>
+<td>DIMGRAY</td>
+<td>#696969</td>
+</tr>
+<tr>
+<td>DODGERBLUE1</td>
+<td>#1E90FF</td>
+</tr>
+<tr>
+<td>DODGERBLUE2</td>
+<td>#1C86EE</td>
+</tr>
+<tr>
+<td>DODGERBLUE3</td>
+<td>#1874CD</td>
+</tr>
+<tr>
+<td>DODGERBLUE4</td>
+<td>#104E8B</td>
+</tr>
+<tr>
+<td>FIREBRICK</td>
+<td>#B22222</td>
+</tr>
+<tr>
+<td>FIREBRICK1</td>
+<td>#FF3030</td>
+</tr>
+<tr>
+<td>FIREBRICK2</td>
+<td>#EE2C2C</td>
+</tr>
+<tr>
+<td>FIREBRICK3</td>
+<td>#CD2626</td>
+</tr>
+<tr>
+<td>FIREBRICK4</td>
+<td>#8B1A1A</td>
+</tr>
+<tr>
+<td>FLORALWHITE</td>
+<td>#FFFAF0</td>
+</tr>
+<tr>
+<td>FORESTGREEN</td>
+<td>#228B22</td>
+</tr>
+<tr>
+<td>GAINSBORO</td>
+<td>#DCDCDC</td>
+</tr>
+<tr>
+<td>GHOSTWHITE</td>
+<td>#F8F8FF</td>
+</tr>
+<tr>
+<td>GOLD1</td>
+<td>#FFD700</td>
+</tr>
+<tr>
+<td>GOLD2</td>
+<td>#EEC900</td>
+</tr>
+<tr>
+<td>GOLD3</td>
+<td>#CDAD00</td>
+</tr>
+<tr>
+<td>GOLD4</td>
+<td>#8B7500</td>
+</tr>
+<tr>
+<td>GOLDENROD</td>
+<td>#DAA520</td>
+</tr>
+<tr>
+<td>GOLDENROD1</td>
+<td>#FFC125</td>
+</tr>
+<tr>
+<td>GOLDENROD2</td>
+<td>#EEB422</td>
+</tr>
+<tr>
+<td>GOLDENROD3</td>
+<td>#CD9B1D</td>
+</tr>
+<tr>
+<td>GOLDENROD4</td>
+<td>#8B6914</td>
+</tr>
+<tr>
+<td>GRAY</td>
+<td>#BEBEBE</td>
+</tr>
+<tr>
+<td>GRAY1</td>
+<td>#030303</td>
+</tr>
+<tr>
+<td>GRAY10</td>
+<td>#1A1A1A</td>
+</tr>
+<tr>
+<td>GRAY11</td>
+<td>#1C1C1C</td>
+</tr>
+<tr>
+<td>GRAY12</td>
+<td>#1F1F1F</td>
+</tr>
+<tr>
+<td>GRAY13</td>
+<td>#212121</td>
+</tr>
+<tr>
+<td>GRAY14</td>
+<td>#242424</td>
+</tr>
+<tr>
+<td>GRAY15</td>
+<td>#262626</td>
+</tr>
+<tr>
+<td>GRAY16</td>
+<td>#292929</td>
+</tr>
+<tr>
+<td>GRAY17</td>
+<td>#2B2B2B</td>
+</tr>
+<tr>
+<td>GRAY18</td>
+<td>#2E2E2E</td>
+</tr>
+<tr>
+<td>GRAY19</td>
+<td>#303030</td>
+</tr>
+<tr>
+<td>GRAY2</td>
+<td>#050505</td>
+</tr>
+<tr>
+<td>GRAY20</td>
+<td>#333333</td>
+</tr>
+<tr>
+<td>GRAY21</td>
+<td>#363636</td>
+</tr>
+<tr>
+<td>GRAY22</td>
+<td>#383838</td>
+</tr>
+<tr>
+<td>GRAY23</td>
+<td>#3B3B3B</td>
+</tr>
+<tr>
+<td>GRAY24</td>
+<td>#3D3D3D</td>
+</tr>
+<tr>
+<td>GRAY25</td>
+<td>#404040</td>
+</tr>
+<tr>
+<td>GRAY26</td>
+<td>#424242</td>
+</tr>
+<tr>
+<td>GRAY27</td>
+<td>#454545</td>
+</tr>
+<tr>
+<td>GRAY28</td>
+<td>#474747</td>
+</tr>
+<tr>
+<td>GRAY29</td>
+<td>#4A4A4A</td>
+</tr>
+<tr>
+<td>GRAY3</td>
+<td>#080808</td>
+</tr>
+<tr>
+<td>GRAY30</td>
+<td>#4D4D4D</td>
+</tr>
+<tr>
+<td>GRAY31</td>
+<td>#4F4F4F</td>
+</tr>
+<tr>
+<td>GRAY32</td>
+<td>#525252</td>
+</tr>
+<tr>
+<td>GRAY33</td>
+<td>#545454</td>
+</tr>
+<tr>
+<td>GRAY34</td>
+<td>#575757</td>
+</tr>
+<tr>
+<td>GRAY35</td>
+<td>#595959</td>
+</tr>
+<tr>
+<td>GRAY36</td>
+<td>#5C5C5C</td>
+</tr>
+<tr>
+<td>GRAY37</td>
+<td>#5E5E5E</td>
+</tr>
+<tr>
+<td>GRAY38</td>
+<td>#616161</td>
+</tr>
+<tr>
+<td>GRAY39</td>
+<td>#636363</td>
+</tr>
+<tr>
+<td>GRAY4</td>
+<td>#0A0A0A</td>
+</tr>
+<tr>
+<td>GRAY40</td>
+<td>#666666</td>
+</tr>
+<tr>
+<td>GRAY41</td>
+<td>#696969</td>
+</tr>
+<tr>
+<td>GRAY42</td>
+<td>#6B6B6B</td>
+</tr>
+<tr>
+<td>GRAY43</td>
+<td>#6E6E6E</td>
+</tr>
+<tr>
+<td>GRAY44</td>
+<td>#707070</td>
+</tr>
+<tr>
+<td>GRAY45</td>
+<td>#737373</td>
+</tr>
+<tr>
+<td>GRAY46</td>
+<td>#757575</td>
+</tr>
+<tr>
+<td>GRAY47</td>
+<td>#787878</td>
+</tr>
+<tr>
+<td>GRAY48</td>
+<td>#7A7A7A</td>
+</tr>
+<tr>
+<td>GRAY49</td>
+<td>#7D7D7D</td>
+</tr>
+<tr>
+<td>GRAY5</td>
+<td>#0D0D0D</td>
+</tr>
+<tr>
+<td>GRAY50</td>
+<td>#7F7F7F</td>
+</tr>
+<tr>
+<td>GRAY51</td>
+<td>#828282</td>
+</tr>
+<tr>
+<td>GRAY52</td>
+<td>#858585</td>
+</tr>
+<tr>
+<td>GRAY53</td>
+<td>#878787</td>
+</tr>
+<tr>
+<td>GRAY54</td>
+<td>#8A8A8A</td>
+</tr>
+<tr>
+<td>GRAY55</td>
+<td>#8C8C8C</td>
+</tr>
+<tr>
+<td>GRAY56</td>
+<td>#8F8F8F</td>
+</tr>
+<tr>
+<td>GRAY57</td>
+<td>#919191</td>
+</tr>
+<tr>
+<td>GRAY58</td>
+<td>#949494</td>
+</tr>
+<tr>
+<td>GRAY59</td>
+<td>#969696</td>
+</tr>
+<tr>
+<td>GRAY6</td>
+<td>#0F0F0F</td>
+</tr>
+<tr>
+<td>GRAY60</td>
+<td>#999999</td>
+</tr>
+<tr>
+<td>GRAY61</td>
+<td>#9C9C9C</td>
+</tr>
+<tr>
+<td>GRAY62</td>
+<td>#9E9E9E</td>
+</tr>
+<tr>
+<td>GRAY63</td>
+<td>#A1A1A1</td>
+</tr>
+<tr>
+<td>GRAY64</td>
+<td>#A3A3A3</td>
+</tr>
+<tr>
+<td>GRAY65</td>
+<td>#A6A6A6</td>
+</tr>
+<tr>
+<td>GRAY66</td>
+<td>#A8A8A8</td>
+</tr>
+<tr>
+<td>GRAY67</td>
+<td>#ABABAB</td>
+</tr>
+<tr>
+<td>GRAY68</td>
+<td>#ADADAD</td>
+</tr>
+<tr>
+<td>GRAY69</td>
+<td>#B0B0B0</td>
+</tr>
+<tr>
+<td>GRAY7</td>
+<td>#121212</td>
+</tr>
+<tr>
+<td>GRAY70</td>
+<td>#B3B3B3</td>
+</tr>
+<tr>
+<td>GRAY71</td>
+<td>#B5B5B5</td>
+</tr>
+<tr>
+<td>GRAY72</td>
+<td>#B8B8B8</td>
+</tr>
+<tr>
+<td>GRAY73</td>
+<td>#BABABA</td>
+</tr>
+<tr>
+<td>GRAY74</td>
+<td>#BDBDBD</td>
+</tr>
+<tr>
+<td>GRAY75</td>
+<td>#BFBFBF</td>
+</tr>
+<tr>
+<td>GRAY76</td>
+<td>#C2C2C2</td>
+</tr>
+<tr>
+<td>GRAY77</td>
+<td>#C4C4C4</td>
+</tr>
+<tr>
+<td>GRAY78</td>
+<td>#C7C7C7</td>
+</tr>
+<tr>
+<td>GRAY79</td>
+<td>#C9C9C9</td>
+</tr>
+<tr>
+<td>GRAY8</td>
+<td>#141414</td>
+</tr>
+<tr>
+<td>GRAY80</td>
+<td>#CCCCCC</td>
+</tr>
+<tr>
+<td>GRAY81</td>
+<td>#CFCFCF</td>
+</tr>
+<tr>
+<td>GRAY82</td>
+<td>#D1D1D1</td>
+</tr>
+<tr>
+<td>GRAY83</td>
+<td>#D4D4D4</td>
+</tr>
+<tr>
+<td>GRAY84</td>
+<td>#D6D6D6</td>
+</tr>
+<tr>
+<td>GRAY85</td>
+<td>#D9D9D9</td>
+</tr>
+<tr>
+<td>GRAY86</td>
+<td>#DBDBDB</td>
+</tr>
+<tr>
+<td>GRAY87</td>
+<td>#DEDEDE</td>
+</tr>
+<tr>
+<td>GRAY88</td>
+<td>#E0E0E0</td>
+</tr>
+<tr>
+<td>GRAY89</td>
+<td>#E3E3E3</td>
+</tr>
+<tr>
+<td>GRAY9</td>
+<td>#171717</td>
+</tr>
+<tr>
+<td>GRAY90</td>
+<td>#E5E5E5</td>
+</tr>
+<tr>
+<td>GRAY91</td>
+<td>#E8E8E8</td>
+</tr>
+<tr>
+<td>GRAY92</td>
+<td>#EBEBEB</td>
+</tr>
+<tr>
+<td>GRAY93</td>
+<td>#EDEDED</td>
+</tr>
+<tr>
+<td>GRAY94</td>
+<td>#F0F0F0</td>
+</tr>
+<tr>
+<td>GRAY95</td>
+<td>#F2F2F2</td>
+</tr>
+<tr>
+<td>GRAY97</td>
+<td>#F7F7F7</td>
+</tr>
+<tr>
+<td>GRAY98</td>
+<td>#FAFAFA</td>
+</tr>
+<tr>
+<td>GRAY99</td>
+<td>#FCFCFC</td>
+</tr>
+<tr>
+<td>GREEN1</td>
+<td>#00FF00</td>
+</tr>
+<tr>
+<td>GREEN2</td>
+<td>#00EE00</td>
+</tr>
+<tr>
+<td>GREEN3</td>
+<td>#00CD00</td>
+</tr>
+<tr>
+<td>GREEN4</td>
+<td>#008B00</td>
+</tr>
+<tr>
+<td>GREENYELLOW</td>
+<td>#ADFF2F</td>
+</tr>
+<tr>
+<td>HONEYDEW1</td>
+<td>#F0FFF0</td>
+</tr>
+<tr>
+<td>HONEYDEW2</td>
+<td>#E0EEE0</td>
+</tr>
+<tr>
+<td>HONEYDEW3</td>
+<td>#C1CDC1</td>
+</tr>
+<tr>
+<td>HONEYDEW4</td>
+<td>#838B83</td>
+</tr>
+<tr>
+<td>HOTPINK</td>
+<td>#FF69B4</td>
+</tr>
+<tr>
+<td>HOTPINK1</td>
+<td>#FF6EB4</td>
+</tr>
+<tr>
+<td>HOTPINK2</td>
+<td>#EE6AA7</td>
+</tr>
+<tr>
+<td>HOTPINK3</td>
+<td>#CD6090</td>
+</tr>
+<tr>
+<td>HOTPINK4</td>
+<td>#8B3A62</td>
+</tr>
+<tr>
+<td>INDIANRED</td>
+<td>#CD5C5C</td>
+</tr>
+<tr>
+<td>INDIANRED1</td>
+<td>#FF6A6A</td>
+</tr>
+<tr>
+<td>INDIANRED2</td>
+<td>#EE6363</td>
+</tr>
+<tr>
+<td>INDIANRED3</td>
+<td>#CD5555</td>
+</tr>
+<tr>
+<td>INDIANRED4</td>
+<td>#8B3A3A</td>
+</tr>
+<tr>
+<td>IVORY1</td>
+<td>#FFFFF0</td>
+</tr>
+<tr>
+<td>IVORY2</td>
+<td>#EEEEE0</td>
+</tr>
+<tr>
+<td>IVORY3</td>
+<td>#CDCDC1</td>
+</tr>
+<tr>
+<td>IVORY4</td>
+<td>#8B8B83</td>
+</tr>
+<tr>
+<td>KHAKI</td>
+<td>#F0E68C</td>
+</tr>
+<tr>
+<td>KHAKI1</td>
+<td>#FFF68F</td>
+</tr>
+<tr>
+<td>KHAKI2</td>
+<td>#EEE685</td>
+</tr>
+<tr>
+<td>KHAKI3</td>
+<td>#CDC673</td>
+</tr>
+<tr>
+<td>KHAKI4</td>
+<td>#8B864E</td>
+</tr>
+<tr>
+<td>LAVENDER</td>
+<td>#E6E6FA</td>
+</tr>
+<tr>
+<td>LAVENDERBLUSH1</td>
+<td>#FFF0F5</td>
+</tr>
+<tr>
+<td>LAVENDERBLUSH2</td>
+<td>#EEE0E5</td>
+</tr>
+<tr>
+<td>LAVENDERBLUSH3</td>
+<td>#CDC1C5</td>
+</tr>
+<tr>
+<td>LAVENDERBLUSH4</td>
+<td>#8B8386</td>
+</tr>
+<tr>
+<td>LAWNGREEN</td>
+<td>#7CFC00</td>
+</tr>
+<tr>
+<td>LEMONCHIFFON1</td>
+<td>#FFFACD</td>
+</tr>
+<tr>
+<td>LEMONCHIFFON2</td>
+<td>#EEE9BF</td>
+</tr>
+<tr>
+<td>LEMONCHIFFON3</td>
+<td>#CDC9A5</td>
+</tr>
+<tr>
+<td>LEMONCHIFFON4</td>
+<td>#8B8970</td>
+</tr>
+<tr>
+<td>LIGHT</td>
+<td>#EEDD82</td>
+</tr>
+<tr>
+<td>LIGHTBLUE</td>
+<td>#ADD8E6</td>
+</tr>
+<tr>
+<td>LIGHTBLUE1</td>
+<td>#BFEFFF</td>
+</tr>
+<tr>
+<td>LIGHTBLUE2</td>
+<td>#B2DFEE</td>
+</tr>
+<tr>
+<td>LIGHTBLUE3</td>
+<td>#9AC0CD</td>
+</tr>
+<tr>
+<td>LIGHTBLUE4</td>
+<td>#68838B</td>
+</tr>
+<tr>
+<td>LIGHTCORAL</td>
+<td>#F08080</td>
+</tr>
+<tr>
+<td>LIGHTCYAN1</td>
+<td>#E0FFFF</td>
+</tr>
+<tr>
+<td>LIGHTCYAN2</td>
+<td>#D1EEEE</td>
+</tr>
+<tr>
+<td>LIGHTCYAN3</td>
+<td>#B4CDCD</td>
+</tr>
+<tr>
+<td>LIGHTCYAN4</td>
+<td>#7A8B8B</td>
+</tr>
+<tr>
+<td>LIGHTGOLDENROD1</td>
+<td>#FFEC8B</td>
+</tr>
+<tr>
+<td>LIGHTGOLDENROD2</td>
+<td>#EEDC82</td>
+</tr>
+<tr>
+<td>LIGHTGOLDENROD3</td>
+<td>#CDBE70</td>
+</tr>
+<tr>
+<td>LIGHTGOLDENROD4</td>
+<td>#8B814C</td>
+</tr>
+<tr>
+<td>LIGHTGOLDENRODYELLOW</td>
+<td>#FAFAD2</td>
+</tr>
+<tr>
+<td>LIGHTGRAY</td>
+<td>#D3D3D3</td>
+</tr>
+<tr>
+<td>LIGHTPINK</td>
+<td>#FFB6C1</td>
+</tr>
+<tr>
+<td>LIGHTPINK1</td>
+<td>#FFAEB9</td>
+</tr>
+<tr>
+<td>LIGHTPINK2</td>
+<td>#EEA2AD</td>
+</tr>
+<tr>
+<td>LIGHTPINK3</td>
+<td>#CD8C95</td>
+</tr>
+<tr>
+<td>LIGHTPINK4</td>
+<td>#8B5F65</td>
+</tr>
+<tr>
+<td>LIGHTSALMON1</td>
+<td>#FFA07A</td>
+</tr>
+<tr>
+<td>LIGHTSALMON2</td>
+<td>#EE9572</td>
+</tr>
+<tr>
+<td>LIGHTSALMON3</td>
+<td>#CD8162</td>
+</tr>
+<tr>
+<td>LIGHTSALMON4</td>
+<td>#8B5742</td>
+</tr>
+<tr>
+<td>LIGHTSEAGREEN</td>
+<td>#20B2AA</td>
+</tr>
+<tr>
+<td>LIGHTSKYBLUE</td>
+<td>#87CEFA</td>
+</tr>
+<tr>
+<td>LIGHTSKYBLUE1</td>
+<td>#B0E2FF</td>
+</tr>
+<tr>
+<td>LIGHTSKYBLUE2</td>
+<td>#A4D3EE</td>
+</tr>
+<tr>
+<td>LIGHTSKYBLUE3</td>
+<td>#8DB6CD</td>
+</tr>
+<tr>
+<td>LIGHTSKYBLUE4</td>
+<td>#607B8B</td>
+</tr>
+<tr>
+<td>LIGHTSLATEBLUE</td>
+<td>#8470FF</td>
+</tr>
+<tr>
+<td>LIGHTSLATEGRAY</td>
+<td>#778899</td>
+</tr>
+<tr>
+<td>LIGHTSTEELBLUE</td>
+<td>#B0C4DE</td>
+</tr>
+<tr>
+<td>LIGHTSTEELBLUE1</td>
+<td>#CAE1FF</td>
+</tr>
+<tr>
+<td>LIGHTSTEELBLUE2</td>
+<td>#BCD2EE</td>
+</tr>
+<tr>
+<td>LIGHTSTEELBLUE3</td>
+<td>#A2B5CD</td>
+</tr>
+<tr>
+<td>LIGHTSTEELBLUE4</td>
+<td>#6E7B8B</td>
+</tr>
+<tr>
+<td>LIGHTYELLOW1</td>
+<td>#FFFFE0</td>
+</tr>
+<tr>
+<td>LIGHTYELLOW2</td>
+<td>#EEEED1</td>
+</tr>
+<tr>
+<td>LIGHTYELLOW3</td>
+<td>#CDCDB4</td>
+</tr>
+<tr>
+<td>LIGHTYELLOW4</td>
+<td>#8B8B7A</td>
+</tr>
+<tr>
+<td>LIMEGREEN</td>
+<td>#32CD32</td>
+</tr>
+<tr>
+<td>LINEN</td>
+<td>#FAF0E6</td>
+</tr>
+<tr>
+<td>MAGENTA</td>
+<td>#FF00FF</td>
+</tr>
+<tr>
+<td>MAGENTA2</td>
+<td>#EE00EE</td>
+</tr>
+<tr>
+<td>MAGENTA3</td>
+<td>#CD00CD</td>
+</tr>
+<tr>
+<td>MAGENTA4</td>
+<td>#8B008B</td>
+</tr>
+<tr>
+<td>MAROON</td>
+<td>#B03060</td>
+</tr>
+<tr>
+<td>MAROON1</td>
+<td>#FF34B3</td>
+</tr>
+<tr>
+<td>MAROON2</td>
+<td>#EE30A7</td>
+</tr>
+<tr>
+<td>MAROON3</td>
+<td>#CD2990</td>
+</tr>
+<tr>
+<td>MAROON4</td>
+<td>#8B1C62</td>
+</tr>
+<tr>
+<td>MEDIUM</td>
+<td>#66CDAA</td>
+</tr>
+<tr>
+<td>MEDIUMAQUAMARINE</td>
+<td>#66CDAA</td>
+</tr>
+<tr>
+<td>MEDIUMBLUE</td>
+<td>#0000CD</td>
+</tr>
+<tr>
+<td>MEDIUMORCHID</td>
+<td>#BA55D3</td>
+</tr>
+<tr>
+<td>MEDIUMORCHID1</td>
+<td>#E066FF</td>
+</tr>
+<tr>
+<td>MEDIUMORCHID2</td>
+<td>#D15FEE</td>
+</tr>
+<tr>
+<td>MEDIUMORCHID3</td>
+<td>#B452CD</td>
+</tr>
+<tr>
+<td>MEDIUMORCHID4</td>
+<td>#7A378B</td>
+</tr>
+<tr>
+<td>MEDIUMPURPLE</td>
+<td>#9370DB</td>
+</tr>
+<tr>
+<td>MEDIUMPURPLE1</td>
+<td>#AB82FF</td>
+</tr>
+<tr>
+<td>MEDIUMPURPLE2</td>
+<td>#9F79EE</td>
+</tr>
+<tr>
+<td>MEDIUMPURPLE3</td>
+<td>#8968CD</td>
+</tr>
+<tr>
+<td>MEDIUMPURPLE4</td>
+<td>#5D478B</td>
+</tr>
+<tr>
+<td>MEDIUMSEAGREEN</td>
+<td>#3CB371</td>
+</tr>
+<tr>
+<td>MEDIUMSLATEBLUE</td>
+<td>#7B68EE</td>
+</tr>
+<tr>
+<td>MEDIUMSPRINGGREEN</td>
+<td>#00FA9A</td>
+</tr>
+<tr>
+<td>MEDIUMTURQUOISE</td>
+<td>#48D1CC</td>
+</tr>
+<tr>
+<td>MEDIUMVIOLETRED</td>
+<td>#C71585</td>
+</tr>
+<tr>
+<td>MIDNIGHTBLUE</td>
+<td>#191970</td>
+</tr>
+<tr>
+<td>MINTCREAM</td>
+<td>#F5FFFA</td>
+</tr>
+<tr>
+<td>MISTYROSE1</td>
+<td>#FFE4E1</td>
+</tr>
+<tr>
+<td>MISTYROSE2</td>
+<td>#EED5D2</td>
+</tr>
+<tr>
+<td>MISTYROSE3</td>
+<td>#CDB7B5</td>
+</tr>
+<tr>
+<td>MISTYROSE4</td>
+<td>#8B7D7B</td>
+</tr>
+<tr>
+<td>MOCCASIN</td>
+<td>#FFE4B5</td>
+</tr>
+<tr>
+<td>NAVAJOWHITE1</td>
+<td>#FFDEAD</td>
+</tr>
+<tr>
+<td>NAVAJOWHITE2</td>
+<td>#EECFA1</td>
+</tr>
+<tr>
+<td>NAVAJOWHITE3</td>
+<td>#CDB38B</td>
+</tr>
+<tr>
+<td>NAVAJOWHITE4</td>
+<td>#8B795E</td>
+</tr>
+<tr>
+<td>NAVYBLUE</td>
+<td>#000080</td>
+</tr>
+<tr>
+<td>OLDLACE</td>
+<td>#FDF5E6</td>
+</tr>
+<tr>
+<td>OLIVEDRAB</td>
+<td>#6B8E23</td>
+</tr>
+<tr>
+<td>OLIVEDRAB1</td>
+<td>#C0FF3E</td>
+</tr>
+<tr>
+<td>OLIVEDRAB2</td>
+<td>#B3EE3A</td>
+</tr>
+<tr>
+<td>OLIVEDRAB4</td>
+<td>#698B22</td>
+</tr>
+<tr>
+<td>ORANGE1</td>
+<td>#FFA500</td>
+</tr>
+<tr>
+<td>ORANGE2</td>
+<td>#EE9A00</td>
+</tr>
+<tr>
+<td>ORANGE3</td>
+<td>#CD8500</td>
+</tr>
+<tr>
+<td>ORANGE4</td>
+<td>#8B5A00</td>
+</tr>
+<tr>
+<td>ORANGERED1</td>
+<td>#FF4500</td>
+</tr>
+<tr>
+<td>ORANGERED2</td>
+<td>#EE4000</td>
+</tr>
+<tr>
+<td>ORANGERED3</td>
+<td>#CD3700</td>
+</tr>
+<tr>
+<td>ORANGERED4</td>
+<td>#8B2500</td>
+</tr>
+<tr>
+<td>ORCHID</td>
+<td>#DA70D6</td>
+</tr>
+<tr>
+<td>ORCHID1</td>
+<td>#FF83FA</td>
+</tr>
+<tr>
+<td>ORCHID2</td>
+<td>#EE7AE9</td>
+</tr>
+<tr>
+<td>ORCHID3</td>
+<td>#CD69C9</td>
+</tr>
+<tr>
+<td>ORCHID4</td>
+<td>#8B4789</td>
+</tr>
+<tr>
+<td>PALE</td>
+<td>#DB7093</td>
+</tr>
+<tr>
+<td>PALEGOLDENROD</td>
+<td>#EEE8AA</td>
+</tr>
+<tr>
+<td>PALEGREEN</td>
+<td>#98FB98</td>
+</tr>
+<tr>
+<td>PALEGREEN1</td>
+<td>#9AFF9A</td>
+</tr>
+<tr>
+<td>PALEGREEN2</td>
+<td>#90EE90</td>
+</tr>
+<tr>
+<td>PALEGREEN3</td>
+<td>#7CCD7C</td>
+</tr>
+<tr>
+<td>PALEGREEN4</td>
+<td>#548B54</td>
+</tr>
+<tr>
+<td>PALETURQUOISE</td>
+<td>#AFEEEE</td>
+</tr>
+<tr>
+<td>PALETURQUOISE1</td>
+<td>#BBFFFF</td>
+</tr>
+<tr>
+<td>PALETURQUOISE2</td>
+<td>#AEEEEE</td>
+</tr>
+<tr>
+<td>PALETURQUOISE3</td>
+<td>#96CDCD</td>
+</tr>
+<tr>
+<td>PALETURQUOISE4</td>
+<td>#668B8B</td>
+</tr>
+<tr>
+<td>PALEVIOLETRED</td>
+<td>#DB7093</td>
+</tr>
+<tr>
+<td>PALEVIOLETRED1</td>
+<td>#FF82AB</td>
+</tr>
+<tr>
+<td>PALEVIOLETRED2</td>
+<td>#EE799F</td>
+</tr>
+<tr>
+<td>PALEVIOLETRED3</td>
+<td>#CD6889</td>
+</tr>
+<tr>
+<td>PALEVIOLETRED4</td>
+<td>#8B475D</td>
+</tr>
+<tr>
+<td>PAPAYAWHIP</td>
+<td>#FFEFD5</td>
+</tr>
+<tr>
+<td>PEACHPUFF1</td>
+<td>#FFDAB9</td>
+</tr>
+<tr>
+<td>PEACHPUFF2</td>
+<td>#EECBAD</td>
+</tr>
+<tr>
+<td>PEACHPUFF3</td>
+<td>#CDAF95</td>
+</tr>
+<tr>
+<td>PEACHPUFF4</td>
+<td>#8B7765</td>
+</tr>
+<tr>
+<td>PINK</td>
+<td>#FFC0CB</td>
+</tr>
+<tr>
+<td>PINK1</td>
+<td>#FFB5C5</td>
+</tr>
+<tr>
+<td>PINK2</td>
+<td>#EEA9B8</td>
+</tr>
+<tr>
+<td>PINK3</td>
+<td>#CD919E</td>
+</tr>
+<tr>
+<td>PINK4</td>
+<td>#8B636C</td>
+</tr>
+<tr>
+<td>PLUM</td>
+<td>#DDA0DD</td>
+</tr>
+<tr>
+<td>PLUM1</td>
+<td>#FFBBFF</td>
+</tr>
+<tr>
+<td>PLUM2</td>
+<td>#EEAEEE</td>
+</tr>
+<tr>
+<td>PLUM3</td>
+<td>#CD96CD</td>
+</tr>
+<tr>
+<td>PLUM4</td>
+<td>#8B668B</td>
+</tr>
+<tr>
+<td>POWDERBLUE</td>
+<td>#B0E0E6</td>
+</tr>
+<tr>
+<td>PURPLE</td>
+<td>#A020F0</td>
+</tr>
+<tr>
+<td>PURPLE1</td>
+<td>#9B30FF</td>
+</tr>
+<tr>
+<td>PURPLE2</td>
+<td>#912CEE</td>
+</tr>
+<tr>
+<td>PURPLE3</td>
+<td>#7D26CD</td>
+</tr>
+<tr>
+<td>PURPLE4</td>
+<td>#551A8B</td>
+</tr>
+<tr>
+<td>RED1</td>
+<td>#FF0000</td>
+</tr>
+<tr>
+<td>RED2</td>
+<td>#EE0000</td>
+</tr>
+<tr>
+<td>RED3</td>
+<td>#CD0000</td>
+</tr>
+<tr>
+<td>RED4</td>
+<td>#8B0000</td>
+</tr>
+<tr>
+<td>ROSYBROWN</td>
+<td>#BC8F8F</td>
+</tr>
+<tr>
+<td>ROSYBROWN1</td>
+<td>#FFC1C1</td>
+</tr>
+<tr>
+<td>ROSYBROWN2</td>
+<td>#EEB4B4</td>
+</tr>
+<tr>
+<td>ROSYBROWN3</td>
+<td>#CD9B9B</td>
+</tr>
+<tr>
+<td>ROSYBROWN4</td>
+<td>#8B6969</td>
+</tr>
+<tr>
+<td>ROYALBLUE</td>
+<td>#4169E1</td>
+</tr>
+<tr>
+<td>ROYALBLUE1</td>
+<td>#4876FF</td>
+</tr>
+<tr>
+<td>ROYALBLUE2</td>
+<td>#436EEE</td>
+</tr>
+<tr>
+<td>ROYALBLUE3</td>
+<td>#3A5FCD</td>
+</tr>
+<tr>
+<td>ROYALBLUE4</td>
+<td>#27408B</td>
+</tr>
+<tr>
+<td>SADDLEBROWN</td>
+<td>#8B4513</td>
+</tr>
+<tr>
+<td>SALMON</td>
+<td>#FA8072</td>
+</tr>
+<tr>
+<td>SALMON1</td>
+<td>#FF8C69</td>
+</tr>
+<tr>
+<td>SALMON2</td>
+<td>#EE8262</td>
+</tr>
+<tr>
+<td>SALMON3</td>
+<td>#CD7054</td>
+</tr>
+<tr>
+<td>SALMON4</td>
+<td>#8B4C39</td>
+</tr>
+<tr>
+<td>SANDYBROWN</td>
+<td>#F4A460</td>
+</tr>
+<tr>
+<td>SEAGREEN1</td>
+<td>#54FF9F</td>
+</tr>
+<tr>
+<td>SEAGREEN2</td>
+<td>#4EEE94</td>
+</tr>
+<tr>
+<td>SEAGREEN3</td>
+<td>#43CD80</td>
+</tr>
+<tr>
+<td>SEAGREEN4</td>
+<td>#2E8B57</td>
+</tr>
+<tr>
+<td>SEASHELL1</td>
+<td>#FFF5EE</td>
+</tr>
+<tr>
+<td>SEASHELL2</td>
+<td>#EEE5DE</td>
+</tr>
+<tr>
+<td>SEASHELL3</td>
+<td>#CDC5BF</td>
+</tr>
+<tr>
+<td>SEASHELL4</td>
+<td>#8B8682</td>
+</tr>
+<tr>
+<td>SIENNA</td>
+<td>#A0522D</td>
+</tr>
+<tr>
+<td>SIENNA1</td>
+<td>#FF8247</td>
+</tr>
+<tr>
+<td>SIENNA2</td>
+<td>#EE7942</td>
+</tr>
+<tr>
+<td>SIENNA3</td>
+<td>#CD6839</td>
+</tr>
+<tr>
+<td>SIENNA4</td>
+<td>#8B4726</td>
+</tr>
+<tr>
+<td>SKYBLUE</td>
+<td>#87CEEB</td>
+</tr>
+<tr>
+<td>SKYBLUE1</td>
+<td>#87CEFF</td>
+</tr>
+<tr>
+<td>SKYBLUE2</td>
+<td>#7EC0EE</td>
+</tr>
+<tr>
+<td>SKYBLUE3</td>
+<td>#6CA6CD</td>
+</tr>
+<tr>
+<td>SKYBLUE4</td>
+<td>#4A708B</td>
+</tr>
+<tr>
+<td>SLATEBLUE</td>
+<td>#6A5ACD</td>
+</tr>
+<tr>
+<td>SLATEBLUE1</td>
+<td>#836FFF</td>
+</tr>
+<tr>
+<td>SLATEBLUE2</td>
+<td>#7A67EE</td>
+</tr>
+<tr>
+<td>SLATEBLUE3</td>
+<td>#6959CD</td>
+</tr>
+<tr>
+<td>SLATEBLUE4</td>
+<td>#473C8B</td>
+</tr>
+<tr>
+<td>SLATEGRAY</td>
+<td>#708090</td>
+</tr>
+<tr>
+<td>SLATEGRAY1</td>
+<td>#C6E2FF</td>
+</tr>
+<tr>
+<td>SLATEGRAY2</td>
+<td>#B9D3EE</td>
+</tr>
+<tr>
+<td>SLATEGRAY3</td>
+<td>#9FB6CD</td>
+</tr>
+<tr>
+<td>SLATEGRAY4</td>
+<td>#6C7B8B</td>
+</tr>
+<tr>
+<td>SNOW1</td>
+<td>#FFFAFA</td>
+</tr>
+<tr>
+<td>SNOW2</td>
+<td>#EEE9E9</td>
+</tr>
+<tr>
+<td>SNOW3</td>
+<td>#CDC9C9</td>
+</tr>
+<tr>
+<td>SNOW4</td>
+<td>#8B8989</td>
+</tr>
+<tr>
+<td>SPRINGGREEN1</td>
+<td>#00FF7F</td>
+</tr>
+<tr>
+<td>SPRINGGREEN2</td>
+<td>#00EE76</td>
+</tr>
+<tr>
+<td>SPRINGGREEN3</td>
+<td>#00CD66</td>
+</tr>
+<tr>
+<td>SPRINGGREEN4</td>
+<td>#008B45</td>
+</tr>
+<tr>
+<td>STEELBLUE</td>
+<td>#4682B4</td>
+</tr>
+<tr>
+<td>STEELBLUE1</td>
+<td>#63B8FF</td>
+</tr>
+<tr>
+<td>STEELBLUE2</td>
+<td>#5CACEE</td>
+</tr>
+<tr>
+<td>STEELBLUE3</td>
+<td>#4F94CD</td>
+</tr>
+<tr>
+<td>STEELBLUE4</td>
+<td>#36648B</td>
+</tr>
+<tr>
+<td>TAN</td>
+<td>#D2B48C</td>
+</tr>
+<tr>
+<td>TAN1</td>
+<td>#FFA54F</td>
+</tr>
+<tr>
+<td>TAN2</td>
+<td>#EE9A49</td>
+</tr>
+<tr>
+<td>TAN3</td>
+<td>#CD853F</td>
+</tr>
+<tr>
+<td>TAN4</td>
+<td>#8B5A2B</td>
+</tr>
+<tr>
+<td>THISTLE</td>
+<td>#D8BFD8</td>
+</tr>
+<tr>
+<td>THISTLE1</td>
+<td>#FFE1FF</td>
+</tr>
+<tr>
+<td>THISTLE2</td>
+<td>#EED2EE</td>
+</tr>
+<tr>
+<td>THISTLE3</td>
+<td>#CDB5CD</td>
+</tr>
+<tr>
+<td>THISTLE4</td>
+<td>#8B7B8B</td>
+</tr>
+<tr>
+<td>TOMATO1</td>
+<td>#FF6347</td>
+</tr>
+<tr>
+<td>TOMATO2</td>
+<td>#EE5C42</td>
+</tr>
+<tr>
+<td>TOMATO3</td>
+<td>#CD4F39</td>
+</tr>
+<tr>
+<td>TOMATO4</td>
+<td>#8B3626</td>
+</tr>
+<tr>
+<td>TURQUOISE</td>
+<td>#40E0D0</td>
+</tr>
+<tr>
+<td>TURQUOISE1</td>
+<td>#00F5FF</td>
+</tr>
+<tr>
+<td>TURQUOISE2</td>
+<td>#00E5EE</td>
+</tr>
+<tr>
+<td>TURQUOISE3</td>
+<td>#00C5CD</td>
+</tr>
+<tr>
+<td>TURQUOISE4</td>
+<td>#00868B</td>
+</tr>
+<tr>
+<td>VIOLET</td>
+<td>#EE82EE</td>
+</tr>
+<tr>
+<td>VIOLETRED</td>
+<td>#D02090</td>
+</tr>
+<tr>
+<td>VIOLETRED1</td>
+<td>#FF3E96</td>
+</tr>
+<tr>
+<td>VIOLETRED2</td>
+<td>#EE3A8C</td>
+</tr>
+<tr>
+<td>VIOLETRED3</td>
+<td>#CD3278</td>
+</tr>
+<tr>
+<td>VIOLETRED4</td>
+<td>#8B2252</td>
+</tr>
+<tr>
+<td>WHEAT</td>
+<td>#F5DEB3</td>
+</tr>
+<tr>
+<td>WHEAT1</td>
+<td>#FFE7BA</td>
+</tr>
+<tr>
+<td>WHEAT2</td>
+<td>#EED8AE</td>
+</tr>
+<tr>
+<td>WHEAT3</td>
+<td>#CDBA96</td>
+</tr>
+<tr>
+<td>WHEAT4</td>
+<td>#8B7E66</td>
+</tr>
+<tr>
+<td>WHITE</td>
+<td>#FFFFFF</td>
+</tr>
+<tr>
+<td>WHITESMOKE</td>
+<td>#F5F5F5</td>
+</tr>
+<tr>
+<td>YELLOW1</td>
+<td>#FFFF00</td>
+</tr>
+<tr>
+<td>YELLOW2</td>
+<td>#EEEE00</td>
+</tr>
+<tr>
+<td>YELLOW3</td>
+<td>#CDCD00</td>
+</tr>
+<tr>
+<td>YELLOW4</td>
+<td>#8B8B00</td>
+</tr>
+<tr>
+<td>YELLOWGREEN</td>
+<td>#9ACD32</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../XKCD/" class="md-footer__link md-footer__link--prev" aria-label="上一页: XKCD">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                XKCD
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../commands/" class="md-footer__link md-footer__link--next" aria-label="下一页: 命令">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                命令
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> | Copyright &copy; 2024 MarkHoo
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://s.markhoo.cn" target="_blank" rel="noopener" title="s.markhoo.cn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://s.markhoo.cn" target="_blank" rel="noopener" title="s.markhoo.cn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="m504 204.6-.7-1.8L433.6 21c-1.4-3.6-3.9-6.6-7.2-8.6-2.4-1.6-5.1-2.5-8-2.8s-5.7.1-8.4 1.1-5.1 2.7-7.1 4.8c-1.9 2.1-3.3 4.7-4.1 7.4l-47 144H161.3l-47.1-144c-.8-2.8-2.2-5.3-4.1-7.4-2-2.1-4.4-3.7-7.1-4.8-2.6-1-5.5-1.4-8.4-1.1s-5.6 1.2-8 2.8c-3.2 2-5.8 5.1-7.2 8.6L9.8 202.8l-.8 1.8c-10 26.2-11.3 55-3.5 82 7.7 26.9 24 50.7 46.4 67.6l.3.2.6.4 106 79.5c38.5 29.1 66.7 50.3 84.6 63.9 3.7 1.9 8.3 4.3 13 4.3s9.3-2.4 13-4.3c17.9-13.5 46.1-34.9 84.6-63.9l106.7-79.9.3-.3c22.4-16.9 38.7-40.6 45.6-67.5 8.6-27 7.4-55.8-2.6-82"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://s.markhoo.cn" target="_blank" rel="noopener" title="s.markhoo.cn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://s.markhoo.cn" target="_blank" rel="noopener" title="s.markhoo.cn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M357.2 48h70.6L273.6 224.2 455 464H313L201.7 318.6 74.5 464H3.8l164.9-188.5L-5.2 48h145.6l100.5 132.9zm-24.8 373.8h39.1L119.1 88h-42z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://s.markhoo.cn" target="_blank" rel="noopener" title="s.markhoo.cn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M349.9 236.3h-66.1v-59.4h66.1zm0-204.3h-66.1v60.7h66.1zm78.2 144.8H362v59.4h66.1zm-156.3-72.1h-66.1v60.1h66.1zm78.1 0h-66.1v60.1h66.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1zm78.1 0h-66.1v59.4h66.1zm-78.1-72.1h-66.1v60.1h66.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://s.markhoo.cn" target="_blank" rel="noopener" title="s.markhoo.cn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://s.markhoo.cn" target="_blank" rel="noopener" title="s.markhoo.cn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M224.3 141a115 115 0 1 0-.6 230 115 115 0 1 0 .6-230m-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1-.6-149.2m93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1-53.6 0m129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8M399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://s.markhoo.cn" target="_blank" rel="noopener" title="s.markhoo.cn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share", "navigation.footer", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

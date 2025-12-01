@@ -1,0 +1,4469 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="由社区维护用于创建数学动画的Python库">
+      
+      
+      
+        <link rel="canonical" href="https://manim.markhoo.cn/reference/utils/color/XKCD/">
+      
+      
+        <link rel="prev" href="../BS381/">
+      
+      
+        <link rel="next" href="../X11/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>XKCD - Manim中文文档</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-2VVHD11RGG"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-2VVHD11RGG",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-2VVHD11RGG",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#xkcd" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../.." title="Manim中文文档" class="md-header__button md-logo" aria-label="Manim中文文档" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manim中文文档
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              XKCD
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MarkHoo/manim-docs-zh-hans" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Manim中文文档" class="md-nav__button md-logo" aria-label="Manim中文文档" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.svg" alt="logo">
+
+    </a>
+    Manim中文文档
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MarkHoo/manim-docs-zh-hans" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../examples/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    示例库
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../tutorials_guides/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    教程和指南
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    参考手册
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    参考手册
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../animation/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    动画
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../camera/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    摄像机
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../config/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    配置
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../mobject/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    对象(Mobjects)
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../scene/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    场景
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    实用程序和其他模块
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    实用程序和其他模块
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bezier/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    贝塞尔
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    颜色
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_7_3" id="__nav_3_7_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    颜色
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../core/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    核
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manim_colors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manim颜色
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AS2700/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AS2700
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BS381/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BS381
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XKCD
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XKCD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        颜色常数列表
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../X11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    X11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    命令
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../config_ops/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    配置操作
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../constants/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    常量
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../debug/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Debug/调试
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deprecation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    弃用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../docbuild/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文档构建
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hashing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    哈希
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../images/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    图片
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../ipython_magic/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ipython
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iterables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    可迭代对象
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    路径
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rate_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    速率函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simple_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简单函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sounds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    声音
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../space_ops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    空间操作
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../testing/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    测试
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../tex/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tex
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tex_file_writing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    tex文件写入
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../tex_templates/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    tex模板
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../typing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    类型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../plugins/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    插件
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../changelog/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    变更日志
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        颜色常数列表
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+  <nav class="md-path" aria-label="导航栏" >
+    <ol class="md-path__list">
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    参考手册
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    实用程序和其他模块
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    颜色
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="xkcd">XKCD</h1>
+<p>XKCD 颜色名称调查中的颜色</p>
+<p>XKCD 是由 Randall Munroe 创作的流行<a href="https://xkcd.com/353/">网络漫画</a>。他的“<a href="http://blog.xkcd.com/2010/05/03/color-survey-results/">颜色名称调查</a>”（有 20 万名参与者）得出了近 1000 个颜色名称的列表。</p>
+<p>虽然该<code>XKCD</code>模块暴露于 Manim 的全局名称空间，但其中包含的颜色却不然。这意味着为了使用颜色，请通过模块名称访问它们：</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>&gt;&gt;&gt;<span class="w"> </span>from<span class="w"> </span>manim<span class="w"> </span>import<span class="w"> </span>XKCD
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>&gt;&gt;&gt;<span class="w"> </span>XKCD.MANGO
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>ManimColor<span class="o">(</span><span class="s1">&#39;#FFA62B&#39;</span><span class="o">)</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="_1">颜色常数列表</h2>
+<p>这些十六进制值是非官方近似值，旨在模拟 HTML 中的颜色，取自<a href="https://www.w3schools.com/colors/colors_xkcd.asp">https://www.w3schools.com/colors/colors_xkcd.asp</a>。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>颜色名称</td>
+<td>RGB十六进制代码</td>
+</tr>
+<tr>
+<td><code>ACIDGREEN</code></td>
+<td><code>#8FFE09</code></td>
+</tr>
+<tr>
+<td><code>ADOBE</code></td>
+<td><code>#BD6C48</code></td>
+</tr>
+<tr>
+<td><code>ALGAE</code></td>
+<td><code>#54AC68</code></td>
+</tr>
+<tr>
+<td><code>ALGAEGREEN</code></td>
+<td><code>#21C36F</code></td>
+</tr>
+<tr>
+<td><code>ALMOSTBLACK</code></td>
+<td><code>#070D0D</code></td>
+</tr>
+<tr>
+<td><code>AMBER</code></td>
+<td><code>#FEB308</code></td>
+</tr>
+<tr>
+<td><code>AMETHYST</code></td>
+<td><code>#9B5FC0</code></td>
+</tr>
+<tr>
+<td><code>APPLE</code></td>
+<td><code>#6ECB3C</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>APPLEGREEN</code></p>
+<p><code>#76CD26</code></p>
+<p><code>APRICOT</code></p>
+<p><code>#FFB16D</code></p>
+<p><code>AQUA</code></p>
+<p><code>#13EAC9</code></p>
+<p><code>AQUABLUE</code></p>
+<p><code>#02D8E9</code></p>
+<p><code>AQUAGREEN</code></p>
+<p><code>#12E193</code></p>
+<p><code>AQUAMARINE</code></p>
+<p><code>#2EE8BB</code></p>
+<p><code>ARMYGREEN</code></p>
+<p><code>#4B5D16</code></p>
+<p><code>ASPARAGUS</code></p>
+<p><code>#77AB56</code></p>
+<p><code>AUBERGINE</code></p>
+<p><code>#3D0734</code></p>
+<p><code>AUBURN</code></p>
+<p><code>#9A3001</code></p>
+<p><code>AVOCADO</code></p>
+<p><code>#90B134</code></p>
+<p><code>AVOCADOGREEN</code></p>
+<p><code>#87A922</code></p>
+<p><code>AZUL</code></p>
+<p><code>#1D5DEC</code></p>
+<p><code>AZURE</code></p>
+<p><code>#069AF3</code></p>
+<p><code>BABYBLUE</code></p>
+<p><code>#A2CFFE</code></p>
+<p><code>BABYGREEN</code></p>
+<p><code>#8CFF9E</code></p>
+<p><code>BABYPINK</code></p>
+<p><code>#FFB7CE</code></p>
+<p><code>BABYPOO</code></p>
+<p><code>#AB9004</code></p>
+<p><code>BABYPOOP</code></p>
+<p><code>#937C00</code></p>
+<p><code>BABYPOOPGREEN</code></p>
+<p><code>#8F9805</code></p>
+<p><code>BABYPUKEGREEN</code></p>
+<p><code>#B6C406</code></p>
+<p><code>BABYPURPLE</code></p>
+<p><code>#CA9BF7</code></p>
+<p><code>BABYSHITBROWN</code></p>
+<p><code>#AD900D</code></p>
+<p><code>BABYSHITGREEN</code></p>
+<p><code>#889717</code></p>
+<p><code>BANANA</code></p>
+<p><code>#FFFF7E</code></p>
+<p><code>BANANAYELLOW</code></p>
+<p><code>#FAFE4B</code></p>
+<p><code>BARBIEPINK</code></p>
+<p><code>#FE46A5</code></p>
+<p><code>BARFGREEN</code></p>
+<p><code>#94AC02</code></p>
+<p><code>BARNEY</code></p>
+<p><code>#AC1DB8</code></p>
+<p><code>BARNEYPURPLE</code></p>
+<p><code>#A00498</code></p>
+<p><code>BATTLESHIPGREY</code></p>
+<p><code>#6B7C85</code></p>
+<p><code>BEIGE</code></p>
+<p><code>#E6DAA6</code></p>
+<p><code>BERRY</code></p>
+<p><code>#990F4B</code></p>
+<p><code>BILE</code></p>
+<p><code>#B5C306</code></p>
+<p><code>BLACK</code></p>
+<p><code>#000000</code></p>
+<p><code>BLAND</code></p>
+<p><code>#AFA88B</code></p>
+<p><code>BLOOD</code></p>
+<p><code>#770001</code></p>
+<p><code>BLOODORANGE</code></p>
+<p><code>#FE4B03</code></p>
+<p><code>BLOODRED</code></p>
+<p><code>#980002</code></p>
+<p><code>BLUE</code></p>
+<p><code>#0343DF</code></p>
+<p><code>BLUEBERRY</code></p>
+<p><code>#464196</code></p>
+<p><code>BLUEBLUE</code></p>
+<p><code>#2242C7</code></p>
+<p><code>BLUEGREEN</code></p>
+<p><code>#0F9B8E</code></p>
+<p><code>BLUEGREY</code></p>
+<p><code>#85A3B2</code></p>
+<p><code>BLUEPURPLE</code></p>
+<p><code>#5A06EF</code></p>
+<p><code>BLUEVIOLET</code></p>
+<p><code>#5D06E9</code></p>
+<p><code>BLUEWITHAHINTOFPURPLE</code></p>
+<p><code>#533CC6</code></p>
+<p><code>BLUEYGREEN</code></p>
+<p><code>#2BB179</code></p>
+<p><code>BLUEYGREY</code></p>
+<p><code>#89A0B0</code></p>
+<p><code>BLUEYPURPLE</code></p>
+<p><code>#6241C7</code></p>
+<p><code>BLUISH</code></p>
+<p><code>#2976BB</code></p>
+<p><code>BLUISHGREEN</code></p>
+<p><code>#10A674</code></p>
+<p><code>BLUISHGREY</code></p>
+<p><code>#748B97</code></p>
+<p><code>BLUISHPURPLE</code></p>
+<p><code>#703BE7</code></p>
+<p><code>BLURPLE</code></p>
+<p><code>#5539CC</code></p>
+<p><code>BLUSH</code></p>
+<p><code>#F29E8E</code></p>
+<p><code>BLUSHPINK</code></p>
+<p><code>#FE828C</code></p>
+<p><code>BOOGER</code></p>
+<p><code>#9BB53C</code></p>
+<p><code>BOOGERGREEN</code></p>
+<p><code>#96B403</code></p>
+<p><code>BORDEAUX</code></p>
+<p><code>#7B002C</code></p>
+<p><code>BORINGGREEN</code></p>
+<p><code>#63B365</code></p>
+<p><code>BOTTLEGREEN</code></p>
+<p><code>#044A05</code></p>
+<p><code>BRICK</code></p>
+<p><code>#A03623</code></p>
+<p><code>BRICKORANGE</code></p>
+<p><code>#C14A09</code></p>
+<p><code>BRICKRED</code></p>
+<p><code>#8F1402</code></p>
+<p><code>BRIGHTAQUA</code></p>
+<p><code>#0BF9EA</code></p>
+<p><code>BRIGHTBLUE</code></p>
+<p><code>#0165FC</code></p>
+<p><code>BRIGHTCYAN</code></p>
+<p><code>#41FDFE</code></p>
+<p><code>BRIGHTGREEN</code></p>
+<p><code>#01FF07</code></p>
+<p><code>BRIGHTLAVENDER</code></p>
+<p><code>#C760FF</code></p>
+<p><code>BRIGHTLIGHTBLUE</code></p>
+<p><code>#26F7FD</code></p>
+<p><code>BRIGHTLIGHTGREEN</code></p>
+<p><code>#2DFE54</code></p>
+<p><code>BRIGHTLILAC</code></p>
+<p><code>#C95EFB</code></p>
+<p><code>BRIGHTLIME</code></p>
+<p><code>#87FD05</code></p>
+<p><code>BRIGHTLIMEGREEN</code></p>
+<p><code>#65FE08</code></p>
+<p><code>BRIGHTMAGENTA</code></p>
+<p><code>#FF08E8</code></p>
+<p><code>BRIGHTOLIVE</code></p>
+<p><code>#9CBB04</code></p>
+<p><code>BRIGHTORANGE</code></p>
+<p><code>#FF5B00</code></p>
+<p><code>BRIGHTPINK</code></p>
+<p><code>#FE01B1</code></p>
+<p><code>BRIGHTPURPLE</code></p>
+<p><code>#BE03FD</code></p>
+<p><code>BRIGHTRED</code></p>
+<p><code>#FF000D</code></p>
+<p><code>BRIGHTSEAGREEN</code></p>
+<p><code>#05FFA6</code></p>
+<p><code>BRIGHTSKYBLUE</code></p>
+<p><code>#02CCFE</code></p>
+<p><code>BRIGHTTEAL</code></p>
+<p><code>#01F9C6</code></p>
+<p><code>BRIGHTTURQUOISE</code></p>
+<p><code>#0FFEF9</code></p>
+<p><code>BRIGHTVIOLET</code></p>
+<p><code>#AD0AFD</code></p>
+<p><code>BRIGHTYELLOW</code></p>
+<p><code>#FFFD01</code></p>
+<p><code>BRIGHTYELLOWGREEN</code></p>
+<p><code>#9DFF00</code></p>
+<p><code>BRITISHRACINGGREEN</code></p>
+<p><code>#05480D</code></p>
+<p><code>BRONZE</code></p>
+<p><code>#A87900</code></p>
+<p><code>BROWN</code></p>
+<p><code>#653700</code></p>
+<p><code>BROWNGREEN</code></p>
+<p><code>#706C11</code></p>
+<p><code>BROWNGREY</code></p>
+<p><code>#8D8468</code></p>
+<p><code>BROWNISH</code></p>
+<p><code>#9C6D57</code></p>
+<p><code>BROWNISHGREEN</code></p>
+<p><code>#6A6E09</code></p>
+<p><code>BROWNISHGREY</code></p>
+<p><code>#86775F</code></p>
+<p><code>BROWNISHORANGE</code></p>
+<p><code>#CB7723</code></p>
+<p><code>BROWNISHPINK</code></p>
+<p><code>#C27E79</code></p>
+<p><code>BROWNISHPURPLE</code></p>
+<p><code>#76424E</code></p>
+<p><code>BROWNISHRED</code></p>
+<p><code>#9E3623</code></p>
+<p><code>BROWNISHYELLOW</code></p>
+<p><code>#C9B003</code></p>
+<p><code>BROWNORANGE</code></p>
+<p><code>#B96902</code></p>
+<p><code>BROWNRED</code></p>
+<p><code>#922B05</code></p>
+<p><code>BROWNYELLOW</code></p>
+<p><code>#B29705</code></p>
+<p><code>BROWNYGREEN</code></p>
+<p><code>#6F6C0A</code></p>
+<p><code>BROWNYORANGE</code></p>
+<p><code>#CA6B02</code></p>
+<p><code>BRUISE</code></p>
+<p><code>#7E4071</code></p>
+<p><code>BUBBLEGUM</code></p>
+<p><code>#FF6CB5</code></p>
+<p><code>BUBBLEGUMPINK</code></p>
+<p><code>#FF69AF</code></p>
+<p><code>BUFF</code></p>
+<p><code>#FEF69E</code></p>
+<p><code>BURGUNDY</code></p>
+<p><code>#610023</code></p>
+<p><code>BURNTORANGE</code></p>
+<p><code>#C04E01</code></p>
+<p><code>BURNTRED</code></p>
+<p><code>#9F2305</code></p>
+<p><code>BURNTSIENA</code></p>
+<p><code>#B75203</code></p>
+<p><code>BURNTSIENNA</code></p>
+<p><code>#B04E0F</code></p>
+<p><code>BURNTUMBER</code></p>
+<p><code>#A0450E</code></p>
+<p><code>BURNTYELLOW</code></p>
+<p><code>#D5AB09</code></p>
+<p><code>BURPLE</code></p>
+<p><code>#6832E3</code></p>
+<p><code>BUTTER</code></p>
+<p><code>#FFFF81</code></p>
+<p><code>BUTTERSCOTCH</code></p>
+<p><code>#FDB147</code></p>
+<p><code>BUTTERYELLOW</code></p>
+<p><code>#FFFD74</code></p>
+<p><code>CADETBLUE</code></p>
+<p><code>#4E7496</code></p>
+<p><code>CAMEL</code></p>
+<p><code>#C69F59</code></p>
+<p><code>CAMO</code></p>
+<p><code>#7F8F4E</code></p>
+<p><code>CAMOGREEN</code></p>
+<p><code>#526525</code></p>
+<p><code>CAMOUFLAGEGREEN</code></p>
+<p><code>#4B6113</code></p>
+<p><code>CANARY</code></p>
+<p><code>#FDFF63</code></p>
+<p><code>CANARYYELLOW</code></p>
+<p><code>#FFFE40</code></p>
+<p><code>CANDYPINK</code></p>
+<p><code>#FF63E9</code></p>
+<p><code>CARAMEL</code></p>
+<p><code>#AF6F09</code></p>
+<p><code>CARMINE</code></p>
+<p><code>#9D0216</code></p>
+<p><code>CARNATION</code></p>
+<p><code>#FD798F</code></p>
+<p><code>CARNATIONPINK</code></p>
+<p><code>#FF7FA7</code></p>
+<p><code>CAROLINABLUE</code></p>
+<p><code>#8AB8FE</code></p>
+<p><code>CELADON</code></p>
+<p><code>#BEFDB7</code></p>
+<p><code>CELERY</code></p>
+<p><code>#C1FD95</code></p>
+<p><code>CEMENT</code></p>
+<p><code>#A5A391</code></p>
+<p><code>CERISE</code></p>
+<p><code>#DE0C62</code></p>
+<p><code>CERULEAN</code></p>
+<p><code>#0485D1</code></p>
+<p><code>CERULEANBLUE</code></p>
+<p><code>#056EEE</code></p>
+<p><code>CHARCOAL</code></p>
+<p><code>#343837</code></p>
+<p><code>CHARCOALGREY</code></p>
+<p><code>#3C4142</code></p>
+<p><code>CHARTREUSE</code></p>
+<p><code>#C1F80A</code></p>
+<p><code>CHERRY</code></p>
+<p><code>#CF0234</code></p>
+<p><code>CHERRYRED</code></p>
+<p><code>#F7022A</code></p>
+<p><code>CHESTNUT</code></p>
+<p><code>#742802</code></p>
+<p><code>CHOCOLATE</code></p>
+<p><code>#3D1C02</code></p>
+<p><code>CHOCOLATEBROWN</code></p>
+<p><code>#411900</code></p>
+<p><code>CINNAMON</code></p>
+<p><code>#AC4F06</code></p>
+<p><code>CLARET</code></p>
+<p><code>#680018</code></p>
+<p><code>CLAY</code></p>
+<p><code>#B66A50</code></p>
+<p><code>CLAYBROWN</code></p>
+<p><code>#B2713D</code></p>
+<p><code>CLEARBLUE</code></p>
+<p><code>#247AFD</code></p>
+<p><code>COBALT</code></p>
+<p><code>#1E488F</code></p>
+<p><code>COBALTBLUE</code></p>
+<p><code>#030AA7</code></p>
+<p><code>COCOA</code></p>
+<p><code>#875F42</code></p>
+<p><code>COFFEE</code></p>
+<p><code>#A6814C</code></p>
+<p><code>COOLBLUE</code></p>
+<p><code>#4984B8</code></p>
+<p><code>COOLGREEN</code></p>
+<p><code>#33B864</code></p>
+<p><code>COOLGREY</code></p>
+<p><code>#95A3A6</code></p>
+<p><code>COPPER</code></p>
+<p><code>#B66325</code></p>
+<p><code>CORAL</code></p>
+<p><code>#FC5A50</code></p>
+<p><code>CORALPINK</code></p>
+<p><code>#FF6163</code></p>
+<p><code>CORNFLOWER</code></p>
+<p><code>#6A79F7</code></p>
+<p><code>CORNFLOWERBLUE</code></p>
+<p><code>#5170D7</code></p>
+<p><code>CRANBERRY</code></p>
+<p><code>#9E003A</code></p>
+<p><code>CREAM</code></p>
+<p><code>#FFFFC2</code></p>
+<p><code>CREME</code></p>
+<p><code>#FFFFB6</code></p>
+<p><code>CRIMSON</code></p>
+<p><code>#8C000F</code></p>
+<p><code>CUSTARD</code></p>
+<p><code>#FFFD78</code></p>
+<p><code>CYAN</code></p>
+<p><code>#00FFFF</code></p>
+<p><code>DANDELION</code></p>
+<p><code>#FEDF08</code></p>
+<p><code>DARK</code></p>
+<p><code>#1B2431</code></p>
+<p><code>DARKAQUA</code></p>
+<p><code>#05696B</code></p>
+<p><code>DARKAQUAMARINE</code></p>
+<p><code>#017371</code></p>
+<p><code>DARKBEIGE</code></p>
+<p><code>#AC9362</code></p>
+<p><code>DARKBLUE</code></p>
+<p><code>#030764</code></p>
+<p><code>DARKBLUEGREEN</code></p>
+<p><code>#005249</code></p>
+<p><code>DARKBLUEGREY</code></p>
+<p><code>#1F3B4D</code></p>
+<p><code>DARKBROWN</code></p>
+<p><code>#341C02</code></p>
+<p><code>DARKCORAL</code></p>
+<p><code>#CF524E</code></p>
+<p><code>DARKCREAM</code></p>
+<p><code>#FFF39A</code></p>
+<p><code>DARKCYAN</code></p>
+<p><code>#0A888A</code></p>
+<p><code>DARKFORESTGREEN</code></p>
+<p><code>#002D04</code></p>
+<p><code>DARKFUCHSIA</code></p>
+<p><code>#9D0759</code></p>
+<p><code>DARKGOLD</code></p>
+<p><code>#B59410</code></p>
+<p><code>DARKGRASSGREEN</code></p>
+<p><code>#388004</code></p>
+<p><code>DARKGREEN</code></p>
+<p><code>#054907</code></p>
+<p><code>DARKGREENBLUE</code></p>
+<p><code>#1F6357</code></p>
+<p><code>DARKGREY</code></p>
+<p><code>#363737</code></p>
+<p><code>DARKGREYBLUE</code></p>
+<p><code>#29465B</code></p>
+<p><code>DARKHOTPINK</code></p>
+<p><code>#D90166</code></p>
+<p><code>DARKINDIGO</code></p>
+<p><code>#1F0954</code></p>
+<p><code>DARKISHBLUE</code></p>
+<p><code>#014182</code></p>
+<p><code>DARKISHGREEN</code></p>
+<p><code>#287C37</code></p>
+<p><code>DARKISHPINK</code></p>
+<p><code>#DA467D</code></p>
+<p><code>DARKISHPURPLE</code></p>
+<p><code>#751973</code></p>
+<p><code>DARKISHRED</code></p>
+<p><code>#A90308</code></p>
+<p><code>DARKKHAKI</code></p>
+<p><code>#9B8F55</code></p>
+<p><code>DARKLAVENDER</code></p>
+<p><code>#856798</code></p>
+<p><code>DARKLILAC</code></p>
+<p><code>#9C6DA5</code></p>
+<p><code>DARKLIME</code></p>
+<p><code>#84B701</code></p>
+<p><code>DARKLIMEGREEN</code></p>
+<p><code>#7EBD01</code></p>
+<p><code>DARKMAGENTA</code></p>
+<p><code>#960056</code></p>
+<p><code>DARKMAROON</code></p>
+<p><code>#3C0008</code></p>
+<p><code>DARKMAUVE</code></p>
+<p><code>#874C62</code></p>
+<p><code>DARKMINT</code></p>
+<p><code>#48C072</code></p>
+<p><code>DARKMINTGREEN</code></p>
+<p><code>#20C073</code></p>
+<p><code>DARKMUSTARD</code></p>
+<p><code>#A88905</code></p>
+<p><code>DARKNAVY</code></p>
+<p><code>#000435</code></p>
+<p><code>DARKNAVYBLUE</code></p>
+<p><code>#00022E</code></p>
+<p><code>DARKOLIVE</code></p>
+<p><code>#373E02</code></p>
+<p><code>DARKOLIVEGREEN</code></p>
+<p><code>#3C4D03</code></p>
+<p><code>DARKORANGE</code></p>
+<p><code>#C65102</code></p>
+<p><code>DARKPASTELGREEN</code></p>
+<p><code>#56AE57</code></p>
+<p><code>DARKPEACH</code></p>
+<p><code>#DE7E5D</code></p>
+<p><code>DARKPERIWINKLE</code></p>
+<p><code>#665FD1</code></p>
+<p><code>DARKPINK</code></p>
+<p><code>#CB416B</code></p>
+<p><code>DARKPLUM</code></p>
+<p><code>#3F012C</code></p>
+<p><code>DARKPURPLE</code></p>
+<p><code>#35063E</code></p>
+<p><code>DARKRED</code></p>
+<p><code>#840000</code></p>
+<p><code>DARKROSE</code></p>
+<p><code>#B5485D</code></p>
+<p><code>DARKROYALBLUE</code></p>
+<p><code>#02066F</code></p>
+<p><code>DARKSAGE</code></p>
+<p><code>#598556</code></p>
+<p><code>DARKSALMON</code></p>
+<p><code>#C85A53</code></p>
+<p><code>DARKSAND</code></p>
+<p><code>#A88F59</code></p>
+<p><code>DARKSEAFOAM</code></p>
+<p><code>#1FB57A</code></p>
+<p><code>DARKSEAFOAMGREEN</code></p>
+<p><code>#3EAF76</code></p>
+<p><code>DARKSEAGREEN</code></p>
+<p><code>#11875D</code></p>
+<p><code>DARKSKYBLUE</code></p>
+<p><code>#448EE4</code></p>
+<p><code>DARKSLATEBLUE</code></p>
+<p><code>#214761</code></p>
+<p><code>DARKTAN</code></p>
+<p><code>#AF884A</code></p>
+<p><code>DARKTAUPE</code></p>
+<p><code>#7F684E</code></p>
+<p><code>DARKTEAL</code></p>
+<p><code>#014D4E</code></p>
+<p><code>DARKTURQUOISE</code></p>
+<p><code>#045C5A</code></p>
+<p><code>DARKVIOLET</code></p>
+<p><code>#34013F</code></p>
+<p><code>DARKYELLOW</code></p>
+<p><code>#D5B60A</code></p>
+<p><code>DARKYELLOWGREEN</code></p>
+<p><code>#728F02</code></p>
+<p><code>DEEPAQUA</code></p>
+<p><code>#08787F</code></p>
+<p><code>DEEPBLUE</code></p>
+<p><code>#040273</code></p>
+<p><code>DEEPBROWN</code></p>
+<p><code>#410200</code></p>
+<p><code>DEEPGREEN</code></p>
+<p><code>#02590F</code></p>
+<p><code>DEEPLAVENDER</code></p>
+<p><code>#8D5EB7</code></p>
+<p><code>DEEPLILAC</code></p>
+<p><code>#966EBD</code></p>
+<p><code>DEEPMAGENTA</code></p>
+<p><code>#A0025C</code></p>
+<p><code>DEEPORANGE</code></p>
+<p><code>#DC4D01</code></p>
+<p><code>DEEPPINK</code></p>
+<p><code>#CB0162</code></p>
+<p><code>DEEPPURPLE</code></p>
+<p><code>#36013F</code></p>
+<p><code>DEEPRED</code></p>
+<p><code>#9A0200</code></p>
+<p><code>DEEPROSE</code></p>
+<p><code>#C74767</code></p>
+<p><code>DEEPSEABLUE</code></p>
+<p><code>#015482</code></p>
+<p><code>DEEPSKYBLUE</code></p>
+<p><code>#0D75F8</code></p>
+<p><code>DEEPTEAL</code></p>
+<p><code>#00555A</code></p>
+<p><code>DEEPTURQUOISE</code></p>
+<p><code>#017374</code></p>
+<p><code>DEEPVIOLET</code></p>
+<p><code>#490648</code></p>
+<p><code>DENIM</code></p>
+<p><code>#3B638C</code></p>
+<p><code>DENIMBLUE</code></p>
+<p><code>#3B5B92</code></p>
+<p><code>DESERT</code></p>
+<p><code>#CCAD60</code></p>
+<p><code>DIARRHEA</code></p>
+<p><code>#9F8303</code></p>
+<p><code>DIRT</code></p>
+<p><code>#8A6E45</code></p>
+<p><code>DIRTBROWN</code></p>
+<p><code>#836539</code></p>
+<p><code>DIRTYBLUE</code></p>
+<p><code>#3F829D</code></p>
+<p><code>DIRTYGREEN</code></p>
+<p><code>#667E2C</code></p>
+<p><code>DIRTYORANGE</code></p>
+<p><code>#C87606</code></p>
+<p><code>DIRTYPINK</code></p>
+<p><code>#CA7B80</code></p>
+<p><code>DIRTYPURPLE</code></p>
+<p><code>#734A65</code></p>
+<p><code>DIRTYYELLOW</code></p>
+<p><code>#CDC50A</code></p>
+<p><code>DODGERBLUE</code></p>
+<p><code>#3E82FC</code></p>
+<p><code>DRAB</code></p>
+<p><code>#828344</code></p>
+<p><code>DRABGREEN</code></p>
+<p><code>#749551</code></p>
+<p><code>DRIEDBLOOD</code></p>
+<p><code>#4B0101</code></p>
+<p><code>DUCKEGGBLUE</code></p>
+<p><code>#C3FBF4</code></p>
+<p><code>DULLBLUE</code></p>
+<p><code>#49759C</code></p>
+<p><code>DULLBROWN</code></p>
+<p><code>#876E4B</code></p>
+<p><code>DULLGREEN</code></p>
+<p><code>#74A662</code></p>
+<p><code>DULLORANGE</code></p>
+<p><code>#D8863B</code></p>
+<p><code>DULLPINK</code></p>
+<p><code>#D5869D</code></p>
+<p><code>DULLPURPLE</code></p>
+<p><code>#84597E</code></p>
+<p><code>DULLRED</code></p>
+<p><code>#BB3F3F</code></p>
+<p><code>DULLTEAL</code></p>
+<p><code>#5F9E8F</code></p>
+<p><code>DULLYELLOW</code></p>
+<p><code>#EEDC5B</code></p>
+<p><code>DUSK</code></p>
+<p><code>#4E5481</code></p>
+<p><code>DUSKBLUE</code></p>
+<p><code>#26538D</code></p>
+<p><code>DUSKYBLUE</code></p>
+<p><code>#475F94</code></p>
+<p><code>DUSKYPINK</code></p>
+<p><code>#CC7A8B</code></p>
+<p><code>DUSKYPURPLE</code></p>
+<p><code>#895B7B</code></p>
+<p><code>DUSKYROSE</code></p>
+<p><code>#BA6873</code></p>
+<p><code>DUST</code></p>
+<p><code>#B2996E</code></p>
+<p><code>DUSTYBLUE</code></p>
+<p><code>#5A86AD</code></p>
+<p><code>DUSTYGREEN</code></p>
+<p><code>#76A973</code></p>
+<p><code>DUSTYLAVENDER</code></p>
+<p><code>#AC86A8</code></p>
+<p><code>DUSTYORANGE</code></p>
+<p><code>#F0833A</code></p>
+<p><code>DUSTYPINK</code></p>
+<p><code>#D58A94</code></p>
+<p><code>DUSTYPURPLE</code></p>
+<p><code>#825F87</code></p>
+<p><code>DUSTYRED</code></p>
+<p><code>#B9484E</code></p>
+<p><code>DUSTYROSE</code></p>
+<p><code>#C0737A</code></p>
+<p><code>DUSTYTEAL</code></p>
+<p><code>#4C9085</code></p>
+<p><code>EARTH</code></p>
+<p><code>#A2653E</code></p>
+<p><code>EASTERGREEN</code></p>
+<p><code>#8CFD7E</code></p>
+<p><code>EASTERPURPLE</code></p>
+<p><code>#C071FE</code></p>
+<p><code>ECRU</code></p>
+<p><code>#FEFFCA</code></p>
+<p><code>EGGPLANT</code></p>
+<p><code>#380835</code></p>
+<p><code>EGGPLANTPURPLE</code></p>
+<p><code>#430541</code></p>
+<p><code>EGGSHELL</code></p>
+<p><code>#FFFCC4</code></p>
+<p><code>EGGSHELLBLUE</code></p>
+<p><code>#C4FFF7</code></p>
+<p><code>ELECTRICBLUE</code></p>
+<p><code>#0652FF</code></p>
+<p><code>ELECTRICGREEN</code></p>
+<p><code>#21FC0D</code></p>
+<p><code>ELECTRICLIME</code></p>
+<p><code>#A8FF04</code></p>
+<p><code>ELECTRICPINK</code></p>
+<p><code>#FF0490</code></p>
+<p><code>ELECTRICPURPLE</code></p>
+<p><code>#AA23FF</code></p>
+<p><code>EMERALD</code></p>
+<p><code>#01A049</code></p>
+<p><code>EMERALDGREEN</code></p>
+<p><code>#028F1E</code></p>
+<p><code>EVERGREEN</code></p>
+<p><code>#05472A</code></p>
+<p><code>FADEDBLUE</code></p>
+<p><code>#658CBB</code></p>
+<p><code>FADEDGREEN</code></p>
+<p><code>#7BB274</code></p>
+<p><code>FADEDORANGE</code></p>
+<p><code>#F0944D</code></p>
+<p><code>FADEDPINK</code></p>
+<p><code>#DE9DAC</code></p>
+<p><code>FADEDPURPLE</code></p>
+<p><code>#916E99</code></p>
+<p><code>FADEDRED</code></p>
+<p><code>#D3494E</code></p>
+<p><code>FADEDYELLOW</code></p>
+<p><code>#FEFF7F</code></p>
+<p><code>FAWN</code></p>
+<p><code>#CFAF7B</code></p>
+<p><code>FERN</code></p>
+<p><code>#63A950</code></p>
+<p><code>FERNGREEN</code></p>
+<p><code>#548D44</code></p>
+<p><code>FIREENGINERED</code></p>
+<p><code>#FE0002</code></p>
+<p><code>FLATBLUE</code></p>
+<p><code>#3C73A8</code></p>
+<p><code>FLATGREEN</code></p>
+<p><code>#699D4C</code></p>
+<p><code>FLUORESCENTGREEN</code></p>
+<p><code>#08FF08</code></p>
+<p><code>FLUROGREEN</code></p>
+<p><code>#0AFF02</code></p>
+<p><code>FOAMGREEN</code></p>
+<p><code>#90FDA9</code></p>
+<p><code>FOREST</code></p>
+<p><code>#0B5509</code></p>
+<p><code>FORESTGREEN</code></p>
+<p><code>#06470C</code></p>
+<p><code>FORRESTGREEN</code></p>
+<p><code>#154406</code></p>
+<p><code>FRENCHBLUE</code></p>
+<p><code>#436BAD</code></p>
+<p><code>FRESHGREEN</code></p>
+<p><code>#69D84F</code></p>
+<p><code>FROGGREEN</code></p>
+<p><code>#58BC08</code></p>
+<p><code>FUCHSIA</code></p>
+<p><code>#ED0DD9</code></p>
+<p><code>GOLD</code></p>
+<p><code>#DBB40C</code></p>
+<p><code>GOLDEN</code></p>
+<p><code>#F5BF03</code></p>
+<p><code>GOLDENBROWN</code></p>
+<p><code>#B27A01</code></p>
+<p><code>GOLDENROD</code></p>
+<p><code>#F9BC08</code></p>
+<p><code>GOLDENYELLOW</code></p>
+<p><code>#FEC615</code></p>
+<p><code>GRAPE</code></p>
+<p><code>#6C3461</code></p>
+<p><code>GRAPEFRUIT</code></p>
+<p><code>#FD5956</code></p>
+<p><code>GRAPEPURPLE</code></p>
+<p><code>#5D1451</code></p>
+<p><code>GRASS</code></p>
+<p><code>#5CAC2D</code></p>
+<p><code>GRASSGREEN</code></p>
+<p><code>#3F9B0B</code></p>
+<p><code>GRASSYGREEN</code></p>
+<p><code>#419C03</code></p>
+<p><code>GREEN</code></p>
+<p><code>#15B01A</code></p>
+<p><code>GREENAPPLE</code></p>
+<p><code>#5EDC1F</code></p>
+<p><code>GREENBLUE</code></p>
+<p><code>#01C08D</code></p>
+<p><code>GREENBROWN</code></p>
+<p><code>#544E03</code></p>
+<p><code>GREENGREY</code></p>
+<p><code>#77926F</code></p>
+<p><code>GREENISH</code></p>
+<p><code>#40A368</code></p>
+<p><code>GREENISHBEIGE</code></p>
+<p><code>#C9D179</code></p>
+<p><code>GREENISHBLUE</code></p>
+<p><code>#0B8B87</code></p>
+<p><code>GREENISHBROWN</code></p>
+<p><code>#696112</code></p>
+<p><code>GREENISHCYAN</code></p>
+<p><code>#2AFEB7</code></p>
+<p><code>GREENISHGREY</code></p>
+<p><code>#96AE8D</code></p>
+<p><code>GREENISHTAN</code></p>
+<p><code>#BCCB7A</code></p>
+<p><code>GREENISHTEAL</code></p>
+<p><code>#32BF84</code></p>
+<p><code>GREENISHTURQUOISE</code></p>
+<p><code>#00FBB0</code></p>
+<p><code>GREENISHYELLOW</code></p>
+<p><code>#CDFD02</code></p>
+<p><code>GREENTEAL</code></p>
+<p><code>#0CB577</code></p>
+<p><code>GREENYBLUE</code></p>
+<p><code>#42B395</code></p>
+<p><code>GREENYBROWN</code></p>
+<p><code>#696006</code></p>
+<p><code>GREENYELLOW</code></p>
+<p><code>#B5CE08</code></p>
+<p><code>GREENYGREY</code></p>
+<p><code>#7EA07A</code></p>
+<p><code>GREENYYELLOW</code></p>
+<p><code>#C6F808</code></p>
+<p><code>GREY</code></p>
+<p><code>#929591</code></p>
+<p><code>GREYBLUE</code></p>
+<p><code>#647D8E</code></p>
+<p><code>GREYBROWN</code></p>
+<p><code>#7F7053</code></p>
+<p><code>GREYGREEN</code></p>
+<p><code>#86A17D</code></p>
+<p><code>GREYISH</code></p>
+<p><code>#A8A495</code></p>
+<p><code>GREYISHBLUE</code></p>
+<p><code>#5E819D</code></p>
+<p><code>GREYISHBROWN</code></p>
+<p><code>#7A6A4F</code></p>
+<p><code>GREYISHGREEN</code></p>
+<p><code>#82A67D</code></p>
+<p><code>GREYISHPINK</code></p>
+<p><code>#C88D94</code></p>
+<p><code>GREYISHPURPLE</code></p>
+<p><code>#887191</code></p>
+<p><code>GREYISHTEAL</code></p>
+<p><code>#719F91</code></p>
+<p><code>GREYPINK</code></p>
+<p><code>#C3909B</code></p>
+<p><code>GREYPURPLE</code></p>
+<p><code>#826D8C</code></p>
+<p><code>GREYTEAL</code></p>
+<p><code>#5E9B8A</code></p>
+<p><code>GROSSGREEN</code></p>
+<p><code>#A0BF16</code></p>
+<p><code>GUNMETAL</code></p>
+<p><code>#536267</code></p>
+<p><code>HAZEL</code></p>
+<p><code>#8E7618</code></p>
+<p><code>HEATHER</code></p>
+<p><code>#A484AC</code></p>
+<p><code>HELIOTROPE</code></p>
+<p><code>#D94FF5</code></p>
+<p><code>HIGHLIGHTERGREEN</code></p>
+<p><code>#1BFC06</code></p>
+<p><code>HOSPITALGREEN</code></p>
+<p><code>#9BE5AA</code></p>
+<p><code>HOTGREEN</code></p>
+<p><code>#25FF29</code></p>
+<p><code>HOTMAGENTA</code></p>
+<p><code>#F504C9</code></p>
+<p><code>HOTPINK</code></p>
+<p><code>#FF028D</code></p>
+<p><code>HOTPURPLE</code></p>
+<p><code>#CB00F5</code></p>
+<p><code>HUNTERGREEN</code></p>
+<p><code>#0B4008</code></p>
+<p><code>ICE</code></p>
+<p><code>#D6FFFA</code></p>
+<p><code>ICEBLUE</code></p>
+<p><code>#D7FFFE</code></p>
+<p><code>ICKYGREEN</code></p>
+<p><code>#8FAE22</code></p>
+<p><code>INDIANRED</code></p>
+<p><code>#850E04</code></p>
+<p><code>INDIGO</code></p>
+<p><code>#380282</code></p>
+<p><code>INDIGOBLUE</code></p>
+<p><code>#3A18B1</code></p>
+<p><code>IRIS</code></p>
+<p><code>#6258C4</code></p>
+<p><code>IRISHGREEN</code></p>
+<p><code>#019529</code></p>
+<p><code>IVORY</code></p>
+<p><code>#FFFFCB</code></p>
+<p><code>JADE</code></p>
+<p><code>#1FA774</code></p>
+<p><code>JADEGREEN</code></p>
+<p><code>#2BAF6A</code></p>
+<p><code>JUNGLEGREEN</code></p>
+<p><code>#048243</code></p>
+<p><code>KELLEYGREEN</code></p>
+<p><code>#009337</code></p>
+<p><code>KELLYGREEN</code></p>
+<p><code>#02AB2E</code></p>
+<p><code>KERMITGREEN</code></p>
+<p><code>#5CB200</code></p>
+<p><code>KEYLIME</code></p>
+<p><code>#AEFF6E</code></p>
+<p><code>KHAKI</code></p>
+<p><code>#AAA662</code></p>
+<p><code>KHAKIGREEN</code></p>
+<p><code>#728639</code></p>
+<p><code>KIWI</code></p>
+<p><code>#9CEF43</code></p>
+<p><code>KIWIGREEN</code></p>
+<p><code>#8EE53F</code></p>
+<p><code>LAVENDER</code></p>
+<p><code>#C79FEF</code></p>
+<p><code>LAVENDERBLUE</code></p>
+<p><code>#8B88F8</code></p>
+<p><code>LAVENDERPINK</code></p>
+<p><code>#DD85D7</code></p>
+<p><code>LAWNGREEN</code></p>
+<p><code>#4DA409</code></p>
+<p><code>LEAF</code></p>
+<p><code>#71AA34</code></p>
+<p><code>LEAFGREEN</code></p>
+<p><code>#5CA904</code></p>
+<p><code>LEAFYGREEN</code></p>
+<p><code>#51B73B</code></p>
+<p><code>LEATHER</code></p>
+<p><code>#AC7434</code></p>
+<p><code>LEMON</code></p>
+<p><code>#FDFF52</code></p>
+<p><code>LEMONGREEN</code></p>
+<p><code>#ADF802</code></p>
+<p><code>LEMONLIME</code></p>
+<p><code>#BFFE28</code></p>
+<p><code>LEMONYELLOW</code></p>
+<p><code>#FDFF38</code></p>
+<p><code>LICHEN</code></p>
+<p><code>#8FB67B</code></p>
+<p><code>LIGHTAQUA</code></p>
+<p><code>#8CFFDB</code></p>
+<p><code>LIGHTAQUAMARINE</code></p>
+<p><code>#7BFDC7</code></p>
+<p><code>LIGHTBEIGE</code></p>
+<p><code>#FFFEB6</code></p>
+<p><code>LIGHTBLUE</code></p>
+<p><code>#7BC8F6</code></p>
+<p><code>LIGHTBLUEGREEN</code></p>
+<p><code>#7EFBB3</code></p>
+<p><code>LIGHTBLUEGREY</code></p>
+<p><code>#B7C9E2</code></p>
+<p><code>LIGHTBLUISHGREEN</code></p>
+<p><code>#76FDA8</code></p>
+<p><code>LIGHTBRIGHTGREEN</code></p>
+<p><code>#53FE5C</code></p>
+<p><code>LIGHTBROWN</code></p>
+<p><code>#AD8150</code></p>
+<p><code>LIGHTBURGUNDY</code></p>
+<p><code>#A8415B</code></p>
+<p><code>LIGHTCYAN</code></p>
+<p><code>#ACFFFC</code></p>
+<p><code>LIGHTEGGPLANT</code></p>
+<p><code>#894585</code></p>
+<p><code>LIGHTERGREEN</code></p>
+<p><code>#75FD63</code></p>
+<p><code>LIGHTERPURPLE</code></p>
+<p><code>#A55AF4</code></p>
+<p><code>LIGHTFORESTGREEN</code></p>
+<p><code>#4F9153</code></p>
+<p><code>LIGHTGOLD</code></p>
+<p><code>#FDDC5C</code></p>
+<p><code>LIGHTGRASSGREEN</code></p>
+<p><code>#9AF764</code></p>
+<p><code>LIGHTGREEN</code></p>
+<p><code>#76FF7B</code></p>
+<p><code>LIGHTGREENBLUE</code></p>
+<p><code>#56FCA2</code></p>
+<p><code>LIGHTGREENISHBLUE</code></p>
+<p><code>#63F7B4</code></p>
+<p><code>LIGHTGREY</code></p>
+<p><code>#D8DCD6</code></p>
+<p><code>LIGHTGREYBLUE</code></p>
+<p><code>#9DBCD4</code></p>
+<p><code>LIGHTGREYGREEN</code></p>
+<p><code>#B7E1A1</code></p>
+<p><code>LIGHTINDIGO</code></p>
+<p><code>#6D5ACF</code></p>
+<p><code>LIGHTISHBLUE</code></p>
+<p><code>#3D7AFD</code></p>
+<p><code>LIGHTISHGREEN</code></p>
+<p><code>#61E160</code></p>
+<p><code>LIGHTISHPURPLE</code></p>
+<p><code>#A552E6</code></p>
+<p><code>LIGHTISHRED</code></p>
+<p><code>#FE2F4A</code></p>
+<p><code>LIGHTKHAKI</code></p>
+<p><code>#E6F2A2</code></p>
+<p><code>LIGHTLAVENDAR</code></p>
+<p><code>#EFC0FE</code></p>
+<p><code>LIGHTLAVENDER</code></p>
+<p><code>#DFC5FE</code></p>
+<p><code>LIGHTLIGHTBLUE</code></p>
+<p><code>#CAFFFB</code></p>
+<p><code>LIGHTLIGHTGREEN</code></p>
+<p><code>#C8FFB0</code></p>
+<p><code>LIGHTLILAC</code></p>
+<p><code>#EDC8FF</code></p>
+<p><code>LIGHTLIME</code></p>
+<p><code>#AEFD6C</code></p>
+<p><code>LIGHTLIMEGREEN</code></p>
+<p><code>#B9FF66</code></p>
+<p><code>LIGHTMAGENTA</code></p>
+<p><code>#FA5FF7</code></p>
+<p><code>LIGHTMAROON</code></p>
+<p><code>#A24857</code></p>
+<p><code>LIGHTMAUVE</code></p>
+<p><code>#C292A1</code></p>
+<p><code>LIGHTMINT</code></p>
+<p><code>#B6FFBB</code></p>
+<p><code>LIGHTMINTGREEN</code></p>
+<p><code>#A6FBB2</code></p>
+<p><code>LIGHTMOSSGREEN</code></p>
+<p><code>#A6C875</code></p>
+<p><code>LIGHTMUSTARD</code></p>
+<p><code>#F7D560</code></p>
+<p><code>LIGHTNAVY</code></p>
+<p><code>#155084</code></p>
+<p><code>LIGHTNAVYBLUE</code></p>
+<p><code>#2E5A88</code></p>
+<p><code>LIGHTNEONGREEN</code></p>
+<p><code>#4EFD54</code></p>
+<p><code>LIGHTOLIVE</code></p>
+<p><code>#ACBF69</code></p>
+<p><code>LIGHTOLIVEGREEN</code></p>
+<p><code>#A4BE5C</code></p>
+<p><code>LIGHTORANGE</code></p>
+<p><code>#FDAA48</code></p>
+<p><code>LIGHTPASTELGREEN</code></p>
+<p><code>#B2FBA5</code></p>
+<p><code>LIGHTPEACH</code></p>
+<p><code>#FFD8B1</code></p>
+<p><code>LIGHTPEAGREEN</code></p>
+<p><code>#C4FE82</code></p>
+<p><code>LIGHTPERIWINKLE</code></p>
+<p><code>#C1C6FC</code></p>
+<p><code>LIGHTPINK</code></p>
+<p><code>#FFD1DF</code></p>
+<p><code>LIGHTPLUM</code></p>
+<p><code>#9D5783</code></p>
+<p><code>LIGHTPURPLE</code></p>
+<p><code>#BF77F6</code></p>
+<p><code>LIGHTRED</code></p>
+<p><code>#FF474C</code></p>
+<p><code>LIGHTROSE</code></p>
+<p><code>#FFC5CB</code></p>
+<p><code>LIGHTROYALBLUE</code></p>
+<p><code>#3A2EFE</code></p>
+<p><code>LIGHTSAGE</code></p>
+<p><code>#BCECAC</code></p>
+<p><code>LIGHTSALMON</code></p>
+<p><code>#FEA993</code></p>
+<p><code>LIGHTSEAFOAM</code></p>
+<p><code>#A0FEBF</code></p>
+<p><code>LIGHTSEAFOAMGREEN</code></p>
+<p><code>#A7FFB5</code></p>
+<p><code>LIGHTSEAGREEN</code></p>
+<p><code>#98F6B0</code></p>
+<p><code>LIGHTSKYBLUE</code></p>
+<p><code>#C6FCFF</code></p>
+<p><code>LIGHTTAN</code></p>
+<p><code>#FBEEAC</code></p>
+<p><code>LIGHTTEAL</code></p>
+<p><code>#90E4C1</code></p>
+<p><code>LIGHTTURQUOISE</code></p>
+<p><code>#7EF4CC</code></p>
+<p><code>LIGHTURPLE</code></p>
+<p><code>#B36FF6</code></p>
+<p><code>LIGHTVIOLET</code></p>
+<p><code>#D6B4FC</code></p>
+<p><code>LIGHTYELLOW</code></p>
+<p><code>#FFFE7A</code></p>
+<p><code>LIGHTYELLOWGREEN</code></p>
+<p><code>#CCFD7F</code></p>
+<p><code>LIGHTYELLOWISHGREEN</code></p>
+<p><code>#C2FF89</code></p>
+<p><code>LILAC</code></p>
+<p><code>#CEA2FD</code></p>
+<p><code>LILIAC</code></p>
+<p><code>#C48EFD</code></p>
+<p><code>LIME</code></p>
+<p><code>#AAFF32</code></p>
+<p><code>LIMEGREEN</code></p>
+<p><code>#89FE05</code></p>
+<p><code>LIMEYELLOW</code></p>
+<p><code>#D0FE1D</code></p>
+<p><code>LIPSTICK</code></p>
+<p><code>#D5174E</code></p>
+<p><code>LIPSTICKRED</code></p>
+<p><code>#C0022F</code></p>
+<p><code>MACARONIANDCHEESE</code></p>
+<p><code>#EFB435</code></p>
+<p><code>MAGENTA</code></p>
+<p><code>#C20078</code></p>
+<p><code>MAHOGANY</code></p>
+<p><code>#4A0100</code></p>
+<p><code>MAIZE</code></p>
+<p><code>#F4D054</code></p>
+<p><code>MANGO</code></p>
+<p><code>#FFA62B</code></p>
+<p><code>MANILLA</code></p>
+<p><code>#FFFA86</code></p>
+<p><code>MARIGOLD</code></p>
+<p><code>#FCC006</code></p>
+<p><code>MARINE</code></p>
+<p><code>#042E60</code></p>
+<p><code>MARINEBLUE</code></p>
+<p><code>#01386A</code></p>
+<p><code>MAROON</code></p>
+<p><code>#650021</code></p>
+<p><code>MAUVE</code></p>
+<p><code>#AE7181</code></p>
+<p><code>MEDIUMBLUE</code></p>
+<p><code>#2C6FBB</code></p>
+<p><code>MEDIUMBROWN</code></p>
+<p><code>#7F5112</code></p>
+<p><code>MEDIUMGREEN</code></p>
+<p><code>#39AD48</code></p>
+<p><code>MEDIUMGREY</code></p>
+<p><code>#7D7F7C</code></p>
+<p><code>MEDIUMPINK</code></p>
+<p><code>#F36196</code></p>
+<p><code>MEDIUMPURPLE</code></p>
+<p><code>#9E43A2</code></p>
+<p><code>MELON</code></p>
+<p><code>#FF7855</code></p>
+<p><code>MERLOT</code></p>
+<p><code>#730039</code></p>
+<p><code>METALLICBLUE</code></p>
+<p><code>#4F738E</code></p>
+<p><code>MIDBLUE</code></p>
+<p><code>#276AB3</code></p>
+<p><code>MIDGREEN</code></p>
+<p><code>#50A747</code></p>
+<p><code>MIDNIGHT</code></p>
+<p><code>#03012D</code></p>
+<p><code>MIDNIGHTBLUE</code></p>
+<p><code>#020035</code></p>
+<p><code>MIDNIGHTPURPLE</code></p>
+<p><code>#280137</code></p>
+<p><code>MILITARYGREEN</code></p>
+<p><code>#667C3E</code></p>
+<p><code>MILKCHOCOLATE</code></p>
+<p><code>#7F4E1E</code></p>
+<p><code>MINT</code></p>
+<p><code>#9FFEB0</code></p>
+<p><code>MINTGREEN</code></p>
+<p><code>#8FFF9F</code></p>
+<p><code>MINTYGREEN</code></p>
+<p><code>#0BF77D</code></p>
+<p><code>MOCHA</code></p>
+<p><code>#9D7651</code></p>
+<p><code>MOSS</code></p>
+<p><code>#769958</code></p>
+<p><code>MOSSGREEN</code></p>
+<p><code>#658B38</code></p>
+<p><code>MOSSYGREEN</code></p>
+<p><code>#638B27</code></p>
+<p><code>MUD</code></p>
+<p><code>#735C12</code></p>
+<p><code>MUDBROWN</code></p>
+<p><code>#60460F</code></p>
+<p><code>MUDDYBROWN</code></p>
+<p><code>#886806</code></p>
+<p><code>MUDDYGREEN</code></p>
+<p><code>#657432</code></p>
+<p><code>MUDDYYELLOW</code></p>
+<p><code>#BFAC05</code></p>
+<p><code>MUDGREEN</code></p>
+<p><code>#606602</code></p>
+<p><code>MULBERRY</code></p>
+<p><code>#920A4E</code></p>
+<p><code>MURKYGREEN</code></p>
+<p><code>#6C7A0E</code></p>
+<p><code>MUSHROOM</code></p>
+<p><code>#BA9E88</code></p>
+<p><code>MUSTARD</code></p>
+<p><code>#CEB301</code></p>
+<p><code>MUSTARDBROWN</code></p>
+<p><code>#AC7E04</code></p>
+<p><code>MUSTARDGREEN</code></p>
+<p><code>#A8B504</code></p>
+<p><code>MUSTARDYELLOW</code></p>
+<p><code>#D2BD0A</code></p>
+<p><code>MUTEDBLUE</code></p>
+<p><code>#3B719F</code></p>
+<p><code>MUTEDGREEN</code></p>
+<p><code>#5FA052</code></p>
+<p><code>MUTEDPINK</code></p>
+<p><code>#D1768F</code></p>
+<p><code>MUTEDPURPLE</code></p>
+<p><code>#805B87</code></p>
+<p><code>NASTYGREEN</code></p>
+<p><code>#70B23F</code></p>
+<p><code>NAVY</code></p>
+<p><code>#01153E</code></p>
+<p><code>NAVYBLUE</code></p>
+<p><code>#001146</code></p>
+<p><code>NAVYGREEN</code></p>
+<p><code>#35530A</code></p>
+<p><code>NEONBLUE</code></p>
+<p><code>#04D9FF</code></p>
+<p><code>NEONGREEN</code></p>
+<p><code>#0CFF0C</code></p>
+<p><code>NEONPINK</code></p>
+<p><code>#FE019A</code></p>
+<p><code>NEONPURPLE</code></p>
+<p><code>#BC13FE</code></p>
+<p><code>NEONRED</code></p>
+<p><code>#FF073A</code></p>
+<p><code>NEONYELLOW</code></p>
+<p><code>#CFFF04</code></p>
+<p><code>NICEBLUE</code></p>
+<p><code>#107AB0</code></p>
+<p><code>NIGHTBLUE</code></p>
+<p><code>#040348</code></p>
+<p><code>OCEAN</code></p>
+<p><code>#017B92</code></p>
+<p><code>OCEANBLUE</code></p>
+<p><code>#03719C</code></p>
+<p><code>OCEANGREEN</code></p>
+<p><code>#3D9973</code></p>
+<p><code>OCHER</code></p>
+<p><code>#BF9B0C</code></p>
+<p><code>OCHRE</code></p>
+<p><code>#BF9005</code></p>
+<p><code>OCRE</code></p>
+<p><code>#C69C04</code></p>
+<p><code>OFFBLUE</code></p>
+<p><code>#5684AE</code></p>
+<p><code>OFFGREEN</code></p>
+<p><code>#6BA353</code></p>
+<p><code>OFFWHITE</code></p>
+<p><code>#FFFFE4</code></p>
+<p><code>OFFYELLOW</code></p>
+<p><code>#F1F33F</code></p>
+<p><code>OLDPINK</code></p>
+<p><code>#C77986</code></p>
+<p><code>OLDROSE</code></p>
+<p><code>#C87F89</code></p>
+<p><code>OLIVE</code></p>
+<p><code>#6E750E</code></p>
+<p><code>OLIVEBROWN</code></p>
+<p><code>#645403</code></p>
+<p><code>OLIVEDRAB</code></p>
+<p><code>#6F7632</code></p>
+<p><code>OLIVEGREEN</code></p>
+<p><code>#677A04</code></p>
+<p><code>OLIVEYELLOW</code></p>
+<p><code>#C2B709</code></p>
+<p><code>ORANGE</code></p>
+<p><code>#F97306</code></p>
+<p><code>ORANGEBROWN</code></p>
+<p><code>#BE6400</code></p>
+<p><code>ORANGEISH</code></p>
+<p><code>#FD8D49</code></p>
+<p><code>ORANGEPINK</code></p>
+<p><code>#FF6F52</code></p>
+<p><code>ORANGERED</code></p>
+<p><code>#FE420F</code></p>
+<p><code>ORANGEYBROWN</code></p>
+<p><code>#B16002</code></p>
+<p><code>ORANGEYELLOW</code></p>
+<p><code>#FFAD01</code></p>
+<p><code>ORANGEYRED</code></p>
+<p><code>#FA4224</code></p>
+<p><code>ORANGEYYELLOW</code></p>
+<p><code>#FDB915</code></p>
+<p><code>ORANGISH</code></p>
+<p><code>#FC824A</code></p>
+<p><code>ORANGISHBROWN</code></p>
+<p><code>#B25F03</code></p>
+<p><code>ORANGISHRED</code></p>
+<p><code>#F43605</code></p>
+<p><code>ORCHID</code></p>
+<p><code>#C875C4</code></p>
+<p><code>PALE</code></p>
+<p><code>#FFF9D0</code></p>
+<p><code>PALEAQUA</code></p>
+<p><code>#B8FFEB</code></p>
+<p><code>PALEBLUE</code></p>
+<p><code>#D0FEFE</code></p>
+<p><code>PALEBROWN</code></p>
+<p><code>#B1916E</code></p>
+<p><code>PALECYAN</code></p>
+<p><code>#B7FFFA</code></p>
+<p><code>PALEGOLD</code></p>
+<p><code>#FDDE6C</code></p>
+<p><code>PALEGREEN</code></p>
+<p><code>#C7FDB5</code></p>
+<p><code>PALEGREY</code></p>
+<p><code>#FDFDFE</code></p>
+<p><code>PALELAVENDER</code></p>
+<p><code>#EECFFE</code></p>
+<p><code>PALELIGHTGREEN</code></p>
+<p><code>#B1FC99</code></p>
+<p><code>PALELILAC</code></p>
+<p><code>#E4CBFF</code></p>
+<p><code>PALELIME</code></p>
+<p><code>#BEFD73</code></p>
+<p><code>PALELIMEGREEN</code></p>
+<p><code>#B1FF65</code></p>
+<p><code>PALEMAGENTA</code></p>
+<p><code>#D767AD</code></p>
+<p><code>PALEMAUVE</code></p>
+<p><code>#FED0FC</code></p>
+<p><code>PALEOLIVE</code></p>
+<p><code>#B9CC81</code></p>
+<p><code>PALEOLIVEGREEN</code></p>
+<p><code>#B1D27B</code></p>
+<p><code>PALEORANGE</code></p>
+<p><code>#FFA756</code></p>
+<p><code>PALEPEACH</code></p>
+<p><code>#FFE5AD</code></p>
+<p><code>PALEPINK</code></p>
+<p><code>#FFCFDC</code></p>
+<p><code>PALEPURPLE</code></p>
+<p><code>#B790D4</code></p>
+<p><code>PALERED</code></p>
+<p><code>#D9544D</code></p>
+<p><code>PALEROSE</code></p>
+<p><code>#FDC1C5</code></p>
+<p><code>PALESALMON</code></p>
+<p><code>#FFB19A</code></p>
+<p><code>PALESKYBLUE</code></p>
+<p><code>#BDF6FE</code></p>
+<p><code>PALETEAL</code></p>
+<p><code>#82CBB2</code></p>
+<p><code>PALETURQUOISE</code></p>
+<p><code>#A5FBD5</code></p>
+<p><code>PALEVIOLET</code></p>
+<p><code>#CEAEFA</code></p>
+<p><code>PALEYELLOW</code></p>
+<p><code>#FFFF84</code></p>
+<p><code>PARCHMENT</code></p>
+<p><code>#FEFCAF</code></p>
+<p><code>PASTELBLUE</code></p>
+<p><code>#A2BFFE</code></p>
+<p><code>PASTELGREEN</code></p>
+<p><code>#B0FF9D</code></p>
+<p><code>PASTELORANGE</code></p>
+<p><code>#FF964F</code></p>
+<p><code>PASTELPINK</code></p>
+<p><code>#FFBACD</code></p>
+<p><code>PASTELPURPLE</code></p>
+<p><code>#CAA0FF</code></p>
+<p><code>PASTELRED</code></p>
+<p><code>#DB5856</code></p>
+<p><code>PASTELYELLOW</code></p>
+<p><code>#FFFE71</code></p>
+<p><code>PEA</code></p>
+<p><code>#A4BF20</code></p>
+<p><code>PEACH</code></p>
+<p><code>#FFB07C</code></p>
+<p><code>PEACHYPINK</code></p>
+<p><code>#FF9A8A</code></p>
+<p><code>PEACOCKBLUE</code></p>
+<p><code>#016795</code></p>
+<p><code>PEAGREEN</code></p>
+<p><code>#8EAB12</code></p>
+<p><code>PEAR</code></p>
+<p><code>#CBF85F</code></p>
+<p><code>PEASOUP</code></p>
+<p><code>#929901</code></p>
+<p><code>PEASOUPGREEN</code></p>
+<p><code>#94A617</code></p>
+<p><code>PERIWINKLE</code></p>
+<p><code>#8E82FE</code></p>
+<p><code>PERIWINKLEBLUE</code></p>
+<p><code>#8F99FB</code></p>
+<p><code>PERRYWINKLE</code></p>
+<p><code>#8F8CE7</code></p>
+<p><code>PETROL</code></p>
+<p><code>#005F6A</code></p>
+<p><code>PIGPINK</code></p>
+<p><code>#E78EA5</code></p>
+<p><code>PINE</code></p>
+<p><code>#2B5D34</code></p>
+<p><code>PINEGREEN</code></p>
+<p><code>#0A481E</code></p>
+<p><code>PINK</code></p>
+<p><code>#FF81C0</code></p>
+<p><code>PINKISH</code></p>
+<p><code>#D46A7E</code></p>
+<p><code>PINKISHBROWN</code></p>
+<p><code>#B17261</code></p>
+<p><code>PINKISHGREY</code></p>
+<p><code>#C8ACA9</code></p>
+<p><code>PINKISHORANGE</code></p>
+<p><code>#FF724C</code></p>
+<p><code>PINKISHPURPLE</code></p>
+<p><code>#D648D7</code></p>
+<p><code>PINKISHRED</code></p>
+<p><code>#F10C45</code></p>
+<p><code>PINKISHTAN</code></p>
+<p><code>#D99B82</code></p>
+<p><code>PINKPURPLE</code></p>
+<p><code>#EF1DE7</code></p>
+<p><code>PINKRED</code></p>
+<p><code>#F5054F</code></p>
+<p><code>PINKY</code></p>
+<p><code>#FC86AA</code></p>
+<p><code>PINKYPURPLE</code></p>
+<p><code>#C94CBE</code></p>
+<p><code>PINKYRED</code></p>
+<p><code>#FC2647</code></p>
+<p><code>PISSYELLOW</code></p>
+<p><code>#DDD618</code></p>
+<p><code>PISTACHIO</code></p>
+<p><code>#C0FA8B</code></p>
+<p><code>PLUM</code></p>
+<p><code>#580F41</code></p>
+<p><code>PLUMPURPLE</code></p>
+<p><code>#4E0550</code></p>
+<p><code>POISONGREEN</code></p>
+<p><code>#40FD14</code></p>
+<p><code>POO</code></p>
+<p><code>#8F7303</code></p>
+<p><code>POOBROWN</code></p>
+<p><code>#885F01</code></p>
+<p><code>POOP</code></p>
+<p><code>#7F5E00</code></p>
+<p><code>POOPBROWN</code></p>
+<p><code>#7A5901</code></p>
+<p><code>POOPGREEN</code></p>
+<p><code>#6F7C00</code></p>
+<p><code>POWDERBLUE</code></p>
+<p><code>#B1D1FC</code></p>
+<p><code>POWDERPINK</code></p>
+<p><code>#FFB2D0</code></p>
+<p><code>PRIMARYBLUE</code></p>
+<p><code>#0804F9</code></p>
+<p><code>PRUSSIANBLUE</code></p>
+<p><code>#004577</code></p>
+<p><code>PUCE</code></p>
+<p><code>#A57E52</code></p>
+<p><code>PUKE</code></p>
+<p><code>#A5A502</code></p>
+<p><code>PUKEBROWN</code></p>
+<p><code>#947706</code></p>
+<p><code>PUKEGREEN</code></p>
+<p><code>#9AAE07</code></p>
+<p><code>PUKEYELLOW</code></p>
+<p><code>#C2BE0E</code></p>
+<p><code>PUMPKIN</code></p>
+<p><code>#E17701</code></p>
+<p><code>PUMPKINORANGE</code></p>
+<p><code>#FB7D07</code></p>
+<p><code>PUREBLUE</code></p>
+<p><code>#0203E2</code></p>
+<p><code>PURPLE</code></p>
+<p><code>#7E1E9C</code></p>
+<p><code>PURPLEBLUE</code></p>
+<p><code>#5D21D0</code></p>
+<p><code>PURPLEBROWN</code></p>
+<p><code>#673A3F</code></p>
+<p><code>PURPLEGREY</code></p>
+<p><code>#866F85</code></p>
+<p><code>PURPLEISH</code></p>
+<p><code>#98568D</code></p>
+<p><code>PURPLEISHBLUE</code></p>
+<p><code>#6140EF</code></p>
+<p><code>PURPLEISHPINK</code></p>
+<p><code>#DF4EC8</code></p>
+<p><code>PURPLEPINK</code></p>
+<p><code>#D725DE</code></p>
+<p><code>PURPLERED</code></p>
+<p><code>#990147</code></p>
+<p><code>PURPLEY</code></p>
+<p><code>#8756E4</code></p>
+<p><code>PURPLEYBLUE</code></p>
+<p><code>#5F34E7</code></p>
+<p><code>PURPLEYGREY</code></p>
+<p><code>#947E94</code></p>
+<p><code>PURPLEYPINK</code></p>
+<p><code>#C83CB9</code></p>
+<p><code>PURPLISH</code></p>
+<p><code>#94568C</code></p>
+<p><code>PURPLISHBLUE</code></p>
+<p><code>#601EF9</code></p>
+<p><code>PURPLISHBROWN</code></p>
+<p><code>#6B4247</code></p>
+<p><code>PURPLISHGREY</code></p>
+<p><code>#7A687F</code></p>
+<p><code>PURPLISHPINK</code></p>
+<p><code>#CE5DAE</code></p>
+<p><code>PURPLISHRED</code></p>
+<p><code>#B0054B</code></p>
+<p><code>PURPLY</code></p>
+<p><code>#983FB2</code></p>
+<p><code>PURPLYBLUE</code></p>
+<p><code>#661AEE</code></p>
+<p><code>PURPLYPINK</code></p>
+<p><code>#F075E6</code></p>
+<p><code>PUTTY</code></p>
+<p><code>#BEAE8A</code></p>
+<p><code>RACINGGREEN</code></p>
+<p><code>#014600</code></p>
+<p><code>RADIOACTIVEGREEN</code></p>
+<p><code>#2CFA1F</code></p>
+<p><code>RASPBERRY</code></p>
+<p><code>#B00149</code></p>
+<p><code>RAWSIENNA</code></p>
+<p><code>#9A6200</code></p>
+<p><code>RAWUMBER</code></p>
+<p><code>#A75E09</code></p>
+<p><code>REALLYLIGHTBLUE</code></p>
+<p><code>#D4FFFF</code></p>
+<p><code>RED</code></p>
+<p><code>#E50000</code></p>
+<p><code>REDBROWN</code></p>
+<p><code>#8B2E16</code></p>
+<p><code>REDDISH</code></p>
+<p><code>#C44240</code></p>
+<p><code>REDDISHBROWN</code></p>
+<p><code>#7F2B0A</code></p>
+<p><code>REDDISHGREY</code></p>
+<p><code>#997570</code></p>
+<p><code>REDDISHORANGE</code></p>
+<p><code>#F8481C</code></p>
+<p><code>REDDISHPINK</code></p>
+<p><code>#FE2C54</code></p>
+<p><code>REDDISHPURPLE</code></p>
+<p><code>#910951</code></p>
+<p><code>REDDYBROWN</code></p>
+<p><code>#6E1005</code></p>
+<p><code>REDORANGE</code></p>
+<p><code>#FD3C06</code></p>
+<p><code>REDPINK</code></p>
+<p><code>#FA2A55</code></p>
+<p><code>REDPURPLE</code></p>
+<p><code>#820747</code></p>
+<p><code>REDVIOLET</code></p>
+<p><code>#9E0168</code></p>
+<p><code>REDWINE</code></p>
+<p><code>#8C0034</code></p>
+<p><code>RICHBLUE</code></p>
+<p><code>#021BF9</code></p>
+<p><code>RICHPURPLE</code></p>
+<p><code>#720058</code></p>
+<p><code>ROBINEGGBLUE</code></p>
+<p><code>#8AF1FE</code></p>
+<p><code>ROBINSEGG</code></p>
+<p><code>#6DEDFD</code></p>
+<p><code>ROBINSEGGBLUE</code></p>
+<p><code>#98EFF9</code></p>
+<p><code>ROGUE</code></p>
+<p><code>#AB1239</code></p>
+<p><code>ROSA</code></p>
+<p><code>#FE86A4</code></p>
+<p><code>ROSE</code></p>
+<p><code>#CF6275</code></p>
+<p><code>ROSEPINK</code></p>
+<p><code>#F7879A</code></p>
+<p><code>ROSERED</code></p>
+<p><code>#BE013C</code></p>
+<p><code>ROSYPINK</code></p>
+<p><code>#F6688E</code></p>
+<p><code>ROYAL</code></p>
+<p><code>#0C1793</code></p>
+<p><code>ROYALBLUE</code></p>
+<p><code>#0504AA</code></p>
+<p><code>ROYALPURPLE</code></p>
+<p><code>#4B006E</code></p>
+<p><code>RUBY</code></p>
+<p><code>#CA0147</code></p>
+<p><code>RUSSET</code></p>
+<p><code>#A13905</code></p>
+<p><code>RUST</code></p>
+<p><code>#A83C09</code></p>
+<p><code>RUSTBROWN</code></p>
+<p><code>#8B3103</code></p>
+<p><code>RUSTORANGE</code></p>
+<p><code>#C45508</code></p>
+<p><code>RUSTRED</code></p>
+<p><code>#AA2704</code></p>
+<p><code>RUSTYORANGE</code></p>
+<p><code>#CD5909</code></p>
+<p><code>RUSTYRED</code></p>
+<p><code>#AF2F0D</code></p>
+<p><code>SAFFRON</code></p>
+<p><code>#FEB209</code></p>
+<p><code>SAGE</code></p>
+<p><code>#87AE73</code></p>
+<p><code>SAGEGREEN</code></p>
+<p><code>#88B378</code></p>
+<p><code>SALMON</code></p>
+<p><code>#FF796C</code></p>
+<p><code>SALMONPINK</code></p>
+<p><code>#FE7B7C</code></p>
+<p><code>SAND</code></p>
+<p><code>#E2CA76</code></p>
+<p><code>SANDBROWN</code></p>
+<p><code>#CBA560</code></p>
+<p><code>SANDSTONE</code></p>
+<p><code>#C9AE74</code></p>
+<p><code>SANDY</code></p>
+<p><code>#F1DA7A</code></p>
+<p><code>SANDYBROWN</code></p>
+<p><code>#C4A661</code></p>
+<p><code>SANDYELLOW</code></p>
+<p><code>#FCE166</code></p>
+<p><code>SANDYYELLOW</code></p>
+<p><code>#FDEE73</code></p>
+<p><code>SAPGREEN</code></p>
+<p><code>#5C8B15</code></p>
+<p><code>SAPPHIRE</code></p>
+<p><code>#2138AB</code></p>
+<p><code>SCARLET</code></p>
+<p><code>#BE0119</code></p>
+<p><code>SEA</code></p>
+<p><code>#3C9992</code></p>
+<p><code>SEABLUE</code></p>
+<p><code>#047495</code></p>
+<p><code>SEAFOAM</code></p>
+<p><code>#80F9AD</code></p>
+<p><code>SEAFOAMBLUE</code></p>
+<p><code>#78D1B6</code></p>
+<p><code>SEAFOAMGREEN</code></p>
+<p><code>#7AF9AB</code></p>
+<p><code>SEAGREEN</code></p>
+<p><code>#53FCA1</code></p>
+<p><code>SEAWEED</code></p>
+<p><code>#18D17B</code></p>
+<p><code>SEAWEEDGREEN</code></p>
+<p><code>#35AD6B</code></p>
+<p><code>SEPIA</code></p>
+<p><code>#985E2B</code></p>
+<p><code>SHAMROCK</code></p>
+<p><code>#01B44C</code></p>
+<p><code>SHAMROCKGREEN</code></p>
+<p><code>#02C14D</code></p>
+<p><code>SHIT</code></p>
+<p><code>#7F5F00</code></p>
+<p><code>SHITBROWN</code></p>
+<p><code>#7B5804</code></p>
+<p><code>SHITGREEN</code></p>
+<p><code>#758000</code></p>
+<p><code>SHOCKINGPINK</code></p>
+<p><code>#FE02A2</code></p>
+<p><code>SICKGREEN</code></p>
+<p><code>#9DB92C</code></p>
+<p><code>SICKLYGREEN</code></p>
+<p><code>#94B21C</code></p>
+<p><code>SICKLYYELLOW</code></p>
+<p><code>#D0E429</code></p>
+<p><code>SIENNA</code></p>
+<p><code>#A9561E</code></p>
+<p><code>SILVER</code></p>
+<p><code>#C5C9C7</code></p>
+<p><code>SKY</code></p>
+<p><code>#82CAFC</code></p>
+<p><code>SKYBLUE</code></p>
+<p><code>#75BBFD</code></p>
+<p><code>SLATE</code></p>
+<p><code>#516572</code></p>
+<p><code>SLATEBLUE</code></p>
+<p><code>#5B7C99</code></p>
+<p><code>SLATEGREEN</code></p>
+<p><code>#658D6D</code></p>
+<p><code>SLATEGREY</code></p>
+<p><code>#59656D</code></p>
+<p><code>SLIMEGREEN</code></p>
+<p><code>#99CC04</code></p>
+<p><code>SNOT</code></p>
+<p><code>#ACBB0D</code></p>
+<p><code>SNOTGREEN</code></p>
+<p><code>#9DC100</code></p>
+<p><code>SOFTBLUE</code></p>
+<p><code>#6488EA</code></p>
+<p><code>SOFTGREEN</code></p>
+<p><code>#6FC276</code></p>
+<p><code>SOFTPINK</code></p>
+<p><code>#FDB0C0</code></p>
+<p><code>SOFTPURPLE</code></p>
+<p><code>#A66FB5</code></p>
+<p><code>SPEARMINT</code></p>
+<p><code>#1EF876</code></p>
+<p><code>SPRINGGREEN</code></p>
+<p><code>#A9F971</code></p>
+<p><code>SPRUCE</code></p>
+<p><code>#0A5F38</code></p>
+<p><code>SQUASH</code></p>
+<p><code>#F2AB15</code></p>
+<p><code>STEEL</code></p>
+<p><code>#738595</code></p>
+<p><code>STEELBLUE</code></p>
+<p><code>#5A7D9A</code></p>
+<p><code>STEELGREY</code></p>
+<p><code>#6F828A</code></p>
+<p><code>STONE</code></p>
+<p><code>#ADA587</code></p>
+<p><code>STORMYBLUE</code></p>
+<p><code>#507B9C</code></p>
+<p><code>STRAW</code></p>
+<p><code>#FCF679</code></p>
+<p><code>STRAWBERRY</code></p>
+<p><code>#FB2943</code></p>
+<p><code>STRONGBLUE</code></p>
+<p><code>#0C06F7</code></p>
+<p><code>STRONGPINK</code></p>
+<p><code>#FF0789</code></p>
+<p><code>SUNFLOWER</code></p>
+<p><code>#FFC512</code></p>
+<p><code>SUNFLOWERYELLOW</code></p>
+<p><code>#FFDA03</code></p>
+<p><code>SUNNYYELLOW</code></p>
+<p><code>#FFF917</code></p>
+<p><code>SUNSHINEYELLOW</code></p>
+<p><code>#FFFD37</code></p>
+<p><code>SUNYELLOW</code></p>
+<p><code>#FFDF22</code></p>
+<p><code>SWAMP</code></p>
+<p><code>#698339</code></p>
+<p><code>SWAMPGREEN</code></p>
+<p><code>#748500</code></p>
+<p><code>TAN</code></p>
+<p><code>#D1B26F</code></p>
+<p><code>TANBROWN</code></p>
+<p><code>#AB7E4C</code></p>
+<p><code>TANGERINE</code></p>
+<p><code>#FF9408</code></p>
+<p><code>TANGREEN</code></p>
+<p><code>#A9BE70</code></p>
+<p><code>TAUPE</code></p>
+<p><code>#B9A281</code></p>
+<p><code>TEA</code></p>
+<p><code>#65AB7C</code></p>
+<p><code>TEAGREEN</code></p>
+<p><code>#BDF8A3</code></p>
+<p><code>TEAL</code></p>
+<p><code>#029386</code></p>
+<p><code>TEALBLUE</code></p>
+<p><code>#01889F</code></p>
+<p><code>TEALGREEN</code></p>
+<p><code>#25A36F</code></p>
+<p><code>TEALISH</code></p>
+<p><code>#24BCA8</code></p>
+<p><code>TEALISHGREEN</code></p>
+<p><code>#0CDC73</code></p>
+<p><code>TERRACOTA</code></p>
+<p><code>#CB6843</code></p>
+<p><code>TERRACOTTA</code></p>
+<p><code>#C9643B</code></p>
+<p><code>TIFFANYBLUE</code></p>
+<p><code>#7BF2DA</code></p>
+<p><code>TOMATO</code></p>
+<p><code>#EF4026</code></p>
+<p><code>TOMATORED</code></p>
+<p><code>#EC2D01</code></p>
+<p><code>TOPAZ</code></p>
+<p><code>#13BBAF</code></p>
+<p><code>TOUPE</code></p>
+<p><code>#C7AC7D</code></p>
+<p><code>TOXICGREEN</code></p>
+<p><code>#61DE2A</code></p>
+<p><code>TREEGREEN</code></p>
+<p><code>#2A7E19</code></p>
+<p><code>TRUEBLUE</code></p>
+<p><code>#010FCC</code></p>
+<p><code>TRUEGREEN</code></p>
+<p><code>#089404</code></p>
+<p><code>TURQUOISE</code></p>
+<p><code>#06C2AC</code></p>
+<p><code>TURQUOISEBLUE</code></p>
+<p><code>#06B1C4</code></p>
+<p><code>TURQUOISEGREEN</code></p>
+<p><code>#04F489</code></p>
+<p><code>TURTLEGREEN</code></p>
+<p><code>#75B84F</code></p>
+<p><code>TWILIGHT</code></p>
+<p><code>#4E518B</code></p>
+<p><code>TWILIGHTBLUE</code></p>
+<p><code>#0A437A</code></p>
+<p><code>UGLYBLUE</code></p>
+<p><code>#31668A</code></p>
+<p><code>UGLYBROWN</code></p>
+<p><code>#7D7103</code></p>
+<p><code>UGLYGREEN</code></p>
+<p><code>#7A9703</code></p>
+<p><code>UGLYPINK</code></p>
+<p><code>#CD7584</code></p>
+<p><code>UGLYPURPLE</code></p>
+<p><code>#A442A0</code></p>
+<p><code>UGLYYELLOW</code></p>
+<p><code>#D0C101</code></p>
+<p><code>ULTRAMARINE</code></p>
+<p><code>#2000B1</code></p>
+<p><code>ULTRAMARINEBLUE</code></p>
+<p><code>#1805DB</code></p>
+<p><code>UMBER</code></p>
+<p><code>#B26400</code></p>
+<p><code>VELVET</code></p>
+<p><code>#750851</code></p>
+<p><code>VERMILION</code></p>
+<p><code>#F4320C</code></p>
+<p><code>VERYDARKBLUE</code></p>
+<p><code>#000133</code></p>
+<p><code>VERYDARKBROWN</code></p>
+<p><code>#1D0200</code></p>
+<p><code>VERYDARKGREEN</code></p>
+<p><code>#062E03</code></p>
+<p><code>VERYDARKPURPLE</code></p>
+<p><code>#2A0134</code></p>
+<p><code>VERYLIGHTBLUE</code></p>
+<p><code>#D5FFFF</code></p>
+<p><code>VERYLIGHTBROWN</code></p>
+<p><code>#D3B683</code></p>
+<p><code>VERYLIGHTGREEN</code></p>
+<p><code>#D1FFBD</code></p>
+<p><code>VERYLIGHTPINK</code></p>
+<p><code>#FFF4F2</code></p>
+<p><code>VERYLIGHTPURPLE</code></p>
+<p><code>#F6CEFC</code></p>
+<p><code>VERYPALEBLUE</code></p>
+<p><code>#D6FFFE</code></p>
+<p><code>VERYPALEGREEN</code></p>
+<p><code>#CFFDBC</code></p>
+<p><code>VIBRANTBLUE</code></p>
+<p><code>#0339F8</code></p>
+<p><code>VIBRANTGREEN</code></p>
+<p><code>#0ADD08</code></p>
+<p><code>VIBRANTPURPLE</code></p>
+<p><code>#AD03DE</code></p>
+<p><code>VIOLET</code></p>
+<p><code>#9A0EEA</code></p>
+<p><code>VIOLETBLUE</code></p>
+<p><code>#510AC9</code></p>
+<p><code>VIOLETPINK</code></p>
+<p><code>#FB5FFC</code></p>
+<p><code>VIOLETRED</code></p>
+<p><code>#A50055</code></p>
+<p><code>VIRIDIAN</code></p>
+<p><code>#1E9167</code></p>
+<p><code>VIVIDBLUE</code></p>
+<p><code>#152EFF</code></p>
+<p><code>VIVIDGREEN</code></p>
+<p><code>#2FEF10</code></p>
+<p><code>VIVIDPURPLE</code></p>
+<p><code>#9900FA</code></p>
+<p><code>VOMIT</code></p>
+<p><code>#A2A415</code></p>
+<p><code>VOMITGREEN</code></p>
+<p><code>#89A203</code></p>
+<p><code>VOMITYELLOW</code></p>
+<p><code>#C7C10C</code></p>
+<p><code>WARMBLUE</code></p>
+<p><code>#4B57DB</code></p>
+<p><code>WARMBROWN</code></p>
+<p><code>#964E02</code></p>
+<p><code>WARMGREY</code></p>
+<p><code>#978A84</code></p>
+<p><code>WARMPINK</code></p>
+<p><code>#FB5581</code></p>
+<p><code>WARMPURPLE</code></p>
+<p><code>#952E8F</code></p>
+<p><code>WASHEDOUTGREEN</code></p>
+<p><code>#BCF5A6</code></p>
+<p><code>WATERBLUE</code></p>
+<p><code>#0E87CC</code></p>
+<p><code>WATERMELON</code></p>
+<p><code>#FD4659</code></p>
+<p><code>WEIRDGREEN</code></p>
+<p><code>#3AE57F</code></p>
+<p><code>WHEAT</code></p>
+<p><code>#FBDD7E</code></p>
+<p><code>WHITE</code></p>
+<p><code>#FFFFFF</code></p>
+<p><code>WINDOWSBLUE</code></p>
+<p><code>#3778BF</code></p>
+<p><code>WINE</code></p>
+<p><code>#80013F</code></p>
+<p><code>WINERED</code></p>
+<p><code>#7B0323</code></p>
+<p><code>WINTERGREEN</code></p>
+<p><code>#20F986</code></p>
+<p><code>WISTERIA</code></p>
+<p><code>#A87DC2</code></p>
+<p><code>YELLOW</code></p>
+<p><code>#FFFF14</code></p>
+<p><code>YELLOWBROWN</code></p>
+<p><code>#B79400</code></p>
+<p><code>YELLOWGREEN</code></p>
+<p><code>#BBF90F</code></p>
+<p><code>YELLOWISH</code></p>
+<p><code>#FAEE66</code></p>
+<p><code>YELLOWISHBROWN</code></p>
+<p><code>#9B7A01</code></p>
+<p><code>YELLOWISHGREEN</code></p>
+<p><code>#B0DD16</code></p>
+<p><code>YELLOWISHORANGE</code></p>
+<p><code>#FFAB0F</code></p>
+<p><code>YELLOWISHTAN</code></p>
+<p><code>#FCFC81</code></p>
+<p><code>YELLOWOCHRE</code></p>
+<p><code>#CB9D06</code></p>
+<p><code>YELLOWORANGE</code></p>
+<p><code>#FCB001</code></p>
+<p><code>YELLOWTAN</code></p>
+<p><code>#FFE36E</code></p>
+<p><code>YELLOWYBROWN</code></p>
+<p><code>#AE8B0C</code></p>
+<p><code>YELLOWYGREEN</code></p>
+<p><code>#BFF128</code></p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../BS381/" class="md-footer__link md-footer__link--prev" aria-label="上一页: BS381">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                BS381
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../X11/" class="md-footer__link md-footer__link--next" aria-label="下一页: X11">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                X11
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> | Copyright &copy; 2024 MarkHoo
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://s.markhoo.cn" target="_blank" rel="noopener" title="s.markhoo.cn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://s.markhoo.cn" target="_blank" rel="noopener" title="s.markhoo.cn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="m504 204.6-.7-1.8L433.6 21c-1.4-3.6-3.9-6.6-7.2-8.6-2.4-1.6-5.1-2.5-8-2.8s-5.7.1-8.4 1.1-5.1 2.7-7.1 4.8c-1.9 2.1-3.3 4.7-4.1 7.4l-47 144H161.3l-47.1-144c-.8-2.8-2.2-5.3-4.1-7.4-2-2.1-4.4-3.7-7.1-4.8-2.6-1-5.5-1.4-8.4-1.1s-5.6 1.2-8 2.8c-3.2 2-5.8 5.1-7.2 8.6L9.8 202.8l-.8 1.8c-10 26.2-11.3 55-3.5 82 7.7 26.9 24 50.7 46.4 67.6l.3.2.6.4 106 79.5c38.5 29.1 66.7 50.3 84.6 63.9 3.7 1.9 8.3 4.3 13 4.3s9.3-2.4 13-4.3c17.9-13.5 46.1-34.9 84.6-63.9l106.7-79.9.3-.3c22.4-16.9 38.7-40.6 45.6-67.5 8.6-27 7.4-55.8-2.6-82"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://s.markhoo.cn" target="_blank" rel="noopener" title="s.markhoo.cn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://s.markhoo.cn" target="_blank" rel="noopener" title="s.markhoo.cn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M357.2 48h70.6L273.6 224.2 455 464H313L201.7 318.6 74.5 464H3.8l164.9-188.5L-5.2 48h145.6l100.5 132.9zm-24.8 373.8h39.1L119.1 88h-42z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://s.markhoo.cn" target="_blank" rel="noopener" title="s.markhoo.cn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M349.9 236.3h-66.1v-59.4h66.1zm0-204.3h-66.1v60.7h66.1zm78.2 144.8H362v59.4h66.1zm-156.3-72.1h-66.1v60.1h66.1zm78.1 0h-66.1v60.1h66.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1zm78.1 0h-66.1v59.4h66.1zm-78.1-72.1h-66.1v60.1h66.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://s.markhoo.cn" target="_blank" rel="noopener" title="s.markhoo.cn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://s.markhoo.cn" target="_blank" rel="noopener" title="s.markhoo.cn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M224.3 141a115 115 0 1 0-.6 230 115 115 0 1 0 .6-230m-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1-.6-149.2m93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1-53.6 0m129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8M399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://s.markhoo.cn" target="_blank" rel="noopener" title="s.markhoo.cn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share", "navigation.footer", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
