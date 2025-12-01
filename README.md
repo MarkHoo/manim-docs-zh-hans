@@ -4,7 +4,7 @@
 
 [Manim Community Edition](https://www.manim.community)
 
-当前版本：[`v0.19.0`](./docs/changelog/0.18.1-changelog.md)
+当前版本：[`v0.19.1`](./docs/changelog/0.19.1-changelog.md)
 
 ## **赞助：**
 
@@ -15,9 +15,6 @@
 |![微信](./docs/static/WeChat.jpg)|![支付宝](./docs/static/Alipay.jpg)|
 |----------------------------|-----------------------------|
 
-感谢以下(以及3位匿名)开发者对本项目的赞助：
-
-`梦想风暴zz`，`战国万年`，`j4ZpH8B4N`，`大灰狼`，`卷毛杨`
 
 - 学习交流QQ群①：`731872950`（满员）
 - 学习交流QQ群②：`584318196`

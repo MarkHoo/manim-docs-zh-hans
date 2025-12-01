@@ -4,7 +4,7 @@
 
 [Manim Community Edition](https://www.manim.community)
 
-当前版本：[`v0.19.0`](./changelog/0.18.1-changelog.md)
+当前版本：[`v0.19.1`](./changelog/0.19.1-changelog.md)
 
 ## **赞助：**
 
@@ -15,25 +15,11 @@
 |![微信](./static/WeChat.jpg)|![支付宝](./static/Alipay.jpg)|
 |----------------------------|-----------------------------|
 
-感谢以下(以及3位匿名)开发者对本项目的赞助：
-
-`梦想风暴zz`，`战国万年`，`j4ZpH8B4N`，`大灰狼`，`卷毛杨`
 
 - 学习交流QQ群①：`731872950`（满员）
 - 学习交流QQ群②：`584318196`
 - [在线LaTeX公式编辑器](https://www.latexlive.com)
 - [在线LaTeX公式编辑器](https://editor.codecogs.com)
-
-## TODO：
-
-> 文档校对以及语义优化
-
-- [x] 示例库
-- [x] 教程和指南
-- [x] 参考手册
-- [x] 插件
-- [x] 变更日志
-- [x] 准备`v0.20.0`版本发布后的文档更新
 
 ## License
 
